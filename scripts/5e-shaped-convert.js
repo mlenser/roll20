@@ -1,20 +1,35 @@
 (function (shaped, undefined) {
 
+	/* Options
+		 Setting these to a sheet value will set the token bar value. If they are set to '' or not set then it will use whatever you already have set on the token
+		 For a full list of attributes please look at https://app.roll20.net/forum/post/1734923/new-d-and-d-5e-shaped-character-sheet#post-1788863
+		 Do not use npc_HP, use HP instead
+	*/
+	// Green bar
+	shaped.parsebar1 = 'npc_AC';
+	// Blue bar
+	shaped.parsebar2 = ''; //'passive_perception'
+	// Red bar
+	shaped.parsebar3 = 'HP';  //'speed'
+
+
+
 	shaped.statblock = {
-		version: "1.0",
+		version: '1.0',
 		RegisterHandlers: function () {
 			on('chat:message', HandleInput);
 
-			log("Shaped Convert ready");
+			log('Shaped Convert ready');
 		}
 	};
-	var characterId = null;
+	var obj = null,
+			characterId = null;
 
 	function HandleInput(msg) {
-		if(msg.type !== "api") {
+		if(msg.type !== 'api') {
 			return;
 		}
-		log("msg.content" + msg.content);
+		log('msg.content' + msg.content);
 		args = msg.content.split(/\s+/);
 		switch(args[0]) {
 			case '!shaped-convert':
@@ -51,13 +66,13 @@
 
 	function setAttribute(name, currentVal, max) {
 		if(!name) {
-			throw("Name required to set attribut");
+			throw('Name required to set attribute');
 		}
 
 		max = max || '';
 
 		if(!currentVal) {
-			log("Error setting empty value: " + name);
+			log('Error setting empty value: ' + name);
 			return;
 		}
 
@@ -68,7 +83,7 @@
 		})[0];
 
 		if(!attr) {
-			log("Creating attribut " + name);
+			log('Creating attribute ' + name);
 			createObj('attribute', {
 				name: name,
 				current: currentVal,
@@ -76,7 +91,7 @@
 				characterid: characterId
 			});
 		} else if(!attr.get('current') || attr.get('current').toString() != currentVal) {
-			log("Updating attribut " + name);
+			log('Updating attribute ' + name);
 			attr.set({
 				current: currentVal,
 				max: max
@@ -84,254 +99,170 @@
 		}
 	}
 
-	shaped.parseOldToNew = function(token) {
-		log("---- Parsing old attributes to new ----");
+	function convertAttrFromNPCtoPC(npc_attr_name, attr_name) {
+		var npc_attr = getAttrByName(characterId, npc_attr_name),
+				attr = getAttrByName(characterId, attr_name);
+		if(npc_attr && !attr) {
+			log('convert from ' + npc_attr_name + ' to ' + attr_name)
+			setAttribute(attr_name, npc_attr);
+		}
+	}
 
-		var obj = findObjs({
-			_type: "character",
+
+	shaped.parseOldToNew = function(token) {
+		log('---- Parsing old attributes to new ----');
+
+		obj = findObjs({
+			_type: 'character',
 			name: token.attributes.name
 		})[0];
 		characterId = obj.id;
 
-		var npc_initiative = getAttrByName(characterId, 'npc_initiative');
-		if(npc_initiative) {
-			setAttribute('initiative', npc_initiative);
-		}
-		var npc_initiative_overall = getAttrByName(characterId, 'npc_initiative_overall');
-		if(npc_initiative_overall) {
-			setAttribute('initiative_overall', npc_initiative_overall);
-		}
+
+		convertAttrFromNPCtoPC('npc_initiative', 'initiative');
+		convertAttrFromNPCtoPC('npc_initiative_overall', 'initiative_overall');
 
 
 
-		var npc_strength = getAttrByName(characterId, 'npc_strength');
-		if(npc_strength) {
-			setAttribute('strength', npc_strength);
-		}
-		var npc_strength_save_bonus = getAttrByName(characterId, 'npc_strength_save_bonus');
-		if(npc_strength_save_bonus) {
-			setAttribute('strength_save_bonus', npc_strength_save_bonus);
-		}
-		var npc_basic_strength_bonus = getAttrByName(characterId, 'npc_basic_strength_bonus');
-		if(npc_basic_strength_bonus) {
-			setAttribute('basic_strength_bonus', npc_basic_strength_bonus);
-		}
-		var npc_dexterity = getAttrByName(characterId, 'npc_dexterity');
-		if(npc_dexterity) {
-			setAttribute('dexterity', npc_dexterity);
-		}
-		var npc_dexterity_save_bonus = getAttrByName(characterId, 'npc_dexterity_save_bonus');
-		if(npc_dexterity_save_bonus) {
-			setAttribute('dexterity_save_bonus', npc_dexterity_save_bonus);
-		}
-		var npc_basic_dexterity_bonus = getAttrByName(characterId, 'npc_basic_dexterity_bonus');
-		if(npc_basic_dexterity_bonus) {
-			setAttribute('basic_dexterity_bonus', npc_basic_dexterity_bonus);
-		}
-		var npc_constitution = getAttrByName(characterId, 'npc_constitution');
-		if(npc_constitution) {
-			setAttribute('constitution', npc_constitution);
-		}
-		var npc_constitution_save_bonus = getAttrByName(characterId, 'npc_constitution_save_bonus');
-		if(npc_constitution_save_bonus) {
-			setAttribute('constitution_save_bonus', npc_constitution_save_bonus);
-		}
-		var npc_basic_constitution_bonus = getAttrByName(characterId, 'npc_basic_constitution_bonus');
-		if(npc_basic_constitution_bonus) {
-			setAttribute('basic_constitution_bonus', npc_basic_constitution_bonus);
-		}
-		var npc_intelligence = getAttrByName(characterId, 'npc_intelligence');
-		if(npc_intelligence) {
-			setAttribute('intelligence', npc_intelligence);
-		}
-		var npc_intelligence_save_bonus = getAttrByName(characterId, 'npc_intelligence_save_bonus');
-		if(npc_intelligence_save_bonus) {
-			setAttribute('intelligence_save_bonus', npc_intelligence_save_bonus);
-		}
-		var npc_basic_intelligence_bonus = getAttrByName(characterId, 'npc_basic_intelligence_bonus');
-		if(npc_basic_intelligence_bonus) {
-			setAttribute('basic_intelligence_bonus', npc_basic_intelligence_bonus);
-		}
-		var npc_wisdom = getAttrByName(characterId, 'npc_wisdom');
-		if(npc_wisdom) {
-			setAttribute('wisdom', npc_wisdom);
-		}
-		var npc_wisdom_save_bonus = getAttrByName(characterId, 'npc_wisdom_save_bonus');
-		if(npc_wisdom_save_bonus) {
-			setAttribute('wisdom_save_bonus', npc_wisdom_save_bonus);
-		}
-		var npc_basic_wisdom_bonus = getAttrByName(characterId, 'npc_basic_wisdom_bonus');
-		if(npc_basic_wisdom_bonus) {
-			setAttribute('basic_wisdom_bonus', npc_basic_wisdom_bonus);
-		}
-		var npc_charisma = getAttrByName(characterId, 'npc_charisma');
-		if(npc_charisma) {
-			setAttribute('charisma', npc_charisma);
-		}
-		var npc_charisma_save_bonus = getAttrByName(characterId, 'npc_charisma_save_bonus');
-		if(npc_charisma_save_bonus) {
-			setAttribute('charisma_save_bonus', npc_charisma_save_bonus);
-		}
-		var npc_basic_charisma_bonus = getAttrByName(characterId, 'npc_basic_charisma_bonus');
-		if(npc_basic_charisma_bonus) {
-			setAttribute('basic_charisma_bonus', npc_basic_charisma_bonus);
-		}
+		convertAttrFromNPCtoPC('npc_strength', 'strength');
+		convertAttrFromNPCtoPC('npc_strength_save_bonus', 'strength_save_bonus');
+		convertAttrFromNPCtoPC('npc_basic_strength_bonus', 'basic_strength_bonus');
+		convertAttrFromNPCtoPC('npc_dexterity', 'dexterity');
+		convertAttrFromNPCtoPC('npc_dexterity_save_bonus', 'dexterity_save_bonus');
+		convertAttrFromNPCtoPC('npc_basic_dexterity_bonus', 'basic_dexterity_bonus');
+		convertAttrFromNPCtoPC('npc_constitution', 'constitution');
+		convertAttrFromNPCtoPC('npc_constitution_save_bonus', 'constitution_save_bonus');
+		convertAttrFromNPCtoPC('npc_basic_constitution_bonus', 'basic_constitution_bonus');
+		convertAttrFromNPCtoPC('npc_intelligence', 'intelligence');
+		convertAttrFromNPCtoPC('npc_intelligence_save_bonus', 'intelligence_save_bonus');
+		convertAttrFromNPCtoPC('npc_basic_intelligence_bonus', 'basic_intelligence_bonus');
+		convertAttrFromNPCtoPC('npc_wisdom', 'wisdom');
+		convertAttrFromNPCtoPC('npc_wisdom_save_bonus', 'wisdom_save_bonus');
+		convertAttrFromNPCtoPC('npc_basic_wisdom_bonus', 'basic_wisdom_bonus');
+		convertAttrFromNPCtoPC('npc_charisma', 'charisma');
+		convertAttrFromNPCtoPC('npc_charisma_save_bonus', 'charisma_save_bonus');
+		convertAttrFromNPCtoPC('npc_basic_charisma_bonus', 'basic_charisma_bonus');
 
 
 
-		var npc_alignment = getAttrByName(characterId, 'npc_alignment');
-		if(npc_alignment) {
-			setAttribute('alignment', npc_alignment);
-		}
-
+		convertAttrFromNPCtoPC('npc_alignment', 'alignment');
 
 
 		var npc_HP = getAttrByName(characterId, 'npc_HP'),
-				npc_HP_max = getAttrByName(characterId, 'npc_HP', 'max');
-		if(npc_HP && npc_HP_max) {
+				HP = getAttrByName(characterId, 'HP'),
+				npc_HP_max = getAttrByName(characterId, 'npc_HP', 'max'),
+				HP_max = getAttrByName(characterId, 'HP', 'max');
+		if(npc_HP && !HP && npc_HP_max && !HP_max) {
 			setAttribute('HP', npc_HP, npc_HP_max);
-		} else if (npc_HP) {
+		} else if (npc_HP && !HP) {
 			setAttribute('HP', npc_HP);
-		} else if (npc_HP_max) {
+		} else if (npc_HP_max && !HP_max) {
 			setAttribute('HP', 0, npc_HP_max);
 		}
-		var npc_temp_HP = getAttrByName(characterId, 'npc_temp_HP');
-		if(npc_temp_HP) {
-			setAttribute('temp_HP', npc_temp_HP);
-		}
+		convertAttrFromNPCtoPC('npc_temp_HP', 'temp_HP');
 
 
 
-		var npc_speed = getAttrByName(characterId, 'npc_speed');
-		if(npc_speed) {
-			setAttribute('speed', npc_speed);
-		}
-		var npc_speed_fly = getAttrByName(characterId, 'npc_speed_fly');
-		if(npc_speed_fly) {
-			setAttribute('speed_fly', npc_speed_fly);
-		}
-		var npc_speed_climb = getAttrByName(characterId, 'npc_speed_climb');
-		if(npc_speed_climb) {
-			setAttribute('speed_climb', npc_speed_climb);
-		}
-		var npc_speed_swim = getAttrByName(characterId, 'npc_speed_swim');
-		if(npc_speed_swim) {
-			setAttribute('speed_swim', npc_speed_swim);
-		}
+		convertAttrFromNPCtoPC('npc_speed', 'speed');
+		convertAttrFromNPCtoPC('npc_speed_fly', 'speed_fly');
+		convertAttrFromNPCtoPC('npc_speed_climb', 'speed_climb');
+		convertAttrFromNPCtoPC('npc_speed_swim', 'speed_swim');
 
 
 
-		var npc_xp = getAttrByName(characterId, 'npc_xp');
-		if(npc_xp) {
-			setAttribute('xp', npc_xp);
-		}
-		var npc_senses = getAttrByName(characterId, 'npc_senses');
-		if(npc_senses) {
-			setAttribute('vision', npc_senses);
-		}
-		var npc_languages = getAttrByName(characterId, 'npc_languages');
-		if(npc_languages) {
-			setAttribute('prolanguages', npc_languages);
-		}
+		convertAttrFromNPCtoPC('npc_xp', 'xp');
+		convertAttrFromNPCtoPC('npc_senses', 'vision');
+		convertAttrFromNPCtoPC('npc_languages', 'prolanguages');
 
 
 
-		var npc_damage_resistance = getAttrByName(characterId, 'npc_damage_resistance');
-		if(npc_damage_resistance) {
-			setAttribute('damage_resistance', npc_damage_resistance);
-		}
-		var npc_damage_vulnerability = getAttrByName(characterId, 'npc_damage_vulnerability');
-		if(npc_damage_vulnerability) {
-			setAttribute('damage_vulnerability', npc_damage_vulnerability);
-		}
-		var npc_damage_immunity = getAttrByName(characterId, 'npc_damage_immunity');
-		if(npc_damage_immunity) {
-			setAttribute('damage_immunity', npc_damage_immunity);
-		}
-		var npc_condition_immunity = getAttrByName(characterId, 'npc_condition_immunity');
-		if(npc_condition_immunity) {
-			setAttribute('condition_immunity', npc_condition_immunity);
-		}
+		convertAttrFromNPCtoPC('npc_damage_resistance', 'damage_resistance');
+		convertAttrFromNPCtoPC('npc_damage_vulnerability', 'damage_vulnerability');
+		convertAttrFromNPCtoPC('npc_damage_immunity', 'damage_immunity');
+		convertAttrFromNPCtoPC('npc_condition_immunity', 'condition_immunity');
 
 
 
-		var npc_acrobatics_bonus = getAttrByName(characterId, 'npc_acrobatics_bonus');
-		if(npc_acrobatics_bonus) {
-			setAttribute('acrobatics_bonus', npc_acrobatics_bonus);
-		}
-		var npc_animalhandling_bonus = getAttrByName(characterId, 'npc_animalhandling_bonus');
-		if(npc_animalhandling_bonus) {
-			setAttribute('animalhandling_bonus', npc_animalhandling_bonus);
-		}
-		var npc_arcana_bonus = getAttrByName(characterId, 'npc_arcana_bonus');
-		if(npc_arcana_bonus) {
-			setAttribute('arcana_bonus', npc_arcana_bonus);
-		}
-		var npc_athletics_bonus = getAttrByName(characterId, 'npc_athletics_bonus');
-		if(npc_athletics_bonus) {
-			setAttribute('athletics_bonus', npc_athletics_bonus);
-		}
-		var npc_deception_bonus = getAttrByName(characterId, 'npc_deception_bonus');
-		if(npc_deception_bonus) {
-			setAttribute('deception_bonus', npc_deception_bonus);
-		}
-		var npc_history_bonus = getAttrByName(characterId, 'npc_history_bonus');
-		if(npc_history_bonus) {
-			setAttribute('history_bonus', npc_history_bonus);
-		}
-		var npc_insight_bonus = getAttrByName(characterId, 'npc_insight_bonus');
-		if(npc_insight_bonus) {
-			setAttribute('insight_bonus', npc_insight_bonus);
-		}
-		var npc_intimidation_bonus = getAttrByName(characterId, 'npc_intimidation_bonus');
-		if(npc_intimidation_bonus) {
-			setAttribute('intimidation_bonus', npc_intimidation_bonus);
-		}
-		var npc_investigation_bonus = getAttrByName(characterId, 'npc_investigation_bonus');
-		if(npc_investigation_bonus) {
-			setAttribute('investigation_bonus', npc_investigation_bonus);
-		}
-		var npc_medicine_bonus = getAttrByName(characterId, 'npc_medicine_bonus');
-		if(npc_medicine_bonus) {
-			setAttribute('medicine_bonus', npc_medicine_bonus);
-		}
-		var npc_nature_bonus = getAttrByName(characterId, 'npc_nature_bonus');
-		if(npc_nature_bonus) {
-			setAttribute('nature_bonus', npc_nature_bonus);
-		}
-		var npc_perception_bonus = getAttrByName(characterId, 'npc_perception_bonus');
-		if(npc_perception_bonus) {
-			setAttribute('perception_bonus', npc_perception_bonus);
-		}
-		var npc_performance_bonus = getAttrByName(characterId, 'npc_performance_bonus');
-		if(npc_performance_bonus) {
-			setAttribute('performance_bonus', npc_performance_bonus);
-		}
-		var npc_persuasion_bonus = getAttrByName(characterId, 'npc_persuasion_bonus');
-		if(npc_persuasion_bonus) {
-			setAttribute('persuasion_bonus', npc_persuasion_bonus);
-		}
-		var npc_religion_bonus = getAttrByName(characterId, 'npc_religion_bonus');
-		if(npc_religion_bonus) {
-			setAttribute('religion_bonus', npc_religion_bonus);
-		}
-		var npc_sleightofhand_bonus = getAttrByName(characterId, 'npc_sleightofhand_bonus');
-		if(npc_sleightofhand_bonus) {
-			setAttribute('sleightofhand_bonus', npc_sleightofhand_bonus);
-		}
-		var npc_stealth_bonus = getAttrByName(characterId, 'npc_stealth_bonus');
-		if(npc_stealth_bonus) {
-			setAttribute('stealth_bonus', npc_stealth_bonus);
-		}
-		var npc_survival_bonus = getAttrByName(characterId, 'npc_survival_bonus');
-		if(npc_survival_bonus) {
-			setAttribute('survival_bonus', npc_survival_bonus);
-		}
+		convertAttrFromNPCtoPC('npc_acrobatics_bonus', 'acrobatics_bonus');
+		convertAttrFromNPCtoPC('npc_animalhandling_bonus', 'animalhandling_bonus');
+		convertAttrFromNPCtoPC('npc_arcana_bonus', 'arcana_bonus');
+		convertAttrFromNPCtoPC('npc_athletics_bonus', 'athletics_bonus');
+		convertAttrFromNPCtoPC('npc_deception_bonus', 'deception_bonus');
+		convertAttrFromNPCtoPC('npc_history_bonus', 'history_bonus');
+		convertAttrFromNPCtoPC('npc_insight_bonus', 'insight_bonus');
+		convertAttrFromNPCtoPC('npc_intimidation_bonus', 'intimidation_bonus');
+		convertAttrFromNPCtoPC('npc_investigation_bonus', 'investigation_bonus');
+		convertAttrFromNPCtoPC('npc_medicine_bonus', 'medicine_bonus');
+		convertAttrFromNPCtoPC('npc_nature_bonus', 'nature_bonus');
+		convertAttrFromNPCtoPC('npc_perception_bonus', 'perception_bonus');
+		convertAttrFromNPCtoPC('npc_performance_bonus', 'performance_bonus');
+		convertAttrFromNPCtoPC('npc_persuasion_bonus', 'persuasion_bonus');
+		convertAttrFromNPCtoPC('npc_religion_bonus', 'religion_bonus');
+		convertAttrFromNPCtoPC('npc_sleightofhand_bonus', 'sleightofhand_bonus');
+		convertAttrFromNPCtoPC('npc_stealth_bonus', 'stealth_bonus');
+		convertAttrFromNPCtoPC('npc_survival_bonus', 'survival_bonus');
+
+		shaped.setBars(token);
 	};
+
+	function setBarValue(token, bar, obj) {
+		if(obj) {
+			log('Setting ' + bar + ' to: id: ' + obj.id + ' current: ' + obj.attributes.current + ' max: ' + obj.attributes.max);
+			if(obj.attributes.current) {
+				token.set(bar + '_value', obj.attributes.current);
+			}
+			if(obj.attributes.max) {
+				token.set(bar + '_max', obj.attributes.max);
+			}
+			if(obj.id) {
+				token.set(bar + '_link', obj.id);
+			}
+		} else {
+			log("Can't set empty object to bar " + bar);
+		}
+	}
+
+	function getAndSetBarInfo(token, bar) {
+		var bar_link = token.get(bar + '_link');
+		if(!bar_link) {
+			var parsebar = shaped['parse' + bar];
+			log('parsebar: ' + parsebar);
+			if(parsebar) {
+				var objOfParsebar = findObjs({
+					name: parsebar,
+					_type: 'attribute',
+					_characterid: characterId
+				}, {caseInsensitive: true})[0];
+				setBarValue(token, bar, objOfParsebar);
+			}
+		} else {
+			objOfBar = {
+				id: bar_link,
+				attributes: {}
+			}
+			var bar_value = token.get(bar + '_value');
+			if(bar_value) {
+				objOfBar.attributes.value = bar_value;
+			}
+			var bar_max = token.get(bar + '_max');
+			if(bar_max) {
+				objOfBar.attributes.max = bar_max;
+			}
+			setBarValue(token, bar, objOfBar);
+		}
+	}
+
+	shaped.setBars = function(token) {
+		log('set bars');
+
+		getAndSetBarInfo(token, 'bar1');
+		getAndSetBarInfo(token, 'bar2');
+		getAndSetBarInfo(token, 'bar3');
+	}
 
 }(typeof shaped === 'undefined' ? shaped = {} : shaped));
 
-on("ready", function() {
+on('ready', function() {
 	'use strict';
 	shaped.statblock.RegisterHandlers();
 });
