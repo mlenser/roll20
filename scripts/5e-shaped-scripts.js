@@ -710,12 +710,6 @@
 			var damageRegex = /(?:((\d+d\d+)[\d\s+]*)\)?|(\d+))\s*([a-zA-Z]*)\s*(?:damage)/gi;
 			//var damageRegex = /(?:((\d+d\d+)[\d\s+]*)\)|(\d))?\s*([a-zA-Z]*)/gi;
 			while(damage = damageRegex.exec(damageInfo)) {
-				log('damage[0]: ' + damage[0]);
-				log('damage[1]: ' + damage[1]);
-				log('damage[2]: ' + damage[2]);
-				log('damage[3]: ' + damage[3]);
-				log('damage[4]: ' + damage[4]);
-				log('damage[5]: ' + damage[5]);
 				if(damage[1] || damage[3]) {
 					if(!setDamageForThisAction) {
 						setAttribute('npc_attack_dmg_' + actionNum, damage[1] || damage[3]);
@@ -742,20 +736,18 @@
 				setDamageForThisAction = true;
 			}
 
-
-			// Convert dice to inline roll and split description from effect
-
-			var match = value.match(/(Each|Hit:)/);
-			if(match) {
-				text = value.substring(0, match.index).replace(/(\+\s?(\d+))/g, '$1 : [[1d20+$2]]|[[1d20+$2]]');
-				setAttribute('npc_attack_emote_' + actionNum, text);
-
-				text = value.substring(match.index).replace(/(\d+d\d+[\d\s+]*)/g, '[[$1]]');
-				//log('text: ' + text);
-				setAttribute('npc_attack_effect_' + actionNum, text);
-			} else {
-				text = value.replace(/(\+\s?(\d+))/g, '$1 : [[1d20+$2]]|[[1d20+$2]]');
-				setAttribute('npc_attack_emote_' + actionNum, text);
+			var saveRegex = /(?:DC)\s?(\d+)\s*?([a-zA-Z]*)\s*?(?:saving throw)/gi;
+			while(save = saveRegex.exec(damageInfo)) {
+				log('save: ' + save);
+				if(save[1]) {
+					setAttribute('npc_attack_save_dc_' + actionNum, save[1]);
+				}
+				if(save[2]) {
+					setAttribute('npc_attack_save_stat_' + actionNum, save[2].substring(0, 3));
+				}
+				if(save[1] || save[2]){
+					setAttribute('npc_attack_toggle_save_' + actionNum, '@{npc_attack_var_save_' + actionNum + '}');
+				}
 			}
 
 			// Create token action
