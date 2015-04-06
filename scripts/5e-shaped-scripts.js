@@ -653,6 +653,7 @@
 		var actionNum = 1;
 		_.each(actions, function(value, key) {
 			value = value.replace(/(ft\.)/gi, 'ft');
+			var setDamageForThisAction = false;
 			if((pos = key.indexOf('(')) > 1) {
 				actionPosition[actionNum] = key.substring(0, pos - 1).toLowerCase();
 			} else {
@@ -706,7 +707,7 @@
 
 
 			log('damageInfo: ' + damageInfo);
-			var damageRegex = /((\d+d\d+)[\d\s+]*)\)?\s*([a-zA-Z]*)/gi;
+			var damageRegex = /(?:((\d+d\d+)[\d\s+]*)\)?|(\d+))\s*([a-zA-Z]*)\s*(?:damage)/gi;
 			//var damageRegex = /(?:((\d+d\d+)[\d\s+]*)\)|(\d))?\s*([a-zA-Z]*)/gi;
 			while(damage = damageRegex.exec(damageInfo)) {
 				log('damage[0]: ' + damage[0]);
@@ -714,18 +715,31 @@
 				log('damage[2]: ' + damage[2]);
 				log('damage[3]: ' + damage[3]);
 				log('damage[4]: ' + damage[4]);
-				if(damage[1]) {
-					setAttribute('npc_attack_dmg_' + actionNum, damage[1]);
+				log('damage[5]: ' + damage[5]);
+				if(damage[1] || damage[3]) {
+					if(!setDamageForThisAction) {
+						setAttribute('npc_attack_dmg_' + actionNum, damage[1] || damage[3]);
+					} else {
+						setAttribute('npc_attack_second_dmg_' + actionNum, damage[1] || damage[3]);
+						setAttribute('npc_attack_toggle_second_damage_' + actionNum, '@{npc_attack_var_second_damage_' + actionNum + '}');
+					}
 					setAttribute('npc_attack_toggle_damage_' + actionNum, '@{npc_attack_var_damage_' + actionNum + '}');
 				}
-				if(damage[2]) {
-					setAttribute('npc_attack_crit_dmg_' + actionNum, damage[2]);
+				if(damage[2] || damage[3]) {
+					if(!setDamageForThisAction) {
+						setAttribute('npc_attack_crit_dmg_' + actionNum, damage[2] || damage[3]);
+					} else {
+						setAttribute('npc_attack_second_crit_dmg_' + actionNum, damage[2] || damage[3]);
+					}
 				}
-				if(damage[3]) {
-					setAttribute('npc_attack_dmg_type_' + actionNum, damage[3]);
+				if(damage[4]) {
+					if(!setDamageForThisAction) {
+						setAttribute('npc_attack_dmg_type_' + actionNum, damage[4]);
+					} else {
+						setAttribute('npc_attack_second_dmg_type_' + actionNum, damage[4]);
+					}
 				}
-
-
+				setDamageForThisAction = true;
 			}
 
 
