@@ -6,9 +6,9 @@
 	shaped.rollMonsterHpOnDrop = true; // will roll HP when character are dropped on map
 
 	/* Setting these to a sheet value will set the token bar value. If they are set to '' or not set then it will use whatever you already have set on the token
-		 For a full list of attributes please look at https://app.roll20.net/forum/post/1734923/new-d-and-d-5e-shaped-character-sheet#post-1788863
-		 Do not use npc_HP, use HP instead
-	*/
+	 For a full list of attributes please look at https://app.roll20.net/forum/post/1734923/new-d-and-d-5e-shaped-character-sheet#post-1788863
+	 Do not use npc_HP, use HP instead
+	 */
 	// Green bar
 	shaped.parsebar1 = 'npc_AC';
 	// Blue bar
@@ -205,7 +205,9 @@
 			});
 
 		characterId = obj.id;
-		setAttribute('is_npc', 1);
+		if(getAttrByName(characterId, 'is_npc') !== 1) {
+			setAttribute('is_npc', 1);
+		}
 
 		return obj;
 	};
@@ -355,7 +357,6 @@
 		var regex = /#\s*(tiny|small|medium|large|huge|gargantuan|armor class|hit points|speed|str|dex|con|int|wis|cha|saving throws|skills|damage resistances|damage immunities|condition immunities|damage vulnerabilities|senses|languages|challenge|traits|actions|legendary actions)(?=\s|#)/gi;
 		while(match = regex.exec(statblock)) {
 			key = match[1].toLowerCase();
-
 			if(key === 'actions') {
 				indexAction = match.index;
 				keyword.actions.Actions = match.index;
@@ -555,7 +556,11 @@
 		input = cr.replace(/[, ]/g, '');
 		var match = input.match(/([\d/]+).*?(\d+)/);
 		setAttribute('challenge', match[1]);
-		setAttribute('xp', parseInt(match[2]));
+
+		var xp = parseInt(match[2]);
+		if(getAttrByName(characterId, 'xp') !== xp) {
+			setAttribute('xp', xp);
+		}
 	}
 
 	function parseSavingThrow(save) {
@@ -630,11 +635,12 @@
 		});
 
 		text = text.slice(0, -1);
-		setAttribute('npc_traits', text);
+		if(text !== '') {
+			setAttribute('npc_traits', text);
+		}
 	}
 
 	function parseActions(actions, legendary) {
-
 		var multiattackText = '';
 		var actionPosition = []; // For use with multiattack.
 
@@ -644,39 +650,109 @@
 			delete actions.Multiattack;
 		}
 
-		var cpt = 1;
+		var actionNum = 1;
 		_.each(actions, function(value, key) {
+			value = value.replace(/(ft\.)/gi, 'ft');
 			if((pos = key.indexOf('(')) > 1) {
-				actionPosition[cpt] = key.substring(0, pos - 1).toLowerCase();
+				actionPosition[actionNum] = key.substring(0, pos - 1).toLowerCase();
 			} else {
-				actionPosition[cpt] = key.toLowerCase();
+				actionPosition[actionNum] = key.toLowerCase();
 			}
 
-			setAttribute('npc_action_name' + cpt, key);
+			setAttribute('npc_attack_name_' + actionNum, key);
+
+			var splitAction = value.split('.'),
+					attackInfo = splitAction[0],
+					damageInfo = splitAction[1],
+					splitAttack = attackInfo.split(',');
+
+			var typeRegex = /(melee|ranged|melee or ranged)\s*(spell|weapon)\s*/gi;
+			while(type = typeRegex.exec(splitAttack[0])) {
+				if(type[1]) {
+					var meleeOrRanged = 'Melee or Ranged';
+					if(type[1].toLowerCase() === meleeOrRanged.toLowerCase()) {
+						type[1] = 'Thrown';
+					}
+					setAttribute('npc_attack_type_' + actionNum, shaped.capitalizeEachWord(type[1]));
+				}
+				if(type[2]) {
+					var attackWeaponOrSpell = shaped.capitalizeEachWord(type[2]);
+				}
+			}
+			var toHitRegex = /\+\s?(\d+)\s*(?:to hit)/gi;
+			while(toHit = toHitRegex.exec(splitAttack[0])) {
+				if(toHit[1]) {
+					setAttribute('npc_attack_tohit_' + actionNum, toHit[1]);
+					setAttribute('npc_attack_toggle_attack_' + actionNum, '@{npc_attack_var_attack_' + actionNum + '}');
+					setAttribute('npc_attack_toggle_crit_' + actionNum, '@{npc_attack_var_crit_' + actionNum + '}');
+				}
+			}
+			var reachRegex = /(?:reach)\s?(\d+)\s?(?:ft)/gi;
+			while(reach = reachRegex.exec(splitAttack[1])) {
+				if(reach[1]) {
+					setAttribute('npc_attack_reach_' + actionNum, reach[1] + ' ft');
+				}
+			}
+			var rangeRegex = /(?:range)\s?(\d+)\/(\d+)\s?(ft)/gi;
+			while(range = rangeRegex.exec(splitAttack[1])) {
+				if(range[1] && range[2]) {
+					setAttribute('npc_attack_range_' + actionNum, range[1] + '/' + range[2] + ' ft');
+				}
+			}
+			if(splitAttack[2]) {
+				setAttribute('npc_attack_target_' + actionNum, splitAttack[2].trim().toLowerCase());
+			}
+			setAttribute('npc_attack_toggle_details_' + actionNum, '@{npc_attack_var_details_' + actionNum + '}');
+
+
+			log('damageInfo: ' + damageInfo);
+			var damageRegex = /((\d+d\d+)[\d\s+]*)\)?\s*([a-zA-Z]*)/gi;
+			//var damageRegex = /(?:((\d+d\d+)[\d\s+]*)\)|(\d))?\s*([a-zA-Z]*)/gi;
+			while(damage = damageRegex.exec(damageInfo)) {
+				log('damage[0]: ' + damage[0]);
+				log('damage[1]: ' + damage[1]);
+				log('damage[2]: ' + damage[2]);
+				log('damage[3]: ' + damage[3]);
+				log('damage[4]: ' + damage[4]);
+				if(damage[1]) {
+					setAttribute('npc_attack_dmg_' + actionNum, damage[1]);
+					setAttribute('npc_attack_toggle_damage_' + actionNum, '@{npc_attack_var_damage_' + actionNum + '}');
+				}
+				if(damage[2]) {
+					setAttribute('npc_attack_crit_dmg_' + actionNum, damage[2]);
+				}
+				if(damage[3]) {
+					setAttribute('npc_attack_dmg_type_' + actionNum, damage[3]);
+				}
+
+
+			}
+
 
 			// Convert dice to inline roll and split description from effect
+
 			var match = value.match(/(Each|Hit:)/);
 			if(match) {
 				text = value.substring(0, match.index).replace(/(\+\s?(\d+))/g, '$1 : [[1d20+$2]]|[[1d20+$2]]');
-				setAttribute('npc_action_description' + cpt, text);
+				setAttribute('npc_attack_emote_' + actionNum, text);
 
 				text = value.substring(match.index).replace(/(\d+d\d+[\d\s+]*)/g, '[[$1]]');
-				setAttribute('npc_action_effect' + cpt, text);
+				//log('text: ' + text);
+				setAttribute('npc_attack_effect_' + actionNum, text);
 			} else {
 				text = value.replace(/(\+\s?(\d+))/g, '$1 : [[1d20+$2]]|[[1d20+$2]]');
-				setAttribute('npc_action_description' + cpt, text);
+				setAttribute('npc_attack_emote_' + actionNum, text);
 			}
 
 			// Create token action
 			if(shaped.usePowerAbility) {
-				setAbility(key, '', powercardAbility(id, cpt), shaped.createAbilityAsToken);
+				setAbility(key, '', powercardAbility(id, actionNum), shaped.createAbilityAsToken);
 			} else {
-				setAbility(key, '', '%{selected|NPCAction' + cpt + '}', shaped.createAbilityAsToken);
+				setAbility(key, '', '%{selected|npc_attack_' + actionNum + '}', shaped.createAbilityAsToken);
 			}
-
-			cpt++;
+			actionNum++;
 		});
-
+		/*
 		var actionList = actionPosition.join('|').slice(1);
 
 		if(multiattackText !== '') {
@@ -698,57 +774,61 @@
 				}
 			}
 
-			setAttribute('npc_action_name' + cpt, 'MultiAttack');
-			setAttribute('npc_action_effect' + cpt, macro.slice(0, -1));
-			setAttribute('npc_action_multiattack' + cpt, '{{npc_showmultiattack=1}} {{npc_multiattack=@{npc_multiattack}}}');
+			setAttribute('npc_attack_name__' + actionNum, 'MultiAttack');
+			setAttribute('npc_attack_effect_' + actionNum, macro.slice(0, -1));
+			//setAttribute('npc_attack_multiattack_' + actionNum, '{{npc_showmultiattack=1}} {{npc_multiattack=@{npc_multiattack}}}');
 
 			if(shaped.usePowerAbility) {
-				setAbility('MultiAttack', '', powercardAbility(id, cpt), shaped.createAbilityAsToken);
+				setAbility('MultiAttack', '', powercardAbility(id, actionNum), shaped.createAbilityAsToken);
 			} else {
-				setAbility('MultiAttack', '', '%{selected|NPCAction' + cpt + '}', shaped.createAbilityAsToken);
+				setAbility('MultiAttack', '', '%{selected|NPCAction' + actionNum + '}', shaped.createAbilityAsToken);
 			}
-			cpt++;
+			actionNum++;
 		}
 
 		_.each(legendary, function(value, key) {
-			setAttribute('npc_action_name' + cpt, key);
-			setAttribute('npc_action_type' + cpt, '(Legendary Action)');
+			//attr_npc_lair_action_emote_1
+			//attr_npc_legendary_action_emote_1
+			//attr_npc_attack_emote_1
+			setAttribute('npc_attack_name_' + actionNum, key);
+			setAttribute('npc_attack_type_' + actionNum, '(Legendary Action)');
 
 			var regex = new RegExp('makes a (' + actionList + ')', 'i');
 			var match = value.match(regex);
 			if(match) {
 				var macro = '%{selected|NPCAction' + actionPosition.indexOf(match[1].toLowerCase()) + '}';
-				setAttribute('npc_action_effect' + cpt, macro);
+				setAttribute('npc_attack_effect_' + actionNum, macro);
 			} else {
 				match = value.match(/(Each|Hit:)/);
 				if(match) {
 					text = value.substring(0, match.index).replace(/(\+\s?(\d+))/g, '$1 : [[1d20+$2]]|[[1d20+$2]]');
-					setAttribute('npc_action_description' + cpt, text);
+					setAttribute('npc_attack_emote_' + actionNum, text);
 
 					text = value.substring(match.index).replace(/(\d+d\d+[\d\s+]*)/g, '[[$1]]');
-					setAttribute('npc_action_effect' + cpt, text);
+					setAttribute('npc_attack_effect_' + actionNum, text);
 				} else {
 					text = value.replace(/(\+\s?(\d+))/g, '$1 : [[1d20+$2]]|[[1d20+$2]]');
-					setAttribute('npc_action_description' + cpt, text);
+					setAttribute('npc_attack_emote_' + actionNum, text);
 				}
 			}
-			cpt++;
+			actionNum++;
 		});
+		*/
 	}
 
 	function processBarSetting(i, token, name) {
 		var attribute = shaped['parsebar' + i];
 
-		log('Attribute to set to bar ' + i + ': ' + attribute);
+		if(attribute) {
+			log('Attribute to set to bar ' + i + ': ' + attribute);
+		}
 
 		if(attribute && attribute !== '') {
 			//value = getAttrByName(characterId, attribute, 'current');
 			var command = '\\w GM [[@{' + name + '|'+ attribute + '}]]';
 			sendChat('Shaped', command, function(ops) {
 				var res = ops[0].inlinerolls['1'].results.total;
-				log(res);
 				setBarValue(token, i, res);
-				//log(res);
 			});
 		}
 	}
