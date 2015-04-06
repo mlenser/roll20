@@ -506,22 +506,47 @@
 	}
 
 	function parseHp(hp) {
-		var match = hp.match(/.*?(\d+)\s+\(((?:\d+)d(?:\d+))/i);
+		var match = hp.match(/.*?(\d+)\s+\(((?:\d+)d(?:\d+))/i),
+				splitHD = match[2].match(/(\d+)d(\d+)/i),
+				numHD = splitHD[1],
+				HDsize = 'd' + splitHD[2];
+
 		setAttribute('HP', match[1], match[1]);
-		log('hd note' + match[2]);
 		setAttribute('npc_HP_hit_dice', match[2]);
+
+		setAttribute('hd_' + HDsize, numHD, numHD);
 	}
 
 	function parseSpeed(speed) {
 		var baseAttr = 'speed',
-				regex = /(|fly|climb|swim|burrow)\s*(\d+)(?:ft\.|\s)+(\(.*\))?/gi;
+				regex = /(|burrow|climb|fly|swim|)\s*(\d+)(?:ft)+(\(.*\))?/gi;
+
 		while(match = regex.exec(speed)) {
 			var attrName = baseAttr + (match[1] !== '' ? '_' + match[1].toLowerCase() : ''),
 					value = match[2];
-			if(match[3]) {
-				value += ' ' + match[3];
-			}
 
+			if(match[3]) {
+				if(match[3].indexOf('hover')) {
+					setAttribute('speed_fly_hover', 'on');
+				}
+			}
+			setAttribute(attrName, value);
+		}
+	}
+
+	function parseSenses(senses) {
+		senses = senses.replace(/[,\s]*passive.*/i,'');
+		var regex = /(|blindsight|darkvision|tremorsense|truesight|)\s*(\d+)(?:ft)+(\(.*\))?/gi;
+
+		while(match = regex.exec(senses)) {
+			var attrName = match[1].toLowerCase(),
+					value = match[2];
+
+			if(match[3]) {
+				if(match[3].indexOf('blind beyond')) {
+					setAttribute('blindsight_blind_beyond', 'on');
+				}
+			}
 			setAttribute(attrName, value);
 		}
 	}
@@ -597,20 +622,6 @@
 			}
 		}
 	}
-
-	function parseSenses(senses) {
-		senses = senses.replace(/[,\s]*passive.*/i,'').replace(/\./g,'').split(', ');
-
-		for (var i = 0; i < senses.length; i++) {
-			var splitValue = senses[i].split(' ');
-
-			setAttribute(splitValue[0], splitValue[1]);
-			if(splitValue[2].indexOf("blind beyond")) {
-				setAttribute('blindsight_blind_beyond', 'on');
-			}
-		}
-	}
-
 	function parseTraits(traits) {
 		var text = '';
 		_.each(traits, function(value, key) {
