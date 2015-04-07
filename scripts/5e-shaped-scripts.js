@@ -725,11 +725,11 @@
 			}
 			var alternateDamageRegex = /(?:\,)\s*?(?:or)\s*?(?:(\d+)|(?:\d+)\s*?\(?((\d+d\d+)[\d\s+]*)\)?)\s*?([a-zA-Z]*)\s*(?:damage)\s(.*)/gi;
 			while(alternateDamage = alternateDamageRegex.exec(damageInfo)) {
-				setAttribute('npc_action_second_alt_dmg_' + actionNum, alternateDamage[1] || alternateDamage[2]);
+				setAttribute('npc_action_alt_dmg_' + actionNum, alternateDamage[1] || alternateDamage[2]);
 				if(alternateDamage[5]) {
-					setAttribute('npc_action_second_alt_dmg_reason_' + actionNum, alternateDamage[5]);
+					setAttribute('npc_action_alt_dmg_reason_' + actionNum, alternateDamage[5]);
 				}
-				setAttribute('npc_action_toggle_alt_damage_' + actionNum, '@{npc_action_var_second_damage_' + actionNum + '}');
+				setAttribute('npc_action_toggle_alt_damage_' + actionNum, '@{npc_action_var_alt_damage_' + actionNum + '}');
 			}
 
 			/*
