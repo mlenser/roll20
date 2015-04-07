@@ -660,7 +660,7 @@
 				actionPosition[actionNum] = key.toLowerCase();
 			}
 
-			setAttribute('npc_attack_name_' + actionNum, key);
+			setAttribute('npc_action_name_' + actionNum, key);
 
 			var splitAction = value.split('.'),
 					attackInfo = splitAction[0],
@@ -674,7 +674,7 @@
 					if(type[1].toLowerCase() === meleeOrRanged.toLowerCase()) {
 						type[1] = 'Thrown';
 					}
-					setAttribute('npc_attack_type_' + actionNum, shaped.capitalizeEachWord(type[1]));
+					setAttribute('npc_action_type_' + actionNum, shaped.capitalizeEachWord(type[1]));
 				}
 				if(type[2]) {
 					var attackWeaponOrSpell = shaped.capitalizeEachWord(type[2]);
@@ -683,27 +683,27 @@
 			var toHitRegex = /\+\s?(\d+)\s*(?:to hit)/gi;
 			while(toHit = toHitRegex.exec(splitAttack[0])) {
 				if(toHit[1]) {
-					setAttribute('npc_attack_tohit_' + actionNum, toHit[1]);
-					setAttribute('npc_attack_toggle_attack_' + actionNum, '@{npc_attack_var_attack_' + actionNum + '}');
-					setAttribute('npc_attack_toggle_crit_' + actionNum, '@{npc_attack_var_crit_' + actionNum + '}');
+					setAttribute('npc_action_tohit_' + actionNum, toHit[1]);
+					setAttribute('npc_action_toggle_attack_' + actionNum, '@{npc_action_var_attack_' + actionNum + '}');
+					setAttribute('npc_action_toggle_crit_' + actionNum, '@{npc_action_var_crit_' + actionNum + '}');
 				}
 			}
 			var reachRegex = /(?:reach)\s?(\d+)\s?(?:ft)/gi;
 			while(reach = reachRegex.exec(splitAttack[1])) {
 				if(reach[1]) {
-					setAttribute('npc_attack_reach_' + actionNum, reach[1] + ' ft');
+					setAttribute('npc_action_reach_' + actionNum, reach[1] + ' ft');
 				}
 			}
 			var rangeRegex = /(?:range)\s?(\d+)\/(\d+)\s?(ft)/gi;
 			while(range = rangeRegex.exec(splitAttack[1])) {
 				if(range[1] && range[2]) {
-					setAttribute('npc_attack_range_' + actionNum, range[1] + '/' + range[2] + ' ft');
+					setAttribute('npc_action_range_' + actionNum, range[1] + '/' + range[2] + ' ft');
 				}
 			}
 			if(splitAttack[2]) {
-				setAttribute('npc_attack_target_' + actionNum, splitAttack[2].trim().toLowerCase());
+				setAttribute('npc_action_target_' + actionNum, splitAttack[2].trim().toLowerCase());
 			}
-			setAttribute('npc_attack_toggle_details_' + actionNum, '@{npc_attack_var_details_' + actionNum + '}');
+			setAttribute('npc_action_toggle_details_' + actionNum, '@{npc_action_var_details_' + actionNum + '}');
 
 
 			log('damageInfo: ' + damageInfo);
@@ -712,25 +712,25 @@
 			while(damage = damageRegex.exec(damageInfo)) {
 				if(damage[1] || damage[3]) {
 					if(!setDamageForThisAction) {
-						setAttribute('npc_attack_dmg_' + actionNum, damage[1] || damage[3]);
+						setAttribute('npc_action_dmg_' + actionNum, damage[1] || damage[3]);
 					} else {
-						setAttribute('npc_attack_second_dmg_' + actionNum, damage[1] || damage[3]);
-						setAttribute('npc_attack_toggle_second_damage_' + actionNum, '@{npc_attack_var_second_damage_' + actionNum + '}');
+						setAttribute('npc_action_second_dmg_' + actionNum, damage[1] || damage[3]);
+						setAttribute('npc_action_toggle_second_damage_' + actionNum, '@{npc_action_var_second_damage_' + actionNum + '}');
 					}
-					setAttribute('npc_attack_toggle_damage_' + actionNum, '@{npc_attack_var_damage_' + actionNum + '}');
+					setAttribute('npc_action_toggle_damage_' + actionNum, '@{npc_action_var_damage_' + actionNum + '}');
 				}
 				if(damage[2] || damage[3]) {
 					if(!setDamageForThisAction) {
-						setAttribute('npc_attack_crit_dmg_' + actionNum, damage[2] || damage[3]);
+						setAttribute('npc_action_crit_dmg_' + actionNum, damage[2] || damage[3]);
 					} else {
-						setAttribute('npc_attack_second_crit_dmg_' + actionNum, damage[2] || damage[3]);
+						setAttribute('npc_action_second_crit_dmg_' + actionNum, damage[2] || damage[3]);
 					}
 				}
 				if(damage[4]) {
 					if(!setDamageForThisAction) {
-						setAttribute('npc_attack_dmg_type_' + actionNum, damage[4]);
+						setAttribute('npc_action_dmg_type_' + actionNum, damage[4]);
 					} else {
-						setAttribute('npc_attack_second_dmg_type_' + actionNum, damage[4]);
+						setAttribute('npc_action_second_dmg_type_' + actionNum, damage[4]);
 					}
 				}
 				setDamageForThisAction = true;
@@ -740,13 +740,13 @@
 			while(save = saveRegex.exec(damageInfo)) {
 				log('save: ' + save);
 				if(save[1]) {
-					setAttribute('npc_attack_save_dc_' + actionNum, save[1]);
+					setAttribute('npc_action_save_dc_' + actionNum, save[1]);
 				}
 				if(save[2]) {
-					setAttribute('npc_attack_save_stat_' + actionNum, save[2].substring(0, 3));
+					setAttribute('npc_action_save_stat_' + actionNum, save[2].substring(0, 3));
 				}
 				if(save[1] || save[2]){
-					setAttribute('npc_attack_toggle_save_' + actionNum, '@{npc_attack_var_save_' + actionNum + '}');
+					setAttribute('npc_action_toggle_save_' + actionNum, '@{npc_action_var_save_' + actionNum + '}');
 				}
 			}
 
@@ -754,7 +754,7 @@
 			if(shaped.usePowerAbility) {
 				setAbility(key, '', powercardAbility(id, actionNum), shaped.createAbilityAsToken);
 			} else {
-				setAbility(key, '', '%{selected|npc_attack_' + actionNum + '}', shaped.createAbilityAsToken);
+				setAbility(key, '', '%{selected|npc_action_' + actionNum + '}', shaped.createAbilityAsToken);
 			}
 			actionNum++;
 		});
@@ -780,9 +780,9 @@
 				}
 			}
 
-			setAttribute('npc_attack_name__' + actionNum, 'MultiAttack');
-			setAttribute('npc_attack_effect_' + actionNum, macro.slice(0, -1));
-			//setAttribute('npc_attack_multiattack_' + actionNum, '{{npc_showmultiattack=1}} {{npc_multiattack=@{npc_multiattack}}}');
+			setAttribute('npc_action_name_' + actionNum, 'MultiAttack');
+			setAttribute('npc_action_effect_' + actionNum, macro.slice(0, -1));
+			//setAttribute('npc_action_multiattack_' + actionNum, '{{npc_showmultiattack=1}} {{npc_multiattack=@{npc_multiattack}}}');
 
 			if(shaped.usePowerAbility) {
 				setAbility('MultiAttack', '', powercardAbility(id, actionNum), shaped.createAbilityAsToken);
@@ -795,26 +795,26 @@
 		_.each(legendary, function(value, key) {
 			//attr_npc_lair_action_emote_1
 			//attr_npc_legendary_action_emote_1
-			//attr_npc_attack_emote_1
-			setAttribute('npc_attack_name_' + actionNum, key);
-			setAttribute('npc_attack_type_' + actionNum, '(Legendary Action)');
+			//attr_npc_action_emote_1
+			setAttribute('npc_action_name_' + actionNum, key);
+			setAttribute('npc_action_type_' + actionNum, '(Legendary Action)');
 
 			var regex = new RegExp('makes a (' + actionList + ')', 'i');
 			var match = value.match(regex);
 			if(match) {
 				var macro = '%{selected|NPCAction' + actionPosition.indexOf(match[1].toLowerCase()) + '}';
-				setAttribute('npc_attack_effect_' + actionNum, macro);
+				setAttribute('npc_action_effect_' + actionNum, macro);
 			} else {
 				match = value.match(/(Each|Hit:)/);
 				if(match) {
 					text = value.substring(0, match.index).replace(/(\+\s?(\d+))/g, '$1 : [[1d20+$2]]|[[1d20+$2]]');
-					setAttribute('npc_attack_emote_' + actionNum, text);
+					setAttribute('npc_action_emote_' + actionNum, text);
 
 					text = value.substring(match.index).replace(/(\d+d\d+[\d\s+]*)/g, '[[$1]]');
-					setAttribute('npc_attack_effect_' + actionNum, text);
+					setAttribute('npc_action_effect_' + actionNum, text);
 				} else {
 					text = value.replace(/(\+\s?(\d+))/g, '$1 : [[1d20+$2]]|[[1d20+$2]]');
-					setAttribute('npc_attack_emote_' + actionNum, text);
+					setAttribute('npc_action_emote_' + actionNum, text);
 				}
 			}
 			actionNum++;
