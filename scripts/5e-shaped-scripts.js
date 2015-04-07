@@ -45,6 +45,8 @@
 		log('msg.content' + msg.content);
 		args = msg.content.split(/\s+/);
 		switch(args[0]) {
+			case '!build-monster':
+			case '!shaped-parse':
 			case '!shaped-import':
 				shaped.getSelectedToken(msg, shaped.ImportStatblock);
 				break;
