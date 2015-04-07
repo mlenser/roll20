@@ -92,7 +92,7 @@
 
 	shaped.rollTokenHp = function(token) {
 		var number = 0;
-		for(i = 1; i < 4; i++) {
+		for(var i = 1; i < 4; i++) {
 			if(shaped['parsebar' + i] === 'HP') {
 				number = i;
 				break;
@@ -118,7 +118,7 @@
 				token.set(bar + '_max', total);
 				var message = '/w GM Hp rolled: ' + total;
 				if(original > 0) {
-					message += ' ajusted from original result of ' + original;
+					message += ' adjusted from original result of ' + original;
 				}
 				sendChat('GM', message);
 			});
@@ -509,13 +509,13 @@
 	}
 
 	function parseHp(hp) {
-		var match = hp.match(/.*?(\d+)\s+\(((?:\d+)d(?:\d+))/i),
+		var match = hp.match(/.*?(\d+)\s+\(((?:\d+)d(?:\d+))\s?(\+|\-)\s*?(\d+)/i),
 				splitHD = match[2].match(/(\d+)d(\d+)/i),
 				numHD = splitHD[1],
 				HDsize = 'd' + splitHD[2];
 
 		setAttribute('HP', match[1], match[1]);
-		setAttribute('npc_HP_hit_dice', match[2]);
+		setAttribute('npc_HP_hit_dice', match[2] + ' ' + match[3] + ' ' + match[4]);
 
 		setAttribute('hd_' + HDsize, numHD, numHD);
 	}
@@ -709,34 +709,48 @@
 
 
 			log('damageInfo: ' + damageInfo);
-			var damageRegex = /(?:((\d+d\d+)[\d\s+]*)\)?|(\d+))\s*([a-zA-Z]*)\s*(?:damage)/gi;
-			//var damageRegex = /(?:((\d+d\d+)[\d\s+]*)\)|(\d))?\s*([a-zA-Z]*)/gi;
+			var damageRegex = /(?:Hit:|Each).*?(?:(\d+)|(?:\d+).*?((\d+d\d+)[\d\s+]*).*?)\s*?([a-zA-Z]*)\s*?(?:damage)(?:\.|.*?plus|.*?\,)?/gi;
 			while(damage = damageRegex.exec(damageInfo)) {
-				if(damage[1] || damage[3]) {
-					if(!setDamageForThisAction) {
-						setAttribute('npc_action_dmg_' + actionNum, damage[1] || damage[3]);
-					} else {
-						setAttribute('npc_action_second_dmg_' + actionNum, damage[1] || damage[3]);
-						setAttribute('npc_action_toggle_second_damage_' + actionNum, '@{npc_action_var_second_damage_' + actionNum + '}');
-					}
-					setAttribute('npc_action_toggle_damage_' + actionNum, '@{npc_action_var_damage_' + actionNum + '}');
-				}
-				if(damage[2] || damage[3]) {
-					if(!setDamageForThisAction) {
-						setAttribute('npc_action_crit_dmg_' + actionNum, damage[2] || damage[3]);
-					} else {
-						setAttribute('npc_action_second_crit_dmg_' + actionNum, damage[2] || damage[3]);
-					}
-				}
-				if(damage[4]) {
-					if(!setDamageForThisAction) {
-						setAttribute('npc_action_dmg_type_' + actionNum, damage[4]);
-					} else {
-						setAttribute('npc_action_second_dmg_type_' + actionNum, damage[4]);
-					}
-				}
-				setDamageForThisAction = true;
+				setAttribute('npc_action_dmg_' + actionNum, damage[1] || damage[2]);
+				setAttribute('npc_action_toggle_damage_' + actionNum, '@{npc_action_var_damage_' + actionNum + '}');
+				setAttribute('npc_action_dmg_type_' + actionNum, damage[4]);
+				setAttribute('npc_action_crit_dmg_' + actionNum, damage[1] || damage[3]);
 			}
+			var secondaryDamageRegex = /(?:plus)\s*?(?:(\d+)|(?:\d+)\s*?\(?((\d+d\d+)[\d\s+]*)\)?)\s*?([a-zA-Z]*)\s*(?:damage)/gi;
+			while(secondaryDamage = secondaryDamageRegex.exec(damageInfo)) {
+				setAttribute('npc_action_second_dmg_' + actionNum, secondaryDamage[1] || secondaryDamage[2]);
+				setAttribute('npc_action_toggle_second_damage_' + actionNum, '@{npc_action_var_second_damage_' + actionNum + '}');
+				setAttribute('npc_action_second_dmg_type_' + actionNum, secondaryDamage[4]);
+				setAttribute('npc_action_second_crit_dmg_' + actionNum, secondaryDamage[1] || secondaryDamage[3]);
+			}
+			var alternateDamageRegex = /(?:\,)\s*?(?:or)\s*?(?:(\d+)|(?:\d+)\s*?\(?((\d+d\d+)[\d\s+]*)\)?)\s*?([a-zA-Z]*)\s*(?:damage)\s(.*)/gi;
+			while(alternateDamage = alternateDamageRegex.exec(damageInfo)) {
+				setAttribute('npc_action_second_alt_dmg_' + actionNum, alternateDamage[1] || alternateDamage[2]);
+				if(alternateDamage[5]) {
+					setAttribute('npc_action_second_alt_dmg_reason_' + actionNum, alternateDamage[5]);
+				}
+				setAttribute('npc_action_toggle_alt_damage_' + actionNum, '@{npc_action_var_second_damage_' + actionNum + '}');
+			}
+
+			/*
+			 12 (2d8 + 3) slashing damage, or 14 (2d10 + 3) slashing damage if used with two hands
+
+			 Hit: 1 piercing damage.
+
+			 Hit: 8 (2d4 + 3) bludgeoning damage.
+
+
+			 Hit: 12 (2d6 + 5) bludgeoning damage. If the target is a creature, it must succeed on a DC 14 Constitution saving throw or become diseased. The disease has no effect for 1 minute and can be removed by any magic that cures disease. After 1 minute, the diseased creature's skin becomes translucent and slimy, the creature can't regain hit points unless it is underwater, and the disease can be removed only by heal or another disease-curing spell of 6th level or higher. When the creature is outside a body of water, it takes 6 (1d12) acid damage every 10 minutes unless moisture is applied to the skin before 10 minutes have passed.
+
+			 Hit: 1 piercing damage plus 7 (3d4 + 5) poison damage.
+			 Hit: 1 piercing damage plus 7 (3d4) poison damage.
+			 Hit: 1 piercing damage plus 1 poison damage.
+
+			 Hit: 5 (2d4) piercing damage, or 2 (1d4 + 5) piercing damage if the swarm has half of its hit points or fewer.
+			 Hit: 5 (2d4) piercing damage, or 2 (1d4) piercing damage if the swarm has half of its hit points or fewer.
+			 Hit: 5 (2d4) piercing damage, or 2 piercing damage if the swarm has half of its hit points or fewer.
+
+			*/
 
 			var saveRegex = /(?:DC)\s?(\d+)\s*?([a-zA-Z]*)\s*?(?:saving throw)/gi;
 			while(save = saveRegex.exec(damageInfo)) {
