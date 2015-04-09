@@ -821,7 +821,12 @@
 			multiAttackText = actions.Multiattack;
 			setAttribute('npc_multiattack', multiAttackText);
 			delete actions.Multiattack;
+
+			if(!shaped.usePowerAbility) {
+				setAbility('MultiAttack', '', '', shaped.createAbilityAsToken);
+			}
 		}
+
 
 		processActions(actions);
 		processActions(legendary, 'legendary_');
@@ -870,7 +875,6 @@
 			} else {
 				log('--create ability: ' + macro);
 				setAbility('MultiAttack', '', macro, shaped.createAbilityAsToken);
-				setAbility('weeee', '', 'weeeeeee', shaped.createAbilityAsToken);
 			}
 		}
 
