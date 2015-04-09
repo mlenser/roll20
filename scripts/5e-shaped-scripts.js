@@ -509,12 +509,10 @@
 	}
 
 	function parseHD(hd) {
-		log('test: ' + hd);
 		var splitHD = hd.match(/(\d+)d(\d+)/i),
 				numHD = splitHD[1],
 				HDsize = 'd' + splitHD[2];
 
-		log('test ' + splitHD + ' ' + numHD + ' ' + HDsize);
 		setAttribute('hd_' + HDsize, numHD, numHD);
 	}
 	function parseHp(hp) {
@@ -649,238 +647,234 @@
 	}
 
 	function parseActions(actions, legendary) {
-		var multiattackText = '';
-		var actionPosition = []; // For use with multiattack.
+		var multiAttackText,
+				actionPosition = []; // For use with multiattack.
 
-		if('Multiattack' in actions) {
-			setAttribute('npc_multiattack', actions.Multiattack);
-			multiattackText = actions.Multiattack;
+		function processActions (actionList, actionType) {
+			if(!actionType) {
+				actionType = '';
+			}
+			var actionNum = 1;
+
+			_.each(actionList, function(value, key) {
+				var parsedAttack = false,
+						parsedDetails = false,
+						parsedDamage = false;
+				if((pos = key.indexOf('(')) > 1) {
+					actionPosition[actionNum] = key.substring(0, pos - 1).toLowerCase();
+				} else {
+					actionPosition[actionNum] = key.toLowerCase();
+				}
+				setAttribute('npc_' + actionType + 'action_name_' + actionNum, key);
+
+				value = value.replace(/ft\s\./gi, 'ft.').replace(/ft\.\s\,/gi, 'ft').replace(/ft\./gi, 'ft');
+				value = value.replace(/ld(\d+)/gi, "1d$1").replace(/ld\s+(\d+)/gi, "1d$1").replace(/(\d+)d\s+(\d+)/gi, "$1d$2").replace(/(\d+)\s+d(\d+)/gi, "$1d$2");
+
+				var replaceObj = {
+					'abol eth': 'aboleth',
+					'Aundefinedr': 'After',
+					'com muni cate': 'communicate',
+					'dea ls': 'deals',
+					'di sease': 'disease',
+					'di stance': 'distance',
+					'fe et': 'feet',
+					'ex istence': 'existence',
+					'magica lly': 'magically',
+					'minlilte': 'minute',
+					'ra nge':'range',
+					'rega ins': 'regains',
+					'slash ing': 'slashing',
+					'ta rget': 'target',
+					'withi n': 'within'
+
+				};
+				var re = new RegExp(Object.keys(replaceObj).join('|'),'gi');
+				value = value.replace(re, function(matched){
+					return replaceObj[matched];
+				});
+
+				log('value: ' + value);
+
+				var splitAction = value.split('.'),
+						attackInfo = splitAction[0],
+						damageInfo = splitAction[1],
+						splitAttack = attackInfo.split(',');
+
+				var typeRegex = /(melee|ranged|melee or ranged)\s*(spell|weapon)\s*/gi;
+				while(type = typeRegex.exec(splitAttack[0])) {
+					if(type[1]) {
+						var meleeOrRanged = 'Melee or Ranged';
+						if(type[1].toLowerCase() === meleeOrRanged.toLowerCase()) {
+							type[1] = 'Thrown';
+						}
+						setAttribute('npc_' + actionType + 'action_type_' + actionNum, shaped.capitalizeEachWord(type[1]));
+					}
+					if(type[2]) {
+						var attackWeaponOrSpell = shaped.capitalizeEachWord(type[2]);
+					}
+					parsedAttack = true;
+				}
+				var toHitRegex = /\+\s?(\d+)\s*(?:to hit)/gi;
+				while(toHit = toHitRegex.exec(splitAttack[0])) {
+					if(toHit[1]) {
+						setAttribute('npc_' + actionType + 'action_tohit_' + actionNum, toHit[1]);
+						setAttribute('npc_' + actionType + 'action_toggle_attack_' + actionNum, '@{npc_' + actionType + 'action_var_attack_' + actionNum + '}');
+						setAttribute('npc_' + actionType + 'action_toggle_crit_' + actionNum, '@{npc_' + actionType + 'action_var_crit_' + actionNum + '}');
+					}
+					if(splitAttack[2]) {
+						setAttribute('npc_' + actionType + 'action_target_' + actionNum, splitAttack[2].trim().toLowerCase());
+						parsedDetails = true;
+					}
+					parsedAttack = true;
+				}
+				var reachRegex = /(?:reach)\s?(\d+)\s?(?:ft)/gi;
+				while(reach = reachRegex.exec(splitAttack[1])) {
+					if(reach[1]) {
+						setAttribute('npc_' + actionType + 'action_reach_' + actionNum, reach[1] + ' ft');
+					}
+					parsedAttack = true;
+					parsedDetails = true;
+				}
+				var rangeRegex = /(?:range)\s?(\d+)\/(\d+)\s?(ft)/gi;
+				while(range = rangeRegex.exec(splitAttack[1])) {
+					if(range[1] && range[2]) {
+						setAttribute('npc_' + actionType + 'action_range_' + actionNum, range[1] + '/' + range[2] + ' ft');
+					}
+					parsedAttack = true;
+					parsedDetails = true;
+				}
+				if(parsedDetails) {
+					setAttribute('npc_' + actionType + 'action_toggle_details_' + actionNum, '@{npc_' + actionType + 'action_var_details_' + actionNum + '}');
+				}
+
+				//log('damageInfo: ' + damageInfo);
+				var damageRegex = /(?:Hit:|Each).*?(?:(\d+)|(?:\d+).*?((\d+d\d+)[\d\s+]*).*?)\s*?([a-zA-Z]*)\s*?(?:damage)(?:\.|.*?plus|.*?\,)?/gi;
+				while(damage = damageRegex.exec(damageInfo)) {
+					setAttribute('npc_' + actionType + 'action_dmg_' + actionNum, damage[1] || damage[2]);
+					setAttribute('npc_' + actionType + 'action_toggle_damage_' + actionNum, '@{npc_' + actionType + 'action_var_damage_' + actionNum + '}');
+					setAttribute('npc_' + actionType + 'action_dmg_type_' + actionNum, damage[4]);
+					setAttribute('npc_' + actionType + 'action_crit_dmg_' + actionNum, damage[1] || damage[3]);
+					parsedDamage = true;
+				}
+				var secondaryDamageRegex = /(?:plus)\s*?(?:(\d+)|(?:\d+)\s*?\(?((\d+d\d+)[\d\s+]*)\)?)\s*?([a-zA-Z]*)\s*(?:damage)/gi;
+				while(secondaryDamage = secondaryDamageRegex.exec(damageInfo)) {
+					setAttribute('npc_' + actionType + 'action_second_dmg_' + actionNum, secondaryDamage[1] || secondaryDamage[2]);
+					setAttribute('npc_' + actionType + 'action_toggle_second_damage_' + actionNum, '@{npc_' + actionType + 'action_var_second_damage_' + actionNum + '}');
+					setAttribute('npc_' + actionType + 'action_second_dmg_type_' + actionNum, secondaryDamage[4]);
+					setAttribute('npc_' + actionType + 'action_second_crit_dmg_' + actionNum, secondaryDamage[1] || secondaryDamage[3]);
+					parsedDamage = true;
+				}
+				var alternateDamageRegex = /(?:\,)\s*?(?:or)\s*?(?:(\d+)|(?:\d+)\s*?\(?((\d+d\d+)[\d\s+]*)\)?)\s*?([a-zA-Z]*)\s*(?:damage)\s(.*)/gi;
+				while(alternateDamage = alternateDamageRegex.exec(damageInfo)) {
+					setAttribute('npc_' + actionType + 'action_alt_dmg_' + actionNum, alternateDamage[1] || alternateDamage[2]);
+					setAttribute('npc_' + actionType + 'action_alt_crit_dmg_' + actionNum, alternateDamage[1] || alternateDamage[3]);
+					if(alternateDamage[5]) {
+						setAttribute('npc_' + actionType + 'action_alt_dmg_reason_' + actionNum, alternateDamage[5]);
+					}
+					setAttribute('npc_' + actionType + 'action_toggle_alt_damage_' + actionNum, '@{npc_' + actionType + 'action_var_alt_damage_' + actionNum + '}');
+					parsedDamage = true;
+				}
+
+				if(parsedDamage) {
+					var effectRegex = /(?:\,)\s*?(?:and)\s(.*)/gi;
+					while(effect = effectRegex.exec(damageInfo)) {
+						setAttribute('npc_' + actionType + 'action_effect_' + actionNum, effect[1].replace(/(\+\s?(\d+))/g, '$1 : [[1d20+$2]]|[[1d20+$2]]'));
+						setAttribute('npc_' + actionType + 'action_toggle_effects_' + actionNum, '@{npc_' + actionType + 'action_var_effects_' + actionNum + '}');
+					}
+				}
+
+				var saveRegex = /(?:DC)\s*?(\d+)\s*?([a-zA-Z]*)\s*?(?:saving throw)\s(.*)/gi;
+				while(save = saveRegex.exec(value)) {
+					//log('save: ' + save);
+					if(save[1]) {
+						setAttribute('npc_' + actionType + 'action_save_dc_' + actionNum, save[1]);
+					}
+					if(save[2]) {
+						setAttribute('npc_' + actionType + 'action_save_stat_' + actionNum, save[2].substring(0, 3));
+					}
+					if(save[1] || save[2]){
+						setAttribute('npc_' + actionType + 'action_toggle_save_' + actionNum, '@{npc_' + actionType + 'action_var_save_' + actionNum + '}');
+					}
+					if(save[3]) {
+						setAttribute('npc_' + actionType + 'action_effect_' + actionNum, save[3]);
+						setAttribute('npc_' + actionType + 'action_toggle_effects_' + actionNum, '@{npc_' + actionType + 'action_var_effects_' + actionNum + '}');
+					}
+				}
+
+				if(!parsedAttack && !parsedDamage) {
+					//make this work
+					value = value.replace(/(?:DC)\s*?(\d+)/gi, '[[$1]]');
+					setAttribute('npc_' + actionType + 'action_effect_' + actionNum, value);
+					setAttribute('npc_' + actionType + 'action_toggle_effects_' + actionNum, '@{npc_' + actionType + 'action_var_effects_' + actionNum + '}');
+				}
+
+				// Create token action
+				if(shaped.usePowerAbility) {
+					setAbility(key, '', powercardAbility(id, actionNum), shaped.createAbilityAsToken);
+				} else {
+					setAbility(key, '', '%{selected|npc_' + actionType + 'action_' + actionNum + '}', shaped.createAbilityAsToken);
+				}
+				actionNum++;
+			});
+		}
+		if(actions.Multiattack) {
+			multiAttackText = actions.Multiattack;
+			setAttribute('npc_multiattack', multiAttackText);
 			delete actions.Multiattack;
 		}
 
-		var actionNum = 1;
-		_.each(actions, function(value, key) {
-			var parsedAttack = false,
-					parsedDetails = false,
-					parsedDamage = false;
-			if((pos = key.indexOf('(')) > 1) {
-				actionPosition[actionNum] = key.substring(0, pos - 1).toLowerCase();
-			} else {
-				actionPosition[actionNum] = key.toLowerCase();
-			}
-			setAttribute('npc_action_name_' + actionNum, key);
+		processActions(actions);
+		processActions(legendary, 'legendary_');
+		//processActions(lair, 'lair_');
 
-			value = value.replace(/ft\s\./gi, 'ft.').replace(/ft\.\s\,/gi, 'ft').replace(/ft\./gi, 'ft');
-			value = value.replace(/ld(\d+)/gi, "1d$1").replace(/ld\s+(\d+)/gi, "1d$1").replace(/(\d+)d\s+(\d+)/gi, "$1d$2").replace(/(\d+)\s+d(\d+)/gi, "$1d$2");
+		if(multiAttackText) {
+			var actionList = actionPosition.join('|').slice(1);
+			log('actionList: ' + actionList);
 
-			var replaceObj = {
-				'abol eth': 'aboleth',
-				'Aundefinedr': 'After',
-				'com muni cate': 'communicate',
-				'dea ls': 'deals',
-				'di sease': 'disease',
-				'di stance': 'distance',
-				'fe et': 'feet',
-				'ex istence': 'existence',
-				'magica lly': 'magically',
-				'minlilte': 'minute',
-				'ra nge':'range',
-				'rega ins': 'regains',
-				'slash ing': 'slashing',
-				'ta rget': 'target',
-				'withi n': 'within'
-
-			};
-			var re = new RegExp(Object.keys(replaceObj).join('|'),'gi');
-			value = value.replace(re, function(matched){
-				return replaceObj[matched];
-			});
-
-			log('value: ' + value);
-
-			var splitAction = value.split('.'),
-					attackInfo = splitAction[0],
-					damageInfo = splitAction[1],
-					splitAttack = attackInfo.split(',');
-
-			var typeRegex = /(melee|ranged|melee or ranged)\s*(spell|weapon)\s*/gi;
-			while(type = typeRegex.exec(splitAttack[0])) {
-				if(type[1]) {
-					var meleeOrRanged = 'Melee or Ranged';
-					if(type[1].toLowerCase() === meleeOrRanged.toLowerCase()) {
-						type[1] = 'Thrown';
-					}
-					setAttribute('npc_action_type_' + actionNum, shaped.capitalizeEachWord(type[1]));
-				}
-				if(type[2]) {
-					var attackWeaponOrSpell = shaped.capitalizeEachWord(type[2]);
-				}
-				parsedAttack = true;
-			}
-			var toHitRegex = /\+\s?(\d+)\s*(?:to hit)/gi;
-			while(toHit = toHitRegex.exec(splitAttack[0])) {
-				if(toHit[1]) {
-					setAttribute('npc_action_tohit_' + actionNum, toHit[1]);
-					setAttribute('npc_action_toggle_attack_' + actionNum, '@{npc_action_var_attack_' + actionNum + '}');
-					setAttribute('npc_action_toggle_crit_' + actionNum, '@{npc_action_var_crit_' + actionNum + '}');
-				}
-				if(splitAttack[2]) {
-					setAttribute('npc_action_target_' + actionNum, splitAttack[2].trim().toLowerCase());
-					parsedDetails = true;
-				}
-				parsedAttack = true;
-			}
-			var reachRegex = /(?:reach)\s?(\d+)\s?(?:ft)/gi;
-			while(reach = reachRegex.exec(splitAttack[1])) {
-				if(reach[1]) {
-					setAttribute('npc_action_reach_' + actionNum, reach[1] + ' ft');
-				}
-				parsedAttack = true;
-				parsedDetails = true;
-			}
-			var rangeRegex = /(?:range)\s?(\d+)\/(\d+)\s?(ft)/gi;
-			while(range = rangeRegex.exec(splitAttack[1])) {
-				if(range[1] && range[2]) {
-					setAttribute('npc_action_range_' + actionNum, range[1] + '/' + range[2] + ' ft');
-				}
-				parsedAttack = true;
-				parsedDetails = true;
-			}
-			if(parsedDetails) {
-				setAttribute('npc_action_toggle_details_' + actionNum, '@{npc_action_var_details_' + actionNum + '}');
-			}
-
-			log('damageInfo: ' + damageInfo);
-			var damageRegex = /(?:Hit:|Each).*?(?:(\d+)|(?:\d+).*?((\d+d\d+)[\d\s+]*).*?)\s*?([a-zA-Z]*)\s*?(?:damage)(?:\.|.*?plus|.*?\,)?/gi;
-			while(damage = damageRegex.exec(damageInfo)) {
-				setAttribute('npc_action_dmg_' + actionNum, damage[1] || damage[2]);
-				setAttribute('npc_action_toggle_damage_' + actionNum, '@{npc_action_var_damage_' + actionNum + '}');
-				setAttribute('npc_action_dmg_type_' + actionNum, damage[4]);
-				setAttribute('npc_action_crit_dmg_' + actionNum, damage[1] || damage[3]);
-				parsedDamage = true;
-			}
-			var secondaryDamageRegex = /(?:plus)\s*?(?:(\d+)|(?:\d+)\s*?\(?((\d+d\d+)[\d\s+]*)\)?)\s*?([a-zA-Z]*)\s*(?:damage)/gi;
-			while(secondaryDamage = secondaryDamageRegex.exec(damageInfo)) {
-				setAttribute('npc_action_second_dmg_' + actionNum, secondaryDamage[1] || secondaryDamage[2]);
-				setAttribute('npc_action_toggle_second_damage_' + actionNum, '@{npc_action_var_second_damage_' + actionNum + '}');
-				setAttribute('npc_action_second_dmg_type_' + actionNum, secondaryDamage[4]);
-				setAttribute('npc_action_second_crit_dmg_' + actionNum, secondaryDamage[1] || secondaryDamage[3]);
-				parsedDamage = true;
-			}
-			var alternateDamageRegex = /(?:\,)\s*?(?:or)\s*?(?:(\d+)|(?:\d+)\s*?\(?((\d+d\d+)[\d\s+]*)\)?)\s*?([a-zA-Z]*)\s*(?:damage)\s(.*)/gi;
-			while(alternateDamage = alternateDamageRegex.exec(damageInfo)) {
-				setAttribute('npc_action_alt_dmg_' + actionNum, alternateDamage[1] || alternateDamage[2]);
-				setAttribute('npc_action_alt_crit_dmg_' + actionNum, alternateDamage[1] || alternateDamage[3]);
-				if(alternateDamage[5]) {
-					setAttribute('npc_action_alt_dmg_reason_' + actionNum, alternateDamage[5]);
-				}
-				setAttribute('npc_action_toggle_alt_damage_' + actionNum, '@{npc_action_var_alt_damage_' + actionNum + '}');
-				parsedDamage = true;
-			}
-
-			if(parsedDamage) {
-				var effectRegex = /(?:\,)\s*?(?:and)\s(.*)/gi;
-				while(effect = effectRegex.exec(damageInfo)) {
-					setAttribute('npc_action_effect_' + actionNum, effect[1].replace(/(\+\s?(\d+))/g, '$1 : [[1d20+$2]]|[[1d20+$2]]'));
-					setAttribute('npc_action_toggle_effects_' + actionNum, '@{npc_action_var_effects_' + actionNum + '}');
-				}
-			}
-
-			var saveRegex = /(?:DC)\s*?(\d+)\s*?([a-zA-Z]*)\s*?(?:saving throw)\s(.*)/gi;
-			while(save = saveRegex.exec(value)) {
-				log('save: ' + save);
-				if(save[1]) {
-					setAttribute('npc_action_save_dc_' + actionNum, save[1]);
-				}
-				if(save[2]) {
-					setAttribute('npc_action_save_stat_' + actionNum, save[2].substring(0, 3));
-				}
-				if(save[1] || save[2]){
-					setAttribute('npc_action_toggle_save_' + actionNum, '@{npc_action_var_save_' + actionNum + '}');
-				}
-				if(save[3]) {
-					setAttribute('npc_action_effect_' + actionNum, save[3]);
-					setAttribute('npc_action_toggle_effects_' + actionNum, '@{npc_action_var_effects_' + actionNum + '}');
-				}
-			}
-
-			if(!parsedAttack && !parsedDamage) {
-				//make this work
-				value = value.replace(/(?:DC)\s*?(\d+)/gi, '[[$1]]');
-				setAttribute('npc_action_effect_' + actionNum, value);
-				setAttribute('npc_action_toggle_effects_' + actionNum, '@{npc_action_var_effects_' + actionNum + '}');
-			}
-
-			// Create token action
-			if(shaped.usePowerAbility) {
-				setAbility(key, '', powercardAbility(id, actionNum), shaped.createAbilityAsToken);
-			} else {
-				setAbility(key, '', '%{selected|npc_action_' + actionNum + '}', shaped.createAbilityAsToken);
-			}
-			actionNum++;
-		});
-		/*
-		var actionList = actionPosition.join('|').slice(1);
-
-		if(multiattackText !== '') {
 			//var regex = new RegExp('(?:(?:(one|two) with its )?(' + actionList + '))', 'gi');
-			var regex = new RegExp('(one|two)? (?:with its )?(' + actionList + ')', 'gi');
-			var macro = '';
+			var regex = new RegExp('(one|two|three)? (?:with its )?(' + actionList + ')( or)?', 'gi');
+			var macro = multiAttackText + '\n';
 
-			while(match = regex.exec(multiattackText)) {
+			while(match = regex.exec(multiAttackText)) {
+				log('match: ' + match);
 				var action = match[2];
 				var nb = match[1] || 'one';
 				var actionNumber = actionPosition.indexOf(action.toLowerCase());
 
 				if(actionNumber !== -1) {
-					macro += '%{selected|NPCAction' + actionNumber + '}\n';
+					macro += '%{selected|npc_action_' + actionNumber + '}\n';
 					if(nb == 'two') {
-						macro += '%{selected|NPCAction' + actionNumber + '}\n';
+						macro += '%{selected|npc_action_' + actionNumber + '}\n';
 					}
+					if(nb == 'three') {
+						macro += '%{selected|npc_action_' + actionNumber + '}\n';
+					}
+					if(match[3]) {
+						macro += 'or\n';
+					}
+
 					delete actionPosition[actionNumber]; // Remove
 				}
 			}
 
-			setAttribute('npc_action_name_' + actionNum, 'MultiAttack');
-			setAttribute('npc_action_effect_' + actionNum, macro.slice(0, -1));
-			//setAttribute('npc_action_multiattack_' + actionNum, '{{npc_showmultiattack=1}} {{npc_multiattack=@{npc_multiattack}}}');
+			/*
+			 setAttribute('npc_action_name_' + actionNum, 'MultiAttack');
+			 setAttribute('npc_action_effect_' + actionNum, macro.slice(0, -1));
+			 setAttribute('npc_action_multiattack_' + actionNum, '{{npc_showmultiattack=1}} {{npc_multiattack=@{npc_multiattack}}}');
+			 */
+
+			log('macro: ' + macro);
 
 			if(shaped.usePowerAbility) {
-				setAbility('MultiAttack', '', powercardAbility(id, actionNum), shaped.createAbilityAsToken);
+				setAbility('MultiAttack', '', powercardAbility(id, actionNumber), shaped.createAbilityAsToken);
 			} else {
-				setAbility('MultiAttack', '', '%{selected|NPCAction' + actionNum + '}', shaped.createAbilityAsToken);
+				log('--create ability: ' + macro);
+				setAbility('MultiAttack', '', macro, shaped.createAbilityAsToken);
+				setAbility('weeee', '', 'weeeeeee', shaped.createAbilityAsToken);
 			}
-			actionNum++;
 		}
 
-		_.each(legendary, function(value, key) {
-			//attr_npc_lair_action_emote_1
-			//attr_npc_legendary_action_emote_1
-			//attr_npc_action_emote_1
-			setAttribute('npc_action_name_' + actionNum, key);
-			setAttribute('npc_action_type_' + actionNum, '(Legendary Action)');
 
-			var regex = new RegExp('makes a (' + actionList + ')', 'i');
-			var match = value.match(regex);
-			if(match) {
-				var macro = '%{selected|NPCAction' + actionPosition.indexOf(match[1].toLowerCase()) + '}';
-				setAttribute('npc_action_effect_' + actionNum, macro);
-			} else {
-				match = value.match(/(Each|Hit:)/);
-				if(match) {
-					text = value.substring(0, match.index).replace(/(\+\s?(\d+))/g, '$1 : [[1d20+$2]]|[[1d20+$2]]');
-					setAttribute('npc_action_emote_' + actionNum, text);
-
-					text = value.substring(match.index).replace(/(\d+d\d+[\d\s+]*)/g, '[[$1]]');
-					setAttribute('npc_action_effect_' + actionNum, text);
-				} else {
-					text = value.replace(/(\+\s?(\d+))/g, '$1 : [[1d20+$2]]|[[1d20+$2]]');
-					setAttribute('npc_action_emote_' + actionNum, text);
-				}
-			}
-			actionNum++;
-		});
-		*/
 	}
 
 	function processBarSetting(i, token, name) {
