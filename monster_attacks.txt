@@ -1,0 +1,116 @@
+Aarakoca
+Talon. Melee Weapon Attack: +4 to hit, reach 5 ft. , one target.
+Hit: 4 (ld4 + 2) slash ing damage.
+javelin. Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or
+ra nge 30/120 ft ., one target. Hit: 5 (1d6 + 2) piercing damage.
+
+Aboleth
+Tentacle. Melee Weapon Attack: +9 to hit, reach 10ft., one
+target. Hit: 12 (2d6 + 5) bludgeoning damage. If the target is a
+creature, it must succeed on a DC 14 Constitution saving throw
+or become diseased. The disease has no effect for 1 minute and
+can be removed by any magic that cures disease. After 1 minlilte,
+the diseased creature's skin becomes translucent and slimy, the
+creature can't regain hit points unless it is underwater, and the
+disease can be removed only by heal or another di sease-curing
+spell of 6th level or higher. When the creature is outside a body
+of water, it takes 6 (1d12) acid damage every 10 minutes unless
+moisture is applied to the skin before 10 minutes have passed.
+Tail. Melee Weapon Attack: +9 to hit, reach 10ft. one target.
+Hit: 15 (3d6 + 5) bludgeoning damage.
+Enslave (3JDay). The aboleth targets one creature it can see
+within 30 fe et of it. The target must succeed on a DC 14
+Wisdom saving throw or be magica lly charmed by the aboleth
+until the aboleth dies or until it is on a different pl ane of
+ex istence from the target. The charmed target is under the
+abol eth's control and can't take reactions, and the abol eth and
+the target can com muni cate telepathically with each other over
+any di stance.
+Whenever the charmed target takes damage, the ta rget can
+repeat the saving throw. On a success, the effect ends. No
+more than once every 24 hours, the target can also repeat the
+saving throw when it is at least 1 mile away from the aboleth.
+
+Psychic Drain (Costs 2 Actions). One creature charmed by the
+aboleth takes 10 (3d6) psychic damage, and the aboleth
+rega ins hit points equal to the damage the creature takes.
+
+Lair Actions
+The aboleth casts phantasmal force (no components
+required) on any number of creatures it can see within
+60 feet of it. While maintaining concentration on this
+effect, the aboleth can't take other lair actions. If a target
+succeeds on the saving throw or if the effect ends
+for it, the target is immune to the aboleth's phantasmal
+force lair action for the next 24 hours, although such a
+creature can choose to be affected.
+• Pools of water within 90 feet of the aboleth surge outward
+in a grasping tide. Any creature on the ground
+within 20 feet of such a pool must succeed on a DC 14
+Strength saving throw or be pulled up to 20 feet into
+the water and knocked prone. The aboleth can't use
+this lair action again until it has used a different one.
+Water in the aboleth's lair magically becomes a conduit
+for the creature's rage. The aboleth can target any
+number of creatures it can see in such water within 90
+feet of it. A target must succeed on a DC 14 Wisdom
+saving throw or take 7 (2d6) psychic damage. The
+aboleth can't use this lair action again until it has used
+a different one.
+
+Regional Effects
+
+Underground surfaces within 1 mile of the aboleth's
+lair are slimy and wet and are difficult terrain.
+• Water sources within 1 mile of the lair are supernaturally
+fouled. Enemies of the aboleth that drink such
+water vomit it within minutes.
+• As an action, the aboleth can create an illusory image
+of itself within 1 mile of the lair. The copy can appear
+at any location the aboleth has seen before or in any
+location a creature charmed by the aboleth can currently
+see. Once created, the image lasts for as long
+as the aboleth maintains concentration, as if concentrating
+on a spell. Although the image is intangible,
+it looks, sounds, and can move like the aboleth. The
+aboleth can sense, speak, and use telepathy from the
+image's position as if present at that position. If the
+image takes any damage, it disappears.
+If the aboleth dies, the first two effects fade over the
+course of 3d 10 days.
+
+
+/*
+			 Talon. Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 4 (ld4 + 2) slashing damage.
+			 Javelin. Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 30/120 ft ., one target. Hit: 5 (1d6 + 2) piercing damage.
+			 Tentacle. Melee Weapon Attack: +9 to hit, reach 10ft., one target. Hit: 12 (2d6 + 5) bludgeoning damage. If the target is a creature, it must succeed on a DC 14 Constitution saving throw or become diseased. The disease has no effect for 1 minute and can be removed by any magic that cures disease. After 1 minute, the diseased creature's skin becomes translucent and slimy, the creature can't regain hit points unless it is underwater, and the disease can be removed only by heal or another disease-curing spell of 6th level or higher. When the creature is outside a body of water, it takes 6 (1d12) acid damage every 10 minutes unless moisture is applied to the skin before 10 minutes have passed.
+			 Enslave (3JDay). The aboleth targets one creature it can see within 30 fe et of it. The target must succeed on a DC 14 Wisdom saving throw or be magically charmed by the aboleth until the aboleth dies or until it is on a different pl ane of existence from the target. The charmed target is under the aboleth's control and can't take reactions, and the aboleth and the target can communicate telepathically with each other over any di stance. Whenever the charmed target takes damage, the target can repeat the saving throw. On a success, the effect ends. No more than once every 24 hours, the target can also repeat the saving throw when it is at least 1 mile away from the aboleth.
+
+			 12 (2d8 + 3) slashing damage, or 14 (2d10 + 3) slashing damage if used with two hands
+
+			 Hit: 1 piercing damage.
+
+			 Hit: 8 (2d4 + 3) bludgeoning damage.
+
+
+			 Hit: 12 (2d6 + 5) bludgeoning damage. If the target is a creature, it must succeed on a DC 14 Constitution saving throw or become diseased. The disease has no effect for 1 minute and can be removed by any magic that cures disease. After 1 minute, the diseased creature's skin becomes translucent and slimy, the creature can't regain hit points unless it is underwater, and the disease can be removed only by heal or another disease-curing spell of 6th level or higher. When the creature is outside a body of water, it takes 6 (1d12) acid damage every 10 minutes unless moisture is applied to the skin before 10 minutes have passed.
+
+			 Hit: 1 piercing damage plus 7 (3d4 + 5) poison damage.
+			 Hit: 1 piercing damage plus 7 (3d4) poison damage.
+			 Hit: 1 piercing damage plus 1 poison damage.
+
+			 Hit: 5 (2d4) piercing damage, or 2 (1d4 + 5) piercing damage if the swarm has half of its hit points or fewer.
+			 Hit: 5 (2d4) piercing damage, or 2 (1d4) piercing damage if the swarm has half of its hit points or fewer.
+			 Hit: 5 (2d4) piercing damage, or 2 piercing damage if the swarm has half of its hit points or fewer.
+
+
+
+
+
+			 The ankheg spits acid in a line that is 30 feet long and 5 feet wide, provided that it has no creature grappled. Each creature in that line must make a DC 13 Dexterity saving throw, taking 10 (3d6) acid damage on a failed save, or half as much damage on a successful one.
+
+			 The banshee releases a mournful wail, provided that she isn't in sunlight. This wail has no effect on constructs and undead. All other creatures within 30 feet of her that can hear her must make a DC 13 Constitution saving throw. On a failure, a creature drops to 0 hit points. On a success, a creature takes 10 (3d6) psychic damage.
+
+			 Petrifying Gaze. If a creature starts its turn within 30 feet of the basilisk and the two of them can see each other, the basilisk can force the creature to make a DC 12 Constitution saving throw if the basilisk isn't incapacitated. On a failed save, the creature magically begins to turn to stone and is restrained. It must repeat the saving throw at the end of its next turn. On a success, the effect ends. On a failure, the creature is petrified until freed by the greater restoration spell or other magic.
+
+			*/

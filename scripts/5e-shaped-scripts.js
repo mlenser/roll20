@@ -508,16 +508,22 @@
 		setAttribute('npc_AC_note', match[2].replace(/\(|\)/g,''));
 	}
 
-	function parseHp(hp) {
-		var match = hp.match(/.*?(\d+)\s+\(((?:\d+)d(?:\d+))\s?(\+|\-)\s*?(\d+)/i),
-				splitHD = match[2].match(/(\d+)d(\d+)/i),
+	function parseHD(hd) {
+		log('test: ' + hd);
+		var splitHD = hd.match(/(\d+)d(\d+)/i),
 				numHD = splitHD[1],
 				HDsize = 'd' + splitHD[2];
+
+		log('test ' + splitHD + ' ' + numHD + ' ' + HDsize);
+		setAttribute('hd_' + HDsize, numHD, numHD);
+	}
+	function parseHp(hp) {
+		var match = hp.match(/.*?(\d+)\s+\(((?:\d+)d(?:\d+))\s?(\+|\-)\s*?(\d+)/i);
 
 		setAttribute('HP', match[1], match[1]);
 		setAttribute('npc_HP_hit_dice', match[2] + ' ' + match[3] + ' ' + match[4]);
 
-		setAttribute('hd_' + HDsize, numHD, numHD);
+		parseHD(match[2]);
 	}
 
 	function parseSpeed(speed) {
@@ -654,15 +660,47 @@
 
 		var actionNum = 1;
 		_.each(actions, function(value, key) {
-			value = value.replace(/(ft\.)/gi, 'ft');
-			var setDamageForThisAction = false;
+			var parsedAttack = false,
+					parsedDetails = false,
+					parsedDamage = false;
 			if((pos = key.indexOf('(')) > 1) {
 				actionPosition[actionNum] = key.substring(0, pos - 1).toLowerCase();
 			} else {
 				actionPosition[actionNum] = key.toLowerCase();
 			}
-
 			setAttribute('npc_action_name_' + actionNum, key);
+
+			value = value.replace(/ft\s\./gi, 'ft.');
+			value = value.replace(/ft\.\s\,/gi, 'ft');
+			value = value.replace(/ft\./gi, 'ft');
+
+			var replaceObj = {
+				'abol eth': 'aboleth',
+				'Aundefinedr': 'After',
+				'com muni cate': 'communicate',
+				'dea ls': 'deals',
+				'di sease': 'disease',
+				'di stance': 'distance',
+				'fe et': 'feet',
+				'ex istence': 'existence',
+				'magica lly': 'magically',
+				'minlilte': 'minute',
+				'ra nge':'range',
+				'rega ins': 'regains',
+				'slash ing': 'slashing',
+				'ta rget': 'target',
+				'withi n': 'within'
+
+			};
+			var re = new RegExp(Object.keys(replaceObj).join("|"),"gi");
+			value = value.replace(re, function(matched){
+				return replaceObj[matched];
+			});
+
+			value = value.replace(/(\d+)d\s+(\d+)/gi, "$1d$2");
+			value = value.replace(/(\d+)\s+d(\d+)/gi, "$1d$2");
+
+			log('value: ' + value);
 
 			var splitAction = value.split('.'),
 					attackInfo = splitAction[0],
@@ -681,6 +719,7 @@
 				if(type[2]) {
 					var attackWeaponOrSpell = shaped.capitalizeEachWord(type[2]);
 				}
+				parsedAttack = true;
 			}
 			var toHitRegex = /\+\s?(\d+)\s*(?:to hit)/gi;
 			while(toHit = toHitRegex.exec(splitAttack[0])) {
@@ -689,24 +728,31 @@
 					setAttribute('npc_action_toggle_attack_' + actionNum, '@{npc_action_var_attack_' + actionNum + '}');
 					setAttribute('npc_action_toggle_crit_' + actionNum, '@{npc_action_var_crit_' + actionNum + '}');
 				}
+				if(splitAttack[2]) {
+					setAttribute('npc_action_target_' + actionNum, splitAttack[2].trim().toLowerCase());
+					parsedDetails = true;
+				}
+				parsedAttack = true;
 			}
 			var reachRegex = /(?:reach)\s?(\d+)\s?(?:ft)/gi;
 			while(reach = reachRegex.exec(splitAttack[1])) {
 				if(reach[1]) {
 					setAttribute('npc_action_reach_' + actionNum, reach[1] + ' ft');
 				}
+				parsedAttack = true;
+				parsedDetails = true;
 			}
 			var rangeRegex = /(?:range)\s?(\d+)\/(\d+)\s?(ft)/gi;
 			while(range = rangeRegex.exec(splitAttack[1])) {
 				if(range[1] && range[2]) {
 					setAttribute('npc_action_range_' + actionNum, range[1] + '/' + range[2] + ' ft');
 				}
+				parsedAttack = true;
+				parsedDetails = true;
 			}
-			if(splitAttack[2]) {
-				setAttribute('npc_action_target_' + actionNum, splitAttack[2].trim().toLowerCase());
+			if(parsedDetails) {
+				setAttribute('npc_action_toggle_details_' + actionNum, '@{npc_action_var_details_' + actionNum + '}');
 			}
-			setAttribute('npc_action_toggle_details_' + actionNum, '@{npc_action_var_details_' + actionNum + '}');
-
 
 			log('damageInfo: ' + damageInfo);
 			var damageRegex = /(?:Hit:|Each).*?(?:(\d+)|(?:\d+).*?((\d+d\d+)[\d\s+]*).*?)\s*?([a-zA-Z]*)\s*?(?:damage)(?:\.|.*?plus|.*?\,)?/gi;
@@ -715,6 +761,7 @@
 				setAttribute('npc_action_toggle_damage_' + actionNum, '@{npc_action_var_damage_' + actionNum + '}');
 				setAttribute('npc_action_dmg_type_' + actionNum, damage[4]);
 				setAttribute('npc_action_crit_dmg_' + actionNum, damage[1] || damage[3]);
+				parsedDamage = true;
 			}
 			var secondaryDamageRegex = /(?:plus)\s*?(?:(\d+)|(?:\d+)\s*?\(?((\d+d\d+)[\d\s+]*)\)?)\s*?([a-zA-Z]*)\s*(?:damage)/gi;
 			while(secondaryDamage = secondaryDamageRegex.exec(damageInfo)) {
@@ -722,48 +769,29 @@
 				setAttribute('npc_action_toggle_second_damage_' + actionNum, '@{npc_action_var_second_damage_' + actionNum + '}');
 				setAttribute('npc_action_second_dmg_type_' + actionNum, secondaryDamage[4]);
 				setAttribute('npc_action_second_crit_dmg_' + actionNum, secondaryDamage[1] || secondaryDamage[3]);
+				parsedDamage = true;
 			}
 			var alternateDamageRegex = /(?:\,)\s*?(?:or)\s*?(?:(\d+)|(?:\d+)\s*?\(?((\d+d\d+)[\d\s+]*)\)?)\s*?([a-zA-Z]*)\s*(?:damage)\s(.*)/gi;
 			while(alternateDamage = alternateDamageRegex.exec(damageInfo)) {
 				setAttribute('npc_action_alt_dmg_' + actionNum, alternateDamage[1] || alternateDamage[2]);
+				setAttribute('npc_action_alt_crit_dmg_' + actionNum, alternateDamage[1] || alternateDamage[3]);
 				if(alternateDamage[5]) {
 					setAttribute('npc_action_alt_dmg_reason_' + actionNum, alternateDamage[5]);
 				}
 				setAttribute('npc_action_toggle_alt_damage_' + actionNum, '@{npc_action_var_alt_damage_' + actionNum + '}');
+				parsedDamage = true;
 			}
 
-			/*
-			 12 (2d8 + 3) slashing damage, or 14 (2d10 + 3) slashing damage if used with two hands
+			if(parsedDamage) {
+				var effectRegex = /(?:\,)\s*?(?:and)\s(.*)/gi;
+				while(effect = effectRegex.exec(damageInfo)) {
+					setAttribute('npc_action_effect_' + actionNum, effect[1].replace(/(\+\s?(\d+))/g, '$1 : [[1d20+$2]]|[[1d20+$2]]'));
+					setAttribute('npc_action_toggle_effects_' + actionNum, '@{npc_action_var_effects_' + actionNum + '}');
+				}
+			}
 
-			 Hit: 1 piercing damage.
-
-			 Hit: 8 (2d4 + 3) bludgeoning damage.
-
-
-			 Hit: 12 (2d6 + 5) bludgeoning damage. If the target is a creature, it must succeed on a DC 14 Constitution saving throw or become diseased. The disease has no effect for 1 minute and can be removed by any magic that cures disease. After 1 minute, the diseased creature's skin becomes translucent and slimy, the creature can't regain hit points unless it is underwater, and the disease can be removed only by heal or another disease-curing spell of 6th level or higher. When the creature is outside a body of water, it takes 6 (1d12) acid damage every 10 minutes unless moisture is applied to the skin before 10 minutes have passed.
-
-			 Hit: 1 piercing damage plus 7 (3d4 + 5) poison damage.
-			 Hit: 1 piercing damage plus 7 (3d4) poison damage.
-			 Hit: 1 piercing damage plus 1 poison damage.
-
-			 Hit: 5 (2d4) piercing damage, or 2 (1d4 + 5) piercing damage if the swarm has half of its hit points or fewer.
-			 Hit: 5 (2d4) piercing damage, or 2 (1d4) piercing damage if the swarm has half of its hit points or fewer.
-			 Hit: 5 (2d4) piercing damage, or 2 piercing damage if the swarm has half of its hit points or fewer.
-
-
-
-
-
-			 The ankheg spits acid in a line that is 30 feet long and 5 feet wide, provided that it has no creature grappled. Each creature in that line must make a DC 13 Dexterity saving throw, taking 10 (3d6) acid damage on a failed save, or half as much damage on a successful one.
-
-			 The banshee releases a mournful wail, provided that she isn't in sunlight. This wail has no effect on constructs and undead. All other creatures within 30 feet of her that can hear her must make a DC 13 Constitution saving throw. On a failure, a creature drops to 0 hit points. On a success, a creature takes 10 (3d6) psychic damage.
-
-			 Petrifying Gaze. If a creature starts its turn within 30 feet of the basilisk and the two of them can see each other, the basilisk can force the creature to make a DC 12 Constitution saving throw if the basilisk isn't incapacitated. On a failed save, the creature magically begins to turn to stone and is restrained. It must repeat the saving throw at the end of its next turn. On a success, the effect ends. On a failure, the creature is petrified until freed by the greater restoration spell or other magic.
-
-			*/
-
-			var saveRegex = /(?:DC)\s?(\d+)\s*?([a-zA-Z]*)\s*?(?:saving throw)/gi;
-			while(save = saveRegex.exec(damageInfo)) {
+			var saveRegex = /(?:DC)\s*?(\d+)\s*?([a-zA-Z]*)\s*?(?:saving throw)\s(.*)/gi;
+			while(save = saveRegex.exec(value)) {
 				log('save: ' + save);
 				if(save[1]) {
 					setAttribute('npc_action_save_dc_' + actionNum, save[1]);
@@ -774,6 +802,17 @@
 				if(save[1] || save[2]){
 					setAttribute('npc_action_toggle_save_' + actionNum, '@{npc_action_var_save_' + actionNum + '}');
 				}
+				if(save[3]) {
+					setAttribute('npc_action_effect_' + actionNum, save[3]);
+					setAttribute('npc_action_toggle_effects_' + actionNum, '@{npc_action_var_effects_' + actionNum + '}');
+				}
+			}
+
+			if(!parsedAttack && !parsedDamage) {
+				//make this work
+				value = value.replace(/(?:DC)\s*?(\d+)/gi, '[[$1]]');
+				setAttribute('npc_action_effect_' + actionNum, value);
+				setAttribute('npc_action_toggle_effects_' + actionNum, '@{npc_action_var_effects_' + actionNum + '}');
 			}
 
 			// Create token action
@@ -937,6 +976,13 @@
 			setAttribute('HP', 0, npc_HP_max);
 		}
 		convertAttrFromNPCtoPC('npc_temp_HP', 'temp_HP');
+
+		var npc_hd = getAttrByName(characterId, 'npc_HP_hit_dice');
+		if(npc_hd) {
+			parseHD(npc_hd);
+		}
+
+
 
 
 
