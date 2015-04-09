@@ -10,7 +10,7 @@
 	 Do not use npc_HP, use HP instead
 	 */
 	// Green bar
-	shaped.parsebar1 = 'npc_AC';
+	shaped.parsebar1 = 'AC'; //don't use npc_ac
 	// Blue bar
 	shaped.parsebar2 = ''; //'passive_perception'
 	// Red bar
