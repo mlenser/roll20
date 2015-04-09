@@ -697,6 +697,8 @@
 				return replaceObj[matched];
 			});
 
+			value = value.replace(/ld(\d+)/gi, "1d$1");
+			value = value.replace(/ld\s+(\d+)/gi, "1d$1");
 			value = value.replace(/(\d+)d\s+(\d+)/gi, "$1d$2");
 			value = value.replace(/(\d+)\s+d(\d+)/gi, "$1d$2");
 
