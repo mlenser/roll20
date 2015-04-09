@@ -670,9 +670,8 @@
 			}
 			setAttribute('npc_action_name_' + actionNum, key);
 
-			value = value.replace(/ft\s\./gi, 'ft.');
-			value = value.replace(/ft\.\s\,/gi, 'ft');
-			value = value.replace(/ft\./gi, 'ft');
+			value = value.replace(/ft\s\./gi, 'ft.').replace(/ft\.\s\,/gi, 'ft').replace(/ft\./gi, 'ft');
+			value = value.replace(/ld(\d+)/gi, "1d$1").replace(/ld\s+(\d+)/gi, "1d$1").replace(/(\d+)d\s+(\d+)/gi, "$1d$2").replace(/(\d+)\s+d(\d+)/gi, "$1d$2");
 
 			var replaceObj = {
 				'abol eth': 'aboleth',
@@ -692,15 +691,10 @@
 				'withi n': 'within'
 
 			};
-			var re = new RegExp(Object.keys(replaceObj).join("|"),"gi");
+			var re = new RegExp(Object.keys(replaceObj).join('|'),'gi');
 			value = value.replace(re, function(matched){
 				return replaceObj[matched];
 			});
-
-			value = value.replace(/ld(\d+)/gi, "1d$1");
-			value = value.replace(/ld\s+(\d+)/gi, "1d$1");
-			value = value.replace(/(\d+)d\s+(\d+)/gi, "$1d$2");
-			value = value.replace(/(\d+)\s+d(\d+)/gi, "$1d$2");
 
 			log('value: ' + value);
 
