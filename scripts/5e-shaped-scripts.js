@@ -10,7 +10,7 @@
 	 Do not use npc_HP, use HP instead
 	 */
 	// Green bar
-	shaped.parsebar1 = 'AC'; //don't use npc_ac
+	shaped.parsebar1 = 'npc_AC';
 	shaped.parsebar1Max = false;
 	// Blue bar
 	shaped.parsebar2 = ''; //'passive_perception'
@@ -155,7 +155,7 @@
 		var total = 0;
 		var original = 0;
 
-		sendChat('GM', '/roll ' + hd, function(ops) {
+		sendChat('GM', '[[' + hd + ']]', function(ops) {
 			var rollResult = JSON.parse(ops[0].content);
 			if(_.has(rollResult, 'total')) {
 				total = rollResult.total;
@@ -165,7 +165,7 @@
 				total = Math.floor(nb_dice * constitution_mod + total);
 
 				if(shaped.monsterAsMinHp) {
-					// Calculate average HP, has written in statblock.
+					// Calculate average HP, as written in statblock.
 					var average_hp = Math.floor(((nb_face + 1) / 2 + constitution_mod) * nb_dice);
 					if(average_hp > total) {
 						original = total;
@@ -366,8 +366,8 @@
 		log('---- Parsing statblock ----');
 
 		text = clean(statblock);
-		var keyword = findKeyword(text);
-		var section = splitStatblock(text, keyword);
+		var keyword = findKeyword(text),
+				section = splitStatblock(text, keyword);
 		shaped.setCharacter(section.attr.name, text.replace(/#/g, '<br>'), section.bio);
 		processSection(section);
 		return section.attr.name;
@@ -925,16 +925,16 @@
 	function processBarSetting(i, token, name) {
 		var attribute = shaped['parsebar' + i];
 
-		if(attribute) {
-			log('Attribute to set to bar ' + i + ': ' + attribute);
-		}
-
 		if(attribute && attribute !== '') {
-			//value = getAttrByName(characterId, attribute, 'current');
-			var command = '\\w GM [[@{' + name + '|'+ attribute + '}]]';
+			log('Attribute to set to bar ' + i + ': ' + attribute);
+      //value = getAttrByName(characterId, attribute, 'current');
+			var command = '/w GM [[@{' + name + '|'+ attribute + '}]]';
+			log('processBarSetting 1' + command);
 			sendChat('Shaped', command, function(ops) {
+				log('processBarSetting 2');
 				var res = ops[0].inlinerolls['1'].results.total;
 				setBarValue(token, i, res);
+				log('processBarSetting 3');
 			});
 		}
 	}
