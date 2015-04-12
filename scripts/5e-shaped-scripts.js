@@ -62,7 +62,7 @@
 			case '!shaped-rollhp':
 				return shaped.rollHpForSelectedToken(msg);
 				break;
-			case '!jf-clone':
+			case '!shaped-clone':
 				return shaped.cloneToken(msg, args[1]);
 				break;
 			case '!shaped-convert':
