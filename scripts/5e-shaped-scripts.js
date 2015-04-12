@@ -972,7 +972,6 @@
 		convertAttrFromNPCtoPC('npc_initiative_overall', 'initiative_overall');
 
 
-
 		convertAttrFromNPCtoPC('npc_strength', 'strength');
 		convertAttrFromNPCtoPC('npc_strength_save_bonus', 'strength_save_bonus');
 		convertAttrFromNPCtoPC('npc_basic_strength_bonus', 'basic_strength_bonus');
@@ -991,7 +990,6 @@
 		convertAttrFromNPCtoPC('npc_charisma', 'charisma');
 		convertAttrFromNPCtoPC('npc_charisma_save_bonus', 'charisma_save_bonus');
 		convertAttrFromNPCtoPC('npc_basic_charisma_bonus', 'basic_charisma_bonus');
-
 
 
 		convertAttrFromNPCtoPC('npc_alignment', 'alignment');
@@ -1016,14 +1014,10 @@
 		}
 
 
-
-
-
 		convertAttrFromNPCtoPC('npc_speed', 'speed');
 		convertAttrFromNPCtoPC('npc_speed_fly', 'speed_fly');
 		convertAttrFromNPCtoPC('npc_speed_climb', 'speed_climb');
 		convertAttrFromNPCtoPC('npc_speed_swim', 'speed_swim');
-
 
 
 		convertAttrFromNPCtoPC('npc_xp', 'xp');
@@ -1033,12 +1027,10 @@
 		convertAttrFromNPCtoPC('npc_languages', 'prolanguages');
 
 
-
 		convertAttrFromNPCtoPC('npc_damage_resistance', 'damage_resistance');
 		convertAttrFromNPCtoPC('npc_damage_vulnerability', 'damage_vulnerability');
 		convertAttrFromNPCtoPC('npc_damage_immunity', 'damage_immunity');
 		convertAttrFromNPCtoPC('npc_condition_immunity', 'condition_immunity');
-
 
 
 		convertAttrFromNPCtoPC('npc_acrobatics_bonus', 'acrobatics_bonus');
