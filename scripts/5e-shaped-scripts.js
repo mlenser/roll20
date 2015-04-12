@@ -2,7 +2,7 @@
 
 	/* Options */
 	shaped.createAbilityAsToken = true;
-	shaped.monsterAsMinHp = true; // generated token hp can't be lower than the average hp
+	shaped.monsterAsMinHp = false; // generated token hp can't be lower than the average hp
 	shaped.rollMonsterHpOnDrop = true; // will roll HP when character are dropped on map
 
 	/* Setting these to a sheet value will set the token bar value. If they are set to '' or not set then it will use whatever you already have set on the token
@@ -1059,6 +1059,8 @@
 		setUserDefinedScriptSettings();
 
 		shaped.setBars(token);
+
+		log('Character ' + token.attributes.name + ' converted');
 	};
 
 	function setBarValueAfterConvert(token, bar, obj) {
