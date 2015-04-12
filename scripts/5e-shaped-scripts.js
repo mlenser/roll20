@@ -243,7 +243,7 @@
 		if(shaped.initiativeTieBreaker) {
 			setAttribute('initiative_tie_breaker', '(@{initiative_overall}) / 100');
 		} else {
-			setAttribute('initiative_tie_breaker', 0);
+			setAttribute('initiative_tie_breaker', '0');
 		}
 		if(shaped.initiativeAddsToTracker) {
 			setAttribute('intiaitive_to_tracker', '@{selected|initiative_overall} [Initiative Mod] &{tracker}');
@@ -965,11 +965,7 @@
 	shaped.parseOldToNew = function(token) {
 		log('---- Parsing old attributes to new ----');
 
-		obj = findObjs({
-			_type: 'character',
-			name: token.attributes.name
-		})[0];
-		characterId = obj.id;
+		characterId = token.attributes.represents;
 
 
 		convertAttrFromNPCtoPC('npc_initiative', 'initiative');
@@ -1069,19 +1065,23 @@
 		shaped.setBars(token);
 
 		log('Character ' + token.attributes.name + ' converted');
+		sendChat('Shaped', '/w gm Character ' + token.attributes.name + ' converted');
 	};
 
 	function setBarValueAfterConvert(token, bar, obj) {
 		if(obj) {
-			log('Setting ' + bar + ' to: id: ' + obj.id + ' current: ' + obj.attributes.current + ' max: ' + obj.attributes.max);
+			log('Setting ' + bar + ' to:');
+			if(obj.id) {
+				log('id: ' + obj.id);
+				token.set(bar + '_link', obj.id);
+			}
 			if(obj.attributes.current) {
+				log('current: ' + obj.attributes.current);
 				token.set(bar + '_value', obj.attributes.current);
 			}
 			if(obj.attributes.max) {
+				log('max: ' + obj.attributes.max);
 				token.set(bar + '_max', obj.attributes.max);
-			}
-			if(obj.id) {
-				token.set(bar + '_link', obj.id);
 			}
 		} else {
 			log('Can\'t set empty object to bar ' + bar);
@@ -1092,7 +1092,6 @@
 		var bar_link = token.get(bar + '_link');
 		if(!bar_link) {
 			var parsebar = shaped['parse' + bar];
-			log('parsebar: ' + parsebar);
 			if(parsebar) {
 				var objOfParsebar = findObjs({
 					name: parsebar,
@@ -1108,7 +1107,7 @@
 			};
 			var bar_value = token.get(bar + '_value');
 			if(bar_value) {
-				objOfBar.attributes.value = bar_value;
+				objOfBar.attributes.current = bar_value;
 			}
 			var bar_max = token.get(bar + '_max');
 			if(bar_max) {
