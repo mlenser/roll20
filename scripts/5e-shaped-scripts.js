@@ -16,6 +16,12 @@
 	// Red bar
 	shaped.parsebar3 = 'HP';  //'speed'
 
+	shaped.defaultTab = 1; //1 is the core sheet. Change to 10 if you want the actions page. Change to 6 if you want the spellbook page. Change to 98 if you want to "Show All" for the NPC pages.
+	shaped.sheetOutput = ''; //change to 'hidden' if you wish the sheet to whisper all commands to the GM
+	shaped.whisperDeathSaves = true; //change to false if you wish NPC death saves to be rolled openly
+	shaped.initiativeTieBreaker = false; //change to true if you want to add the initiative modifier as a tie breaker for initiatives. (I use it)
+	shaped.initiativeAddsToTracker = true; //change to false if you do not want to add the initiative to the tracker (mainly for the app)
+
 
 
 	shaped.statblock = {
@@ -214,6 +220,33 @@
 		return obj;
 	};
 
+	function setUserDefinedScriptSettings () {
+		if(shaped.defaultTab) {
+			setAttribute('tab', shaped.defaultTab);
+		}
+		if(shaped.sheetOutput === 'hidden') {
+			setAttribute('output_option', '/w GM ');
+		} else {
+			setAttribute('output_option', ' ');
+		}
+		if(shaped.whisperDeathSaves) {
+			setAttribute('death_save_output_option', '/w GM ');
+		} else {
+			setAttribute('death_save_output_option', ' ');
+		}
+		if(shaped.initiativeTieBreaker) {
+			setAttribute('initiative_tie_breaker', '(@{initiative_overall}) / 100');
+		} else {
+			setAttribute('initiative_tie_breaker', 0);
+		}
+		if(shaped.initiativeAddsToTracker) {
+			setAttribute('intiaitive_to_tracker', '@{selected|initiative_overall} [Initiative Mod] &{tracker}');
+		} else {
+			setAttribute('intiaitive_to_tracker', '@{initiative_overall} [Initiative Mod]');
+		}
+	}
+
+
 	shaped.ImportStatblock = function(token) {
 		status = 'Nothing modified';
 		errors = [];
@@ -228,6 +261,8 @@
 			if(characterId) {
 				token.set('represents', characterId);
 				token.set('name', name);
+
+				setUserDefinedScriptSettings();
 
 				processBarSetting(1, token, name);
 				processBarSetting(2, token, name);
@@ -1020,6 +1055,8 @@
 		convertAttrFromNPCtoPC('npc_sleightofhand_bonus', 'sleightofhand_bonus');
 		convertAttrFromNPCtoPC('npc_stealth_bonus', 'stealth_bonus');
 		convertAttrFromNPCtoPC('npc_survival_bonus', 'survival_bonus');
+
+		setUserDefinedScriptSettings();
 
 		shaped.setBars(token);
 	};
