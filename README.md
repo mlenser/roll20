@@ -11,5 +11,5 @@ Scripts and other assorted things for roll20
 * Changed the default to not use the average hp as a minimum
 * Printed out a log message when a creature is done converting.
 * Imported JF's 2.4 changes to this script
-* Fix bars to take the correct values
+* Fix bars to take the correct values for converting
 * Fix convert to work with creatures whose name is different from their journal names (gets the journal via "represents")
