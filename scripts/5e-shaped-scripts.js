@@ -33,7 +33,7 @@
 			on('chat:message', HandleInput);
 
 			if(shaped.rollMonsterHpOnDrop) {
-				on("add:graphic", function(obj) {
+				on('add:graphic', function(obj) {
 					shaped.rollTokenHp(obj);
 				});
 			}
@@ -709,7 +709,7 @@
 				setAttribute('npc_' + actionType + 'action_name_' + actionNum, key);
 
 				value = value.replace(/ft\s\./gi, 'ft.').replace(/ft\.\s\,/gi, 'ft').replace(/ft\./gi, 'ft');
-				value = value.replace(/ld(\d+)/gi, "1d$1").replace(/ld\s+(\d+)/gi, "1d$1").replace(/(\d+)d\s+(\d+)/gi, "$1d$2").replace(/(\d+)\s+d(\d+)/gi, "$1d$2");
+				value = value.replace(/ld(\d+)/gi, '1d$1').replace(/ld\s+(\d+)/gi, '1d$1').replace(/(\d+)d\s+(\d+)/gi, '$1d$2').replace(/(\d+)\s+d(\d+)/gi, '$1d$2');
 
 				var replaceObj = {
 					'abol eth': 'aboleth',
@@ -948,7 +948,7 @@
 				token.set(bar + '_max', value);
 			}
 		} else {
-			log("Can't set empty value to bar " + barNumber);
+			log('Can\'t set empty value to bar ' + barNumber);
 		}
 	}
 
@@ -1084,7 +1084,7 @@
 				token.set(bar + '_link', obj.id);
 			}
 		} else {
-			log("Can't set empty object to bar " + bar);
+			log('Can\'t set empty object to bar ' + bar);
 		}
 	}
 
@@ -1123,38 +1123,39 @@
 
 		shaped.getSelectedToken(msg, function(token){
 			var match = token.get('imgsrc').match(/images\/.*\/(thumb|max)/i);
-			if(match == null)
-				throw("The token imgsrc do not come from you library. Unable to clone");
+			if(match == null) {
+				throw('The token imgsrc do not come from you library. Unable to clone');
+			}
 
-			var imgsrc = token.get('imgsrc').replace('/max.', '/thumb.');
-			var name = token.get("name") + " ";
+			var imgsrc = token.get('imgsrc').replace('/max.', '/thumb.'),
+					name = token.get('name') + ' ';
 			log('Cloning ' + number + ' ' + name);
 
-			token.set({"name": name + randomInteger(99), showname: true});
+			token.set({'name': name + randomInteger(99), showname: true});
 
 			for(var i = 0; i < number; i++){
 
-				var left = (parseInt(token.get("left")) + (70 * (i+1))),
-						obj = createObj("graphic", {
+				var left = (parseInt(token.get('left')) + (70 * (i+1))),
+						obj = createObj('graphic', {
 							name: name + randomInteger(99),
-							controlledby: token.get("controlledby"),
+							controlledby: token.get('controlledby'),
 							left: left,
-							top: token.get("top"),
-							width: token.get("width"),
-							height: token.get("height"),
+							top: token.get('top'),
+							width: token.get('width'),
+							height: token.get('height'),
 							showname: true,
 							imgsrc: imgsrc,
-							pageid: token.get("pageid"),
+							pageid: token.get('pageid'),
 							represents: token.get('represents'),
 							//showplayers_name: true,
 							//showplayers_bar1: true,
-							bar1_value: token.get("bar1_value"),
-							bar1_max: token.get("bar1_max"),
-							bar2_value: token.get("bar2_value"),
-							bar2_max: token.get("bar2_max"),
-							bar3_value: token.get("bar3_value"),
-							bar3_max: token.get("bar3_max"),
-							layer: "objects"
+							bar1_value: token.get('bar1_value'),
+							bar1_max: token.get('bar1_max'),
+							bar2_value: token.get('bar2_value'),
+							bar2_max: token.get('bar2_max'),
+							bar3_value: token.get('bar3_value'),
+							bar3_max: token.get('bar3_max'),
+							layer: 'objects'
 						});
 				if(shaped.rollMonsterHpOnDrop == true)
 					shaped.rollTokenHp(obj);
