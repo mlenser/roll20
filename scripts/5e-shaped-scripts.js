@@ -11,10 +11,13 @@
 	 */
 	// Green bar
 	shaped.parsebar1 = 'AC'; //don't use npc_ac
+	shaped.parsebar1Max = false;
 	// Blue bar
 	shaped.parsebar2 = ''; //'passive_perception'
+	shaped.parsebar2Max = false;
 	// Red bar
 	shaped.parsebar3 = 'HP';  //'speed'
+	shaped.parsebar3Max = true;
 
 	shaped.defaultTab = 1; //1 is the core sheet. Change to 10 if you want the actions page. Change to 6 if you want the spellbook page. Change to 98 if you want to "Show All" for the NPC pages.
 	shaped.sheetOutput = ''; //change to 'hidden' if you wish the sheet to whisper all commands to the GM
@@ -25,7 +28,7 @@
 
 
 	shaped.statblock = {
-		version: '1.41',
+		version: '1.43',
 		RegisterHandlers: function () {
 			on('chat:message', HandleInput);
 
@@ -58,6 +61,9 @@
 				break;
 			case '!shaped-rollhp':
 				return shaped.rollHpForSelectedToken(msg);
+				break;
+			case '!jf-clone':
+				return shaped.cloneToken(msg, args[1]);
 				break;
 			case '!shaped-convert':
 				shaped.getSelectedToken(msg, shaped.parseOldToNew);
@@ -362,7 +368,7 @@
 		text = clean(statblock);
 		var keyword = findKeyword(text);
 		var section = splitStatblock(text, keyword);
-		shaped.setCharacter(section.attr.name, '', section.bio);
+		shaped.setCharacter(section.attr.name, text.replace(/#/g, '<br>'), section.bio);
 		processSection(section);
 		return section.attr.name;
 	};
@@ -938,7 +944,9 @@
 			var bar = 'bar' + barNumber;
 			log('Setting ' + bar + ' to value ' + value);
 			token.set(bar + '_value', value);
-			token.set(bar + '_max', value);
+			if(shaped['parse' + bar + 'Max'] == true) {
+				token.set(bar + '_max', value);
+			}
 		} else {
 			log("Can't set empty value to bar " + barNumber);
 		}
@@ -1108,6 +1116,50 @@
 			}
 			setBarValueAfterConvert(token, bar, objOfBar);
 		}
+	}
+
+	shaped.cloneToken = function (msg, number) {
+		number = parseInt(number, 10) || 1;
+
+		shaped.getSelectedToken(msg, function(token){
+			var match = token.get('imgsrc').match(/images\/.*\/(thumb|max)/i);
+			if(match == null)
+				throw("The token imgsrc do not come from you library. Unable to clone");
+
+			var imgsrc = token.get('imgsrc').replace('/max.', '/thumb.');
+			var name = token.get("name") + " ";
+			log('Cloning ' + number + ' ' + name);
+
+			token.set({"name": name + randomInteger(99), showname: true});
+
+			for(var i = 0; i < number; i++){
+
+				var left = (parseInt(token.get("left")) + (70 * (i+1))),
+						obj = createObj("graphic", {
+							name: name + randomInteger(99),
+							controlledby: token.get("controlledby"),
+							left: left,
+							top: token.get("top"),
+							width: token.get("width"),
+							height: token.get("height"),
+							showname: true,
+							imgsrc: imgsrc,
+							pageid: token.get("pageid"),
+							represents: token.get('represents'),
+							//showplayers_name: true,
+							//showplayers_bar1: true,
+							bar1_value: token.get("bar1_value"),
+							bar1_max: token.get("bar1_max"),
+							bar2_value: token.get("bar2_value"),
+							bar2_max: token.get("bar2_max"),
+							bar3_value: token.get("bar3_value"),
+							bar3_max: token.get("bar3_max"),
+							layer: "objects"
+						});
+				if(shaped.rollMonsterHpOnDrop == true)
+					shaped.rollTokenHp(obj);
+			}
+		}, 1);
 	}
 
 	shaped.setBars = function(token) {
