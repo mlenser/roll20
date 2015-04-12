@@ -1118,6 +1118,15 @@
 		}
 	}
 
+
+	shaped.setBars = function(token) {
+		log('set bars');
+
+		getAndSetBarInfo(token, 'bar1');
+		getAndSetBarInfo(token, 'bar2');
+		getAndSetBarInfo(token, 'bar3');
+	};
+
 	shaped.cloneToken = function (msg, number) {
 		number = parseInt(number, 10) || 1;
 
@@ -1161,14 +1170,6 @@
 					shaped.rollTokenHp(obj);
 			}
 		}, 1);
-	}
-
-	shaped.setBars = function(token) {
-		log('set bars');
-
-		getAndSetBarInfo(token, 'bar1');
-		getAndSetBarInfo(token, 'bar2');
-		getAndSetBarInfo(token, 'bar3');
 	};
 
 }(typeof shaped === 'undefined' ? shaped = {} : shaped));
