@@ -12,13 +12,20 @@
 	// Green bar
 	shaped.parsebar1 = 'npc_AC';
 	shaped.parsebar1Max = false;
+	shaped.parsebar1_link = true;
 	// Blue bar
 	shaped.parsebar2 = ''; //'passive_perception'
 	shaped.parsebar2Max = false;
+	shaped.parsebar2_link = false;
 	// Red bar
 	shaped.parsebar3 = 'HP';  //'speed'
 	shaped.parsebar3Max = true;
+	shaped.parsebar3_link = false;
 
+	shaped.showName = true; //show the name on the map (not to players)
+
+
+	//optional Settings tab
 	shaped.defaultTab = 1; //1 is the core sheet. Change to 10 if you want the actions page. Change to 6 if you want the spellbook page. Change to 98 if you want to "Show All" for the NPC pages.
 	shaped.sheetOutput = ''; //change to 'hidden' if you wish the sheet to whisper all commands to the GM
 	shaped.whisperDeathSaves = true; //change to false if you wish NPC death saves to be rolled openly
@@ -28,7 +35,7 @@
 
 
 	shaped.statblock = {
-		version: '1.45',
+		version: '1.6',
 		RegisterHandlers: function () {
 			on('chat:message', HandleInput);
 
@@ -51,7 +58,7 @@
 		if(msg.type !== 'api') {
 			return;
 		}
-		log('msg.content' + msg.content);
+		log('msg.content: ' + msg.content);
 		args = msg.content.split(/\s+/);
 		switch(args[0]) {
 			case '!build-monster':
@@ -266,13 +273,16 @@
 			var name = shaped.parseStatblock(statblock);
 			if(characterId) {
 				token.set('represents', characterId);
-				token.set('name', name);
+				token.set('name', shaped.capitalizeEachWord(name.toLowerCase()));
+				if(shaped.showName) {
+					token.set('showname', true);
+				}
 
 				setUserDefinedScriptSettings();
 
-				processBarSetting(1, token, name);
-				processBarSetting(2, token, name);
-				processBarSetting(3, token, name);
+				getAndSetBarInfo(token, 'bar1');
+				getAndSetBarInfo(token, 'bar2');
+				getAndSetBarInfo(token, 'bar3');
 
 			}
 		} catch(e) {
@@ -381,7 +391,6 @@
 		statblock = statblock.replace(/#(?=[a-z])/g, ' ');
 		statblock = statblock.replace(/\s+/g, ' ');
 
-		//log(statblock)  ;
 		return statblock;
 	}
 
@@ -390,22 +399,32 @@
 			attr: {},
 			traits: {},
 			actions: {},
-			legendary: {}
+			lair: {},
+			legendary: {},
+			reactions: {}
 		};
 
-		var indexAction = 0;
-		var indexLegendary = statblock.length;
+		var indexAction = 0,
+				indexLair = statblock.length,
+				indexLegendary = statblock.length,
+				indexReactions = statblock.length;
 
 		// Standard keyword
-		var regex = /#\s*(tiny|small|medium|large|huge|gargantuan|armor class|hit points|speed|str|dex|con|int|wis|cha|saving throws|skills|damage resistances|damage immunities|condition immunities|damage vulnerabilities|senses|languages|challenge|traits|actions|legendary actions)(?=\s|#)/gi;
+		var regex = /#\s*(tiny|small|medium|large|huge|gargantuan|armor class|hit points|speed|str|dex|con|int|wis|cha|saving throws|skills|damage resistances|damage immunities|condition immunities|damage vulnerabilities|senses|languages|challenge|traits|actions|lair actions|legendary actions|reactions)(?=\s|#)/gi;
 		while(match = regex.exec(statblock)) {
 			key = match[1].toLowerCase();
 			if(key === 'actions') {
 				indexAction = match.index;
 				keyword.actions.Actions = match.index;
+			} else if(key === 'lair actions') {
+				indexLair = match.index;
+				keyword.lair.Lair = match.index;
 			} else if(key === 'legendary actions') {
 				indexLegendary = match.index;
 				keyword.legendary.Legendary = match.index;
+			} else if(key === 'reactions') {
+				indexReactions = match.index;
+				keyword.reactions.Reactions = match.index;
 			} else {
 				keyword.attr[key] = match.index;
 			}
@@ -413,6 +432,7 @@
 
 		// Power
 		regex = /(?:#|\.\s+)([A-Z][\w-]+(?:\s(?:[A-Z][\w-]+|[\(\)\d/-]|of)+)*)(?=\s*\.)/g;
+		log('statblock: ' + statblock);
 		while(match = regex.exec(statblock)) {
 			if(!keyword.attr[match[1].toLowerCase()]) {
 				if(match.index < indexAction) {
@@ -483,14 +503,14 @@
 
 		//Move legendary action summary to trait.
 		if(keyword.legendary['Legendary Actions'] !== undefined) {
-			keyword.traits['Legendary Actions'] = keyword.legendary['Legendary Actions'];
+			setAttribute('legendary_action_notes', keyword.legendary['Legendary Actions']);
 			delete keyword.legendary['Legendary Actions'];
 		}
 		return keyword;
 	}
 
 	function extractSection(text, debut, fin, title) {
-		section = text.substring(debut, fin);
+		var section = text.substring(debut, fin);
 		// Remove action name from action description and clean.
 		section = section.replace(new RegExp('^[\\s\\.#]*' + title.replace(/([-()\\/])/g, '\\$1') + '?[\\s\\.#]*', 'i'), '');
 		section = section.replace(/#/g, ' ');
@@ -499,24 +519,25 @@
 
 	function processSection(section) {
 		// Process abilities first cause needed by other attribute.
-		if('abilities' in section.attr) parseAbilities(section.attr.abilities);
-		if('size' in section.attr) parseSize(section.attr.size);
-		if('armor class' in section.attr) parseArmorClass(section.attr['armor class']);
-		if('hit points' in section.attr) parseHp(section.attr['hit points']);
-		if('speed' in section.attr) parseSpeed(section.attr.speed);
-		if('challenge' in section.attr) parseChallenge(section.attr.challenge);
-		if('saving throws' in section.attr) parseSavingThrow(section.attr['saving throws']);
-		if('skills' in section.attr) parseSkills(section.attr.skills);
-		if('senses' in section.attr) parseSenses(section.attr.senses);
+		if(section.attr.abilities) parseAbilities(section.attr.abilities);
+		if(section.attr.size) parseSize(section.attr.size);
+		if(section.attr['armor class']) parseArmorClass(section.attr['armor class']);
+		if(section.attr['hit points']) parseHp(section.attr['hit points']);
+		if(section.attr.speed) parseSpeed(section.attr.speed);
+		if(section.attr.challenge) parseChallenge(section.attr.challenge);
+		if(section.attr['saving throws']) parseSavingThrow(section.attr['saving throws']);
+		if(section.attr.skills) parseSkills(section.attr.skills);
+		if(section.attr.senses) parseSenses(section.attr.senses);
 
-		if('damage immunities' in section.attr) setAttribute('damage_immunity', section.attr['damage immunities']);
-		if('condition immunities' in section.attr) setAttribute('condition_immunity', section.attr['condition immunities']);
-		if('damage vulnerabilities' in section.attr) setAttribute('damage_vulnerability', section.attr['damage vulnerabilities']);
-		if('damage resistances' in section.attr) setAttribute('damage_resistance', section.attr['damage resistances']);
-		if('languages' in section.attr) setAttribute('prolanguages', section.attr.languages);
+		if(section.attr['damage immunities']) setAttribute('damage_immunity', section.attr['damage immunities']);
+		if(section.attr['condition immunities']) setAttribute('condition_immunity', section.attr['condition immunities']);
+		if(section.attr['damage vulnerabilities']) setAttribute('damage_vulnerability', section.attr['damage vulnerabilities']);
+		if(section.attr['damage resistances']) setAttribute('damage_resistance', section.attr['damage resistances']);
+		if(section.attr.languages) setAttribute('prolanguages', section.attr.languages);
 
 		parseTraits(section.traits);
-		parseActions(section.actions, section.legendary);
+		parseActions(section.actions);
+		parseActions(section.legendary, 'legendary_');
 	}
 
 	/* Section parsing function */
@@ -567,7 +588,7 @@
 
 	function parseSpeed(speed) {
 		var baseAttr = 'speed',
-				regex = /(|burrow|climb|fly|swim|)\s*(\d+)(?:ft)+(\(.*\))?/gi;
+				regex = /(|burrow|climb|fly|swim|)\s*(\d+)\s*?(?:ft)?\s*(\(.*\))?/gi;
 
 		while(match = regex.exec(speed)) {
 			var attrName = baseAttr + (match[1] !== '' ? '_' + match[1].toLowerCase() : ''),
@@ -584,7 +605,7 @@
 
 	function parseSenses(senses) {
 		senses = senses.replace(/[,\s]*passive.*/i,'');
-		var regex = /(|blindsight|darkvision|tremorsense|truesight|)\s*(\d+)(?:ft)+(\(.*\))?/gi;
+		var regex = /(|blindsight|darkvision|tremorsense|truesight|)\s*(\d+)(?:ft)?\s*(\(.*\))?/gi;
 
 		while(match = regex.exec(senses)) {
 			var attrName = match[1].toLowerCase(),
@@ -635,7 +656,14 @@
 					attr = 'charisma';
 					break;
 			}
-			setAttribute(attr + '_save_bonus', match[2] - Math.floor((getAttrByName(characterId, attr) - 10) / 2));
+			setAttribute(attr + '_save_prof', '@{PB}');
+
+			var proficiencyBonus = (2 + Math.floor(Math.abs((getAttrByName(characterId, 'challenge')-1)/4))),
+					totalSaveBonus = match[2] - proficiencyBonus - Math.floor((getAttrByName(characterId, attr) - 10) / 2);
+
+			if(totalSaveBonus !== 0) {
+				setAttribute(attr + '_save_bonus', totalSaveBonus);
+			}
 		}
 	}
 
@@ -667,8 +695,30 @@
 			var skill = match[1].trim().toLowerCase();
 			if(skill in skillAbility) {
 				var abilitymod = skillAbility[skill],
-						attr = skill.replace(/\s/g, '') + '_bonus';
-				setAttribute(attr, match[2] - Math.floor((getAttrByName(characterId, abilitymod) - 10) / 2));
+						attr = skill.replace(/\s/g, '');
+
+
+				var proficiencyBonus = (2 + Math.floor(Math.abs((getAttrByName(characterId, 'challenge')-1)/4))),
+						totalSkillBonus = match[2] - Math.floor((getAttrByName(characterId, abilitymod) - 10) / 2);
+
+				var expertise = proficiencyBonus * 2;
+
+				if(totalSkillBonus >= expertise) {
+					setAttribute(attr + '_prof_exp', '(2*@{PB})');
+					if(totalSkillBonus > expertise) {
+						setAttribute(attr + '_bonus', totalSkillBonus - expertise);
+					}
+				} else if (totalSkillBonus >= proficiencyBonus) {
+					setAttribute(attr + '_prof_exp', '@{PB}');
+					if(totalSkillBonus > proficiencyBonus) {
+						setAttribute(attr + '_bonus', totalSkillBonus - proficiencyBonus);
+					}
+				} else {
+					setAttribute(attr + '_prof_exp', '@{jack_of_all_trades}');
+					if(totalSkillBonus > 0) {
+						setAttribute(attr + '_bonus', totalSkillBonus);
+					}
+				}
 			} else {
 				errors.push('Skill ' + skill + ' is not a valid skill');
 			}
@@ -676,7 +726,9 @@
 	}
 	function parseTraits(traits) {
 		var text = '';
+		log('traits1: ' + traits);
 		_.each(traits, function(value, key) {
+			log('traits: ' + value + '----' + key);
 			value = value.replace(/[\.\s]+$/, '.');
 			text += '**' + key + '**: ' + value + ' ';
 		});
@@ -687,45 +739,75 @@
 		}
 	}
 
-	function parseActions(actions, legendary) {
+	function sanitizeText (text) {
+		if(typeof text !== 'String') {
+			text = text.toString();
+		}
+		return text.replace(/ft\s\./gi, 'ft.').replace(/ft\.\s\,/gi, 'ft').replace(/ft\./gi, 'ft').replace(/ld(\d+)/gi, '1d$1').replace(/ld\s+(\d+)/gi, '1d$1').replace(/(\d+)d\s+(\d+)/gi, '$1d$2').replace(/(\d+)\s+d(\d+)/gi, '$1d$2').replace(/(\d+)\s+d(\d+)/gi, '$1d$2').replace(/(\d+)f(?:Day|day)/gi, '$1/Day');
+	}
+
+	function parseActions(actions, actionType) {
+		if(!actionType) {
+			actionType = '';
+		}
 		var multiAttackText,
 				actionPosition = []; // For use with multiattack.
 
-		function processActions (actionList, actionType) {
-			if(!actionType) {
-				actionType = '';
-			}
-			var actionNum = 1;
+		log('parseActions actionType: ' + actionType);
+
+		function processActions (actionList) {
+			var actionNum = 1,
+					legendaryActionsNotes = [];
 
 			_.each(actionList, function(value, key) {
 				var parsedAttack = false,
 						parsedDetails = false,
-						parsedDamage = false;
+						parsedSave = false,
+						parsedDamage = false,
+						parsed;
+
 				if((pos = key.indexOf('(')) > 1) {
 					actionPosition[actionNum] = key.substring(0, pos - 1).toLowerCase();
 				} else {
 					actionPosition[actionNum] = key.toLowerCase();
 				}
+
+				var keyRegex = /\s*?\(Recharge\s*?(\d+\-\d+|\d+)\)/gi;
+				while(keyResult = keyRegex.exec(key)) {
+					if(keyResult[1]) {
+						setAttribute('npc_' + actionType + 'action_toggle_recharge_' + actionNum, '@{npc_action_var_recharge_' + actionNum + '}');
+						setAttribute('npc_' + actionType + 'action_recharge_' + actionNum, keyResult[1]);
+						key = key.replace(keyRegex, '');
+					}
+				}
 				setAttribute('npc_' + actionType + 'action_name_' + actionNum, key);
 
-				value = value.replace(/ft\s\./gi, 'ft.').replace(/ft\.\s\,/gi, 'ft').replace(/ft\./gi, 'ft');
-				value = value.replace(/ld(\d+)/gi, '1d$1').replace(/ld\s+(\d+)/gi, '1d$1').replace(/(\d+)d\s+(\d+)/gi, '$1d$2').replace(/(\d+)\s+d(\d+)/gi, '$1d$2');
+				value = sanitizeText(value);
 
 				var replaceObj = {
 					'abol eth': 'aboleth',
+					'Afrightened': 'A frightened',
 					'Aundefinedr': 'After',
+					'choos in g': 'choosing',
 					'com muni cate': 'communicate',
 					'dea ls': 'deals',
 					'di sease': 'disease',
 					'di stance': 'distance',
 					'fe et': 'feet',
+					'exha les': 'exhales',
 					'ex istence': 'existence',
 					'magica lly': 'magically',
 					'minlilte': 'minute',
+					'ofthe': 'of the',
+					"on'e": 'one',
 					'ra nge':'range',
 					'rega ins': 'regains',
+					'savin g': 'saving',
+					'slash in g': 'slashing',
 					'slash ing': 'slashing',
+					'successfu l': 'successful',
 					'ta rget': 'target',
+					'Th e': 'The',
 					'withi n': 'within'
 
 				};
@@ -784,6 +866,81 @@
 					parsedAttack = true;
 					parsedDetails = true;
 				}
+
+
+				var saveDmgRegex = /(?:DC)\s*?(\d+)\s*?([a-zA-Z]*)\s*?(?:saving throw).*(?:or)\s(.*)?\s(?:on a successful one.)\s?(.*)/gi;
+				while(saveDmg = saveDmgRegex.exec(value)) {
+					log('saveDmg: ' + saveDmg);
+					if(saveDmg[1]) {
+						setAttribute('npc_' + actionType + 'action_save_dc_' + actionNum, saveDmg[1]);
+					}
+					if(saveDmg[2]) {
+						setAttribute('npc_' + actionType + 'action_save_stat_' + actionNum, saveDmg[2].substring(0, 3));
+					}
+					if(saveDmg[1] || saveDmg[2]){
+						setAttribute('npc_' + actionType + 'action_toggle_save_' + actionNum, '@{npc_' + actionType + 'action_var_save_' + actionNum + '}');
+					}
+					if(saveDmg[3]) {
+						setAttribute('npc_' + actionType + 'action_save_success_' + actionNum, saveDmg[3]);
+					}
+					if(saveDmg[4]) {
+						setAttribute('npc_' + actionType + 'action_effect_' + actionNum, saveDmg[4]);
+						setAttribute('npc_' + actionType + 'action_toggle_effects_' + actionNum, '@{npc_' + actionType + 'action_var_effects_' + actionNum + '}');
+					}
+					parsedSave = true;
+				}
+
+
+				var saveOrRegex = /(?:DC)\s*?(\d+)\s*?([a-zA-Z]*)\s*?(?:saving throw)\s*?or.*(be.*)/gi;
+				while(saveOr = saveOrRegex.exec(value)) {
+					log('saveOr: ' + saveOr);
+					if(saveOr[1]) {
+						setAttribute('npc_' + actionType + 'action_save_dc_' + actionNum, saveOr[1]);
+					}
+					if(saveOr[2]) {
+						setAttribute('npc_' + actionType + 'action_save_stat_' + actionNum, saveOr[2].substring(0, 3));
+					}
+					if(saveOr[1] || saveOr[2]){
+						setAttribute('npc_' + actionType + 'action_toggle_save_' + actionNum, '@{npc_' + actionType + 'action_var_save_' + actionNum + '}');
+					}
+					if(saveOr[3]) {
+						setAttribute('npc_' + actionType + 'action_effect_' + actionNum, saveOr[3]);
+						setAttribute('npc_' + actionType + 'action_toggle_effects_' + actionNum, '@{npc_' + actionType + 'action_var_effects_' + actionNum + '}');
+					}
+					parsedSave = true;
+				}
+				var saveRangeRegex = /((?:Each | a | an | one ).*(?:creature|target).*)\swithin\s*?(\d+)\s*?(?:feet|ft)/gi;
+				while(saveRange = saveRangeRegex.exec(value)) {
+					if(saveRange[1]) {
+						setAttribute('npc_' + actionType + 'action_target_' + actionNum, saveRange[1].trim());
+					}
+					if(saveRange[2]) {
+						setAttribute('npc_' + actionType + 'action_range_' + actionNum, saveRange[2] + ' ft');
+					}
+					parsedDetails = true;
+				}
+
+				var lineRangeRegex = /(\d+\-foot line)\s*?(that is \d+ feet wide)/gi;
+				while(lineRange = lineRangeRegex.exec(value)) {
+					setAttribute('npc_' + actionType + 'action_type_' + actionNum, 'Line');
+					if(lineRange[1] && lineRange[2]) {
+						setAttribute('npc_' + actionType + 'action_range_' + actionNum, lineRange[1] + ' ' + lineRange[2]);
+					} else if(lineRange[1]) {
+						setAttribute('npc_' + actionType + 'action_range_' + actionNum, lineRange[1]);
+					}
+					parsedDetails = true;
+				}
+
+				var lineTargetRegex = /\.\s*(.*in that line)/gi;
+				while(lineTarget = lineTargetRegex.exec(value)) {
+					if(lineTarget[1]) {
+						setAttribute('npc_' + actionType + 'action_target_' + actionNum, lineTarget[1]);
+					}
+					parsedDetails = true;
+				}
+
+
+
 				if(parsedDetails) {
 					setAttribute('npc_' + actionType + 'action_toggle_details_' + actionNum, '@{npc_' + actionType + 'action_var_details_' + actionNum + '}');
 				}
@@ -824,39 +981,38 @@
 					}
 				}
 
-				var saveRegex = /(?:DC)\s*?(\d+)\s*?([a-zA-Z]*)\s*?(?:saving throw)\s(.*)/gi;
-				while(save = saveRegex.exec(value)) {
-					//log('save: ' + save);
-					if(save[1]) {
-						setAttribute('npc_' + actionType + 'action_save_dc_' + actionNum, save[1]);
+
+				function createTokenAction() {
+					// Create token action
+					if(shaped.usePowerAbility) {
+						setAbility(key, '', powercardAbility(id, actionNum), shaped.createAbilityAsToken);
+					} else {
+						setAbility(key, '', '%{selected|npc_' + actionType + 'action_' + actionNum + '}', shaped.createAbilityAsToken);
 					}
-					if(save[2]) {
-						setAttribute('npc_' + actionType + 'action_save_stat_' + actionNum, save[2].substring(0, 3));
-					}
-					if(save[1] || save[2]){
-						setAttribute('npc_' + actionType + 'action_toggle_save_' + actionNum, '@{npc_' + actionType + 'action_var_save_' + actionNum + '}');
-					}
-					if(save[3]) {
-						setAttribute('npc_' + actionType + 'action_effect_' + actionNum, save[3]);
+				}
+				parsed = parsedAttack || parsedDamage || parsedDetails || parsedSave
+				log('parsed: ' + parsed);
+				log('!parsed: ' + !parsed);
+				if(!parsed) {
+					if(actionType === 'legendary_') {
+						legendaryActionsNotes.push(key + '. ' + value);
+					} else {
+						//make this work
+						value = value.replace(/(?:DC)\s*?(\d+)/gi, '[[$1]]');
+						setAttribute('npc_' + actionType + 'action_effect_' + actionNum, value);
 						setAttribute('npc_' + actionType + 'action_toggle_effects_' + actionNum, '@{npc_' + actionType + 'action_var_effects_' + actionNum + '}');
+						createTokenAction();
+						actionNum++;
 					}
-				}
-
-				if(!parsedAttack && !parsedDamage) {
-					//make this work
-					value = value.replace(/(?:DC)\s*?(\d+)/gi, '[[$1]]');
-					setAttribute('npc_' + actionType + 'action_effect_' + actionNum, value);
-					setAttribute('npc_' + actionType + 'action_toggle_effects_' + actionNum, '@{npc_' + actionType + 'action_var_effects_' + actionNum + '}');
-				}
-
-				// Create token action
-				if(shaped.usePowerAbility) {
-					setAbility(key, '', powercardAbility(id, actionNum), shaped.createAbilityAsToken);
 				} else {
-					setAbility(key, '', '%{selected|npc_' + actionType + 'action_' + actionNum + '}', shaped.createAbilityAsToken);
+					createTokenAction();
+					actionNum++;
 				}
-				actionNum++;
 			});
+
+			if(legendaryActionsNotes.length > 0) {
+				setAttribute('legendary_action_notes', legendaryActionsNotes.join('\n'));
+			}
 		}
 		if(actions.Multiattack) {
 			multiAttackText = actions.Multiattack;
@@ -868,10 +1024,14 @@
 			}
 		}
 
-
 		processActions(actions);
-		processActions(legendary, 'legendary_');
-		//processActions(lair, 'lair_');
+
+		if(actionType === 'lair_') {
+			setAttribute('npc_action_toggle_lair_actions', 'on');
+		}
+		if(actionType === 'legendary_') {
+			setAttribute('npc_action_toggle_legendary_actions', 'on');
+		}
 
 		if(multiAttackText) {
 			var actionList = actionPosition.join('|').slice(1);
@@ -887,13 +1047,18 @@
 				var nb = match[1] || 'one';
 				var actionNumber = actionPosition.indexOf(action.toLowerCase());
 
-				if(actionNumber !== -1) {
+				function addActionToMultiattack() {
 					macro += '%{selected|npc_action_' + actionNumber + '}\n';
+					setAttribute('npc_action_toggle_multiattack_' + actionNumber, '@{npc_action_var_multiattack_' + actionNumber + '}');
+				}
+
+				if(actionNumber !== -1) {
+					addActionToMultiattack();
 					if(nb == 'two') {
-						macro += '%{selected|npc_action_' + actionNumber + '}\n';
+						addActionToMultiattack();
 					}
 					if(nb == 'three') {
-						macro += '%{selected|npc_action_' + actionNumber + '}\n';
+						addActionToMultiattack();
 					}
 					if(match[3]) {
 						macro += 'or\n';
@@ -909,55 +1074,81 @@
 			 setAttribute('npc_action_multiattack_' + actionNum, '{{npc_showmultiattack=1}} {{npc_multiattack=@{npc_multiattack}}}');
 			 */
 
-			log('macro: ' + macro);
 
 			if(shaped.usePowerAbility) {
 				setAbility('MultiAttack', '', powercardAbility(id, actionNumber), shaped.createAbilityAsToken);
 			} else {
-				log('--create ability: ' + macro);
 				setAbility('MultiAttack', '', macro, shaped.createAbilityAsToken);
 			}
 		}
-
-
 	}
 
-	function processBarSetting(i, token, name) {
-		var attribute = shaped['parsebar' + i];
+	function parseActionsForConvert() {
+		var actions = {},
+				lairActions = {},
+				legendaryActions = {},
+				reactions = [];
 
-		if(attribute && attribute !== '') {
-			log('Attribute to set to bar ' + i + ': ' + attribute);
-      //value = getAttrByName(characterId, attribute, 'current');
-			var command = '/w GM [[@{' + name + '|'+ attribute + '}]]';
-			log('processBarSetting 1' + command);
-			sendChat('Shaped', command, function(ops) {
-				log('processBarSetting 2');
-				var res = ops[0].inlinerolls['1'].results.total;
-				setBarValue(token, i, res);
-				log('processBarSetting 3');
-			});
-		}
-	}
+		for (var i = 1; i <= 20; i++) {
+			var name = getAttrByName(characterId, 'npc_action_name' + i, 'current'),
+					type = getAttrByName(characterId, 'npc_action_type' + i, 'current'),
+					description = getAttrByName(characterId, 'npc_action_description' + i, 'current'),
+					effect = getAttrByName(characterId, 'npc_action_effect' + i, 'current'),
+					combinedText = description + ' ' + effect;
 
-	function setBarValue(token, barNumber, value) {
-		if(value && value !== '') {
-			var bar = 'bar' + barNumber;
-			log('Setting ' + bar + ' to value ' + value);
-			token.set(bar + '_value', value);
-			if(shaped['parse' + bar + 'Max'] == true) {
-				token.set(bar + '_max', value);
+			if(name) {
+				combinedText = combinedText.replace(/\s*?\:\s*?\[\[(\d+d\d+[\d\s+]*)\]\]\s*?\|\s*?\[\[(\d+d\d+[\d\s+]*)\]\]/gi, '').replace(/\[\[(\d*d\d+[\d\s+]*)\]\]/gi, '$1');
+
+
+				log('type ' + type + ' --  ' + type.indexOf('Bonus Action'));
+
+				if(type.indexOf('Bonus Action') === 1) {
+					log('Bonus Action ' + name + ' changed to a normal action');
+					actions[name] = combinedText;
+				} else if(type.indexOf('Reaction') === 1) {
+					log('Reaction ' + name);
+					reactions.push(combinedText);
+				} else if(type.indexOf('Lair Action') === 1) {
+					log('Lair Action ' + name);
+					lairActions[name] = (combinedText);
+				} else if(type.indexOf('Legendary Action') === 1) {
+					log('Legendary Action ' + name);
+					legendaryActions[name] = (combinedText);
+				} else if(type.indexOf('Special Action') === 1) {
+					log('Special Action ' + name + ' changed to a normal action');
+					actions[name] = combinedText;
+				} else {
+					log('Action ' + name);
+					actions[name] = combinedText;
+				}
 			}
-		} else {
-			log('Can\'t set empty value to bar ' + barNumber);
 		}
-	}
+		if(Object.keys(actions).length > 0) {
+			parseActions(actions);
+		}
+		if(reactions.length > 0) {
+			setAttribute('reactions', reactions.join('\n'));
+			setAttribute('npc_action_toggle_reactions', 'on');
+		}
+		if(Object.keys(lairActions).length > 0) {
+			parseActions(lairActions, 'lair_');
+			setAttribute('npc_action_toggle_lair_actions', 'on');
+		}
+		if(Object.keys(legendaryActions).length > 0) {
+			parseActions(legendaryActions, 'legendary_');
+			setAttribute('npc_action_toggle_legendary_actions', 'on');
+		}
 
+
+	}
 
 	function convertAttrFromNPCtoPC(npc_attr_name, attr_name) {
 		var npc_attr = getAttrByName(characterId, npc_attr_name),
 				attr = getAttrByName(characterId, attr_name);
+
 		if(npc_attr && !attr) {
 			log('convert from ' + npc_attr_name + ' to ' + attr_name);
+			npc_attr = sanitizeText(npc_attr);
 			setAttribute(attr_name, npc_attr);
 		}
 	}
@@ -1013,17 +1204,23 @@
 			parseHD(npc_hd);
 		}
 
+		var speedConvertToOrig = [];
+				speed = getAttrByName(characterId, 'npc_speed'),
+				speed_fly = getAttrByName(characterId, 'npc_speed_fly'),
+				speed_climb = getAttrByName(characterId, 'npc_speed_climb'),
+				speed_swim = getAttrByName(characterId, 'npc_speed_swim');
 
-		convertAttrFromNPCtoPC('npc_speed', 'speed');
-		convertAttrFromNPCtoPC('npc_speed_fly', 'speed_fly');
-		convertAttrFromNPCtoPC('npc_speed_climb', 'speed_climb');
-		convertAttrFromNPCtoPC('npc_speed_swim', 'speed_swim');
+		if(speed) speedConvertToOrig.push(speed);
+		if(speed_fly) speedConvertToOrig.push('fly ' + speed_fly);
+		if(speed_climb) speedConvertToOrig.push('climb' + speed_climb);
+		if(speed_swim) speedConvertToOrig.push('swim' + speed_swim);
 
+		parseSpeed(speedConvertToOrig.join(', '));
 
 		convertAttrFromNPCtoPC('npc_xp', 'xp');
 		convertAttrFromNPCtoPC('npc_challenge', 'challenge');
 		convertAttrFromNPCtoPC('npc_size', 'size');
-		convertAttrFromNPCtoPC('npc_senses', 'vision');
+		parseSenses(sanitizeText(getAttrByName(characterId, 'npc_senses')));
 		convertAttrFromNPCtoPC('npc_languages', 'prolanguages');
 
 
@@ -1054,7 +1251,13 @@
 
 		setUserDefinedScriptSettings();
 
+		parseActionsForConvert();
+
 		shaped.setBars(token);
+
+		if(shaped.showName) {
+			token.set('showname', true);
+		}
 
 		log('Character ' + token.attributes.name + ' converted');
 		sendChat('Shaped', '/w gm Character ' + token.attributes.name + ' converted');
@@ -1063,7 +1266,7 @@
 	function setBarValueAfterConvert(token, bar, obj) {
 		if(obj) {
 			log('Setting ' + bar + ' to:');
-			if(obj.id) {
+			if(shaped['parse' + bar + '_link'] && obj.id) {
 				log('id: ' + obj.id);
 				token.set(bar + '_link', obj.id);
 			}
@@ -1071,9 +1274,11 @@
 				log('current: ' + obj.attributes.current);
 				token.set(bar + '_value', obj.attributes.current);
 			}
-			if(obj.attributes.max) {
+			if(shaped['parse' + bar + 'Max'] && obj.attributes.max) {
 				log('max: ' + obj.attributes.max);
 				token.set(bar + '_max', obj.attributes.max);
+			} else {
+				token.set(bar + '_max', '');
 			}
 		} else {
 			log('Can\'t set empty object to bar ' + bar);
@@ -1091,6 +1296,10 @@
 					_characterid: characterId
 				}, {caseInsensitive: true})[0];
 				setBarValueAfterConvert(token, bar, objOfParsebar);
+			} else {
+				token.set(bar + '_link', '');
+				token.set(bar + '_value', '');
+				token.set(bar + '_max', '');
 			}
 		} else {
 			objOfBar = {
@@ -1111,8 +1320,6 @@
 
 
 	shaped.setBars = function(token) {
-		log('set bars');
-
 		getAndSetBarInfo(token, 'bar1');
 		getAndSetBarInfo(token, 'bar2');
 		getAndSetBarInfo(token, 'bar3');
