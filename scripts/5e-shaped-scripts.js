@@ -26,7 +26,7 @@
 
 
 	//optional Settings tab
-	shaped.defaultTab = 1; //1 is the core sheet. Change to 10 if you want the actions page. Change to 6 if you want the spellbook page. Change to 98 if you want to "Show All" for the NPC pages.
+	shaped.defaultTab; //1 is the core sheet. Change to 10 if you want the actions page. Change to 6 if you want the spellbook page. Change to 98 if you want to "Show All" for the NPC pages.
 	shaped.sheetOutput = ''; //change to 'hidden' if you wish the sheet to whisper all commands to the GM
 	shaped.whisperDeathSaves = true; //change to false if you wish NPC death saves to be rolled openly
 	shaped.initiativeTieBreaker = false; //change to true if you want to add the initiative modifier as a tie breaker for initiatives. (I use it)
@@ -35,7 +35,7 @@
 
 
 	shaped.statblock = {
-		version: '1.6',
+		version: '1.63',
 		RegisterHandlers: function () {
 			on('chat:message', HandleInput);
 
@@ -725,17 +725,16 @@
 		}
 	}
 	function parseTraits(traits) {
-		var text = '';
+		var traitsArray = [];
 		log('traits1: ' + traits);
 		_.each(traits, function(value, key) {
-			log('traits: ' + value + '----' + key);
-			value = value.replace(/[\.\s]+$/, '.');
-			text += '**' + key + '**: ' + value + ' ';
+			value = sanitizeText(value);
+			traitsArray.push('**' + key + '**' + '. ' + value);
 		});
 
-		text = text.slice(0, -1);
-		if(text !== '') {
-			setAttribute('npc_traits', text);
+		if(traitsArray.length > 0) {
+			var traitsOutput = traitsArray.join('\n');
+			setAttribute('npc_traits', traitsOutput);
 		}
 	}
 
@@ -743,7 +742,38 @@
 		if(typeof text !== 'String') {
 			text = text.toString();
 		}
-		return text.replace(/ft\s\./gi, 'ft.').replace(/ft\.\s\,/gi, 'ft').replace(/ft\./gi, 'ft').replace(/ld(\d+)/gi, '1d$1').replace(/ld\s+(\d+)/gi, '1d$1').replace(/(\d+)d\s+(\d+)/gi, '$1d$2').replace(/(\d+)\s+d(\d+)/gi, '$1d$2').replace(/(\d+)\s+d(\d+)/gi, '$1d$2').replace(/(\d+)f(?:Day|day)/gi, '$1/Day');
+		text = text.replace(/ft\s\./gi, 'ft.').replace(/ft\.\s\,/gi, 'ft').replace(/ft\./gi, 'ft').replace(/(\d+) ft\/(\d+) ft/gi, '$1/$2 ft').replace(/ld(\d+)/gi, '1d$1').replace(/ld\s+(\d+)/gi, '1d$1').replace(/(\d+)d\s+(\d+)/gi, '$1d$2').replace(/(\d+)\s+d(\d+)/gi, '$1d$2').replace(/(\d+)\s+d(\d+)/gi, '$1d$2').replace(/(\d+)f(?:Day|day)/gi, '$1/Day').replace(/(\d+)f(\d+)/gi, '$1/$2');
+		var replaceObj = {
+			'abol eth': 'aboleth',
+			'Afrightened': 'A frightened',
+			'Aundefinedr': 'After',
+			'choos in g': 'choosing',
+			'com muni cate': 'communicate',
+			'dea ls': 'deals',
+			'di sease': 'disease',
+			'di stance': 'distance',
+			'fe et': 'feet',
+			'exha les': 'exhales',
+			'ex istence': 'existence',
+			'magica lly': 'magically',
+			'minlilte': 'minute',
+			'ofthe': 'of the',
+			"on'e": 'one',
+			'ra nge':'range',
+			'rega ins': 'regains',
+			'savin g': 'saving',
+			'slash in g': 'slashing',
+			'slash ing': 'slashing',
+			'successfu l': 'successful',
+			'ta rget': 'target',
+			'Th e': 'The',
+			'withi n': 'within'
+		};
+		var re = new RegExp(Object.keys(replaceObj).join('|'),'gi');
+		text = text.replace(re, function(matched){
+			return replaceObj[matched];
+		});
+		return text;
 	}
 
 	function parseActions(actions, actionType) {
@@ -752,8 +782,6 @@
 		}
 		var multiAttackText,
 				actionPosition = []; // For use with multiattack.
-
-		log('parseActions actionType: ' + actionType);
 
 		function processActions (actionList) {
 			var actionNum = 1,
@@ -784,41 +812,7 @@
 
 				value = sanitizeText(value);
 
-				var replaceObj = {
-					'abol eth': 'aboleth',
-					'Afrightened': 'A frightened',
-					'Aundefinedr': 'After',
-					'choos in g': 'choosing',
-					'com muni cate': 'communicate',
-					'dea ls': 'deals',
-					'di sease': 'disease',
-					'di stance': 'distance',
-					'fe et': 'feet',
-					'exha les': 'exhales',
-					'ex istence': 'existence',
-					'magica lly': 'magically',
-					'minlilte': 'minute',
-					'ofthe': 'of the',
-					"on'e": 'one',
-					'ra nge':'range',
-					'rega ins': 'regains',
-					'savin g': 'saving',
-					'slash in g': 'slashing',
-					'slash ing': 'slashing',
-					'successfu l': 'successful',
-					'ta rget': 'target',
-					'Th e': 'The',
-					'withi n': 'within'
-
-				};
-				var re = new RegExp(Object.keys(replaceObj).join('|'),'gi');
-				value = value.replace(re, function(matched){
-					return replaceObj[matched];
-				});
-
-				log('value: ' + value);
-
-				var splitAction = value.split('.'),
+				var splitAction = value.split(/\.(.+)?/),
 						attackInfo = splitAction[0],
 						damageInfo = splitAction[1],
 						splitAttack = attackInfo.split(',');
@@ -867,10 +861,59 @@
 					parsedDetails = true;
 				}
 
+				//log('damageInfo: ' + damageInfo);
+				var damageRegex = /(?:Hit:| Each).*?(?:(\d+)|(?:\d+).*?((\d+d\d+)[\d\s+]*).*?)\s*?([a-zA-Z]*)\s*?damage(?:\,\sor\s*?(?:(\d+)|(?:\d+)\s*?\(?((\d+d\d+)[\d\s+]*)\)?)\s*?([a-zA-Z]*)\s*damage if\s*(.*?)\.)?(?:\.|\s*?plus|.*\,\s*taking)?(?:\s*?(?:(\d+)|(?:\d+)\s*?\(?((\d+d\d+)[\d\s+]*)\)?)\s*?([a-zA-Z]*)\s*damage)?(?:\,\s*and\s(.*))?/gi;
+				while(damage = damageRegex.exec(damageInfo)) {
+					setAttribute('npc_' + actionType + 'action_dmg_' + actionNum, damage[1] || damage[2]);
+					setAttribute('npc_' + actionType + 'action_toggle_damage_' + actionNum, '@{npc_' + actionType + 'action_var_damage_' + actionNum + '}');
+					setAttribute('npc_' + actionType + 'action_dmg_type_' + actionNum, damage[4]);
+					setAttribute('npc_' + actionType + 'action_crit_dmg_' + actionNum, damage[1] || damage[3]);
+
+					//alternate damage
+					if(damage[5] || damage[6]) {
+						setAttribute('npc_' + actionType + 'action_alt_dmg_' + actionNum, damage[5] || damage[6]);
+					}
+					if(damage[5] || damage[7]) {
+						setAttribute('npc_' + actionType + 'action_alt_crit_dmg_' + actionNum, damage[5] || damage[7]);
+					}
+					if(damage[9]) {
+						setAttribute('npc_' + actionType + 'action_alt_dmg_reason_' + actionNum, damage[9]);
+					}
+					if(damage[5] || damage[6] || damage[7] || damage[9]) {
+						setAttribute('npc_' + actionType + 'action_toggle_alt_damage_' + actionNum, '@{npc_' + actionType + 'action_var_alt_damage_' + actionNum + '}');
+					}
+
+					//secondary damage
+					if(damage[10] || damage[11]) {
+						setAttribute('npc_' + actionType + 'action_second_dmg_' + actionNum, damage[10] || damage[11]);
+					}
+					if(damage[10] || damage[12]) {
+						setAttribute('npc_' + actionType + 'action_second_crit_dmg_' + actionNum, damage[10] || damage[12]);
+					}
+					if(damage[13]) {
+						setAttribute('npc_' + actionType + 'action_second_dmg_type_' + actionNum, damage[13]);
+					}
+					if(damage[10] || damage[11] || damage[12] || damage[13]) {
+						setAttribute('npc_' + actionType + 'action_toggle_second_damage_' + actionNum, '@{npc_' + actionType + 'action_var_second_damage_' + actionNum + '}');
+					}
+
+					//effect
+					if(damage[14]) {
+						setAttribute('npc_' + actionType + 'action_effect_' + actionNum, damage[14].replace(/DC\s(\d+)/g, 'DC [[$1]]'));
+						setAttribute('npc_' + actionType + 'action_toggle_effects_' + actionNum, '@{npc_' + actionType + 'action_var_effects_' + actionNum + '}');
+					}
+					parsedDamage = true;
+				}
+				if(!parsedDamage) {
+					if(damageInfo) {
+						setAttribute('npc_' + actionType + 'action_effect_' + actionNum, damageInfo.replace(/(\s*?Hit:\s?)/gi, '').replace(/DC\s(\d+)/g, 'DC [[$1]]'));
+						setAttribute('npc_' + actionType + 'action_toggle_effects_' + actionNum, '@{npc_' + actionType + 'action_var_effects_' + actionNum + '}');
+					}
+				}
 
 				var saveDmgRegex = /(?:DC)\s*?(\d+)\s*?([a-zA-Z]*)\s*?(?:saving throw).*(?:or)\s(.*)?\s(?:on a successful one.)\s?(.*)/gi;
-				while(saveDmg = saveDmgRegex.exec(value)) {
-					log('saveDmg: ' + saveDmg);
+				while(saveDmg = saveDmgRegex.exec(value)) {//
+					//log('saveDmg: ' + saveDmg);
 					if(saveDmg[1]) {
 						setAttribute('npc_' + actionType + 'action_save_dc_' + actionNum, saveDmg[1]);
 					}
@@ -891,9 +934,9 @@
 				}
 
 
-				var saveOrRegex = /(?:DC)\s*?(\d+)\s*?([a-zA-Z]*)\s*?(?:saving throw)\s*?or.*(be.*)/gi;
+				var saveOrRegex = /(?:DC)\s*?(\d+)\s*?([a-zA-Z]*)\s*?(?:saving throw)\s*?or\s(?:take.*)?(be.*)/gi;
 				while(saveOr = saveOrRegex.exec(value)) {
-					log('saveOr: ' + saveOr);
+					//log('saveOr: ' + saveOr);
 					if(saveOr[1]) {
 						setAttribute('npc_' + actionType + 'action_save_dc_' + actionNum, saveOr[1]);
 					}
@@ -945,42 +988,6 @@
 					setAttribute('npc_' + actionType + 'action_toggle_details_' + actionNum, '@{npc_' + actionType + 'action_var_details_' + actionNum + '}');
 				}
 
-				//log('damageInfo: ' + damageInfo);
-				var damageRegex = /(?:Hit:|Each).*?(?:(\d+)|(?:\d+).*?((\d+d\d+)[\d\s+]*).*?)\s*?([a-zA-Z]*)\s*?(?:damage)(?:\.|.*?plus|.*?\,)?/gi;
-				while(damage = damageRegex.exec(damageInfo)) {
-					setAttribute('npc_' + actionType + 'action_dmg_' + actionNum, damage[1] || damage[2]);
-					setAttribute('npc_' + actionType + 'action_toggle_damage_' + actionNum, '@{npc_' + actionType + 'action_var_damage_' + actionNum + '}');
-					setAttribute('npc_' + actionType + 'action_dmg_type_' + actionNum, damage[4]);
-					setAttribute('npc_' + actionType + 'action_crit_dmg_' + actionNum, damage[1] || damage[3]);
-					parsedDamage = true;
-				}
-				var secondaryDamageRegex = /(?:plus)\s*?(?:(\d+)|(?:\d+)\s*?\(?((\d+d\d+)[\d\s+]*)\)?)\s*?([a-zA-Z]*)\s*(?:damage)/gi;
-				while(secondaryDamage = secondaryDamageRegex.exec(damageInfo)) {
-					setAttribute('npc_' + actionType + 'action_second_dmg_' + actionNum, secondaryDamage[1] || secondaryDamage[2]);
-					setAttribute('npc_' + actionType + 'action_toggle_second_damage_' + actionNum, '@{npc_' + actionType + 'action_var_second_damage_' + actionNum + '}');
-					setAttribute('npc_' + actionType + 'action_second_dmg_type_' + actionNum, secondaryDamage[4]);
-					setAttribute('npc_' + actionType + 'action_second_crit_dmg_' + actionNum, secondaryDamage[1] || secondaryDamage[3]);
-					parsedDamage = true;
-				}
-				var alternateDamageRegex = /(?:\,)\s*?(?:or)\s*?(?:(\d+)|(?:\d+)\s*?\(?((\d+d\d+)[\d\s+]*)\)?)\s*?([a-zA-Z]*)\s*(?:damage)\s(.*)/gi;
-				while(alternateDamage = alternateDamageRegex.exec(damageInfo)) {
-					setAttribute('npc_' + actionType + 'action_alt_dmg_' + actionNum, alternateDamage[1] || alternateDamage[2]);
-					setAttribute('npc_' + actionType + 'action_alt_crit_dmg_' + actionNum, alternateDamage[1] || alternateDamage[3]);
-					if(alternateDamage[5]) {
-						setAttribute('npc_' + actionType + 'action_alt_dmg_reason_' + actionNum, alternateDamage[5]);
-					}
-					setAttribute('npc_' + actionType + 'action_toggle_alt_damage_' + actionNum, '@{npc_' + actionType + 'action_var_alt_damage_' + actionNum + '}');
-					parsedDamage = true;
-				}
-
-				if(parsedDamage) {
-					var effectRegex = /(?:\,)\s*?(?:and)\s(.*)/gi;
-					while(effect = effectRegex.exec(damageInfo)) {
-						setAttribute('npc_' + actionType + 'action_effect_' + actionNum, effect[1].replace(/(\+\s?(\d+))/g, '$1 : [[1d20+$2]]|[[1d20+$2]]'));
-						setAttribute('npc_' + actionType + 'action_toggle_effects_' + actionNum, '@{npc_' + actionType + 'action_var_effects_' + actionNum + '}');
-					}
-				}
-
 
 				function createTokenAction() {
 					// Create token action
@@ -990,9 +997,7 @@
 						setAbility(key, '', '%{selected|npc_' + actionType + 'action_' + actionNum + '}', shaped.createAbilityAsToken);
 					}
 				}
-				parsed = parsedAttack || parsedDamage || parsedDetails || parsedSave
-				log('parsed: ' + parsed);
-				log('!parsed: ' + !parsed);
+				parsed = parsedAttack || parsedDamage || parsedDetails || parsedSave;
 				if(!parsed) {
 					if(actionType === 'legendary_') {
 						legendaryActionsNotes.push(key + '. ' + value);
@@ -1005,6 +1010,13 @@
 						actionNum++;
 					}
 				} else {
+					if(actionType === 'legendary_') {
+						legendaryActionsNotes.push(key + '. See below');
+					}
+					if(key.indexOf('Costs ') > 0) {
+						key = key.replace(/\s*\(Costs\s*\d+\s*Actions\)/gi, '');
+						setAttribute('npc_' + actionType + 'action_name_' + actionNum, key);
+					}
 					createTokenAction();
 					actionNum++;
 				}
@@ -1026,23 +1038,21 @@
 
 		processActions(actions);
 
-		if(actionType === 'lair_') {
+		if(actionType === 'lair_' && Object.keys(actions).length > 0) {
 			setAttribute('npc_action_toggle_lair_actions', 'on');
 		}
-		if(actionType === 'legendary_') {
+		if(actionType === 'legendary_' && Object.keys(actions).length > 0) {
 			setAttribute('npc_action_toggle_legendary_actions', 'on');
 		}
 
 		if(multiAttackText) {
 			var actionList = actionPosition.join('|').slice(1);
-			log('actionList: ' + actionList);
 
 			//var regex = new RegExp('(?:(?:(one|two) with its )?(' + actionList + '))', 'gi');
 			var regex = new RegExp('(one|two|three)? (?:with its )?(' + actionList + ')( or)?', 'gi');
 			var macro = multiAttackText + '\n';
 
 			while(match = regex.exec(multiAttackText)) {
-				log('match: ' + match);
 				var action = match[2];
 				var nb = match[1] || 'one';
 				var actionNumber = actionPosition.indexOf(action.toLowerCase());
@@ -1132,11 +1142,9 @@
 		}
 		if(Object.keys(lairActions).length > 0) {
 			parseActions(lairActions, 'lair_');
-			setAttribute('npc_action_toggle_lair_actions', 'on');
 		}
 		if(Object.keys(legendaryActions).length > 0) {
 			parseActions(legendaryActions, 'legendary_');
-			setAttribute('npc_action_toggle_legendary_actions', 'on');
 		}
 
 
