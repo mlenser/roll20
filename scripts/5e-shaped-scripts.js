@@ -35,7 +35,7 @@
 
 
 	shaped.statblock = {
-		version: '1.64',
+		version: '1.65',
 		RegisterHandlers: function () {
 			on('chat:message', HandleInput);
 
@@ -578,7 +578,7 @@
 		setAttribute('hd_' + HDsize, numHD, numHD);
 	}
 	function parseHp(hp) {
-		var match = hp.match(/(\d+).*((\d+d\d+)[\d\s+]*)/i);
+		var match = hp.match(/(\d+).*((\d+d\d+)[\d\s+|\-]*)/i);
 
 		if(match[1]) {
 			setAttribute('HP', match[1], match[1]);
@@ -870,7 +870,7 @@
 				}
 
 				//log('damageInfo: ' + damageInfo);
-				var damageRegex = /(?:Hit:| Each).*?(?:(\d+)|(?:\d+).*?((\d+d\d+)[\d\s+]*).*?)\s*?([a-zA-Z]*)\s*?damage(?:\,\sor\s*?(?:(\d+)|(?:\d+)\s*?\(?((\d+d\d+)[\d\s+]*)\)?)\s*?([a-zA-Z]*)\s*damage if\s*(.*?)\.)?(?:\.|\s*?plus|.*\,\s*taking)?(?:\s*?(?:(\d+)|(?:\d+)\s*?\(?((\d+d\d+)[\d\s+]*)\)?)\s*?([a-zA-Z]*)\s*damage)?(?:\,\s*and\s(.*))?/gi;
+				var damageRegex = /(?:Hit:| Each).*?(?:(\d+)|(?:\d+).*?((\d+d\d+)[\d\s+|\-]*).*?)\s*?([a-zA-Z]*)\s*?damage(?:\,\sor\s*?(?:(\d+)|(?:\d+)\s*?\(?((\d+d\d+)[\d\s+|\-]*)\)?)\s*?([a-zA-Z]*)\s*damage if\s*(.*?)\.)?(?:\.|\s*?plus|.*\,\s*taking)?(?:\s*?(?:(\d+)|(?:\d+)\s*?\(?((\d+d\d+)[\d\s+|\-]*)\)?)\s*?([a-zA-Z]*)\s*damage)?(?:\,\s*and\s(.*))?/gi;
 				while(damage = damageRegex.exec(damageInfo)) {
 					setAttribute('npc_' + actionType + 'action_dmg_' + actionNum, damage[1] || damage[2]);
 					setAttribute('npc_' + actionType + 'action_toggle_damage_' + actionNum, '@{npc_' + actionType + 'action_var_damage_' + actionNum + '}');
@@ -1115,7 +1115,7 @@
 					combinedText = description + ' ' + effect;
 
 			if(name) {
-				combinedText = combinedText.replace(/\s*?\:\s*?\[\[(\d+d\d+[\d\s+]*)\]\]\s*?\|\s*?\[\[(\d+d\d+[\d\s+]*)\]\]/gi, '').replace(/\[\[(\d*d\d+[\d\s+]*)\]\]/gi, '$1');
+				combinedText = combinedText.replace(/\s*?\:\s*?\[\[(\d+d\d+[\d\s+|\-]*)\]\]\s*?\|\s*?\[\[(\d+d\d+[\d\s+|\-]*)\]\]/gi, '').replace(/\[\[(\d*d\d+[\d\s+|\-]*)\]\]/gi, '$1');
 
 
 				log('type ' + type + ' --  ' + type.indexOf('Bonus Action'));

@@ -13,9 +13,10 @@ Scripts and other assorted things for roll20
 * Cleaned up the Save Regex
 * Legendary Actions parsed to notes properly if they do not have any action.
 
-**(1.64)**
+**(1.64-1.65)**
 
 * Fixed HP and HD parsing if there is no bonus to hd
+* Fixed damage parsing to allow for negative numbers
 
 
 **13th April 2015 (1.6)**
