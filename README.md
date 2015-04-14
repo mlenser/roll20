@@ -7,11 +7,15 @@ Scripts and other assorted things for roll20
 
 **14th April 2015 (1.63)**
 
-* LMoP's range format of ## ft/## ft will not be sanitized to match the MM format of ##/## ft
+* LMoP's range format of ## ft/## ft will now be sanitized to match the MM format of ##/## ft
 * Sanitized Traits to get rid of any incorrect words.
 * Combined the Damage Regex into one regex. Extensively tested Ancient Black Dragon and Giant Spider. It should work for most things. Still need to test more creatures
 * Cleaned up the Save Regex
 * Legendary Actions parsed to notes properly if they do not have any action.
+
+**(1.64)**
+
+* Fixed HP and HD parsing if there is no bonus to hd
 
 
 **13th April 2015 (1.6)**

@@ -35,7 +35,7 @@
 
 
 	shaped.statblock = {
-		version: '1.63',
+		version: '1.64',
 		RegisterHandlers: function () {
 			on('chat:message', HandleInput);
 
@@ -578,12 +578,20 @@
 		setAttribute('hd_' + HDsize, numHD, numHD);
 	}
 	function parseHp(hp) {
-		var match = hp.match(/.*?(\d+)\s+\(((?:\d+)d(?:\d+))\s?(\+|\-)\s*?(\d+)/i);
+		var match = hp.match(/(\d+).*((\d+d\d+)[\d\s+]*)/i);
 
-		setAttribute('HP', match[1], match[1]);
-		setAttribute('npc_HP_hit_dice', match[2] + ' ' + match[3] + ' ' + match[4]);
+		if(match[1]) {
+			setAttribute('HP', match[1], match[1]);
+		} else {
+			log('error parsing hp');
+		}
+		if(match[2]) {
+			setAttribute('npc_HP_hit_dice', match[2]);
 
-		parseHD(match[2]);
+			parseHD(match[2]);
+		} else {
+			log('error parsing hd');
+		}
 	}
 
 	function parseSpeed(speed) {
