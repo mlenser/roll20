@@ -414,6 +414,7 @@
 			'blind sight':'blindsight',
 			'choos in g':'choosing',
 			'com muni cate':'communicate',
+			'Constituti on':'Constitution',
 			'dea ls':'deals',
 			'di sease':'disease',
 			'di stance':'distance',
@@ -422,17 +423,20 @@
 			'ex istence':'existence',
 			'magica lly':'magically',
 			'minlilte':'minute',
+			'ofeach':'of each',
 			'ofthe':'of the',
 			"on'e":'one',
 			'radi us':'radius',
 			'ra nge':'range',
 			'rega ins':'regains',
 			'savin g':'saving',
+			'si lvery':'silvery',
 			'slash in g':'slashing',
 			'slash ing':'slashing',
 			'successfu l':'successful',
 			'ta rget':'target',
 			'Th e':'The',
+			'unti l':'until',
 			'withi n':'within'
 		};
 		var re = new RegExp(Object.keys(replaceObj).join('|'),'gi');
@@ -953,25 +957,54 @@
 					parsedAttack = true;
 					parsedDetails = true;
 				}
+				var commaPeriodSpace = /\,?\.?\s*?/,
+						hitColon = /Hit:\s?/,
+						eachRegex = /Each.*?/,
+						hitOrEach = /(?:Hit:| Each| taking).*?/,
+						damageType = /([\w-]+|[\w-]+\sor\s[\w-]+)\s*?damage\s?(\(.*\))?/
+						damageSyntax = /(?:(\d+)|(?:\d+).*?((\d+d\d+)[\d\s+|\-]*).*?)\s*?/,
+						plus = /\s*?plus\s*?/,
+						targetIsGrappled = /The\s*?target\s*?is\s*?grappled/,
+						anythingElse = /(.*)/;
 
-				/*
-				var periodSpace = /\.?\s*?/gi,
-						hitColon = /Hit:\s?/gi,
-						eachRegex = /Each.*?/gi,
-						damageSyntax = /(?:(\d+)|(?:\d+).*?((\d+d\d+)[\d\s+|\-]*).*?)\s*?([a-zA-Z]*)\s*?damage/gi,
-						plus = /\s*?plus\s*?/gi,
-						targetIsGrappled = /The\s*?target\s*?is\s*?grappled/gi;
 
+				var damageRegex = new RegExp(hitOrEach.source + damageSyntax.source + damageType.source, 'gi'),
+						damagePlusRegex = new RegExp(hitOrEach.source + damageSyntax.source + damageType.source + plus.source + damageSyntax.source + damageType.source + commaPeriodSpace.source + anythingElse.source, 'gi');
 
-				var atkHitRegex = new RegExp(hitColon + damageSyntax),
-						atkHitPlusRegex = new RegExp(hitColon + damageSyntax + plus + damageSyntax);
+				var damagePlus = damagePlusRegex.exec(value);
+				if(damagePlus) {
+					/*
+					don't use for now. Parse out the other types first
+					if(damagePlus[1]) {
+						damagePlus[2] = damagePlus[1];
+						damagePlus[3] = damagePlus[1];
+					}
+					setDamage(damagePlus[2], '');
+					setCritDamage(damagePlus[3], '');
+					if(damagePlus[5]) {
+						damagePlus[4] = damagePlus[4] + damagePlus[5];
+					}
+					setDamageType(damagePlus[4], '');
+					toggleDamage(damagePlus[2], '');
 
-				*/
-				//Solar Slaying Longbow
-				//Solar Searing Burst
-				//Ankheg Bite
-				//Behir Constrict
-				//Balor Longsword
+					//secondary damage
+					if(damagePlus[6]) {
+						damagePlus[7] = damagePlus[6];
+						damagePlus[8] = damagePlus[6];
+					}
+					setDamage(damagePlus[7], 'second_');
+					setCritDamage(damagePlus[8], 'second_');
+					if(damagePlus[10]) {
+						damagePlus[9] = damagePlus[9] + damagePlus[10];
+					}
+					setDamageType(damagePlus[9], 'second_');
+					toggleDamage(damagePlus[7] || damagePlus[8] || damagePlus[9], 'second_');
+
+					if(damagePlus[11]) {
+						setEffect(damagePlus[11].trim().replace);
+					}
+					*/
+				}
 
 
 
