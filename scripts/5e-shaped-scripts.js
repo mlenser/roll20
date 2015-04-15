@@ -828,6 +828,19 @@
 					setAttribute('npc_' + actionType + 'action_toggle_' + attribute + actionNum, '@{npc_' + actionType + 'action_var_' + attribute + actionNum + '}');
 				}
 			}
+			function setName(name) {
+				setNPCActionAttribute('name_', name);
+			}
+			function setType(type) {
+				setNPCActionAttribute('type_', type);
+			}
+			function setTarget(target) {
+				setNPCActionAttribute('target_', target);
+			}
+			function setRange(type) {
+				setNPCActionAttribute('range_', type);
+			}
+
 			function setDamage(damage, altSecondary) {
 				setNPCActionAttribute(altSecondary + 'dmg_', damage);
 			}
@@ -865,8 +878,7 @@
 				setNPCActionAttribute('save_success_', saveSuccess);
 			}
 			function setSaveEffect(saveEffect) {
-				setNPCActionAttribute('effect_', saveEffect);
-				setNPCActionToggle('effects_', saveEffect);
+				setEffect(saveEffect);
 			}
 
 
@@ -891,7 +903,7 @@
 						key = key.replace(keyRegex, '');
 					}
 				}
-				setNPCActionAttribute('name_', key);
+				setName(key);
 
 				var splitAction = value.split(/\.(.+)?/),
 						attackInfo = splitAction[0],
@@ -905,7 +917,7 @@
 						if(type[1].toLowerCase() === meleeOrRanged.toLowerCase()) {
 							type[1] = 'Thrown';
 						}
-						setNPCActionAttribute('type_', shaped.capitalizeEachWord(type[1]));
+						setType(shaped.capitalizeEachWord(type[1]));
 					}
 					if(type[2]) {
 						var attackWeaponOrSpell = shaped.capitalizeEachWord(type[2]);
@@ -914,24 +926,30 @@
 				}
 				var toHitRegex = /\+\s?(\d+)\s*(?:to hit)/gi;
 				while(toHit = toHitRegex.exec(splitAttack[0])) {
-					setNPCActionAttribute('tohit_', toHit[1]);
-					setNPCActionToggle('attack_', toHit[1]);
-					setNPCActionToggle('crit_', toHit[1]);
+					if(toHit[1]) {
+						setNPCActionAttribute('tohit_', toHit[1]);
+						setNPCActionToggle('attack_');
+						setNPCActionToggle('crit_');
+					}
 					if(splitAttack[2]) {
-						setNPCActionToggle('target_', splitAttack[2].trim().toLowerCase());
+						setTarget(splitAttack[2].trim().toLowerCase());
 						parsedDetails = true;
 					}
 					parsedAttack = true;
 				}
 				var reachRegex = /(?:reach)\s?(\d+)\s?(?:ft)/gi;
 				while(reach = reachRegex.exec(splitAttack[1])) {
-					setNPCActionAttribute('reach_', reach[1] + ' ft', reach[1]);
+					if(reach[1]) {
+						setNPCActionAttribute('reach_', reach[1] + ' ft', reach[1]);
+					}
 					parsedAttack = true;
 					parsedDetails = true;
 				}
 				var rangeRegex = /(?:range)\s?(\d+)\/(\d+)\s?(ft)/gi;
 				while(range = rangeRegex.exec(splitAttack[1])) {
-					setNPCActionAttribute('range_', range[1] + '/' + range[2] + ' ft', range[1] && range[2]);
+					if(range[1] && range[2]) {
+						setRange(range[1] + '/' + range[2] + ' ft');
+					}
 					parsedAttack = true;
 					parsedDetails = true;
 				}
@@ -1004,46 +1022,64 @@
 				var saveDmgRegex = /(?:DC)\s*?(\d+)\s*?([a-zA-Z]*)\s*?(?:saving throw).*or\s(.*)?\s(?:on a successful one.)\s?(.*)/gi;
 				while(saveDmg = saveDmgRegex.exec(value)) {
 					//log('saveDmg: ' + saveDmg);
-					setSaveDC(saveDmg[1]);
-					setSaveStat(saveDmg[2]);
-					toggleSave(saveDmg[1] || saveDmg[2] || saveDmg[3]);
-					setSaveSuccess(saveDmg[3]);
-					setSaveEffect(saveDmg[4]);
+					if(saveDmg[1]) {
+						setSaveDC(saveDmg[1]);
+					}
+					if(saveDmg[2]) {
+						setSaveStat(saveDmg[2]);
+					}
+					if(saveDmg[1] || saveDmg[2] || saveDmg[3]) {
+						toggleSave();
+					}
+					if(saveDmg[3]) {
+						setSaveSuccess(saveDmg[3]);
+					}
+					if(saveDmg[3]) {
+						setSaveEffect(saveDmg[4]);
+					}
 					parsedSave = true;
 				}
 				var saveOrRegex = /(?:DC)\s*?(\d+)\s*?([a-zA-Z]*)\s*?(?:saving throw)\,?\s*?or\s(?:take.*)?(be.*|it can't.*)/gi;
 				while(saveOr = saveOrRegex.exec(value)) {
-					setSaveDC(saveOr[1]);
-					setSaveStat(saveOr[2]);
-					toggleSave(saveOr[1] || saveOr[2] || saveOr[3]);
-					setSaveEffect(saveOr[3]);
+					if(saveOr[1]) {
+						setSaveDC(saveOr[1]);
+					}
+					if(saveOr[2]) {
+						setSaveStat(saveOr[2]);
+					}
+					if(saveOr[1] || saveOr[2] || saveOr[3]) {
+						toggleSave();
+					}
+					if(saveOr[3]) {
+						setSaveEffect(saveOr[3]);
+					}
 					parsedSave = true;
 				}
 				var saveRangeRegex = /((?:Each | a | an | one ).*(?:creature|target).*)\swithin\s*?(\d+)\s*?(?:feet|ft)/gi;
 				while(saveRange = saveRangeRegex.exec(value)) {
 					if(saveRange[1]) {
-						setNPCActionAttribute('target_', saveRange[1].trim());
+						setTarget(saveRange[1].trim());
 					}
 					if(saveRange[2]) {
-						setNPCActionAttribute('range_', saveRange[2] + ' ft', saveRange[2]);
+						setRange(saveRange[2] + ' ft', saveRange[2]);
 					}
 					parsedDetails = true;
 				}
 
 				var lineRangeRegex = /(\d+\-foot line)\s*?(that is \d+ feet wide)/gi;
 				while(lineRange = lineRangeRegex.exec(value)) {
-					setAttribute('npc_' + actionType + 'action_type_' + actionNum, 'Line');
+					setType('Line');
 					if(lineRange[1] && lineRange[2]) {
-						setNPCActionAttribute('range_', lineRange[1] + ' ' + lineRange[2]);
+						setRange(lineRange[1] + ' ' + lineRange[2]);
 					} else if(lineRange[1]) {
-						setNPCActionAttribute('range_', lineRange[1]);
+						setRange(lineRange[1]);
 					}
 					parsedDetails = true;
 				}
 
 				var lineTargetRegex = /\.\s*(.*in that line)/gi;
 				while(lineTarget = lineTargetRegex.exec(value)) {
-					setNPCActionAttribute('target_', lineTarget[1]);
+					setTarget(lineTarget[1]);
 					parsedDetails = true;
 				}
 				setNPCActionToggle('details_', parsedDetails);
@@ -1064,8 +1100,7 @@
 					} else {
 						//make this work
 						value = value.replace(/(?:DC)\s*?(\d+)/gi, '[[$1]]');
-						setNPCActionAttribute('effect_', value);
-						setNPCActionToggle('effects_');
+						setEffect(value);
 						createTokenAction();
 						actionNum++;
 					}
@@ -1075,7 +1110,7 @@
 					}
 					if(key.indexOf('Costs ') > 0) {
 						key = key.replace(/\s*\(Costs\s*\d+\s*Actions\)/gi, '');
-						setNPCActionAttribute('name_', key);
+						setName(key);
 					}
 					createTokenAction();
 					actionNum++;
