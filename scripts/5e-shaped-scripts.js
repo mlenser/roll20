@@ -887,53 +887,99 @@
 					parsedDetails = true;
 				}
 
+				/*
+				var periodSpace = /\.?\s*?/gi,
+						hitColon = /Hit:\s?/gi,
+						eachRegex = /Each.*?/gi,
+						damageSyntax = /(?:(\d+)|(?:\d+).*?((\d+d\d+)[\d\s+|\-]*).*?)\s*?([a-zA-Z]*)\s*?damage/gi,
+						plus = /\s*?plus\s*?/gi,
+						targetIsGrappled = /The\s*?target\s*?is\s*?grappled/gi;
+
+
+				var atkHitRegex = new RegExp(hitColon + damageSyntax),
+						atkHitPlusRegex = new RegExp(hitColon + damageSyntax + plus + damageSyntax);
+
+				*/
+				//Solar Slaying Longbow
+				//Solar Searing Burst
+				//Ankheg Bite
+				//Behir Constrict
+				//Balor Longsword
+
+
+				function setDamage(altSecondary, damage) {
+					if(damage) {
+						setAttribute('npc_' + actionType + 'action_' + altSecondary + 'dmg_' + actionNum, damage);
+					}
+				}
+				function toggleDamage(altSecondary, toggle) {
+					if(toggle) {
+						setAttribute('npc_' + actionType + 'action_toggle_' + altSecondary + 'damage_' + actionNum, '@{npc_' + actionType + 'action_var' + altSecondary + '_damage_' + actionNum + '}');
+					}
+				}
+				function setDamageType(altSecondary, type) {
+					if(type) {
+						setAttribute('npc_' + actionType + 'action_' + altSecondary + 'dmg_type_' + actionNum, type);
+					}
+				}
+				function setCritDamage(altSecondary, critDamage) {
+					if(critDamage) {
+						setAttribute('npc_' + actionType + 'action_' + altSecondary + 'crit_dmg_' + actionNum, critDamage);
+					}
+				}
+				function setAltDamageReason(damageReason) {
+					if(damageReason) {
+						setAttribute('npc_' + actionType + 'action_alt_dmg_reason_' + actionNum, damageReason);
+					}
+				}
+				function setEffect(effect) {
+					if(effect) {
+						setAttribute('npc_' + actionType + 'action_effect_' + actionNum, effect.replace(/(\s*?Hit:\s?)/gi, '').replace(/DC\s(\d+)/g, 'DC [[$1]]'));
+						setAttribute('npc_' + actionType + 'action_toggle_effects_' + actionNum, '@{npc_' + actionType + 'action_var_effects_' + actionNum + '}');
+					}
+				}
+
 				var damageRegex = /(?:Hit:| Each).*?(?:(\d+)|(?:\d+).*?((\d+d\d+)[\d\s+|\-]*).*?)\s*?([a-zA-Z]*)\s*?damage(?:\,\sor\s*?(?:(\d+)|(?:\d+)\s*?\(?((\d+d\d+)[\d\s+|\-]*)\)?)\s*?([a-zA-Z]*)\s*damage if\s*(.*?)\.)?(?:\.|\s*?plus|.*\,\s*taking)?(?:\s*?(?:(\d+)|(?:\d+)\s*?\(?((\d+d\d+)[\d\s+|\-]*)\)?)\s*?([a-zA-Z]*)\s*damage)?(?:\,?\s*and\s(the target is\s.*|be.*))?(?:\.?\s*(If.*?grappled.*))?/gi;
 				while(damage = damageRegex.exec(value)) {
-					setAttribute('npc_' + actionType + 'action_dmg_' + actionNum, damage[1] || damage[2]);
-					setAttribute('npc_' + actionType + 'action_toggle_damage_' + actionNum, '@{npc_' + actionType + 'action_var_damage_' + actionNum + '}');
-					setAttribute('npc_' + actionType + 'action_dmg_type_' + actionNum, damage[4]);
-					setAttribute('npc_' + actionType + 'action_crit_dmg_' + actionNum, damage[1] || damage[3]);
+					if(damage[1]) {
+						damage[2] = damage[1];
+						damage[3] = damage[1];
+					}
+					setDamage('', damage[2]);
+					setCritDamage('', damage[3]);
+					setDamageType('', damage[4]);
+					toggleDamage('', damage[2]);
 
 					//alternate damage
-					if(damage[5] || damage[6]) {
-						setAttribute('npc_' + actionType + 'action_alt_dmg_' + actionNum, damage[5] || damage[6]);
+					if(damage[5]) {
+						damage[6] = damage[5];
+						damage[7] = damage[5];
 					}
-					if(damage[5] || damage[7]) {
-						setAttribute('npc_' + actionType + 'action_alt_crit_dmg_' + actionNum, damage[5] || damage[7]);
-					}
-					if(damage[9]) {
-						setAttribute('npc_' + actionType + 'action_alt_dmg_reason_' + actionNum, damage[9]);
-					}
-					if(damage[5] || damage[6] || damage[7] || damage[9]) {
-						setAttribute('npc_' + actionType + 'action_toggle_alt_damage_' + actionNum, '@{npc_' + actionType + 'action_var_alt_damage_' + actionNum + '}');
-					}
+					setDamage('alt_', damage[6]);
+					setCritDamage('alt_', damage[7]);
+					setAltDamageReason(damage[9]);
+					toggleDamage('alt_', damage[6] || damage[7] || damage[9]);
 
 					//secondary damage
-					if(damage[10] || damage[11]) {
-						setAttribute('npc_' + actionType + 'action_second_dmg_' + actionNum, damage[10] || damage[11]);
+					if(damage[10]) {
+						damage[11] = damage[10];
+						damage[12] = damage[10];
 					}
-					if(damage[10] || damage[12]) {
-						setAttribute('npc_' + actionType + 'action_second_crit_dmg_' + actionNum, damage[10] || damage[12]);
-					}
-					if(damage[13]) {
-						setAttribute('npc_' + actionType + 'action_second_dmg_type_' + actionNum, damage[13]);
-					}
-					if(damage[10] || damage[11] || damage[12] || damage[13]) {
-						setAttribute('npc_' + actionType + 'action_toggle_second_damage_' + actionNum, '@{npc_' + actionType + 'action_var_second_damage_' + actionNum + '}');
-					}
+					setDamage('second_', damage[11]);
+					setCritDamage('second_', damage[12]);
+					setDamageType('second_', damage[13]);
+					toggleDamage('second_', damage[11] || damage[12]);
 
 					//effect
-					if(damage[14] || damage[15]) {
-						var effect = damage[14] || damage[15];
-						setAttribute('npc_' + actionType + 'action_effect_' + actionNum, effect.replace(/DC\s(\d+)/g, 'DC [[$1]]'));
-						setAttribute('npc_' + actionType + 'action_toggle_effects_' + actionNum, '@{npc_' + actionType + 'action_var_effects_' + actionNum + '}');
+					var effect = damage[14] || damage[15];
+					if(effect) {
+						setEffect(effect);
 					}
 					parsedDamage = true;
 				}
 				if(!parsedDamage) {
 					if(damageInfo) {
-						setAttribute('npc_' + actionType + 'action_effect_' + actionNum, damageInfo.replace(/(\s*?Hit:\s?)/gi, '').replace(/DC\s(\d+)/g, 'DC [[$1]]'));
-						setAttribute('npc_' + actionType + 'action_toggle_effects_' + actionNum, '@{npc_' + actionType + 'action_var_effects_' + actionNum + '}');
+						setEffect(damageInfo);
 					}
 				}
 
