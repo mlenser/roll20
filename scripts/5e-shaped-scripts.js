@@ -815,6 +815,61 @@
 			var actionNum = 1,
 					legendaryActionsNotes = [];
 
+			function setNPCActionAttribute(attribute, value, ifQuery) {
+				if(typeof ifQuery === 'undefined') {
+					ifQuery = value;
+				}
+				if(ifQuery) {
+					setAttribute('npc_' + actionType + 'action_' + attribute + actionNum, value);
+				}
+			}
+			function setNPCActionToggle(attribute, toggle) {
+				if(typeof toggle === 'undefined' || toggle) {
+					setAttribute('npc_' + actionType + 'action_toggle_' + attribute + actionNum, '@{npc_' + actionType + 'action_var_' + attribute + actionNum + '}');
+				}
+			}
+			function setDamage(damage, altSecondary) {
+				setNPCActionAttribute(altSecondary + 'dmg_', damage);
+			}
+			function toggleDamage(toggle, altSecondary) {
+				setNPCActionToggle(altSecondary + 'damage_', toggle);
+			}
+			function setDamageType(type, altSecondary) {
+				setNPCActionAttribute(altSecondary + 'dmg_type_', type);
+			}
+			function setCritDamage(critDamage, altSecondary) {
+				setNPCActionAttribute(altSecondary + 'crit_dmg_', critDamage);
+			}
+			function setAltDamageReason(damageReason) {
+				setNPCActionAttribute('alt_' + 'dmg_reason_', damageReason);
+			}
+			function setEffect(effect) {
+				if(effect) {
+					setNPCActionAttribute('effect_', effect.replace(/(\s*?Hit:\s?)/gi, '').replace(/DC\s(\d+)/g, 'DC [[$1]]'));
+				}
+				setNPCActionToggle('effects_', effect);
+			}
+
+			function setSaveDC(saveDC) {
+				setNPCActionAttribute('save_dc_', saveDC);
+			}
+			function setSaveStat(saveStat) {
+				if(saveStat) {
+					setNPCActionAttribute('save_stat_', saveStat.substring(0, 3));
+				}
+			}
+			function toggleSave(toggle) {
+				setNPCActionToggle('save_', toggle);
+			}
+			function setSaveSuccess(saveSuccess) {
+				setNPCActionAttribute('save_success_', saveSuccess);
+			}
+			function setSaveEffect(saveEffect) {
+				setNPCActionAttribute('effect_', saveEffect);
+				setNPCActionToggle('effects_', saveEffect);
+			}
+
+
 			_.each(actionList, function(value, key) {
 				var parsedAttack = false,
 						parsedDetails = false,
@@ -830,13 +885,13 @@
 
 				var keyRegex = /\s*?\(Recharge\s*?(\d+\-\d+|\d+)\)/gi;
 				while(keyResult = keyRegex.exec(key)) {
+					setNPCActionAttribute('recharge_', keyResult[1]);
+					setNPCActionToggle('recharge_', keyResult[1]);
 					if(keyResult[1]) {
-						setAttribute('npc_' + actionType + 'action_toggle_recharge_' + actionNum, '@{npc_action_var_recharge_' + actionNum + '}');
-						setAttribute('npc_' + actionType + 'action_recharge_' + actionNum, keyResult[1]);
 						key = key.replace(keyRegex, '');
 					}
 				}
-				setAttribute('npc_' + actionType + 'action_name_' + actionNum, key);
+				setNPCActionAttribute('name_', key);
 
 				var splitAction = value.split(/\.(.+)?/),
 						attackInfo = splitAction[0],
@@ -850,7 +905,7 @@
 						if(type[1].toLowerCase() === meleeOrRanged.toLowerCase()) {
 							type[1] = 'Thrown';
 						}
-						setAttribute('npc_' + actionType + 'action_type_' + actionNum, shaped.capitalizeEachWord(type[1]));
+						setNPCActionAttribute('type_', shaped.capitalizeEachWord(type[1]));
 					}
 					if(type[2]) {
 						var attackWeaponOrSpell = shaped.capitalizeEachWord(type[2]);
@@ -859,30 +914,24 @@
 				}
 				var toHitRegex = /\+\s?(\d+)\s*(?:to hit)/gi;
 				while(toHit = toHitRegex.exec(splitAttack[0])) {
-					if(toHit[1]) {
-						setAttribute('npc_' + actionType + 'action_tohit_' + actionNum, toHit[1]);
-						setAttribute('npc_' + actionType + 'action_toggle_attack_' + actionNum, '@{npc_' + actionType + 'action_var_attack_' + actionNum + '}');
-						setAttribute('npc_' + actionType + 'action_toggle_crit_' + actionNum, '@{npc_' + actionType + 'action_var_crit_' + actionNum + '}');
-					}
+					setNPCActionAttribute('tohit_', toHit[1]);
+					setNPCActionToggle('attack_', toHit[1]);
+					setNPCActionToggle('crit_', toHit[1]);
 					if(splitAttack[2]) {
-						setAttribute('npc_' + actionType + 'action_target_' + actionNum, splitAttack[2].trim().toLowerCase());
+						setNPCActionToggle('target_', splitAttack[2].trim().toLowerCase());
 						parsedDetails = true;
 					}
 					parsedAttack = true;
 				}
 				var reachRegex = /(?:reach)\s?(\d+)\s?(?:ft)/gi;
 				while(reach = reachRegex.exec(splitAttack[1])) {
-					if(reach[1]) {
-						setAttribute('npc_' + actionType + 'action_reach_' + actionNum, reach[1] + ' ft');
-					}
+					setNPCActionAttribute('reach_', reach[1] + ' ft', reach[1]);
 					parsedAttack = true;
 					parsedDetails = true;
 				}
 				var rangeRegex = /(?:range)\s?(\d+)\/(\d+)\s?(ft)/gi;
 				while(range = rangeRegex.exec(splitAttack[1])) {
-					if(range[1] && range[2]) {
-						setAttribute('npc_' + actionType + 'action_range_' + actionNum, range[1] + '/' + range[2] + ' ft');
-					}
+					setNPCActionAttribute('range_', range[1] + '/' + range[2] + ' ft', range[1] && range[2]);
 					parsedAttack = true;
 					parsedDetails = true;
 				}
@@ -906,42 +955,7 @@
 				//Behir Constrict
 				//Balor Longsword
 
-				function setNPCActionAttribute(attribute, value, altSecondary) {
-					if(!altSecondary) {
-						altSecondary = '';
-					}
-					if(value) {
-						setAttribute('npc_' + actionType + 'action_' + altSecondary + attribute + actionNum, value);
-					}
-				}
-				function setNPCActionToggle(attribute, toggle, altSecondary) {
-					if(!altSecondary) {
-						altSecondary = '';
-					}
-					if(toggle) {
-						setAttribute('npc_' + actionType + 'action_toggle_' + altSecondary + attribute + actionNum, '@{npc_' + actionType + 'action_var_' + altSecondary + attribute + actionNum + '}');
-					}
-				}
 
-				function setDamage(damage, altSecondary) {
-					setNPCActionAttribute('dmg_', damage, altSecondary);
-				}
-				function toggleDamage(toggle, altSecondary) {
-					setNPCActionToggle('damage_', toggle, altSecondary);
-				}
-				function setDamageType(type, altSecondary) {
-					setNPCActionAttribute('dmg_type_', type, altSecondary);
-				}
-				function setCritDamage(critDamage, altSecondary) {
-					setNPCActionAttribute('crit_dmg_', critDamage, altSecondary);
-				}
-				function setAltDamageReason(damageReason) {
-					setNPCActionAttribute('dmg_reason_', damageReason, 'alt_');
-				}
-				function setEffect(effect) {
-					setNPCActionAttribute('effect_', effect.replace(/(\s*?Hit:\s?)/gi, '').replace(/DC\s(\d+)/g, 'DC [[$1]]'));
-					setNPCActionToggle('effects_', effect);
-				}
 
 				var damageRegex = /(?:Hit:| Each).*?(?:(\d+)|(?:\d+).*?((\d+d\d+)[\d\s+|\-]*).*?)\s*?([a-zA-Z]*)\s*?damage(?:\,\sor\s*?(?:(\d+)|(?:\d+)\s*?\(?((\d+d\d+)[\d\s+|\-]*)\)?)\s*?([a-zA-Z]*)\s*damage if\s*(.*?)\.)?(?:\.|\s*?plus|.*\,\s*taking)?(?:\s*?(?:(\d+)|(?:\d+)\s*?\(?((\d+d\d+)[\d\s+|\-]*)\)?)\s*?([a-zA-Z]*)\s*damage)?(?:\,?\s*and\s(the target is\s.*|be.*))?(?:\.?\s*(If.*?grappled.*))?/gi;
 				while(damage = damageRegex.exec(value)) {
@@ -987,23 +1001,6 @@
 					}
 				}
 
-				function setSaveDC(saveDC) {
-					setNPCActionAttribute('save_dc_', saveDC);
-				}
-				function setSaveStat(saveStat) {
-					setNPCActionAttribute('save_stat_', saveStat.substring(0, 3));
-				}
-				function toggleSave(toggle) {
-					setNPCActionToggle('save_', toggle);
-				}
-				function setSaveSuccess(saveSuccess) {
-					setNPCActionAttribute('save_success_', saveSuccess);
-				}
-				function setSaveEffect(saveEffect) {
-					setNPCActionAttribute('effect_', saveEffect);
-					setNPCActionToggle('effects_', saveEffect);
-				}
-
 				var saveDmgRegex = /(?:DC)\s*?(\d+)\s*?([a-zA-Z]*)\s*?(?:saving throw).*or\s(.*)?\s(?:on a successful one.)\s?(.*)/gi;
 				while(saveDmg = saveDmgRegex.exec(value)) {
 					//log('saveDmg: ' + saveDmg);
@@ -1025,10 +1022,10 @@
 				var saveRangeRegex = /((?:Each | a | an | one ).*(?:creature|target).*)\swithin\s*?(\d+)\s*?(?:feet|ft)/gi;
 				while(saveRange = saveRangeRegex.exec(value)) {
 					if(saveRange[1]) {
-						setAttribute('npc_' + actionType + 'action_target_' + actionNum, saveRange[1].trim());
+						setNPCActionAttribute('target_', saveRange[1].trim());
 					}
 					if(saveRange[2]) {
-						setAttribute('npc_' + actionType + 'action_range_' + actionNum, saveRange[2] + ' ft');
+						setNPCActionAttribute('range_', saveRange[2] + ' ft', saveRange[2]);
 					}
 					parsedDetails = true;
 				}
@@ -1037,23 +1034,19 @@
 				while(lineRange = lineRangeRegex.exec(value)) {
 					setAttribute('npc_' + actionType + 'action_type_' + actionNum, 'Line');
 					if(lineRange[1] && lineRange[2]) {
-						setAttribute('npc_' + actionType + 'action_range_' + actionNum, lineRange[1] + ' ' + lineRange[2]);
+						setNPCActionAttribute('range_', lineRange[1] + ' ' + lineRange[2]);
 					} else if(lineRange[1]) {
-						setAttribute('npc_' + actionType + 'action_range_' + actionNum, lineRange[1]);
+						setNPCActionAttribute('range_', lineRange[1]);
 					}
 					parsedDetails = true;
 				}
 
 				var lineTargetRegex = /\.\s*(.*in that line)/gi;
 				while(lineTarget = lineTargetRegex.exec(value)) {
-					if(lineTarget[1]) {
-						setAttribute('npc_' + actionType + 'action_target_' + actionNum, lineTarget[1]);
-					}
+					setNPCActionAttribute('target_', lineTarget[1]);
 					parsedDetails = true;
 				}
-				if(parsedDetails) {
-					setAttribute('npc_' + actionType + 'action_toggle_details_' + actionNum, '@{npc_' + actionType + 'action_var_details_' + actionNum + '}');
-				}
+				setNPCActionToggle('details_', parsedDetails);
 
 
 				function createTokenAction() {
@@ -1071,8 +1064,8 @@
 					} else {
 						//make this work
 						value = value.replace(/(?:DC)\s*?(\d+)/gi, '[[$1]]');
-						setAttribute('npc_' + actionType + 'action_effect_' + actionNum, value);
-						setAttribute('npc_' + actionType + 'action_toggle_effects_' + actionNum, '@{npc_' + actionType + 'action_var_effects_' + actionNum + '}');
+						setNPCActionAttribute('effect_', value);
+						setNPCActionToggle('effects_');
 						createTokenAction();
 						actionNum++;
 					}
@@ -1082,7 +1075,7 @@
 					}
 					if(key.indexOf('Costs ') > 0) {
 						key = key.replace(/\s*\(Costs\s*\d+\s*Actions\)/gi, '');
-						setAttribute('npc_' + actionType + 'action_name_' + actionNum, key);
+						setNPCActionAttribute('name_', key);
 					}
 					createTokenAction();
 					actionNum++;
