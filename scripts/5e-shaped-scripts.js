@@ -906,37 +906,41 @@
 				//Behir Constrict
 				//Balor Longsword
 
-
-				function setDamage(altSecondary, damage) {
-					if(damage) {
-						setAttribute('npc_' + actionType + 'action_' + altSecondary + 'dmg_' + actionNum, damage);
+				function setNPCActionAttribute(attribute, value, altSecondary) {
+					if(!altSecondary) {
+						altSecondary = '';
+					}
+					if(value) {
+						setAttribute('npc_' + actionType + 'action_' + altSecondary + attribute + actionNum, value);
 					}
 				}
-				function toggleDamage(altSecondary, toggle) {
+				function setNPCActionToggle(attribute, toggle, altSecondary) {
+					if(!altSecondary) {
+						altSecondary = '';
+					}
 					if(toggle) {
-						setAttribute('npc_' + actionType + 'action_toggle_' + altSecondary + 'damage_' + actionNum, '@{npc_' + actionType + 'action_var' + altSecondary + '_damage_' + actionNum + '}');
+						setAttribute('npc_' + actionType + 'action_toggle_' + altSecondary + attribute + actionNum, '@{npc_' + actionType + 'action_var_' + altSecondary + attribute + actionNum + '}');
 					}
 				}
-				function setDamageType(altSecondary, type) {
-					if(type) {
-						setAttribute('npc_' + actionType + 'action_' + altSecondary + 'dmg_type_' + actionNum, type);
-					}
+
+				function setDamage(damage, altSecondary) {
+					setNPCActionAttribute('dmg_', damage, altSecondary);
 				}
-				function setCritDamage(altSecondary, critDamage) {
-					if(critDamage) {
-						setAttribute('npc_' + actionType + 'action_' + altSecondary + 'crit_dmg_' + actionNum, critDamage);
-					}
+				function toggleDamage(toggle, altSecondary) {
+					setNPCActionToggle('damage_', toggle, altSecondary);
+				}
+				function setDamageType(type, altSecondary) {
+					setNPCActionAttribute('dmg_type_', type, altSecondary);
+				}
+				function setCritDamage(critDamage, altSecondary) {
+					setNPCActionAttribute('crit_dmg_', critDamage, altSecondary);
 				}
 				function setAltDamageReason(damageReason) {
-					if(damageReason) {
-						setAttribute('npc_' + actionType + 'action_alt_dmg_reason_' + actionNum, damageReason);
-					}
+					setNPCActionAttribute('dmg_reason_', damageReason, 'alt_');
 				}
 				function setEffect(effect) {
-					if(effect) {
-						setAttribute('npc_' + actionType + 'action_effect_' + actionNum, effect.replace(/(\s*?Hit:\s?)/gi, '').replace(/DC\s(\d+)/g, 'DC [[$1]]'));
-						setAttribute('npc_' + actionType + 'action_toggle_effects_' + actionNum, '@{npc_' + actionType + 'action_var_effects_' + actionNum + '}');
-					}
+					setNPCActionAttribute('effect_', effect.replace(/(\s*?Hit:\s?)/gi, '').replace(/DC\s(\d+)/g, 'DC [[$1]]'));
+					setNPCActionToggle('effects_', effect);
 				}
 
 				var damageRegex = /(?:Hit:| Each).*?(?:(\d+)|(?:\d+).*?((\d+d\d+)[\d\s+|\-]*).*?)\s*?([a-zA-Z]*)\s*?damage(?:\,\sor\s*?(?:(\d+)|(?:\d+)\s*?\(?((\d+d\d+)[\d\s+|\-]*)\)?)\s*?([a-zA-Z]*)\s*damage if\s*(.*?)\.)?(?:\.|\s*?plus|.*\,\s*taking)?(?:\s*?(?:(\d+)|(?:\d+)\s*?\(?((\d+d\d+)[\d\s+|\-]*)\)?)\s*?([a-zA-Z]*)\s*damage)?(?:\,?\s*and\s(the target is\s.*|be.*))?(?:\.?\s*(If.*?grappled.*))?/gi;
@@ -945,30 +949,30 @@
 						damage[2] = damage[1];
 						damage[3] = damage[1];
 					}
-					setDamage('', damage[2]);
-					setCritDamage('', damage[3]);
-					setDamageType('', damage[4]);
-					toggleDamage('', damage[2]);
+					setDamage(damage[2], '');
+					setCritDamage(damage[3], '');
+					setDamageType(damage[4], '');
+					toggleDamage(damage[2], '');
 
 					//alternate damage
 					if(damage[5]) {
 						damage[6] = damage[5];
 						damage[7] = damage[5];
 					}
-					setDamage('alt_', damage[6]);
-					setCritDamage('alt_', damage[7]);
+					setDamage(damage[6], 'alt_');
+					setCritDamage(damage[7], 'alt_');
 					setAltDamageReason(damage[9]);
-					toggleDamage('alt_', damage[6] || damage[7] || damage[9]);
+					toggleDamage(damage[6] || damage[7] || damage[9], 'alt_');
 
 					//secondary damage
 					if(damage[10]) {
 						damage[11] = damage[10];
 						damage[12] = damage[10];
 					}
-					setDamage('second_', damage[11]);
-					setCritDamage('second_', damage[12]);
-					setDamageType('second_', damage[13]);
-					toggleDamage('second_', damage[11] || damage[12]);
+					setDamage(damage[11], 'second_');
+					setCritDamage(damage[12], 'second_');
+					setDamageType(damage[13], 'second_');
+					toggleDamage(damage[11] || damage[12], 'second_');
 
 					//effect
 					var effect = damage[14] || damage[15];
@@ -983,43 +987,39 @@
 					}
 				}
 
+				function setSaveDC(saveDC) {
+					setNPCActionAttribute('save_dc_', saveDC);
+				}
+				function setSaveStat(saveStat) {
+					setNPCActionAttribute('save_stat_', saveStat.substring(0, 3));
+				}
+				function toggleSave(toggle) {
+					setNPCActionToggle('save_', toggle);
+				}
+				function setSaveSuccess(saveSuccess) {
+					setNPCActionAttribute('save_success_', saveSuccess);
+				}
+				function setSaveEffect(saveEffect) {
+					setNPCActionAttribute('effect_', saveEffect);
+					setNPCActionToggle('effects_', saveEffect);
+				}
+
 				var saveDmgRegex = /(?:DC)\s*?(\d+)\s*?([a-zA-Z]*)\s*?(?:saving throw).*or\s(.*)?\s(?:on a successful one.)\s?(.*)/gi;
 				while(saveDmg = saveDmgRegex.exec(value)) {
 					//log('saveDmg: ' + saveDmg);
-
-					if(saveDmg[1]) {
-						setAttribute('npc_' + actionType + 'action_save_dc_' + actionNum, saveDmg[1]);
-					}
-					if(saveDmg[2]) {
-						setAttribute('npc_' + actionType + 'action_save_stat_' + actionNum, saveDmg[2].substring(0, 3));
-					}
-					if(saveDmg[1] || saveDmg[2]){
-						setAttribute('npc_' + actionType + 'action_toggle_save_' + actionNum, '@{npc_' + actionType + 'action_var_save_' + actionNum + '}');
-					}
-					if(saveDmg[3]) {
-						setAttribute('npc_' + actionType + 'action_save_success_' + actionNum, saveDmg[3]);
-					}
-					if(saveDmg[4]) {
-						setAttribute('npc_' + actionType + 'action_effect_' + actionNum, saveDmg[4]);
-						setAttribute('npc_' + actionType + 'action_toggle_effects_' + actionNum, '@{npc_' + actionType + 'action_var_effects_' + actionNum + '}');
-					}
+					setSaveDC(saveDmg[1]);
+					setSaveStat(saveDmg[2]);
+					toggleSave(saveDmg[1] || saveDmg[2] || saveDmg[3]);
+					setSaveSuccess(saveDmg[3]);
+					setSaveEffect(saveDmg[4]);
 					parsedSave = true;
 				}
 				var saveOrRegex = /(?:DC)\s*?(\d+)\s*?([a-zA-Z]*)\s*?(?:saving throw)\,?\s*?or\s(?:take.*)?(be.*|it can't.*)/gi;
 				while(saveOr = saveOrRegex.exec(value)) {
-					if(saveOr[1]) {
-						setAttribute('npc_' + actionType + 'action_save_dc_' + actionNum, saveOr[1]);
-					}
-					if(saveOr[2]) {
-						setAttribute('npc_' + actionType + 'action_save_stat_' + actionNum, saveOr[2].substring(0, 3));
-					}
-					if(saveOr[1] || saveOr[2]){
-						setAttribute('npc_' + actionType + 'action_toggle_save_' + actionNum, '@{npc_' + actionType + 'action_var_save_' + actionNum + '}');
-					}
-					if(saveOr[3]) {
-						setAttribute('npc_' + actionType + 'action_effect_' + actionNum, saveOr[3]);
-						setAttribute('npc_' + actionType + 'action_toggle_effects_' + actionNum, '@{npc_' + actionType + 'action_var_effects_' + actionNum + '}');
-					}
+					setSaveDC(saveOr[1]);
+					setSaveStat(saveOr[2]);
+					toggleSave(saveOr[1] || saveOr[2] || saveOr[3]);
+					setSaveEffect(saveOr[3]);
 					parsedSave = true;
 				}
 				var saveRangeRegex = /((?:Each | a | an | one ).*(?:creature|target).*)\swithin\s*?(\d+)\s*?(?:feet|ft)/gi;
