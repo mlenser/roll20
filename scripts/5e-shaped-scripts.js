@@ -26,16 +26,18 @@
 
 
 	//optional Settings tab
-	shaped.defaultTab; //1 is the core sheet. Change to 10 if you want the actions page. Change to 6 if you want the spellbook page. Change to 98 if you want to "Show All" for the NPC pages.
+	//shaped.defaultTab = 10; //1 is the core sheet. Uncomment to 10 if you want the actions page. Change to 6 if you want the spellbook page. Change to 98 if you want to "Show All" for the NPC pages.
 	shaped.sheetOutput = ''; //change to 'hidden' if you wish the sheet to whisper all commands to the GM
 	shaped.whisperDeathSaves = true; //change to false if you wish NPC death saves to be rolled openly
-	shaped.initiativeTieBreaker = false; //change to true if you want to add the initiative modifier as a tie breaker for initiatives. (I use it)
+	shaped.initiativeTieBreaker = true; //change to true if you want to add the initiative modifier as a tie breaker for initiatives. (I use it)
 	shaped.initiativeAddsToTracker = true; //change to false if you do not want to add the initiative to the tracker (mainly for the app)
+
+	shaped.addInitiativeTokenAbility = true; //change to false if you do not want a macro "Init" on every token
 
 
 
 	shaped.statblock = {
-		version: '1.65',
+		version: '1.66',
 		RegisterHandlers: function () {
 			on('chat:message', HandleInput);
 
@@ -154,7 +156,7 @@
 
 		var match = hd.match(/^(\d+)d(\d+)$/);
 		if(!match || !match[1] || !match[2]) {
-			throw 'Character doesn\'t have valid HP Hit Dice format';
+			throw 'Character doesn\'t have valid Hit Dice format';
 		}
 
 		var nb_dice = parseInt(match[1], 10);
@@ -259,6 +261,15 @@
 		}
 	}
 
+	function logObject(obj) {
+		for (var k in obj) {
+			if (obj.hasOwnProperty(key)) {
+				logObject(obj[k]);
+			} else {
+				log('SEARCH OBJ: ' + k + '->' + obj[k])
+			}
+		}
+	}
 
 	shaped.ImportStatblock = function(token) {
 		status = 'Nothing modified';
@@ -269,6 +280,8 @@
 			if(statblock === '') {
 				throw('Selected token GM Notes was empty.');
 			}
+
+			log('statblock1: ' + statblock);
 
 			var name = shaped.parseStatblock(statblock);
 			if(characterId) {
@@ -319,7 +332,7 @@
 		})[0];
 
 		if(!attr) {
-			log('Creating attribute ' + name);
+			//log('Creating attribute ' + name);
 			createObj('attribute', {
 				name: name,
 				current: currentVal,
@@ -327,7 +340,7 @@
 				characterid: characterId
 			});
 		} else if(!attr.get('current') || attr.get('current').toString() !== currentVal) {
-			log('Updating attribute ' + name);
+			//log('Updating attribute ' + name);
 			attr.set({
 				current: currentVal,
 				max: max
@@ -375,8 +388,8 @@
 	shaped.parseStatblock = function(statblock) {
 		log('---- Parsing statblock ----');
 
-		text = clean(statblock);
-		var keyword = findKeyword(text),
+		var text = sanitizeText(clean(statblock)),
+				keyword = findKeyword(text),
 				section = splitStatblock(text, keyword);
 		shaped.setCharacter(section.attr.name, text.replace(/#/g, '<br>'), section.bio);
 		processSection(section);
@@ -384,14 +397,49 @@
 	};
 
 	function clean(statblock) {
-		statblock = unescape(statblock);
-		statblock = statblock.replace(/–/g, '-');
-		statblock = statblock.replace(/<br[^>]*>/g, '#').replace(/(<([^>]+)>)/ig, '');
-		statblock = statblock.replace(/\s+#\s+/g, '#');
-		statblock = statblock.replace(/#(?=[a-z])/g, ' ');
-		statblock = statblock.replace(/\s+/g, ' ');
+		return unescape(statblock).replace(/–/g, '-').replace(/<br[^>]*>/g, '#').replace(/\s+#\s+/g, '#').replace(/(<([^>]+)>)/gi, '').replace(/#(?=[a-z]|DC)/g, ' ').replace(/\s+/g, ' ');
+	}
 
-		return statblock;
+
+	function sanitizeText (text) {
+		if(typeof text !== 'String') {
+			text = text.toString();
+		}
+
+		text = text.replace(/ft\s\./gi, 'ft.').replace(/ft\.\s\,/gi, 'ft').replace(/ft\./gi, 'ft').replace(/(\d+) ft\/(\d+) ft/gi, '$1/$2 ft').replace(/ld(\d+)/gi, '1d$1').replace(/ld\s+(\d+)/gi, '1d$1').replace(/(\d+)d\s+(\d+)/gi, '$1d$2').replace(/(\d+)\s+d(\d+)/gi, '$1d$2').replace(/(\d+)\s+d(\d+)/gi, '$1d$2').replace(/(\d+)f(?:Day|day)/gi, '$1/Day').replace(/(\d+)f(\d+)/gi, '$1/$2');
+		var replaceObj = {
+			'abol eth':'aboleth',
+			'Afrightened':'A frightened',
+			'Aundefinedr':'After',
+			'blind sight':'blindsight',
+			'choos in g':'choosing',
+			'com muni cate':'communicate',
+			'dea ls':'deals',
+			'di sease':'disease',
+			'di stance':'distance',
+			'fe et':'feet',
+			'exha les':'exhales',
+			'ex istence':'existence',
+			'magica lly':'magically',
+			'minlilte':'minute',
+			'ofthe':'of the',
+			"on'e":'one',
+			'radi us':'radius',
+			'ra nge':'range',
+			'rega ins':'regains',
+			'savin g':'saving',
+			'slash in g':'slashing',
+			'slash ing':'slashing',
+			'successfu l':'successful',
+			'ta rget':'target',
+			'Th e':'The',
+			'withi n':'within'
+		};
+		var re = new RegExp(Object.keys(replaceObj).join('|'),'gi');
+		text = text.replace(re, function(matched){
+			return replaceObj[matched];
+		});
+		return text;
 	}
 
 	function findKeyword(statblock) {
@@ -416,31 +464,35 @@
 			if(key === 'actions') {
 				indexAction = match.index;
 				keyword.actions.Actions = match.index;
-			} else if(key === 'lair actions') {
-				indexLair = match.index;
-				keyword.lair.Lair = match.index;
 			} else if(key === 'legendary actions') {
 				indexLegendary = match.index;
 				keyword.legendary.Legendary = match.index;
 			} else if(key === 'reactions') {
 				indexReactions = match.index;
 				keyword.reactions.Reactions = match.index;
+			} else if(key === 'lair actions') {
+				indexLair = match.index;
+				keyword.lair.Lair = match.index;
 			} else {
 				keyword.attr[key] = match.index;
 			}
 		}
 
 		// Power
-		regex = /(?:#|\.\s+)([A-Z][\w-]+(?:\s(?:[A-Z][\w-]+|[\(\)\d/-]|of)+)*)(?=\s*\.)/g;
-		log('statblock: ' + statblock);
+		regex = /(?:#|\.\s+)([A-Z][\w-]+(?:\s(?:[A-Z][\w-]+|[\(\)\d\-]|of|and|or)+)*)(?=\s*\.)/g;
+		log('parsed statblock: ' + statblock);
 		while(match = regex.exec(statblock)) {
 			if(!keyword.attr[match[1].toLowerCase()]) {
 				if(match.index < indexAction) {
 					keyword.traits[match[1]] = match.index;
-				} else if(match.index < indexLegendary) {
+				} else if(match.index > indexAction && match.index < indexLegendary && match.index < indexReactions && match.index < indexLair) {
 					keyword.actions[match[1]] = match.index;
-				} else {
+				} else if(match.index > indexLegendary && match.index < indexReactions && match.index < indexLair) {
 					keyword.legendary[match[1]] = match.index;
+				} else if(match.index > indexReactions && match.index < indexLair) {
+					keyword.reactions[match[1]] = match.index;
+				} else if(match.index > indexLair) {
+					keyword.lair[match[1]] = match.index;
 				}
 			}
 		}
@@ -475,6 +527,7 @@
 
 		delete keyword.actions.Actions;
 		delete keyword.legendary.Legendary;
+		delete keyword.reactions.Reactions;
 
 		if(bio) {
 			keyword.bio = bio;
@@ -499,12 +552,6 @@
 				delete keyword.attr[size[i]];
 				break;
 			}
-		}
-
-		//Move legendary action summary to trait.
-		if(keyword.legendary['Legendary Actions'] !== undefined) {
-			setAttribute('legendary_action_notes', keyword.legendary['Legendary Actions']);
-			delete keyword.legendary['Legendary Actions'];
 		}
 		return keyword;
 	}
@@ -536,8 +583,10 @@
 		if(section.attr.languages) setAttribute('prolanguages', section.attr.languages);
 
 		parseTraits(section.traits);
+		parseReactions(section.reactions);
 		parseActions(section.actions);
 		parseActions(section.legendary, 'legendary_');
+		parseActions(section.lair, 'lair_');
 	}
 
 	/* Section parsing function */
@@ -613,7 +662,7 @@
 
 	function parseSenses(senses) {
 		senses = senses.replace(/[,\s]*passive.*/i,'');
-		var regex = /(|blindsight|darkvision|tremorsense|truesight|)\s*(\d+)(?:ft)?\s*(\(.*\))?/gi;
+		var regex = /(|blindsight|darkvision|tremorsense|truesight|)\s*?(\d+)\s*?ft?\s*(\(.*\))?/gi;
 
 		while(match = regex.exec(senses)) {
 			var attrName = match[1].toLowerCase(),
@@ -734,9 +783,7 @@
 	}
 	function parseTraits(traits) {
 		var traitsArray = [];
-		log('traits1: ' + traits);
 		_.each(traits, function(value, key) {
-			value = sanitizeText(value);
 			traitsArray.push('**' + key + '**' + '. ' + value);
 		});
 
@@ -746,42 +793,15 @@
 		}
 	}
 
-	function sanitizeText (text) {
-		if(typeof text !== 'String') {
-			text = text.toString();
-		}
-		text = text.replace(/ft\s\./gi, 'ft.').replace(/ft\.\s\,/gi, 'ft').replace(/ft\./gi, 'ft').replace(/(\d+) ft\/(\d+) ft/gi, '$1/$2 ft').replace(/ld(\d+)/gi, '1d$1').replace(/ld\s+(\d+)/gi, '1d$1').replace(/(\d+)d\s+(\d+)/gi, '$1d$2').replace(/(\d+)\s+d(\d+)/gi, '$1d$2').replace(/(\d+)\s+d(\d+)/gi, '$1d$2').replace(/(\d+)f(?:Day|day)/gi, '$1/Day').replace(/(\d+)f(\d+)/gi, '$1/$2');
-		var replaceObj = {
-			'abol eth': 'aboleth',
-			'Afrightened': 'A frightened',
-			'Aundefinedr': 'After',
-			'choos in g': 'choosing',
-			'com muni cate': 'communicate',
-			'dea ls': 'deals',
-			'di sease': 'disease',
-			'di stance': 'distance',
-			'fe et': 'feet',
-			'exha les': 'exhales',
-			'ex istence': 'existence',
-			'magica lly': 'magically',
-			'minlilte': 'minute',
-			'ofthe': 'of the',
-			"on'e": 'one',
-			'ra nge':'range',
-			'rega ins': 'regains',
-			'savin g': 'saving',
-			'slash in g': 'slashing',
-			'slash ing': 'slashing',
-			'successfu l': 'successful',
-			'ta rget': 'target',
-			'Th e': 'The',
-			'withi n': 'within'
-		};
-		var re = new RegExp(Object.keys(replaceObj).join('|'),'gi');
-		text = text.replace(re, function(matched){
-			return replaceObj[matched];
+	function parseReactions(reactions) {
+		var reactionsArray = [];
+		_.each(reactions, function(value, key) {
+			reactionsArray.push('**' + key + '**. ' + value);
 		});
-		return text;
+		if(reactionsArray.length > 0) {
+			setAttribute('reactions', reactionsArray.join('\n'));
+			setAttribute('npc_action_toggle_reactions', 'on');
+		}
 	}
 
 	function parseActions(actions, actionType) {
@@ -817,8 +837,6 @@
 					}
 				}
 				setAttribute('npc_' + actionType + 'action_name_' + actionNum, key);
-
-				value = sanitizeText(value);
 
 				var splitAction = value.split(/\.(.+)?/),
 						attackInfo = splitAction[0],
@@ -869,9 +887,8 @@
 					parsedDetails = true;
 				}
 
-				//log('damageInfo: ' + damageInfo);
-				var damageRegex = /(?:Hit:| Each).*?(?:(\d+)|(?:\d+).*?((\d+d\d+)[\d\s+|\-]*).*?)\s*?([a-zA-Z]*)\s*?damage(?:\,\sor\s*?(?:(\d+)|(?:\d+)\s*?\(?((\d+d\d+)[\d\s+|\-]*)\)?)\s*?([a-zA-Z]*)\s*damage if\s*(.*?)\.)?(?:\.|\s*?plus|.*\,\s*taking)?(?:\s*?(?:(\d+)|(?:\d+)\s*?\(?((\d+d\d+)[\d\s+|\-]*)\)?)\s*?([a-zA-Z]*)\s*damage)?(?:\,\s*and\s(.*))?/gi;
-				while(damage = damageRegex.exec(damageInfo)) {
+				var damageRegex = /(?:Hit:| Each).*?(?:(\d+)|(?:\d+).*?((\d+d\d+)[\d\s+|\-]*).*?)\s*?([a-zA-Z]*)\s*?damage(?:\,\sor\s*?(?:(\d+)|(?:\d+)\s*?\(?((\d+d\d+)[\d\s+|\-]*)\)?)\s*?([a-zA-Z]*)\s*damage if\s*(.*?)\.)?(?:\.|\s*?plus|.*\,\s*taking)?(?:\s*?(?:(\d+)|(?:\d+)\s*?\(?((\d+d\d+)[\d\s+|\-]*)\)?)\s*?([a-zA-Z]*)\s*damage)?(?:\,?\s*and\s(the target is\s.*|be.*))?(?:\.?\s*(If.*?grappled.*))?/gi;
+				while(damage = damageRegex.exec(value)) {
 					setAttribute('npc_' + actionType + 'action_dmg_' + actionNum, damage[1] || damage[2]);
 					setAttribute('npc_' + actionType + 'action_toggle_damage_' + actionNum, '@{npc_' + actionType + 'action_var_damage_' + actionNum + '}');
 					setAttribute('npc_' + actionType + 'action_dmg_type_' + actionNum, damage[4]);
@@ -906,8 +923,9 @@
 					}
 
 					//effect
-					if(damage[14]) {
-						setAttribute('npc_' + actionType + 'action_effect_' + actionNum, damage[14].replace(/DC\s(\d+)/g, 'DC [[$1]]'));
+					if(damage[14] || damage[15]) {
+						var effect = damage[14] || damage[15];
+						setAttribute('npc_' + actionType + 'action_effect_' + actionNum, effect.replace(/DC\s(\d+)/g, 'DC [[$1]]'));
 						setAttribute('npc_' + actionType + 'action_toggle_effects_' + actionNum, '@{npc_' + actionType + 'action_var_effects_' + actionNum + '}');
 					}
 					parsedDamage = true;
@@ -919,9 +937,10 @@
 					}
 				}
 
-				var saveDmgRegex = /(?:DC)\s*?(\d+)\s*?([a-zA-Z]*)\s*?(?:saving throw).*(?:or)\s(.*)?\s(?:on a successful one.)\s?(.*)/gi;
-				while(saveDmg = saveDmgRegex.exec(value)) {//
+				var saveDmgRegex = /(?:DC)\s*?(\d+)\s*?([a-zA-Z]*)\s*?(?:saving throw).*or\s(.*)?\s(?:on a successful one.)\s?(.*)/gi;
+				while(saveDmg = saveDmgRegex.exec(value)) {
 					//log('saveDmg: ' + saveDmg);
+
 					if(saveDmg[1]) {
 						setAttribute('npc_' + actionType + 'action_save_dc_' + actionNum, saveDmg[1]);
 					}
@@ -940,11 +959,8 @@
 					}
 					parsedSave = true;
 				}
-
-
-				var saveOrRegex = /(?:DC)\s*?(\d+)\s*?([a-zA-Z]*)\s*?(?:saving throw)\s*?or\s(?:take.*)?(be.*)/gi;
+				var saveOrRegex = /(?:DC)\s*?(\d+)\s*?([a-zA-Z]*)\s*?(?:saving throw)\,?\s*?or\s(?:take.*)?(be.*|it can't.*)/gi;
 				while(saveOr = saveOrRegex.exec(value)) {
-					//log('saveOr: ' + saveOr);
 					if(saveOr[1]) {
 						setAttribute('npc_' + actionType + 'action_save_dc_' + actionNum, saveOr[1]);
 					}
@@ -989,9 +1005,6 @@
 					}
 					parsedDetails = true;
 				}
-
-
-
 				if(parsedDetails) {
 					setAttribute('npc_' + actionType + 'action_toggle_details_' + actionNum, '@{npc_' + actionType + 'action_var_details_' + actionNum + '}');
 				}
@@ -1005,7 +1018,7 @@
 						setAbility(key, '', '%{selected|npc_' + actionType + 'action_' + actionNum + '}', shaped.createAbilityAsToken);
 					}
 				}
-				parsed = parsedAttack || parsedDamage || parsedDetails || parsedSave;
+				parsed = parsedAttack || parsedDamage || parsedSave;
 				if(!parsed) {
 					if(actionType === 'legendary_') {
 						legendaryActionsNotes.push(key + '. ' + value);
@@ -1042,6 +1055,9 @@
 			if(!shaped.usePowerAbility) {
 				setAbility('MultiAttack', '', '', shaped.createAbilityAsToken);
 			}
+		}
+		if(shaped.addInitiativeTokenAbility) {
+			setAbility('Init', '', '%{selected|Initiative}', shaped.createAbilityAsToken);
 		}
 
 		processActions(actions);
@@ -1086,12 +1102,6 @@
 				}
 			}
 
-			/*
-			 setAttribute('npc_action_name_' + actionNum, 'MultiAttack');
-			 setAttribute('npc_action_effect_' + actionNum, macro.slice(0, -1));
-			 setAttribute('npc_action_multiattack_' + actionNum, '{{npc_showmultiattack=1}} {{npc_multiattack=@{npc_multiattack}}}');
-			 */
-
 
 			if(shaped.usePowerAbility) {
 				setAbility('MultiAttack', '', powercardAbility(id, actionNumber), shaped.createAbilityAsToken);
@@ -1123,15 +1133,15 @@
 				if(type.indexOf('Bonus Action') === 1) {
 					log('Bonus Action ' + name + ' changed to a normal action');
 					actions[name] = combinedText;
+				} else if(type.indexOf('Legendary Action') === 1) {
+					log('Legendary Action ' + name);
+					legendaryActions[name] = (combinedText);
 				} else if(type.indexOf('Reaction') === 1) {
 					log('Reaction ' + name);
 					reactions.push(combinedText);
 				} else if(type.indexOf('Lair Action') === 1) {
 					log('Lair Action ' + name);
 					lairActions[name] = (combinedText);
-				} else if(type.indexOf('Legendary Action') === 1) {
-					log('Legendary Action ' + name);
-					legendaryActions[name] = (combinedText);
 				} else if(type.indexOf('Special Action') === 1) {
 					log('Special Action ' + name + ' changed to a normal action');
 					actions[name] = combinedText;
@@ -1144,15 +1154,15 @@
 		if(Object.keys(actions).length > 0) {
 			parseActions(actions);
 		}
+		if(Object.keys(legendaryActions).length > 0) {
+			parseActions(legendaryActions, 'legendary_');
+		}
 		if(reactions.length > 0) {
 			setAttribute('reactions', reactions.join('\n'));
 			setAttribute('npc_action_toggle_reactions', 'on');
 		}
 		if(Object.keys(lairActions).length > 0) {
 			parseActions(lairActions, 'lair_');
-		}
-		if(Object.keys(legendaryActions).length > 0) {
-			parseActions(legendaryActions, 'legendary_');
 		}
 
 

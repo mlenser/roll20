@@ -4,6 +4,12 @@ Scripts and other assorted things for roll20
 
 ### Changelog
 
+**15th April 2015 (1.66)**
+
+* Reactions now parse on import. No creature has Reactions and Legendary Actions, but if you want to have both please put Reactions after Legendary Actions.
+* Added some support for Lair Actions - still need to process them fully
+* Added some more items to sanitize list and did it for everything, not just certain parts of import.
+* Vision can accept LMoP format now.
 
 **14th April 2015 (1.63)**
 
