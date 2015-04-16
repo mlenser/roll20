@@ -409,7 +409,8 @@
 			text = text.toString();
 		}
 
-		text = text.replace(/ft\s\./gi, 'ft.').replace(/ft\.\s\,/gi, 'ft').replace(/ft\./gi, 'ft').replace(/(\d+) ft\/(\d+) ft/gi, '$1/$2 ft').replace(/ld(\d+)/gi, '1d$1').replace(/ld\s+(\d+)/gi, '1d$1').replace(/(\d+)d\s+(\d+)/gi, '$1d$2').replace(/(\d+)\s+d(\d+)/gi, '$1d$2').replace(/(\d+)\s+d(\d+)/gi, '$1d$2').replace(/(\d+)f(?:Day|day)/gi, '$1/Day').replace(/(\d+)f(\d+)/gi, '$1/$2');
+		text = text.replace(/\,\./gi, ',').replace(/ft\s\./gi, 'ft.').replace(/ft\.\s\,/gi, 'ft').replace(/ft\./gi, 'ft').replace(/(\d+) ft\/(\d+) ft/gi, '$1/$2 ft').replace(/ld(\d+)/gi, '1d$1').replace(/ld\s+(\d+)/gi, '1d$1').replace(/(\d+)d\s+(\d+)/gi, '$1d$2').replace(/(\d+)\s+d(\d+)/gi, '$1d$2').replace(/(\d+)\s+d(\d+)/gi, '$1d$2').replace(/(\d+)d(\d)\s(\d)/gi, '$1d$2$3').replace(/(\d+)f(?:Day|day)/gi, '$1/Day').replace(/(\d+)f(\d+)/gi, '$1/$2').replace(/{/gi, '(').replace(/}/gi, ')').replace(/(\d+)\((\d+)/gi, '$1/$2');
+		text = text.replace(/(\d+)\s*?plus\s*?((?:\d+d\d+)|(?:\d+))/gi, '$2 + $1');
 		var replaceObj = {
 			'abol eth':'aboleth',
 			'Afrightened':'A frightened',
@@ -434,6 +435,8 @@
 			'rega ins':'regains',
 			'savin g':'saving',
 			'si lvery':'silvery',
+			's lashing':'slashing',
+			'slas hing':'slashing',
 			'slash in g':'slashing',
 			'slash ing':'slashing',
 			'successfu l':'successful',
@@ -616,9 +619,19 @@
 
 	function parseSize(size) {
 		var match = size.match(/(.*?) (.*?), (.*)/i);
-		setAttribute('size', shaped.capitalizeEachWord(match[1]));
-		setAttribute('npc_type', shaped.capitalizeEachWord(match[2]));
-		setAttribute('alignment', shaped.capitalizeEachWord(match[3]));
+		if(match) {
+			if(match[1]) {
+				setAttribute('size', shaped.capitalizeEachWord(match[1]));
+			}
+			if(match[2]) {
+				setAttribute('npc_type', shaped.capitalizeEachWord(match[2]));
+			}
+			if(match[3]) {
+				setAttribute('alignment', shaped.capitalizeEachWord(match[3]));
+			}
+		} else {
+			log('invalid type/size/alignment format');
+		}
 	}
 
 	function parseArmorClass(ac) {
@@ -693,14 +706,17 @@
 				longestVisionRange = Math.max(blindsight, darkvision, tremorsense, truesight),
 				longestVisionRangeForSecondaryDarkvision = Math.max(blindsight, tremorsense, truesight),
 				lightRadius,
-				dimRadius = 0;
+				dimRadius;
 
 		if(longestVisionRange === blindsight) {
 			lightRadius = blindsight;
+			dimRadius = blindsight;
 		} else if(longestVisionRange === tremorsense) {
 			lightRadius = tremorsense;
+			dimRadius = tremorsense;
 		} else if(longestVisionRange === truesight) {
 			lightRadius = truesight;
+			dimRadius = truesight;
 		} else if(longestVisionRange === darkvision) {
 			lightRadius = Math.ceil(darkvision * 1.1666666);
 			if(longestVisionRangeForSecondaryDarkvision > 0) {
@@ -712,6 +728,8 @@
 
 		if(lightRadius > 0) {
 			token.set('light_radius', lightRadius);
+		}
+		if(dimRadius) {
 			token.set('light_dimradius', dimRadius);
 		}
 		token.set('light_hassight', true);
@@ -871,6 +889,10 @@
 					setAttribute('npc_' + actionType + 'action_toggle_' + attribute + actionNum, '@{npc_' + actionType + 'action_var_' + attribute + actionNum + '}');
 				}
 			}
+			function parseCritDamage(damage) {
+				return damage.replace(/\s\+\s\d+/g, '');
+			}
+
 			function setName(name) {
 				setNPCActionAttribute('name_', name);
 			}
@@ -887,8 +909,8 @@
 			function setDamage(damage, altSecondary) {
 				setNPCActionAttribute(altSecondary + 'dmg_', damage);
 			}
-			function toggleDamage(toggle, altSecondary) {
-				setNPCActionToggle(altSecondary + 'damage_', toggle);
+			function toggleDamage(altSecondary) {
+				setNPCActionToggle(altSecondary + 'damage_');
 			}
 			function setDamageType(type, altSecondary) {
 				setNPCActionAttribute(altSecondary + 'dmg_type_', type);
@@ -901,7 +923,7 @@
 			}
 			function setEffect(effect) {
 				if(effect) {
-					setNPCActionAttribute('effect_', effect.replace(/(\s*?Hit:\s?)/gi, '').replace(/DC\s(\d+)/g, 'DC [[$1]]'));
+					setNPCActionAttribute('effect_', effect.replace(/(\s*?Hit:\s?)/gi, '').replace(/(\d+)/g, '[[$1]]'));
 				}
 				setNPCActionToggle('effects_', effect);
 			}
@@ -924,6 +946,53 @@
 				setEffect(saveEffect);
 			}
 
+			var commaPeriodSpace = /\,?\.?\s*?/,
+					commaPeriodOneSpace = /\,?\.?\s?/,
+					hitOrEach = /(?:Hit:| Each| taking).*?/,
+					damageType = /((?:[\w]+|[\w]+\s(?:or|and)\s[\w]+)(?:\s*?\([\w\s]+\))?)\s*?damage\s?(\([\w\'\s]+\))?/,
+					damageSyntax = /(?:(\d+)|.*?\(([\dd\s\+\-]*)\).*?)\s*?/,
+					altDamageSyntax = /(?:\,\s*?or\s*?)/,
+					altDamageReasonSyntax = /((?:if|in)[\w\s]+)/,
+					altDamageExtraSyntax = /(The.*|If the.*)?/,
+					plus = /\s*?plus\s*?/,
+					andAnythingElse = /(\s?and.*)?/,
+					anythingElse = /(.*)?/,
+					damageRegex = new RegExp(hitOrEach.source + damageSyntax.source + damageType.source + commaPeriodSpace.source + andAnythingElse.source, 'i'),
+					damagePlusRegex = new RegExp(plus.source + damageSyntax.source + damageType.source + commaPeriodSpace.source + anythingElse.source, 'i'),
+					altDamageRegex = new RegExp(altDamageSyntax.source + damageSyntax.source + damageType.source + commaPeriodSpace.source + altDamageReasonSyntax.source + commaPeriodOneSpace.source + altDamageExtraSyntax.source, 'i');
+
+			function parseDamage(damage, altSecondary) {
+				log('parseDamage: ' + damage);
+				if(damage) {
+					//1 is damage without dice. Example "1"
+					//2 is damage with dice. Example "2d6+4"
+					//3 is damage type. Example "slashing" or "lightning or thunder"
+					//4 is damage type explanation. Example "(djinni's choice)"
+					//5 is effects
+					if(damage[1]) {
+						damage[2] = damage[1];
+					}
+					if(damage[2]) {
+						setDamage(damage[2], altSecondary);
+						setCritDamage(parseCritDamage(damage[2]), altSecondary);
+					}
+					if(damage[4]) {
+						damage[3] += ' ' + damage[4];
+					}
+					if(damage[3]) {
+						setDamageType(damage[3], altSecondary);
+					}
+					if(damage[2] || damage[3]) {
+						toggleDamage(altSecondary);
+					}
+					if(damage[5]) {
+						setEffect(damage[5].trim());
+					}
+					if(damage[6]) {
+						setAltDamageReason(damage[6]);
+					}
+				}
+			}
 
 			_.each(actionList, function(value, key) {
 				var parsedAttack = false,
@@ -997,57 +1066,25 @@
 					parsedAttack = true;
 					parsedDetails = true;
 				}
-				var commaPeriodSpace = /\,?\.?\s*?/,
-						hitColon = /Hit:\s?/,
-						eachRegex = /Each.*?/,
-						hitOrEach = /(?:Hit:| Each| taking).*?/,
-						damageType = /([\w-]+|[\w-]+\sor\s[\w-]+)\s*?damage\s?(\(.*\))?/,
-						damageSyntax = /(?:(\d+)|(?:\d+).*?((\d+d\d+)[\d\s+|\-]*).*?)\s*?/,
-						plus = /\s*?plus\s*?/,
-						targetIsGrappled = /The\s*?target\s*?is\s*?grappled/,
-						anythingElse = /(.*)/;
 
 
-				var damageRegex = new RegExp(hitOrEach.source + damageSyntax.source + damageType.source, 'gi'),
-						damagePlusRegex = new RegExp(hitOrEach.source + damageSyntax.source + damageType.source + plus.source + damageSyntax.source + damageType.source + commaPeriodSpace.source + anythingElse.source, 'gi');
+				var damage = damageRegex.exec(value);
+				if(damage) {
+					parseDamage(damage, '');
+				}
 
 				var damagePlus = damagePlusRegex.exec(value);
 				if(damagePlus) {
-					/*
-					don't use for now. Parse out the other types first
-					if(damagePlus[1]) {
-						damagePlus[2] = damagePlus[1];
-						damagePlus[3] = damagePlus[1];
-					}
-					setDamage(damagePlus[2], '');
-					setCritDamage(damagePlus[3], '');
-					if(damagePlus[5]) {
-						damagePlus[4] = damagePlus[4] + damagePlus[5];
-					}
-					setDamageType(damagePlus[4], '');
-					toggleDamage(damagePlus[2], '');
-
-					//secondary damage
-					if(damagePlus[6]) {
-						damagePlus[7] = damagePlus[6];
-						damagePlus[8] = damagePlus[6];
-					}
-					setDamage(damagePlus[7], 'second_');
-					setCritDamage(damagePlus[8], 'second_');
-					if(damagePlus[10]) {
-						damagePlus[9] = damagePlus[9] + damagePlus[10];
-					}
-					setDamageType(damagePlus[9], 'second_');
-					toggleDamage(damagePlus[7] || damagePlus[8] || damagePlus[9], 'second_');
-
-					if(damagePlus[11]) {
-						setEffect(damagePlus[11].trim().replace);
-					}
-					*/
+					parseDamage(damagePlus, 'second_');
+				}
+				var altDamage = altDamageRegex.exec(value);
+				if(altDamage) {
+					log('altDamage: ' + altDamage);
+					altDamage[6] = [altDamage[5], altDamage[5] = altDamage[6]][0]; //swap 5 and 6
+					parseDamage(altDamage, 'alt_');
 				}
 
-
-
+				/*
 				var damageRegex = /(?:Hit:| Each).*?(?:(\d+)|(?:\d+).*?((\d+d\d+)[\d\s+|\-]*).*?)\s*?([a-zA-Z]*)\s*?damage(?:\,\sor\s*?(?:(\d+)|(?:\d+)\s*?\(?((\d+d\d+)[\d\s+|\-]*)\)?)\s*?([a-zA-Z]*)\s*damage if\s*(.*?)\.)?(?:\.|\s*?plus|.*\,\s*taking)?(?:\s*?(?:(\d+)|(?:\d+)\s*?\(?((\d+d\d+)[\d\s+|\-]*)\)?)\s*?([a-zA-Z]*)\s*damage)?(?:\,?\s*and\s(the target is\s.*|be.*))?(?:\.?\s*(If.*?grappled.*))?/gi;
 				while(damage = damageRegex.exec(value)) {
 					if(damage[1]) {
@@ -1091,6 +1128,7 @@
 						setEffect(damageInfo);
 					}
 				}
+				*/
 
 				var saveDmgRegex = /(?:DC)\s*?(\d+)\s*?([a-zA-Z]*)\s*?(?:saving throw).*or\s(.*)?\s(?:on a successful one.)\s?(.*)/gi;
 				while(saveDmg = saveDmgRegex.exec(value)) {
@@ -1139,11 +1177,15 @@
 					parsedDetails = true;
 				}
 
-				var lineRangeRegex = /(\d+\-foot line)\s*?(that is \d+ feet wide)/gi;
-				while(lineRange = lineRangeRegex.exec(value)) {
+				var lineRangeFootRegex = /(\d+)\-foot line\s*?that is (\d+) feet wide/gi,
+						lineRangeFoot = lineRangeFootRegex.exec(value),
+						lineRangeFeetRegex = /line that is (\d+)\sfeet long\s*?and (\d+) feet wide/gi,
+						lineRangeFeet = lineRangeFeetRegex.exec(value),
+						lineRange = lineRangeFoot || lineRangeFeet;
+				if(lineRange) {
 					setType('Line');
 					if(lineRange[1] && lineRange[2]) {
-						setRange(lineRange[1] + ' ' + lineRange[2]);
+						setRange(lineRange[1] + '-foot line that is ' + lineRange[2] + ' feet wide');
 					} else if(lineRange[1]) {
 						setRange(lineRange[1]);
 					}

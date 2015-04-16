@@ -4,6 +4,12 @@ Scripts and other assorted things for roll20
 
 ### Changelog
 
+**16th April 2015 (1.7)**
+
+* Vision is now set on the token.
+* Completely revamped the damage Regex
+* Parsed the other format of a line (see Ankheg)
+
 **15th April 2015 (1.66)**
 
 * Reactions now parse on import. No creature has Reactions and Legendary Actions, but if you want to have both please put Reactions after Legendary Actions.

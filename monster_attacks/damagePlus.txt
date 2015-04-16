@@ -7,16 +7,14 @@ Solar Searing Burst (Costs 2 Actions). The solar em its magical, divine energy. 
 
 Ankheg Bite. Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 9 (2d6 + 3) slashing damage plus 3 (1d6) acid damage. If the target is a Large or smaller creature, it is grappled (escape DC 13). Until this grapple ends, the ankheg can bite only the grappled creature and has advantage on attack rolls to do so.
 
-Azir Warhammer. Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) bludgeoning damage, or 8 (1d10 + 3) bludgeoning damage if used with two hands to make a melee attack, plus 3 (1d6) fire damage.
-
 Behir Constrict. Melee Weapon Attack: +10 to hit, reach 5 ft., one Large or smaller creature. Hit: 17 (2d10 + 6) bludgeoning damage plus 17 (2d10 + 6) slashing damage. The target is grappled (escape DC 16) ifthe behir isn't already constricting a creature, and the target is restrained until this grapple ends.
 
-Balor Longsword. Melee Weapon Attack:+14 to hit, reach 10ft., one target. Hit: 21 (3d8 + 8) slashing damage plus 13 (3d8) lightning damage. If the balor scores a critical hit, it ro lls damage dice three times, instead of twice.
+Balor Longsword. Melee Weapon Attack:+14 to hit, reach 10ft., one target. Hit: 21 (3d8 + 8) slashing damage plus 13 (3d8) lightning damage. If the balor scores a critical hit, it rolls damage dice three times, instead of twice.
 Balor Whip. Melee Weapon Attack: +14 to hit, reach 30ft., one target. Hit: 15 (2d6 + 8) slashing damage plus 10 (3d6) fire damage, and the target must succeed on a DC 20 Strength saving throw or be pulled up to 25 feet toward the balor.
 
 Chasme Proboscis. Melee Weapon Attack: +5 to hit, reach 5 ft., one creature. Hit: 16 (4d6 + 2) piercing damage plus 24 (7d6) necrotic damage, and the target's hit point maximum is reduced by an amo unt equal to the necrotic damage taken. If this effect reduces a creature's hit point maximum to 0, the creature dies. This reduction to a creature's hit point maximum lasts until the creature finishes a long rest or until it is affected by a spell like greater restoration .
 
-Yochlol Slam (Bite in Spider Form). Melee Weapon Attack: +6 to hit, reach 5 ft. (10ft. in demon form}, one target. Hit: 5 (1d6 + 2) bludgeoning (piercing in spider form) damage plus 21 (6d6) poison damage.
+Yochlol Slam (Bite in Spider Form). Melee Weapon Attack: +6 to hit, reach 5 ft. (10ft. in demon form), one target. Hit: 5 (1d6 + 2) bludgeoning (piercing in spider form) damage plus 21 (6d6) poison damage.
 
 Bone Devil Sting. Melee Weapon Attack: +8 to hit, reach 10ft., one target. Hit: 13 (2d8 + 4) piercing damage plus 17 (5d6) poison damage, and the target must succeed on a DC 14 Constitution saving throw or become poisoned for 1 minute. The target can repeat the saving throw at the end of each of its turns , ending the effect on itself on a success .
 
@@ -53,3 +51,16 @@ Vampire Bite (Bat or Vampire Form Only). Melee Weapon Attack: +9 to hit, reach 5
 Vampire Spawn Bite. Melee Weapon Attack: +6 to hit, reach 5 ft., one willing creature, or a creature that is grappled by the vampire, incapacitated, or restrained. Hit: 6 (1d6 + 3) piercing damage plus 7 (2d6) necrotic damage. The target's hit point maximum is reduced by an amount equal to the necrotic damage taken, and the vampire regains hit points equal to that amount. The reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0.
 
 Giant Toad Bite. Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 7 (1d10 + 2) piercing damage plus 5 (1d10) poison damage, and the target is grappled (escape DC 13). Until this grapple ends, the target is restrained, and the toad can't bite another target.
+
+//Alt && Plus
+Azer Warhammer. Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) bludgeoning damage, or 8 (1d10 + 3) bludgeoning damage if used with two hands to make a melee attack, plus 3 (1d6) fire damage.
+
+Cambion Spear. Melee or Ranged Weapon Attack: +7 to hit, reach 5 ft. or range 20/60 ft ., one target. Hit: 7 (1d6 + 4) piercing damage, or 8 (1 d8 + 4) piercing damage if used with two hands to make a melee attack, plus 3 (1 d6) fire damage.
+
+Death Knight Longsword. Melee Weapon Attack: +11 to hit, reach 5 ft. , one target. Hit: 9 (1d8 + 5) slashing damage, or 10 (1d10 + 5) slashing damage if used with two hands, plus 18 (4d8) necrotic damage.
+
+Erinyes Longsword. Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 8 (1d 8 + 4) slashing damage, or 9 (1d10 + 4) slashing damage if used with two ha nds, plus 13 (3d8) poison damage.
+
+Drow Mage Staff. Melee Weapon Attack: +2 to hit, reach 5 ft ., one target. Hit: 2 (1d6 - l) bludgeoning damage, or 3 (1d8 - l) bludgeoning damage if used with two hands, plus 3 (1d6) poison damage.
+
+Salamander Spear. Melee or Ranged Weapon Attack: +7 to hit, reach 5 ft. or range 20 ft./60ft., one target. Hit: 11 (2d6 + 4) piercing damage, or 13 (2d8 + 4) piercing damage if used with two hands to make a melee attack, plus 3 (1d6) fire damage.
