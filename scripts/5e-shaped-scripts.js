@@ -61,7 +61,7 @@
 			return;
 		}
 		log('msg.content: ' + msg.content);
-		args = msg.content.split(/\s+/);
+		var args = msg.content.split(/\s+/);
 		switch(args[0]) {
 			case '!build-monster':
 			case '!shaped-parse':
@@ -92,7 +92,7 @@
 				limit = msg.selected.length;
 			}
 
-			for(i = 0; i < limit; i++) {
+			for(var i = 0; i < limit; i++) {
 				if(msg.selected[i]._type === 'graphic') {
 					var obj = getObj('graphic', msg.selected[i]._id);
 					if(obj && obj.get('subtype') === 'token') {
@@ -217,15 +217,17 @@
 			throw('Something prevent script to create or find character ' + name);
 		}
 
-		if(gmnotes)
+		if(gmnotes) {
 			obj.set({
 				gmnotes: gmnotes
 			});
+		}
 
-		if(bio)
+		if(bio) {
 			obj.set({
 				bio: bio
 			});
+		}
 
 		characterId = obj.id;
 		if(getAttrByName(characterId, 'is_npc') !== 1) {
@@ -262,11 +264,11 @@
 	}
 
 	function logObject(obj) {
-		for (var k in obj) {
-			if (obj.hasOwnProperty(key)) {
+		for(var k in obj) {
+			if(obj.hasOwnProperty(k)) {
 				logObject(obj[k]);
 			} else {
-				log('SEARCH OBJ: ' + k + '->' + obj[k])
+				log('SEARCH OBJ: ' + k + '->' + obj[k]);
 			}
 		}
 	}
@@ -297,6 +299,7 @@
 				getAndSetBarInfo(token, 'bar2');
 				getAndSetBarInfo(token, 'bar3');
 
+				setTokenVision(token);
 			}
 		} catch(e) {
 			status = 'Parsing was incomplete due to error(s)';
@@ -402,7 +405,7 @@
 
 
 	function sanitizeText (text) {
-		if(typeof text !== 'String') {
+		if(typeof text !== 'string') {
 			text = text.toString();
 		}
 
@@ -464,7 +467,7 @@
 		// Standard keyword
 		var regex = /#\s*(tiny|small|medium|large|huge|gargantuan|armor class|hit points|speed|str|dex|con|int|wis|cha|saving throws|skills|damage resistances|damage immunities|condition immunities|damage vulnerabilities|senses|languages|challenge|traits|actions|lair actions|legendary actions|reactions)(?=\s|#)/gi;
 		while(match = regex.exec(statblock)) {
-			key = match[1].toLowerCase();
+			var key = match[1].toLowerCase();
 			if(key === 'actions') {
 				indexAction = match.index;
 				keyword.actions.Actions = match.index;
@@ -506,8 +509,9 @@
 
 	function splitStatblock(statblock, keyword) {
 		// Check for bio (flavor text) at the end, separated by at least 3 line break.
-		var bio;
-		if((pos = statblock.indexOf('###')) != -1) {
+		var bio,
+				pos = statblock.indexOf('###');
+		if(pos != -1) {
 			bio = statblock.substring(pos + 3).replace(/^[#\s]/g, '');
 			bio = bio.replace(/#/g, '<br>').trim();
 			statblock = statblock.slice(0, pos);
@@ -540,7 +544,7 @@
 		// Patch for multiline abilities
 		var abilitiesName = ['str', 'dex', 'con', 'int', 'wis', 'cha'];
 		var abilities = '';
-		for(i = 0, len = abilitiesName.length; i < len; ++i) {
+		for(var i = 0, len = abilitiesName.length; i < len; ++i) {
 			if(keyword.attr[abilitiesName[i]]) {
 				abilities += keyword.attr[abilitiesName[i]] + ' ';
 				delete keyword.attr[abilitiesName[i]];
@@ -681,8 +685,43 @@
 		}
 	}
 
+	function setTokenVision(token) {
+		var blindsight = parseInt(getAttrByName(characterId, 'blindsight'), 10) || 0,
+				darkvision = parseInt(getAttrByName(characterId, 'darkvision'), 10) || 0,
+				tremorsense = parseInt(getAttrByName(characterId, 'tremorsense'), 10) || 0,
+				truesight = parseInt(getAttrByName(characterId, 'truesight'), 10) || 0,
+				longestVisionRange = Math.max(blindsight, darkvision, tremorsense, truesight),
+				longestVisionRangeForSecondaryDarkvision = Math.max(blindsight, tremorsense, truesight),
+				lightRadius,
+				dimRadius = 0;
+
+		if(longestVisionRange === blindsight) {
+			lightRadius = blindsight;
+		} else if(longestVisionRange === tremorsense) {
+			lightRadius = tremorsense;
+		} else if(longestVisionRange === truesight) {
+			lightRadius = truesight;
+		} else if(longestVisionRange === darkvision) {
+			lightRadius = Math.ceil(darkvision * 1.1666666);
+			if(longestVisionRangeForSecondaryDarkvision > 0) {
+				dimRadius = longestVisionRangeForSecondaryDarkvision;
+			} else {
+				dimRadius = -5;
+			}
+		}
+
+		if(lightRadius > 0) {
+			token.set('light_radius', lightRadius);
+			token.set('light_dimradius', dimRadius);
+		}
+		token.set('light_hassight', true);
+		token.set('light_angle', 360);
+		token.set('light_losangle', 360);
+	}
+
+
 	function parseChallenge(cr) {
-		input = cr.replace(/[, ]/g, '');
+		var input = cr.replace(/[, ]/g, '');
 		var match = input.match(/([\d/]+).*?(\d+)/);
 		setAttribute('challenge', match[1]);
 
@@ -693,8 +732,8 @@
 	}
 
 	function parseSavingThrow(save) {
-		var regex = /(STR|DEX|CON|INT|WIS|CHA).*?(\d+)/gi;
-		var attr, value;
+		var regex = /(STR|DEX|CON|INT|WIS|CHA).*?(\d+)/gi,
+				attr;
 		while(match = regex.exec(save)) {
 			// Substract ability modifier from this field since sheet computes it
 			switch(match[1].toLowerCase()) {
@@ -891,9 +930,10 @@
 						parsedDetails = false,
 						parsedSave = false,
 						parsedDamage = false,
-						parsed;
+						parsed,
+						pos = key.indexOf('(');
 
-				if((pos = key.indexOf('(')) > 1) {
+				if(pos > 1) {
 					actionPosition[actionNum] = key.substring(0, pos - 1).toLowerCase();
 				} else {
 					actionPosition[actionNum] = key.toLowerCase();
@@ -961,7 +1001,7 @@
 						hitColon = /Hit:\s?/,
 						eachRegex = /Each.*?/,
 						hitOrEach = /(?:Hit:| Each| taking).*?/,
-						damageType = /([\w-]+|[\w-]+\sor\s[\w-]+)\s*?damage\s?(\(.*\))?/
+						damageType = /([\w-]+|[\w-]+\sor\s[\w-]+)\s*?damage\s?(\(.*\))?/,
 						damageSyntax = /(?:(\d+)|(?:\d+).*?((\d+d\d+)[\d\s+|\-]*).*?)\s*?/,
 						plus = /\s*?plus\s*?/,
 						targetIsGrappled = /The\s*?target\s*?is\s*?grappled/,
@@ -1176,30 +1216,30 @@
 			setAttribute('npc_action_toggle_legendary_actions', 'on');
 		}
 
-		if(multiAttackText) {
-			var actionList = actionPosition.join('|').slice(1);
+		function addActionToMultiattack(actionNumber) {
+			macro += '%{selected|npc_action_' + actionNumber + '}\n';
+			setAttribute('npc_action_toggle_multiattack_' + actionNumber, '@{npc_action_var_multiattack_' + actionNumber + '}');
+		}
 
-			//var regex = new RegExp('(?:(?:(one|two) with its )?(' + actionList + '))', 'gi');
-			var regex = new RegExp('(one|two|three)? (?:with its )?(' + actionList + ')( or)?', 'gi');
-			var macro = multiAttackText + '\n';
+		if(multiAttackText) {
+			var actionList = actionPosition.join('|').slice(1),
+					regex = new RegExp('(one|two|three)? (?:with its )?(' + actionList + ')( or)?', 'gi'),
+					macro = multiAttackText + '\n',
+					actionNumber;
 
 			while(match = regex.exec(multiAttackText)) {
-				var action = match[2];
-				var nb = match[1] || 'one';
-				var actionNumber = actionPosition.indexOf(action.toLowerCase());
+				var action = match[2],
+						nb = match[1] || 'one';
 
-				function addActionToMultiattack() {
-					macro += '%{selected|npc_action_' + actionNumber + '}\n';
-					setAttribute('npc_action_toggle_multiattack_' + actionNumber, '@{npc_action_var_multiattack_' + actionNumber + '}');
-				}
+				actionNumber = actionPosition.indexOf(action.toLowerCase());
 
 				if(actionNumber !== -1) {
-					addActionToMultiattack();
+					addActionToMultiattack(actionNumber);
 					if(nb == 'two') {
-						addActionToMultiattack();
+						addActionToMultiattack(actionNumber);
 					}
 					if(nb == 'three') {
-						addActionToMultiattack();
+						addActionToMultiattack(actionNumber);
 					}
 					if(match[3]) {
 						macro += 'or\n';
@@ -1208,7 +1248,6 @@
 					delete actionPosition[actionNumber]; // Remove
 				}
 			}
-
 
 			if(shaped.usePowerAbility) {
 				setAbility('MultiAttack', '', powercardAbility(id, actionNumber), shaped.createAbilityAsToken);
@@ -1388,6 +1427,8 @@
 
 		shaped.setBars(token);
 
+		setTokenVision(token);
+
 		if(shaped.showName) {
 			token.set('showname', true);
 		}
@@ -1463,7 +1504,7 @@
 
 		shaped.getSelectedToken(msg, function(token){
 			var match = token.get('imgsrc').match(/images\/.*\/(thumb|max)/i);
-			if(match == null) {
+			if(match === null) {
 				throw('The token imgsrc do not come from you library. Unable to clone');
 			}
 
@@ -1497,7 +1538,7 @@
 							bar3_max: token.get('bar3_max'),
 							layer: 'objects'
 						});
-				if(shaped.rollMonsterHpOnDrop == true)
+				if(shaped.rollMonsterHpOnDrop === true)
 					shaped.rollTokenHp(obj);
 			}
 		}, 1);
