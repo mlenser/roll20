@@ -159,10 +159,10 @@
 			throw 'Character doesn\'t have valid Hit Dice format';
 		}
 
-		var nb_dice = parseInt(match[1], 10);
-		var nb_face = parseInt(match[2], 10);
-		var total = 0;
-		var original = 0;
+		var nb_dice = parseInt(match[1], 10),
+				nb_face = parseInt(match[2], 10),
+				total = 0,
+				original = 0;
 
 		sendChat('GM', '[[' + hd + ']]', function(ops) {
 			var rollResult = JSON.parse(ops[0].content);
@@ -619,82 +619,80 @@
 
 	function parseSize(size) {
 		var match = size.match(/(.*?) (.*?), (.*)/i);
-		if(match) {
-			if(match[1]) {
-				setAttribute('size', shaped.capitalizeEachWord(match[1]));
-			}
-			if(match[2]) {
-				setAttribute('npc_type', shaped.capitalizeEachWord(match[2]));
-			}
-			if(match[3]) {
-				setAttribute('alignment', shaped.capitalizeEachWord(match[3]));
-			}
-		} else {
-			log('invalid type/size/alignment format');
+		if(!match[1] || !match[2] || !match[3]) {
+			throw 'Character doesn\'t have valid type/size/alignment format';
 		}
+		setAttribute('size', shaped.capitalizeEachWord(match[1]));
+		setAttribute('npc_type', shaped.capitalizeEachWord(match[2]));
+		setAttribute('alignment', shaped.capitalizeEachWord(match[3]));
 	}
 
 	function parseArmorClass(ac) {
 		var match = ac.match(/(\d+)\s?(.*)/);
+		if(!match[1]) {
+			throw 'Character doesn\'t have valid AC format';
+		}
 		setAttribute('npc_AC', match[1]);
-		setAttribute('npc_AC_note', match[2].replace(/\(|\)/g,''));
+		if(match[2]) {
+			setAttribute('npc_AC_note', match[2].replace(/\(|\)/g, ''));
+		}
 	}
 
 	function parseHD(hd) {
-		var splitHD = hd.match(/(\d+)d(\d+)/i),
-				numHD = splitHD[1],
+		var splitHD = hd.match(/(\d+)d(\d+)/i);
+		if(!splitHD[1] || !splitHD[2]) {
+			throw 'Character doesn\'t have valid hd format';
+		}
+		var numHD = splitHD[1],
 				HDsize = 'd' + splitHD[2];
 
 		setAttribute('hd_' + HDsize, numHD, numHD);
 	}
 	function parseHp(hp) {
 		var match = hp.match(/(\d+).*((\d+d\d+)[\d\s+|\-]*)/i);
-
-		if(match[1]) {
-			setAttribute('HP', match[1], match[1]);
-		} else {
-			log('error parsing hp');
+		if(!match[1] || !match[2]) {
+			throw 'Character doesn\'t have valid HP/HD format';
 		}
-		if(match[2]) {
-			setAttribute('npc_HP_hit_dice', match[2]);
 
-			parseHD(match[2]);
-		} else {
-			log('error parsing hd');
-		}
+		setAttribute('HP', match[1], match[1]);
+		setAttribute('npc_HP_hit_dice', match[2]);
+		parseHD(match[2]);
 	}
 
 	function parseSpeed(speed) {
 		var baseAttr = 'speed',
-				regex = /(|burrow|climb|fly|swim|)\s*(\d+)\s*?(?:ft)?\s*(\(.*\))?/gi;
+				regex = /(|burrow|climb|fly|swim|)\s*(\d+)\s*?(?:ft)?\s*(\(.*\))?/gi,
+				match = regex.exec(speed);
+		if(!match[1] || !match[2]) {
+			throw 'Character doesn\'t have valid speed format';
+		}
+		var attrName = baseAttr + (match[1] !== '' ? '_' + match[1].toLowerCase() : ''),
+				value = match[2];
 
-		while(match = regex.exec(speed)) {
-			var attrName = baseAttr + (match[1] !== '' ? '_' + match[1].toLowerCase() : ''),
-					value = match[2];
-
-			if(match[3]) {
-				if(match[3].indexOf('hover')) {
-					setAttribute('speed_fly_hover', 'on');
-				}
+		setAttribute(attrName, value);
+		if(match[3]) {
+			if(match[3].indexOf('hover')) {
+				setAttribute('speed_fly_hover', 'on');
 			}
-			setAttribute(attrName, value);
 		}
 	}
 
 	function parseSenses(senses) {
 		senses = senses.replace(/[,\s]*passive.*/i,'');
-		var regex = /(|blindsight|darkvision|tremorsense|truesight|)\s*?(\d+)\s*?ft?\s*(\(.*\))?/gi;
+		var regex = /(|blindsight|darkvision|tremorsense|truesight|)\s*?(\d+)\s*?ft?\s*(\(.*\))?/gi,
+				match = regex.exec(senses);
+		if(!match[1] || !match[2]) {
+			throw 'Character doesn\'t have valid senses format';
+		}
 
-		while(match = regex.exec(senses)) {
-			var attrName = match[1].toLowerCase(),
-					value = match[2];
+		var attrName = match[1].toLowerCase(),
+				value = match[2];
 
-			if(match[3]) {
-				if(match[3].indexOf('blind beyond')) {
-					setAttribute('blindsight_blind_beyond', 'on');
-				}
+		setAttribute(attrName, value);
+		if(match[3]) {
+			if(match[3].indexOf('blind beyond')) {
+				setAttribute('blindsight_blind_beyond', 'on');
 			}
-			setAttribute(attrName, value);
 		}
 	}
 
