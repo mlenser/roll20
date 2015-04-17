@@ -661,30 +661,29 @@
 
 	function parseSpeed(speed) {
 		var baseAttr = 'speed',
-				regex = /(burrow|climb|fly|swim)\s*(\d+)\s*?(?:ft)?\s*(\(.*\))?/gi,
-				match = regex.exec(speed);
+				regex = /(|burrow|climb|fly|swim|)\s*(\d+)\s*?(?:ft)?\s*(\(.*\))?/gi;
 
-		while (match !== null) {
+		while(match = regex.exec(speed)) {
 			if(!match[2]) {
 				throw 'Character doesn\'t have valid speed format';
 			}
 			var attrName = baseAttr + (match[1] !== '' ? '_' + match[1].toLowerCase() : ''),
 					value = match[2];
 
-			setAttribute(attrName, value);
 			if(match[3]) {
 				if(match[3].indexOf('hover')) {
 					setAttribute('speed_fly_hover', 'on');
 				}
 			}
+			setAttribute(attrName, value);
 		}
 	}
 
 	function parseSenses(senses) {
 		senses = senses.replace(/[,\s]*passive.*/i,'');
-		var regex = /(|blindsight|darkvision|tremorsense|truesight|)\s*?(\d+)\s*?ft?\s*(\(.*\))?/gi,
-				match = regex.exec(senses);
-		while (match !== null) {
+		var regex = /(|blindsight|darkvision|tremorsense|truesight|)\s*?(\d+)\s*?ft?\s*(\(.*\))?/gi;
+
+		while(match = regex.exec(senses)) {
 			if (!match[1] || !match[2]) {
 				throw 'Character doesn\'t have valid senses format';
 			}
@@ -692,12 +691,12 @@
 			var attrName = match[1].toLowerCase(),
 					value = match[2];
 
-			setAttribute(attrName, value);
 			if (match[3]) {
 				if (match[3].indexOf('blind beyond')) {
 					setAttribute('blindsight_blind_beyond', 'on');
 				}
 			}
+			setAttribute(attrName, value);
 		}
 	}
 
