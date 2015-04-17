@@ -661,18 +661,21 @@
 
 	function parseSpeed(speed) {
 		var baseAttr = 'speed',
-				regex = /(|burrow|climb|fly|swim|)\s*(\d+)\s*?(?:ft)?\s*(\(.*\))?/gi,
+				regex = /(burrow|climb|fly|swim)\s*(\d+)\s*?(?:ft)?\s*(\(.*\))?/gi,
 				match = regex.exec(speed);
-		if(!match[1] || !match[2]) {
-			throw 'Character doesn\'t have valid speed format';
-		}
-		var attrName = baseAttr + (match[1] !== '' ? '_' + match[1].toLowerCase() : ''),
-				value = match[2];
 
-		setAttribute(attrName, value);
-		if(match[3]) {
-			if(match[3].indexOf('hover')) {
-				setAttribute('speed_fly_hover', 'on');
+		while (match !== null) {
+			if(!match[2]) {
+				throw 'Character doesn\'t have valid speed format';
+			}
+			var attrName = baseAttr + (match[1] !== '' ? '_' + match[1].toLowerCase() : ''),
+					value = match[2];
+
+			setAttribute(attrName, value);
+			if(match[3]) {
+				if(match[3].indexOf('hover')) {
+					setAttribute('speed_fly_hover', 'on');
+				}
 			}
 		}
 	}
@@ -681,17 +684,19 @@
 		senses = senses.replace(/[,\s]*passive.*/i,'');
 		var regex = /(|blindsight|darkvision|tremorsense|truesight|)\s*?(\d+)\s*?ft?\s*(\(.*\))?/gi,
 				match = regex.exec(senses);
-		if(!match[1] || !match[2]) {
-			throw 'Character doesn\'t have valid senses format';
-		}
+		while (match !== null) {
+			if (!match[1] || !match[2]) {
+				throw 'Character doesn\'t have valid senses format';
+			}
 
-		var attrName = match[1].toLowerCase(),
-				value = match[2];
+			var attrName = match[1].toLowerCase(),
+					value = match[2];
 
-		setAttribute(attrName, value);
-		if(match[3]) {
-			if(match[3].indexOf('blind beyond')) {
-				setAttribute('blindsight_blind_beyond', 'on');
+			setAttribute(attrName, value);
+			if (match[3]) {
+				if (match[3].indexOf('blind beyond')) {
+					setAttribute('blindsight_blind_beyond', 'on');
+				}
 			}
 		}
 	}
@@ -1416,17 +1421,36 @@
 			parseHD(npc_hd);
 		}
 
-		var speedConvertToOrig = [];
+		var speedConvertToOrig = [],
 				speed = getAttrByName(characterId, 'npc_speed'),
 				speed_fly = getAttrByName(characterId, 'npc_speed_fly'),
 				speed_climb = getAttrByName(characterId, 'npc_speed_climb'),
 				speed_swim = getAttrByName(characterId, 'npc_speed_swim');
 
-		if(speed) speedConvertToOrig.push(speed);
-		if(speed_fly) speedConvertToOrig.push('fly ' + speed_fly);
-		if(speed_climb) speedConvertToOrig.push('climb' + speed_climb);
-		if(speed_swim) speedConvertToOrig.push('swim' + speed_swim);
-
+		if(speed) {
+			if(speed.indexOf('ft') !== 1) {
+				speed += ' ft';
+			}
+			speedConvertToOrig.push(speed );
+		}
+		if(speed_fly) {
+			if(speed_fly.indexOf('ft') !== 1) {
+				speed_fly += ' ft';
+			}
+			speedConvertToOrig.push('fly ' + speed_fly);
+		}
+		if(speed_climb) {
+			if(speed_climb.indexOf('ft') !== 1) {
+				speed_climb += ' ft';
+			}
+			speedConvertToOrig.push('climb' + speed_climb);
+		}
+		if(speed_swim) {
+			if(speed_swim.indexOf('ft') !== 1) {
+				speed_swim += ' ft';
+			}
+			speedConvertToOrig.push('swim' + speed_swim);
+		}
 		parseSpeed(speedConvertToOrig.join(', '));
 
 		convertAttrFromNPCtoPC('npc_xp', 'xp');
