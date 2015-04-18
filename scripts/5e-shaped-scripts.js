@@ -409,7 +409,7 @@
 			text = text.toString();
 		}
 
-		text = text.replace(/\,\./gi, ',').replace(/ft\s\./gi, 'ft.').replace(/ft\.\s\,/gi, 'ft').replace(/ft\./gi, 'ft').replace(/(\d+) ft\/(\d+) ft/gi, '$1/$2 ft').replace(/ld(\d+)/gi, '1d$1').replace(/ld\s+(\d+)/gi, '1d$1').replace(/(\d+)d\s+(\d+)/gi, '$1d$2').replace(/(\d+)\s+d(\d+)/gi, '$1d$2').replace(/(\d+)\s+d(\d+)/gi, '$1d$2').replace(/(\d+)d(\d)\s(\d)/gi, '$1d$2$3').replace(/(\d+)f(?:Day|day)/gi, '$1/Day').replace(/(\d+)f(\d+)/gi, '$1/$2').replace(/{/gi, '(').replace(/}/gi, ')').replace(/(\d+)\((\d+)/gi, '$1/$2');
+		text = text.replace(/\,\./gi, ',').replace(/ft\s\./gi, 'ft.').replace(/ft\.\s\,/gi, 'ft').replace(/ft\./gi, 'ft').replace(/(\d+) ft\/(\d+) ft/gi, '$1/$2 ft').replace(/ld(\d+)/gi, '1d$1').replace(/ld\s+(\d+)/gi, '1d$1').replace(/(\d+)d\s+(\d+)/gi, '$1d$2').replace(/(\d+)\s+d(\d+)/gi, '$1d$2').replace(/(\d+)\s+d(\d+)/gi, '$1d$2').replace(/(\d+)d(\d)\s(\d)/gi, '$1d$2$3').replace(/(\d+)f(?:Day|day)/gi, '$1/Day').replace(/(\d+)f(\d+)/gi, '$1/$2').replace(/{/gi, '(').replace(/}/gi, ')').replace(/(\d+)\((\d+)/gi, '$1/$2').replace(/• /gi, '');
 		text = text.replace(/(\d+)\s*?plus\s*?((?:\d+d\d+)|(?:\d+))/gi, '$2 + $1');
 		var replaceObj = {
 			'abol eth':'aboleth',
@@ -778,7 +778,7 @@
 			}
 			setAttribute(attr + '_save_prof', '@{PB}');
 
-			var proficiencyBonus = (2 + Math.floor(Math.abs((getAttrByName(characterId, 'challenge')-1)/4))),
+			var proficiencyBonus = (2 + Math.floor(Math.abs((eval(getAttrByName(characterId, 'challenge'))-1)/4))),
 					totalSaveBonus = match[2] - proficiencyBonus - Math.floor((getAttrByName(characterId, attr) - 10) / 2);
 
 			if(totalSaveBonus !== 0) {
@@ -818,7 +818,7 @@
 						attr = skill.replace(/\s/g, '');
 
 
-				var proficiencyBonus = (2 + Math.floor(Math.abs((getAttrByName(characterId, 'challenge')-1)/4))),
+				var proficiencyBonus = (2 + Math.floor(Math.abs((eval(getAttrByName(characterId, 'challenge'))-1)/4))),
 						totalSkillBonus = match[2] - Math.floor((getAttrByName(characterId, abilitymod) - 10) / 2);
 
 				var expertise = proficiencyBonus * 2;
@@ -892,7 +892,7 @@
 				}
 			}
 			function parseCritDamage(damage) {
-				return damage.replace(/\s\+\s\d+/g, '');
+				return damage.replace(/\s?[\+\-]\s?\d+/g, '');
 			}
 
 			function setName(name) {
@@ -964,7 +964,7 @@
 					altDamageRegex = new RegExp(altDamageSyntax.source + damageSyntax.source + damageType.source + commaPeriodSpace.source + altDamageReasonSyntax.source + commaPeriodOneSpace.source + altDamageExtraSyntax.source, 'i');
 
 			function parseDamage(damage, altSecondary) {
-				log('parseDamage: ' + damage);
+				//log('parseDamage: ' + damage);
 				if(damage) {
 					//1 is damage without dice. Example "1"
 					//2 is damage with dice. Example "2d6+4"
@@ -1238,6 +1238,10 @@
 				setAttribute('legendary_action_notes', legendaryActionsNotes.join('\n'));
 			}
 		}
+		if(shaped.addInitiativeTokenAbility) {
+			setAbility('Init', '', '%{selected|Initiative}', shaped.createAbilityAsToken);
+		}
+
 		if(actions.Multiattack) {
 			multiAttackText = actions.Multiattack;
 			setAttribute('npc_multiattack', multiAttackText);
@@ -1246,9 +1250,6 @@
 			if(!shaped.usePowerAbility) {
 				setAbility('MultiAttack', '', '', shaped.createAbilityAsToken);
 			}
-		}
-		if(shaped.addInitiativeTokenAbility) {
-			setAbility('Init', '', '%{selected|Initiative}', shaped.createAbilityAsToken);
 		}
 
 		processActions(actions);
@@ -1554,7 +1555,6 @@
 			setBarValueAfterConvert(token, bar, objOfBar);
 		}
 	}
-
 
 	shaped.setBars = function(token) {
 		getAndSetBarInfo(token, 'bar1');
