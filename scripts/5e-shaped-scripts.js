@@ -138,7 +138,9 @@
 				token.set(bar + '_value', total);
 				token.set(bar + '_max', total);
 				var message = '/w GM Hp rolled: ' + total;
+				log('original: ' + original);
 				if(original > 0) {
+					log('if');
 					message += ' adjusted from original result of ' + original;
 				}
 				sendChat('GM', message);
@@ -154,7 +156,7 @@
 			throw 'Character has no HP Hit Dice defined';
 		}
 
-		var match = hd.match(/^(\d+)d(\d+)$/);
+		var match = hd.match(/^(\d+)d(\d+)/);
 		if(!match || !match[1] || !match[2]) {
 			throw 'Character doesn\'t have valid Hit Dice format';
 		}
@@ -164,7 +166,7 @@
 				total = 0,
 				original = 0;
 
-		sendChat('GM', '[[' + hd + ']]', function(ops) {
+		sendChat('GM', '/roll ' + nb_dice + 'd' + nb_face, function(ops) {
 			var rollResult = JSON.parse(ops[0].content);
 			if(_.has(rollResult, 'total')) {
 				total = rollResult.total;
@@ -400,7 +402,7 @@
 	};
 
 	function clean(statblock) {
-		return unescape(statblock).replace(/–/g, '-').replace(/<br[^>]*>/g, '#').replace(/\s+#\s+/g, '#').replace(/(<([^>]+)>)/gi, '').replace(/#(?=[a-z]|DC)/g, ' ').replace(/\s+/g, ' ');
+		return unescape(statblock).replace(/–/g, '-').replace(/<br[^>]*>/g, '#').replace(/\s+#\s+/g, '#').replace(/(<([^>]+)>)/gi, '').replace(/#(?=[a-z]|DC)/g, ' ').replace(/\s+/g, ' ').replace('LanguagesChallenge', 'Languages -#Challenge').replace("' Speed", 'Speed');
 	}
 
 
@@ -413,6 +415,7 @@
 		text = text.replace(/(\d+)\s*?plus\s*?((?:\d+d\d+)|(?:\d+))/gi, '$2 + $1');
 		var replaceObj = {
 			'abol eth':'aboleth',
+			'ACT IONS':'ACTIONS',
 			'Afrightened':'A frightened',
 			'Aundefinedr':'After',
 			'blind sight':'blindsight',
@@ -427,6 +430,7 @@
 			'ex istence':'existence',
 			'magica lly':'magically',
 			'minlilte':'minute',
+			'natura l':'natural',
 			'ofeach':'of each',
 			'ofthe':'of the',
 			"on'e":'one',
