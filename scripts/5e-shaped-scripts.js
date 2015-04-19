@@ -979,18 +979,22 @@
 
 			var commaPeriodSpace = /\,?\.?\s*?/,
 					commaPeriodOneSpace = /\,?\.?\s?/,
-					hitOrEach = /(?:Hit:| Each| taking).*?/,
+					hit = /Hit:.*?/,
+					each = /(?: Each).*?/,
 					damageType = /((?:[\w]+|[\w]+\s(?:or|and)\s[\w]+)(?:\s*?\([\w\s]+\))?)\s*?damage\s?(\([\w\'\s]+\))?/,
 					damageSyntax = /(?:(\d+)|.*?\(([\dd\s\+\-]*)\).*?)\s*?/,
 					altDamageSyntax = /(?:\,\s*?or\s*?)/,
 					altDamageReasonSyntax = /((?:if|in)[\w\s]+)/,
 					altDamageExtraSyntax = /(The.*|If the.*)?/,
 					plus = /\s*?plus\s*?/,
+					savingThrow = /(?:DC)\s*?(\d+)\s*?([a-zA-Z]*)\s*?(?:saving throw)/,
+					takeOrTaking = /\,?\s*?(?:taking|or take)/,
 					andAnythingElse = /(\s?and.*)?/,
 					anythingElse = /(.*)?/,
-					damageRegex = new RegExp(hitOrEach.source + damageSyntax.source + damageType.source + commaPeriodSpace.source + andAnythingElse.source, 'i'),
+					damageRegex = new RegExp(hit.source + damageSyntax.source + damageType.source + commaPeriodSpace.source + andAnythingElse.source, 'i'),
 					damagePlusRegex = new RegExp(plus.source + damageSyntax.source + damageType.source + commaPeriodSpace.source + anythingElse.source, 'i'),
-					altDamageRegex = new RegExp(altDamageSyntax.source + damageSyntax.source + damageType.source + commaPeriodSpace.source + altDamageReasonSyntax.source + commaPeriodOneSpace.source + altDamageExtraSyntax.source, 'i');
+					altDamageRegex = new RegExp(altDamageSyntax.source + damageSyntax.source + damageType.source + commaPeriodSpace.source + altDamageReasonSyntax.source + commaPeriodOneSpace.source + altDamageExtraSyntax.source, 'i'),
+					saveDamageRegex = new RegExp(each.source + savingThrow.source + takeOrTaking.source + damageSyntax.source + damageType.source + commaPeriodSpace.source + anythingElse.source, 'i');
 
 			function parseDamage(damage, altSecondary) {
 				//log('parseDamage: ' + damage);
@@ -1051,7 +1055,6 @@
 
 				var splitAction = value.split(/\.(.+)?/),
 						attackInfo = splitAction[0],
-						damageInfo = splitAction[1],
 						splitAttack = attackInfo.split(',');
 
 				var typeRegex = /(melee|ranged|melee or ranged)\s*(spell|weapon)\s*/gi;
@@ -1115,51 +1118,10 @@
 					parseDamage(altDamage, 'alt_');
 				}
 
-				/*
-				var damageRegex = /(?:Hit:| Each).*?(?:(\d+)|(?:\d+).*?((\d+d\d+)[\d\s+|\-]*).*?)\s*?([a-zA-Z]*)\s*?damage(?:\,\sor\s*?(?:(\d+)|(?:\d+)\s*?\(?((\d+d\d+)[\d\s+|\-]*)\)?)\s*?([a-zA-Z]*)\s*damage if\s*(.*?)\.)?(?:\.|\s*?plus|.*\,\s*taking)?(?:\s*?(?:(\d+)|(?:\d+)\s*?\(?((\d+d\d+)[\d\s+|\-]*)\)?)\s*?([a-zA-Z]*)\s*damage)?(?:\,?\s*and\s(the target is\s.*|be.*))?(?:\.?\s*(If.*?grappled.*))?/gi;
-				while(damage = damageRegex.exec(value)) {
-					if(damage[1]) {
-						damage[2] = damage[1];
-						damage[3] = damage[1];
-					}
-					setDamage(damage[2], '');
-					setCritDamage(damage[3], '');
-					setDamageType(damage[4], '');
-					toggleDamage(damage[2], '');
-
-					//alternate damage
-					if(damage[5]) {
-						damage[6] = damage[5];
-						damage[7] = damage[5];
-					}
-					setDamage(damage[6], 'alt_');
-					setCritDamage(damage[7], 'alt_');
-					setAltDamageReason(damage[9]);
-					toggleDamage(damage[6] || damage[7] || damage[9], 'alt_');
-
-					//secondary damage
-					if(damage[10]) {
-						damage[11] = damage[10];
-						damage[12] = damage[10];
-					}
-					setDamage(damage[11], 'second_');
-					setCritDamage(damage[12], 'second_');
-					setDamageType(damage[13], 'second_');
-					toggleDamage(damage[11] || damage[12], 'second_');
-
-					//effect
-					var effect = damage[14] || damage[15];
-					if(effect) {
-						setEffect(effect);
-					}
-					parsedDamage = true;
+				var damage = damageRegex.exec(value);
+				if(saveDmg) {
+					parseDamage(damage, '');
 				}
-				if(!parsedDamage) {
-					if(damageInfo) {
-						setEffect(damageInfo);
-					}
-				}
-				*/
 
 				var saveDmgRegex = /(?:DC)\s*?(\d+)\s*?([a-zA-Z]*)\s*?(?:saving throw).*or\s(.*)?\s(?:on a successful one.)\s?(.*)/gi;
 				while(saveDmg = saveDmgRegex.exec(value)) {
