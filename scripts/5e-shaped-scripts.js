@@ -994,7 +994,8 @@
 					damageRegex = new RegExp(hit.source + damageSyntax.source + damageType.source + commaPeriodSpace.source + andAnythingElse.source, 'i'),
 					damagePlusRegex = new RegExp(plus.source + damageSyntax.source + damageType.source + commaPeriodSpace.source + anythingElse.source, 'i'),
 					altDamageRegex = new RegExp(altDamageSyntax.source + damageSyntax.source + damageType.source + commaPeriodSpace.source + altDamageReasonSyntax.source + commaPeriodOneSpace.source + altDamageExtraSyntax.source, 'i'),
-					saveDamageRegex = new RegExp(each.source + savingThrow.source + takeOrTaking.source + damageSyntax.source + damageType.source + commaPeriodSpace.source + anythingElse.source, 'i');
+					saveDamageRegex = new RegExp(savingThrow.source + takeOrTaking.source + damageSyntax.source + damageType.source + commaPeriodSpace.source + anythingElse.source, 'i'),
+					saveDamagePlusRegex = new RegExp(savingThrow.source + takeOrTaking.source + damageSyntax.source + damageType.source + plus.source + damageSyntax.source + damageType.source + commaPeriodSpace.source + anythingElse.source, 'i');
 
 			function parseDamage(damage, altSecondary) {
 				//log('parseDamage: ' + damage);
