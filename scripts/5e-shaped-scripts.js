@@ -420,6 +420,7 @@
 			'choos in g':'choosing',
 			'com muni cate':'communicate',
 			'Constituti on':'Constitution',
+			'darkvi sion':'darkvision',
 			'dea ls':'deals',
 			'di sease':'disease',
 			'di stance':'distance',
@@ -427,7 +428,6 @@
 			'exha les':'exhales',
 			'ex istence':'existence',
 			'lfthe':'If the',
-			'lf':'If',
 			'Ifthe':'If the',
 			'magica lly':'magically',
 			'minlilte':'minute',
@@ -435,6 +435,8 @@
 			'ofeach':'of each',
 			'ofthe':'of the',
 			"on'e":'one',
+			'pass ive':'passive',
+			'Perce ption':'Perception',
 			'radi us':'radius',
 			'ra nge':'range',
 			'rega ins':'regains',
@@ -512,6 +514,19 @@
 			}
 		}
 
+		var splitStatblock = statblock.split('#'),
+				lastItem = '',
+				i = 1;
+
+		while(lastItem === '') {
+			lastItem = splitStatblock[splitStatblock.length - i];
+			i++;
+		}
+
+		var lastItemIsAnAction = regex.exec(lastItem);
+		if(!lastItemIsAnAction) {
+			keyword.traits['Description'] = statblock.indexOf(lastItem) - 1; //-1 to include the #
+		}
 		return keyword;
 	}
 
@@ -525,21 +540,33 @@
 			statblock = statblock.slice(0, pos);
 		}
 
-		var start = 0;
-		var keyName = 'name';
-		var sectionName = 'attr';
+		var indexArray = [];
+
+		for(var section in keyword) {
+			var obj = keyword[section];
+			for(var key in keyword[section]) {
+				indexArray.push(obj[key]);
+			}
+		}
+
+		function sortNumber(a,b) {
+			return a - b;
+		}
+
+		indexArray.sort(sortNumber);
+
+		keyword['attr']['name'] = extractSection(statblock.substring(0, indexArray[0]), 'name');
 
 		for(var section in keyword) {
 			var obj = keyword[section];
 			for(var key in obj) {
-				var end = parseInt(obj[key], 10);
-				keyword[sectionName][keyName] = extractSection(statblock, start, end, keyName);
-				keyName = key;
-				start = end;
-				sectionName = section;
+				var start = obj[key],
+						nextPos = indexArray.indexOf(start) + 1,
+						end = indexArray[nextPos] || statblock.length;
+
+				keyword[section][key] = extractSection(statblock.substring(start, end), key);
 			}
 		}
-		keyword[sectionName][keyName] = extractSection(statblock, start, statblock.length, keyName);
 
 		delete keyword.actions.Actions;
 		delete keyword.legendary.Legendary;
@@ -572,12 +599,9 @@
 		return keyword;
 	}
 
-	function extractSection(text, start, end, title) {
-		var section = text.substring(start, end);
+	function extractSection(text, title) {
 		// Remove action name from action description and clean.
-		section = section.replace(new RegExp('^[\\s\\.#]*' + title.replace(/([-()\\/])/g, '\\$1') + '?[\\s\\.#]*', 'i'), '');
-		section = section.replace(/#/g, ' ');
-		return section;
+		return text.replace(new RegExp('^[\\s\\.#]*' + title.replace(/([-()\\/])/g, '\\$1') + '?[\\s\\.#]*', 'i'), '').replace(/#/g, ' ');
 	}
 
 	function processSection(section) {
