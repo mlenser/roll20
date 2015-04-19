@@ -270,7 +270,7 @@
 			if(obj.hasOwnProperty(k)) {
 				logObject(obj[k]);
 			} else {
-				log('SEARCH OBJ: ' + k + '->' + obj[k]);
+				log('logObj: ' + k + '->' + obj[k]);
 			}
 		}
 	}
@@ -284,8 +284,6 @@
 			if(statblock === '') {
 				throw('Selected token GM Notes was empty.');
 			}
-
-			log('statblock1: ' + statblock);
 
 			var name = shaped.parseStatblock(statblock);
 			if(characterId) {
@@ -411,7 +409,7 @@
 			text = text.toString();
 		}
 
-		text = text.replace(/\,\./gi, ',').replace(/ft\s\./gi, 'ft.').replace(/ft\.\s\,/gi, 'ft').replace(/ft\./gi, 'ft').replace(/(\d+) ft\/(\d+) ft/gi, '$1/$2 ft').replace(/ld(\d+)/gi, '1d$1').replace(/ld\s+(\d+)/gi, '1d$1').replace(/(\d+)d\s+(\d+)/gi, '$1d$2').replace(/(\d+)\s+d(\d+)/gi, '$1d$2').replace(/(\d+)\s+d(\d+)/gi, '$1d$2').replace(/(\d+)d(\d)\s(\d)/gi, '$1d$2$3').replace(/(\d+)f(?:Day|day)/gi, '$1/Day').replace(/(\d+)f(\d+)/gi, '$1/$2').replace(/{/gi, '(').replace(/}/gi, ')').replace(/(\d+)\((\d+)/gi, '$1/$2').replace(/• /gi, '');
+		text = text.replace(/\,\./gi, ',').replace(/ft\s\./gi, 'ft.').replace(/ft\.\s\,/gi, 'ft').replace(/ft\./gi, 'ft').replace(/(\d+) ft\/(\d+) ft/gi, '$1/$2 ft').replace(/ld(\d+)/gi, '1d$1').replace(/ld\s+(\d+)/gi, '1d$1').replace('ldlO', '1d10').replace(/(\d+)d\s+(\d+)/gi, '$1d$2').replace(/(\d+)\s+d(\d+)/gi, '$1d$2').replace(/(\d+)\s+d(\d+)/gi, '$1d$2').replace(/(\d+)d(\d)\s(\d)/gi, '$1d$2$3').replace(/(\d+)f(?:Day|day)/gi, '$1/Day').replace(/(\d+)f(\d+)/gi, '$1/$2').replace(/{/gi, '(').replace(/}/gi, ')').replace(/(\d+)\((\d+)/gi, '$1/$2').replace(/• /gi, '');
 		text = text.replace(/(\d+)\s*?plus\s*?((?:\d+d\d+)|(?:\d+))/gi, '$2 + $1');
 		var replaceObj = {
 			'abol eth':'aboleth',
@@ -428,6 +426,9 @@
 			'fe et':'feet',
 			'exha les':'exhales',
 			'ex istence':'existence',
+			'lfthe':'If the',
+			'lf':'If',
+			'Ifthe':'If the',
 			'magica lly':'magically',
 			'minlilte':'minute',
 			'natura l':'natural',
@@ -524,21 +525,21 @@
 			statblock = statblock.slice(0, pos);
 		}
 
-		var debut = 0;
+		var start = 0;
 		var keyName = 'name';
 		var sectionName = 'attr';
 
 		for(var section in keyword) {
 			var obj = keyword[section];
 			for(var key in obj) {
-				var fin = parseInt(obj[key], 10);
-				keyword[sectionName][keyName] = extractSection(statblock, debut, fin, keyName);
+				var end = parseInt(obj[key], 10);
+				keyword[sectionName][keyName] = extractSection(statblock, start, end, keyName);
 				keyName = key;
-				debut = fin;
+				start = end;
 				sectionName = section;
 			}
 		}
-		keyword[sectionName][keyName] = extractSection(statblock, debut, statblock.length, keyName);
+		keyword[sectionName][keyName] = extractSection(statblock, start, statblock.length, keyName);
 
 		delete keyword.actions.Actions;
 		delete keyword.legendary.Legendary;
@@ -571,8 +572,8 @@
 		return keyword;
 	}
 
-	function extractSection(text, debut, fin, title) {
-		var section = text.substring(debut, fin);
+	function extractSection(text, start, end, title) {
+		var section = text.substring(start, end);
 		// Remove action name from action description and clean.
 		section = section.replace(new RegExp('^[\\s\\.#]*' + title.replace(/([-()\\/])/g, '\\$1') + '?[\\s\\.#]*', 'i'), '');
 		section = section.replace(/#/g, ' ');
@@ -929,7 +930,7 @@
 			}
 			function setEffect(effect) {
 				if(effect) {
-					setNPCActionAttribute('effect_', effect.replace(/(\s*?Hit:\s?)/gi, '').replace(/(\d+)/g, '[[$1]]'));
+					setNPCActionAttribute('effect_', effect.replace(/(\s*?Hit:\s?)/gi, '').replace(/(\d+)d(\d+)/g, '[[$1d$2]]').replace(/\s(\d+)\s/g, '[[$1]]'));
 				}
 				setNPCActionToggle('effects_', effect);
 			}
@@ -1156,7 +1157,7 @@
 					}
 					parsedSave = true;
 				}
-				var saveOrRegex = /(?:DC)\s*?(\d+)\s*?([a-zA-Z]*)\s*?(?:saving throw)\,?\s*?or\s(?:take.*)?(be.*|it can't.*)/gi;
+				var saveOrRegex = /(?:DC)\s*?(\d+)\s*?([a-zA-Z]*)\s*?(?:saving throw)(?: against disease)?\,?\s*?or\s(?:take.*)?(be.*|it can't.*)/gi;
 				while(saveOr = saveOrRegex.exec(value)) {
 					if(saveOr[1]) {
 						setSaveDC(saveOr[1]);
