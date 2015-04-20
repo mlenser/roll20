@@ -4,6 +4,12 @@ Scripts and other assorted things for roll20
 
 ### Changelog
 
+**20th April 2015 (1.75)**
+
+* More Sanitize
+* Completely revamped the save regexes. All versions of the save syntax that I know of should be working
+* Processed the description of monsters that comes after actions. It's been added to "traits"
+
 **16th April 2015 (1.7)**
 
 * Vision is now set on the token.

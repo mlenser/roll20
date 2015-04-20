@@ -6,7 +6,6 @@
 	shaped.rollMonsterHpOnDrop = true; // will roll HP when character are dropped on map
 
 	/* Setting these to a sheet value will set the token bar value. If they are set to '' or not set then it will use whatever you already have set on the token
-	 For a full list of attributes please look at https://app.roll20.net/forum/post/1734923/new-d-and-d-5e-shaped-character-sheet#post-1788863
 	 Do not use npc_HP, use HP instead
 	 */
 	// Green bar
@@ -37,7 +36,7 @@
 
 
 	shaped.statblock = {
-		version: '1.66',
+		version: '1.75',
 		RegisterHandlers: function () {
 			on('chat:message', HandleInput);
 
@@ -275,6 +274,10 @@
 		}
 	}
 
+	function sortNumber(a,b) {
+		return a - b;
+	}
+
 	shaped.ImportStatblock = function(token) {
 		status = 'Nothing modified';
 		errors = [];
@@ -391,6 +394,7 @@
 	shaped.parseStatblock = function(statblock) {
 		log('---- Parsing statblock ----');
 
+		log('unparsed statblock: ' + statblock);
 		var text = sanitizeText(clean(statblock)),
 				keyword = findKeyword(text),
 				section = splitStatblock(text, keyword);
@@ -400,7 +404,7 @@
 	};
 
 	function clean(statblock) {
-		return unescape(statblock).replace(/–/g, '-').replace(/<br[^>]*>/g, '#').replace(/\s+#\s+/g, '#').replace(/(<([^>]+)>)/gi, '').replace(/#(?=[a-z]|DC)/g, ' ').replace(/\s+/g, ' ').replace('LanguagesChallenge', 'Languages -#Challenge').replace("' Speed", 'Speed');
+		return unescape(statblock).replace(/–/g, '-').replace(/<br[^>]*>/g, '#').replace(/\s+#\s+/g, '#').replace(/(<([^>]+)>)/gi, '').replace(/#(?=[a-z]|DC)/g, ' ').replace(/\s+/g, ' ').replace(/DC#(\d+)/g, 'DC $1').replace('LanguagesChallenge', 'Languages -#Challenge').replace("' Speed", 'Speed');
 	}
 
 
@@ -415,15 +419,20 @@
 			'abol eth':'aboleth',
 			'ACT IONS':'ACTIONS',
 			'Afrightened':'A frightened',
+			'Alesser':'A lesser',
 			'Aundefinedr':'After',
+			'blindn ess':'blindness',
 			'blind sight':'blindsight',
+			'bofh':'both',
 			'choos in g':'choosing',
 			'com muni cate':'communicate',
 			'Constituti on':'Constitution',
+			'creatu re':'creature',
 			'darkvi sion':'darkvision',
 			'dea ls':'deals',
 			'di sease':'disease',
 			'di stance':'distance',
+			'fa lls':'falls',
 			'fe et':'feet',
 			'exha les':'exhales',
 			'ex istence':'existence',
@@ -435,11 +444,13 @@
 			'ofeach':'of each',
 			'ofthe':'of the',
 			"on'e":'one',
+			'0n':'on',
 			'pass ive':'passive',
 			'Perce ption':'Perception',
 			'radi us':'radius',
 			'ra nge':'range',
 			'rega ins':'regains',
+			'rest.oration':'restoration',
 			'savin g':'saving',
 			'si lvery':'silvery',
 			's lashing':'slashing',
@@ -516,17 +527,26 @@
 
 		var splitStatblock = statblock.split('#'),
 				lastItem = '',
+				actionsPosArray = [],
 				i = 1;
 
-		while(lastItem === '') {
+		for(var key in keyword.actions) {
+			actionsPosArray.push(keyword.actions[key]);
+		}
+		actionsPosArray.sort(sortNumber);
+
+		var lastActionIndex = actionsPosArray[actionsPosArray.length - 1] + 1,
+				lastItemIndex;
+
+		while(i < 6) {
 			lastItem = splitStatblock[splitStatblock.length - i];
+			lastItemIndex = statblock.indexOf(lastItem);
+			if(lastItemIndex > lastActionIndex) {
+				keyword.traits['Description'] = lastItemIndex - 1; //-1 to include the #
+			}
 			i++;
 		}
 
-		var lastItemIsAnAction = regex.exec(lastItem);
-		if(!lastItemIsAnAction) {
-			keyword.traits['Description'] = statblock.indexOf(lastItem) - 1; //-1 to include the #
-		}
 		return keyword;
 	}
 
@@ -547,10 +567,6 @@
 			for(var key in keyword[section]) {
 				indexArray.push(obj[key]);
 			}
-		}
-
-		function sortNumber(a,b) {
-			return a - b;
 		}
 
 		indexArray.sort(sortNumber);
@@ -954,7 +970,7 @@
 			}
 			function setEffect(effect) {
 				if(effect) {
-					setNPCActionAttribute('effect_', effect.replace(/(\s*?Hit:\s?)/gi, '').replace(/(\d+)d(\d+)/g, '[[$1d$2]]').replace(/\s(\d+)\s/g, '[[$1]]'));
+					setNPCActionAttribute('effect_', effect.replace(/(\s*?Hit:\s?)/gi, '').replace(/(\d+)d(\d+)/g, '[[$1d$2]]').replace(/\s(\d+)\s/g, ' [[$1]] '));
 				}
 				setNPCActionToggle('effects_', effect);
 			}
@@ -970,6 +986,15 @@
 			function toggleSave(toggle) {
 				setNPCActionToggle('save_', toggle);
 			}
+			function toggleSaveDamage(toggle) {
+				setNPCActionToggle('save_damage_', toggle);
+			}
+			function setSaveDamage(saveDamage) {
+				setNPCActionAttribute('save_dmg_', saveDamage);
+			}
+			function setSaveDamageType(saveDamageType) {
+				setNPCActionAttribute('save_dmg_type_', saveDamageType);
+			}
 			function setSaveSuccess(saveSuccess) {
 				setNPCActionAttribute('save_success_', saveSuccess);
 			}
@@ -978,6 +1003,7 @@
 			}
 
 			var commaPeriodSpace = /\,?\.?\s*?/,
+					commaPeriodDefinitiveSpace = /\,?\.?\s*/,
 					commaPeriodOneSpace = /\,?\.?\s?/,
 					hit = /Hit:.*?/,
 					each = /(?: Each).*?/,
@@ -989,13 +1015,19 @@
 					plus = /\s*?plus\s*?/,
 					savingThrow = /(?:DC)\s*?(\d+)\s*?([a-zA-Z]*)\s*?(?:saving throw)/,
 					takeOrTaking = /\,?\s*?(?:taking|or take)/,
+					againstDisease = /(?: against disease)?/,
+					saveSuccess = /(?:.*or\s(.*)?\son a successful one.)?/,
+					saveFailure = /(?:On a (?:failure|failed save))\,\s(?:(.*). On a success,\s(.*)?)?(.*)?/,
 					andAnythingElse = /(\s?and.*)?/,
+					orAnythingElseNoTake = /(or\s(?!take).*)/,
 					anythingElse = /(.*)?/,
 					damageRegex = new RegExp(hit.source + damageSyntax.source + damageType.source + commaPeriodSpace.source + andAnythingElse.source, 'i'),
 					damagePlusRegex = new RegExp(plus.source + damageSyntax.source + damageType.source + commaPeriodSpace.source + anythingElse.source, 'i'),
 					altDamageRegex = new RegExp(altDamageSyntax.source + damageSyntax.source + damageType.source + commaPeriodSpace.source + altDamageReasonSyntax.source + commaPeriodOneSpace.source + altDamageExtraSyntax.source, 'i'),
-					saveDamageRegex = new RegExp(savingThrow.source + takeOrTaking.source + damageSyntax.source + damageType.source + commaPeriodSpace.source + anythingElse.source, 'i'),
-					saveDamagePlusRegex = new RegExp(savingThrow.source + takeOrTaking.source + damageSyntax.source + damageType.source + plus.source + damageSyntax.source + damageType.source + commaPeriodSpace.source + anythingElse.source, 'i');
+					hitEffectRegex = new RegExp(hit.source + anythingElse.source, 'i'),
+					saveDamageRegex = new RegExp(savingThrow.source + takeOrTaking.source + damageSyntax.source + damageType.source + saveSuccess.source + commaPeriodSpace.source + anythingElse.source, 'i'),
+					saveOrRegex = new RegExp(savingThrow.source + againstDisease.source + commaPeriodDefinitiveSpace.source + orAnythingElseNoTake.source, 'i'),
+					saveFailedSaveRegex = new RegExp(savingThrow.source + commaPeriodSpace.source + saveFailure.source, 'i');
 
 			function parseDamage(damage, altSecondary) {
 				//log('parseDamage: ' + damage);
@@ -1105,7 +1137,16 @@
 
 				var damage = damageRegex.exec(value);
 				if(damage) {
+					//log('if damage');
 					parseDamage(damage, '');
+				} else {
+					//log('else: ' + value);
+					var hitEffect = hitEffectRegex.exec(value);
+					if(hitEffect) {
+						if(hitEffect[1]) {
+							setEffect(hitEffect[1].trim());
+						}
+					}
 				}
 
 				var damagePlus = damagePlusRegex.exec(value);
@@ -1114,7 +1155,6 @@
 				}
 				var altDamage = altDamageRegex.exec(value);
 				if(altDamage) {
-					log('altDamage: ' + altDamage);
 					altDamage[6] = [altDamage[5], altDamage[5] = altDamage[6]][0]; //swap 5 and 6
 					parseDamage(altDamage, 'alt_');
 				}
@@ -1124,42 +1164,102 @@
 					parseDamage(damage, '');
 				}
 
-				var saveDmgRegex = /(?:DC)\s*?(\d+)\s*?([a-zA-Z]*)\s*?(?:saving throw).*or\s(.*)?\s(?:on a successful one.)\s?(.*)/gi;
-				while(saveDmg = saveDmgRegex.exec(value)) {
-					//log('saveDmg: ' + saveDmg);
+				var saveDmg = saveDamageRegex.exec(value);
+				if(saveDmg) {
+					//1 is save DC. Example "13"
+					//2 is save stat. Example "Dexterity"
+					//3 is damage without dice. Example "1"
+					//4 is damage with dice. Example "2d6+4"
+					//5 is damage type. Example "slashing" or "lightning or thunder"
+					//6 is damage type explanation. Example "(djinni's choice)"
+					//7 is save success. Example "half as much damage"
+					//8 is effects
+
 					if(saveDmg[1]) {
 						setSaveDC(saveDmg[1]);
 					}
 					if(saveDmg[2]) {
 						setSaveStat(saveDmg[2]);
 					}
-					if(saveDmg[1] || saveDmg[2] || saveDmg[3]) {
+					if(saveDmg[3]) {
+						saveDmg[4] = saveDmg[3];
+					}
+					if(saveDmg[4]) {
+						setSaveDamage(saveDmg[4]);
+					}
+					if(saveDmg[6]) {
+						saveDmg[5] += ' ' + saveDmg[6];
+					}
+					if(saveDmg[5]) {
+						setSaveDamageType(saveDmg[5]);
+					}
+					if(saveDmg[7]) {
+						setSaveSuccess(saveDmg[7]);
+					}
+					if(saveDmg[8]) {
+						setSaveEffect(saveDmg[8]);
+					}
+					if(saveDmg[1] || saveDmg[2] || saveDmg[8]) {
 						toggleSave();
 					}
-					if(saveDmg[3]) {
-						setSaveSuccess(saveDmg[3]);
-					}
-					if(saveDmg[3]) {
-						setSaveEffect(saveDmg[4]);
+					if(saveDmg[4] || saveDmg[5] || saveDmg[7]) {
+						toggleSaveDamage();
 					}
 					parsedSave = true;
 				}
-				var saveOrRegex = /(?:DC)\s*?(\d+)\s*?([a-zA-Z]*)\s*?(?:saving throw)(?: against disease)?\,?\s*?or\s(?:take.*)?(be.*|it can't.*)/gi;
-				while(saveOr = saveOrRegex.exec(value)) {
+
+				var saveOr = saveOrRegex.exec(value);
+				if(saveOr) {
+					//1 is save DC. Example "13"
+					//2 is save stat. Example "Dexterity"
+					//3 is effects
+
+					//log('saveOr: ' + saveOr);
 					if(saveOr[1]) {
 						setSaveDC(saveOr[1]);
 					}
 					if(saveOr[2]) {
 						setSaveStat(saveOr[2]);
 					}
-					if(saveOr[1] || saveOr[2] || saveOr[3]) {
-						toggleSave();
-					}
 					if(saveOr[3]) {
 						setSaveEffect(saveOr[3]);
 					}
+					if(saveOr[1] || saveOr[2] || saveOr[3]) {
+						toggleSave();
+					}
 					parsedSave = true;
 				}
+
+				var saveFailed = saveFailedSaveRegex.exec(value);
+				if(saveFailed) {
+					//1 is save DC. Example "13"
+					//2 is save stat. Example "Dexterity"
+					//3 is failure state (effects)
+					//4 is success state
+					//5 is failure state w/o success sate.
+
+					//log('saveFailed: ' + saveFailed);
+					if(saveFailed[1]) {
+						setSaveDC(saveFailed[1]);
+					}
+					if(saveFailed[2]) {
+						setSaveStat(saveFailed[2]);
+					}
+					if(saveFailed[5]) {
+						saveFailed[3] = saveFailed[5];
+					}
+					if(saveFailed[3]) {
+						setSaveEffect(saveFailed[3]);
+					}
+					if(saveFailed[4]) {
+						setSaveSuccess(saveFailed[4]);
+					}
+					if(saveFailed[1] || saveFailed[2] || saveFailed[3] || saveFailed[4]) {
+						toggleSave();
+					}
+					parsedSave = true;
+				}
+
 				var saveRangeRegex = /((?:Each | a | an | one ).*(?:creature|target).*)\swithin\s*?(\d+)\s*?(?:feet|ft)/gi;
 				while(saveRange = saveRangeRegex.exec(value)) {
 					if(saveRange[1]) {
@@ -1207,8 +1307,6 @@
 					if(actionType === 'legendary_') {
 						legendaryActionsNotes.push(key + '. ' + value);
 					} else {
-						//make this work
-						value = value.replace(/(?:DC)\s*?(\d+)/gi, '[[$1]]');
 						setEffect(value);
 						createTokenAction();
 						actionNum++;
