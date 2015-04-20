@@ -10,6 +10,14 @@ Scripts and other assorted things for roll20
 * Completely revamped the save regexes. All versions of the save syntax that I know of should be working
 * Processed the description of monsters that comes after actions. It's been added to "traits"
 
+
+**17-19th April 2015**
+
+* Fixed rolling HP
+* Fixed level calc to remove abs
+* Fixed speed and senses parsing
+
+
 **16th April 2015 (1.7)**
 
 * Vision is now set on the token.
