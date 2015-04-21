@@ -33,6 +33,7 @@
 
 	shaped.addInitiativeTokenAbility = true; //change to false if you do not want a macro "Init" on every token
 
+	shaped.useAaronsNumberedScript = true;
 
 
 	shaped.statblock = {
@@ -291,7 +292,12 @@
 			var name = shaped.parseStatblock(statblock);
 			if(characterId) {
 				token.set('represents', characterId);
-				token.set('name', shaped.capitalizeEachWord(name.toLowerCase()));
+				var tokenName = shaped.capitalizeEachWord(name.toLowerCase());
+				if(shaped.useAaronsNumberedScript && name.indexOf('%%NUMBERED%%') !== 1) {
+					tokenName += ' %%NUMBERED%%';
+				}
+				token.set('name', tokenName);
+
 				if(shaped.showName) {
 					token.set('showname', true);
 				}
