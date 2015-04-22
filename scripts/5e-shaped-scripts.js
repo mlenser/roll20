@@ -401,7 +401,6 @@
 	shaped.parseStatblock = function(statblock) {
 		log('---- Parsing statblock ----');
 
-		log('unparsed statblock: ' + statblock);
 		var text = sanitizeText(clean(statblock)),
 				keyword = findKeyword(text),
 				section = splitStatblock(text, keyword);
@@ -1598,10 +1597,26 @@
 		sendChat('Shaped', '/w gm Character ' + token.attributes.name + ' converted');
 	};
 
-	function clearBars(token, bar) {
+	function clearBar(token, bar) {
 		token.set(bar + '_link', '');
 		token.set(bar + '_value', '');
 		token.set(bar + '_max', '');
+	}
+
+
+	function parseValuesViaSendChat(name, attribute) {
+		/*
+		log(name + '----' + attribute);
+		sendChat('GM', '/roll (10 + @{Ankheg|perception})', function(ops) {
+			log('ops: ' + ops);
+			var rollResult = JSON.parse(ops[0].content);
+			if(_.has(rollResult, 'total')) {
+				log('rollResult.total: ' + rollResult.total);
+				return rollResult.total;
+			}
+		});
+		*/
+		return '';
 	}
 
 	function setBarValueAfterConvert(token, bar) {
@@ -1609,40 +1624,52 @@
 
 		if(parsebar !== '') {
 			var objOfParsebar = findObjs({
-				name: parsebar,
-				_type: 'attribute',
-				_characterid: characterId
-			}, {caseInsensitive: true})[0];
+						name: parsebar,
+						_type: 'attribute',
+						_characterid: characterId
+					}, {caseInsensitive: true})[0],
+					barLink, barCurrent, barMax;
 
 			if(objOfParsebar) {
-				if(shaped['parse' + bar + '_link']) {
-					log(bar + ': setting link to: ' + objOfParsebar.id);
-					token.set(bar + '_link', objOfParsebar.id);
-				} else {
-					log(bar + ': link isn\'t set in the bar settings, clearing link');
-					token.set(bar + '_link', '');
-				}
-				if(shaped['parse' + bar] !== '') {
-					log(bar + ': setting current to: ' + objOfParsebar.attributes.current);
-					token.set(bar + '_value', objOfParsebar.attributes.current);
-				} else {
-					log(bar + ': current isn\'t set in the bar settings, clearing current');
-					token.set(bar + '_value', '');
-				}
-				if(shaped['parse' + bar + 'Max']) {
-					log(bar + ': setting max to: ' + objOfParsebar.attributes.max);
-					token.set(bar + '_max', objOfParsebar.attributes.max);
-				} else {
-					log(bar + ': max isn\'t set in the bar settings, clearing max');
-					token.set(bar + '_max', '');
-				}
+				barLink = objOfParsebar.id;
+				barCurrent = objOfParsebar.attributes.current;
+				barMax = objOfParsebar.attributes.max;
 			} else {
-				log(bar + ': no attribute named ' + parsebar + ', clearing ' + bar + '.');
-				clearBars(token, bar);
+				barLink = 'sheetattr_' + parsebar;
+				log('characterId: ' + characterId);
+				log('parsebar: ' + parsebar);
+				barCurrent = parseValuesViaSendChat('Ankheg', getAttrByName(characterId, parsebar));
+				barMax = parseValuesViaSendChat('Ankheg', getAttrByName(characterId, parsebar, 'max'));
+			}
+
+			log('barCurrent: ' + barCurrent);
+			log('barMax: ' + barMax);
+
+
+			if(shaped['parse' + bar + '_link']) {
+				log(bar + ': setting link to: ' + barLink);
+				token.set(bar + '_link', barLink);
+			} else {
+				log(bar + ': link isn\'t set in the bar settings, clearing link');
+				token.set(bar + '_link', '');
+			}
+			if(shaped['parse' + bar] !== '') {
+				log(bar + ': setting current to: ' + barCurrent);
+				token.set(bar + '_value', barCurrent);
+			} else {
+				log(bar + ': current isn\'t set in the bar settings, clearing current');
+				token.set(bar + '_value', '');
+			}
+			if(shaped['parse' + bar + 'Max']) {
+				log(bar + ': setting max to: ' + barMax);
+				token.set(bar + '_max', barMax);
+			} else {
+				log(bar + ': max isn\'t set in the bar settings, clearing max');
+				token.set(bar + '_max', '');
 			}
 		} else {
 			log(bar + ': no defined bar setting in shaped-scripts (at the top of the page), clearing ' + bar + '.');
-			clearBars(token, bar);
+			clearBar(token, bar);
 		}
 	}
 
