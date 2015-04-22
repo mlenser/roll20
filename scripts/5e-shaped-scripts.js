@@ -926,7 +926,7 @@
 				actionPosition = []; // For use with multiattack.
 
 		function processActions (actionList) {
-			var actionNum = 1,
+			var actionNum = 0,
 					legendaryActionsNotes = [];
 
 			function setNPCActionAttribute(attribute, value, ifQuery) {
@@ -934,12 +934,15 @@
 					ifQuery = value;
 				}
 				if(ifQuery) {
-					setAttribute('npc_' + actionType + 'action_' + attribute + actionNum, value);
+					log('setNPCActionAttribute: ' + 'repeating_' + actionType + 'actions_' + actionNum + '_' + attribute);
+					setAttribute('repeating_' + actionType + 'actions_' + actionNum + '_' + attribute, value);
 				}
 			}
 			function setNPCActionToggle(attribute, toggle) {
 				if(typeof toggle === 'undefined' || toggle) {
-					setAttribute('npc_' + actionType + 'action_toggle_' + attribute + actionNum, '@{npc_' + actionType + 'action_var_' + attribute + actionNum + '}');
+					log('setNPCActionToggle: ' + 'repeating_' + actionType + 'actions_' + actionNum + '_toggle_' + attribute);
+					log('setNPCActionToggle value: ' + 'repeating_' + actionType + 'actions_' + actionNum + '_var_' + attribute + '}');
+					setAttribute('repeating_' + actionType + 'actions_' + actionNum + '_toggle_' + attribute, '@{var_' + attribute + '}');
 				}
 			}
 			function parseCritDamage(damage) {
@@ -947,62 +950,62 @@
 			}
 
 			function setName(name) {
-				setNPCActionAttribute('name_', name);
+				setNPCActionAttribute('name', name);
 			}
 			function setType(type) {
-				setNPCActionAttribute('type_', type);
+				setNPCActionAttribute('type', type);
 			}
 			function setTarget(target) {
-				setNPCActionAttribute('target_', target);
+				setNPCActionAttribute('target', target);
 			}
 			function setRange(type) {
-				setNPCActionAttribute('range_', type);
+				setNPCActionAttribute('range', type);
 			}
 
 			function setDamage(damage, altSecondary) {
-				setNPCActionAttribute(altSecondary + 'dmg_', damage);
+				setNPCActionAttribute(altSecondary + 'dmg', damage);
 			}
 			function toggleDamage(altSecondary) {
-				setNPCActionToggle(altSecondary + 'damage_');
+				setNPCActionToggle(altSecondary + 'damage');
 			}
 			function setDamageType(type, altSecondary) {
-				setNPCActionAttribute(altSecondary + 'dmg_type_', type);
+				setNPCActionAttribute(altSecondary + 'dmg_type', type);
 			}
 			function setCritDamage(critDamage, altSecondary) {
-				setNPCActionAttribute(altSecondary + 'crit_dmg_', critDamage);
+				setNPCActionAttribute(altSecondary + 'crit_dmg', critDamage);
 			}
 			function setAltDamageReason(damageReason) {
-				setNPCActionAttribute('alt_' + 'dmg_reason_', damageReason);
+				setNPCActionAttribute('alt_' + 'dmg_reason', damageReason);
 			}
 			function setEffect(effect) {
 				if(effect) {
-					setNPCActionAttribute('effect_', effect.replace(/(\s*?Hit:\s?)/gi, '').replace(/(\d+)d(\d+)/g, '[[$1d$2]]').replace(/\s(\d+)\s/g, ' [[$1]] '));
+					setNPCActionAttribute('effect', effect.replace(/(\s*?Hit:\s?)/gi, '').replace(/(\d+)d(\d+)/g, '[[$1d$2]]').replace(/\s(\d+)\s/g, ' [[$1]] '));
 				}
-				setNPCActionToggle('effects_', effect);
+				setNPCActionToggle('effects', effect);
 			}
 
 			function setSaveDC(saveDC) {
-				setNPCActionAttribute('save_dc_', saveDC);
+				setNPCActionAttribute('save_dc', saveDC);
 			}
 			function setSaveStat(saveStat) {
 				if(saveStat) {
-					setNPCActionAttribute('save_stat_', saveStat.substring(0, 3));
+					setNPCActionAttribute('save_stat', saveStat.substring(0, 3));
 				}
 			}
 			function toggleSave(toggle) {
-				setNPCActionToggle('save_', toggle);
+				setNPCActionToggle('save', toggle);
 			}
 			function toggleSaveDamage(toggle) {
-				setNPCActionToggle('save_damage_', toggle);
+				setNPCActionToggle('save_damage', toggle);
 			}
 			function setSaveDamage(saveDamage) {
-				setNPCActionAttribute('save_dmg_', saveDamage);
+				setNPCActionAttribute('save_dmg', saveDamage);
 			}
 			function setSaveDamageType(saveDamageType) {
-				setNPCActionAttribute('save_dmg_type_', saveDamageType);
+				setNPCActionAttribute('save_dmg_type', saveDamageType);
 			}
 			function setSaveSuccess(saveSuccess) {
-				setNPCActionAttribute('save_success_', saveSuccess);
+				setNPCActionAttribute('save_success', saveSuccess);
 			}
 			function setSaveEffect(saveEffect) {
 				setEffect(saveEffect);
@@ -1084,8 +1087,8 @@
 
 				var keyRegex = /\s*?\(Recharge\s*?(\d+\-\d+|\d+)\)/gi;
 				while(keyResult = keyRegex.exec(key)) {
-					setNPCActionAttribute('recharge_', keyResult[1]);
-					setNPCActionToggle('recharge_', keyResult[1]);
+					setNPCActionAttribute('recharge', keyResult[1]);
+					setNPCActionToggle('recharge', keyResult[1]);
 					if(keyResult[1]) {
 						key = key.replace(keyRegex, '');
 					}
@@ -1113,9 +1116,9 @@
 				var toHitRegex = /\+\s?(\d+)\s*(?:to hit)/gi;
 				while(toHit = toHitRegex.exec(splitAttack[0])) {
 					if(toHit[1]) {
-						setNPCActionAttribute('tohit_', toHit[1]);
-						setNPCActionToggle('attack_');
-						setNPCActionToggle('crit_');
+						setNPCActionAttribute('tohit', toHit[1]);
+						setNPCActionToggle('attack');
+						setNPCActionToggle('crit');
 					}
 					if(splitAttack[2]) {
 						setTarget(splitAttack[2].trim().toLowerCase());
@@ -1126,7 +1129,7 @@
 				var reachRegex = /(?:reach)\s?(\d+)\s?(?:ft)/gi;
 				while(reach = reachRegex.exec(splitAttack[1])) {
 					if(reach[1]) {
-						setNPCActionAttribute('reach_', reach[1] + ' ft', reach[1]);
+						setNPCActionAttribute('reach', reach[1] + ' ft', reach[1]);
 					}
 					parsedAttack = true;
 					parsedDetails = true;
@@ -1606,16 +1609,16 @@
 
 	function parseValuesViaSendChat(name, attribute) {
 		/*
-		log(name + '----' + attribute);
-		sendChat('GM', '/roll (10 + @{Ankheg|perception})', function(ops) {
-			log('ops: ' + ops);
-			var rollResult = JSON.parse(ops[0].content);
-			if(_.has(rollResult, 'total')) {
-				log('rollResult.total: ' + rollResult.total);
-				return rollResult.total;
-			}
-		});
-		*/
+		 log(name + '----' + attribute);
+		 sendChat('GM', '/roll 10 + [[@{Ankheg|perception}]]', function(ops) {
+		 log('ops: ' + ops);
+		 var rollResult = JSON.parse(ops[0].content);
+		 if(_.has(rollResult, 'total')) {
+		 log('rollResult.total: ' + rollResult.total);
+		 return rollResult.total;
+		 }
+		 });
+		 */
 		return '';
 	}
 
