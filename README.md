@@ -1,6 +1,12 @@
 # roll20
 Scripts and other assorted things for roll20
 
+### TODO
+
+* Test repeatable section for Actions
+* Create Multiattack textarea and button on the sheet.
+* Figure out how to set/link formula values to the bar.
+
 
 ### Changelog
 
