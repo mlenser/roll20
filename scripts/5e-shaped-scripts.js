@@ -13,11 +13,11 @@
 	shaped.parsebar1Max = false;
 	shaped.parsebar1_link = true;
 	// Blue bar
-	shaped.parsebar2 = ''; //'passive_perception'
+	shaped.parsebar2 = 'passive_perception'; //'speed'
 	shaped.parsebar2Max = false;
 	shaped.parsebar2_link = false;
 	// Red bar
-	shaped.parsebar3 = 'HP';  //'speed'
+	shaped.parsebar3 = 'HP';
 	shaped.parsebar3Max = true;
 	shaped.parsebar3_link = false;
 
@@ -305,9 +305,9 @@
 
 				setUserDefinedScriptSettings();
 
-				getAndSetBarInfo(token, 'bar1');
-				getAndSetBarInfo(token, 'bar2');
-				getAndSetBarInfo(token, 'bar3');
+				setBarValueAfterConvert(token, 'bar1');
+				setBarValueAfterConvert(token, 'bar2');
+				setBarValueAfterConvert(token, 'bar3');
 
 				setTokenVision(token);
 			}
@@ -1598,65 +1598,58 @@
 		sendChat('Shaped', '/w gm Character ' + token.attributes.name + ' converted');
 	};
 
-	function setBarValueAfterConvert(token, bar, obj) {
-		if(obj) {
-			log('Setting ' + bar + ' to:');
-			if(shaped['parse' + bar + '_link'] && obj.id) {
-				log('id: ' + obj.id);
-				token.set(bar + '_link', obj.id);
-			}
-			if(obj.attributes.current) {
-				log('current: ' + obj.attributes.current);
-				token.set(bar + '_value', obj.attributes.current);
-			}
-			if(shaped['parse' + bar + 'Max'] && obj.attributes.max) {
-				log('max: ' + obj.attributes.max);
-				token.set(bar + '_max', obj.attributes.max);
-			} else {
-				token.set(bar + '_max', '');
-			}
-		} else {
-			log('Can\'t set empty object to bar ' + bar);
-		}
+	function clearBars(token, bar) {
+		token.set(bar + '_link', '');
+		token.set(bar + '_value', '');
+		token.set(bar + '_max', '');
 	}
 
-	function getAndSetBarInfo(token, bar) {
-		var bar_link = token.get(bar + '_link');
-		if(!bar_link) {
-			var parsebar = shaped['parse' + bar];
-			if(parsebar) {
-				var objOfParsebar = findObjs({
-					name: parsebar,
-					_type: 'attribute',
-					_characterid: characterId
-				}, {caseInsensitive: true})[0];
-				setBarValueAfterConvert(token, bar, objOfParsebar);
+	function setBarValueAfterConvert(token, bar) {
+		var parsebar = shaped['parse' + bar];
+
+		if(parsebar !== '') {
+			var objOfParsebar = findObjs({
+				name: parsebar,
+				_type: 'attribute',
+				_characterid: characterId
+			}, {caseInsensitive: true})[0];
+
+			if(objOfParsebar) {
+				if(shaped['parse' + bar + '_link']) {
+					log(bar + ': setting link to: ' + objOfParsebar.id);
+					token.set(bar + '_link', objOfParsebar.id);
+				} else {
+					log(bar + ': link isn\'t set in the bar settings, clearing link');
+					token.set(bar + '_link', '');
+				}
+				if(shaped['parse' + bar] !== '') {
+					log(bar + ': setting current to: ' + objOfParsebar.attributes.current);
+					token.set(bar + '_value', objOfParsebar.attributes.current);
+				} else {
+					log(bar + ': current isn\'t set in the bar settings, clearing current');
+					token.set(bar + '_value', '');
+				}
+				if(shaped['parse' + bar + 'Max']) {
+					log(bar + ': setting max to: ' + objOfParsebar.attributes.max);
+					token.set(bar + '_max', objOfParsebar.attributes.max);
+				} else {
+					log(bar + ': max isn\'t set in the bar settings, clearing max');
+					token.set(bar + '_max', '');
+				}
 			} else {
-				token.set(bar + '_link', '');
-				token.set(bar + '_value', '');
-				token.set(bar + '_max', '');
+				log(bar + ': no attribute named ' + parsebar + ', clearing ' + bar + '.');
+				clearBars(token, bar);
 			}
 		} else {
-			objOfBar = {
-				id: bar_link,
-				attributes: {}
-			};
-			var bar_value = token.get(bar + '_value');
-			if(bar_value) {
-				objOfBar.attributes.current = bar_value;
-			}
-			var bar_max = token.get(bar + '_max');
-			if(bar_max) {
-				objOfBar.attributes.max = bar_max;
-			}
-			setBarValueAfterConvert(token, bar, objOfBar);
+			log(bar + ': no defined bar setting in shaped-scripts (at the top of the page), clearing ' + bar + '.');
+			clearBars(token, bar);
 		}
 	}
 
 	shaped.setBars = function(token) {
-		getAndSetBarInfo(token, 'bar1');
-		getAndSetBarInfo(token, 'bar2');
-		getAndSetBarInfo(token, 'bar3');
+		setBarValueAfterConvert(token, 'bar1');
+		setBarValueAfterConvert(token, 'bar2');
+		setBarValueAfterConvert(token, 'bar3');
 	};
 
 	shaped.cloneToken = function (msg, number) {
