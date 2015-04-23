@@ -412,7 +412,17 @@
 	};
 
 	function clean(statblock) {
-		return unescape(statblock).replace(/–/g, '-').replace(/<br[^>]*>/g, '#').replace(/\s+#\s+/g, '#').replace(/(<([^>]+)>)/gi, '').replace(/#(?=[a-z]|DC)/g, ' ').replace(/\s+/g, ' ').replace(/DC#(\d+)/g, 'DC $1').replace('LanguagesChallenge', 'Languages -#Challenge').replace("' Speed", 'Speed');
+		return unescape(statblock)
+				.replace(/–/g, '-')
+				.replace(/<br[^>]*>/g, '#')
+				.replace(/\s+#\s+/g, '#')
+				.replace(/(<([^>]+)>)/gi, '')
+				.replace(/#(?=[a-z]|DC)/g, ' ')
+				.replace(/\s+/g, ' ')
+				.replace(/#Hit:/g, 'Hit:')
+				.replace(/DC#(\d+)/g, 'DC $1')
+				.replace('LanguagesChallenge', 'Languages -#Challenge')
+				.replace("' Speed", 'Speed');
 	}
 
 
@@ -1145,10 +1155,8 @@
 
 				var damage = damageRegex.exec(value);
 				if(damage) {
-					//log('if damage');
 					parseDamage(damage, '');
 				} else {
-					//log('else: ' + value);
 					var hitEffect = hitEffectRegex.exec(value);
 					if(hitEffect) {
 						if(hitEffect[1]) {
@@ -1299,7 +1307,7 @@
 					setTarget(lineTarget[1]);
 					parsedDetails = true;
 				}
-				setNPCActionToggle('details_', parsedDetails);
+				setNPCActionToggle('details', parsedDetails);
 
 
 				function createTokenAction() {
@@ -1610,18 +1618,19 @@
 	}
 
 
-	function parseValuesViaSendChat(name, attribute) {
+	function parseValuesViaSendChat(name) {
 		/*
-		 log(name + '----' + attribute);
-		 sendChat('GM', '/roll 10 + [[@{Ankheg|perception}]]', function(ops) {
-		 log('ops: ' + ops);
-		 var rollResult = JSON.parse(ops[0].content);
-		 if(_.has(rollResult, 'total')) {
-		 log('rollResult.total: ' + rollResult.total);
-		 return rollResult.total;
-		 }
-		 });
-		 */
+		log(name + '----');
+		sendChat('GM', '[[10 + @{Ankheg|perception}]]', function(ops) {
+			log('ops: ' + ops);
+			var rollResult = JSON.parse(ops[0].content);
+			log('rollResult: ' + rollResult);
+			if(_.has(rollResult, 'total')) {
+		 		log('rollResult.total: ' + rollResult.total);
+		 		return rollResult.total;
+		 	}
+	 	});
+	 	*/
 		return '';
 	}
 
@@ -1644,8 +1653,8 @@
 				barLink = 'sheetattr_' + parsebar;
 				log('characterId: ' + characterId);
 				log('parsebar: ' + parsebar);
-				barCurrent = parseValuesViaSendChat('Ankheg', getAttrByName(characterId, parsebar));
-				barMax = parseValuesViaSendChat('Ankheg', getAttrByName(characterId, parsebar, 'max'));
+				barCurrent = parseValuesViaSendChat('Ankheg');
+				barMax = parseValuesViaSendChat('Ankheg');
 			}
 
 			log('barCurrent: ' + barCurrent);
