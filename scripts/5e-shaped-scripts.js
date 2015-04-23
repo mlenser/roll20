@@ -155,9 +155,7 @@
 				token.set(bar + '_value', total);
 				token.set(bar + '_max', total);
 				var message = '/w GM Hp ('+ formula +') rolled: ' + total;
-				log('original: ' + original);
 				if(original > 0) {
-					log('if');
 					message += ' adjusted from original result of ' + original;
 				}
 				sendChat('GM', message);
@@ -435,6 +433,7 @@
 				.replace(/#(?=[a-z]|DC)/g, ' ')
 				.replace(/\s+/g, ' ')
 				.replace(/#Hit:/g, 'Hit:')
+				.replace(/#Each /g, 'Each ')
 				.replace(/DC#(\d+)/g, 'DC $1')
 				.replace('LanguagesChallenge', 'Languages -#Challenge')
 				.replace("' Speed", 'Speed');
@@ -565,6 +564,12 @@
 
 		for(var key in keyword.actions) {
 			actionsPosArray.push(keyword.actions[key]);
+		}
+		for(var key in keyword.legendary) {
+			actionsPosArray.push(keyword.legendary[key]);
+		}
+		for(var key in keyword.lair) {
+			actionsPosArray.push(keyword.lair[key]);
 		}
 		actionsPosArray.sort(sortNumber);
 
@@ -1441,9 +1446,6 @@
 
 			if(name) {
 				combinedText = combinedText.replace(/\s*?\:\s*?\[\[(\d+d\d+[\d\s+|\-]*)\]\]\s*?\|\s*?\[\[(\d+d\d+[\d\s+|\-]*)\]\]/gi, '').replace(/\[\[(\d*d\d+[\d\s+|\-]*)\]\]/gi, '$1');
-
-
-				log('type ' + type + ' --  ' + type.indexOf('Bonus Action'));
 
 				if(type.indexOf('Bonus Action') === 1) {
 					log('Bonus Action ' + name + ' changed to a normal action');
