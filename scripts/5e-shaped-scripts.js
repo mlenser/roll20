@@ -1368,6 +1368,8 @@
 			setAttribute('multiattack', multiAttackText);
 			delete actions.Multiattack;
 
+			setAttribute('toggle_multiattack', 'on');
+
 			if(shaped.usePowerAbility) {
 				setAbility('MultiAtk', '', powercardAbility(id, actionNumber), shaped.createAbilityAsToken);
 			} else {
