@@ -914,7 +914,7 @@
 		});
 		if(reactionsArray.length > 0) {
 			setAttribute('reactions', reactionsArray.join('\n'));
-			setAttribute('npc_action_toggle_reactions', 'on');
+			setAttribute('toggle_reactions', 'on');
 		}
 	}
 
@@ -1308,7 +1308,7 @@
 					if(shaped.usePowerAbility) {
 						setAbility(key, '', powercardAbility(id, actionNum), shaped.createAbilityAsToken);
 					} else {
-						setAbility(key, '', '%{selected|npc_' + actionType + 'action_' + actionNum + '}', shaped.createAbilityAsToken);
+						setAbility(key, '', '%{selected|repeating_' + actionType + 'actions_' + actionNum + '_action}', shaped.createAbilityAsToken);
 					}
 				}
 				parsed = parsedAttack || parsedDamage || parsedSave;
@@ -1343,7 +1343,7 @@
 
 		if(actions.Multiattack) {
 			multiAttackText = actions.Multiattack;
-			setAttribute('npc_multiattack', multiAttackText);
+			setAttribute('multiattack', multiAttackText);
 			delete actions.Multiattack;
 
 			if(!shaped.usePowerAbility) {
@@ -1354,15 +1354,15 @@
 		processActions(actions);
 
 		if(actionType === 'lair_' && Object.keys(actions).length > 0) {
-			setAttribute('npc_action_toggle_lair_actions', 'on');
+			setAttribute('toggle_lair_actions', 'on');
 		}
 		if(actionType === 'legendary_' && Object.keys(actions).length > 0) {
-			setAttribute('npc_action_toggle_legendary_actions', 'on');
+			setAttribute('toggle_legendary_actions', 'on');
 		}
 
 		function addActionToMultiattack(actionNumber) {
-			macro += '%{selected|npc_action_' + actionNumber + '}\n';
-			setAttribute('npc_action_toggle_multiattack_' + actionNumber, '@{npc_action_var_multiattack_' + actionNumber + '}');
+			macro += '%{selected|repeating_actions_' + actionNumber + 'action}\n';
+			setAttribute('toggle_multiattack_' + actionNumber, '@{var_multiattack_' + actionNumber + '}');
 		}
 
 		if(multiAttackText) {
@@ -1449,7 +1449,7 @@
 		}
 		if(reactions.length > 0) {
 			setAttribute('reactions', reactions.join('\n'));
-			setAttribute('npc_action_toggle_reactions', 'on');
+			setAttribute('toggle_reactions', 'on');
 		}
 		if(Object.keys(lairActions).length > 0) {
 			parseActions(lairActions, 'lair_');
