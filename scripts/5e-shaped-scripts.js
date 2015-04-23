@@ -55,7 +55,8 @@
 	var status = '',
 			errors = [],
 			obj = null,
-			characterId = null;
+			characterId = null,
+			characterName = null;
 
 	function HandleInput(msg) {
 		if(msg.type !== 'api') {
@@ -195,29 +196,28 @@
 		});
 	};
 
-	shaped.setCharacter = function(name, gmnotes, bio) {
-		if(!name) {
+	shaped.setCharacter = function(gmnotes, bio) {
+		if(!characterName) {
 			throw('Name require to get or create character');
 		}
-		name = shaped.capitalizeEachWord(name);
 
 		var obj = findObjs({
 			_type: 'character',
-			name: name
+			name: characterName
 		});
 
 		if(obj.length === 0) {
 			obj = createObj('character', {
-				name: name
+				name: characterName
 			});
-			status = 'Character ' + name + ' created';
+			status = 'Character ' + characterName + ' created';
 		} else {
 			obj = getObj('character', obj[0].id);
-			status = 'Character ' + name + ' updated';
+			status = 'Character ' + characterName + ' updated';
 		}
 
 		if(!obj) {
-			throw('Something prevent script to create or find character ' + name);
+			throw('Something prevent script to create or find character ' + characterName);
 		}
 
 		if(gmnotes) {
@@ -290,11 +290,11 @@
 				throw('Selected token GM Notes was empty.');
 			}
 
-			var name = shaped.parseStatblock(statblock);
+			shaped.parseStatblock(statblock);
 			if(characterId) {
 				token.set('represents', characterId);
-				var tokenName = shaped.capitalizeEachWord(name.toLowerCase());
-				if(shaped.useAaronsNumberedScript && name.indexOf('%%NUMBERED%%') !== 1) {
+				var tokenName = characterName;
+				if(shaped.useAaronsNumberedScript && characterName.indexOf('%%NUMBERED%%') !== 1) {
 					tokenName += ' %%NUMBERED%%';
 				}
 				token.set('name', tokenName);
@@ -404,9 +404,11 @@
 		var text = sanitizeText(clean(statblock)),
 				keyword = findKeyword(text),
 				section = splitStatblock(text, keyword);
-		shaped.setCharacter(section.attr.name, text.replace(/#/g, '<br>'), section.bio);
+
+		characterName = shaped.capitalizeEachWord(section.attr.name.toLowerCase());
+
+		shaped.setCharacter(text.replace(/#/g, '<br>'), section.bio);
 		processSection(section);
-		return section.attr.name;
 	};
 
 	function clean(statblock) {
@@ -1305,7 +1307,7 @@
 					if(shaped.usePowerAbility) {
 						setAbility(key, '', powercardAbility(id, actionNum), shaped.createAbilityAsToken);
 					} else {
-						setAbility(key, '', '%{selected|repeating_' + actionType + 'actions_' + actionNum + '_action}', shaped.createAbilityAsToken);
+						setAbility(key, '', '%{'+characterName+'|repeating_' + actionType + 'actions_' + actionNum + '_action}', shaped.createAbilityAsToken);
 					}
 				}
 				parsed = parsedAttack || parsedDamage || parsedSave;
@@ -1335,7 +1337,7 @@
 			}
 		}
 		if(shaped.addInitiativeTokenAbility) {
-			setAbility('Init', '', '%{selected|Initiative}', shaped.createAbilityAsToken);
+			setAbility('Init', '', '%{'+characterName+'|Initiative}', shaped.createAbilityAsToken);
 		}
 
 		if(actions.Multiattack) {
@@ -1344,7 +1346,7 @@
 			delete actions.Multiattack;
 
 			if(!shaped.usePowerAbility) {
-				setAbility('MultiAttack', '', '', shaped.createAbilityAsToken);
+				setAbility('MultiAtk', '', '', shaped.createAbilityAsToken);
 			}
 		}
 
@@ -1358,14 +1360,16 @@
 		}
 
 		function addActionToMultiattack(actionNumber) {
-			macro += '%{selected|repeating_actions_' + actionNumber + 'action}\n';
-			setAttribute('toggle_multiattack_' + actionNumber, '@{var_multiattack_' + actionNumber + '}');
+			if(multiattackScript !== '') {
+				multiattackScript += '\n';
+			}
+			multiattackScript += '%{'+characterName+'|repeating_actions_' + actionNumber + '_action}';
 		}
 
 		if(multiAttackText) {
 			var actionList = actionPosition.join('|').slice(1),
 					regex = new RegExp('(one|two|three)? (?:with its )?(' + actionList + ')( or)?', 'gi'),
-					macro = multiAttackText + '\n',
+					multiattackScript = '',
 					actionNumber;
 
 			while(match = regex.exec(multiAttackText)) {
@@ -1383,17 +1387,19 @@
 						addActionToMultiattack(actionNumber);
 					}
 					if(match[3]) {
-						macro += 'or\n';
+						multiattackScript += 'or\n';
 					}
 
 					delete actionPosition[actionNumber]; // Remove
 				}
 			}
 
+			setAttribute('multiattack_script', multiattackScript);
+
 			if(shaped.usePowerAbility) {
-				setAbility('MultiAttack', '', powercardAbility(id, actionNumber), shaped.createAbilityAsToken);
+				setAbility('MultiAtk', '', powercardAbility(id, actionNumber), shaped.createAbilityAsToken);
 			} else {
-				setAbility('MultiAttack', '', macro, shaped.createAbilityAsToken);
+				setAbility('MultiAtk', '', '%{multiattack}', shaped.createAbilityAsToken);
 			}
 		}
 	}
