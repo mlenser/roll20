@@ -934,15 +934,12 @@
 					ifQuery = value;
 				}
 				if(ifQuery) {
-					log('setNPCActionAttribute: ' + 'repeating_' + actionType + 'actions_' + actionNum + '_' + attribute);
 					setAttribute('repeating_' + actionType + 'actions_' + actionNum + '_' + attribute, value);
 				}
 			}
 			function setNPCActionToggle(attribute, toggle) {
 				if(typeof toggle === 'undefined' || toggle) {
-					log('setNPCActionToggle: ' + 'repeating_' + actionType + 'actions_' + actionNum + '_toggle_' + attribute);
-					log('setNPCActionToggle value: ' + 'repeating_' + actionType + 'actions_' + actionNum + '_var_' + attribute + '}');
-					setAttribute('repeating_' + actionType + 'actions_' + actionNum + '_toggle_' + attribute, '@{var_' + attribute + '}');
+					setAttribute('repeating_' + actionType + 'actions_' + actionNum + '_toggle_' + attribute, '@{repeating_' + actionType + 'actions_' + actionNum + '_var_' + attribute + '}');
 				}
 			}
 			function parseCritDamage(damage) {
