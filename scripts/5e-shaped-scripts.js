@@ -902,7 +902,7 @@
 				var expertise = proficiencyBonus * 2;
 
 				if(totalSkillBonus >= expertise) {
-					setAttribute(attr + '_prof_exp', '(2*@{PB})');
+					setAttribute(attr + '_prof_exp', '@{exp}');
 					if(totalSkillBonus > expertise) {
 						setAttribute(attr + '_bonus', totalSkillBonus - expertise);
 					}
