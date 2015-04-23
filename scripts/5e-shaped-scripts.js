@@ -1392,12 +1392,12 @@
 		}
 
 		if(multiAttackText) {
-			var actionList = actionPosition.join('|').slice(1),
-					regex = new RegExp('(one|two|three)? (?:with its )?(' + actionList + ')( or)?', 'gi'),
+			var actionList = actionPosition.join('|'),
+					multiattackRegex = new RegExp('(one|two|three)? (?:with its )?(' + actionList + ')( or)?', 'gi'),
 					multiattackScript = '',
 					actionNumber;
 
-			while(match = regex.exec(multiAttackText)) {
+			while(match = multiattackRegex.exec(multiAttackText)) {
 				var action = match[2],
 						nb = match[1] || 'one';
 
