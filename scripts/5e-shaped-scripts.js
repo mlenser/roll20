@@ -1,6 +1,6 @@
 (function (shaped, undefined) {
 
-	/* Options */
+	//Options
 	shaped.createAbilityAsToken = true;
 	shaped.monsterAsMinHp = false; // generated token hp can't be lower than the average hp
 	shaped.rollMonsterHpOnDrop = true; // will roll HP when character are dropped on map
@@ -683,7 +683,7 @@
 		parseActions(section.lair, 'lair_');
 	}
 
-	/* Section parsing function */
+	//Section parsing function
 	function parseAbilities(abilities) {
 		var regex = /(\d+)\s*\(/g;
 		var match = [];
@@ -1647,6 +1647,15 @@
 		 	}
 	 	});
 	 	*/
+		/*
+		sendChat('', '[[10 + @{Ankheg|perception}]]',function(msg){
+			for(var k in msg[0].inlinerolls[1].results) {
+					if(msg[0].inlinerolls[1].results.hasOwnProperty(k)) {
+					log('logObj: ' + k + '->' + msg[0].inlinerolls[1].results[k]);
+				}
+			}
+		});
+    */
 		return '';
 	}
 
