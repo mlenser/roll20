@@ -63,7 +63,10 @@
 			return;
 		}
 		log('msg.content: ' + msg.content);
-		var args = msg.content.split(/\s+/);
+		var args = msg.content.split(/\s+--/);
+		if(args[1] && args[1] === 'clean') {
+			shaped.getSelectedToken(msg, shaped.deleteOldSheet);
+		}
 		switch(args[0]) {
 			case '!build-monster':
 			case '!shaped-parse':
@@ -109,6 +112,18 @@
 		}
 	};
 
+	shaped.deleteOldSheet = function(token) {
+		var id = token.get('represents'),
+				obj = findObjs({
+					_type: 'character',
+					id: id
+				})[0];
+		if(obj) {
+			obj.remove();
+			log('old sheet removed before importing');
+		}
+	}
+
 	shaped.rollHpForSelectedToken = function(msg) {
 		shaped.getSelectedToken(msg, shaped.rollTokenHp);
 	};
@@ -136,10 +151,10 @@
 				throw('Token ' + bar + ' is linked');
 			}
 
-			rollCharacterHp(represent, function(total, original) {
+			rollCharacterHp(represent, function(total, original, formula) {
 				token.set(bar + '_value', total);
 				token.set(bar + '_max', total);
-				var message = '/w GM Hp rolled: ' + total;
+				var message = '/w GM Hp ('+ formula +') rolled: ' + total;
 				log('original: ' + original);
 				if(original > 0) {
 					log('if');
@@ -185,7 +200,7 @@
 						total = average_hp;
 					}
 				}
-				callback(total, original);
+				callback(total, original,  nb_dice + 'd' + nb_face);
 			}
 		});
 	}
@@ -210,10 +225,10 @@
 			obj = createObj('character', {
 				name: characterName
 			});
-			status = 'Character ' + characterName + ' created';
+			status = characterName + ' created';
 		} else {
 			obj = getObj('character', obj[0].id);
-			status = 'Character ' + characterName + ' updated';
+			status = characterName + ' updated';
 		}
 
 		if(!obj) {
@@ -712,7 +727,7 @@
 		setAttribute('hd_' + HDsize, numHD, numHD);
 	}
 	function parseHp(hp) {
-		var match = hp.match(/(\d+).*((\d+d\d+)[\d\s+|\-]*)/i);
+		var match = hp.match(/(\d+)\s*\(([\dd\s\+\-]*)\)/i);
 		if(!match[1] || !match[2]) {
 			throw 'Character doesn\'t have valid HP/HD format';
 		}
@@ -1353,8 +1368,10 @@
 			setAttribute('multiattack', multiAttackText);
 			delete actions.Multiattack;
 
-			if(!shaped.usePowerAbility) {
-				setAbility('MultiAtk', '', '', shaped.createAbilityAsToken);
+			if(shaped.usePowerAbility) {
+				setAbility('MultiAtk', '', powercardAbility(id, actionNumber), shaped.createAbilityAsToken);
+			} else {
+				setAbility('MultiAtk', '', '%{'+characterName+'|multiattack}', shaped.createAbilityAsToken);
 			}
 		}
 
@@ -1404,11 +1421,6 @@
 
 			setAttribute('multiattack_script', multiattackScript);
 
-			if(shaped.usePowerAbility) {
-				setAbility('MultiAtk', '', powercardAbility(id, actionNumber), shaped.createAbilityAsToken);
-			} else {
-				setAbility('MultiAtk', '', '%{multiattack}', shaped.createAbilityAsToken);
-			}
 		}
 	}
 
@@ -1651,36 +1663,40 @@
 				barMax = objOfParsebar.attributes.max;
 			} else {
 				barLink = 'sheetattr_' + parsebar;
-				log('characterId: ' + characterId);
-				log('parsebar: ' + parsebar);
 				barCurrent = parseValuesViaSendChat('Ankheg');
 				barMax = parseValuesViaSendChat('Ankheg');
 			}
 
-			log('barCurrent: ' + barCurrent);
-			log('barMax: ' + barMax);
+			//log('barCurrent: ' + barCurrent);
+			//log('barMax: ' + barMax);
 
 
 			if(shaped['parse' + bar + '_link']) {
 				log(bar + ': setting link to: ' + barLink);
 				token.set(bar + '_link', barLink);
 			} else {
-				log(bar + ': link isn\'t set in the bar settings, clearing link');
-				token.set(bar + '_link', '');
+				if(token.get(bar + '_link')) {
+					log(bar + ': link isn\'t set in the bar settings, clearing link');
+					token.set(bar + '_link', '');
+				}
 			}
 			if(shaped['parse' + bar] !== '') {
 				log(bar + ': setting current to: ' + barCurrent);
 				token.set(bar + '_value', barCurrent);
 			} else {
-				log(bar + ': current isn\'t set in the bar settings, clearing current');
-				token.set(bar + '_value', '');
+				if(token.get(bar + '_value')) {
+					log(bar + ': current isn\'t set in the bar settings, clearing current');
+					token.set(bar + '_value', '');
+				}
 			}
 			if(shaped['parse' + bar + 'Max']) {
 				log(bar + ': setting max to: ' + barMax);
 				token.set(bar + '_max', barMax);
 			} else {
-				log(bar + ': max isn\'t set in the bar settings, clearing max');
-				token.set(bar + '_max', '');
+				if(token.get(bar + '_max')) {
+					log(bar + ': max isn\'t set in the bar settings, clearing max');
+					token.set(bar + '_max', '');
+				}
 			}
 		} else {
 			log(bar + ': no defined bar setting in shaped-scripts (at the top of the page), clearing ' + bar + '.');
