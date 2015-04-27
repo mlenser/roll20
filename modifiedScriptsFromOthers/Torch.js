@@ -226,7 +226,7 @@ var Torch = Torch || (function() {
 
 							if(page) {
 								page.set({
-									lightglobalillumn: true
+									lightglobalillum: true
 								});
 								sendChat('','/w gm It is now <b>Daytime</b> on '+page.get('name')+'!');
 							}
@@ -248,7 +248,7 @@ var Torch = Torch || (function() {
 
 							if(page) {
 								page.set({
-									lightglobalillumn: false
+									lightglobalillum: false
 								});
 								sendChat('','/w gm It is now <b>Nighttime</b> on '+page.get('name')+'!');
 							}
