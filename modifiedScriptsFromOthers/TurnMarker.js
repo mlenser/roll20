@@ -30,7 +30,7 @@ var TurnMarker = TurnMarker || (function(){
 					playAnimations: false,
 					rotation: false,
 					animationSpeed: 5,
-					scale: 1.2,
+					scale: 1.7,
 					aura1: {
 						pulse: false,
 						size: 5,
@@ -357,12 +357,10 @@ var TurnMarker = TurnMarker || (function(){
 				}));
 
 				/* find previous token. */
-				var previousToken = getObj("graphic", previousTurn.id);
 				var cImage=currentToken.get('imgsrc');
 				var cRatio=currentToken.get('width')/currentToken.get('height');
 				var backgroundColor = '#4b0082';
 
-				var pNameString="The Previous turn is done.";
 
 				var cNameString='Next turn!';
 				if(currentToken && currentToken.get('showplayers_name')) {
@@ -374,14 +372,13 @@ var TurnMarker = TurnMarker || (function(){
 				if(state.TurnMarker.announcePlayerInTurnAnnounce) {
 					var Char=currentToken.get('represents');
 					if('' !== Char) {
-						var Char=getObj('character',Char);
+						Char=getObj('character',Char);
 						if(Char && _.isFunction(Char.get)) {
 							var Controllers=Char.get('controlledby').split(',');
 							_.each(Controllers,function(c){
 								var player=getObj('player',c);
 								if(player) {
 									var PlayerColor=player.get('color');
-									var PlayerName=player.get('displayname');
 
 									backgroundColor = PlayerColor;
 								}
@@ -395,21 +392,21 @@ var TurnMarker = TurnMarker || (function(){
 						'',
 								"/direct "
 								+'<div class="sheet-rolltemplate-5eDefault">'
-								+'<div class="sheet-rt-card">'
-								+'<div class="sheet-rt-header" style="background-color: '+ backgroundColor + '">'
-								+'<div class="sheet-rt-title">'
-								+'<div class="sheet-row">'
-								+ '<div class="sheet-col-2-3 sheet-center sheet-vert-middle">'
-								+cNameString
-								+ '</div>'
-								+ '<div class="sheet-col-1-3 sheet-center sheet-vert-middle">'
-								+"<img src='"+cImage+"' style='padding-left: 2px; width:"+Math.round(tokenSize*cRatio)+"px; height:"+tokenSize+"px;'>"
-								+ '</div>'
-								+'</div>'
-								+'</div>'
-								+'</div>'
-								+'</div>'
-								+PlayerAnnounceExtra
+                  +'<div class="sheet-rt-card">'
+                    +'<div class="sheet-rt-header" style="background-color: '+ backgroundColor + '">'
+                      +'<div class="sheet-rt-title">'
+                        +'<div class="sheet-row">'
+                          +'<div class="sheet-col-2-3 sheet-center sheet-vert-middle">'
+                            +cNameString
+                          +'</div>'
+                          +'<div class="sheet-col-1-3 sheet-center sheet-vert-middle">'
+                            +"<img src='"+cImage+"' style='padding-left: 2px; width:"+Math.round(tokenSize*cRatio)+"px; height:"+tokenSize+"px;'>"
+                          +'</div>'
+                        +'</div>'
+                      +'</div>'
+                    +'</div>'
+                  +'</div>'
+                  +PlayerAnnounceExtra
 								+"</div>"
 				);
 			}
@@ -424,7 +421,9 @@ var TurnMarker = TurnMarker || (function(){
 
 			var turnOrder = TurnOrder.Get();
 
-			if (!turnOrder.length) { return; }
+			if (!turnOrder.length) {
+				return;
+			}
 
 			var current = _.first(turnOrder);
 
@@ -433,7 +432,9 @@ var TurnMarker = TurnMarker || (function(){
 				setTimeout(_.bind(TurnMarker.Step,this,TurnMarker.threadSync), 300);
 			}
 
-			if (current.id === "-1") { return; }
+			if (current.id === "-1") {
+				return;
+			}
 
 			TurnMarker._HandleMarkerTurn();
 
@@ -468,12 +469,12 @@ var TurnMarker = TurnMarker || (function(){
 					});
 					setTimeout(function() {
 						marker.set({
-							"layer": 'map'
+							"layer": currentToken.get("layer")
 						});
 					}, 100);
 				} else {
 					marker.set({
-						"layer": 'map',
+						"layer": currentToken.get("layer"),
 						"top": currentToken.get("top"),
 						"left": currentToken.get("left"),
 						"height": size,
