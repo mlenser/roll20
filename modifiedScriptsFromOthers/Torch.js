@@ -9,10 +9,13 @@ var Torch = Torch || (function() {
 			lastUpdate = 1430061737,
 			schemaVersion = 0.1,
 			flickerURL = 'https://s3.amazonaws.com/files.d20.io/images/4277467/iQYjFOsYC5JsuOPUCI9RGA/thumb.png?1401938659',
-			flickerPeriod = 400,
-			flickerDeltaLocation = 2,
-			flickerDeltaRadius = 0.1,
+			flickerPeriod = 300,
 			flickerInterval = false,
+			flickerBaseReached = false,
+			flickerPeakReached = true,
+			lightRadius = 40,
+			lightRadiusDelta = 0.08,
+			lowestLightRadius = lightRadius - 2,
 
 			ch = function (c) {
 				var entities = {
@@ -208,72 +211,6 @@ var Torch = Torch || (function() {
 
 				args = msg.content.split(" ");
 				switch(args[0]) {
-					case '!torch':
-						if((args[1]||'').match(/^(--)?help$/) || ( !_.has(msg,'selected') && args.length < 5)) {
-							showHelp(who);
-							return;
-						}
-						radius = parseInt(args[1],10) || 40;
-						dim_radius = parseInt(args[2],10) || (radius/2);
-						other_players = _.contains([1,'1','on','yes','true','sure','yup','-'], args[3] || 1 );
-
-						if(playerIsGM(msg.playerid)) {
-							_.chain(args)
-									.rest(4)
-									.uniq()
-									.map(function(t){
-										return getObj('graphic',t);
-									})
-									.reject(_.isUndefined)
-									.each(function(t) {
-										t.set({
-											light_radius: radius,
-											light_dimradius: dim_radius,
-											light_otherplayers: other_players
-										});
-									});
-						}
-
-						_.each(msg.selected,function (o) {
-							getObj(o._type,o._id).set({
-								light_radius: radius,
-								light_dimradius: dim_radius,
-								light_otherplayers: other_players
-							});
-						});
-						break;
-
-					case '!snuff':
-						if((args[1]||'').match(/^(--)?help$/) || ( !_.has(msg,'selected') && args.length < 2)) {
-							showHelp(who);
-							return;
-						}
-
-						if(playerIsGM(msg.playerid)) {
-							_.chain(args)
-									.rest(1)
-									.uniq()
-									.map(function(t){
-										return getObj('graphic',t);
-									})
-									.reject(_.isUndefined)
-									.each(function(t) {
-										t.set({
-											light_radius: '',
-											light_dimradius: '',
-											light_otherplayers: false
-										});
-									});
-						}
-						_.each(msg.selected,function (o) {
-							getObj(o._type,o._id).set({
-								light_radius: '',
-								light_dimradius: '',
-								light_otherplayers: false
-							});
-						});
-						break;
-
 					case '!daytime':
 						if((args[1]||'').match(/^(--)?help$/) ) {
 							showHelp(who);
@@ -289,7 +226,7 @@ var Torch = Torch || (function() {
 
 							if(page) {
 								page.set({
-									showlighting: false
+									lightglobalillumn: true
 								});
 								sendChat('','/w gm It is now <b>Daytime</b> on '+page.get('name')+'!');
 							}
@@ -311,7 +248,7 @@ var Torch = Torch || (function() {
 
 							if(page) {
 								page.set({
-									showlighting: true
+									lightglobalillumn: false
 								});
 								sendChat('','/w gm It is now <b>Nighttime</b> on '+page.get('name')+'!');
 							}
@@ -368,6 +305,7 @@ var Torch = Torch || (function() {
 
 				}
 			},
+
 			animateFlicker = function() {
 				var pages = _.union([Campaign().get('playerpageid')], _.values(Campaign().get('playerspecificpages')));
 
@@ -378,8 +316,7 @@ var Torch = Torch || (function() {
 						})
 						.each(function(fdata){
 							var o = getObj('graphic',fdata.parent),
-									f = getObj('graphic',fdata.id),
-									dx, dy, dr;
+									f = getObj('graphic',fdata.id);
 
 							if(!o) {
 								clearFlicker(fdata.id);
@@ -387,13 +324,22 @@ var Torch = Torch || (function() {
 								if(!f) {
 									delete state.Torch.flickers[fdata.id];
 								} else {
-									dx = randomInteger(2 * flickerDeltaLocation)-flickerDeltaLocation;
-									dy = randomInteger(2 * flickerDeltaLocation)-flickerDeltaLocation;
-									dr = randomInteger(2 * (fdata.light_radius*flickerDeltaRadius)) - (fdata.light_radius*flickerDeltaRadius);
+									if(!flickerBaseReached && flickerPeakReached) {
+										lightRadius = lightRadius - lightRadiusDelta;
+										if(lightRadius <= lowestLightRadius) {
+											flickerBaseReached = true;
+											flickerPeakReached = false;
+										}
+									} else {
+										lightRadius = lightRadius + lightRadiusDelta;
+										if(lightRadius >= 40) {
+											flickerBaseReached = false;
+											flickerPeakReached = true;
+										}
+									}
 									f.set({
-										top: o.get('top')+dy,
-										left: o.get('left')+dx,
-										light_radius: fdata.light_radius+dr
+										light_radius: lightRadius,
+										light_dimradius: lightRadius/2
 									});
 								}
 							}
@@ -429,13 +375,45 @@ var Torch = Torch || (function() {
 				flickerInterval = setInterval(animateFlicker,flickerPeriod);
 			},
 
+			checkForTokenMove = function(obj) {
+				if(obj) {
+					for(var key in state.Torch.flickers) {
+						var flicker = state.Torch.flickers[key];
+						if(flicker.parent == obj.id) {
+							var flickerObj = getObj('graphic', flicker.id);
+
+							flickerObj.set({
+								'top': obj.get('top'),
+								'left': obj.get('left')
+							});
+							break;
+						}
+					}
+				}
+			},
+
+			moveAllFlickers = function() {
+				for(var key in state.Torch.flickers) {
+					var flicker = state.Torch.flickers[key],
+							parentObj = getObj('graphic', flicker.parent),
+							flickerObj = getObj('graphic', flicker.id);
+
+						flickerObj.set({
+							'top': parentObj.get('top'),
+							'left': parentObj.get('left')
+						});
+				}
+			},
+
 			registerEventHandlers = function() {
 				on('chat:message', handleInput);
 				on('destroy:graphic', handleTokenDelete);
+				on("change:graphic", checkForTokenMove);
 			};
 
 	return {
 		CheckInstall: checkInstall,
+		MoveAllFlickers: moveAllFlickers,
 		RegisterEventHandlers: registerEventHandlers
 	};
 }());
@@ -445,4 +423,5 @@ on("ready",function(){
 
 	Torch.CheckInstall();
 	Torch.RegisterEventHandlers();
+	Torch.MoveAllFlickers();
 });
