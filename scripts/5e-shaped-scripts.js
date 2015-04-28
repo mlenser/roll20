@@ -986,9 +986,11 @@
 			}
 			function setTarget(target) {
 				setNPCActionAttribute('target', target);
+				setNPCActionToggle('target');
 			}
 			function setRange(type) {
 				setNPCActionAttribute('range', type);
+				setNPCActionToggle('range');
 			}
 
 			function setDamage(damage, altSecondary) {
@@ -1102,7 +1104,6 @@
 
 			_.each(actionList, function(value, key) {
 				var parsedAttack = false,
-						parsedDetails = false,
 						parsedSave = false,
 						parsedDamage = false,
 						parsed,
@@ -1151,7 +1152,6 @@
 					}
 					if(splitAttack[2]) {
 						setTarget(splitAttack[2].trim().toLowerCase());
-						parsedDetails = true;
 					}
 					parsedAttack = true;
 				}
@@ -1159,9 +1159,9 @@
 				while(reach = reachRegex.exec(splitAttack[1])) {
 					if(reach[1]) {
 						setNPCActionAttribute('reach', reach[1] + ' ft', reach[1]);
+						setNPCActionToggle('reach');
 					}
 					parsedAttack = true;
-					parsedDetails = true;
 				}
 				var rangeRegex = /(?:range)\s?(\d+)\/(\d+)\s?(ft)/gi;
 				while(range = rangeRegex.exec(splitAttack[1])) {
@@ -1169,7 +1169,6 @@
 						setRange(range[1] + '/' + range[2] + ' ft');
 					}
 					parsedAttack = true;
-					parsedDetails = true;
 				}
 
 
@@ -1304,7 +1303,6 @@
 					if(saveRange[2]) {
 						setRange(saveRange[2] + ' ft', saveRange[2]);
 					}
-					parsedDetails = true;
 				}
 
 				var lineRangeFootRegex = /(\d+)\-foot line\s*?that is (\d+) feet wide/gi,
@@ -1319,15 +1317,12 @@
 					} else if(lineRange[1]) {
 						setRange(lineRange[1]);
 					}
-					parsedDetails = true;
 				}
 
 				var lineTargetRegex = /\.\s*(.*in that line)/gi;
 				while(lineTarget = lineTargetRegex.exec(value)) {
 					setTarget(lineTarget[1]);
-					parsedDetails = true;
 				}
-				setNPCActionToggle('details', parsedDetails);
 
 
 				function createTokenAction() {
