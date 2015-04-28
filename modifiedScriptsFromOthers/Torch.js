@@ -309,41 +309,40 @@ var Torch = Torch || (function() {
 			animateFlicker = function() {
 				var pages = _.union([Campaign().get('playerpageid')], _.values(Campaign().get('playerspecificpages')));
 
-				_.chain(state.Torch.flickers)
-						.where({active:true})
-						.filter(function(o){
-							return _.contains(pages,o.page);
-						})
-						.each(function(fdata){
-							var o = getObj('graphic',fdata.parent),
-									f = getObj('graphic',fdata.id);
+				_.chain(state.Torch.flickers).where({active:true})
+					.filter(function(o){
+						return _.contains(pages, o.page);
+					})
+					.each(function(fdata){
+						var o = getObj('graphic',fdata.parent),
+								f = getObj('graphic',fdata.id);
 
-							if(!o) {
-								clearFlicker(fdata.id);
+						if(!o) {
+							clearFlicker(fdata.id);
+						} else {
+							if(!f) {
+								delete state.Torch.flickers[fdata.id];
 							} else {
-								if(!f) {
-									delete state.Torch.flickers[fdata.id];
-								} else {
-									if(!flickerBaseReached && flickerPeakReached) {
-										lightRadius = lightRadius - lightRadiusDelta;
-										if(lightRadius <= lowestLightRadius) {
-											flickerBaseReached = true;
-											flickerPeakReached = false;
-										}
-									} else {
-										lightRadius = lightRadius + lightRadiusDelta;
-										if(lightRadius >= 40) {
-											flickerBaseReached = false;
-											flickerPeakReached = true;
-										}
+								if(!flickerBaseReached && flickerPeakReached) {
+									lightRadius = lightRadius - lightRadiusDelta;
+									if(lightRadius <= lowestLightRadius) {
+										flickerBaseReached = true;
+										flickerPeakReached = false;
 									}
-									f.set({
-										light_radius: lightRadius,
-										light_dimradius: lightRadius/2
-									});
+								} else {
+									lightRadius = lightRadius + lightRadiusDelta;
+									if(lightRadius >= 40) {
+										flickerBaseReached = false;
+										flickerPeakReached = true;
+									}
 								}
+								f.set({
+									light_radius: lightRadius,
+									light_dimradius: lightRadius/2
+								});
 							}
-						});
+						}
+					});
 
 			},
 
