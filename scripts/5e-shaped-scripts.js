@@ -1,4 +1,4 @@
-(function (shaped, undefined) {
+(function (shaped) {
 
 	//Options
 	shaped.createAbilityAsToken = true;
@@ -1634,28 +1634,37 @@
 	}
 
 
-	function parseValuesViaSendChat(name) {
+	function parseValuesViaSendChat(parsebar) {
 		/*
-		log(name + '----');
-		sendChat('GM', '[[10 + @{Ankheg|perception}]]', function(ops) {
-			log('ops: ' + ops);
-			var rollResult = JSON.parse(ops[0].content);
-			log('rollResult: ' + rollResult);
-			if(_.has(rollResult, 'total')) {
-		 		log('rollResult.total: ' + rollResult.total);
-		 		return rollResult.total;
-		 	}
-	 	});
-	 	*/
-		/*
-		sendChat('', '[[10 + @{Ankheg|perception}]]',function(msg){
-			for(var k in msg[0].inlinerolls[1].results) {
-					if(msg[0].inlinerolls[1].results.hasOwnProperty(k)) {
-					log('logObj: ' + k + '->' + msg[0].inlinerolls[1].results[k]);
+		var journal = findObjs({
+					type: 'character',
+					name: characterName
+				})[0],
+				attributeValue,
+				cleanAttributeValue;
+
+		if(journal) {
+			log('journal');
+			log(journal);
+			attributeValue = getAttrByName(journal.id, parsebar);
+
+			regex = /@{(\w+)}/g;
+			while(match = regex.exec(attributeValue)) {
+				if(match && match[1]) {
+
 				}
 			}
-		});
-    */
+
+			log('attributeValue');
+			log(attributeValue);
+			cleanAttributeValue = attributeValue.replace(/@{(\w+)}/g,'@{'+characterName+'|$1}');
+			log('cleanAttributeValue');
+			log(cleanAttributeValue);
+			sendChat('', '[['+cleanAttributeValue+']]',function(msg){
+				log(msg);
+			});
+		}
+		*/
 		return '';
 	}
 
@@ -1676,8 +1685,8 @@
 				barMax = objOfParsebar.attributes.max;
 			} else {
 				barLink = 'sheetattr_' + parsebar;
-				barCurrent = parseValuesViaSendChat('Ankheg');
-				barMax = parseValuesViaSendChat('Ankheg');
+				barCurrent = parseValuesViaSendChat(parsebar);
+				barMax = parseValuesViaSendChat(parsebar);
 			}
 
 			//log('barCurrent: ' + barCurrent);
