@@ -1843,6 +1843,7 @@
 			setReachRangeTargetToggle(prefix, 'range', i);
 			convertActionToRepeating(prefix, 'target', i);
 			setReachRangeTargetToggle(prefix, 'target', i);
+			convertActionToggleToRepeating(prefix, 'details', i);
 
 			convertActionToRepeating(prefix, 'dmg', i);
 			convertActionToRepeating(prefix, 'dmg_type', i);
