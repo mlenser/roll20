@@ -13,7 +13,7 @@
 	shaped.parsebar1Max = false;
 	shaped.parsebar1_link = true;
 	// Blue bar
-	shaped.parsebar2 = 'passive_perception'; //'speed'
+	shaped.parsebar2 = ''; //'speed'
 	shaped.parsebar2Max = false;
 	shaped.parsebar2_link = false;
 	// Red bar
@@ -143,17 +143,14 @@
 			throw('One of the shaped.parsebar option has to be set to "HP" for random HP roll');
 		}
 
-		var bar = 'bar' + number;
-		var represent = '';
-		try {
-			if((represent = token.get('represents')) === '') {
-				throw('Token does not represent a character');
-			}
+		var bar = 'bar' + number,
+				represent = token.get('represents');
 
-			if(token.get(bar + '_link') !== '') {
-				throw('Token ' + bar + ' is linked');
-			}
-
+		if(represent === '') {
+			log('Token does not represent a character');
+		} else if(token.get(bar + '_link') !== '') {
+			log('Token ' + bar + ' is linked');
+		} else {
 			rollCharacterHp(represent, function(total, original, formula) {
 				token.set(bar + '_value', total);
 				token.set(bar + '_max', total);
@@ -163,8 +160,6 @@
 				}
 				sendChat('GM', message);
 			});
-		} catch(e) {
-			log('Exception: ' + e);
 		}
 	};
 
