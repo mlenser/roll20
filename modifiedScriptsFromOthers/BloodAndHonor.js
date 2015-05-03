@@ -20,7 +20,7 @@ var BloodAndHonor = {
 	// If you have it installed, this will plug in TheAaron's isGM auth module,
 	// which will make it so only the GM can use the !clearblood command
 	// Change to "true" if you want to check for authorization
-	useIsGM: false,
+	useIsGM: true,
 
 	// YOU MUST ADD YOUR OWN SPATTERS AND POOLS TO YOUR LIBRARY
 	// AND GET THE IMAGE LINK VIA YOUR WEB BROWSER.
@@ -57,20 +57,18 @@ var BloodAndHonor = {
 	createBlood: function createBlood(gPage_id,gLeft,gTop,gWidth,gType,gColor) {
 		gLeft = gLeft + (randomInteger(Math.floor(gWidth / 2)) * BloodAndHonor.getOffset());
 		gTop = gTop + (randomInteger(Math.floor(gWidth / 2)) * BloodAndHonor.getOffset());
-		setTimeout(function(){
-			toFront(fixedCreateObj("graphic",{
-				imgsrc: gType,
-				gmnotes: "blood",
-				pageid: gPage_id,
-				left: gLeft,
-				tint_color: gColor,
-				top: gTop,
-				rotation: randomInteger(360) - 1,
-				width: gWidth,
-				height: gWidth,
-				layer: "map",
-			}));
-		}, 0);
+		toFront(fixedCreateObj("graphic",{
+			imgsrc: gType,
+			gmnotes: "blood",
+			pageid: gPage_id,
+			left: gLeft,
+			tint_color: gColor,
+			top: gTop,
+			rotation: randomInteger(360) - 1,
+			width: gWidth,
+			height: gWidth,
+			layer: "map"
+		}));
 	},
 	timeout: 0,
 	onTimeout: function theFinalCountdown() {
@@ -94,7 +92,7 @@ fixedCreateObj = (function () {
 
 on("ready", function(obj) {
 
-	setInterval(function(){BloodAndHonor.onTimeout()},1000);
+	setInterval(function(){BloodAndHonor.onTimeout()},2000);
 
 	on("change:graphic:bar3_value", function(obj, prev) {
 		if (obj.get("bar3_max") === "" || obj.get("layer") != "objects" || (obj.get("gmnotes")).indexOf("noblood") !== -1) return;
