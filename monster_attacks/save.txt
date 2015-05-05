@@ -59,6 +59,8 @@ Beholder Disintegration Ray. If the target is a creature, it must succeed on a D
 
 Beholder Death Ray. The targeted creature must succeed on a DC 16 Dexterity saving throw or take 55 (10d10) necrotic damage. The target dies if the ray reduces it to 0 hit points.
 
+Otyugh Tentacle Slam. The otyugh slams creatures grappled by it into each other or a solid surface. Each creature must succeed on a DC 14 Strength saving throw or take 10 (2d6 + 3) bludgeoning damage and be stunned until the end of the otyugh's next turn. On a successful save, the target takes half the bludgeoning damage and isn't stunned.
+
 
 --
 Ancient Black Dragon Acid Breath (Recharge 5-6). The dragon exhales acid in a 90-foot line that is 10 feet wide . Each creature in that line must make a DC 22 Dexterity saving throw, taking 67 (15d8) acid damage on a failed save, or half as much damage on a successful one.

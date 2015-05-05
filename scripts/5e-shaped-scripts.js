@@ -38,7 +38,7 @@
 
 
 	shaped.statblock = {
-		version: '1.75',
+		version: '1.76',
 		RegisterHandlers: function () {
 			on('chat:message', HandleInput);
 
@@ -426,14 +426,16 @@
 
 	function clean(statblock) {
 		return unescape(statblock)
+				.replace(/\s\./g, '.')
 				.replace(/–/g, '-')
 				.replace(/<br[^>]*>/g, '#')
 				.replace(/\s+#\s+/g, '#')
 				.replace(/(<([^>]+)>)/gi, '')
 				.replace(/#(?=[a-z]|DC)/g, ' ')
 				.replace(/\s+/g, ' ')
-				.replace(/#Hit:/g, 'Hit:')
-				.replace(/#Each /g, 'Each ')
+				.replace(/#Hit:/gi, 'Hit:')
+				.replace(/#Each /gi, 'Each ')
+				.replace(/#On a successful save/gi, 'On a successful save')
 				.replace(/DC#(\d+)/g, 'DC $1')
 				.replace('LanguagesChallenge', 'Languages -#Challenge')
 				.replace("' Speed", 'Speed');
@@ -966,7 +968,7 @@
 					ifQuery = value;
 				}
 				if(ifQuery) {
-					setAttribute('repeating_' + actionType + 'actions_' + actionNum + '_' + attribute, value);
+					setAttribute('repeating_' + actionType + 'actions_' + actionNum + '_' + attribute, value.trim());
 				}
 			}
 			function setNPCActionToggle(attribute, toggle) {
@@ -1057,6 +1059,7 @@
 					takeOrTaking = /\,?\s*?(?:taking|or take)/,
 					againstDisease = /(?: against disease)?/,
 					saveSuccess = /(?:.*or\s(.*)?\son a successful one.)?/,
+					saveSuccessTwo = /(?:On a successful save,)?(.*)?/,
 					saveFailure = /(?:On a (?:failure|failed save))\,\s(?:(.*). On a success,\s(.*)?)?(.*)?/,
 					andAnythingElse = /(\s?and.*)?/,
 					orAnythingElseNoTake = /(or\s(?!take).*)/,
@@ -1065,7 +1068,7 @@
 					damagePlusRegex = new RegExp(plus.source + damageSyntax.source + damageType.source + commaPeriodSpace.source + anythingElse.source, 'i'),
 					altDamageRegex = new RegExp(altDamageSyntax.source + damageSyntax.source + damageType.source + commaPeriodSpace.source + altDamageReasonSyntax.source + commaPeriodOneSpace.source + altDamageExtraSyntax.source, 'i'),
 					hitEffectRegex = new RegExp(hit.source + anythingElse.source, 'i'),
-					saveDamageRegex = new RegExp(savingThrow.source + takeOrTaking.source + damageSyntax.source + damageType.source + saveSuccess.source + commaPeriodSpace.source + anythingElse.source, 'i'),
+					saveDamageRegex = new RegExp(savingThrow.source + takeOrTaking.source + damageSyntax.source + damageType.source + saveSuccess.source + commaPeriodSpace.source + anythingElse.source + saveSuccessTwo.source, 'i'),
 					saveOrRegex = new RegExp(savingThrow.source + againstDisease.source + commaPeriodDefinitiveSpace.source + orAnythingElseNoTake.source, 'i'),
 					saveFailedSaveRegex = new RegExp(savingThrow.source + commaPeriodSpace.source + saveFailure.source, 'i');
 
@@ -1209,6 +1212,7 @@
 					//6 is damage type explanation. Example "(djinni's choice)"
 					//7 is save success. Example "half as much damage"
 					//8 is effects
+					//9 is the other form of save success
 
 					if(saveDmg[1]) {
 						setSaveDC(saveDmg[1]);
@@ -1227,6 +1231,9 @@
 					}
 					if(saveDmg[5]) {
 						setSaveDamageType(saveDmg[5]);
+					}
+					if(saveDmg[9]) {
+						saveDmg[7] = saveDmg[9];
 					}
 					if(saveDmg[7]) {
 						setSaveSuccess(saveDmg[7]);
