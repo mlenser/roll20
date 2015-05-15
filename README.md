@@ -10,6 +10,10 @@ Scripts and other assorted things for roll20
 
 ### Changelog
 
+**15th May 2015 (1.76)**
+
+* Allow for multiple hit dice
+
 **20th April 2015 (1.75)**
 
 * More Sanitize
