@@ -724,14 +724,18 @@
 	}
 
 	function parseHD(hd) {
-		var splitHD = hd.match(/(\d+)d(\d+)/i);
-		if(!splitHD[1] || !splitHD[2]) {
-			throw 'Character doesn\'t have valid hd format';
-		}
-		var numHD = splitHD[1],
-				HDsize = 'd' + splitHD[2];
+		var regex = (/(\d+)d(\d+)/gi);
 
-		setAttribute('hd_' + HDsize, numHD, numHD);
+		while(splitHD = regex.exec(hd)) {
+			if(!splitHD[1] || !splitHD[2]) {
+				throw 'Character doesn\'t have valid hd format';
+			}
+
+			var numHD = splitHD[1],
+					HDsize = 'd' + splitHD[2];
+
+			setAttribute('hd_' + HDsize, numHD, numHD);
+		}
 	}
 	function parseHp(hp) {
 		var match = hp.match(/(\d+)\s*\(([\dd\s\+\-]*)\)/i);
