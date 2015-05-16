@@ -10,6 +10,12 @@ Scripts and other assorted things for roll20
 
 ### Changelog
 
+**16th May 2015 (1.77)**
+
+* Prevent some uncaught errors for certain weird syntaxes
+* Allow for recharges on a short or long rest
+* Fixed multiattack for werecreatures
+
 **15th May 2015 (1.76)**
 
 * Allow for multiple hit dice
