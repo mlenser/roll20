@@ -448,7 +448,7 @@
 			text = text.toString();
 		}
 
-		text = text.replace(/\,\./gi, ',').replace(/ft\s\./gi, 'ft.').replace(/ft\.\s\,/gi, 'ft').replace(/ft\./gi, 'ft').replace(/(\d+) ft\/(\d+) ft/gi, '$1/$2 ft').replace(/dl0/gi, 'd10').replace(/dlO/gi, 'd10').replace(/dl2/gi, 'd12').replace(/ld(\d+)/gi, '1d$1').replace(/ld\s+(\d+)/gi, '1d$1').replace(/(\d+)d\s+(\d+)/gi, '$1d$2').replace(/(\d+)\s+d(\d+)/gi, '$1d$2').replace(/(\d+)\s+d(\d+)/gi, '$1d$2').replace(/(\d+)d(\d)\s(\d)/gi, '$1d$2$3').replace(/(\d+)f(?:Day|day)/gi, '$1/Day').replace(/(\d+)f(\d+)/gi, '$1/$2').replace(/{/gi, '(').replace(/}/gi, ')').replace(/(\d+)\((\d+)/gi, '$1/$2').replace(/• /gi, '');
+		text = text.replace(/\,\./gi, ',').replace(/ft\s\./gi, 'ft.').replace(/ft\.\s\,/gi, 'ft').replace(/ft\./gi, 'ft').replace(/(\d+) ft\/(\d+) ft/gi, '$1/$2 ft').replace(/dl0/gi, 'd10').replace(/dlO/gi, 'd10').replace(/dl2/gi, 'd12').replace(/ld(\d+)/gi, '1d$1').replace(/ld\s+(\d+)/gi, '1d$1').replace(/(\d+)d\s+(\d+)/gi, '$1d$2').replace(/(\d+)\s+d(\d+)/gi, '$1d$2').replace(/(\d+)\s+d(\d+)/gi, '$1d$2').replace(/(\d+)d(\d)\s(\d)/gi, '$1d$2$3').replace(/(\d+)f(?:Day|day)/gi, '$1/Day').replace(/(\d+)f(\d+)/gi, '$1/$2').replace(/{/gi, '(').replace(/}/gi, ')').replace(/(\d+)\((\d+) ft/gi, '$1/$2 ft').replace(/• /gi, '');
 		text = text.replace(/(\d+)\s*?plus\s*?((?:\d+d\d+)|(?:\d+))/gi, '$2 + $1');
 		var replaceObj = {
 			'abol eth':'aboleth',
@@ -715,7 +715,7 @@
 
 	function parseArmorClass(ac) {
 		var match = ac.match(/(\d+)\s?(.*)/);
-		if(!match[1]) {
+		if(!match || !match[1]) {
 			throw 'Character doesn\'t have valid AC format';
 		}
 		setAttribute('npc_AC', match[1]);
@@ -728,7 +728,7 @@
 		var regex = (/(\d+)d(\d+)/gi);
 
 		while(splitHD = regex.exec(hd)) {
-			if(!splitHD[1] || !splitHD[2]) {
+			if(!splitHD || !splitHD[1] || !splitHD[2]) {
 				throw 'Character doesn\'t have valid hd format';
 			}
 
@@ -739,8 +739,8 @@
 		}
 	}
 	function parseHp(hp) {
-		var match = hp.match(/(\d+)\s*\(([\dd\s\+\-]*)\)/i);
-		if(!match[1] || !match[2]) {
+		var match = hp.match(/(\d+)\s?\(([\dd\s\+\-]*)\)/i);
+		if(!match || !match[1] || !match[2]) {
 			throw 'Character doesn\'t have valid HP/HD format';
 		}
 
@@ -774,7 +774,7 @@
 		var regex = /(|blindsight|darkvision|tremorsense|truesight|)\s*?(\d+)\s*?ft?\s*(\(.*\))?/gi;
 
 		while(match = regex.exec(senses)) {
-			if (!match[1] || !match[2]) {
+			if (!match || !match[1] || !match[2]) {
 				throw 'Character doesn\'t have valid senses format';
 			}
 
@@ -1376,17 +1376,26 @@
 			setAbility('Init', '', '%{'+characterName+'|Initiative}', shaped.createAbilityAsToken);
 		}
 
-		if(actions.Multiattack) {
-			multiAttackText = actions.Multiattack;
-			setAttribute('multiattack', multiAttackText);
-			delete actions.Multiattack;
+		for(var key in actions) {
+			var multiattackRegex = /Multiattack(?:\s*(\(.*\)))?/gi,
+					multi = multiattackRegex.exec(key),
+					multiAttackText;
+			if(multi) {
+				if(multi[1]) {
+					multiAttackText = multi[1] + ': ';
+				}
+				multiAttackText += actions[key];
+				setAttribute('multiattack', multiAttackText);
+				delete actions[key];
 
-			setAttribute('toggle_multiattack', 'on');
+				setAttribute('toggle_multiattack', 'on');
 
-			if(shaped.usePowerAbility) {
-				setAbility('MultiAtk', '', powercardAbility(id, actionNumber), shaped.createAbilityAsToken);
-			} else {
-				setAbility('MultiAtk', '', '%{'+characterName+'|multiattack}', shaped.createAbilityAsToken);
+				if(shaped.usePowerAbility) {
+					setAbility('MultiAtk', '', powercardAbility(id, actionNumber), shaped.createAbilityAsToken);
+				} else {
+					setAbility('MultiAtk', '', '%{'+characterName+'|multiattack}', shaped.createAbilityAsToken);
+				}
+				break;
 			}
 		}
 
@@ -1697,9 +1706,6 @@
 				barMax = parseValuesViaSendChat(parsebar);
 			}
 
-			//log('barCurrent: ' + barCurrent);
-			//log('barMax: ' + barMax);
-
 
 			if(shaped['parse' + bar + '_link']) {
 				log(bar + ': setting link to: ' + barLink);
@@ -1779,8 +1785,9 @@
 							bar3_max: token.get('bar3_max'),
 							layer: 'objects'
 						});
-				if(shaped.rollMonsterHpOnDrop === true)
+				if(shaped.rollMonsterHpOnDrop === true) {
 					shaped.rollTokenHp(obj);
+				}
 			}
 		}, 1);
 	};
