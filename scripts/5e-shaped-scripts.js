@@ -1379,7 +1379,7 @@
 		for(var key in actions) {
 			var multiattackRegex = /Multiattack(?:\s*(\(.*\)))?/gi,
 					multi = multiattackRegex.exec(key),
-					multiAttackText;
+					multiAttackText = '';
 			if(multi) {
 				if(multi[1]) {
 					multiAttackText = multi[1] + ': ';
