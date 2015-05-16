@@ -25,7 +25,7 @@
 
 
 	shaped.showName = true; //show the name on the map (not to players)
-	shaped.useAaronsNumberedScript = false;
+	//shaped.useAaronsNumberedScript = true;
 
 	//optional Settings tab
 	//shaped.defaultTab = 10; //1 is the core sheet. Uncomment to 10 if you want the actions page. Change to 6 if you want the spellbook page. Change to 98 if you want to "Show All" for the NPC pages.
@@ -148,6 +148,7 @@
 
 		if(represent === '') {
 			log('Token does not represent a character');
+			return;
 		} else if(token.get(bar + '_link') !== '') {
 			log('Token ' + bar + ' is linked');
 		} else {
@@ -541,7 +542,7 @@
 		}
 
 		// Power
-		regex = /(?:#|\.\s+)([A-Z][\w-]+(?:\s(?:[A-Z][\w-]+|[\(\)\d\-]|of|and|or)+)*)(?=\s*\.)/g;
+		regex = /(?:#)([A-Z][\w-]+(?:\s(?:[A-Z][\w-]+|[\(\)\d\-]|of|and|or|a)+)*)(?=\s*\.)/gi;
 		log('parsed statblock: ' + statblock);
 		while(match = regex.exec(statblock)) {
 			if(!keyword.attr[match[1].toLowerCase()]) {
@@ -704,7 +705,7 @@
 
 	function parseSize(size) {
 		var match = size.match(/(.*?) (.*?), (.*)/i);
-		if(!match[1] || !match[2] || !match[3]) {
+		if(!match || !match[1] || !match[2] || !match[3]) {
 			throw 'Character doesn\'t have valid type/size/alignment format';
 		}
 		setAttribute('size', shaped.capitalizeEachWord(match[1]));
@@ -1122,11 +1123,12 @@
 					actionPosition[actionNum] = key.toLowerCase();
 				}
 
-				var keyRegex = /\s*?\(Recharge\s*?(\d+\-\d+|\d+)\)/gi;
+				var keyRegex = /\s*?\((?:Recharge\s*?(\d+\-\d+|\d+)|Recharges\safter\sa\s(.*))\)/gi;
 				while(keyResult = keyRegex.exec(key)) {
-					setNPCActionAttribute('recharge', keyResult[1]);
-					setNPCActionToggle('recharge', keyResult[1]);
-					if(keyResult[1]) {
+					var recharge = keyResult[1] || keyResult[2];
+					setNPCActionAttribute('recharge', recharge);
+					setNPCActionToggle('recharge');
+					if(recharge) {
 						key = key.replace(keyRegex, '');
 					}
 				}
