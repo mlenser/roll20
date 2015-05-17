@@ -448,7 +448,7 @@
 			text = text.toString();
 		}
 
-		text = text.replace(/\,\./gi, ',').replace(/ft\s\./gi, 'ft.').replace(/ft\.\s\,/gi, 'ft').replace(/ft\./gi, 'ft').replace(/(\d+) ft\/(\d+) ft/gi, '$1/$2 ft').replace(/dl0/gi, 'd10').replace(/dlO/gi, 'd10').replace(/dl2/gi, 'd12').replace(/ld(\d+)/gi, '1d$1').replace(/ld\s+(\d+)/gi, '1d$1').replace(/(\d+)d\s+(\d+)/gi, '$1d$2').replace(/(\d+)\s+d(\d+)/gi, '$1d$2').replace(/(\d+)\s+d(\d+)/gi, '$1d$2').replace(/(\d+)d(\d)\s(\d)/gi, '$1d$2$3').replace(/(\d+)f(?:Day|day)/gi, '$1/Day').replace(/(\d+)f(\d+)/gi, '$1/$2').replace(/{/gi, '(').replace(/}/gi, ')').replace(/(\d+)\((\d+) ft/gi, '$1/$2 ft').replace(/• /gi, '');
+		text = text.replace(/\,\./gi, ',').replace(/ft\s\./gi, 'ft.').replace(/ft\.\s\,/gi, 'ft').replace(/ft\./gi, 'ft').replace(/(\d+) ft\/(\d+) ft/gi, '$1/$2 ft').replace(/dl0/gi, 'd10').replace(/dlO/gi, 'd10').replace(/dl2/gi, 'd12').replace(/ld(\d+)/gi, '1d$1').replace(/ld\s+(\d+)/gi, '1d$1').replace(/(\d+)d\s+(\d+)/gi, '$1d$2').replace(/(\d+)\s+d(\d+)/gi, '$1d$2').replace(/(\d+)\s+d(\d+)/gi, '$1d$2').replace(/(\d+)d(\d)\s(\d)/gi, '$1d$2$3').replace(/(\d+)f(?:Day|day)/gi, '$1/Day').replace(/(\d+)f(\d+)/gi, '$1/$2').replace(/{/gi, '(').replace(/}/gi, ')').replace(/(\d+)\((\d+) ft/gi, '$1/$2 ft').replace(/• /gi, '').replace(/’/gi, '\'');
 		text = text.replace(/(\d+)\s*?plus\s*?((?:\d+d\d+)|(?:\d+))/gi, '$2 + $1');
 		var replaceObj = {
 			'abol eth':'aboleth',
@@ -542,7 +542,7 @@
 		}
 
 		// Power
-		regex = /(?:#)([A-Z][\w-]+(?:\s(?:[A-Z][\w-]+|[\(\)\d\-]|of|and|or|a)+)*)(?=\s*\.)/gi;
+		regex = /(?:#)([A-Z][\w-\']+(?:\s(?:[A-Z][\w-\']+|[\(\)\d\-]|of|and|or|a)+)*)(?=\s*\.)/gi;
 		log('parsed statblock: ' + statblock);
 		while(match = regex.exec(statblock)) {
 			if(!keyword.attr[match[1].toLowerCase()]) {
