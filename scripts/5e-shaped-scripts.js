@@ -1,12 +1,24 @@
 (function (shaped) {
 
-	//Options
+	/****Import Options***/
 	shaped.createAbilityAsToken = true;
 	shaped.monsterAsMinHp = false; // generated token hp can't be lower than the average hp
 	shaped.rollMonsterHpOnDrop = true; // will roll HP when character are dropped on map
 
+	shaped.showName = true; //show the name on the map (not to players)
+	//shaped.useAaronsNumberedScript = true;
+
+	//shaped.defaultTab = 10; //1 is the core sheet. Uncomment to 10 if you want the actions page. Change to 6 if you want the spellbook page. Change to 98 if you want to "Show All" for the NPC pages.
+	shaped.sheetOutput = ''; //change to 'hidden' if you wish the sheet to whisper all commands to the GM
+	shaped.whisperDeathSaves = true; //change to false if you wish NPC death saves to be rolled openly
+	//shaped.initiativeTieBreaker = true; //change to true if you want to add the initiative modifier as a tie breaker for initiatives. (I use it)
+	shaped.initiativeAddsToTracker = true; //change to false if you do not want to add the initiative to the tracker (mainly for the app)
+
+	shaped.addInitiativeTokenAbility = true; //change to false if you do not want a macro "Init" on every token
+
+
 	/* Setting these to a sheet value will set the token bar value. If they are set to '' or not set then it will use whatever you already have set on the token
-	 Do not use npc_HP, use HP instead
+		Do not use npc_HP, use HP instead
 	 */
 	// Green bar
 	shaped.parsebar1 = 'npc_AC';
@@ -21,22 +33,7 @@
 	shaped.parsebar3Max = true;
 	shaped.parsebar3_link = false;
 
-
-
-
-	shaped.showName = true; //show the name on the map (not to players)
-	//shaped.useAaronsNumberedScript = true;
-
 	//shaped.useAmmoAutomatically = true;
-
-	//optional Settings tab
-	//shaped.defaultTab = 10; //1 is the core sheet. Uncomment to 10 if you want the actions page. Change to 6 if you want the spellbook page. Change to 98 if you want to "Show All" for the NPC pages.
-	shaped.sheetOutput = ''; //change to 'hidden' if you wish the sheet to whisper all commands to the GM
-	shaped.whisperDeathSaves = true; //change to false if you wish NPC death saves to be rolled openly
-	//shaped.initiativeTieBreaker = true; //change to true if you want to add the initiative modifier as a tie breaker for initiatives. (I use it)
-	shaped.initiativeAddsToTracker = true; //change to false if you do not want to add the initiative to the tracker (mainly for the app)
-
-	shaped.addInitiativeTokenAbility = true; //change to false if you do not want a macro "Init" on every token
 
 
 	shaped.statblock = {
