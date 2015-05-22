@@ -33,7 +33,7 @@
 	shaped.parsebar3Max = true;
 	shaped.parsebar3_link = false;
 
-	//shaped.useAmmoAutomatically = true;
+	shaped.useAmmoAutomatically = true;
 
 
 	shaped.statblock = {
