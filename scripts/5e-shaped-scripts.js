@@ -76,7 +76,7 @@
 				}
 			}
 
-			shaped.decrementAmmo('Dakra', 'repeating_weapons_ranged_0_ammo');
+			shaped.decrementAmmo(character_name, attribute);
 		}
 
 		if(msg.type !== 'api') {
