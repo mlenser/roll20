@@ -27,6 +27,8 @@
 	shaped.showName = true; //show the name on the map (not to players)
 	//shaped.useAaronsNumberedScript = true;
 
+	//shaped.useAmmoAutomatically = true;
+
 	//optional Settings tab
 	//shaped.defaultTab = 10; //1 is the core sheet. Uncomment to 10 if you want the actions page. Change to 6 if you want the spellbook page. Change to 98 if you want to "Show All" for the NPC pages.
 	shaped.sheetOutput = ''; //change to 'hidden' if you wish the sheet to whisper all commands to the GM
@@ -59,6 +61,27 @@
 			characterName = null;
 
 	function HandleInput(msg) {
+		if(shaped.useAmmoAutomatically && msg.rolltemplate === '5eDefault' && msg.content.indexOf('{{ammo_auto=1}}') !== -1) {
+			var character_name,
+					attribute,
+					match,
+					regex = /\{\{(.*?)\}\}/gi;
+
+			while(match = regex.exec(msg.content)) {
+				if(match[1]) {
+					var splitAttr = match[1].split('=');
+					if(splitAttr[0] === 'character_name') {
+						character_name = splitAttr[1];
+					}
+					if(splitAttr[0] === 'ammo_field') {
+						attribute = splitAttr[1];
+					}
+				}
+			}
+
+			shaped.decrementAmmo('Dakra', 'repeating_weapons_ranged_0_ammo');
+		}
+
 		if(msg.type !== 'api') {
 			return;
 		}
@@ -84,13 +107,6 @@
 				break;
 			case '!shaped-action-repeating-convert':
 				shaped.getSelectedToken(msg, shaped.parseActionsToRepeating);
-				break;
-			case '!use-ammo':
-				if(!args[1] || !args[2]) {
-					sendChat('Ammo', '/w gm decrementAmmo parameters were not passed');
-				} else {
-					shaped.decrementAmmo(args[1], args[2]);
-				}
 				break;
 		}
 	}
@@ -135,8 +151,6 @@
 	}
 
 	shaped.decrementAmmo = function (characterName, attributeName) {
-		log(characterName);
-		log(attributeName);
 		var obj = findObjs({
 			_type: 'character',
 			name: characterName
