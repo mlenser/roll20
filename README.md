@@ -10,6 +10,11 @@ Scripts and other assorted things for roll20
 
 ### Changelog
 
+**22nd May 2015 (1.78)**
+
+* Added a function to decrease ammo when it is used.
+
+
 **16th May 2015 (1.77)**
 
 * Prevent some uncaught errors for certain weird syntaxes

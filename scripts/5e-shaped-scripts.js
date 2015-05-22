@@ -40,7 +40,7 @@
 
 
 	shaped.statblock = {
-		version: '1.77',
+		version: '1.78',
 		RegisterHandlers: function () {
 			on('chat:message', HandleInput);
 
