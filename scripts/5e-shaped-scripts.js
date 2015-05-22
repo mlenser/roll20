@@ -63,14 +63,14 @@
 			return;
 		}
 		log('msg.content: ' + msg.content);
-		var args = msg.content.split(/\s+--/);
-		if(args[1] && args[1] === 'clean') {
-			shaped.getSelectedToken(msg, shaped.deleteOldSheet);
-		}
+		var args = msg.content.split(/\s+/);
 		switch(args[0]) {
 			case '!build-monster':
 			case '!shaped-parse':
 			case '!shaped-import':
+				if(args[1] && args[1] === '--clean') {
+					shaped.getSelectedToken(msg, shaped.deleteOldSheet);
+				}
 				shaped.getSelectedToken(msg, shaped.ImportStatblock);
 				break;
 			case '!shaped-rollhp':
@@ -84,6 +84,13 @@
 				break;
 			case '!shaped-action-repeating-convert':
 				shaped.getSelectedToken(msg, shaped.parseActionsToRepeating);
+				break;
+			case '!use-ammo':
+				if(!args[1] || !args[2]) {
+					sendChat('Ammo', '/w gm decrementAmmo parameters were not passed');
+				} else {
+					shaped.decrementAmmo(args[1], args[2]);
+				}
 				break;
 		}
 	}
@@ -126,6 +133,24 @@
 			log('old sheet removed before importing');
 		}
 	}
+
+	shaped.decrementAmmo = function (characterName, attributeName) {
+		log(characterName);
+		log(attributeName);
+		var obj = findObjs({
+			_type: 'character',
+			name: characterName
+		})[0];
+		var	attr = findObjs({
+			_type: 'attribute',
+			_characterid: obj.id,
+			name: attributeName
+		})[0];
+
+		var val = parseInt(attr.get('current'), 10) || 0;
+
+		attr.set({current: val - 1});
+	};
 
 	shaped.rollHpForSelectedToken = function(msg) {
 		shaped.getSelectedToken(msg, shaped.rollTokenHp);
@@ -442,7 +467,6 @@
 				.replace("' Speed", 'Speed');
 	}
 
-
 	function sanitizeText (text) {
 		if(typeof text !== 'string') {
 			text = text.toString();
@@ -738,6 +762,7 @@
 			setAttribute('hd_' + HDsize, numHD, numHD);
 		}
 	}
+
 	function parseHp(hp) {
 		var match = hp.match(/(\d+)\s?\(([\dd\s\+\-]*)\)/i);
 		if(!match || !match[1] || !match[2]) {
@@ -828,7 +853,6 @@
 		token.set('light_angle', 360);
 		token.set('light_losangle', 360);
 	}
-
 
 	function parseChallenge(cr) {
 		var input = cr.replace(/[, ]/g, '');
@@ -934,6 +958,7 @@
 			}
 		}
 	}
+
 	function parseTraits(traits) {
 		var traitsArray = [];
 		_.each(traits, function(value, key) {
@@ -1649,7 +1674,6 @@
 		token.set(bar + '_value', '');
 		token.set(bar + '_max', '');
 	}
-
 
 	function parseValuesViaSendChat(parsebar) {
 		/*
