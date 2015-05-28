@@ -24,20 +24,23 @@
 	shaped.parsebar1 = 'npc_AC';
 	shaped.parsebar1Max = false;
 	shaped.parsebar1_link = true;
+	shaped.showbar1 = false;
 	// Blue bar
 	shaped.parsebar2 = ''; //'speed'
 	shaped.parsebar2Max = false;
 	shaped.parsebar2_link = false;
+	shaped.showbar2 = false;
 	// Red bar
 	shaped.parsebar3 = 'HP';
 	shaped.parsebar3Max = true;
 	shaped.parsebar3_link = false;
+	shaped.showbar3 = false;
 
 	shaped.useAmmoAutomatically = true;
 
 
 	shaped.statblock = {
-		version: '1.78',
+		version: '1.79',
 		RegisterHandlers: function () {
 			on('chat:message', HandleInput);
 
@@ -358,6 +361,16 @@
 				setBarValueAfterConvert(token, 'bar1');
 				setBarValueAfterConvert(token, 'bar2');
 				setBarValueAfterConvert(token, 'bar3');
+
+				if(shaped.showBar1) {
+					token.set('showplayers_bar1', true);
+				}
+				if(shaped.showBar2) {
+					token.set('showplayers_bar2', true);
+				}
+				if(shaped.showBar3) {
+					token.set('showplayers_bar3', true);
+				}
 
 				setTokenVision(token);
 			}
