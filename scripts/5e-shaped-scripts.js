@@ -362,14 +362,14 @@
 				setBarValueAfterConvert(token, 'bar2');
 				setBarValueAfterConvert(token, 'bar3');
 
-				if(shaped.showBar1) {
-					token.set('showplayers_bar1', true);
+				if(shaped.showbar1) {
+					token.set('showplayers_bar1', 'true');
 				}
-				if(shaped.showBar2) {
-					token.set('showplayers_bar2', true);
+				if(shaped.showbar2) {
+					token.set('showplayers_bar2', 'true');
 				}
-				if(shaped.showBar3) {
-					token.set('showplayers_bar3', true);
+				if(shaped.showbar3) {
+					token.set('showplayers_bar3', 'true');
 				}
 
 				setTokenVision(token);
