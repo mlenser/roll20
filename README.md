@@ -10,6 +10,11 @@ Scripts and other assorted things for roll20
 
 ### Changelog
 
+**27th June 2015 (1.80)**
+
+* Added the ability to show the monster's name to players
+* Parsed SdX to 5dX
+
 **28th May 2015 (1.79)**
 
 * Added setting to show bar 1-3
