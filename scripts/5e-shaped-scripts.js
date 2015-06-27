@@ -41,7 +41,7 @@
 
 
 	shaped.statblock = {
-		version: '1.79',
+		version: '1.80',
 		RegisterHandlers: function () {
 			on('chat:message', HandleInput);
 
@@ -98,10 +98,10 @@
 				shaped.getSelectedToken(msg, shaped.ImportStatblock);
 				break;
 			case '!shaped-rollhp':
-				return shaped.rollHpForSelectedToken(msg);
+				shaped.rollHpForSelectedToken(msg);
 				break;
 			case '!shaped-clone':
-				return shaped.cloneToken(msg, args[1]);
+				shaped.cloneToken(msg, args[1]);
 				break;
 			case '!shaped-convert':
 				shaped.getSelectedToken(msg, shaped.parseOldToNew);
@@ -149,7 +149,7 @@
 			obj.remove();
 			log('old sheet removed before importing');
 		}
-	}
+	};
 
 	shaped.decrementAmmo = function (characterName, attributeName) {
 		var obj = findObjs({
@@ -613,18 +613,24 @@
 		}
 
 		var splitStatblock = statblock.split('#'),
-				lastItem = '',
-				actionsPosArray = [],
-				i = 1;
+			lastItem = '',
+			actionsPosArray = [],
+			i = 1;
 
-		for(var key in keyword.actions) {
-			actionsPosArray.push(keyword.actions[key]);
+		for(var actionsKey in keyword.actions) {
+			if (keyword.actions.hasOwnProperty(actionsKey)) {
+				actionsPosArray.push(keyword.actions[actionsKey]);
+			}
 		}
-		for(var key in keyword.legendary) {
-			actionsPosArray.push(keyword.legendary[key]);
+		for(var legendaryKey in keyword.legendary) {
+			if (keyword.legendary.hasOwnProperty(legendaryKey)) {
+				actionsPosArray.push(keyword.legendary[legendaryKey]);
+			}
 		}
-		for(var key in keyword.lair) {
-			actionsPosArray.push(keyword.lair[key]);
+		for(var lairKey in keyword.lair) {
+			if (keyword.lair.hasOwnProperty(lairKey)) {
+				actionsPosArray.push(keyword.lair[lairKey]);
+			}
 		}
 		actionsPosArray.sort(sortNumber);
 
@@ -635,7 +641,7 @@
 			lastItem = splitStatblock[splitStatblock.length - i];
 			lastItemIndex = statblock.indexOf(lastItem);
 			if(lastItemIndex > lastActionIndex) {
-				keyword.traits['Description'] = lastItemIndex - 1; //-1 to include the #
+				keyword.traits.Description = lastItemIndex - 1; //-1 to include the #
 			}
 			i++;
 		}
@@ -656,24 +662,30 @@
 		var indexArray = [];
 
 		for(var section in keyword) {
-			var obj = keyword[section];
-			for(var key in keyword[section]) {
-				indexArray.push(obj[key]);
+			if (keyword.hasOwnProperty(section)) {
+				var obj = keyword[section];
+				for (var key in keyword[section]) {
+					indexArray.push(obj[key]);
+				}
 			}
 		}
 
 		indexArray.sort(sortNumber);
 
-		keyword['attr']['name'] = extractSection(statblock.substring(0, indexArray[0]), 'name');
+		keyword.attr.name = extractSection(statblock.substring(0, indexArray[0]), 'name');
 
 		for(var section in keyword) {
-			var obj = keyword[section];
-			for(var key in obj) {
-				var start = obj[key],
-						nextPos = indexArray.indexOf(start) + 1,
-						end = indexArray[nextPos] || statblock.length;
+			if (keyword.hasOwnProperty(section)) {
+				var obj = keyword[section];
+				for (var key in obj) {
+					if (obj.hasOwnProperty(key)) {
+						var start = obj[key],
+							nextPos = indexArray.indexOf(start) + 1,
+							end = indexArray[nextPos] || statblock.length;
 
-				keyword[section][key] = extractSection(statblock.substring(start, end), key);
+						keyword[section][key] = extractSection(statblock.substring(start, end), key);
+					}
+				}
 			}
 		}
 
