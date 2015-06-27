@@ -6,6 +6,7 @@
 	shaped.rollMonsterHpOnDrop = true; // will roll HP when character are dropped on map
 
 	shaped.showName = true; //show the name on the map (not to players)
+	//shaped.showNameToPlayers = true; //show the name to players
 	//shaped.useAaronsNumberedScript = true;
 
 	//shaped.defaultTab = 10; //1 is the core sheet. Uncomment to 10 if you want the actions page. Change to 6 if you want the spellbook page. Change to 98 if you want to "Show All" for the NPC pages.
@@ -354,6 +355,9 @@
 
 				if(shaped.showName) {
 					token.set('showname', true);
+				}
+				if(showNameToPlayers) {
+					token.set('showplayers_name', true);
 				}
 
 				setUserDefinedScriptSettings();
