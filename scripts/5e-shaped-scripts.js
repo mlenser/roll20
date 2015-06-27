@@ -356,7 +356,7 @@
 				if(shaped.showName) {
 					token.set('showname', true);
 				}
-				if(showNameToPlayers) {
+				if(shaped.showNameToPlayers) {
 					token.set('showplayers_name', true);
 				}
 
