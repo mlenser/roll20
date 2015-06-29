@@ -10,6 +10,11 @@ Scripts and other assorted things for roll20
 
 ### Changelog
 
+**29th June 2015 (1.81)**
+
+* Added the ability to change the settings items for all PCs, all NPCs, or all characters.
+* Updated the fields for that and importing to match the refactoring done on the sheet.
+
 **27th June 2015 (1.80)**
 
 * Added the ability to show the monster's name to players

@@ -7,15 +7,19 @@
 
 	shaped.showName = true; //show the name on the map (not to players)
 	//shaped.showNameToPlayers = true; //show the name to players
-	//shaped.useAaronsNumberedScript = true;
+	//shaped.useAaronsNumberedScript = true; //add numbers at the end if using his script
 
 	//shaped.defaultTab = 10; //1 is the core sheet. Uncomment to 10 if you want the actions page. Change to 6 if you want the spellbook page. Change to 98 if you want to "Show All" for the NPC pages.
 	shaped.sheetOutput = ''; //change to 'hidden' if you wish the sheet to whisper all commands to the GM
 	shaped.whisperDeathSaves = true; //change to false if you wish NPC death saves to be rolled openly
 	//shaped.initiativeTieBreaker = true; //change to true if you want to add the initiative modifier as a tie breaker for initiatives. (I use it)
+  shaped.whisperInitiative = true; //always whisper initiative
 	shaped.initiativeAddsToTracker = true; //change to false if you do not want to add the initiative to the tracker (mainly for the app)
-
 	shaped.addInitiativeTokenAbility = true; //change to false if you do not want a macro "Init" on every token
+
+  //shaped.showCharacterNameOnRollTemplate = true; //show the character's name on their roll templates
+
+  //shaped.attacksVsTargetAC = true; //show the target's AC when using attacks
 
 
 	/* Setting these to a sheet value will set the token bar value. If they are set to '' or not set then it will use whatever you already have set on the token
@@ -41,7 +45,7 @@
 
 
 	shaped.statblock = {
-		version: '1.80',
+		version: '1.81',
 		RegisterHandlers: function () {
 			on('chat:message', HandleInput);
 
@@ -99,6 +103,10 @@
 				break;
 			case '!shaped-rollhp':
 				shaped.rollHpForSelectedToken(msg);
+				break;
+			case '!shaped-settings':
+				args.shift();
+				shaped.changeSettings(args);
 				break;
 			case '!shaped-clone':
 				shaped.cloneToken(msg, args[1]);
@@ -299,25 +307,41 @@
 			setAttribute('tab', shaped.defaultTab);
 		}
 		if(shaped.sheetOutput === 'hidden') {
-			setAttribute('output_option', '/w GM ');
+			setAttribute('output_option', '@{output_to_gm}');
 		} else {
-			setAttribute('output_option', ' ');
+			setAttribute('output_option', '@{output_to_all}');
 		}
 		if(shaped.whisperDeathSaves) {
-			setAttribute('death_save_output_option', '/w GM ');
+			setAttribute('death_save_output_option', '@{output_to_gm}');
 		} else {
-			setAttribute('death_save_output_option', ' ');
+			setAttribute('death_save_output_option', '@{output_to_all}');
 		}
+    if(shaped.whisperInitiative) {
+      setAttribute('initiative_output_option', '@{output_to_gm}');
+    } else {
+      setAttribute('initiative_output_option', '@{output_to_all}');
+    }
+    if(shaped.showCharacterNameOnRollTemplate) {
+      setAttribute('show_character_name', '@{show_character_name_yes}');
+    } else {
+      setAttribute('show_character_name', '@{show_character_name_no}');
+    }
 		if(shaped.initiativeTieBreaker) {
-			setAttribute('initiative_tie_breaker', '(@{initiative_overall}) / 100');
+			setAttribute('initiative_tie_breaker', '((@{initiative_overall}) / 100)');
 		} else {
-			setAttribute('initiative_tie_breaker', '0');
+			setAttribute('initiative_tie_breaker', '');
 		}
 		if(shaped.initiativeAddsToTracker) {
-			setAttribute('intiaitive_to_tracker', '@{selected|initiative_overall} [Initiative Mod] &{tracker}');
+			setAttribute('initiative_to_tracker', '@{initiative_to_tracker_yes}');
 		} else {
-			setAttribute('intiaitive_to_tracker', '@{initiative_overall} [Initiative Mod]');
+			setAttribute('initiative_to_tracker', '@{initiative_to_tracker_no}');
 		}
+    if(shaped.attacksVsTargetAC) {
+      setAttribute('attacks_vs_target_ac', '@{attacks_vs_target_ac_no}');
+    } else {
+      setAttribute('attacks_vs_target_ac', '@{attacks_vs_target_ac_yes}');
+    }
+
 	}
 
 	function logObject(obj) {
@@ -1810,6 +1834,113 @@
 		setBarValueAfterConvert(token, 'bar3');
 	};
 
+	shaped.changeSettings = function(args) {
+    var changeNPCs = false,
+      changePCs = false,
+      attributeName,
+      attributeValue;
+
+    if (args[0] === 'npcs') {
+      changeNPCs = true;
+    } else if (args[0] === 'pcs') {
+      changePCs = true;
+    } else if (args[0] === 'all') {
+      changeNPCs = true;
+      changePCs = true;
+    } else {
+      var errorMessage = "invalid target. Please send 'npcs', 'pcs', or 'all'";
+      log(errorMessage);
+      sendChat('GM', '/w GM ' + errorMessage);
+    }
+
+    var validAttributeName = ['output_option', 'death_save_output_option', 'initiative_output_option', 'show_character_name', 'initiative_tie_breaker', 'initiative_to_tracker', 'attacks_vs_target_ac'];
+    if (validAttributeName.indexOf(args[1]) !== -1) {
+      attributeName = args[1];
+    } else {
+      var errorMessage = 'invalid attribute. Please use one of the following: ' + validAttributeName.join(', ');
+      log(errorMessage);
+      sendChat('GM', '/w GM ' + errorMessage);
+      return
+    }
+
+    var validAttributeValue = ['hide', 'show', 'yes', 'no'];
+    if (validAttributeValue.indexOf(args[2]) !== -1) {
+      if(attributeName === 'output_option' || attributeName === 'death_save_output_option' || attributeName === 'initiative_output_option') {
+        if(args[2] === 'show') {
+          attributeValue = '@{output_to_all}';
+        } else if(args[2] === 'hide') {
+          attributeValue = '@{output_to_gm}';
+        }
+      }
+      if(attributeName === 'show_character_name') {
+        if(args[2] === 'no') {
+          attributeValue = '@{show_character_name_no}';
+        } else if(args[2] === 'yes') {
+          attributeValue = '@{show_character_name_yes}';
+        }
+      }
+      if(attributeName === 'initiative_tie_breaker') {
+        if(args[2] === 'no') {
+          attributeValue = '';
+        } else if(args[2] === 'yes') {
+          attributeValue = '((@{initiative_overall}) / 100)';
+        }
+      }
+      if(attributeName === 'initiative_to_tracker') {
+        if(args[2] === 'no') {
+          attributeValue = '@{initiative_to_tracker_no}';
+        } else if(args[2] === 'yes') {
+          attributeValue = '@{initiative_to_tracker_yes}';
+        }
+      }
+      if(attributeName === 'attacks_vs_target_ac') {
+        if(args[2] === 'no') {
+          attributeValue = '@{attacks_vs_target_ac_no}';
+        } else if(args[2] === 'yes') {
+          attributeValue = '@{attacks_vs_target_ac_yes}';
+        }
+      }
+    } else {
+      var errorMessage = 'invalid value. Please use one of the following: ' + validAttributeValue.join(', ');
+      log(errorMessage);
+      sendChat('GM', '/w GM ' + errorMessage);
+      return
+    }
+
+		var creaturesToChange = filterObjs(function (obj) {
+			if(obj.get('type') === 'character') {
+        var is_npc = parseInt(getAttrByName(obj.id, 'is_npc'), 10);
+
+        return changeNPCs && is_npc === 1 || changePCs && is_npc === 0;
+			}
+      return null;
+		});
+
+    creaturesToChange.forEach(function (obj) {
+      var attr = findObjs({
+        _type: 'attribute',
+        _characterid: obj.id,
+        name: attributeName
+      })[0];
+
+      if(!attr) {
+        createObj('attribute', {
+          name: attributeName,
+          current: attributeValue,
+          characterid: obj.id
+        });
+      } else if(!attr.get('current') || attr.get('current').toString() !== attributeValue) {
+        attr.set({
+          current: attributeValue
+        });
+      }
+    });
+
+    var successMessage = 'changed ' + attributeName + ' to ' + attributeValue + ' for ' + creaturesToChange.length + ' creatures';
+    log(successMessage);
+    sendChat('GM', '/w GM ' + successMessage);
+	};
+
 	shaped.cloneToken = function (msg, number) {
 		number = parseInt(number, 10) || 1;
 
@@ -1855,14 +1986,6 @@
 			}
 		}, 1);
 	};
-
-
-
-
-
-
-
-
 
 	function convertAttrFromNPCtoRepeating(oldAttrName, attrName) {
 		var oldAttr = getAttrByName(characterId, oldAttrName);
@@ -1980,13 +2103,6 @@
 			actionPartsToConvert('lair_action', i);
 		}
 	};
-
-
-
-
-
-
-
 
 }(typeof shaped === 'undefined' ? shaped = {} : shaped));
 
