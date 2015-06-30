@@ -331,9 +331,9 @@
       setAttribute('initiative_to_tracker', '@{initiative_to_tracker_no}');
     }
     if(shaped.attacksVsTargetAC) {
-      setAttribute('attacks_vs_target_ac', '@{attacks_vs_target_ac_no}');
-    } else {
       setAttribute('attacks_vs_target_ac', '@{attacks_vs_target_ac_yes}');
+    } else {
+      setAttribute('attacks_vs_target_ac', '@{attacks_vs_target_ac_no}');
     }
   }
 
