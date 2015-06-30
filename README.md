@@ -10,6 +10,10 @@ Scripts and other assorted things for roll20
 
 ### Changelog
 
+**30th June 2015 (1.82)**
+
+* Formatting and fix how the success message for !shaped-settings displays to prevent the error in the log.
+
 **29th June 2015 (1.81)**
 
 * Added the ability to change the settings items for all PCs, all NPCs, or all characters.
