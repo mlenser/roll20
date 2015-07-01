@@ -7,12 +7,12 @@
   shaped.showName = true; //show the name on the map (not to players)
   shaped.showNameToPlayers = false; //show the name to players
   shaped.showCharacterNameOnRollTemplate = false; //show the character's name on their roll templates
-  shaped.useAaronsNumberedScript = false; //add numbers at the end if using his script
+  shaped.useAaronsNumberedScript = true; //add numbers at the end if using his script
 
   //shaped.defaultTab = 10; //1 is the core sheet. Uncomment to 10 if you want the actions page. Change to 6 if you want the spellbook page. Change to 98 if you want to "Show All" for the NPC pages.
   shaped.sheetOutput = ''; //change to 'hidden' if you wish the sheet to whisper all commands to the GM
   shaped.whisperDeathSaves = true; //change to false if you wish NPC death saves to be rolled openly
-  shaped.initiativeTieBreaker = false; //change to true if you want to add the initiative modifier as a tie breaker for initiatives. (I use it)
+  shaped.initiativeTieBreaker = true; //change to true if you want to add the initiative modifier as a tie breaker for initiatives. (I use it)
   shaped.whisperInitiative = true; //always whisper initiative
   shaped.initiativeAddsToTracker = true; //change to false if you do not want to add the initiative to the tracker (mainly for the app)
   shaped.addInitiativeTokenAbility = true; //change to false if you do not want a macro "Init" on every token
@@ -1903,9 +1903,6 @@
       sendChat('GM', '/w GM ' + errorMessage);
       return;
     }
-
-    log('creaturesToChange');
-    log(creaturesToChange);
 
 
     var creaturesToChange = filterObjs(function (obj) {
