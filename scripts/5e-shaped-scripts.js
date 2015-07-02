@@ -18,6 +18,7 @@
   shaped.addInitiativeTokenAbility = true; //change to false if you do not want a macro "Init" on every token
 
   shaped.attacksVsTargetAC = false; //show the target's AC when using attacks
+  shaped.attacksVsTargetName = false; //show the target's AC when using attacks
 
 
   /* Setting these to a sheet value will set the token bar value. If they are set to '' or not set then it will use whatever you already have set on the token
@@ -43,7 +44,7 @@
 
 
   shaped.statblock = {
-    version: '1.82',
+    version: '1.83',
     RegisterHandlers: function () {
       on('chat:message', HandleInput);
 
@@ -255,7 +256,7 @@
     });
   };
 
-  shaped.setCharacter = function(gmnotes, bio) {
+  shaped.setCharacter = function(gmnotes) {
     if(!characterName) {
       throw('Name require to get or create character');
     }
@@ -280,11 +281,6 @@
     if(gmnotes) {
       obj.set({
         gmnotes: gmnotes
-      });
-    }
-    if(bio) {
-      obj.set({
-        bio: bio
       });
     }
 
@@ -334,6 +330,11 @@
       setAttribute('attacks_vs_target_ac', '@{attacks_vs_target_ac_yes}');
     } else {
       setAttribute('attacks_vs_target_ac', '@{attacks_vs_target_ac_no}');
+    }
+    if(shaped.attacksVsTargetName) {
+      setAttribute('attacks_vs_target_name', '@{attacks_vs_target_name_yes}');
+    } else {
+      setAttribute('attacks_vs_target_name', '@{attacks_vs_target_name_no}');
     }
   }
 
@@ -491,7 +492,7 @@
 
     characterName = shaped.capitalizeEachWord(section.attr.name.toLowerCase());
 
-    shaped.setCharacter(text.replace(/#/g, '<br>'), section.bio);
+    shaped.setCharacter(text.replace(/#/g, '<br>'));
     processSection(section);
   };
 
@@ -505,11 +506,14 @@
       .replace(/#(?=[a-z]|DC)/g, ' ')
       .replace(/\s+/g, ' ')
       .replace(/#Hit:/gi, 'Hit:')
+      .replace(/Hit:#/gi, 'Hit: ')
       .replace(/#Each /gi, 'Each ')
       .replace(/#On a successful save/gi, 'On a successful save')
       .replace(/DC#(\d+)/g, 'DC $1')
       .replace('LanguagesChallenge', 'Languages -#Challenge')
-      .replace("' Speed", 'Speed');
+      .replace("' Speed", 'Speed')
+      .replace(/#Medium or/gi, ' Medium or')
+      .replace(/take#(\d+)/gi, 'take $1');
   }
 
   function sanitizeText (text) {
@@ -517,9 +521,10 @@
       text = text.toString();
     }
 
-    text = text.replace(/\,\./gi, ',').replace(/ft\s\./gi, 'ft.').replace(/ft\.\s\,/gi, 'ft').replace(/ft\./gi, 'ft').replace(/(\d+) ft\/(\d+) ft/gi, '$1/$2 ft').replace(/dl0/gi, 'd10').replace(/dlO/gi, 'd10').replace(/dl2/gi, 'd12').replace(/Sd(\d+)/gi, '5d$1').replace(/ld(\d+)/gi, '1d$1').replace(/ld\s+(\d+)/gi, '1d$1').replace(/(\d+)d\s+(\d+)/gi, '$1d$2').replace(/(\d+)\s+d(\d+)/gi, '$1d$2').replace(/(\d+)\s+d(\d+)/gi, '$1d$2').replace(/(\d+)d(\d)\s(\d)/gi, '$1d$2$3').replace(/(\d+)f(?:Day|day)/gi, '$1/Day').replace(/(\d+)f(\d+)/gi, '$1/$2').replace(/{/gi, '(').replace(/}/gi, ')').replace(/(\d+)\((\d+) ft/gi, '$1/$2 ft').replace(/• /gi, '').replace(/’/gi, '\'');
+    text = text.replace(/\,\./gi, ',').replace(/ft\s\./gi, 'ft.').replace(/ft\.\s\,/gi, 'ft').replace(/ft\./gi, 'ft').replace(/(\d+) ft\/(\d+) ft/gi, '$1/$2 ft').replace(/lOd/g, '10d').replace(/dl0/gi, 'd10').replace(/dlO/gi, 'd10').replace(/dl2/gi, 'd12').replace(/Sd(\d+)/gi, '5d$1').replace(/ld(\d+)/gi, '1d$1').replace(/ld\s+(\d+)/gi, '1d$1').replace(/(\d+)d\s+(\d+)/gi, '$1d$2').replace(/(\d+)\s+d(\d+)/gi, '$1d$2').replace(/(\d+)\s+d(\d+)/gi, '$1d$2').replace(/(\d+)d(\d)\s(\d)/gi, '$1d$2$3').replace(/(\d+)f(?:Day|day)/gi, '$1/Day').replace(/(\d+)f(\d+)/gi, '$1/$2').replace(/{/gi, '(').replace(/}/gi, ')').replace(/(\d+)\((\d+) ft/gi, '$1/$2 ft').replace(/• /gi, '').replace(/’/gi, '\'');
     text = text.replace(/(\d+)\s*?plus\s*?((?:\d+d\d+)|(?:\d+))/gi, '$2 + $1');
     var replaceObj = {
+      'ljday':'1/day',
       'abol eth':'aboleth',
       'ACT IONS':'ACTIONS',
       'Afrightened':'A frightened',
@@ -528,6 +533,7 @@
       'blindn ess':'blindness',
       'blind sight':'blindsight',
       'bofh':'both',
+      'brea stplate':'breastplate',
       'choos in g':'choosing',
       'com muni cate':'communicate',
       'Constituti on':'Constitution',
@@ -542,6 +548,7 @@
       'ex istence':'existence',
       'lfthe':'If the',
       'Ifthe':'If the',
+      'lnt':'Int',
       'magica lly':'magically',
       'minlilte':'minute',
       'natura l':'natural',
@@ -561,9 +568,11 @@
       'slas hing':'slashing',
       'slash in g':'slashing',
       'slash ing':'slashing',
+      'Spel/casting':'Spellcasting',
       'successfu l':'successful',
       'ta rget':'target',
       'Th e':'The',
+      't_urns':'turns',
       'unti l':'until',
       'withi n':'within'
     };
@@ -667,22 +676,13 @@
   }
 
   function splitStatblock(statblock, keyword) {
-    // Check for bio (flavor text) at the end, separated by at least 3 line break.
-    var bio,
-      pos = statblock.indexOf('###');
-    if(pos != -1) {
-      bio = statblock.substring(pos + 3).replace(/^[#\s]/g, '');
-      bio = bio.replace(/#/g, '<br>').trim();
-      statblock = statblock.slice(0, pos);
-    }
-
     var indexArray = [];
 
     for(var section in keyword) {
       if (keyword.hasOwnProperty(section)) {
         var obj = keyword[section];
-        for (var key in keyword[section]) {
-          if (keyword[section].hasOwnProperty(key)) {
+        for (var key in obj) {
+          if (obj.hasOwnProperty(key)) {
             indexArray.push(obj[key]);
           }
         }
@@ -711,10 +711,6 @@
     delete keyword.actions.Actions;
     delete keyword.legendary.Legendary;
     delete keyword.reactions.Reactions;
-
-    if(bio) {
-      keyword.bio = bio;
-    }
 
     // Patch for multiline abilities
     var abilitiesName = ['str', 'dex', 'con', 'int', 'wis', 'cha'];
@@ -820,6 +816,7 @@
         HDsize = 'd' + splitHD[2];
 
       setAttribute('hd_' + HDsize, numHD, numHD);
+      setAttribute('hd_' + HDsize + '_toggle', 'on');
     }
   }
 
@@ -1850,7 +1847,7 @@
       sendChat('GM', '/w GM ' + errorMessage);
     }
 
-    var validAttributeName = ['output_option', 'death_save_output_option', 'initiative_output_option', 'show_character_name', 'initiative_tie_breaker', 'initiative_to_tracker', 'attacks_vs_target_ac'];
+    var validAttributeName = ['output_option', 'death_save_output_option', 'initiative_output_option', 'show_character_name', 'initiative_tie_breaker', 'initiative_to_tracker', 'attacks_vs_target_ac', 'attacks_vs_target_name'];
     if (validAttributeName.indexOf(args[1]) !== -1) {
       attributeName = args[1];
     } else {
@@ -1895,6 +1892,13 @@
           attributeValue = '@{attacks_vs_target_ac_no}';
         } else if(args[2] === 'yes') {
           attributeValue = '@{attacks_vs_target_ac_yes}';
+        }
+      }
+      if(attributeName === 'attacks_vs_target_name') {
+        if(args[2] === 'no') {
+          attributeValue = '@{attacks_vs_target_name_no}';
+        } else if(args[2] === 'yes') {
+          attributeValue = '@{attacks_vs_target_name_yes}';
         }
       }
     } else {

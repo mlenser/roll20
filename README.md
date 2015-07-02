@@ -10,6 +10,13 @@ Scripts and other assorted things for roll20
 
 ### Changelog
 
+**2nd July 2015 (1.83)**
+
+* Sanitized Mind Flayer - it should also help others
+* Sanitized so the description does not pull from the last action in some cases - it will still happen in others.
+* Added targeting a creature's name for attacks and saves to the API so it can be edited on import and via settings changer
+* Importer will automatically turn on hd toggle tabs.
+
 **30th June 2015 (1.82)**
 
 * Formatting and fix how the success message for !shaped-settings displays to prevent the error in the log.
