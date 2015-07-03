@@ -187,10 +187,10 @@
   };
 
   shaped.rollTokenHp = function(token) {
-    var number;
+    var barOfHP;
     for(var i = 0; i < 3; i++) {
       if(shaped.settings.bar[i].name === 'HP') {
-        number = i;
+        barOfHP = i + 1;
         break;
       }
     }
@@ -201,7 +201,7 @@
       return;
     }
 
-    var barTokenName = 'bar' + (number + 1),
+    var barTokenName = 'bar' + (barOfHP),
       represent = token.get('represents');
 
     if(represent === '') {
