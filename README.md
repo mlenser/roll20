@@ -1,14 +1,17 @@
 # roll20
-Scripts and other assorted things for roll20
+Scripts for 5e roll20
 
 ### TODO
 
-* Test repeatable section for Actions
-* Create Multiattack textarea and button on the sheet.
-* Figure out how to set/link formula values to the bar.
-
 
 ### Changelog
+
+**3rd July 2015 (1.84)**
+
+* (Dev) Refactored how settings are setup
+* Refactored how HP is rolled it will now calculate and display the formula, average, and the amount rolled. These values are based on the HD rows (not the note field) with constitution modifier added for each HD.
+* (Dev) Removed Power cards vestigial stuff that wasn't hooked up anyways.
+
 
 **2nd July 2015 (1.83)**
 
