@@ -1,54 +1,57 @@
 (function (shaped) {
   /****Import Options***/
-  shaped.createAbilityAsToken = true;
-  shaped.monsterAsMinHp = false; // generated token hp can't be lower than the average hp
-  shaped.rollMonsterHpOnDrop = true; // will roll HP when character are dropped on map
+  shaped.settings = {
+    createAbilityAsToken: true,
+    rollMonsterHpOnDrop: true, // will roll HP when character are dropped on map
 
-  shaped.showName = true; //show the name on the map (not to players)
-  shaped.showNameToPlayers = false; //show the name to players
-  shaped.showCharacterNameOnRollTemplate = false; //show the character's name on their roll templates
-  shaped.useAaronsNumberedScript = true; //add numbers at the end if using his script
+    showName: true, //show the name on the map (not to players)
+    showNameToPlayers: false, //show the name to players
+    showCharacterNameOnRollTemplate: false, //show the character's name on their roll templates
+    useAaronsNumberedScript: true, //add numbers at the end if using his script
 
-  //shaped.defaultTab = 10; //1 is the core sheet. Uncomment to 10 if you want the actions page. Change to 6 if you want the spellbook page. Change to 98 if you want to "Show All" for the NPC pages.
-  shaped.sheetOutput = ''; //change to 'hidden' if you wish the sheet to whisper all commands to the GM
-  shaped.whisperDeathSaves = true; //change to false if you wish NPC death saves to be rolled openly
-  shaped.initiativeTieBreaker = true; //change to true if you want to add the initiative modifier as a tie breaker for initiatives. (I use it)
-  shaped.whisperInitiative = true; //always whisper initiative
-  shaped.initiativeAddsToTracker = true; //change to false if you do not want to add the initiative to the tracker (mainly for the app)
-  shaped.addInitiativeTokenAbility = true; //change to false if you do not want a macro "Init" on every token
+    //defaultTab: 'actions', //core is defualt. uncomment if you want the actions page. Change to 'spellbook' if you want the spellbook page. Change to 'all_npc' if you want to "Show All" for the NPC pages.
+    sheetOutput: '', //change to 'hidden' if you wish the sheet to whisper all commands to the GM
+    whisperDeathSaves: true, //change to false if you wish NPC death saves to be rolled openly
+    initiativeTieBreaker: true, //change to true if you want to add the initiative modifier as a tie breaker for initiatives. (I use it)
+    whisperInitiative: true, //always whisper initiative
+    initiativeAddsToTracker: true, //change to false if you do not want to add the initiative to the tracker (mainly for the app)
+    addInitiativeTokenAbility: true, //change to false if you do not want a macro "Init" on every token
 
-  shaped.attacksVsTargetAC = false; //show the target's AC when using attacks
-  shaped.attacksVsTargetName = false; //show the target's AC when using attacks
+    attacksVsTargetAC: false, //show the target's AC when using attacks
+    attacksVsTargetName: false, //show the target's AC when using attacks
 
+    useAmmoAutomatically: true,
 
-  /* Setting these to a sheet value will set the token bar value. If they are set to '' or not set then it will use whatever you already have set on the token
-   Do not use npc_HP, use HP instead
-   */
-  // Green bar
-  shaped.parsebar1 = 'npc_AC';
-  shaped.parsebar1Max = false;
-  shaped.parsebar1_link = true;
-  shaped.showbar1 = false;
-  // Blue bar
-  shaped.parsebar2 = ''; //'speed'
-  shaped.parsebar2Max = false;
-  shaped.parsebar2_link = false;
-  shaped.showbar2 = false;
-  // Red bar
-  shaped.parsebar3 = 'HP';
-  shaped.parsebar3Max = true;
-  shaped.parsebar3_link = false;
-  shaped.showbar3 = false;
-
-  shaped.useAmmoAutomatically = true;
+    bar: [
+      /* Setting these to a sheet value will set the token bar value. If they are set to '' or not set then it will use whatever you already have set on the token
+       Do not use npc_HP, use HP instead
+       */
+      {
+        name: 'npc_AC', // Green bar
+        max: false,
+        link: true,
+        show: false
+      }, {
+        name: '', //Blue bar 'speed'
+        max: false,
+        link: false,
+        show: false
+      }, {
+        name: 'HP', // Red bar
+        max: true,
+        link: false,
+        show: false
+      },
+    ]
+  };
 
 
   shaped.statblock = {
-    version: '1.83',
+    version: '1.84',
     RegisterHandlers: function () {
       on('chat:message', HandleInput);
 
-      if(shaped.rollMonsterHpOnDrop) {
+      if(shaped.settings.rollMonsterHpOnDrop) {
         on('add:graphic', function(obj) {
           shaped.rollTokenHp(obj);
         });
@@ -65,7 +68,7 @@
     characterName = null;
 
   function HandleInput(msg) {
-    if(shaped.useAmmoAutomatically && msg.rolltemplate === '5eDefault' && msg.content.indexOf('{{ammo_auto=1}}') !== -1) {
+    if(shaped.settings.useAmmoAutomatically && msg.rolltemplate === '5eDefault' && msg.content.indexOf('{{ammo_auto=1}}') !== -1) {
       var character_name,
         attribute,
         match,
@@ -118,32 +121,38 @@
     }
   }
 
+  function capitalizeEachWord(str) {
+    return str.replace(/\w\S*/g, function(txt) {
+      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    });
+  };
+
   shaped.getSelectedToken = shaped.getSelectedToken || function(msg, callback, limit) {
-      try {
-        if(!msg.selected || !msg.selected.length) {
-          throw('No token selected');
-        }
+    try {
+      if(!msg.selected || !msg.selected.length) {
+        throw('No token selected');
+      }
 
-        limit = parseInt(limit, 10) || 0;
+      limit = parseInt(limit, 10) || 0;
 
-        if(!limit || limit > msg.selected.length + 1 || limit < 1) {
-          limit = msg.selected.length;
-        }
+      if(!limit || limit > msg.selected.length + 1 || limit < 1) {
+        limit = msg.selected.length;
+      }
 
-        for(var i = 0; i < limit; i++) {
-          if(msg.selected[i]._type === 'graphic') {
-            var obj = getObj('graphic', msg.selected[i]._id);
-            if(obj && obj.get('subtype') === 'token') {
-              callback(obj);
-            }
+      for(var i = 0; i < limit; i++) {
+        if(msg.selected[i]._type === 'graphic') {
+          var obj = getObj('graphic', msg.selected[i]._id);
+          if(obj && obj.get('subtype') === 'token') {
+            callback(obj);
           }
         }
-      } catch(e) {
-        log(e);
-        log('Exception: ' + e);
-        sendChat('GM', '/w GM ' + e);
       }
-    };
+    } catch(e) {
+      log(e);
+      log('Exception: ' + e);
+      sendChat('GM', '/w GM ' + e);
+    }
+  };
 
   shaped.deleteOldSheet = function(token) {
     var id = token.get('represents'),
@@ -178,83 +187,70 @@
   };
 
   shaped.rollTokenHp = function(token) {
-    var number = 0;
-    for(var i = 1; i < 4; i++) {
-      if(shaped['parsebar' + i] === 'HP') {
+    var number;
+    for(var i = 0; i < 3; i++) {
+      if(shaped.settings.bar[i].name === 'HP') {
         number = i;
         break;
       }
     }
-    if(number === 0) {
-      throw('One of the shaped.parsebar option has to be set to "HP" for random HP roll');
+    if(!number) {
+      var message = 'One of the bar names has to be set to "HP" for random HP roll';
+      log(message);
+      sendChat('GM', '/w gm ' + message);
+      return;
     }
 
-    var bar = 'bar' + number,
+    var barTokenName = 'bar' + (number + 1),
       represent = token.get('represents');
 
     if(represent === '') {
       log('Token does not represent a character');
-      return;
-    } else if(token.get(bar + '_link') !== '') {
-      log('Token ' + bar + ' is linked');
+    } else if(token.get(barTokenName + '_link') !== '') {
+      log('Token ' + barTokenName + ' is linked');
     } else {
-      rollCharacterHp(represent, function(total, original, formula) {
-        token.set(bar + '_value', total);
-        token.set(bar + '_max', total);
-        var message = '/w GM Hp ('+ formula +') rolled: ' + total;
-        if(original > 0) {
-          message += ' adjusted from original result of ' + original;
-        }
-        sendChat('GM', message);
+      rollCharacterHp(represent, function(total, average, formula) {
+        token.set(barTokenName + '_value', total);
+        token.set(barTokenName + '_max', total);
+        var message = 'HP ('+ formula +') | average: ' + average + ' | rolled: ' + total;
+        sendChat('GM', '/w gm ' +message);
       });
     }
   };
 
   function rollCharacterHp(id, callback) {
-    var hd = getAttrByName(id, 'npc_HP_hit_dice', 'current');
-    if(hd === '') {
-      log('Character has no HP Hit Dice defined');
-      return;
+    var hdArray = [4, 6, 8, 10, 12, 20],
+      hdFormula = '',
+      totalLevels = 0,
+      hdAverage = 0;
+
+    for (var i = 0; i < hdArray.length; i++) {
+      var numOfHDRow = parseInt(getAttrByName(id, 'hd_d'+ hdArray[i], 'current'), 10);
+      if(numOfHDRow) {
+        if(hdFormula !== '') {
+          hdFormula += ' + ';
+        }
+        totalLevels += numOfHDRow;
+        hdFormula += numOfHDRow + 'd' + hdArray[i];
+
+        hdAverage += (hdArray[i]/2 +.5) * numOfHDRow;
+      }
     }
 
-    var match = hd.match(/^(\d+)d(\d+)/);
-    if(!match || !match[1] || !match[2]) {
-      log('Character doesn\'t have valid Hit Dice format');
-      return;
-    }
+    var conToHp = totalLevels * Math.floor((getAttrByName(id, 'constitution', 'current') - 10) / 2);
+    //add constitution mod
+    hdFormula += ' + ' + conToHp;
+    hdAverage += conToHp;
 
-    var nb_dice = parseInt(match[1], 10),
-      nb_face = parseInt(match[2], 10),
-      total = 0,
-      original = 0;
+    hdAverage = Math.floor(hdAverage);
 
-    sendChat('GM', '/roll ' + nb_dice + 'd' + nb_face, function(ops) {
+    sendChat('GM', '/roll ' + hdFormula, function(ops) {
       var rollResult = JSON.parse(ops[0].content);
       if(_.has(rollResult, 'total')) {
-        total = rollResult.total;
-
-        // Add Con modifier x number of hit dice
-        var constitution_mod = Math.floor((getAttrByName(id, 'constitution', 'current') - 10) / 2);
-        total = Math.floor(nb_dice * constitution_mod + total);
-
-        if(shaped.monsterAsMinHp) {
-          // Calculate average HP, as written in statblock.
-          var average_hp = Math.floor(((nb_face + 1) / 2 + constitution_mod) * nb_dice);
-          if(average_hp > total) {
-            original = total;
-            total = average_hp;
-          }
-        }
-        callback(total, original,  nb_dice + 'd' + nb_face);
+        callback(rollResult.total, hdAverage, hdFormula);
       }
     });
   }
-
-  shaped.capitalizeEachWord = function(str) {
-    return str.replace(/\w\S*/g, function(txt) {
-      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-    });
-  };
 
   shaped.setCharacter = function(gmnotes) {
     if(!characterName) {
@@ -293,45 +289,45 @@
   };
 
   function setUserDefinedScriptSettings () {
-    if(shaped.defaultTab) {
-      setAttribute('tab', shaped.defaultTab);
+    if(shaped.settings.defaultTab) {
+      setAttribute('tab', shaped.settings.defaultTab);
     }
-    if(shaped.sheetOutput === 'hidden') {
+    if(shaped.settings.sheetOutput === 'hidden') {
       setAttribute('output_option', '@{output_to_gm}');
     } else {
       setAttribute('output_option', '@{output_to_all}');
     }
-    if(shaped.whisperDeathSaves) {
+    if(shaped.settings.whisperDeathSaves) {
       setAttribute('death_save_output_option', '@{output_to_gm}');
     } else {
       setAttribute('death_save_output_option', '@{output_to_all}');
     }
-    if(shaped.whisperInitiative) {
+    if(shaped.settings.whisperInitiative) {
       setAttribute('initiative_output_option', '@{output_to_gm}');
     } else {
       setAttribute('initiative_output_option', '@{output_to_all}');
     }
-    if(shaped.showCharacterNameOnRollTemplate) {
+    if(shaped.settings.showCharacterNameOnRollTemplate) {
       setAttribute('show_character_name', '@{show_character_name_yes}');
     } else {
       setAttribute('show_character_name', '@{show_character_name_no}');
     }
-    if(shaped.initiativeTieBreaker) {
+    if(shaped.settings.initiativeTieBreaker) {
       setAttribute('initiative_tie_breaker', '((@{initiative_overall}) / 100)');
     } else {
       setAttribute('initiative_tie_breaker', '');
     }
-    if(shaped.initiativeAddsToTracker) {
+    if(shaped.settings.initiativeAddsToTracker) {
       setAttribute('initiative_to_tracker', '@{initiative_to_tracker_yes}');
     } else {
       setAttribute('initiative_to_tracker', '@{initiative_to_tracker_no}');
     }
-    if(shaped.attacksVsTargetAC) {
+    if(shaped.settings.attacksVsTargetAC) {
       setAttribute('attacks_vs_target_ac', '@{attacks_vs_target_ac_yes}');
     } else {
       setAttribute('attacks_vs_target_ac', '@{attacks_vs_target_ac_no}');
     }
-    if(shaped.attacksVsTargetName) {
+    if(shaped.settings.attacksVsTargetName) {
       setAttribute('attacks_vs_target_name', '@{attacks_vs_target_name_yes}');
     } else {
       setAttribute('attacks_vs_target_name', '@{attacks_vs_target_name_no}');
@@ -366,31 +362,29 @@
       if(characterId) {
         token.set('represents', characterId);
         var tokenName = characterName;
-        if(shaped.useAaronsNumberedScript && characterName.indexOf('%%NUMBERED%%') !== 1) {
+        if(shaped.settings.useAaronsNumberedScript && characterName.indexOf('%%NUMBERED%%') !== 1) {
           tokenName += ' %%NUMBERED%%';
         }
         token.set('name', tokenName);
 
-        if(shaped.showName) {
+        if(shaped.settings.showName) {
           token.set('showname', true);
         }
-        if(shaped.showNameToPlayers) {
+        if(shaped.settings.showNameToPlayers) {
           token.set('showplayers_name', true);
         }
 
         setUserDefinedScriptSettings();
 
-        setBarValueAfterConvert(token, 'bar1');
-        setBarValueAfterConvert(token, 'bar2');
-        setBarValueAfterConvert(token, 'bar3');
+        setBarValueAfterConvert(token);
 
-        if(shaped.showbar1) {
+        if(shaped.settings.bar[0].show) {
           token.set('showplayers_bar1', 'true');
         }
-        if(shaped.showbar2) {
+        if(shaped.settings.bar[1].show) {
           token.set('showplayers_bar2', 'true');
         }
-        if(shaped.showbar3) {
+        if(shaped.settings.bar[2].show) {
           token.set('showplayers_bar3', 'true');
         }
 
@@ -490,7 +484,7 @@
       keyword = findKeyword(text),
       section = splitStatblock(text, keyword);
 
-    characterName = shaped.capitalizeEachWord(section.attr.name.toLowerCase());
+    characterName = capitalizeEachWord(section.attr.name.toLowerCase());
 
     shaped.setCharacter(text.replace(/#/g, '<br>'));
     processSection(section);
@@ -787,9 +781,9 @@
     if(!match || !match[1] || !match[2] || !match[3]) {
       throw 'Character doesn\'t have valid type/size/alignment format';
     }
-    setAttribute('size', shaped.capitalizeEachWord(match[1]));
-    setAttribute('npc_type', shaped.capitalizeEachWord(match[2]));
-    setAttribute('alignment', shaped.capitalizeEachWord(match[3]));
+    setAttribute('size', capitalizeEachWord(match[1]));
+    setAttribute('npc_type', capitalizeEachWord(match[2]));
+    setAttribute('alignment', capitalizeEachWord(match[3]));
   }
 
   function parseArmorClass(ac) {
@@ -1227,10 +1221,10 @@
             if(type[1].toLowerCase() === meleeOrRanged.toLowerCase()) {
               type[1] = 'Thrown';
             }
-            setType(shaped.capitalizeEachWord(type[1]));
+            setType(capitalizeEachWord(type[1]));
           }
           if(type[2]) {
-            var attackWeaponOrSpell = shaped.capitalizeEachWord(type[2]);
+            var attackWeaponOrSpell = capitalizeEachWord(type[2]);
           }
           parsedAttack = true;
         }
@@ -1422,11 +1416,7 @@
 
         function createTokenAction() {
           // Create token action
-          if(shaped.usePowerAbility) {
-            setAbility(key, '', powercardAbility(id, actionNum), shaped.createAbilityAsToken);
-          } else {
-            setAbility(key, '', '%{'+characterName+'|repeating_' + actionType + 'actions_' + actionNum + '_action}', shaped.createAbilityAsToken);
-          }
+          setAbility(key, '', '%{'+characterName+'|repeating_' + actionType + 'actions_' + actionNum + '_action}', shaped.settings.createAbilityAsToken);
         }
         parsed = parsedAttack || parsedDamage || parsedSave;
         if(!parsed) {
@@ -1454,8 +1444,8 @@
         setAttribute('legendary_action_notes', legendaryActionsNotes.join('\n'));
       }
     }
-    if(shaped.addInitiativeTokenAbility) {
-      setAbility('Init', '', '%{'+characterName+'|Initiative}', shaped.createAbilityAsToken);
+    if(shaped.settings.addInitiativeTokenAbility) {
+      setAbility('Init', '', '%{'+characterName+'|Initiative}', shaped.settings.createAbilityAsToken);
     }
 
     for(var key in actions) {
@@ -1472,11 +1462,7 @@
 
         setAttribute('toggle_multiattack', 'on');
 
-        if(shaped.usePowerAbility) {
-          setAbility('MultiAtk', '', powercardAbility(id, actionNumber), shaped.createAbilityAsToken);
-        } else {
-          setAbility('MultiAtk', '', '%{'+characterName+'|multiattack}', shaped.createAbilityAsToken);
-        }
+        setAbility('MultiAtk', '', '%{'+characterName+'|multiattack}', shaped.settings.createAbilityAsToken);
         break;
       }
     }
@@ -1718,7 +1704,7 @@
 
     setTokenVision(token);
 
-    if(shaped.showName) {
+    if(shaped.settings.showName) {
       token.set('showname', true);
     }
 
@@ -1732,99 +1718,67 @@
     token.set(bar + '_max', '');
   }
 
-  function parseValuesViaSendChat(parsebar) {
-    /*
-     var journal = findObjs({
-     type: 'character',
-     name: characterName
-     })[0],
-     attributeValue,
-     cleanAttributeValue;
+  function setBarValueAfterConvert(token) {
+    for(var i = 0; i < 3; i++) {
+      var barName = shaped.settings.bar[i].name,
+        barTokenName = 'bar' + (i + 1);
 
-     if(journal) {
-     log('journal');
-     log(journal);
-     attributeValue = getAttrByName(journal.id, parsebar);
+      if(barName !== '') {
+        var objOfBar = findObjs({
+            name: barName,
+            _type: 'attribute',
+            _characterid: characterId
+          }, {caseInsensitive: true})[0],
+          barLink, barCurrent, barMax;
 
-     regex = /@{(\w+)}/g;
-     while(match = regex.exec(attributeValue)) {
-     if(match && match[1]) {
-
-     }
-     }
-
-     log('attributeValue');
-     log(attributeValue);
-     cleanAttributeValue = attributeValue.replace(/@{(\w+)}/g,'@{'+characterName+'|$1}');
-     log('cleanAttributeValue');
-     log(cleanAttributeValue);
-     sendChat('', '[['+cleanAttributeValue+']]',function(msg){
-     log(msg);
-     });
-     }
-     */
-    return '';
-  }
-
-  function setBarValueAfterConvert(token, bar) {
-    var parsebar = shaped['parse' + bar];
-
-    if(parsebar !== '') {
-      var objOfParsebar = findObjs({
-          name: parsebar,
-          _type: 'attribute',
-          _characterid: characterId
-        }, {caseInsensitive: true})[0],
-        barLink, barCurrent, barMax;
-
-      if(objOfParsebar) {
-        barLink = objOfParsebar.id;
-        barCurrent = objOfParsebar.attributes.current;
-        barMax = objOfParsebar.attributes.max;
-      } else {
-        barLink = 'sheetattr_' + parsebar;
-        barCurrent = parseValuesViaSendChat(parsebar);
-        barMax = parseValuesViaSendChat(parsebar);
-      }
-
-
-      if(shaped['parse' + bar + '_link']) {
-        log(bar + ': setting link to: ' + barLink);
-        token.set(bar + '_link', barLink);
-      } else {
-        if(token.get(bar + '_link')) {
-          log(bar + ': link isn\'t set in the bar settings, clearing link');
-          token.set(bar + '_link', '');
+        if(objOfBar) {
+          barLink = objOfBar.id;
+          barCurrent = objOfBar.attributes.current;
+          barMax = objOfBar.attributes.max;
+        } else {
+          barLink = 'sheetattr_' + barName;
+          /*
+          barCurrent = parseValuesViaSendChat(barName);
+          barMax = parseValuesViaSendChat(barName);
+          */
         }
-      }
-      if(shaped['parse' + bar] !== '') {
-        log(bar + ': setting current to: ' + barCurrent);
-        token.set(bar + '_value', barCurrent);
-      } else {
-        if(token.get(bar + '_value')) {
-          log(bar + ': current isn\'t set in the bar settings, clearing current');
-          token.set(bar + '_value', '');
+
+        if(shaped.settings.bar[i].link) {
+          log(barTokenName + ': setting link to: ' + barLink);
+          token.set(barTokenName + '_link', barLink);
+        } else {
+          if(token.get(barTokenName + '_link')) {
+            log(barTokenName + ': link isn\'t set in the bar settings, clearing link');
+            token.set(barTokenName + '_link', '');
+          }
         }
-      }
-      if(shaped['parse' + bar + 'Max']) {
-        log(bar + ': setting max to: ' + barMax);
-        token.set(bar + '_max', barMax);
-      } else {
-        if(token.get(bar + '_max')) {
-          log(bar + ': max isn\'t set in the bar settings, clearing max');
-          token.set(bar + '_max', '');
+        if(barName) {
+          log(barTokenName + ': setting current to: ' + barCurrent);
+          token.set(barTokenName + '_value', barCurrent);
+        } else {
+          if(token.get(barTokenName + '_value')) {
+            log(barTokenName + ': current isn\'t set in the bar settings, clearing current');
+            token.set(barTokenName + '_value', '');
+          }
         }
+        if(shaped.settings.bar[i].max) {
+          log(barTokenName + ': setting max to: ' + barMax);
+          token.set(barTokenName + '_max', barMax);
+        } else {
+          if(token.get(barTokenName + '_max')) {
+            log(barTokenName + ': max isn\'t set in the bar settings, clearing max');
+            token.set(barTokenName + '_max', '');
+          }
+        }
+      } else {
+        log(barTokenName + ': no defined bar setting in shaped-scripts (at the top of the page), clearing ' + barTokenName + '.');
+        clearBar(token, barTokenName);
       }
-    } else {
-      log(bar + ': no defined bar setting in shaped-scripts (at the top of the page), clearing ' + bar + '.');
-      clearBar(token, bar);
     }
   }
 
   shaped.setBars = function(token) {
-    setBarValueAfterConvert(token, 'bar1');
-    setBarValueAfterConvert(token, 'bar2');
-    setBarValueAfterConvert(token, 'bar3');
+    setBarValueAfterConvert(token);
   };
 
   shaped.changeSettings = function(args) {
@@ -1951,7 +1905,7 @@
   shaped.cloneToken = function (msg, number) {
     number = parseInt(number, 10) || 1;
 
-    shaped.getSelectedToken(msg, function(token){
+    shaped.getSelectedToken(msg, function(token) {
       var match = token.get('imgsrc').match(/images\/.*\/(thumb|max)/i);
       if(match === null) {
         throw('The token imgsrc do not come from you library. Unable to clone');
@@ -1987,7 +1941,7 @@
             bar3_max: token.get('bar3_max'),
             layer: 'objects'
           });
-        if(shaped.rollMonsterHpOnDrop === true) {
+        if(shaped.settings.rollMonsterHpOnDrop === true) {
           shaped.rollTokenHp(obj);
         }
       }
