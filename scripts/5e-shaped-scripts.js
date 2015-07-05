@@ -7,7 +7,7 @@
     showName: true, //show the name on the map (not to players)
     showNameToPlayers: false, //show the name to players
     showCharacterNameOnRollTemplate: false, //show the character's name on their roll templates
-    useAaronsNumberedScript: true, //add numbers at the end if using his script
+    //useAaronsNumberedScript: true, //add numbers at the end if using his script
 
     //defaultTab: 'actions', //core is defualt. uncomment if you want the actions page. Change to 'spellbook' if you want the spellbook page. Change to 'all_npc' if you want to "Show All" for the NPC pages.
     sheetOutput: '', //change to 'hidden' if you wish the sheet to whisper all commands to the GM
@@ -194,7 +194,7 @@
         break;
       }
     }
-    if(!number) {
+    if(!barOfHP) {
       var message = 'One of the bar names has to be set to "HP" for random HP roll';
       log(message);
       sendChat('GM', '/w gm ' + message);
