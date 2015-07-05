@@ -209,13 +209,17 @@
     } else if(token.get(barTokenName + '_link') !== '') {
       log('Token ' + barTokenName + ' is linked');
     } else {
-      rollCharacterHp(represent, function(total, average, formula) {
-        token.set(barTokenName + '_value', total);
-        token.set(barTokenName + '_max', total);
-        var message = 'HP ('+ formula +') | average: ' + average + ' | rolled: ' + total;
-        sendChat('GM', '/w gm ' +message);
-      });
+      var isNPC = getAttrByName(represent, 'is_npc', 'current');
+      if(isNPC === 1) {
+        rollCharacterHp(represent, function(total, average, formula) {
+          token.set(barTokenName + '_value', total);
+          token.set(barTokenName + '_max', total);
+          var message = 'HP ('+ formula +') | average: ' + average + ' | rolled: ' + total;
+          sendChat('GM', '/w gm ' +message);
+        });
+      }
     }
+    log('Still working after trying to roll hp');
   };
 
   function rollCharacterHp(id, callback) {
