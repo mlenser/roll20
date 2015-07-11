@@ -45,9 +45,36 @@
     ]
   };
 
+  var spellsData = [
+    {
+      "name":"Fireball",
+      "description":"A bright streak flashes from your pointing finger to a point you choose within range and then blossoms with a low roar into an explosion of flame. Each creature in a 20-foot-radius sphere centered on that point must make a dexterity saving throw. A target takes 8d6 fire damage on a failed save, or half as much damage on a successful one.<br>The fire spreads around corners. It ignites flammable objects in the area that aren’t being worn or carried.",
+      "higherLevel":"When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 for each slot level above 3rd.",
+      "source":"phb 241",
+      "range":"150 feet",
+      "components":{
+        "verbal":"true",
+        "somatic":"true",
+        "material":"true",
+        "materialMaterial":"A tiny ball of bat guano and sulfur"
+      },
+      "ritual":"true",
+      "duration":"Instantaneous",
+      "concentration":"true",
+      "castingTime":"1 action",
+      "level":"3",
+      "school":"Evocation",
+      "class":"Cleric, Sorcerer, Warlock, Wizard",
+      "domains":[
+        "Light"
+      ],
+      "patrons":"Fiend"
+    }
+  ];
 
-  shaped.statblock = {
-    version: '1.84',
+
+    shaped.statblock = {
+    version: '1.85',
     RegisterHandlers: function () {
       on('chat:message', HandleInput);
 
@@ -109,8 +136,9 @@
         args.shift();
         shaped.changeSettings(args);
         break;
-      case '!shaped-clone':
-        shaped.cloneToken(msg, args[1]);
+      case '!shaped-spell-import':
+        args.shift();
+        shaped.spellImport(args);
         break;
       case '!shaped-convert':
         shaped.getSelectedToken(msg, shaped.parseOldToNew);
@@ -1906,50 +1934,85 @@
     }
   };
 
-  shaped.cloneToken = function (msg, number) {
-    number = parseInt(number, 10) || 1;
+  shaped.spellImport = function(args) {
+    var spell = spellsData.filter(function ( obj ) {
+        return obj.name === args[1];
+      })[0],
+      character = findObjs({
+        _type: 'character',
+        name: args[0]
+      })[0],
+      spellBase = 'repeating_spellbooklevel' + spell.level + '_',
+      spellIndex;
 
-    shaped.getSelectedToken(msg, function(token) {
-      var match = token.get('imgsrc').match(/images\/.*\/(thumb|max)/i);
-      if(match === null) {
-        throw('The token imgsrc do not come from you library. Unable to clone');
+    characterId = character.id;
+
+    for (var i = 0; i < 100; i++) {
+      var attr = findObjs({
+        _type: 'attribute',
+        _characterid: characterId,
+        name: spellBase + i + '_' + 'spellname'
+      })[0];
+
+      if(!attr) {
+        spellIndex = i;
+        spellBase += spellIndex + '_';
+        break;
       }
+    }
 
-      var imgsrc = token.get('imgsrc').replace('/max.', '/thumb.'),
-        name = token.get('name') + ' ';
-      log('Cloning ' + number + ' ' + name);
-
-      token.set({'name': name + randomInteger(99), showname: true});
-
-      for(var i = 0; i < number; i++){
-
-        var left = (parseInt(token.get('left')) + (70 * (i+1))),
-          obj = createObj('graphic', {
-            name: name + randomInteger(99),
-            controlledby: token.get('controlledby'),
-            left: left,
-            top: token.get('top'),
-            width: token.get('width'),
-            height: token.get('height'),
-            showname: true,
-            imgsrc: imgsrc,
-            pageid: token.get('pageid'),
-            represents: token.get('represents'),
-            //showplayers_name: true,
-            //showplayers_bar1: true,
-            bar1_value: token.get('bar1_value'),
-            bar1_max: token.get('bar1_max'),
-            bar2_value: token.get('bar2_value'),
-            bar2_max: token.get('bar2_max'),
-            bar3_value: token.get('bar3_value'),
-            bar3_max: token.get('bar3_max'),
-            layer: 'objects'
-          });
-        if(shaped.settings.rollMonsterHpOnDrop === true) {
-          shaped.rollTokenHp(obj);
-        }
+    setAttribute(spellBase + 'spellname', spell.name);
+    if(spell.ritual) {
+      setAttribute(spellBase + 'spellritual', spell.ritual);
+    }
+    if(spell.concentration) {
+      setAttribute(spellBase + 'spellconcentration', spell.concentration);
+    }
+    if(spell.school) {
+      setAttribute(spellBase + 'spellschool', spell.school);
+    }
+    if(spell.castingTime) {
+      setAttribute(spellBase + 'spellcasttime', spell.castingTime);
+    }
+    if(spell.range) {
+      setAttribute(spellBase + 'spellrange', spell.range);
+    }
+    if(spell.components) {
+      if(spell.components.verbal) {
+        setAttribute(spellBase + 'spellcomponents_verbal', '@{spellcomponents_verbal_var}');
       }
-    }, 1);
+      if(spell.components.somatic) {
+        setAttribute(spellBase + 'spellcomponents_somatic', '@{spellcomponents_somatic_var}');
+      }
+      if(spell.components.material) {
+        setAttribute(spellBase + 'spellcomponents_material', '@{spellcomponents_material_var}');
+      }
+      if(spell.components.materialMaterial) {
+        setAttribute(spellBase + 'spellcomponents', '(' + spell.components.materialMaterial + ')');
+      }
+    }
+    if(spell.duration) {
+      setAttribute(spellBase + 'spellduration', spell.duration);
+    }
+    if(spell.source) {
+      setAttribute(spellBase + 'spellsource', spell.source);
+      setAttribute(spellBase + 'spellshowsource', '@{spellshowsource_var}');
+
+    }
+
+    if(spell.description) {
+      var spellDescription = spell.description.replace('<br>', '\n');
+      setAttribute(spellBase + 'spelldescription', spellDescription);
+      setAttribute(spellBase + 'spellshowdesc', '{{spellshowdesc=1}} {{spelldescription=@{spelldescription}}}');
+    }
+    if(spell.higherLevel) {
+      setAttribute(spellBase + 'spellhighersloteffect', spell.higherLevel);
+      setAttribute(spellBase + 'spellshowhigherlvl', '{{spellshowhigherlvl=1}} {{spellhigherlevel=@{spellhighersloteffect}}}');
+    }
+
+    var message = spell.name + ' imported for ' + args[0] + ' on spell level ' + spell.level + ' at index ' + spellIndex;
+    log(message);
+    sendChat('GM', '/w gm ' + message);
   };
 
   function convertAttrFromNPCtoRepeating(oldAttrName, attrName) {
