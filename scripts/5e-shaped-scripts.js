@@ -137,7 +137,7 @@
         shaped.getSelectedToken(msg, shaped.ImportStatblock);
         break;
       case '!shaped-rollhp':
-        shaped.rollHpForSelectedToken(msg);
+        shaped.getSelectedToken(msg, shaped.rollTokenHp);
         break;
       case '!shaped-settings':
         args.shift();
@@ -215,10 +215,6 @@
     var val = parseInt(attr.get('current'), 10) || 0;
 
     attr.set({current: val - 1});
-  };
-
-  shaped.rollHpForSelectedToken = function(msg) {
-    shaped.getSelectedToken(msg, shaped.rollTokenHp);
   };
 
   shaped.rollTokenHp = function(token) {
