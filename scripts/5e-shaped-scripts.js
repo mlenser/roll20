@@ -58,9 +58,9 @@
         "material":"true",
         "materialMaterial":"A tiny ball of bat guano and sulfur"
       },
-      "ritual":"true",
+      "ritual":"false",
       "duration":"Instantaneous",
-      "concentration":"true",
+      "concentration":"false",
       "castingTime":"1 action",
       "level":"3",
       "school":"Evocation",
@@ -1963,10 +1963,10 @@
 
     setAttribute(spellBase + 'spellname', spell.name);
     if(spell.ritual) {
-      setAttribute(spellBase + 'spellritual', spell.ritual);
+      setAttribute(spellBase + 'spellritual', '{{spellritual=1}}');
     }
     if(spell.concentration) {
-      setAttribute(spellBase + 'spellconcentration', spell.concentration);
+      setAttribute(spellBase + 'spellconcentration', '{{spellconcentration=1}}');
     }
     if(spell.school) {
       setAttribute(spellBase + 'spellschool', spell.school);
