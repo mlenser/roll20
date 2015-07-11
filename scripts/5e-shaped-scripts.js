@@ -64,7 +64,12 @@
       "castingTime":"1 action",
       "level":"3",
       "school":"Evocation",
-      "class":"Cleric, Sorcerer, Warlock, Wizard",
+      "classes":[
+        "Cleric",
+        "Sorcerer",
+        "Warlock",
+        "Wizard"
+      ],
       "domains":[
         "Light"
       ],
