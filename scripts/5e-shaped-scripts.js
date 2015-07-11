@@ -68,7 +68,9 @@
       "domains":[
         "Light"
       ],
-      "patrons":"Fiend"
+      "patrons":[
+        "Fiend"
+      ]
     }
   ];
 

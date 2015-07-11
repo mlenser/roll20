@@ -778,7 +778,9 @@
     "level":"2",
     "school":"Necromancy",
     "class":"Bard, Cleric, Sorcerer, Warlock, Wizard",
-    "patrons":"Fiend"
+    "patrons":[
+      "Fiend"
+    ]
   },
   {
     "name":"Blink",
@@ -799,7 +801,9 @@
     "domains":[
       "Trickery"
     ],
-    "patrons":"Archfey"
+    "patrons":[
+      "Archfey"
+    ]
   },
   {
     "name":"Blur",
@@ -875,7 +879,9 @@
     "domains":[
       "Light"
     ],
-    "patrons":"Fiend"
+    "patrons":[
+      "Fiend"
+    ]
   },
   {
     "name":"Call Lightning",
@@ -917,7 +923,9 @@
     "level":"2",
     "school":"Enchantment",
     "class":"Bard, Cleric, Warlock",
-    "patrons":"Archfey"
+    "patrons":[
+      "Archfey"
+    ]
   },
   {
     "name":"Catapult",
@@ -1068,7 +1076,9 @@
     "level":"3",
     "school":"Divination",
     "class":"Bard, Cleric, Sorcerer, Warlock, Wizard",
-    "patrons":"Great Old One"
+    "patrons":[
+      "Great Old One"
+    ]
   },
   {
     "name":"Clone",
@@ -1169,7 +1179,9 @@
     "domains":[
       "Knowledge"
     ],
-    "patrons":"Fiend"
+    "patrons":[
+      "Fiend"
+    ]
   },
   {
     "name":"Commune",
@@ -2035,7 +2047,9 @@
     "level":"2",
     "school":"Divination",
     "class":"Bard, Sorcerer, Warlock, Wizard",
-    "patrons":"Great Old One"
+    "patrons":[
+      "Great Old One"
+    ]
   },
   {
     "name":"Dimension Door",
@@ -2158,7 +2172,9 @@
     "level":"1",
     "school":"Enchantment",
     "class":"Bard, Warlock",
-    "patrons":"Great Old One"
+    "patrons":[
+      "Great Old One"
+    ]
   },
   {
     "name":"Divination",
@@ -2239,7 +2255,10 @@
     "domains":[
       "Nature"
     ],
-    "patrons":"Archfey, Great Old One"
+    "patrons":[
+      "Archfey",
+      "Great Old One"
+    ]
   },
   {
     "name":"Drawmij's Instant Summons",
@@ -2298,7 +2317,10 @@
     "domains":[
       "Trickery"
     ],
-    "patrons":"Archfey, Great Old One"
+    "patrons":[
+      "Archfey",
+      "Great Old One"
+    ]
   },
   {
     "name":"Dream",
@@ -2614,7 +2636,9 @@
     "level":"4",
     "school":"Conjuration",
     "class":"Warlock, Wizard",
-    "patrons":"Great Old One"
+    "patrons":[
+      "Great Old One"
+    ]
   },
   {
     "name":"Expeditious Retreat",
@@ -2685,7 +2709,9 @@
     "domains":[
       "Light"
     ],
-    "patrons":"Archfey"
+    "patrons":[
+      "Archfey"
+    ]
   },
   {
     "name":"False Life",
@@ -2893,7 +2919,9 @@
     "domains":[
       "Light"
     ],
-    "patrons":"Fiend"
+    "patrons":[
+      "Fiend"
+    ]
   },
   {
     "name":"Fire Bolt",
@@ -2930,7 +2958,9 @@
     "level":"4",
     "school":"Evocation",
     "class":"Warlock, Wizard",
-    "patrons":"Fiend"
+    "patrons":[
+      "Fiend"
+    ]
   },
   {
     "name":"Fire Storm",
@@ -3013,7 +3043,9 @@
     "domains":[
       "Devotion"
     ],
-    "patrons":"Fiend"
+    "patrons":[
+      "Fiend"
+    ]
   },
   {
     "name":"Flaming Sphere",
@@ -3449,7 +3481,9 @@
     "circles":[
       "Underdark"
     ],
-    "patrons":"Archfey"
+    "patrons":[
+      "Archfey"
+    ]
   },
   {
     "name":"Greater Restoration",
@@ -3621,7 +3655,9 @@
     "level":"5",
     "school":"Evocation",
     "class":"Cleric, Warlock",
-    "patrons":"Fiend"
+    "patrons":[
+      "Fiend"
+    ]
   },
   {
     "name":"Hallucinatory Terrain",
@@ -5366,7 +5402,10 @@
     "level":"2",
     "school":"Illusion",
     "class":"Bard, Sorcerer, Warlock, Wizard",
-    "patrons":"Archfey, Great Old One"
+    "patrons":[
+      "Archfey",
+      "Great Old One"
+    ]
   },
   {
     "name":"Phantasmal Killer",
@@ -5484,7 +5523,9 @@
     "domains":[
       "Ancients"
     ],
-    "patrons":"Archfey"
+    "patrons":[
+      "Archfey"
+    ]
   },
   {
     "name":"Poison Spray",
@@ -6116,7 +6157,9 @@
     "domains":[
       "Light"
     ],
-    "patrons":"Fiend"
+    "patrons":[
+      "Fiend"
+    ]
   },
   {
     "name":"Scrying",
@@ -6200,7 +6243,9 @@
     "level":"5",
     "school":"Illusion",
     "class":"Bard, Sorcerer, Warlock, Wizard",
-    "patrons":"Archfey"
+    "patrons":[
+      "Archfey"
+    ]
   },
   {
     "name":"Sending",
@@ -6220,7 +6265,9 @@
     "level":"3",
     "school":"Evocation",
     "class":"Bard, Cleric, Warlock, Wizard",
-    "patrons":"Great Old One"
+    "patrons":[
+      "Great Old One"
+    ]
   },
   {
     "name":"Sequester",
@@ -6468,7 +6515,9 @@
     "level":"1",
     "school":"Enchantment",
     "class":"Bard, Sorcerer, Warlock, Wizard",
-    "patrons":"Archfey"
+    "patrons":[
+      "Archfey"
+    ]
   },
   {
     "name":"Sleet Storm",
@@ -6749,7 +6798,9 @@
       "Swamp",
       "Underdark"
     ],
-    "patrons":"Fiend"
+    "patrons":[
+      "Fiend"
+    ]
   },
   {
     "name":"Stone Shape",
@@ -6952,7 +7003,9 @@
     "level":"1",
     "school":"Enchantment",
     "class":"Bard, Warlock, Wizard",
-    "patrons":"Great Old One"
+    "patrons":[
+      "Great Old One"
+    ]
   },
   {
     "name":"Telekinesis",
@@ -6970,7 +7023,9 @@
     "level":"5",
     "school":"Transmutation",
     "class":"Sorcerer, Warlock, Wizard",
-    "patrons":"Great Old One"
+    "patrons":[
+      "Great Old One"
+    ]
   },
   {
     "name":"Telepathy",
@@ -7450,7 +7505,9 @@
     "domains":[
       "Light"
     ],
-    "patrons":"Fiend"
+    "patrons":[
+      "Fiend"
+    ]
   },
   {
     "name":"Wall of Force",
