@@ -1942,10 +1942,26 @@
         _type: 'character',
         name: args[0]
       })[0],
-      spellBase = 'repeating_spellbooklevel' + spell.level + '_',
+      spellBase,
       spellIndex;
 
-    characterId = character.id;
+	  if(!spell) {
+		  log('no spell');
+		  var message = 'Error: cannot find a spell by the name of "' + args[1] + '".';
+		  log(message);
+		  sendChat('GM', '/w gm ' + message);
+		  return
+	  }
+	  if(!character) {
+		  log('no spell');
+		  var message = 'Error: cannot find a character by the name of "' + args[0] + '".';
+		  log(message);
+		  sendChat('GM', '/w gm ' + message);
+		  return
+	  }
+	  characterId = character.id;
+	  spellBase = 'repeating_spellbooklevel' + spell.level + '_';
+
 
     for (var i = 0; i < 100; i++) {
       var attr = findObjs({
