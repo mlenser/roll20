@@ -81,7 +81,7 @@
 
 
     shaped.statblock = {
-    version: '1.85',
+    version: '1.86',
     RegisterHandlers: function () {
       on('chat:message', HandleInput);
 
@@ -126,12 +126,12 @@
       return;
     }
     log('msg.content: ' + msg.content);
-    var args = msg.content.split(/\s+/);
+    var args = msg.content.split(/\s+--/);
     switch(args[0]) {
       case '!build-monster':
       case '!shaped-parse':
       case '!shaped-import':
-        if(args[1] && args[1] === '--clean') {
+        if(args[1] && args[1] === 'clean') {
           shaped.getSelectedToken(msg, shaped.deleteOldSheet);
         }
         shaped.getSelectedToken(msg, shaped.ImportStatblock);
@@ -149,9 +149,6 @@
         break;
       case '!shaped-convert':
         shaped.getSelectedToken(msg, shaped.parseOldToNew);
-        break;
-      case '!shaped-action-repeating-convert':
-        shaped.getSelectedToken(msg, shaped.parseActionsToRepeating);
         break;
     }
   }
@@ -2016,123 +2013,6 @@
     var message = spell.name + ' imported for ' + args[0] + ' on spell level ' + spell.level + ' at index ' + spellIndex;
     log(message);
     sendChat('GM', '/w gm ' + message);
-  };
-
-  function convertAttrFromNPCtoRepeating(oldAttrName, attrName) {
-    var oldAttr = getAttrByName(characterId, oldAttrName);
-
-    if(oldAttr) {
-      log('convert from ' + oldAttrName + ' to ' + attrName);
-      setAttribute(attrName, oldAttr);
-    }
-  }
-  function convertActionToRepeating(prefix, field, iterator, toggle) {
-    var oldAttr = getAttrByName(characterId, 'npc_' + prefix + '_' + field + '_' + iterator),
-      newField = 'repeating_' + prefix + 's_' + (iterator-1) + '_' + field;
-
-    if(toggle) {
-      oldAttr = getAttrByName(characterId, 'npc_' + prefix + '_toggle_' + field + '_' + iterator);
-      newField = 'repeating_' + prefix + 's_' + (iterator-1) + '_toggle_' + field;
-    }
-
-    if(oldAttr && oldAttr !== '0') {
-      log('convert' + field + ' to repeating');
-      if(toggle) {
-        setAttribute(newField, '@{repeating_' + prefix + 's_' + (iterator-1) + '_var_' + field + '}');
-      } else {
-        setAttribute(newField, oldAttr);
-      }
-    }
-  }
-  function convertActionToggleToRepeating(prefix, field, iterator) {
-    convertActionToRepeating(prefix, field, iterator, true);
-  }
-
-  function setReachRangeTargetToggle(prefix, field, iterator) {
-    var attr = getAttrByName(characterId, 'repeating_' + prefix + 's_' + (iterator-1) + '_' + field);
-
-    if(attr) {
-      setAttribute('repeating_' + prefix + 's_' + (iterator-1) + '_toggle_' + field, '@{repeating_' + prefix + 's_' + (iterator-1) + '_var_' + field + '}');
-    }
-  }
-
-  function actionPartsToConvert(prefix, i) {
-    if(getAttrByName(characterId, 'npc_' + prefix + '_name_' + i)) {
-      convertActionToRepeating(prefix, 'name', i);
-      convertActionToRepeating(prefix, 'type', i);
-
-      convertActionToRepeating(prefix, 'recharge', i);
-      convertActionToggleToRepeating(prefix, 'recharge', i);
-
-      convertActionToRepeating(prefix, 'emote', i);
-      convertActionToggleToRepeating(prefix, 'emote', i);
-
-      convertActionToRepeating(prefix, 'tohit', i);
-      convertActionToggleToRepeating(prefix, 'attack', i);
-
-      convertActionToRepeating(prefix, 'reach', i);
-      setReachRangeTargetToggle(prefix, 'reach', i);
-      convertActionToRepeating(prefix, 'range', i);
-      setReachRangeTargetToggle(prefix, 'range', i);
-      convertActionToRepeating(prefix, 'target', i);
-      setReachRangeTargetToggle(prefix, 'target', i);
-      convertActionToggleToRepeating(prefix, 'details', i);
-
-      convertActionToRepeating(prefix, 'dmg', i);
-      convertActionToRepeating(prefix, 'dmg_type', i);
-      convertActionToggleToRepeating(prefix, 'damage', i);
-
-      convertActionToRepeating(prefix, 'alt_dmg', i);
-      convertActionToRepeating(prefix, 'alt_dmg_reason', i);
-      convertActionToggleToRepeating(prefix, 'alt_damage', i);
-
-      convertActionToRepeating(prefix, 'second_dmg', i);
-      convertActionToRepeating(prefix, 'second_dmg_type', i);
-      convertActionToggleToRepeating(prefix, 'second_damage', i);
-
-      convertActionToRepeating(prefix, 'crit_dmg', i);
-      convertActionToRepeating(prefix, 'alt_crit_dmg', i);
-      convertActionToRepeating(prefix, 'second_crit_dmg', i);
-      convertActionToRepeating(prefix, 'crit_range', i);
-      convertActionToggleToRepeating(prefix, 'crit', i);
-
-      convertActionToRepeating(prefix, 'save_dc', i);
-      convertActionToRepeating(prefix, 'save_success', i);
-      convertActionToggleToRepeating(prefix, 'save', i);
-
-      convertActionToRepeating(prefix, 'save_dmg', i);
-      convertActionToRepeating(prefix, 'save_dmg_type', i);
-      convertActionToggleToRepeating(prefix, 'save_damage', i);
-
-      convertActionToRepeating(prefix, 'effect', i);
-      convertActionToggleToRepeating(prefix, 'effects', i);
-    }
-  }
-
-  shaped.parseActionsToRepeating = function(token) {
-    log('---- Parsing old attributes to new ----');
-    characterId = token.attributes.represents;
-
-    convertAttrFromNPCtoRepeating('npc_action_toggle_regional_effects', 'toggle_regional_effects');
-    convertAttrFromNPCtoRepeating('npc_action_toggle_lair_actions', 'toggle_lair_actions');
-    convertAttrFromNPCtoRepeating('npc_action_toggle_legendary_actions', 'toggle_legendary_actions');
-    convertAttrFromNPCtoRepeating('npc_action_toggle_reactions', 'toggle_reactions');
-
-    convertAttrFromNPCtoRepeating('npc_multiattack', 'multiattack');
-    if(getAttrByName(characterId, 'multiattack')) {
-      setAttribute('toggle_multiattack', 'on');
-    }
-
-
-    for(var i = 1; i <= 11; i++) {
-      actionPartsToConvert('action', i);
-    }
-    for(var i = 1; i <= 3; i++) {
-      actionPartsToConvert('legendary_action', i);
-    }
-    for(var i = 1; i <= 3; i++) {
-      actionPartsToConvert('lair_action', i);
-    }
   };
 
 }(typeof shaped === 'undefined' ? shaped = {} : shaped));
