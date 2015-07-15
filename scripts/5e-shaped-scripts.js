@@ -710,7 +710,7 @@
     var abilitiesName = ['str', 'dex', 'con', 'int', 'wis', 'cha'];
     var abilities = '';
     for(var i = 0, len = abilitiesName.length; i < len; ++i) {
-      if(keyword.attr[abilitiesName[i]]) {
+      if(keyword.attr.hasOwnProperty([abilitiesName[i]])) {
         abilities += keyword.attr[abilitiesName[i]] + ' ';
         delete keyword.attr[abilitiesName[i]];
       }
@@ -718,11 +718,11 @@
     keyword.attr.abilities = abilities;
 
     // Size attribute:
-    var size = ['tiny', 'small', 'medium', 'large', 'huge', 'gargantuan'];
-    for(i = 0, len = abilitiesName.length; i < len; ++i) {
-      if(keyword.attr[size[i]]) {
-        keyword.attr.size = size[i] + ' ' + keyword.attr[size[i]];
-        delete keyword.attr[size[i]];
+    var sizes = ['tiny', 'small', 'medium', 'large', 'huge', 'gargantuan'];
+    for(i = 0, len = sizes.length; i < len; ++i) {
+      if(keyword.attr.hasOwnProperty([sizes[i]])) {
+        keyword.attr.size = sizes[i] + ' ' + keyword.attr[sizes[i]];
+        delete keyword.attr[sizes[i]];
         break;
       }
     }
@@ -955,24 +955,24 @@
   function parseSkills(skills) {
     // Need to substract ability modifier skills this field since sheet compute it
     var skillAbility = {
-      acrobatics: 'dexterity',
-      'animal handling': 'wisdom',
-      arcana: 'intelligence',
-      athletics: 'strength',
-      deception: 'charisma',
-      history: 'intelligence',
-      insight: 'wisdom',
-      intimidation: 'charisma',
-      investigation: 'intelligence',
-      medicine: 'wisdom',
-      nature: 'intelligence',
-      perception: 'wisdom',
-      performance: 'charisma',
-      persuasion: 'charisma',
-      religion: 'intelligence',
-      'sleight of hand': 'dexterity',
-      stealth: 'dexterity',
-      survival: 'wisdom'
+      'acrobatics':'dexterity',
+      'animal handling':'wisdom',
+      'arcana':'intelligence',
+      'athletics':'strength',
+      'deception':'charisma',
+      'history':'intelligence',
+      'insight':'wisdom',
+      'intimidation':'charisma',
+      'investigation':'intelligence',
+      'medicine':'wisdom',
+      'nature':'intelligence',
+      'perception':'wisdom',
+      'performance':'charisma',
+      'persuasion':'charisma',
+      'religion':'intelligence',
+      'sleight of hand':'dexterity',
+      'stealth':'dexterity',
+      'survival':'wisdom'
     };
 
     var regex = /([\w\s]+).*?(\d+)/gi;
