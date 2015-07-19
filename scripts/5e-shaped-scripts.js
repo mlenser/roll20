@@ -76,12 +76,34 @@
       "patrons":[
         "Fiend"
       ]
+    },
+    {
+      "name":"Light",
+      "description":"You touch one object that is no larger than 10 feet in any dimension. Until the spell ends, the object sheds bright light in a 20-foot radius and dim light for an additional 20 feet. The light can be colored as you like. Completely covering the object with something opaque blocks the light. The spell ends if you cast it again or dismiss it as an action.<br>If you target an object held or worn by a hostile creature, that creature must succeed on a dexterity saving throw to avoid the spell.",
+      "source":"phb 255",
+      "range":"Touch",
+      "components":{
+        "verbal":"true",
+        "material":"true",
+        "materialMaterial":"A firefly or phosphorescent moss"
+      },
+      "ritual":"false",
+      "duration":"1 hour",
+      "concentration":"false",
+      "castingTime":"1 action",
+      "level":"0",
+      "school":"Evocation",
+      "classes":[
+        "Bard",
+        "Cleric",
+        "Sorcerer",
+        "Wizard"
+      ]
     }
   ];
 
-
-    shaped.statblock = {
-    version: '1.86',
+  shaped.statblock = {
+    version: '1.87',
     RegisterHandlers: function () {
       on('chat:message', HandleInput);
 
@@ -1942,7 +1964,7 @@
         _type: 'character',
         name: args[0]
       })[0],
-      spellBase,
+      spellBase = 'repeating_spellbook',
       spellIndex;
 
 	  if(!spell) {
@@ -1960,8 +1982,12 @@
 		  return
 	  }
 	  characterId = character.id;
-	  spellBase = 'repeating_spellbooklevel' + spell.level + '_';
 
+    if(spell.level === '0') {
+      spellBase += 'cantrip_';
+    } else {
+      spellBase += 'level' + spell.level + '_';
+    }
 
     for (var i = 0; i < 100; i++) {
       var attr = findObjs({

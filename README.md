@@ -6,6 +6,10 @@ Scripts for 5e roll20
 
 ### Changelog
 
+**19th July 2015 (1.87)**
+
+* Fixed cantrip import for spells
+
 **13th July 2015 (1.86)**
 
 * Command options must now be seperated by a space and 2 dashes " --". Example: "!shaped-spell-import --Dakra --Zone of Truth" or "!shaped-settings --pcs --output_option --show"
