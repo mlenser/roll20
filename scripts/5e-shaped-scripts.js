@@ -9,7 +9,7 @@
     showCharacterNameOnRollTemplate: false, //show the character's name on their roll templates
     //useAaronsNumberedScript: true, //add numbers at the end if using his script
 
-    //defaultTab: 'actions', //core is defualt. uncomment if you want the actions page. Change to 'spellbook' if you want the spellbook page. Change to 'all_npc' if you want to "Show All" for the NPC pages.
+    //defaultTab: 'actions', //core is default. uncomment if you want the actions page. Change to 'spellbook' if you want the spellbook page. Change to 'all_npc' if you want to "Show All" for the NPC pages.
     sheetOutput: '', //change to 'hidden' if you wish the sheet to whisper all commands to the GM
     whisperDeathSaves: true, //change to false if you wish NPC death saves to be rolled openly
     initiativeTieBreaker: true, //change to true if you want to add the initiative modifier as a tie breaker for initiatives. (I use it)
