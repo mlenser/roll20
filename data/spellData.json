@@ -584,7 +584,7 @@
       "Cleric",
       "Paladin"
     ],
-    "domains":[
+    "oaths":[
       "Vengeance"
     ]
   },
@@ -631,7 +631,7 @@
       "Warlock",
       "Wizard"
     ],
-    "domains":[
+    "oaths":[
       "Vengeance"
     ]
   },
@@ -1438,7 +1438,7 @@
       "Arctic",
       "Forest"
     ],
-    "domains":[
+    "oaths":[
       "Ancients"
     ]
   },
@@ -2448,7 +2448,7 @@
     "domains":[
       "Trickery"
     ],
-    "domains":[
+    "oaths":[
       "Vengeance"
     ]
   },
@@ -3013,7 +3013,7 @@
       "Paladin",
       "Ranger"
     ],
-    "domains":[
+    "oaths":[
       "Ancients"
     ]
   },
@@ -4418,7 +4418,7 @@
     "circles":[
       "Grassland"
     ],
-    "domains":[
+    "oaths":[
       "Vengeance"
     ]
   },
@@ -4600,7 +4600,7 @@
     "domains":[
       "War"
     ],
-    "domains":[
+    "oaths":[
       "Vengeance"
     ]
   },
@@ -4634,7 +4634,7 @@
     "circles":[
       "Arctic"
     ],
-    "domains":[
+    "oaths":[
       "Vengeance"
     ]
   },
@@ -4699,7 +4699,7 @@
       "Paladin",
       "Ranger"
     ],
-    "domains":[
+    "oaths":[
       "Vengeance"
     ]
   },
@@ -4780,7 +4780,7 @@
     "circles":[
       "Arctic"
     ],
-    "domains":[
+    "oaths":[
       "Ancients"
     ]
   },
@@ -6029,7 +6029,7 @@
     "circles":[
       "Coast"
     ],
-    "domains":[
+    "oaths":[
       "Ancients",
       "Vengeance"
     ]
@@ -6101,7 +6101,7 @@
       "Druid",
       "Paladin"
     ],
-    "domains":[
+    "oaths":[
       "Ancients"
     ]
   },
@@ -6567,7 +6567,7 @@
     "circles":[
       "Forest"
     ],
-    "domains":[
+    "oaths":[
       "Ancients"
     ],
     "patrons":[
@@ -6872,7 +6872,7 @@
     "circles":[
       "Desert"
     ],
-    "domains":[
+    "oaths":[
       "Ancients",
       "Vengeance"
     ]
@@ -7361,7 +7361,7 @@
       "Coast",
       "Swamp"
     ],
-    "domains":[
+    "oaths":[
       "Vengeance"
     ]
   },
@@ -7878,7 +7878,7 @@
     "domains":[
       "Nature"
     ],
-    "domains":[
+    "oaths":[
       "Ancients"
     ]
   },
@@ -8144,7 +8144,7 @@
     "circles":[
       "Mountain"
     ],
-    "domains":[
+    "oaths":[
       "Ancients"
     ]
   },
@@ -8698,7 +8698,7 @@
     "circles":[
       "Forest"
     ],
-    "domains":[
+    "oaths":[
       "Ancients"
     ]
   },
