@@ -1377,7 +1377,7 @@
           parsedSave = true;
         }
 
-        var saveRangeRegex = /((?:Each | a | an | one ).*(?:creature|target).*)\swithin\s*?(\d+)\s*?(?:feet|ft)/gi;
+        var saveRangeRegex = /((?:Each | a | an | one ).*(?:creature|target).*)\s(?:within|in)\s*?a?\s*?(\d+)\s*?(?:feet|ft)/gi;
         while(saveRange = saveRangeRegex.exec(value)) {
           if(saveRange[1]) {
             setTarget(saveRange[1].trim());
@@ -1984,6 +1984,9 @@
       setAttribute(spellBase + 'spellhighersloteffect', spell.higherLevel);
       setAttribute(spellBase + 'spellshowhigherlvl', '{{spellshowhigherlvl=1}} {{spellhigherlevel=@{spellhighersloteffect}}}');
     }
+
+    //TODO: {{GENDER_PRONOUN_HE_SHE}}, {{GENDER_PRONOUN_HIM_HER}}, {{GENDER_PRONOUN_HIS_HER}}
+
 
     var message = spell.name + ' imported for ' + characterName + ' on spell level ' + spell.level + ' at index ' + spellIndex;
     log(message);
