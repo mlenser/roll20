@@ -6,6 +6,10 @@ Scripts for 5e roll20
 
 ### Changelog
 
+**25th July 2015 (1.88)**
+
+* Spells can now be imported via an array
+
 **19th July 2015 (1.87)**
 
 * Fixed cantrip import for spells

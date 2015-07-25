@@ -48,7 +48,7 @@
   var spellsData = [];
 
   shaped.statblock = {
-    version: '1.87',
+    version: '1.88',
     RegisterHandlers: function () {
       on('chat:message', HandleInput);
 
