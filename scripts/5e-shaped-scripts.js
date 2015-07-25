@@ -1903,7 +1903,7 @@
 
   shaped.importSpell = function(character, characterName, spellName) {
     var spell = spellsData.filter(function ( obj ) {
-        return obj.name === spellName;
+        return obj.name.toLowerCase() === spellName.toLowerCase();
       })[0],
       spellBase = 'repeating_spellbook',
       spellIndex;
