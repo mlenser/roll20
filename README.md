@@ -8,7 +8,9 @@ Scripts for 5e roll20
 
 **25th July 2015 (1.88)**
 
+* Spells are now imported based on the selected token(s)
 * Spells can now be imported via an array
+* Spell names do not need to be capitalized
 
 **19th July 2015 (1.87)**
 

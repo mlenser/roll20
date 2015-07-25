@@ -112,7 +112,7 @@
         break;
       case '!shaped-spell-import':
         args.shift();
-        shaped.spellImport(args);
+        shaped.getSelectedToken(msg, shaped.spellImport, args);
         break;
       case '!shaped-convert':
         shaped.getSelectedToken(msg, shaped.parseOldToNew);
@@ -126,23 +126,17 @@
     });
   };
 
-  shaped.getSelectedToken = shaped.getSelectedToken || function(msg, callback, limit) {
+  shaped.getSelectedToken = shaped.getSelectedToken || function(msg, callback) {
     try {
       if(!msg.selected || !msg.selected.length) {
         throw('No token selected');
       }
 
-      limit = parseInt(limit, 10) || 0;
-
-      if(!limit || limit > msg.selected.length + 1 || limit < 1) {
-        limit = msg.selected.length;
-      }
-
-      for(var i = 0; i < limit; i++) {
+      for(var i = 0; i < msg.selected.length; i++) {
         if(msg.selected[i]._type === 'graphic') {
           var obj = getObj('graphic', msg.selected[i]._id);
           if(obj && obj.get('subtype') === 'token') {
-            callback(obj);
+            callback(obj, arguments[2]);
           }
         }
       }
@@ -1996,15 +1990,17 @@
     sendChat('GM', '/w gm ' + message);
   };
 
-  shaped.spellImport = function(args) {
-    var spells = args[1].split(', '),
+  shaped.spellImport = function(token, args) {
+    var spells = args[0].split(', '),
+      id = token.get('represents'),
       character = findObjs({
         _type: 'character',
-        name: args[0]
-      })[0];
+        id: id
+      })[0],
+      characterName = getAttrByName(id, 'character_name', 'current');
 
     for(var i = 0; i < spells.length; i++) {
-      shaped.importSpell(character, args[0], spells[i]);
+      shaped.importSpell(character, characterName, spells[i]);
     }
   };
 
