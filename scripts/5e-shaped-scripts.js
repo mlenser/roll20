@@ -45,62 +45,7 @@
     ]
   };
 
-  var spellsData = [
-    {
-      "name":"Fireball",
-      "description":"A bright streak flashes from your pointing finger to a point you choose within range and then blossoms with a low roar into an explosion of flame. Each creature in a 20-foot-radius sphere centered on that point must make a dexterity saving throw. A target takes 8d6 fire damage on a failed save, or half as much damage on a successful one.<br>The fire spreads around corners. It ignites flammable objects in the area that aren’t being worn or carried.",
-      "higherLevel":"When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 for each slot level above 3rd.",
-      "source":"phb 241",
-      "range":"150 feet",
-      "components":{
-        "verbal":"true",
-        "somatic":"true",
-        "material":"true",
-        "materialMaterial":"A tiny ball of bat guano and sulfur"
-      },
-      "ritual":"false",
-      "duration":"Instantaneous",
-      "concentration":"false",
-      "castingTime":"1 action",
-      "level":"3",
-      "school":"Evocation",
-      "classes":[
-        "Cleric",
-        "Sorcerer",
-        "Warlock",
-        "Wizard"
-      ],
-      "domains":[
-        "Light"
-      ],
-      "patrons":[
-        "Fiend"
-      ]
-    },
-    {
-      "name":"Light",
-      "description":"You touch one object that is no larger than 10 feet in any dimension. Until the spell ends, the object sheds bright light in a 20-foot radius and dim light for an additional 20 feet. The light can be colored as you like. Completely covering the object with something opaque blocks the light. The spell ends if you cast it again or dismiss it as an action.<br>If you target an object held or worn by a hostile creature, that creature must succeed on a dexterity saving throw to avoid the spell.",
-      "source":"phb 255",
-      "range":"Touch",
-      "components":{
-        "verbal":"true",
-        "material":"true",
-        "materialMaterial":"A firefly or phosphorescent moss"
-      },
-      "ritual":"false",
-      "duration":"1 hour",
-      "concentration":"false",
-      "castingTime":"1 action",
-      "level":"0",
-      "school":"Evocation",
-      "classes":[
-        "Bard",
-        "Cleric",
-        "Sorcerer",
-        "Wizard"
-      ]
-    }
-  ];
+  var spellsData = [];
 
   shaped.statblock = {
     version: '1.87',
@@ -1956,32 +1901,26 @@
     }
   };
 
-  shaped.spellImport = function(args) {
+  shaped.importSpell = function(character, characterName, spellName) {
     var spell = spellsData.filter(function ( obj ) {
-        return obj.name === args[1];
-      })[0],
-      character = findObjs({
-        _type: 'character',
-        name: args[0]
+        return obj.name === spellName;
       })[0],
       spellBase = 'repeating_spellbook',
       spellIndex;
 
-	  if(!spell) {
-		  log('no spell');
-		  var message = 'Error: cannot find a spell by the name of "' + args[1] + '".';
-		  log(message);
-		  sendChat('GM', '/w gm ' + message);
-		  return
-	  }
-	  if(!character) {
-		  log('no spell');
-		  var message = 'Error: cannot find a character by the name of "' + args[0] + '".';
-		  log(message);
-		  sendChat('GM', '/w gm ' + message);
-		  return
-	  }
-	  characterId = character.id;
+    if(!spell) {
+      var message = 'Error: cannot find a spell by the name of "' + spellName + '".';
+      log(message);
+      sendChat('GM', '/w gm ' + message);
+      return
+    }
+    if(typeof(character) === 'undefined') {
+      var message = 'Error: cannot find a character by the name of "' + characterName + '".';
+      log(message);
+      sendChat('GM', '/w gm ' + message);
+      return
+    }
+    characterId = character.id;
 
     if(spell.level === '0') {
       spellBase += 'cantrip_';
@@ -2052,9 +1991,21 @@
       setAttribute(spellBase + 'spellshowhigherlvl', '{{spellshowhigherlvl=1}} {{spellhigherlevel=@{spellhighersloteffect}}}');
     }
 
-    var message = spell.name + ' imported for ' + args[0] + ' on spell level ' + spell.level + ' at index ' + spellIndex;
+    var message = spell.name + ' imported for ' + characterName + ' on spell level ' + spell.level + ' at index ' + spellIndex;
     log(message);
     sendChat('GM', '/w gm ' + message);
+  };
+
+  shaped.spellImport = function(args) {
+    var spells = args[1].split(', '),
+      character = findObjs({
+        _type: 'character',
+        name: args[0]
+      })[0];
+
+    for(var i = 0; i < spells.length; i++) {
+      shaped.importSpell(character, args[0], spells[i]);
+    }
   };
 
 }(typeof shaped === 'undefined' ? shaped = {} : shaped));
