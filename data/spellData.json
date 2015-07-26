@@ -88,7 +88,8 @@
     "emote":"emanates a line of roaring flame",
     "source":"ee pc 15",
     "range":"30 feet",
-    "target":"Each creature in the 30 feet long and 5 feet wide line",
+    "target":"Each creature in the line",
+    "aoe":"30 ft. long and 5 ft. wide line",
     "components":{
       "verbal":"true",
       "somatic":"true",
@@ -326,6 +327,7 @@
     "emote":"creates a shimmering barrier that extends out from {{GENDER_PRONOUN_HIM_HER}}",
     "source":"phb 213",
     "range":"Self",
+    "aoe":"10 ft. radius that remains centered on you",
     "components":{
       "verbal":"true",
       "somatic":"true"
@@ -336,7 +338,7 @@
     "castingTime":"1 action",
     "level":"5",
     "school":"Abjuration",
-    "effect":"The barrier extends in a 10-foot radius and moves with you, remaining centered on you and hedging out creatures other than undead and constructs. The barrier lasts for the duration.<br>The barrier prevents an affected creature from passing or reaching through. An affected creature can cast spells or make attacks with ranged or reach weapons through the barrier.<br>If you move so that an affected creature is forced to pass through the barrier, the spell ends.",
+    "effect":"The barrier hedges out creatures other than undead and constructs. The barrier lasts for the duration.<br>The barrier prevents an affected creature from passing or reaching through. An affected creature can cast spells or make attacks with ranged or reach weapons through the barrier.<br>If you move so that an affected creature is forced to pass through the barrier, the spell ends.",
     "classes":[
       "Druid"
     ]
@@ -347,6 +349,7 @@
     "emote":"creates an invisible sphere of antimagic that that surrounds {{GENDER_PRONOUN_HIM_HER}}",
     "source":"phb 213",
     "range":"Self",
+    "aoe":"10 ft. radius that remains centered on you",
     "components":{
       "verbal":"true",
       "somatic":"true",
@@ -359,7 +362,7 @@
     "castingTime":"1 action",
     "level":"8",
     "school":"Abjuration",
-    "effects":"This 10-foot-radius area is divorced from the magical energy that suffuses the multiverse. Within the sphere, spells can't be cast, summoned creatures disappear, and even magic items become mundane. Until the spell ends, the sphere moves with you, centered on you.<br>Spells and other magical effects, except those created by an artifact or a deity, are suppressed in the sphere and can't protrude into it. A slot expended to cast a suppressed spell is consumed. While an effect is suppressed, it doesn't function, but the time it spends suppressed counts against its duration.<br><b><i>Targeted Effects.</b></i> Spells and other magical effects, such as magic missile and charm person, that target a creature or an object in the sphere have no effect on that target.<br><b><i>Areas of Magic.</b></i> The area of another spell or magical effect, such as fireball, can't extend into the sphere. If the sphere overlaps an area of magic, the part of the area that is covered by the sphere is suppressed. For example, the flames created by a wall of fire are suppressed within the sphere, creating a gap in the wall if the overlap is large enough.<br><b><i>Spells.</b></i> Any active spell or other magical effect on a creature or an object in the sphere is suppressed while the creature or object is in it.<br><b><i>Magic Items.</b></i> The properties and powers of magic items are suppressed in the sphere. For example, a +1 longsword in the sphere functions as a nonmagical longsword.<br>A magic weapon's properties and powers are suppressed if it is used against a target in the sphere or wielded by an attacker in the sphere. If a magic weapon or a piece of magic ammunition fully leaves the sphere (for example, if you fire a magic arrow or throw a magic spear at a target outside the sphere), the magic of the item ceases to be suppressed as soon as it exits.<br><b><i>Magical Travel.</b></i> Teleportation and planar travel fail to work in the sphere, whether the sphere is the destination or the departure point for such magical travel. A portal to another location, world, or plane of existence, as well as an opening to an extradimensional space such as that created by the rope trick spell, temporarily closes while in the sphere.<br><b><i>Creatures and Objects.</b></i> A creature or object summoned or created by magic temporarily winks out of existence in the sphere. Such a creature instantly reappears once the space the creature occupied is no longer within the sphere.<br><b><i>Dispel Magic.</b></i> Spells and magical effects such as dispel magic have no effect on the sphere. Likewise, the spheres created by different antimagic field spells don't nullify each other.",
+    "effects":"The area is divorced from the magical energy that suffuses the multiverse. Within the sphere, spells can't be cast, summoned creatures disappear, and even magic items become mundane.<br>Spells and other magical effects, except those created by an artifact or a deity, are suppressed in the sphere and can't protrude into it. A slot expended to cast a suppressed spell is consumed. While an effect is suppressed, it doesn't function, but the time it spends suppressed counts against its duration.<br><b><i>Targeted Effects.</b></i> Spells and other magical effects, such as magic missile and charm person, that target a creature or an object in the sphere have no effect on that target.<br><b><i>Areas of Magic.</b></i> The area of another spell or magical effect, such as fireball, can't extend into the sphere. If the sphere overlaps an area of magic, the part of the area that is covered by the sphere is suppressed. For example, the flames created by a wall of fire are suppressed within the sphere, creating a gap in the wall if the overlap is large enough.<br><b><i>Spells.</b></i> Any active spell or other magical effect on a creature or an object in the sphere is suppressed while the creature or object is in it.<br><b><i>Magic Items.</b></i> The properties and powers of magic items are suppressed in the sphere. For example, a +1 longsword in the sphere functions as a nonmagical longsword.<br>A magic weapon's properties and powers are suppressed if it is used against a target in the sphere or wielded by an attacker in the sphere. If a magic weapon or a piece of magic ammunition fully leaves the sphere (for example, if you fire a magic arrow or throw a magic spear at a target outside the sphere), the magic of the item ceases to be suppressed as soon as it exits.<br><b><i>Magical Travel.</b></i> Teleportation and planar travel fail to work in the sphere, whether the sphere is the destination or the departure point for such magical travel. A portal to another location, world, or plane of existence, as well as an opening to an extradimensional space such as that created by the rope trick spell, temporarily closes while in the sphere.<br><b><i>Creatures and Objects.</b></i> A creature or object summoned or created by magic temporarily winks out of existence in the sphere. Such a creature instantly reappears once the space the creature occupied is no longer within the sphere.<br><b><i>Dispel Magic.</b></i> Spells and magical effects such as dispel magic have no effect on the sphere. Likewise, the spheres created by different antimagic field spells don't nullify each other.",
     "classes":[
       "Cleric",
       "Wizard"
@@ -575,7 +578,8 @@
     "emote":"radiates life-preserving energy in an aura",
     "source":"phb 216",
     "range":"Self",
-    "target":"Each nonhostile creature within 30-feet",
+    "target":"Each nonhostile creature within the aoe",
+    "aoe":"30 ft. radius that remains centered on you",
     "components":{
       "verbal":"true"
     },
@@ -596,7 +600,8 @@
     "emote":"radiates purifying energy in an aura",
     "source":"phb 216",
     "range":"Self",
-    "target":"Each nonhostile creature within 30-feet",
+    "target":"Each nonhostile creature within the aoe",
+    "aoe":"30 ft. radius that remains centered on you",
     "components":{
       "verbal":"true"
     },
@@ -617,7 +622,8 @@
     "emote":"radiates healing energy in an aura",
     "source":"phb 216",
     "range":"Self",
-    "target":"30-feet aura",
+    "target":"Each nonhostile creature within the aoe",
+    "aoe":"30 ft. radius that remains centered on you",
     "components":{
       "verbal":"true"
     },
@@ -1157,9 +1163,11 @@
     "name":"Call Lightning",
     "description":"A storm cloud appears in the shape of a cylinder that is 10 feet tall with a 60-foot radius, centered on a point you can see 100 feet directly above you. The spell fails if you can't see a point in the air where the storm cloud could appear (for example, if you are in a room that can't accommodate the cloud).<br>When you cast the spell, choose a point you can see within range. A bolt of lightning flashes down from the cloud to that point. Each creature within 5 feet of that point must make a dexterity saving throw. A creature takes 3d10 lightning damage on a failed save, or half as much damage on a successful one. On each of your turns until the spell ends, you can use your action to call down lightning in this way again, targeting the same point or a different one.<br>If you are outdoors in stormy conditions when you cast this spell, the spell gives you control over the existing storm instead of creating a new one. Under such conditions, the spell's damage increases by 1d10.",
     "higherLevel":"When you cast this spell using a spell slot of 4th or higher level, the damage increases by 1d10 for each slot level above 3rd.",
-    "emote":"",
+    "emote":"creates a cylindrical storm cloud directly above {{GENDER_PRONOUN_HIM_HER}}. A bolt of lightning then flashes down from the cloud",
     "source":"phb 220",
     "range":"120 feet",
+    "target":"each creature",
+    "aoe":"5 ft. radius",
     "components":{
       "verbal":"true",
       "somatic":"true"
@@ -1170,6 +1178,13 @@
     "castingTime":"1 action",
     "level":"3",
     "school":"Conjuration",
+    "save":{
+      "ability":"dexterity",
+      "damage":"3d10",
+      "damageType":"lightning",
+      "successfulSave":"half damage"
+    },
+    "effects":"A storm cloud appears in the shape of a cylinder that is 10 feet tall with a 60-foot radius, centered on a point you can see 100 feet directly above you. The spell fails if you can't see a point in the air where the storm cloud could appear (for example, if you are in a room that can't accommodate the cloud).<br>On each of your turns until the spell ends, you can use your action to call down lightning in this way again, targeting the same point or a different one.<br>If you are outdoors in stormy conditions when you cast this spell, the spell gives you control over the existing storm instead of creating a new one. Under such conditions, the spell's damage increases by 1d10.",
     "classes":[
       "Cleric",
       "Druid"
@@ -1653,9 +1668,11 @@
     "name":"Cone of Cold",
     "description":"A blast of cold air erupts from your hands. Each creature in a 60-foot cone must make a constitution saving throw. A creature takes 8d8 cold damage on a failed save, or half as much damage on a successful one.<br>A creature killed by this spell becomes a frozen statue until it thaws.",
     "higherLevel":"When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d8 for each slot level above 5th.",
-    "emote":"",
+    "emote":"'s hands erupt with a blast of frigid air",
     "source":"phb 224",
     "range":"Self",
+    "target":"each creature in the aoe",
+    "aoe:":"60 ft. cone",
     "components":{
       "verbal":"true",
       "somatic":"true",
@@ -1668,6 +1685,13 @@
     "castingTime":"1 action",
     "level":"5",
     "school":"Evocation",
+    "save":{
+      "ability":"constitution",
+      "damage":"8d8",
+      "damageType":"cold",
+      "successfulSave":"half damage"
+    },
+    "effects":"A creature killed by this spell becomes a frozen statue until it thaws.",
     "classes":[
       "Druid",
       "Sorcerer",
@@ -1776,9 +1800,10 @@
     "name":"Conjure Elemental",
     "description":"You call forth an elemental servant. Choose an area of air, earth, fire, or water that fills a 10-foot cube within range. An elemental of challenge rating 5 or lower appropriate to the area you chose appears in an unoccupied space within 10 feet of it. For example, a fire elemental emerges from a bonfire, and an earth elemental rises up from the ground. The elemental disappears when it drops to 0 hit points or when the spell ends.<br>The elemental is friendly to you and your companions for the duration. Roll initiative for the elemental, which has its own turns. It obeys any verbal commands that you issue to it (no action required by you). If you don't issue any commands to the elemental, it defends itself from hostile creatures but otherwise takes no actions.<br>If your concentration is broken, the elemental doesn't disappear. Instead, you lose control of the elemental, it becomes hostile toward you and your companions, and it might attack. An uncontrolled elemental can't be dismissed by you, and it disappears 1 hour after you summoned it.<br>The DM has the elemental's statistics.",
     "higherLevel":"When you cast this spell using a spell slot of 6th level or higher, the challenge rating increases by 1 for each slot level above 5th.",
-    "emote":"",
+    "emote":"calls forth an elemental servant",
     "source":"phb 225",
     "range":"90 feet",
+    "target":"an area of air, earth, fire, or water that fills a 10-foot cube within range",
     "components":{
       "verbal":"true",
       "somatic":"true",
@@ -1791,6 +1816,8 @@
     "castingTime":"1 minute",
     "level":"5",
     "school":"Conjuration",
+    "effects":"An elemental of challenge rating 5 or lower appropriate to the area you chose appears in an unoccupied space within 10 feet of the target. For example, a fire elemental emerges from a bonfire, and an earth elemental rises up from the ground. The elemental disappears when it drops to 0 hit points or when the spell ends.<br>The elemental is friendly to you and your companions for the duration. Roll initiative for the elemental, which has its own turns. It obeys any verbal commands that you issue to it (no action required by you). If you don't issue any commands to the elemental, it defends itself from hostile creatures but otherwise takes no actions.<br>If your concentration is broken, the elemental doesn't disappear. Instead, you lose control of the elemental, it becomes hostile toward you and your companions, and it might attack. An uncontrolled elemental can't be dismissed by you, and it disappears 1 hour after you summoned it.<br>The DM has the elemental's statistics.",
+    "higherLevel":"When you cast this spell using a spell slot of 6th level or higher, the challenge rating increases by 1 for each slot level above 5th.",
     "classes":[
       "Druid",
       "Wizard"
@@ -1825,9 +1852,10 @@
     "name":"Conjure Minor Elementals",
     "description":"You summon elementals that appear in unoccupied spaces that you can see within range. You choose one the following options for what appears:<br>- One elemental of challenge rating 2 or lower<br>- Two elementals of challenge rating 1 or lower<br>- Four elementals of challenge rating 1/2 or lower<br>- Eight elementals of challenge rating 1/4 or lower.<br>An elemental summoned by this spell disappears when it drops to 0 hit points or when the spell ends.<br>The summoned creatures are friendly to you and your companions. Roll initiative for the summoned creatures as a group, which has its own turns. They obey any verbal commands that you issue to them (no action required by you). If you don't issue any commands to them, they defend themselves from hostile creatures, but otherwise take no actions.<br>The DM has the creatures' statistics.",
     "higherLevel":"When you cast this spell using certain higher-level spell slots, you choose one of the summoning options above, and more creatures appear: twice as many with a 6th-level slot and three times as many with an 8th-level slot.",
-    "emote":"",
+    "emote":"summons elementals",
     "source":"phb 226",
     "range":"90 feet",
+    "target":"unoccupied spaces that you can see within range",
     "components":{
       "verbal":"true",
       "somatic":"true"
@@ -1838,6 +1866,7 @@
     "castingTime":"1 minute",
     "level":"4",
     "school":"Conjuration",
+    "effects":" You choose one the following options for what appears:<br>- One elemental of challenge rating 2 or lower<br>- Two elementals of challenge rating 1 or lower<br>- Four elementals of challenge rating 1/2 or lower<br>- Eight elementals of challenge rating 1/4 or lower.<br>An elemental summoned by this spell disappears when it drops to 0 hit points or when the spell ends.<br>The summoned creatures are friendly to you and your companions. Roll initiative for the summoned creatures as a group, which has its own turns. They obey any verbal commands that you issue to them (no action required by you). If you don't issue any commands to them, they defend themselves from hostile creatures, but otherwise take no actions.<br>The DM has the creatures' statistics.",
     "classes":[
       "Druid",
       "Wizard"
@@ -2053,9 +2082,10 @@
   {
     "name":"Control Winds",
     "description":"You take control of the air in a 100-foot cube that you can see within range. Choose one of the following effects when you cast the spell. The effect lasts for the spell's duration, unless you use your action on a later turn to switch to a different effect. You can also use your action to temporarily halt the effect or to restart one you've halted.<br>Gusts. A wind picks up within the cube, continually blowing in a horizontal direction that you choose. You choose the intensity of the wind: calm, moderate, or strong. If the wind is moderate or strong, ranged weapon attacks that pass through it or that are made against targets within the cube have disadvantage on their attack rolls. If the wind is strong, any creature moving against the wind must spend 1 extra foot of movement for each foot moved.<br>Downdraft. You cause a sustained blast of strong wind to blow downward from the top of the cube. Ranged weapon attacks that pass through the cube or that are made against targets within it have disadvantage on their attack rolls. A creature must make a Strength saving throw if it flies into the cube for the first time on a turn or starts its turn there flying. On a failed save, the creature is knocked prone.<br>Updraft. You cause a sustained updraft within the cube, rising upward from the cube's bottom edge. Creatures that end a fall within the cube take only half damage from the fall. When a creature in the cube makes a vertical jump, the creature can jump up to 10 feet higher than normal.",
-    "emote":"",
+    "emote":"takes control of the air",
     "source":"ee pc 16",
     "range":"300 feet",
+    "target":"100 ft. cube that you can see within range",
     "components":{
       "verbal":"true",
       "somatic":"true"
@@ -2066,6 +2096,7 @@
     "castingTime":"1 action",
     "level":"5",
     "school":"Transmutation",
+    "effects":"Choose one of the following effects when you cast the spell. The effect lasts for the spell's duration, unless you use your action on a later turn to switch to a different effect. You can also use your action to temporarily halt the effect or to restart one you've halted.<br><b><i>Gusts.</b></i> A wind picks up within the cube, continually blowing in a horizontal direction that you choose. You choose the intensity of the wind: calm, moderate, or strong. If the wind is moderate or strong, ranged weapon attacks that pass through it or that are made against targets within the cube have disadvantage on their attack rolls. If the wind is strong, any creature moving against the wind must spend 1 extra foot of movement for each foot moved.<br><b><i>Downdraft.</b></i> You cause a sustained blast of strong wind to blow downward from the top of the cube. Ranged weapon attacks that pass through the cube or that are made against targets within it have disadvantage on their attack rolls. A creature must make a Strength saving throw if it flies into the cube for the first time on a turn or starts its turn there flying. On a failed save, the creature is knocked prone.<br><b><i>Updraft.</b></i> You cause a sustained updraft within the cube, rising upward from the cube's bottom edge. Creatures that end a fall within the cube take only half damage from the fall. When a creature in the cube makes a vertical jump, the creature can jump up to 10 feet higher than normal.",
     "classes":[
       "Druid",
       "Sorcerer",
@@ -3923,9 +3954,10 @@
     "name":"Fly",
     "description":"You touch a willing creature. The target gains a flying speed of 60 feet for the duration. When the spell ends, the target falls if it is still aloft, unless it can stop the fall.",
     "higherLevel":"When you cast this spell using a spell slot of 4th level or higher, you can target one additional creature for each slot level above 3rd.",
-    "emote":"",
+    "emote":"touches a target who begins to hover in the air",
     "source":"phb 243",
     "range":"Touch",
+    "target":"a willing creature",
     "components":{
       "verbal":"true",
       "somatic":"true",
@@ -3938,6 +3970,7 @@
     "castingTime":"1 action",
     "level":"3",
     "school":"Transmutation",
+    "effects":"The target gains a flying speed of 60 feet for the duration. When the spell ends, the target falls if it is still aloft, unless it can stop the fall.",
     "classes":[
       "Sorcerer",
       "Warlock",
@@ -3951,6 +3984,8 @@
     "emote":"creates a sphere of fog",
     "source":"phb 243",
     "range":"120 feet",
+    "target":"a point within range",
+    "aoe":"20 ft. radius sphere",
     "components":{
       "verbal":"true",
       "somatic":"true"
@@ -3961,7 +3996,7 @@
     "castingTime":"1 action",
     "level":"1",
     "school":"Conjuration",
-    "effects":"You create a 20-foot-radius sphere of fog centered on a point within range. The sphere spreads around corners, and its area is heavily obscured. It lasts for the duration or until a wind of moderate or greater speed (at least 10 miles per hour) disperses it.",
+    "effects":"The sphere spreads around corners, and its area is heavily obscured. It lasts for the duration or until a wind of moderate or greater speed (at least 10 miles per hour) disperses it.",
     "classes":[
       "Cleric",
       "Druid",
@@ -4380,6 +4415,8 @@
     "emote":"creates slick grease that covers the ground",
     "source":"phb 246",
     "range":"60 feet",
+    "target":"a point within range",
+    "aoe":"10 ft square",
     "components":{
       "verbal":"true",
       "somatic":"true",
@@ -4395,7 +4432,7 @@
     "save":{
       "ability":"dexterity"
     },
-    "effects":"a 10-foot square of grease turns into difficult terrain. When the grease appears, each creature standing in its area must succeed on a dexterity saving throw or fall prone. A creature that enters the area or ends its turn there must also succeed on a dexterity saving throw or fall prone.",
+    "effects":"The greasy area turns into difficult terrain. When the grease appears, each creature standing in its area must succeed on a dexterity saving throw or fall prone. A creature that enters the area or ends its turn there must also succeed on a dexterity saving throw or fall prone.",
     "classes":[
       "Wizard"
     ]
@@ -4574,7 +4611,8 @@
     "emote":"blasts out a line of strong wind",
     "source":"phb 248",
     "range":"Self",
-    "target":"Each creature that starts its turn in the 60 feet long and 10 feet wide line",
+    "target":"Each creature that starts its turn in the line",
+    "aoe":"60 ft. long and 10 ft. wide line",
     "components":{
       "verbal":"true",
       "somatic":"true",
@@ -5072,9 +5110,11 @@
     "name":"Ice Storm",
     "description":"A hail of rock-hard ice pounds to the ground in a 20-foot-radius, 40-foot-high cylinder centered on a point within range. Each creature in the cylinder must make a dexterity saving throw. A creature takes 2d8 bludgeoning damage and 4d6 cold damage on a failed save, or half as much damage on a successful one.<br>Hailstones turn the storm's area of effect into difficult terrain until the end of your next turn.",
     "higherLevel":"When you cast this spell using a spell slot of 5th level or higher, the bludgeoning damage increases by 1d8 for each slot level above 4th.",
-    "emote":"",
+    "emote":"causes a hail of rock-hard ice pounds to the ground",
     "source":"phb 252",
     "range":"300 feet",
+    "target":"each creature in the aoe centered on a point within range",
+    "aoe":"20-foot-radius, 40-foot-high cylinder",
     "components":{
       "verbal":"true",
       "somatic":"true",
@@ -5087,6 +5127,15 @@
     "castingTime":"1 action",
     "level":"4",
     "school":"Evocation",
+    "save":{
+      "ability":"dexterity",
+      "damage":"2d8",
+      "damageType":"bludgeoning",
+      "secondaryDamage":"4d6",
+      "secondaryDamageType":"cold",
+      "successfulSave":"half damage"
+    },
+    "effects":"Hailstones turn the storm's area of effect into difficult terrain until the end of your next turn.",
     "classes":[
       "Cleric",
       "Druid",
@@ -5622,9 +5671,11 @@
     "name":"Lightning Bolt",
     "description":"A stroke of lightning forming a line 100 feet long and 5 feet wide blasts out from you in a direction you choose. Each creature in the line must make a dexterity saving throw. A creature takes 8d6 lightning damage on a failed save, or half as much damage on a successful one.<br>The lightning ignites flammable objects in the area that aren't being worn or carried.",
     "higherLevel":"When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 for each slot level above 3rd.",
-    "emote":"",
+    "emote":"blasts out a stroke a lightning in a line",
     "source":"phb 255",
     "range":"Self",
+    "target":"each creature in the line",
+    "aoe":"100 ft. long and 5 ft. wide line",
     "components":{
       "verbal":"true",
       "somatic":"true",
@@ -5637,6 +5688,13 @@
     "castingTime":"1 action",
     "level":"3",
     "school":"Evocation",
+    "save":{
+      "ability":"dexterity",
+      "damage":"8d6",
+      "damageType":"lightning",
+      "successfulSave":"half damage"
+    },
+    "effects":"The lightning ignites flammable objects in the area that aren't being worn or carried",
     "classes":[
       "Druid",
       "Sorcerer",
@@ -7938,6 +7996,7 @@
     "emote":"manipulates surrounding water",
     "source":"ee pc 21",
     "range":"30 feet",
+    "target":"an area of water that you can see within range and that fits within a 5-foot cube",
     "components":{
       "somatic":"true"
     },
@@ -7947,7 +8006,7 @@
     "castingTime":"1 action",
     "level":"0",
     "school":"Transmutation",
-    "effect":"You choose an area of water that you can see within range and that fits within a 5-foot cube. You manipulate it in one of the following ways:<br>- You instantaneously move or otherwise change the flow of the water as you direct, up to 5 feet in any direction. This movement doesn't have enough force to cause damage.<br>- You cause the water to form into simple shapes and animate at your direction. This change lasts for 1 hour.<br>- You change the water's color or opacity. The water must be changed in the same way throughout. This change lasts for 1 hour.<br>- You freeze the water, provided that there are no creatures in it. The water unfreezes in 1 hour. If you cast this spell multiple times, you can have no more than two of its non-instantaneous effects active at a time, and you can dismiss such an effect as an action.",
+    "effect":"You manipulate the target in one of the following ways:<br>- You instantaneously move or otherwise change the flow of the water as you direct, up to 5 feet in any direction. This movement doesn't have enough force to cause damage.<br>- You cause the water to form into simple shapes and animate at your direction. This change lasts for 1 hour.<br>- You change the water's color or opacity. The water must be changed in the same way throughout. This change lasts for 1 hour.<br>- You freeze the water, provided that there are no creatures in it. The water unfreezes in 1 hour. If you cast this spell multiple times, you can have no more than two of its non-instantaneous effects active at a time, and you can dismiss such an effect as an action.",
     "classes":[
       "Druid",
       "Sorcerer",
@@ -8223,9 +8282,11 @@
   {
     "name":"Sleet Storm",
     "description":"Until the spell ends, freezing rain and sleet fall in a 20-foot-tall cylinder with a 40-foot radius centered on a point you choose within range. The area is heavily obscured, and exposed flames in the area are doused.<br>The ground in the area is covered with slick ice, making it difficult terrain. When a creature enters the spell's area for the first time on a turn or starts its turn there, it must make a dexterity saving throw. On a failed save, it falls prone.<br>If a creature is concentrating in the spell's area, the creature must make a successful constitution saving throw against your spell save DC or lose concentration.",
-    "emote":"",
+    "emote":"summons freezy rain and sleet that fall in an area",
     "source":"phb 276",
     "range":"150 feet",
+    "target":"point you choose within range",
+    "aoe":"20-foot-tall cylinder with a 40-foot radius",
     "components":{
       "verbal":"true",
       "somatic":"true",
@@ -8238,6 +8299,10 @@
     "castingTime":"1 action",
     "level":"3",
     "school":"Conjuration",
+    "save":{
+      "ability":"dexterity"
+    },
+    "effects":"The area is heavily obscured, and exposed flames in the area are doused.<br>The ground in the area is covered with slick ice, making it difficult terrain. When a creature enters the spell's area for the first time on a turn or starts its turn there, it must make a dexterity saving throw. On a failed save, it falls prone.<br>If a creature is concentrating in the spell's area, the creature must make a successful constitution saving throw against your spell save DC or lose concentration.",
     "classes":[
       "Cleric",
       "Druid",
@@ -8652,9 +8717,11 @@
     "name":"Storm Sphere",
     "description":"A 20-foot-radius sphere of whirling air springs into existence centered on a point you choose within range. The sphere remains for the spell's duration. Each creature in the sphere when it appears or that ends its turn there must succeed on a Strength saving throw or take 2d6 bludgeoning damage. The sphere's space is difficult terrain.<br>Until the spell ends, you can use a bonus action on each of your turns to cause a bolt of lightning to leap from the center of the sphere toward one creature you choose within 60 feet of the center. Make a ranged spell attack. You have advantage on the attack roll if the target is in the sphere. On a hit, the target takes 4d6 lightning damage.<br>Creatures within 30 feet of the sphere have disadvantage on Wisdom (Perception) checks made to listen.",
     "higherLevel":"When you cast this spell using a spell slot of 5th level or higher, the damage increases for each of its effects by 1d6 for each slot level above 4th.",
-    "emote":"",
+    "emote":"causes a sphere of whirling air to spring into existence",
     "source":"ee pc 22",
     "range":"150 feet",
+    "target":"each creature in the aoe centered on a point within range",
+    "aoe":"20-foot-radius sphere",
     "components":{
       "verbal":"true",
       "somatic":"true"
@@ -8665,6 +8732,12 @@
     "castingTime":"1 action",
     "level":"4",
     "school":"Evocation",
+    "save":{
+      "ability":"strength",
+      "damage":"2d6",
+      "damageType":"bludgeoning"
+    },
+    "effects":"The sphere's space is difficult terrain.<br>Until the spell ends, you can use a bonus action on each of your turns to cause a bolt of lightning to leap from the center of the sphere toward one creature you choose within 60 feet of the center. Make a ranged spell attack. You have advantage on the attack roll if the target is in the sphere. On a hit, the target takes 4d6 lightning damage.<br>Creatures within 30 feet of the sphere have disadvantage on Wisdom (Perception) checks made to listen.",
     "classes":[
       "Sorcerer",
       "Wizard"
@@ -8999,7 +9072,8 @@
     "emote":"creates a burst of thunderous sound, which can be heard 100 feet away",
     "source":"ee pc 22",
     "range":"Self (5-foot radius)",
-    "target":"Each creature other than you within 5 feet of you",
+    "target":"Each creature other than you within the aoe",
+    "aoe":"5 ft. radius burst",
     "components":{
       "somatic":"true"
     },
@@ -9029,7 +9103,8 @@
     "emote":"sends out a wave of thunderous force, which can be heard 300 feet away",
     "source":"phb 282",
     "range":"Self",
-    "target":"Each creature in a 15-foot cube originating from you",
+    "target":"Each creature in the aoe",
+    "aoe":"15-foot cube originating from you",
     "components":{
       "verbal":"true",
       "somatic":"true"
@@ -9321,9 +9396,10 @@
   {
     "name":"Tsunami",
     "description":"A wall of water springs into existence at a point you choose within range. You can make the wall up to 300 feet long, 300 feet high, and 50 feet thick. The wall lasts for the duration.<br>When the wall appears, each creature within its area must make a strength saving throw. On a failed save, a creature takes 6 d10 bludgeoning damage, or half as much damage on a successful save.<br>At the start of each of your turns after the wall appears, the wall, along with any creatures in it, moves 50 feet away from you. Any Huge or smaller creature inside the wall or whose space the wall enters when it moves must succeed on a strength saving throw or take 5 d10 bludgeoning damage. A creature can take this damage only once per round. At the end of the turn, the wall's height is reduced by 50 feet, and the damage creatures take from the spell on subsequent rounds is reduced by 1d10. When the wall reaches 0 feet in height, the spell ends.<br>A creature caught in the wall can move by swimming. Because of the force of the wave, though, the creature must make a successful Strength (Athletics) check against your spell save DC in order to move at all. If it fails the check, it can't move. A creature that moves out of the area falls to the ground.",
-    "emote":"",
+    "emote":"sends a giant wall of water crashing in a direction",
     "source":"phb 284",
     "range":"Sight",
+    "target":"Each creature within a wall up to 300 feet long, 300 feet high, and 50 feet thick at a point within range",
     "components":{
       "verbal":"true",
       "somatic":"true"
@@ -9334,6 +9410,13 @@
     "castingTime":"1 minute",
     "level":"8",
     "school":"Conjuration",
+    "save":{
+      "ability":"strength",
+      "damage":"6d10",
+      "damageType":"bludgeoning",
+      "successfulSave":"half damage"
+    },
+    "effects":"At the start of each of your turns after the wall appears, the wall, along with any creatures in it, moves 50 feet away from you. Any Huge or smaller creature inside the wall or whose space the wall enters when it moves must succeed on a strength saving throw or take 5d10 bludgeoning damage. A creature can take this damage only once per round. At the end of the turn, the wall's height is reduced by 50 feet, and the damage creatures take from the spell on subsequent rounds is reduced by 1d10. When the wall reaches 0 feet in height, the spell ends.<br>A creature caught in the wall can move by swimming. Because of the force of the wave, though, the creature must make a successful Strength (Athletics) check against your spell save DC in order to move at all. If it fails the check, it can't move. A creature that moves out of the area falls to the ground.",
     "classes":[
       "Druid"
     ]
@@ -9581,9 +9664,11 @@
   {
     "name":"Wall of Water",
     "description":"You conjure up a wall of water on the ground at a point you can see within range. You can make the wall up to 30 feet long, 10 feet high, and 1 foot thick, or you can make a ringed wall up to 20 feet in diameter, 20 feet high, and 1 foot thick. The wall vanishes when the spell ends. The wall's space is difficult terrain.<br>Any ranged weapon attack that enters the wall's space has disadvantage on the attack roll, and fire damage is halved if the fire effect passes through the wall to reach its target. Spells that deal cold damage that pass through the wall cause the area of the wall they pass through to freeze solid (at least a 5-foot square section is frozen). Each 5-foot-square frozen section has AC 5 and 15 hit points. Reducing a frozen section to 0 hit points destroys it. When a section is destroyed, the wall's water doesn't fill it.",
-    "emote":"",
+    "emote":"conjures a wall of water on the ground",
     "source":"ee pc 23",
     "range":"60 feet",
+    "target":"on the ground at a point you can see within range",
+    "aoe":"up to 30 feet long, 10 feet high, and 1 foot thick, or you can make a ringed wall up to 20 feet in diameter, 20 feet high, and 1 foot thick",
     "components":{
       "verbal":"true",
       "somatic":"true",
@@ -9596,6 +9681,7 @@
     "castingTime":"1 action",
     "level":"3",
     "school":"Evocation",
+    "effects":"The wall vanishes when the spell ends. The wall's space is difficult terrain.<br>Any ranged weapon attack that enters the wall's space has disadvantage on the attack roll, and fire damage is halved if the fire effect passes through the wall to reach its target. Spells that deal cold damage that pass through the wall cause the area of the wall they pass through to freeze solid (at least a 5-foot square section is frozen). Each 5-foot-square frozen section has AC 5 and 15 hit points. Reducing a frozen section to 0 hit points destroys it. When a section is destroyed, the wall's water doesn't fill it.",
     "classes":[
       "Druid",
       "Sorcerer",
