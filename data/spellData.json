@@ -4837,7 +4837,7 @@
       "secondaryDamageType":"cold",
       "saveSuccess":"half damage"
     },
-    "effects":"Hailstones turn the storm's area of effect into difficult terrain until the end of your next turn.",
+    "effects":"Hailstones turn the storm's area of effect into difficult terrain until the end of your next turn",
     "classes":[
       "Cleric",
       "Druid",
