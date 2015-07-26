@@ -8571,7 +8571,7 @@
       "damage":"2d8",
       "damageType":"thunder",
       "saveFailure":"pushed 10 feet away from you",
-      "saveSuccess":"half damage and isn't pushed."
+      "saveSuccess":"half damage and not pushed"
     },
     "effects":"In addition, unsecured objects that are completely within the area of effect are automatically pushed 10 feet away from you by the spell's effect, and the spell emits a thunderous boom audible out to 300 feet.",
     "classes":[
