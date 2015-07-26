@@ -74,8 +74,7 @@
     "save":{
       "ability":"dexterity",
       "damage":"((@{level} + 1) / 6 + 0.5)d6",
-      "damageType":"acid",
-      "successfulSave":"no damage"
+      "damageType":"acid"
     },
     "classes":[
       "Sorcerer",
@@ -208,10 +207,7 @@
     "school":"Enchantment",
     "save":{
       "ability":"wisdom",
-      "damage":"3d8",
-      "damageType":"fire",
-      "saveFail":"Beast is charmed by you for the spell's duration. If you or one of your companions harms the target, the spells ends.",
-      "successfulSave":"half damage"
+      "saveFailure":"the beast is charmed by you for the spell's duration. If you or one of your companions harms the target, the spells ends."
     },
     "effects":"If the beast's Intelligence is 4 or higher, the spell fails.",
     "classes":[
@@ -514,7 +510,7 @@
       "ability":"strength",
       "damage":"2d6",
       "damageType":"necrotic",
-      "saveFail":"target can't take reactions until its next turn",
+      "saveFailure":"target can't take reactions until its next turn",
       "successfulSave":"half damage, but suffers no other effect"
     },
     "classes":[
@@ -1005,9 +1001,10 @@
     "name":"Blindness/Deafness",
     "description":"You can blind or deafen a foe. Choose one creature that you can see within range to make a constitution saving throw. If it fails, the target is either blinded or deafened (your choice) for the duration. At the end of each of its turns, the target can make a constitution saving throw. On a success, the spell ends.",
     "higherLevel":"When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd.",
-    "emote":"",
+    "emote":"blinds of deafens a foe",
     "source":"phb 219",
     "range":"30 feet",
+    "target":"one creature that you can see within range",
     "components":{
       "verbal":"true"
     },
@@ -1017,6 +1014,10 @@
     "castingTime":"1 action",
     "level":"2",
     "school":"Necromancy",
+    "save":{
+      "ability":"consitution",
+      "saveFailure":"the target is either blinded or deafened (your choice) for the duration. At the end of each of its turns, the target can make a constitution saving throw. On a success, the spell ends."
+    },
     "classes":[
       "Bard",
       "Cleric",
@@ -2137,8 +2138,7 @@
     "save":{
       "ability":"dexterity",
       "damage":"((@{level} + 1) / 6 + 0.5)d8",
-      "damageType":"fire",
-      "successfulSave":"no damage"
+      "damageType":"fire"
     },
     "classes":[
       "Druid",
@@ -3449,7 +3449,7 @@
     "name":"False Life",
     "description":"Bolstering yourself with a necromantic facsimile of life, you gain 1d4 + 4 temporary hit points for the duration.",
     "higherLevel":"When you cast this spell using a spell slot of 2nd level or higher, you gain 5 additional temporary hit points for each slot level above 1st.",
-    "emote":"",
+    "emote":"Bolstering {{GENDER_PRONOUN_HIMSELF_HERSELF}} with a necromantic facsimile of life",
     "source":"phb 239",
     "range":"Self",
     "components":{
@@ -3464,6 +3464,7 @@
     "castingTime":"1 action",
     "level":"1",
     "school":"Necromancy",
+    "effects":"you gain [[1d4 + 4]] temporary hit points for the duration",
     "classes":[
       "Sorcerer",
       "Wizard"
@@ -3947,7 +3948,7 @@
     "name":"Fog Cloud",
     "description":"You create a 20-foot-radius sphere of fog centered on a point within range. The sphere spreads around corners, and its area is heavily obscured. It lasts for the duration or until a wind of moderate or greater speed (at least 10 miles per hour) disperses it.",
     "higherLevel":"When you cast this spell using a spell slot of 2nd level or higher, the radius of the fog increases by 20 feet for each slot level above 1st.",
-    "emote":"",
+    "emote":"creates a sphere of fog",
     "source":"phb 243",
     "range":"120 feet",
     "components":{
@@ -3960,6 +3961,7 @@
     "castingTime":"1 action",
     "level":"1",
     "school":"Conjuration",
+    "effects":"You create a 20-foot-radius sphere of fog centered on a point within range. The sphere spreads around corners, and its area is heavily obscured. It lasts for the duration or until a wind of moderate or greater speed (at least 10 miles per hour) disperses it.",
     "classes":[
       "Cleric",
       "Druid",
@@ -4107,10 +4109,12 @@
   },
   {
     "name":"Frostbite",
-    "description":"You cause numbing frost to form on one creature that you can see within range. The target must make a Constitution saving throw. On a failed save, the target takes 1d6 cold damage, and it has disadvantage on the next weapon attack roll it makes before the end of its next turn.<br>The spell's damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6).",
-    "emote":"",
+    "description":"You cause numbing frost to form on one creature that you can see within range. The target must make a Constitution saving throw. On a failed save, the target takes 1d6 cold damage, and it has disadvantage on the next weapon attack roll it makes before the end of its next turn.",
+    "higherLevel":"The spell's damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6)",
+    "emote":"causes numbing frost to form on a creature",
     "source":"ee pc 18",
     "range":"60 feet",
+    "target":"one creature that you can see within range",
     "components":{
       "verbal":"true",
       "somatic":"true"
@@ -4121,6 +4125,12 @@
     "castingTime":"1 action",
     "level":"0",
     "school":"Evocation",
+    "save":{
+      "ability":"consitution",
+      "damage":"((@{level} + 1) / 6 + 0.5)d6",
+      "damageType":"cold",
+      "saveFailure":"it has disadvantage on the next weapon attack roll it makes before the end of its next turn"
+    },
     "classes":[
       "Druid",
       "Sorcerer",
@@ -4367,7 +4377,7 @@
   {
     "name":"Grease",
     "description":"Slick grease covers the ground in a 10-foot square centered on a point within range and turns it into difficult terrain for the duration.<br>When the grease appears, each creature standing in its area must succeed on a dexterity saving throw or fall prone. A creature that enters the area or ends its turn there must also succeed on a dexterity saving throw or fall prone.",
-    "emote":"",
+    "emote":"creates slick grease that covers the ground",
     "source":"phb 246",
     "range":"60 feet",
     "components":{
@@ -4382,6 +4392,10 @@
     "castingTime":"1 action",
     "level":"1",
     "school":"Conjuration",
+    "save":{
+      "ability":"dexterity"
+    },
+    "effects":"a 10-foot square of grease turns into difficult terrain. When the grease appears, each creature standing in its area must succeed on a dexterity saving throw or fall prone. A creature that enters the area or ends its turn there must also succeed on a dexterity saving throw or fall prone.",
     "classes":[
       "Wizard"
     ]
@@ -4557,9 +4571,10 @@
   {
     "name":"Gust of Wind",
     "description":"A line of strong wind 60 feet long and 10 feet wide blasts from you in a direction you choose for the spell's duration. Each creature that starts its turn in the line must succeed on a strength saving throw or be pushed 15 feet away from you in a direction following the line.<br>Any creature in the line must spend 2 feet of movement for every 1 foot it moves when moving closer to you.<br>The gust disperses gas or vapor, and it extinguishes candles, torches, and similar unprotected flames in the area. It causes protected flames, such as those of lanterns, to dance wildly and has a 50 percent chance to extinguish them.<br>As a bonus action on each of your turns before the spell ends, you can change the direction in which the line blasts from you.",
-    "emote":"",
+    "emote":"blasts out a line of strong wind",
     "source":"phb 248",
     "range":"Self",
+    "target":"Each creature that starts its turn in the 60 feet long and 10 feet wide line",
     "components":{
       "verbal":"true",
       "somatic":"true",
@@ -4572,6 +4587,11 @@
     "castingTime":"1 action",
     "level":"2",
     "school":"Evocation",
+    "save":{
+      "ability":"strength",
+      "saveFailure":"pushed 15 feet away from you in a direction following the line"
+    },
+    "effects":"Any creature in the line must spend 2 feet of movement for every 1 foot it moves when moving closer to you.<br>The gust disperses gas or vapor, and it extinguishes candles, torches, and similar unprotected flames in the area. It causes protected flames, such as those of lanterns, to dance wildly and has a 50 percent chance to extinguish them.<br>As a bonus action on each of your turns before the spell ends, you can change the direction in which the line blasts from you.",
     "classes":[
       "Cleric",
       "Druid",
@@ -5350,7 +5370,7 @@
     "name":"Invisibility",
     "description":"A creature you touch becomes invisible until the spell ends. Anything the target is wearing or carrying is invisible as long as it is on the target's person. The spell ends for a target that attacks or casts a spell.",
     "higherLevel":"When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd.",
-    "emote":"",
+    "emote":"touches a creature who becomes invisible",
     "source":"phb 254",
     "range":"Touch",
     "components":{
@@ -5365,6 +5385,7 @@
     "castingTime":"1 action",
     "level":"2",
     "school":"Illusion",
+    "effects":"Anything the target is wearing or carrying is invisible as long as it is on the target's person. The spell ends for a target that attacks or casts a spell.",
     "classes":[
       "Bard",
       "Druid",
@@ -5527,9 +5548,10 @@
   {
     "name":"Levitate",
     "description":"One creature or object of your choice that you can see within range rises vertically, up to 20 feet, and remains suspended there for the duration. The spell can levitate a target that weighs up to 500 pounds. An unwilling creature that succeeds on a constitution saving throw is unaffected.<br>The target can move only by pushing or pulling against a fixed object or surface within reach (such as a wall or a ceiling), which allows it to move as if it were climbing. You can change the target's altitude by up to 20 feet in either direction on your turn. If you are the target, you can move up or down as part of your move. Otherwise, you can use your action to move the target, which must remain within the spell's range.<br>When the spell ends, the target floats gently to the ground if it is still aloft.",
-    "emote":"",
+    "emote":"causes a creature of object to rise vertically in the air",
     "source":"phb 255",
     "range":"60 feet",
+    "target":"a  creature or object that you can see within range",
     "components":{
       "verbal":"true",
       "somatic":"true",
@@ -5542,6 +5564,10 @@
     "castingTime":"1 action",
     "level":"2",
     "school":"Transmutation",
+    "save":{
+      "ability":"constitution"
+    },
+    "effects":"the target rises vertically, up to 20 feet, and remains suspended there for the duration. The spell can levitate a target that weighs up to 500 pounds. An unwilling creature that succeeds on a constitution saving throw is unaffected.<br>The target can move only by pushing or pulling against a fixed object or surface within reach (such as a wall or a ceiling), which allows it to move as if it were climbing. You can change the target's altitude by up to 20 feet in either direction on your turn. If you are the target, you can move up or down as part of your move. Otherwise, you can use your action to move the target, which must remain within the spell's range.<br>When the spell ends, the target floats gently to the ground if it is still aloft.",
     "classes":[
       "Sorcerer",
       "Wizard"
@@ -5752,9 +5778,10 @@
   {
     "name":"Mage Armor",
     "description":"You touch a willing creature who isn't wearing armor, and a protective magical force surrounds it until the spell ends. The target's base AC becomes 13 + its Dexterity modifier. The spell ends if the target dons armor or if you dismiss the spell as an action.",
-    "emote":"",
+    "emote":"creates a protective magical force which surrounds the target",
     "source":"phb 256",
     "range":"Touch",
+    "target":"a willing creature who isn't wearing armor",
     "components":{
       "verbal":"true",
       "somatic":"true",
@@ -5767,6 +5794,7 @@
     "castingTime":"1 action",
     "level":"1",
     "school":"Abjuration",
+    "effects":"The target's base AC becomes 13 + its Dexterity modifier. The spell ends if the target dons armor or if you dismiss the spell as an action.",
     "classes":[
       "Sorcerer",
       "Wizard"
@@ -6361,7 +6389,7 @@
   {
     "name":"Misty Step",
     "description":"Briefly surrounded by silvery mist, you teleport up to 30 feet to an unoccupied space that you can see.",
-    "emote":"",
+    "emote":"becomes surrounded by a silvery mist as {{GENDER_PRONOUN_HE_SHE}} blinks out of view",
     "source":"phb 260",
     "range":"Self",
     "components":{
@@ -6373,6 +6401,7 @@
     "castingTime":"1 bonus action",
     "level":"2",
     "school":"Conjuration",
+    "effects":"teleport up to 30 feet to an unoccupied space that you can see.",
     "classes":[
       "Druid",
       "Paladin",
@@ -7435,8 +7464,9 @@
   },
   {
     "name":"Ray of Frost",
-    "description":"A frigid beam of blue-white light streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, it takes 1d8 cold damage, and its speed is reduced by 10 feet until the start of your next turn.<br>The spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).",
-    "emote":"",
+    "description":"A frigid beam of blue-white light streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, it takes 1d8 cold damage, and its speed is reduced by 10 feet until the start of your next turn.",
+    "higherLevel":"The spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).",
+    "emote":"sends a frigid beam of blue-white light streaking toward a creature",
     "source":"phb 271",
     "range":"60 feet",
     "components":{
@@ -7449,6 +7479,11 @@
     "castingTime":"1 action",
     "level":"0",
     "school":"Evocation",
+    "attack":{
+      "damage":"((@{level} + 1) / 6 + 0.5)d8",
+      "damageType":"cold"
+    },
+    "effect":"its speed is reduced by 10 feet until the start of your next turn",
     "classes":[
       "Sorcerer",
       "Wizard"
@@ -7900,7 +7935,7 @@
   {
     "name":"Shape Water",
     "description":"You choose an area of water that you can see within range and that fits within a 5-foot cube. You manipulate it in one of the following ways:<br>- You instantaneously move or otherwise change the flow of the water as you direct, up to 5 feet in any direction. This movement doesn't have enough force to cause damage.<br>- You cause the water to form into simple shapes and animate at your direction. This change lasts for 1 hour.<br>- You change the water's color or opacity. The water must be changed in the same way throughout. This change lasts for 1 hour.<br>- You freeze the water, provided that there are no creatures in it. The water unfreezes in 1 hour. If you cast this spell multiple times, you can have no more than two of its non-instantaneous effects active at a time, and you can dismiss such an effect as an action.",
-    "emote":"",
+    "emote":"manipulates surrounding water",
     "source":"ee pc 21",
     "range":"30 feet",
     "components":{
@@ -7912,6 +7947,7 @@
     "castingTime":"1 action",
     "level":"0",
     "school":"Transmutation",
+    "effect":"You choose an area of water that you can see within range and that fits within a 5-foot cube. You manipulate it in one of the following ways:<br>- You instantaneously move or otherwise change the flow of the water as you direct, up to 5 feet in any direction. This movement doesn't have enough force to cause damage.<br>- You cause the water to form into simple shapes and animate at your direction. This change lasts for 1 hour.<br>- You change the water's color or opacity. The water must be changed in the same way throughout. This change lasts for 1 hour.<br>- You freeze the water, provided that there are no creatures in it. The water unfreezes in 1 hour. If you cast this spell multiple times, you can have no more than two of its non-instantaneous effects active at a time, and you can dismiss such an effect as an action.",
     "classes":[
       "Druid",
       "Sorcerer",
@@ -8958,10 +8994,12 @@
   },
   {
     "name":"Thunderclap",
-    "description":"You create a burst of thunderous sound, which can be heard 100 feet away. Each creature other than you within 5 feet of you must make a Constitution saving throw. On a failed save, the creature takes 1d6 thunder damage.<br>The spell's damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6).",
-    "emote":"",
+    "description":"You create a burst of thunderous sound, which can be heard 100 feet away. Each creature other than you within 5 feet of you must make a Constitution saving throw. On a failed save, the creature takes 1d6 thunder damage.",
+    "higherLevel":"The spell's damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6).",
+    "emote":"creates a burst of thunderous sound, which can be heard 100 feet away",
     "source":"ee pc 22",
     "range":"Self (5-foot radius)",
+    "target":"Each creature other than you within 5 feet of you",
     "components":{
       "somatic":"true"
     },
@@ -8971,6 +9009,11 @@
     "castingTime":"1 action",
     "level":"0",
     "school":"Evocation",
+    "save":{
+      "ability":"constitution",
+      "damage":"((@{level} + 1) / 6 + 0.5)d6",
+      "damageType":"thunder"
+    },
     "classes":[
       "Bard",
       "Druid",
@@ -8983,9 +9026,10 @@
     "name":"Thunderwave",
     "description":"A wave of thunderous force sweeps out from you. Each creature in a 15-foot cube originating from you must make a constitution saving throw. On a failed save, a creature takes 2d8 thunder damage and is pushed 10 feet away from you. On a successful save, the creature takes half as much damage and isn't pushed.<br>In addition, unsecured objects that are completely within the area of effect are automatically pushed 10 feet away from you by the spell's effect, and the spell emits a thunderous boom audible out to 300 feet.",
     "higherLevel":"When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st.",
-    "emote":"",
+    "emote":"sends out a wave of thunderous force, which can be heard 300 feet away",
     "source":"phb 282",
     "range":"Self",
+    "target":"Each creature in a 15-foot cube originating from you",
     "components":{
       "verbal":"true",
       "somatic":"true"
@@ -8996,6 +9040,14 @@
     "castingTime":"1 action",
     "level":"1",
     "school":"Evocation",
+    "save":{
+      "ability":"constitution",
+      "damage":"2d8",
+      "damageType":"thunder",
+      "saveFailure":"pushed 10 feet away from you",
+      "successfulSave":"half damage and isn't pushed."
+    },
+    "effects":"In addition, unsecured objects that are completely within the area of effect are automatically pushed 10 feet away from you by the spell's effect, and the spell emits a thunderous boom audible out to 300 feet.",
     "classes":[
       "Bard",
       "Cleric",
@@ -9575,7 +9627,7 @@
   {
     "name":"Warding Wind",
     "description":"A strong wind (20 miles per hour) blows around you in a 10-foot radius and moves with you, remaining centered on you. The wind lasts for the spell's duration. The wind has the following effects:<br>- It deafens you and other creatures in its area.<br>- It extinguishes unprotected flames in its area that are torch-sized or smaller.<br>- The area is difficult terrain for creatures other than you.<br>- The attack rolls of ranged weapon attacks have disadvantage if they pass in or out of the wind.<br>- It hedges out vapor, gas, and fog that can be dispersed by strong wind.",
-    "emote":"",
+    "emote":"creates a strong wind that blows around {{GENDER_PRONOUN_HIMSELF_HERSELF}}",
     "source":"ee pc 23",
     "range":"Self",
     "components":{
@@ -9587,6 +9639,7 @@
     "castingTime":"1 action",
     "level":"2",
     "school":"Evocation",
+    "effects":"the strong wind (20 miles per hour) blows around you in a 10-foot radius and moves with you, remaining centered on you. The wind lasts for the spell's duration. The wind has the following effects:<br>- It deafens you and other creatures in its area.<br>- It extinguishes unprotected flames in its area that are torch-sized or smaller.<br>- The area is difficult terrain for creatures other than you.<br>- The attack rolls of ranged weapon attacks have disadvantage if they pass in or out of the wind.<br>- It hedges out vapor, gas, and fog that can be dispersed by strong wind.",
     "classes":[
       "Bard",
       "Druid",
