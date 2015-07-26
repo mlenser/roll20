@@ -68,6 +68,10 @@
     characterId = null,
     characterName = null;
 
+  function capitalizeFirstLetter (string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  };
+
   function HandleInput(msg) {
     if(shaped.settings.useAmmoAutomatically && msg.rolltemplate === '5eDefault' && msg.content.indexOf('{{ammo_auto=1}}') !== -1) {
       var character_name,
@@ -1952,6 +1956,12 @@
     if(spell.range) {
       setAttribute(spellBase + 'spellrange', spell.range);
     }
+    if(spell.target) {
+      setAttribute(spellBase + 'spelltarget', spell.target);
+    }
+    if(spell.aoe) {
+      setAttribute(spellBase + 'spellaoe', spell.aoe);
+    }
     if(spell.components) {
       if(spell.components.verbal) {
         setAttribute(spellBase + 'spellcomponents_verbal', '@{spellcomponents_verbal_var}');
@@ -1984,6 +1994,25 @@
       setAttribute(spellBase + 'spellhighersloteffect', spell.higherLevel);
       setAttribute(spellBase + 'spellshowhigherlvl', '{{spellshowhigherlvl=1}} {{spellhigherlevel=@{spellhighersloteffect}}}');
     }
+    if(spell.emote) {
+      setAttribute(spellBase + 'spellemote', spell.emote);
+      setAttribute(spellBase + 'spellshowemote', '@{spellshowemotevar}');
+    }
+
+    if(spell.save) {
+      setAttribute(spellBase + 'spellshowsavethrow', '@{spellshowsavethrowvar}');
+      if(spell.save.ability) {
+        setAttribute(spellBase + 'savestat', capitalizeFirstLetter(spell.save.ability.substring(0, 3)));
+        setAttribute(spellBase + 'spellsavedc', '');
+      }
+      if(spell.save.saveFailure) {
+        setAttribute(spellBase + 'savefailure', spell.save.saveFailure);
+      }
+      if(spell.save.saveSuccess) {
+        setAttribute(spellBase + 'savesuccess', spell.save.saveSuccess);
+      }
+    }
+
 
     //TODO: {{GENDER_PRONOUN_HE_SHE}}, {{GENDER_PRONOUN_HIM_HER}}, {{GENDER_PRONOUN_HIS_HER}}, {{GENDER_PRONOUN_HIMSELF_HERSELF}}
 
