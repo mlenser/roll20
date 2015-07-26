@@ -22,7 +22,7 @@
       "ability":"constitution",
       "damage":"10d8",
       "damageType":"necrotic",
-      "successfulSave":"half damage"
+      "saveSuccess":"half damage"
     },
     "effects":"Constructs and undead aren't affected, and plants and water elementals make this saving throw with disadvantage.",
     "classes":[
@@ -106,7 +106,7 @@
       "ability":"dexterity",
       "damage":"3d8",
       "damageType":"fire",
-      "successfulSave":"half damage"
+      "saveSuccess":"half damage"
     },
     "classes":[
       "Sorcerer",
@@ -514,7 +514,7 @@
       "damage":"2d6",
       "damageType":"necrotic",
       "saveFailure":"target can't take reactions until its next turn",
-      "successfulSave":"half damage, but suffers no other effect"
+      "saveSuccess":"half damage, but suffers no other effect"
     },
     "classes":[
       "Warlock"
@@ -1182,7 +1182,7 @@
       "ability":"dexterity",
       "damage":"3d10",
       "damageType":"lightning",
-      "successfulSave":"half damage"
+      "saveSuccess":"half damage"
     },
     "effects":"A storm cloud appears in the shape of a cylinder that is 10 feet tall with a 60-foot radius, centered on a point you can see 100 feet directly above you. The spell fails if you can't see a point in the air where the storm cloud could appear (for example, if you are in a room that can't accommodate the cloud).<br>On each of your turns until the spell ends, you can use your action to call down lightning in this way again, targeting the same point or a different one.<br>If you are outdoors in stormy conditions when you cast this spell, the spell gives you control over the existing storm instead of creating a new one. Under such conditions, the spell's damage increases by 1d10.",
     "classes":[
@@ -1689,7 +1689,7 @@
       "ability":"constitution",
       "damage":"8d8",
       "damageType":"cold",
-      "successfulSave":"half damage"
+      "saveSuccess":"half damage"
     },
     "effects":"A creature killed by this spell becomes a frozen statue until it thaws.",
     "classes":[
@@ -5133,7 +5133,7 @@
       "damageType":"bludgeoning",
       "secondaryDamage":"4d6",
       "secondaryDamageType":"cold",
-      "successfulSave":"half damage"
+      "saveSuccess":"half damage"
     },
     "effects":"Hailstones turn the storm's area of effect into difficult terrain until the end of your next turn.",
     "classes":[
@@ -5692,7 +5692,7 @@
       "ability":"dexterity",
       "damage":"8d6",
       "damageType":"lightning",
-      "successfulSave":"half damage"
+      "saveSuccess":"half damage"
     },
     "effects":"The lightning ignites flammable objects in the area that aren't being worn or carried",
     "classes":[
@@ -9120,7 +9120,7 @@
       "damage":"2d8",
       "damageType":"thunder",
       "saveFailure":"pushed 10 feet away from you",
-      "successfulSave":"half damage and isn't pushed."
+      "saveSuccess":"half damage and isn't pushed."
     },
     "effects":"In addition, unsecured objects that are completely within the area of effect are automatically pushed 10 feet away from you by the spell's effect, and the spell emits a thunderous boom audible out to 300 feet.",
     "classes":[
@@ -9414,7 +9414,7 @@
       "ability":"strength",
       "damage":"6d10",
       "damageType":"bludgeoning",
-      "successfulSave":"half damage"
+      "saveSuccess":"half damage"
     },
     "effects":"At the start of each of your turns after the wall appears, the wall, along with any creatures in it, moves 50 feet away from you. Any Huge or smaller creature inside the wall or whose space the wall enters when it moves must succeed on a strength saving throw or take 5d10 bludgeoning damage. A creature can take this damage only once per round. At the end of the turn, the wall's height is reduced by 50 feet, and the damage creatures take from the spell on subsequent rounds is reduced by 1d10. When the wall reaches 0 feet in height, the spell ends.<br>A creature caught in the wall can move by swimming. Because of the force of the wave, though, the creature must make a successful Strength (Athletics) check against your spell save DC in order to move at all. If it fails the check, it can't move. A creature that moves out of the area falls to the ground.",
     "classes":[
