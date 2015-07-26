@@ -1985,7 +1985,7 @@
       setAttribute(spellBase + 'spellshowhigherlvl', '{{spellshowhigherlvl=1}} {{spellhigherlevel=@{spellhighersloteffect}}}');
     }
 
-    //TODO: {{GENDER_PRONOUN_HE_SHE}}, {{GENDER_PRONOUN_HIM_HER}}, {{GENDER_PRONOUN_HIS_HER}}
+    //TODO: {{GENDER_PRONOUN_HE_SHE}}, {{GENDER_PRONOUN_HIM_HER}}, {{GENDER_PRONOUN_HIS_HER}}, {{GENDER_PRONOUN_HIMSELF_HERSELF}}
 
 
     var message = spell.name + ' imported for ' + characterName + ' on spell level ' + spell.level + ' at index ' + spellIndex;
