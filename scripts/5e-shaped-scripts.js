@@ -199,7 +199,7 @@
       log('Token ' + barTokenName + ' is linked');
     } else {
       var isNPC = getAttrByName(represent, 'is_npc', 'current');
-      if(isNPC === 1) {
+      if(isNPC === 1 || isNPC === '1') {
         rollCharacterHp(represent, function(total, average, formula) {
           token.set(barTokenName + '_value', total);
           token.set(barTokenName + '_max', total);
