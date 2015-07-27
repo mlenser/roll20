@@ -5,10 +5,10 @@
 var TokenNameNumber = TokenNameNumber || (function() {
 	'use strict';
 
-	var version = '0.5.1',
-			lastUpdate = 1429599526,
+    var version = '0.5.2',
+      lastUpdate = 1430870264,
 			schemaVersion = 0.3,
-			maxWaitTime = 1000,
+      addTokenCache = [],
 			statuses = [
 				'red', 'blue', 'green', 'brown', 'purple', 'pink', 'yellow', // 0-6
 				'skull', 'sleepy', 'half-heart', 'half-haze', 'interdiction',
@@ -40,7 +40,7 @@ var TokenNameNumber = TokenNameNumber || (function() {
 								config: {
 									randomSpace: 0,
 									useDots: false,
-									dots: ['red','brown','yellow','green','blue','pink','purple']
+                  dots: ['red','brown','yellow','green','blue','purple']
 								}
 							}, state.TokenNameNumber);
 							break;
@@ -295,18 +295,27 @@ var TokenNameNumber = TokenNameNumber || (function() {
 				return base(num);
 			},
 
-			setNumberFunction = function(id,lastTimeout) {
-				var obj = getObj('graphic',id),
-						matchers = (obj && getMatchers(obj.get('pageid'), obj.get('represents'))) || [],
-						tokenName = (obj && obj.get('name')),
+
+      setNumberOnToken = function(obj) {
+        var matchers,
+          tokenName,
 						matcher,
 						renamer,
 						parts,
 						num,
 						statuspart='';
 
+        if( _.contains(addTokenCache,obj.id)
+          &&'graphic' === obj.get('type')
+          && 'token'   === obj.get('subtype') ) {
 
-				if(obj && (tokenName.match( /%%NUMBERED%%/ ) || _.some(matchers,function(m) { return m.test(tokenName);}) ) ) {
+          addTokenCache = _.without(addTokenCache,obj.id);
+          matchers = (getMatchers(obj.get('pageid'), obj.get('represents'))) || [];
+          tokenName = (obj.get('name'));
+
+
+
+          if(tokenName.match( /%%NUMBERED%%/ ) || _.some(matchers,function(m) { return m.test(tokenName);}) ) {
 					if( 0 === matchers.length || !_.some(matchers,function(m) { return m.test(tokenName);}) ) {
 						matcher='^('+esRE(tokenName).replace(/%%NUMBERED%%/,')(\\d+)(')+')$';
 						addMatcher(obj.get('pageid'), obj.get('represents'), matcher );
@@ -355,22 +364,18 @@ var TokenNameNumber = TokenNameNumber || (function() {
 					obj.set({
 						name: parts[1]+(++num)+parts[3]
 					});
-				} else if ( lastTimeout < maxWaitTime ) {
-					setTimeout(_.bind(setNumberFunction,this,id,lastTimeout*2), lastTimeout*2);
 				}
+        }
 			},
 
-			setNumberOnToken = function(obj) {
-				if( 'graphic' === obj.get('type')
-						&& 'token'   === obj.get('subtype') ) {
-
-					setTimeout(_.bind(setNumberFunction,this,obj.id,200), 200);
-				}
+      handleAddGraphic = function(obj) {
+        addTokenCache.push(obj.id);
 			},
 
 			registerEventHandlers = function() {
 				on('chat:message', handleInput);
 				on('add:graphic', setNumberOnToken);
+        on('add:graphic', handleAddGraphic);
 			};
 
 	return {
