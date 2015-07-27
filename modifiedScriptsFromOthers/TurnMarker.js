@@ -9,14 +9,19 @@
 var TurnMarker = TurnMarker || (function(){
 	"use strict";
 
+    var version = '1.3.0',
+      schemaVersion = 1.16,
+      active = false,
+      threadSync = 1;
+
+
 	return {
-		version: 1.26,
-		schemaVersion: 1.16,
-		active: false,
-		threadSync: 1,
 
 		CheckInstall: function() {
-			if( ! state.hasOwnProperty('TurnMarker') || state.TurnMarker.version !== TurnMarker.schemaVersion) {
+        log('-=> TurnMarker v'+version+' <=-');
+
+			if( ! state.hasOwnProperty('TurnMarker') || state.TurnMarker.version !== TurnMarker.schemaVersion)
+			{
 				/* Default Settings stored in the state. */
 				state.TurnMarker = {
 					version: TurnMarker.version,
@@ -43,12 +48,13 @@ var TurnMarker = TurnMarker || (function(){
 					}
 				};
 			}
-			if(Campaign().get('turnorder') === '') {
+			if(Campaign().get('turnorder') ==='')
+			{
 				Campaign().set('turnorder','[]');
 			}
 		},
 
-		GetMarker: function() {
+		GetMarker: function(){
 			var marker = findObjs({
 				imgsrc: state.TurnMarker.tokenURL,
 				pageid: Campaign().get("playerpageid")
@@ -69,9 +75,9 @@ var TurnMarker = TurnMarker || (function(){
 					showplayers_aura1: true,
 					showplayers_aura2: true
 				});
-				marker=fixNewObject(marker);
 			}
-			if(!TurnOrder.HasTurn(marker.id)) {
+			if(!TurnOrder.HasTurn(marker.id))
+			{
 				TurnOrder.AddTurn({
 					id: marker.id,
 					pr: -1,
@@ -83,24 +89,33 @@ var TurnMarker = TurnMarker || (function(){
 		},
 
 		Step: function( sync ){
-			if (!state.TurnMarker.playAnimations || sync !== TurnMarker.threadSync) {
+			if (!state.TurnMarker.playAnimations || sync !== TurnMarker.threadSync)
+			{
 				return;
 			}
 			var marker=TurnMarker.GetMarker();
-			if(TurnMarker.active === true) {
+			if(TurnMarker.active === true)
+			{
 				var rotation=(marker.get('bar1_value')+state.TurnMarker.animationSpeed)%360;
 				marker.set('bar1_value', rotation );
-				if(state.TurnMarker.rotation) {
+				if(state.TurnMarker.rotation)
+				{
 					marker.set( 'rotation', rotation );
 				}
-				if(state.TurnMarker.aura1.pulse) {
+				if( state.TurnMarker.aura1.pulse )
+				{
 					marker.set('aura1_radius', Math.abs(Math.sin(rotation * (Math.PI/180))) * state.TurnMarker.aura1.size );
-				} else {
+				}
+				else
+				{
 					marker.set('aura1_radius','');
 				}
-				if(state.TurnMarker.aura2.pulse) {
+				if( state.TurnMarker.aura2.pulse  )
+				{
 					marker.set('aura2_radius', Math.abs(Math.cos(rotation * (Math.PI/180))) * state.TurnMarker.aura2.size );
-				} else {
+				}
+				else
+				{
 					marker.set('aura2_radius','');
 				}
 				setTimeout(_.bind(TurnMarker.Step,this,sync), 100);
@@ -130,13 +145,15 @@ var TurnMarker = TurnMarker || (function(){
 			var marker = TurnMarker.GetMarker();
 
 
-			if(state.TurnMarker.playAnimations && state.TurnMarker.aura1.pulse) {
+			if(state.TurnMarker.playAnimations && state.TurnMarker.aura1.pulse)
+			{
 				marker.set({
 					aura1_radius: state.TurnMarker.aura1.size,
 					aura1_color: state.TurnMarker.aura1.color
 				});
 			}
-			if(state.TurnMarker.playAnimations && state.TurnMarker.aura2.pulse) {
+			if(state.TurnMarker.playAnimations && state.TurnMarker.aura2.pulse)
+			{
 				marker.set({
 					aura2_radius: state.TurnMarker.aura2.size,
 					aura2_color: state.TurnMarker.aura2.color
@@ -147,8 +164,9 @@ var TurnMarker = TurnMarker || (function(){
 			TurnMarker.TurnOrderChange(false);
 		},
 
-		HandleInput: function(tokens,who) {
-			switch (tokens[0]) {
+		HandleInput: function(tokens,who){
+			switch (tokens[0])
+			{
 				case 'reset':
 					var marker = TurnMarker.GetMarker();
 					marker.set({
@@ -180,9 +198,12 @@ var TurnMarker = TurnMarker || (function(){
 
 				case 'toggle-animations':
 					state.TurnMarker.playAnimations=!state.TurnMarker.playAnimations;
-					if(state.TurnMarker.playAnimations) {
+					if(state.TurnMarker.playAnimations)
+					{
 						TurnMarker.Step(TurnMarker.threadSync);
-					} else {
+					}
+					else
+					{
 						var marker = TurnMarker.GetMarker();
 						marker.set({
 							aura1_radius: '',
@@ -219,7 +240,7 @@ var TurnMarker = TurnMarker || (function(){
 
 		Help: function(who){
 			var marker = TurnMarker.GetMarker();
-			var rounds = parseInt(marker.get('bar2_value'),10);
+			var rounds =parseInt(marker.get('bar2_value'),10);
 			sendChat('',
 							'/w '+who+' '
 							+'<div style="border: 1px solid black; background-color: white; padding: 3px 3px;">'
@@ -262,10 +283,12 @@ var TurnMarker = TurnMarker || (function(){
 		},
 
 		CheckForTokenMove: function(obj){
-			if(TurnMarker.active) {
+			if(TurnMarker.active)
+			{
 				var turnOrder = TurnOrder.Get();
 				var current = _.first(turnOrder);
-				if(obj && current && current.id === obj.id) {
+				if( obj && current && current.id === obj.id)
+				{
 					TurnMarker.threadSync++;
 
 					var marker = TurnMarker.GetMarker();
@@ -280,28 +303,31 @@ var TurnMarker = TurnMarker || (function(){
 		},
 
 		RequestTurnAdvancement: function(playerid){
-			if(TurnMarker.active) {
-				var turnOrder = TurnOrder.Get();
-				var current = getObj('graphic',_.first(turnOrder).id);
-				var character = getObj('character',current.get('represents'));
-				if(isGM(playerid)
-						|| ( undefined !== current &&
+			if(TurnMarker.active)
+			{
+				var turnOrder = TurnOrder.Get(),
+					current = getObj('graphic',_.first(turnOrder).id),
+					character = getObj('character',(current && current.get('represents')));
+				if(playerIsGM(playerid)
+						|| ( current &&
 								( _.contains(current.get('controlledby').split(','),playerid)
 										|| _.contains(current.get('controlledby').split(','),'all') )
 								)
-						|| ( undefined !== character &&
+						|| ( character &&
 								( _.contains(character.get('controlledby').split(','),playerid)
 										|| _.contains(character.get('controlledby').split(','),'all') )
 								)
-						) {
+						)
+				{
 					TurnOrder.Next();
 					TurnMarker.TurnOrderChange(true);
 				}
 			}
 		},
 
-		_AnnounceRound: function(round) {
-			if(state.TurnMarker.announceRounds) {
+		_AnnounceRound: function(round){
+			if(state.TurnMarker.announceRounds)
+			{
 				sendChat(
 						'',
 								"/direct "
@@ -327,11 +353,12 @@ var TurnMarker = TurnMarker || (function(){
 				);
 			}
 		},
-		_HandleMarkerTurn: function() {
+		_HandleMarkerTurn: function(){
 			var marker = TurnMarker.GetMarker();
 			var turnOrder = TurnOrder.Get();
 
-			if(turnOrder[0].id === marker.id) {
+			if(turnOrder[0].id === marker.id)
+			{
 				var round=parseInt(marker.get('bar2_value'))+1;
 				marker.set({
 					name: state.TurnMarker.tokenName+' '+round,
@@ -342,11 +369,14 @@ var TurnMarker = TurnMarker || (function(){
 			}
 		},
 		_HandleAnnounceTurnChange: function(){
-			if(state.TurnMarker.announceTurnChange) {
+
+			if(state.TurnMarker.announceTurnChange )
+			{
 				var marker = TurnMarker.GetMarker();
 				var turnOrder = TurnOrder.Get();
 				var currentToken = getObj("graphic", turnOrder[0].id);
-				if('gmlayer' === currentToken.get('layer')) {
+				if('gmlayer' === currentToken.get('layer'))
+				{
 					return;
 				}
 				var previousTurn=_.last(_.filter(turnOrder,function(element){
@@ -369,11 +399,14 @@ var TurnMarker = TurnMarker || (function(){
 
 
 				var PlayerAnnounceExtra='';
-				if(state.TurnMarker.announcePlayerInTurnAnnounce) {
+          if(state.TurnMarker.announcePlayerInTurnAnnounce)
+          {
 					var Char=currentToken.get('represents');
-					if('' !== Char) {
+            if('' !== Char)
+            {
 						Char=getObj('character',Char);
-						if(Char && _.isFunction(Char.get)) {
+              if(Char && _.isFunction(Char.get))
+              {
 							var Controllers=Char.get('controlledby').split(',');
 							_.each(Controllers,function(c){
 								var player=getObj('player',c);
@@ -412,10 +445,11 @@ var TurnMarker = TurnMarker || (function(){
 			}
 		},
 
-		TurnOrderChange: function(FirstTurnChanged) {
+      TurnOrderChange: function(FirstTurnChanged){
 			var marker = TurnMarker.GetMarker();
 
-			if(Campaign().get('initiativepage') === false) {
+        if(Campaign().get('initiativepage') === false)
+        {
 				return;
 			}
 
@@ -427,7 +461,8 @@ var TurnMarker = TurnMarker || (function(){
 
 			var current = _.first(turnOrder);
 
-			if(state.TurnMarker.playAnimations) {
+        if(state.TurnMarker.playAnimations)
+        {
 				TurnMarker.threadSync++;
 				setTimeout(_.bind(TurnMarker.Step,this,TurnMarker.threadSync), 300);
 			}
@@ -438,29 +473,33 @@ var TurnMarker = TurnMarker || (function(){
 
 			TurnMarker._HandleMarkerTurn();
 
-			if(state.TurnMarker.autoskipHidden) {
+        if(state.TurnMarker.autoskipHidden)
+        {
 				TurnOrder.NextVisible();
 				TurnMarker._HandleMarkerTurn();
 			}
 
 			turnOrder=TurnOrder.Get();
 
-			if(turnOrder[0].id === marker.id) {
+        if(turnOrder[0].id === marker.id)
+        {
 				return;
 			}
 
 			current = _.first(TurnOrder.Get());
 
 			var currentToken = getObj("graphic", turnOrder[0].id);
-			if(undefined !== currentToken) {
+        if(undefined !== currentToken)
+        {
 
-				if(FirstTurnChanged) {
+          if(FirstTurnChanged)
+          {
 					TurnMarker._HandleAnnounceTurnChange();
 				}
 
 				var size = Math.max(currentToken.get("height"),currentToken.get("width")) * state.TurnMarker.scale;
 
-				if(marker.get("layer") === "gmlayer" && currentToken.get("layer") !== "gmlayer") {
+				if (marker.get("layer") === "gmlayer" && currentToken.get("layer") !== "gmlayer") {
 					marker.set({
 						"top": currentToken.get("top"),
 						"left": currentToken.get("left"),
@@ -486,9 +525,12 @@ var TurnMarker = TurnMarker || (function(){
 		},
 
 		DispatchInitiativePage: function(){
-			if(Campaign().get('initiativepage') === false) {
+        if(Campaign().get('initiativepage') === false)
+        {
 				this.Reset();
-			} else {
+        }
+        else
+        {
 				this.Start();
 			}
 		},
@@ -509,7 +551,8 @@ var TurnMarker = TurnMarker || (function(){
 						&& 0 !== prevOrder.length
 						&& 0 !== objOrder.length
 						&& objOrder[0].id !== prevOrder[0].id
-						) {
+          )
+          {
 					TurnMarker.TurnOrderChange(true);
 				}
 			});
@@ -534,7 +577,8 @@ var TurnMarker = TurnMarker || (function(){
 				var tokenized = msg.content.split(" ");
 				var command = tokenized[0];
 
-				switch(command) {
+          switch(command)
+          {
 					case "!tm":
 					case "!turnmarker":
 					{
@@ -555,36 +599,17 @@ var TurnMarker = TurnMarker || (function(){
 }());
 
 
+
+
+
+
 on("ready",function(){
 	'use strict';
 
-	var Has_IsGM=false;
-	try {
-		_.isFunction(isGM);
-		Has_IsGM=true;
-	}
-	catch (err) {
-		log('--------------------------------------------------------------');
-		log('TurnMarker requires the isGM module to work.');
-		log('isGM GIST: https://gist.github.com/shdwjk/8d5bb062abab18463625');
-		log('--------------------------------------------------------------');
-	}
-
-	if(Has_IsGM) {
 		TurnMarker.CheckInstall();
 		TurnMarker.RegisterEventHandlers();
 		TurnMarker.DispatchInitiativePage();
-	}
 });
-
-// Utility Function
-var fixNewObject = fixNewObject || function(obj){
-	var p = obj.changed._fbpath;
-	var new_p = p.replace(/([^\/]*\/){4}/, "/");
-	obj.fbpath = new_p;
-	return obj;
-};
-
 
 var TurnOrder = TurnOrder || {
 	Get: function(){
@@ -609,9 +634,12 @@ var TurnOrder = TurnOrder || {
 			if(
 					(undefined !== token)
 					&& (token.get('layer')!=='gmlayer')
-					) {
+        )
+        {
 				return true;
-			} else {
+        }
+        else
+        {
 				this.skip++;
 			}
 		},context);
@@ -621,7 +649,7 @@ var TurnOrder = TurnOrder || {
 		}
 	},
 	HasTurn: function(id){
-		return (_.filter(this.Get(),function(turn) {
+      return (_.filter(this.Get(),function(turn){
 			return id === turn.id;
 		}).length !== 0);
 	},
