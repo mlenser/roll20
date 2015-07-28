@@ -1307,9 +1307,10 @@
     "name": "Chill Touch",
     "description": "You create a ghostly, skeletal hand in the space of a creature within range. Make a ranged spell attack against the creature to assail it with the chill of the grave. On a hit, the target takes 1d8 necrotic damage, and it can't regain hit points until the start of your next turn. Until then, the hand clings to the target.<br>If you hit an undead target, it also has disadvantage on attack rolls against you until the end of your next turn.",
     "higherLevel": "This spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).",
-    "emote": "",
+    "emote": "creates a ghostly, skeletal hand in the space of a creature within range",
     "source": "phb 221",
     "range": "120 feet",
+    "target": "a creature",
     "components": {
       "verbal": true,
       "somatic": true
@@ -1322,6 +1323,7 @@
       "damage": "((@{level} + 1) / 6 + 0.5)d8",
       "damageType": "necrotic"
     },
+    "effects": "it can't regain hit points until the start of your next turn. Until then, the hand clings to the target.<br>If you hit an undead target, it also has disadvantage on attack rolls against you until the end of your next turn.",
     "classes": [
       "Sorcerer",
       "Warlock",
@@ -1974,9 +1976,10 @@
   {
     "name": "Control Flames",
     "description": "You choose nonmagical flame that you can see within range and that fits within a 5-foot cube. You affect it in one of the following ways:<br>- You instantaneously expand the flame 5 feet in one direction, provided that wood or other fuel is present in the new location.<br>- You instantaneously extinguish the flames within the cube.<br>- You double or halve the area of bright light and dim light cast by the flame, change its color, or both. The change lasts for 1 hour.<br>- You cause simple shapes-such as the vague form of a creature, an inanimate object, or a location-to appear within the flames and animate as you like. The shapes last for 1 hour.<br>If you cast this spell multiple times, you can have up to three of its non-instantaneous effects active at a time, and you can dismiss such an effect as an action.",
-    "emote": "",
+    "emote": "waves {{GENDER_PRONOUN_HIS_HER}} hands as flames adjust",
     "source": "ee pc 16",
     "range": "60 feet",
+    "target": "nonmagical flame that you can see within range and that fits within a 5 ft. cube",
     "components": {
       "somatic": true
     },
@@ -1984,6 +1987,7 @@
     "castingTime": "1 action",
     "level": "0",
     "school": "Transmutation",
+    "effects": "You affect the target in one of the following ways:<br>- You instantaneously expand the flame 5 feet in one direction, provided that wood or other fuel is present in the new location.<br>- You instantaneously extinguish the flames within the cube.<br>- You double or halve the area of bright light and dim light cast by the flame, change its color, or both. The change lasts for 1 hour.<br>- You cause simple shapes-such as the vague form of a creature, an inanimate object, or a location-to appear within the flames and animate as you like. The shapes last for 1 hour.<br>If you cast this spell multiple times, you can have up to three of its non-instantaneous effects active at a time, and you can dismiss such an effect as an action.",
     "classes": [
       "Druid",
       "Sorcerer",
@@ -2110,10 +2114,11 @@
     "name": "Create Bonfire",
     "description": "You create a bonfire on ground that you can see within range. Until the spells ends, the bonfire fills a 5-foot cube. Any creature in the bonfire's space when you cast the spell must succeed on a Dexterity saving throw or take 1d8 fire damage. A creature must also make the saving throw when it enters the bonfire's space for the first time on a turn or ends its turn there.",
     "higherLevel": "The spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).",
-    "emote": "",
+    "emote": "creates a bonfine",
     "source": "ee pc 16",
     "range": "60 feet",
-    "target": "Any creature in the bonfire's space when you cast the spell or when it enters the bonfire's space for the first time on a turn or ends its turn there",
+    "target": "any creature in the bonfire's space when you cast the spell or when it enters the bonfire's space for the first time on a turn or ends its turn there",
+    "aoe": "5 ft. cube on the ground",
     "components": {
       "verbal": true,
       "somatic": true
@@ -2298,7 +2303,7 @@
   {
     "name": "Dancing Lights",
     "description": "You create up to four torch-sized lights within range, making them appear as torches, lanterns, or glowing orbs that hover in the air for the duration. You can also combine the four lights into one glowing vaguely humanoid form of Medium size. Whichever form you choose, each light sheds dim light in a 10-foot radius.<br>As a bonus action on your turn, you can move the lights up to 60 feet to a new spot within range. A light must be within 20 feet of another light created by this spell, and a light winks out if it exceeds the spell's range.",
-    "emote": "",
+    "emote": "creates up to 4 torch-sized lights within range, making them appear as torches, lanterns, or glowing orbs that hover in the air",
     "source": "phb 230",
     "range": "120 feet",
     "components": {
@@ -2312,6 +2317,7 @@
     "castingTime": "1 action",
     "level": "0",
     "school": "Evocation",
+    "effects": "You create up to four torch-sized lights within range, making them appear as torches, lanterns, or glowing orbs that hover in the air for the duration. You can also combine the four lights into one glowing vaguely humanoid form of Medium size. Whichever form you choose, each light sheds dim light in a 10 ft. radius.<br>As a bonus action on your turn, you can move the lights up to 60 ft. to a new spot within range. A light must be within 20 ft. of another light created by this spell, and a light winks out if it exceeds the spell's range.",
     "classes": [
       "Bard",
       "Sorcerer",
