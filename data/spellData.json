@@ -43,7 +43,7 @@
     "castingTime": "1 reaction, which you take when you take acid, cold, fire, lightning, or thunder damage",
     "level": "1",
     "school": "Abjuration",
-    "effects": "You have resistance to the triggering damage type until the start of your next turn. Also, the first time you hit with a melee attack on your next turn, the target takes an extra d6 ([[1d6]]) damage of the triggering type, and the spell ends.",
+    "effects": "You have resistance to the triggering damage type until the start of your next turn. Also, the first time you hit with a melee attack on your next turn, the target takes an extra 1d6 ([[1d6]]) damage of the triggering type, and the spell ends.",
     "classes": [
       "Druid",
       "Ranger",
@@ -365,6 +365,9 @@
     "castingTime": "1 hour",
     "level": "8",
     "school": "Enchantment",
+    "save": {
+      "ability": "wisdom"
+    },
     "effects": "specify a kind of intelligent creature, such as red dragons, goblins, or vampires. You invest the target with an aura that either attracts or repels the specified creatures for the duration. Choose antipathy or sympathy as the aura's effect.<br><b><i>Antipathy.</b></i> The enchantment causes creatures of the kind you designated to feel an intense urge to leave the area and avoid the target. When such a creature can see the target or comes within 60 feet of it, the creature must succeed on a wisdom saving throw or become frightened. The creature remains frightened while it can see the target or is within 60 feet of it. While frightened by the target, the creature must use its movement to move to the nearest safe spot from which it can't see the target. If the creature moves more than 60 feet from the target and can't see it, the creature is no longer frightened, but the creature becomes frightened again if it regains sight of the target or moves within 60 feet of it.<br><b><i>Sympathy.</b></i> The enchantment causes the specified creatures to feel an intense urge to approach the target while within 60 feet of it or able to see it. When such a creature can see the target or comes within 60 feet of it, the creature must succeed on a wisdom saving throw or use its movement on each of its turns to enter the area or move within reach of the target. When the creature has done so, it can't willingly move away from the target. If the target damages or otherwise harms an affected creature, the affected creature can make a wisdom saving throw to end the effect, as described below.<br><b><i>Ending the Effect.</b></i> If an affected creature ends its turn while not within 60 feet of the target or able to see it, the creature makes a wisdom saving throw. On a successful save, the creature is no longer affected by the target and recognizes the feeling of repugnance or attraction as magical. In addition, a creature affected by the spell is allowed another wisdom saving throw every 24 hours while the spell persists.<br>A creature that successfully saves against this effect is immune to it for 1 minute, after which time it can be affected again.",
     "classes": [
       "Druid",
@@ -3337,7 +3340,7 @@
     "castingTime": "1 action",
     "level": "1",
     "school": "Necromancy",
-    "effects": "you gain [[1d4 + 4]] temporary hit points for the duration",
+    "effects": "you gain 1d4 + 4 ([[1d4 + 4]]) temporary hit points for the duration",
     "classes": [
       "Sorcerer",
       "Wizard"
@@ -4677,7 +4680,7 @@
   {
     "name": "Hold Monster",
     "description": "Choose a creature you can see and reach. The target must make a saving throw of Wisdom or be paralyzed for the duration of the spell. This spell has no effect against the undead. At the end of each round, the target can make a new saving throw of Wisdom. If successful, the spell ends for the creature.",
-    "higherLevel": "When you cast this spell using a level 6 or higher location, you can target an additional creature for each level of location beyond the fifth. The creatures must be within 30 feet o f each other when you target them.",
+    "higherLevel": "When you cast this spell using a level 6 or higher location, you can target an additional creature for each level of location beyond the fifth. The creatures must be within 30 feet of each other when you target them.",
     "emote": "",
     "source": "phb 251",
     "range": "90 feet",
@@ -8894,7 +8897,8 @@
     "emote": "sends a giant wall of water crashing in a direction",
     "source": "phb 284",
     "range": "Sight",
-    "target": "Each creature within a wall up to 300 feet long, 300 feet high, and 50 feet thick at a point within range",
+    "target": "each creature within the wall",
+    "aoe": "wall up to 300 ft. long, 300 feet high, and 50 ft. thick",
     "components": {
       "verbal": true,
       "somatic": true
@@ -8918,7 +8922,7 @@
   {
     "name": "Unseen Servant",
     "description": "This spell creates an invisible, mindless, shapeless force that performs simple tasks at your command until the spell ends. The servant springs into existence in an unoccupied space on the ground within range. It has AC 10, 1 hit point, and a Strength of 2, and it can't attack. If it drops to 0 hit points, the spell ends.<br>Once on each of your turns as a bonus action, you can mentally command the servant to move up to 15 feet and interact with an object. The servant can perform simple tasks that a human servant could do, such as fetching things, cleaning, mending, folding clothes, lighting fires, serving food, and pouring wind. Once you give the command, the servant performs the task to the best of its ability until it completes the task, then waits for your next command.<br>If you command the servant to perform a task that would move it more than 60 feet away from you, the spell ends.",
-    "emote": "",
+    "emote": "creates an invisible, mindless, shapeless force that performs simple tasks at your command",
     "source": "phb 284",
     "range": "60 feet",
     "components": {
@@ -8932,6 +8936,7 @@
     "castingTime": "1 action",
     "level": "1",
     "school": "Conjuration",
+    "effects": "The servant springs into existence in an unoccupied space on the ground within range. It has AC 10, 1 hit point, and a Strength of 2, and it can't attack. If it drops to 0 hit points, the spell ends.<br>Once on each of your turns as a bonus action, you can mentally command the servant to move up to 15 ft. and interact with an object. The servant can perform simple tasks that a human servant could do, such as fetching things, cleaning, mending, folding clothes, lighting fires, serving food, and pouring wind. Once you give the command, the servant performs the task to the best of its ability until it completes the task, then waits for your next command.<br>If you command the servant to perform a task that would move it more than 60 feet away from you, the spell ends.",
     "classes": [
       "Bard",
       "Warlock",
@@ -8942,7 +8947,7 @@
     "name": "Vampiric Touch",
     "description": "The touch of your shadow-wreathed hand can siphon life force from others to heal your wounds. Make a melee spell attack against a creature within your reach. On a hit, the target takes 3d6 necrotic damage, and you regain hit points equal to half the amount of necrotic damage dealt. Until the spell ends, you can make the attack again on each of your turns as an action.",
     "higherLevel": "When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 for each slot level above 3rd.",
-    "emote": "",
+    "emote": "siphons life force from others with a touch of {{GENDER_PRONOUN_HIS_HER}} shadow-wreathed hand",
     "source": "phb 285",
     "range": "Self",
     "components": {
@@ -8954,6 +8959,11 @@
     "castingTime": "1 action",
     "level": "3",
     "school": "Necromancy",
+    "attack": {
+      "damage": "3d6",
+      "damageType": "necrotic"
+    },
+    "effects": "you regain hit points equal to half the amount of necrotic damage dealt. Until the spell ends, you can make the attack again on each of your turns as an action.",
     "classes": [
       "Warlock",
       "Wizard"
@@ -8961,10 +8971,12 @@
   },
   {
     "name": "Vicious Mockery",
-    "description": "You unleash a string of insults laced with subtle enchantments at a creature you can see within range. If the target can hear you (though it need not understand you), it must succeed on a wisdom saving throw or take 1d4 psychic damage and have disadvantage on the next attack roll it makes before the end of its next turn.<br>This spell's damage increases by 1d4 when you reach 5th level (2d4), 11th level (3d4), and 17th level (4d4).",
-    "emote": "",
+    "description": "You unleash a string of insults laced with subtle enchantments at a creature you can see within range. If the target can hear you (though it need not understand you), it must succeed on a wisdom saving throw or take 1d4 psychic damage and have disadvantage on the next attack roll it makes before the end of its next turn.",
+    "higherLevel": "This spell's damage increases by 1d4 when you reach 5th level (2d4), 11th level (3d4), and 17th level (4d4).",
+    "emote": "unleashes a string of insults laced with subtle enchantments",
     "source": "phb 285",
     "range": "60 feet",
+    "target": "a creature you can see",
     "components": {
       "verbal": true
     },
@@ -8972,6 +8984,13 @@
     "castingTime": "1 action",
     "level": "0",
     "school": "Enchantment",
+    "save": {
+      "ability": "wisdom",
+      "damage": "1d4",
+      "damageType": "psychic",
+      "condition": "if the target can hear you (though it need not understand you)",
+      "saveFailure": "disadvantage on the next attack roll it makes before the end of its next turn"
+    },
     "classes": [
       "Bard"
     ]
@@ -8980,9 +8999,11 @@
     "name": "Vitriolic Sphere",
     "description": "You point at a place within range, and a glowing 1-foot ball of emerald acid streaks there and explodes in a 20-foot radius. Each creature in that area must make a Dexterity saving throw. On a failed save, a creature takes 10d4 acid damage and 5d4 acid damage at the end of its next turn. On a successful save, a creature takes half the initial damage and no damage at the end of its next turn.",
     "higherLevel": "When you cast this spell using a spell slot of 5th level or higher, the initial damage increases by 2d4 for each slot level above 4th.",
-    "emote": "",
+    "emote": "you create a glowing ball of emerald acid that streaks and explodes",
     "source": "ee pc 23",
     "range": "150 feet",
+    "target": "each creature",
+    "aoe": "20 ft. radius",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -8993,6 +9014,13 @@
     "castingTime": "1 action",
     "level": "4",
     "school": "Evocation",
+    "save": {
+      "ability": "dexterity",
+      "damage": "10d4",
+      "damageType": "acid",
+      "saveSuccess": "half damage and no additional damage",
+      "saveFailure": "and 5d4 acid damage at the end of its next turn"
+    },
     "classes": [
       "Sorcerer",
       "Wizard"
@@ -9000,11 +9028,13 @@
   },
   {
     "name": "Wall of Fire",
-    "description": "You create a wall of fire on a solid surface within range. You can make the wall up to 60 feet long, 20 feet high, and 1 foot thick, or a ringed wall up to 20 feet in diameter, 20 feet high, and 1 foot thick. The wall is opaque and lasts for the duration.<br>When the wall appears, each creature within its area must make a Dexterity saving throw. On a failed save, a creature takes 5d8 fire damage, or half as much damage on a successful save.<br>One side of the wall, selected by you when you cast this spell, deals 5d8 fire damage to each creature that ends its turn within 10 feet o f that side or inside the wall. A creature takes the same damage when it enters the wall for the first time on a turn or ends its turn there. The other side o f the wall deals no damage.<br>The other side of the wall deals no damage.",
+    "description": "You create a wall of fire on a solid surface within range. You can make the wall up to 60 feet long, 20 feet high, and 1 foot thick, or a ringed wall up to 20 feet in diameter, 20 feet high, and 1 foot thick. The wall is opaque and lasts for the duration.<br>When the wall appears, each creature within its area must make a Dexterity saving throw. On a failed save, a creature takes 5d8 fire damage, or half as much damage on a successful save.<br>One side of the wall, selected by you when you cast this spell, deals 5d8 fire damage to each creature that ends its turn within 10 feet of that side or inside the wall. A creature takes the same damage when it enters the wall for the first time on a turn or ends its turn there. The other side of the wall deals no damage.",
     "higherLevel": "When you cast this spell using a level spell slot 5 or more, the damage of the spell increases by 1d8 for each level of higher spell slot to 4.",
-    "emote": "",
+    "emote": "creates a wall of fire",
     "source": "phb 285",
     "range": "120 feet",
+    "target": "each creature within its area when it appears",
+    "aoe": "wall on a solid surface: up to 60 ft. long, 20 ft. high, and 1 ft. thick, or a ringed wall up to 20 ft. in diameter, 20 ft. high, and 1 ft. thick",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -9016,6 +9046,13 @@
     "castingTime": "1 action",
     "level": "4",
     "school": "Evocation",
+    "save": {
+      "ability": "dexterity",
+      "damage": "5d8",
+      "damageType": "fire",
+      "saveSuccess": "half damage"
+    },
+    "effects": "The wall is opaque.One side of the wall, selected by you when you cast this spell, deals 5d8 ([[5d8]]) fire damage to each creature that ends its turn within 10 ft. of that side or inside the wall. A creature takes the same damage when it enters the wall for the first time on a turn or ends its turn there. The other side of the wall deals no damage.",
     "classes": [
       "Cleric",
       "Druid",
@@ -9033,9 +9070,10 @@
   {
     "name": "Wall of Force",
     "description": "An invisible wall of force springs into existence at a point you choose within range. The wall appears in any orientation you choose, as a horizontal or vertical barrier or at an angle. It can be free floating or resting on a solid surface. You can form it into a hemispherical dome or a sphere with a radius of up to 10 feet, or you can shape a flat surface made up of ten 10-foot-by-10-foot panels. Each panel must be contiguous with another panel. In any form, the wall is 1/4 inch thick. It lasts for the duration. If the wall cuts through a creature's space when it appears, the creature is pushed to one side of the wall (your choice which side).<br>Nothing can physically pass through the wall. It is immune to all damage and can't be dispelled by dispel magic. A disintegrate spell destroys the wall instantly, however. The wall also extends into the Ethereal Plane, blocking ethereal travel through the wall.",
-    "emote": "",
+    "emote": "causes a wall of force to spring into existence",
     "source": "phb 285",
     "range": "120 feet",
+    "aoe": "wall at a point: appears in any orientation you choose, as a horizontal or vertical barrier or at an angle. It can be free floating or resting on a solid surface. You can form it into a hemispherical dome or a sphere with a radius of up to 10 ft., or you can shape a flat surface made up of ten 10 ft. by 10 ft. panels. Each panel must be contiguous with another panel. In any form, the wall is 1/4 inch thick",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -9047,6 +9085,7 @@
     "castingTime": "1 action",
     "level": "5",
     "school": "Evocation",
+    "effects": "If the wall cuts through a creature's space when it appears, the creature is pushed to one side of the wall (your choice which side).<br>Nothing can physically pass through the wall. It is immune to all damage and can't be dispelled by dispel magic. A disintegrate spell destroys the wall instantly, however. The wall also extends into the Ethereal Plane, blocking ethereal travel through the wall.",
     "classes": [
       "Wizard"
     ]
@@ -9055,9 +9094,11 @@
     "name": "Wall of Ice",
     "description": "You create a wall of ice on a solid surface within range. You can form it into a hemispherical dome or a sphere with a radius of up to 10 feet, or you can shape a flat surface made up of ten 10-foot-square panels. Each panel must be contiguous with another panel. In any form, the wall is 1 foot thick and lasts for the duration.<br>If the wall cuts through a creature's space when it appears, the creature within its area is pushed to one side of the wall and must make a dexterity saving throw. On a failed save, the creature takes 10d6 cold damage, or half as much damage on a successful save.<br>The wall is an object that can be damaged and thus breached. It has AC 12 and 30 hit points per 10-foot section, and it is vulnerable to fire damage. Reducing a 10-foot section of wall to 0 hit points destroys it and leaves behind a sheet of frigid air in the space the wall occupied. A creature moving through the sheet of frigid air for the first time on a turn must make a constitution saving throw. That creature takes 5d6 cold damage on a failed save, or half as much damage on a successful one.",
     "higherLevel": "When you cast this spell using a spell slot of 7th level or higher, the damage the wall deals when it appears increases by 2d6, and the damage from passing through the sheet of frigid air increases by 1d6, for each slot level above 6th.",
-    "emote": "",
+    "emote": "creates a wall of ice",
     "source": "phb 285",
     "range": "120 feet",
+    "target": "each creature within its area when it appears",
+    "aoe": "wall on a solid surface: hemispherical dome or a sphere with a radius of up to 10 ft., or you can shape a flat surface made up of ten 10 ft. square panels. Each panel must be contiguous with another panel. In any form, the wall is 1 ft. thick and lasts for the duration.",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -9069,6 +9110,13 @@
     "castingTime": "1 action",
     "level": "6",
     "school": "Evocation",
+    "save": {
+      "ability": "dexterity",
+      "damage": "10d6",
+      "damageType": "cold",
+      "saveSuccess": "half damage"
+    },
+    "effects": "If the wall cuts through a creature's space when it appears, the creature within its area is pushed to one side of the wall and must make a dexterity saving throw as outlined above.<br>The wall is an object that can be damaged and thus breached. It has AC 12 and 30 hit points per 10 ft. section, and it is vulnerable to fire damage. Reducing a 10 ft. section of wall to 0 hit points destroys it and leaves behind a sheet of frigid air in the space the wall occupied. A creature moving through the sheet of frigid air for the first time on a turn must make a constitution saving throw. That creature takes 5d6 ([[5d6]]) cold damage on a failed save, or half as much damage on a successful one.",
     "classes": [
       "Wizard"
     ]
@@ -9076,9 +9124,10 @@
   {
     "name": "Wall of Sand",
     "description": "You conjure up a wall of swirling sand on the ground at a point you can see within range. You can make the wall up to 30 feet long, 10 feet high, and 10 feet thick, and it vanishes when the spell ends. It blocks line of sight but not movement. A creature is blinded while in the wall's space and must spend 3 feet of movement for every 1 foot it moves there.",
-    "emote": "",
+    "emote": "conjures up a wall of swirling sand on the ground",
     "source": "ee pc 23",
     "range": "90 feet",
+    "aoe": "wall on the ground at a point you can see: up to 30 ft. long, 10 ft. high, and 10 ft. thick",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -9090,6 +9139,7 @@
     "castingTime": "1 action",
     "level": "3",
     "school": "Evocation",
+    "effects": "the wall blocks line of sight but not movement. A creature is blinded while in the wall's space and must spend 3 feet of movement for every 1 foot it moves there.",
     "classes": [
       "Wizard"
     ]
@@ -9097,9 +9147,11 @@
   {
     "name": "Wall of Stone",
     "description": "A nonmagical wall of solid stone springs into existence at a point you choose within range. The wall is 6 inches thick and is composed of ten 10-foot-by-10-foot panels. Each panel must be contiguous with at least one other panel. Alternatively, you can create 10-foot-by-20-foot panels that are only 3 inches thick.<br>If the wall cuts through a creature's space when it appears, the creature is pushed to one side of the wall (your choice). If a creature would be surrounded on all sides by the wall (or the wall and another solid surface), that creature can make a dexterity saving throw. On a success, it can use its reaction to move up to its speed so that it is no longer enclosed by the wall.<br>The wall can have any shape you desire, though it can't occupy the same space as a creature or object. The wall doesn't need to be vertical or rest on any firm foundation. It must, however, merge with and be solidly supported by existing stone. Thus, you can use this spell to bridge a chasm or create a ramp.<br>If you create a span greater than 20 feet in length, you must halve the size of each panel to create supports. You can crudely shape the wall to create crenellations, battlements, and so on.<br>The wall is an object made of stone that can be damaged and thus breached. Each panel has AC 15 and 30 hit points per inch of thickness. Reducing a panel to 0 hit points destroys it and might cause connected panels to collapse at the DM's discretion.<br>If you maintain your concentration on this spell for its whole duration, the wall becomes permanent and can't be dispelled. Otherwise, the wall disappears when the spell ends.",
-    "emote": "",
+    "emote": "causes a nonmagical wall of solid stone to spring into existence",
     "source": "phb 287",
     "range": "120 feet",
+    "target": "each creature within its area when it appears",
+    "aoe": "wall on the ground at a point you can see: up to 6 inches thick and is composed of ten 10 ft. by 10 ft. panels. Each panel must be contiguous with at least one other panel. Alternatively, you can create 10 ft. by 20 ft. panels that are only 3 inches thick",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -9111,6 +9163,11 @@
     "castingTime": "1 action",
     "level": "5",
     "school": "Evocation",
+    "save": {
+      "ability": "dexterity",
+      "saveSuccess": "it can use its reaction to move up to its speed so that it is no longer enclosed by the wall"
+    },
+    "effects": "If the wall cuts through a creature's space when it appears, the creature is pushed to one side of the wall (your choice). If a creature would be surrounded on all sides by the wall (or the wall and another solid surface), that creature can make a dexterity saving throw as outlined above.<br>The wall can have any shape you desire, though it can't occupy the same space as a creature or object. The wall doesn't need to be vertical or rest on any firm foundation. It must, however, merge with and be solidly supported by existing stone. Thus, you can use this spell to bridge a chasm or create a ramp.<br>If you create a span greater than 20 ft. in length, you must halve the size of each panel to create supports. You can crudely shape the wall to create crenellations, battlements, and so on.<br>The wall is an object made of stone that can be damaged and thus breached. Each panel has AC 15 and 30 hit points per inch of thickness. Reducing a panel to 0 hit points destroys it and might cause connected panels to collapse at the DM's discretion.<br>If you maintain your concentration on this spell for its whole duration, the wall becomes permanent and can't be dispelled. Otherwise, the wall disappears when the spell ends.",
     "classes": [
       "Druid",
       "Sorcerer",
@@ -9125,9 +9182,11 @@
     "name": "Wall of Thorns",
     "description": "You create a wall of tough, pliable, tangled brush bristling with needle-sharp thorns. The wall appears within range on a solid surface and lasts for the duration. You choose to make the wall up to 60 feet long, 10 feet high, and 5 feet thick or a circle that has a 20-foot diameter and is up to 20 feet high and 5 feet thick. The wall blocks line of sight.<br>When the wall appears, each creature within its area must make a dexterity saving throw. On a failed save, a creature takes 7d8 piercing damage, or half as much damage on a successful save.<br>A creature can move through the wall, albeit slowly and painfully. For every 1 foot a creature moves through the wall, it must spend 4 feet of movement. Furthermore, the first time a creature enters the wall on a turn or ends its turn there, the creature must make a dexterity saving throw. It takes 7d8 slashing damage on a failed save, or half as much damage on a successful one.",
     "higherLevel": "When you cast this spell using a spell slot of 7th level or higher, both types of damage increase by 1d8 for each slot level above 6th.",
-    "emote": "",
+    "emote": "creates a wall of tough, pliable, tangled brush bristling with needle-sharp thorns",
     "source": "phb 287",
     "range": "120 feet",
+    "target": "each creature within its area when it appears",
+    "aoe": "wall on a solid surface: up to 60 ft. long, 10 ft. high, and 5 ft. thick or a circle that has a 20 ft. diameter and is up to 20 ft. high and 5 ft. thick",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -9139,6 +9198,13 @@
     "castingTime": "1 action",
     "level": "6",
     "school": "Conjuration",
+    "save": {
+      "ability": "dexterity",
+      "damage": "7d8",
+      "damageType": "piercing",
+      "saveSuccess": "half damage"
+    },
+    "effects": "The wall blocks line of sight.<br>A creature can move through the wall, albeit slowly and painfully. For every 1 foot a creature moves through the wall, it must spend 4 feet of movement. Furthermore, the first time a creature enters the wall on a turn or ends its turn there, the creature must make a dexterity saving throw as outlined above.",
     "classes": [
       "Druid"
     ]
@@ -9149,8 +9215,7 @@
     "emote": "conjures a wall of water on the ground",
     "source": "ee pc 23",
     "range": "60 feet",
-    "target": "on the ground at a point you can see within range",
-    "aoe": "up to 30 feet long, 10 feet high, and 1 foot thick, or you can make a ringed wall up to 20 feet in diameter, 20 feet high, and 1 foot thick",
+    "aoe": "wall on the ground at a point you can see: up to 30 ft. long, 10 ft. high, and 1 foot thick, or you can make a ringed wall up to 20 ft. in diameter, 20 ft. high, and 1 ft. thick",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -9162,7 +9227,7 @@
     "castingTime": "1 action",
     "level": "3",
     "school": "Evocation",
-    "effects": "The wall vanishes when the spell ends. The wall's space is difficult terrain.<br>Any ranged weapon attack that enters the wall's space has disadvantage on the attack roll, and fire damage is halved if the fire effect passes through the wall to reach its target. Spells that deal cold damage that pass through the wall cause the area of the wall they pass through to freeze solid (at least a 5-foot square section is frozen). Each 5-foot-square frozen section has AC 5 and 15 hit points. Reducing a frozen section to 0 hit points destroys it. When a section is destroyed, the wall's water doesn't fill it.",
+    "effects": "The wall vanishes when the spell ends. The wall's space is difficult terrain.<br>Any ranged weapon attack that enters the wall's space has disadvantage on the attack roll, and fire damage is halved if the fire effect passes through the wall to reach its target. Spells that deal cold damage that pass through the wall cause the area of the wall they pass through to freeze solid (at least a 5 ft. square section is frozen). Each 5 ft. square frozen section has AC 5 and 15 hit points. Reducing a frozen section to 0 hit points destroys it. When a section is destroyed, the wall's water doesn't fill it.",
     "classes": [
       "Druid",
       "Sorcerer",
@@ -9172,9 +9237,10 @@
   {
     "name": "Warding Bond",
     "description": "This spell wards a willing creature you touch and creates a mystic connection between you and the target until the spell ends. While the target is within 60 feet of you, it gains a +1 bonus to AC and saving throws, and it has resistance to all damage. Also, each time it takes damage, you take the same amount of damage.<br>The spell ends if you drop to 0 hit points or if you and the target become separated by more than 60 feet.<br>It also ends if the spell is cast again on either of the connected creatures. You can also dismiss the spell as an action.",
-    "emote": "",
+    "emote": "creatres a mystic bond between {{GENDER_PRONOUN_HIMSELF_HERSELF}} and the target",
     "source": "phb 287",
     "range": "Touch",
+    "target": "a willing creature you touch",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -9185,6 +9251,7 @@
     "castingTime": "1 action",
     "level": "2",
     "school": "Abjuration",
+    "effects": "While the target is within 60 feet of you, it gains a +1 bonus to AC and saving throws, and it has resistance to all damage. Also, each time it takes damage, you take the same amount of damage.<br>The spell ends if you drop to 0 hit points or if you and the target become separated by more than 60 feet.<br>It also ends if the spell is cast again on either of the connected creatures. You can also dismiss the spell as an action.",
     "classes": [
       "Cleric"
     ]
@@ -9195,6 +9262,7 @@
     "emote": "creates a strong wind that blows around {{GENDER_PRONOUN_HIMSELF_HERSELF}}",
     "source": "ee pc 23",
     "range": "Self",
+    "aoe": "10 ft. radius that remains centered on you",
     "components": {
       "verbal": true
     },
@@ -9203,7 +9271,7 @@
     "castingTime": "1 action",
     "level": "2",
     "school": "Evocation",
-    "effects": "the strong wind (20 miles per hour) blows around you in a 10-foot radius and moves with you, remaining centered on you. The wind lasts for the spell's duration. The wind has the following effects:<br>- It deafens you and other creatures in its area.<br>- It extinguishes unprotected flames in its area that are torch-sized or smaller.<br>- The area is difficult terrain for creatures other than you.<br>- The attack rolls of ranged weapon attacks have disadvantage if they pass in or out of the wind.<br>- It hedges out vapor, gas, and fog that can be dispersed by strong wind.",
+    "effects": "the strong wind (20 miles per hour) has the following effects:<br>- It deafens you and other creatures in its area.<br>- It extinguishes unprotected flames in its area that are torch-sized or smaller.<br>- The area is difficult terrain for creatures other than you.<br>- The attack rolls of ranged weapon attacks have disadvantage if they pass in or out of the wind.<br>- It hedges out vapor, gas, and fog that can be dispersed by strong wind.",
     "classes": [
       "Bard",
       "Druid",
@@ -9213,9 +9281,10 @@
   {
     "name": "Water Breathing",
     "description": "This spell gives a maximum of ten willing creatures within range and you can see, the ability to breathe underwater until the end of its term. Affected creatures also retain their normal breathing pattern.",
-    "emote": "",
+    "emote": "and {{GENDER_PRONOUN_HIS_HER}} allies can breathe water",
     "source": "phb 287",
     "range": "30 feet",
+    "target": "up to ten willing creatures you can see within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -9227,6 +9296,7 @@
     "castingTime": "1 action",
     "level": "3",
     "school": "Transmutation",
+    "effects": "targets gain the ability to breathe underwater. Affected creatures also retain their normal breathing pattern.",
     "classes": [
       "Druid",
       "Ranger",
@@ -9240,9 +9310,10 @@
   {
     "name": "Water Walk",
     "description": "This spell grants the ability to move across any liquid surface—such as water, acid, mud, snow, quicksand, or lava—as if it were harmless solid ground (creatures crossing molten lava can still take damage from the heat). Up to ten willing creatures you can see within range gain this ability for the duration.<br>If you target a creature submerged in a liquid, the spell carries the target to the surface of the liquid at a rate of 60 feet per round.",
-    "emote": "",
+    "emote": "and {{GENDER_PRONOUN_HIS_HER}} allies can nimbly walk across liquid surfaces",
     "source": "phb 287",
     "range": "30 feet",
+    "target": "up to ten willing creatures you can see within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -9253,6 +9324,7 @@
     "castingTime": "1 action",
     "level": "3",
     "school": "Transmutation",
+    "effects": "targets gain the ability to move across any liquid surface—such as water, acid, mud, snow, quicksand, or lava—as if it were harmless solid ground (creatures crossing molten lava can still take damage from the heat).<br>If you target a creature submerged in a liquid, the spell carries the target to the surface of the liquid at a rate of 60 feet per round.",
     "classes": [
       "Cleric",
       "Druid",
@@ -9267,9 +9339,11 @@
   {
     "name": "Watery Sphere",
     "description": "You conjure up a sphere of water with a 10-foot radius on a point you can see within range. The sphere can hover in the air, but no more than 10 feet off the ground. The sphere remains for the spell's duration.<br>Any creature in the sphere's space must make a Strength saving throw. On a successful save, a creature is ejected from that space to the nearest unoccupied space outside it. A Huge or larger creature succeeds on the saving throw automatically. On a failed save, a creature is restrained by the sphere and is engulfed by the water. At the end of each of its turns, a restrained target can repeat the saving throw.<br>The sphere can restrain a maximum of four Medium or smaller creatures or one Large creature. If the sphere restrains a creature in excess of these numbers, a random creature that was already restrained by the sphere falls out of it and lands prone in a space within 5 feet of it.<br>As an action, you can move the sphere up to 30 feet in a straight line. If it moves over a pit, cliff, or other drop, it safely descends until it is hovering 10 feet over ground. Any creature restrained by the sphere moves with it. You can ram the sphere into creatures, forcing them to make the saving throw, but no more than once per turn.<br>When the spell ends, the sphere falls to the ground and extinguishes all normal flames within 30 feet of it. Any creature restrained by the sphere is knocked prone in the space where it falls.",
-    "emote": "",
+    "emote": "conjures a watery sphere ",
     "source": "ee pc 23",
     "range": "90 feet",
+    "target": "any creature in the sphere's space",
+    "aoe": "10' radius on a point you can see within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -9281,6 +9355,12 @@
     "castingTime": "1 action",
     "level": "4",
     "school": "Conjuration",
+    "save": {
+      "ability": "strength",
+      "saveSuccess": "the creature is ejected from that space to the nearest unoccupied space outside it. A Huge or larger creature succeeds on the saving throw automatically.",
+      "saveFailure": "a creature is restrained by the sphere and is engulfed by the water. At the end of each of its turns, a restrained target can repeat the saving throw.<br>The sphere can restrain a maximum of four Medium or smaller creatures or one Large creature. If the sphere restrains a creature in excess of these numbers, a random creature that was already restrained by the sphere falls out of it and lands prone in a space within 5 feet of it."
+    },
+    "effects": "As an action, you can move the sphere up to 30 ft. in a straight line. If it moves over a pit, cliff, or other drop, it safely descends until it is hovering 10 ft. over ground. Any creature restrained by the sphere moves with it. You can ram the sphere into creatures, forcing them to make the saving throw, but no more than once per turn.<br>When the spell ends, the sphere falls to the ground and extinguishes all normal flames within 30 ft. of it. Any creature restrained by the sphere is knocked prone in the space where it falls.",
     "classes": [
       "Druid",
       "Sorcerer",
@@ -9290,9 +9370,10 @@
   {
     "name": "Web",
     "description": "You conjure a mass of thick, sticky webbing at a point of your choice within range. The webs fill a 20-foot cube from that point for the duration. The webs are difficult terrain and lightly obscure their area.<br>If the webs aren't anchored between two solid masses (such as walls or trees) or layered across a floor, wall, or ceiling, the conjured web collapses on itself, and the spell ends at the start of your next turn. Webs layered over a flat surface have a depth of 5 feet.<br>Each creature that starts its turn in the webs or that enters them during its turn must make a dexterity saving throw. On a failed save, the creature is restrained as long as it remains in the webs or until it breaks free.<br>A creature restrained by the webs can use its action to make a Strength check against your spell save DC. If it succeeds, it is no longer restrained.<br>The webs are flammable. Any 5-foot cube of webs exposed to fire burns away in 1 round, dealing 2d4 fire damage to any creature that starts its turn in the fire.",
-    "emote": "",
+    "emote": "conjures a mass of thick, sticky webbing",
     "source": "phb 287",
     "range": "60 feet",
+    "aoe": "20 ft. cube from a point within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -9304,6 +9385,11 @@
     "castingTime": "1 action",
     "level": "2",
     "school": "Conjuration",
+    "save": {
+      "ability": "dexterity",
+      "saveFailure": "the creature is restrained as long as it remains in the webs or until it breaks free.<br>A creature restrained by the webs can use its action to make a Strength check against your spell save DC. If it succeeds, it is no longer restrained.<br>The webs are flammable. Any 5 ft. cube of webs exposed to fire burns away in 1 round, dealing 2d4 fire damage to any creature that starts its turn in the fire."
+    },
+    "effects": "The webs are difficult terrain and lightly obscure their area.<br>If the webs aren't anchored between two solid masses (such as walls or trees) or layered across a floor, wall, or ceiling, the conjured web collapses on itself, and the spell ends at the start of your next turn. Webs layered over a flat surface have a depth of 5 feet.<br>Each creature that starts its turn in the webs or that enters them during its turn must make a dexterity saving throw as outlined above.",
     "classes": [
       "Druid",
       "Sorcerer",
@@ -9315,10 +9401,11 @@
   },
   {
     "name": "Weird",
-    "description": "Drawing on the deepest fears of a group of creatures, you create illusory creatures in their minds, visible only to them. Each creature in a 30-foot-radius sphere centered on a point of your choice within range must make a wisdom saving throw. On a failed save, a creature becomes frightened for the duration. The illusion calls on the creature's deepest fears, manifesting its worst nightmares as an implacable threat. At the start of each of the frightened creature's turns, it must succeed on a wisdom saving throw or take 4 d10 psychic damage. On a successful save, the spell ends for that creature.",
-    "emote": "",
+    "description": "Drawing on the deepest fears of a group of creatures, you create illusory creatures in their minds, visible only to them. Each creature in a 30-foot-radius sphere centered on a point of your choice within range must make a wisdom saving throw. On a failed save, a creature becomes frightened for the duration. The illusion calls on the creature's deepest fears, manifesting its worst nightmares as an implacable threat. At the start of each of the frightened creature's turns, it must succeed on a wisdom saving throw or take 4d10 psychic damage. On a successful save, the spell ends for that creature.",
+    "emote": "draws on the deepest fears of a group of creatures to create illusory creatures in their minds, visible only to them",
     "source": "phb 288",
     "range": "120 feet",
+    "target": "each creature in a 30 ft. radius sphere centered on a point",
     "components": {
       "verbal": true,
       "somatic": true
@@ -9328,6 +9415,10 @@
     "castingTime": "1 action",
     "level": "9",
     "school": "Illusion",
+    "save": {
+      "ability": "wisdom",
+      "saveFailure": "become frightened for the duration. The illusion calls on the creature's deepest fears, manifesting its worst nightmares as an implacable threat. At the start of each of the frightened creature's turns, it must succeed on a wisdom saving throw or take 4d10 ([[4d10]]) psychic damage. On a successful save, the spell ends for that creature."
+    },
     "classes": [
       "Wizard"
     ]
@@ -9528,9 +9619,10 @@
     "level": "2",
     "school": "Enchantment",
     "save": {
-      "ability": "charisma"
+      "ability": "charisma",
+      "saveFailure": "a creature can't speak a deliberate lie while in the radius"
     },
-    "effects": "Until the spell ends, a creature that enters the spell's area for the first time on a turn or starts its turn there must make a Charisma saving throw. On a failed save, a creature can't speak a deliberate lie while in the radius. You know whether each creature succeeds or fails on its saving throw.<br>An affected creature is aware of the fate and can avoid answering questions she would normally have responded with a lie. Such a creature can remain evasive in his answers as they remain within the limits of truth.",
+    "effects": "Until the spell ends, a creature that enters the spell's area for the first time on a turn or starts its turn there must make a Charisma saving throw as outlined above. You know whether each creature succeeds or fails on its saving throw.<br>An affected creature is aware of the fate and can avoid answering questions she would normally have responded with a lie. Such a creature can remain evasive in his answers as they remain within the limits of truth.",
     "classes": [
       "Bard",
       "Cleric",
