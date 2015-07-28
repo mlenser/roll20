@@ -632,9 +632,10 @@
     "name": "Bane",
     "description": "Up to three creatures of your choice that you can see within range must make charisma saving throws. Whenever a target that fails this saving throw makes an attack roll or a saving throw before the spell ends, the target must roll a d4 and subtract the number rolled from the attack roll or saving throw.",
     "higherLevel": "When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st.",
-    "emote": "",
+    "emote": "afflicts his targets with Bane",
     "source": "phb 216",
     "range": "30 feet",
+    "target": "up to 3 creatures of your choice within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -646,6 +647,10 @@
     "castingTime": "1 action",
     "level": "1",
     "school": "Enchantment",
+    "save": {
+      "ability": "charisma",
+      "saveFailure": "Whenever a target makes an attack roll or a saving throw before the spell ends, the target must roll a d4 and subtract the number rolled from the attack roll or saving throw."
+    },
     "classes": [
       "Bard",
       "Cleric",
@@ -669,6 +674,9 @@
     "castingTime": "1 bonus action",
     "level": "5",
     "school": "Abjuration",
+    "damage": "5d10",
+    "damageType": "force",
+    "effects": "The next time you hit a creature with a weapon attack before this spell ends, your weapon deals extra damage as outlined above. If this attack reduces the target to 50 hit points or less, the target is banished. If the target is native to the plane you are currently on, it is banished to it's native plane for the duration. If the target is native to the plane you're on, the target is vanishes into a harmless demiplane. While the target is banished, he is incapacitated in the plane he has been banished to. The target remains there until the spell ends, at which point the target reappears in the space it left or in the nearest unoccupied space if that space is occupied.",
     "classes": [
       "Paladin"
     ]
@@ -677,7 +685,7 @@
     "name": "Banishment",
     "description": "You attempt to send one creature that you can see within range to another plane of existence. The target must succeed on a charisma saving throw or be banished.<br>If the target is native to the plane of existence you're on, you banish the target to a harmless demiplane. While there, the target is incapacitated. The target remains there until the spell ends, at which point the target reappears in the space it left or in the nearest unoccupied space if that space is occupied.<br>If the target is native to a different plane of existence than the one you're on, the target is banished with a faint popping noise, returning to its home plane. If the spell ends before 1 minute has passed, the target reappears in the space it left or in the nearest unoccupied space if that space is occupied. Otherwise, the target doesn't return.",
     "higherLevel": "When you cast this spell using a spell slot of 5th level or higher, you can target one additional creature for each slot level above 4th.",
-    "emote": "",
+    "emote": "attempts to banish a creature to another plane of existence",
     "source": "phb 217",
     "range": "60 feet",
     "components": {
@@ -691,6 +699,10 @@
     "castingTime": "1 action",
     "level": "4",
     "school": "Abjuration",
+    "save": {
+      "ability": "charisma",
+      "saveFailure": "The target is banished.<br>If the target is native to the plane of existence you're on, you banish the target to a harmless demiplane. While there, the target is incapacitated. The target remains there until the spell ends, at which point the target reappears in the space it left or in the nearest unoccupied space if that space is occupied.<br>If the target is native to a different plane of existence than the one you're on, the target is banished with a faint popping noise, returning to its home plane. If the spell ends before 1 minute has passed, the target reappears in the space it left or in the nearest unoccupied space if that space is occupied. Otherwise, the target doesn't return."
+    },
     "classes": [
       "Cleric",
       "Paladin",
@@ -705,9 +717,10 @@
   {
     "name": "Barkskin",
     "description": "You touch a willing creature. Until the spell ends, the target's skin has a rough, bark-like appearance, and the target's AC can't be less than 16, regardless of what kind of armor it is wearing.",
-    "emote": "",
+    "emote": "turns the target's skin into a rough, bark-like appearance",
     "source": "phb 217",
     "range": "Touch",
+    "target":"a willing creature",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -719,6 +732,7 @@
     "castingTime": "1 action",
     "level": "2",
     "school": "Transmutation",
+    "effects": "Until the spell ends, the target creature cannot have less than 16 AC, regardless of what kind of armor it is wearing.",
     "classes": [
       "Cleric",
       "Druid",
@@ -734,9 +748,10 @@
   {
     "name": "Beacon of Hope",
     "description": "This spell bestows hope and vitality. Choose any number of creatures within range. For the duration, each target has advantage on wisdom saving throws and death saving throws, and regains the maximum number of hit points possible from any healing.",
-    "emote": "",
+    "emote": "bestows hope and vitality to those around him",
     "source": "phb 217",
     "range": "30 feet",
+    "target": "any number of creatures within range",
     "components": {
       "verbal": true,
       "somatic": true
@@ -746,6 +761,7 @@
     "castingTime": "1 action",
     "level": "3",
     "school": "Abjuration",
+    "effects": "Until the spell ends, each target has advantage on wisdom saving throws and death saving throws, and they regain the maximum number of hit points possible from any healing.",
     "classes": [
       "Cleric",
       "Paladin"
@@ -760,9 +776,10 @@
   {
     "name": "Beast Bond",
     "description": "You establish a telepathic link with one beast you touch that is friendly to you or charmed by you. The spell fails if the beast's Intelligence is 4 or higher. Until the spell ends, the link is active while you and the beast are within line of sight of each other. Through the link, the beast can understand your telepathic messages to it, and it can telepathically communicate simple emotions and concepts back to you. While the link is active, the beast gains advantage on attack rolls against any creature within 5 feet of you that you can see.",
-    "emote": "",
+    "emote": "establishes a telepathic link to a beast",
     "source": "ee pc 15",
     "range": "Touch",
+    "target": "one beast you touch that is friendly to you or charmed by you",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -774,6 +791,7 @@
     "castingTime": "1 action",
     "level": "1",
     "school": "Divination",
+    "effects": "The spell fails if the beast's Intelligence is 4 or higher.<br>Until the spell ends, the link is active while you and the beast are within line of sight of each other. Through the link, the beast can understand your telepathic messages to it, and it can telepathically communicate simple emotions and concepts back to you. While the link is active, the beast gains advantage on attack rolls against any creature within 5 feet of you that you can see.",
     "classes": [
       "Druid",
       "Ranger",
@@ -783,9 +801,10 @@
   {
     "name": "Beast Sense",
     "description": "You touch a willing beast. For the duration of the spell, you can use your action to see through the beast's eyes and hear what it hears, and continue to do so until you use your action to return to your normal senses. While perceiving through the beast's senses, you gain the benefits of any special senses possessed by that creature, though you are blinded and deafened to your own surroundings.",
-    "emote": "",
+    "emote": "senses through the target beast's senses",
     "source": "phb 217",
     "range": "Touch",
+    "target": "a willing beast",
     "components": {
       "somatic": true
     },
@@ -795,6 +814,7 @@
     "castingTime": "1 action",
     "level": "2",
     "school": "Divination",
+    "effects": "For the duration of the spell, you can use your action to see through the beast's eyes and hear what it hears, and continue to do so until you use your action to return to your normal senses. While perceiving through the beast's senses, you gain the benefits of any special senses possessed by that creature, though you are blinded and deafened to your own surroundings.",
     "classes": [
       "Druid",
       "Ranger"
@@ -804,9 +824,10 @@
     "name": "Bestow Curse",
     "description": "You touch a creature, and that creature must succeed on a wisdom saving throw or become cursed for the duration of the spell. When you cast this spell, choose the nature of the curse from the following options:<br>- Choose one ability score. While cursed, the target has disadvantage on ability checks and saving throws made with that ability score.<br>- While cursed, the target has disadvantage on attack rolls against you.<br>- While cursed, the target must make a wisdom saving throw at the start of each of its turns. If it fails, it wastes its action that turn doing nothing.<br>- While the target is cursed, your attacks and spells deal an extra 1d8 necrotic damage to the target.<br>A remove curse spell ends this effect. At the DM's option, you may choose an alternative curse effect, but it should be no more powerful than those described above. The DM has final say on such a curse's effect.",
     "higherLevel": "If you cast this spell using a spell slot of 4th level or higher, the duration is concentration, up to 10 minutes. If you use a spell slot of 5th level or higher, the duration is 8 hours. If you use a spell slot of 7th level or higher, the duration is 24 hours. If you use a 9th level spell slot, the spell lasts until it is dispelled. Using a spell slot of 5th level or higher grants a duration that doesn't require concentration.",
-    "emote": "",
+    "emote": "bestows a curse upon the target creature",
     "source": "phb 218",
     "range": "Touch",
+    "target": "a creature",
     "components": {
       "verbal": true,
       "somatic": true
@@ -816,6 +837,10 @@
     "castingTime": "1 action",
     "level": "3",
     "school": "Necromancy",
+    "save": {
+      "ability": "wisdom",
+      "saveFailure": "or become cursed. When you cast this spell, choose the nature of the curse from the following options:<br>- Choose one ability score. While cursed, the target has disadvantage on ability checks and saving throws made with that ability score.<br>- While cursed, the target has disadvantage on attack rolls against you.<br>- While cursed, the target must make a wisdom saving throw at the start of each of its turns. If it fails, it wastes its action that turn doing nothing.<br>- While the target is cursed, your attacks and spells deal an extra 1d8 necrotic damage to the target.<br>A remove curse spell ends this effect. At the DM's option, you may choose an alternative curse effect, but it should be no more powerful than those described above. The DM has final say on such a curse's effect."
+    },
     "classes": [
       "Bard",
       "Cleric",
@@ -826,9 +851,10 @@
     "name": "Bigby's Hand",
     "description": "You create a Large hand of shimmering, translucent force in an unoccupied space that you can see within range. The hand lasts for the spell's duration, and it moves at your command, mimicking the movements of your own hand.<br>The hand is an object that has AC 20 and hit points equal to your hit point maximum. If it drops to 0 hit points, the spell ends. It has a Strength of 26 (+8) and a Dexterity of 10 (+0). The hand doesn't fill its space.<br>When you cast the spell and as a bonus action on your subsequent turns, you can move the hand up to 60 feet and then cause one of the following effects with it.<br><b>Clenched Fist.</b> The hand strikes one creature or object within 5 feet of it. Make a melee spell attack for the hand using your game statistics. On a hit, the target takes 4d8 force damage.<br><b>Forceful Hand.</b> The hand attempts to push a creature within 5 feet of it in a direction you choose. Make a check with the hand's Strength contested by the Strength (Athletics) check of the target. If the target is Medium or smaller, you have advantage on the check. If you succeed, the hand pushes the target up to 5 feet plus a number of feet equal to five times your spellcasting ability modifier. The hand moves with the target to remain within 5 feet of it.<br><b>Grasping Hand.</b> The hand attempts to grapple a Huge or smaller creature within 5 feet of it. You use the hand's Strength score to resolve the grapple. If the target is Medium or smaller, you have advantage on the check. While the hand is grappling the target, you can use a bonus action to have the hand crush it. When you do so, the target takes bludgeoning damage equal to 2d6 + your spellcasting ability modifier.<br><b>Interposing Hand.</b> The hand interposes itself between you and a creature you choose until you give the hand a different command. The hand moves to stay between you and the target, providing you with half cover against the target. The target can't move through the hand's space if its Strength score is less than or equal to the hand's Strength score. If its Strength score is higher than the hand's Strength score, the target can move toward you through the hand's space, but that space is difficult terrain for the target.",
     "higherLevel": "When you cast this spell using a spell slot of 6th level or higher, the damage from the clenched fist option increases by 2d8 and the damage from the grasping hand increases by 2d6 for each slot level above 5th.",
-    "emote": "",
+    "emote": "creates a Large hand of shimmering, translucent force",
     "source": "phb 218",
     "range": "120 feet",
+    "target": "an unoccupied space within range that you can see",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -840,6 +866,7 @@
     "castingTime": "1 action",
     "level": "5",
     "school": "Evocation",
+    "effects": "The hand lasts for the spell's duration, and it moves at your command, mimicking the movements of your own hand.<br>The hand is an object that has AC 20 and hit points equal to your hit point maximum. If it drops to 0 hit points, the spell ends. It has a Strength of 26 (+8) and a Dexterity of 10 (+0). The hand doesn't fill its space.<br>When you cast the spell and as a bonus action on your subsequent turns, you can move the hand up to 60 feet and then cause one of the following effects with it.<br><b>Clenched Fist.</b> The hand strikes one creature or object within 5 feet of it. Make a melee spell attack for the hand using your game statistics. On a hit, the target takes 4d8 force damage.<br><b>Forceful Hand.</b> The hand attempts to push a creature within 5 feet of it in a direction you choose. Make a check with the hand's Strength contested by the Strength (Athletics) check of the target. If the target is Medium or smaller, you have advantage on the check. If you succeed, the hand pushes the target up to 5 feet plus a number of feet equal to five times your spellcasting ability modifier. The hand moves with the target to remain within 5 ft. of it.<br><b>Grasping Hand.</b> The hand attempts to grapple a Huge or smaller creature within 5 feet of it. You use the hand's Strength score to resolve the grapple. If the target is Medium or smaller, you have advantage on the check. While the hand is grappling the target, you can use a bonus action to have the hand crush it. When you do so, the target takes bludgeoning damage equal to 2d6 + your spellcasting ability modifier.<br><b>Interposing Hand.</b> The hand interposes itself between you and a creature you choose until you give the hand a different command. The hand moves to stay between you and the target, providing you with half cover against the target. The target can't move through the hand's space if its Strength score is less than or equal to the hand's Strength score. If its Strength score is higher than the hand's Strength score, the target can move toward you through the hand's space, but that space is difficult terrain for the target.",
     "classes": [
       "Wizard"
     ]
@@ -847,9 +874,10 @@
   {
     "name": "Blade Barrier",
     "description": "You create a vertical wall of whirling, razor-sharp blades made of magical energy. The wall appears within range and lasts for the duration. You can make a straight wall up to 100 feet long, 20 feet high, and 5 feet thick, or a ringed wall up to 60 feet in diameter, 20 feet high, and 5 feet thick. The wall provides three-quarters cover to creatures behind it, and its space is difficult terrain.<br>When a creature enters the wall's area for the first time on a turn or starts its turn there, the creature must make a dexterity saving throw. On a failed save, the creature takes 6d10 slashing damage. On a successful save, the creature takes half as much damage.",
-    "emote": "",
+    "emote": "creates a vertical wall of whirling, razor-sharp blades made of magical energy",
     "source": "phb 218",
     "range": "90 feet",
+    "aoe":"a straight wall up to 100 ft. long, 20 ft. high, and 5 ft. thick, or a ringed wall up to 60 ft. in diameter, 20 ft. high, and 5 ft. thick",
     "components": {
       "verbal": true,
       "somatic": true
@@ -859,6 +887,13 @@
     "castingTime": "1 action",
     "level": "6",
     "school": "Evocation",
+    "save": {
+      "ability": "dexterity",
+      "damage":"6d10",
+      "damageType":"slashing",
+      "saveSuccess": "half damage"
+    },
+    "effects": "The wall provides three-quarters cover to creatures behind it, and its space is difficult terrain.<br>When a creature enters the wall's area for the first time on a turn or starts its turn there, the creature must make a dexterity saving throw.",
     "classes": [
       "Cleric"
     ]
@@ -866,7 +901,7 @@
   {
     "name": "Blade Ward",
     "description": "You extend your hand and trace a sigil of warding in the air. Until the end of your next turn, you have resistance against bludgeoning, piercing, and slashing damage dealt by weapon attacks.",
-    "emote": "extends {{GENDER_PRONOUN_HIS_HER}} and traces a sigil of warding in the air",
+    "emote": "traces a sigil of warding in the air",
     "source": "phb 218",
     "range": "Self",
     "components": {
@@ -892,7 +927,7 @@
     "emote": "blesses the targets",
     "source": "phb 219",
     "range": "30 feet",
-    "target": "up to 3 creatures of your choice within range",
+    "target": "up to 3 creatures",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -904,7 +939,7 @@
     "castingTime": "1 action",
     "level": "1",
     "school": "Enchantment",
-    "effects": "Whenever a target makes an attack roll or a saving throw before the spell ends, the target can roll a d4 and add the number rolled to the attack roll or saving throw.",
+    "effects": "Whenever a target that fails this saving throw makes an attack roll or a saving throw before the spell ends, the target must roll a d4 and subtract the number rolled from the attack roll or saving throw.",
     "classes": [
       "Cleric",
       "Paladin"
@@ -935,7 +970,7 @@
       "damageType": "necrotic",
       "saveSuccess": "half damage"
     },
-    "effects": "The spell has no effect on undead or constructs.<br>If you target a plant creature or a magical plant, it makes the saving throw with disadvantage, and the spell deals maximum damage to it.<br>If you target a nonmagical plant that isn't a creature, such as a tree or shrub, it doesn't make a saving throw; it simply withers and dies.",
+    "effects": "The spell has no effect on undead or constructs. If you target a plant creature or a magical plant, it makes the saving throw with disadvantage, and the spell deals maximum damage to it.<br>If you target a nonmagical plant that isn't a creature, such as a tree or shrub, it doesn't make a saving throw; it simply withers and dies.",
     "classes": [
       "Druid",
       "Sorcerer",
@@ -7459,7 +7494,7 @@
       "ability": "constitution",
       "saveFailure": "take more fire damage."
     },
-    "effects": "The next time you hit a creature with a melee weapon attack during the spell's duration, your weapon flares with white-hot intensity, and the attack deals extra damage as outlined above. The target ignites in flames and at the start of each of its turns until the spell ends, the target must make a constitution saving throw as outlined above. If the target or a creature within 5 feet of it uses an action to put out the flames, or if some other effect douses the flames (such as the target being submerged in water), the spell ends.",
+    "effects": "The next time you hit a creature with a melee weapon attack during the spell's duration the attack deals extra damage as outlined above. The target ignites in flames and at the start of each of its turns until the spell ends, the target must make a constitution saving throw as outlined above. If the target or a creature within 5 feet of it uses an action to put out the flames, or if some other effect douses the flames (such as the target being submerged in water), the spell ends.",
     "classes": [
       "Paladin"
     ]
