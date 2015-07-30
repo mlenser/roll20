@@ -1214,9 +1214,11 @@
   {
     "name": "Calm Emotions",
     "description": "You attempt to suppress strong emotions in a group of people. Each humanoid in a 20-foot-radius sphere centered on a point you choose within range must make a charisma saving throw; a creature can choose to fail this saving throw if it wishes. If a creature fails its saving throw, choose one of the following two effects. You can suppress any effect causing a target to be charmed or frightened. When this spell ends, any suppressed effect resumes, provided that its duration has not expired in the meantime.<br>Alternatively, you can make a target indifferent about creatures of your choice that it is hostile toward. This indifference ends if the target is attacked or harmed by a spell or if it witnesses any of its friends being harmed. When the spell ends, the creature becomes hostile again, unless the DM rules otherwise.",
-    "emote": "",
+    "emote": "attempts to suppress strong emotions in a group of people",
     "source": "phb 221",
     "range": "60 ft",
+    "target": "each humanoid in the aoe",
+    "aoe": "20 ft radius sphere centered on a point within range",
     "components": {
       "verbal": true,
       "somatic": true
@@ -1226,6 +1228,10 @@
     "castingTime": "1 action",
     "level": 2,
     "school": "Enchantment",
+    "save": {
+      "saveFailure": "choose one of the following two effects. You can suppress any effect causing a target to be charmed or frightened. When this spell ends, any suppressed effect resumes, provided that its duration has not expired in the meantime.<br>Alternatively, you can make a target indifferent about creatures of your choice that it is hostile toward. This indifference ends if the target is attacked or harmed by a spell or if it witnesses any of its friends being harmed. When the spell ends, the creature becomes hostile again, unless the DM rules otherwise."
+    },
+    "effects": "a creature can choose to fail this saving throw if it wishes",
     "classes": [
       "Bard",
       "Cleric",
@@ -1445,9 +1451,11 @@
     "name": "Cloud of Daggers",
     "description": "You fill the air with spinning daggers in a cube 5 feet on each side, centered on a point you choose within range. A creature takes 4d4 slashing damage when it enters the spell's area for the first time on a turn or starts its turn there.",
     "higherLevel": "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 2d4 for each slot level above 2nd.",
-    "emote": "",
+    "emote": "fills the the air with spinning daggers",
     "source": "phb 222",
     "range": "60 ft",
+    "target": "a creature who enters the spell's area for the first time on a turn or starts its turn there",
+    "aoe": "5 ft cube centered on a point within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -1459,6 +1467,8 @@
     "castingTime": "1 action",
     "level": 2,
     "school": "Conjuration",
+    "damage": "4d4",
+    "damageType": "slashing",
     "classes": [
       "Bard",
       "Sorcerer",
@@ -1955,7 +1965,7 @@
   {
     "name": "Continual Flame",
     "description": "A flame, equivalent in brightness to a torch, springs forth from an object that you touch. The effect looks like a regular flame, but it creates no heat and doesn't use oxygen. A continual flame can be covered or hidden but not smothered or quenched.",
-    "emote": "",
+    "emote": "evokes a flame, equivalent in brightness to a torch, to spring forth from an object",
     "source": "phb 227",
     "range": "Touch",
     "components": {
@@ -1968,6 +1978,7 @@
     "castingTime": "1 action",
     "level": 2,
     "school": "Evocation",
+    "effects": "The effect looks like a regular flame, but it creates no heat and doesn't use oxygen. A continual flame can be covered or hidden but not smothered or quenched.",
     "classes": [
       "Cleric",
       "Wizard"
@@ -2073,9 +2084,10 @@
     "name": "Cordon of Arrows",
     "description": "You plant four pieces of nonmagical ammunition—arrows or crossbow bolts—in the ground within range and lay magic upon them to protect an area. Until the spell ends, whenever a creature other than you comes within 30 feet of the ammunition for the first time on a turn or ends its turn there, one piece of ammunition flies up to strike it. The creature must succeed on a dexterity saving throw or take 1d6 piercing damage. The piece of ammunition is then destroyed. The spell ends when no ammunition remains.<br>When you cast this spell, you can designate any creatures you choose, and the spell ignores them.",
     "higherLevel": "When you cast this spell using a spell slot of 3rd level or higher, the amount of ammunition that can be affected increases by two for each slot level above 2nd.",
-    "emote": "",
+    "emote": "plants four pieces of nonmagical ammunition—arrows or crossbow bolts—in the ground and lays magic upon them to protect an area",
     "source": "phb 228",
     "range": "5 ft",
+    "target": "a creature other than you comes within 30 ft of the ammunition for the first time on a turn or ends its turn there",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -2086,13 +2098,19 @@
     "castingTime": "1 action",
     "level": 2,
     "school": "Transmutation",
+    "save": {
+      "ability": "dexterity",
+      "damage": "1d6",
+      "damageType": "piercing"
+    },
+    "effects": "when the target moves within 30 ft one piece of ammunition flies up to strike it. The creature must succeed on a dexterity saving throw as outlined above. The piece of ammunition is then destroyed. The spell ends when no ammunition remains.<br>When you cast this spell, you can designate any creatures you choose, and the spell ignores them.",
     "classes": [
       "Ranger"
     ]
   },
   {
     "name": "Counterspell",
-    "description": "You attempt to interrupt a creature in the process of casting a spell. If the creature is casting a spell of 3rd level or lower, its spell fails and has no effect. If it is casting a spell of 4th level or higher, make an ability check using your spellcasting ability. The DC equals 10 + the spell's level. On a success, the creature’s spell fails and has no effect.",
+    "description": "You attempt to interrupt a creature in the process of casting a spell. If the creature is casting a spell of 3rd level or lower, its spell fails and has no effect. If it is casting a spell of 4th level or higher, make an ability check using your spellcasting ability. The DC equals 10 + the spell's level. On a success, the creature's spell fails and has no effect.",
     "higherLevel": "When you cast this spell using a spell slot of 4th level or higher, the interrupted spell has no effect if its level is less than or equal to the level of the spell slot you used.",
     "emote": "attempts to interrupt a creature in the process of casting a spell",
     "source": "phb 228",
@@ -2105,7 +2123,7 @@
     "castingTime": "1 reaction",
     "level": 3,
     "school": "Abjuration",
-    "effects": "If the creature is casting a spell of 3rd level or lower, its spell fails and has no effect. If it is casting a spell of 4th level or higher, make an ability check using your spellcasting ability. The DC equals 10 + the spell's level. On a success, the creature’s spell fails and has no effect.",
+    "effects": "If the creature is casting a spell of 3rd level or lower, its spell fails and has no effect. If it is casting a spell of 4th level or higher, make an ability check using your spellcasting ability. The DC equals 10 + the spell's level. On a success, the creature's spell fails and has no effect.",
     "classes": [
       "Sorcerer",
       "Warlock",
@@ -2564,10 +2582,11 @@
   },
   {
     "name": "Detect Thoughts",
-    "description": "For the duration of the spell, you can read the thoughts of some creatures. While casting the spell and at your action in each round until the spell, you may focus your mind on a creature you can see 30 feet of you. If the chosen creature has an Intelligence of 3 or less, or if she does not speak any language, the creature is not affected.<br>You first read the surface thoughts of the creature, which occupies her mind at that moment. In an action, you can direct your attention to the thoughts of another creature or attempt to deepen your reading thoughts of the same creature. If you deepen your reading, the target must make a backup of Wisdom, otherwise you get access to his argument (if any), in his emotional state and thought that concerns his mind on a broader spectrum Such a concern, love or hate. If successful, the spell ends. In all cases, the target is aware that his mind is under your eyes. Unless you are directing your attention to the thoughts of another creature, the target can use his action turn to roll Intelligence opposite your roll Intelligence. If she has the upper hand, the spell ends.<br>The questions verbally directed to the target guide the train of thought. This spell is especially effective during an interrogation.<br>You can also use this spell to detect the presence of thinking creatures that are invisible to you. When you cast this spell, or in an action for the duration of the spell, you can find thoughts to 30 feet of you. The spell can override most obstacles but it is blocked by 2 feet stone 2 inches of precious metal, or a thin sheet of lead. You can not detect a creature with an Intelligence of 3 or less or speaking any language.<br>After detecting the presence of a creature in this way, you can read his thoughts for the rest of the spell's duration as described above, even if you can not see it, but only if it remains in the range of the spell.",
-    "emote": "",
+    "description": "For the duration, you can read the thoughts of certain creatures. When you cast the spell and as your action on each turn until the spell ends, you can focus your mind on any one creature that you can see within 30 feet of you. If the creature you choose has an Intelligence of 3 or lower or doesn't speak any language, the creature is unaffected.<br>You initially learn the surface thoughts of the creature—what is most on its mind in that moment. As an action, you can either shift your attention to another creature's thoughts or attempt to probe deeper into the same creature's mind. If you probe deeper, the target must make a Wisdom saving throw. If it fails, you gain insight into its reasoning (if any), its emotional state, and something that looms large in its mind (such as something it worries over, loves, or hates). If it succeeds, the spell ends. Either way, the target knows that you are probing into its mind, and unless you shift your attention to another creature's thoughts, the creature can use its action on its turn to make an Intelligence check contested by your Intelligence check; if it succeeds, the spell ends.<br>Questions verbally directed at the target creature naturally shape the course of its thoughts, so this spell is particularly effective as part of an interrogation. You can also use this spell to detect the presence of thinking creatures you can't see. When you cast the spell or as your action during the duration, you can search for thoughts within 30 feet of you. The spell can penetrate barriers, but 2 feet of rock, 2 inches of any metal other than lead, or a thin sheet of lead blocks you. You can't detect a creature with an Intelligence of 3 or lower or one that doesn't speak any language.<br> Once you detect the presence of a creature in this way, you can read its thoughts for the rest of the duration as described above, even if you can't see it, but it must still be within range.",
+    "emote": "gains the ability to read thoughts",
     "source": "phb 231",
     "range": "Self",
+    "target": "a creature you can see within 30 feet of you",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -2579,6 +2598,12 @@
     "castingTime": "1 action",
     "level": 2,
     "school": "Divination",
+    "save": {
+      "ability": "wisdom",
+      "saveFailure": "you gain insight into its reasoning (if any), its emotional state, and something that looms large in its mind (such as something it worries over, loves, or hates)",
+      "saveSuccess": "the spell ends"
+    },
+    "effects": "When you cast the spell and as your action on each turn until the spell ends, you can focus your mind on a target. If the creature you choose has an Intelligence of 3 or lower or doesn't speak any language, the creature is unaffected.<br>You initially learn the surface thoughts of the creature—what is most on its mind in that moment. As an action, you can either shift your attention to another creature's thoughts or attempt to probe deeper into the same creature's mind. If you probe deeper, the target must make a Wisdom saving throw as outlined above. Either way, the target knows that you are probing into its mind, and unless you shift your attention to another creature's thoughts, the creature can use its action on its turn to make an Intelligence check contested by your Intelligence check; if it succeeds, the spell ends.<br>Questions verbally directed at the target creature naturally shape the course of its thoughts, so this spell is particularly effective as part of an interrogation. You can also use this spell to detect the presence of thinking creatures you can't see. When you cast the spell or as your action during the duration, you can search for thoughts within 30 feet of you. The spell can penetrate barriers, but 2 feet of rock, 2 inches of any metal other than lead, or a thin sheet of lead blocks you. You can't detect a creature with an Intelligence of 3 or lower or one that doesn't speak any language.<br> Once you detect the presence of a creature in this way, you can read its thoughts for the rest of the duration as described above, even if you can't see it, but it must still be within range.",
     "classes": [
       "Bard",
       "Sorcerer",
@@ -2957,9 +2982,10 @@
     "name": "Dust Devil",
     "description": "Choose an unoccupied 5-foot cube of air that you can see within range. An elemental force that resembles a dust devil appears in the cube and lasts for the spell's duration.<br>Any creature that ends its turn within 5 feet of the dust devil must make a Strength saving throw. On a failed save, the creature takes 1d8 bludgeoning damage and is pushed 10 feet away. On a successful save, the creature takes half as much damage and isn't pushed.<br>As a bonus action, you can move the dust devil up to 30 feet in any direction. If the dust devil moves over sand, dust, loose dirt, or small gravel, it sucks up the material and forms a 10-foot-radius cloud of debris around itself that lasts until the start of your next turn. The cloud heavily obscures its area.",
     "higherLevel": "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for each slot level above 2nd.",
-    "emote": "",
+    "emote": "conjures an elemental force that resemvles a dust devil",
     "source": "ee pc 17",
     "range": "60 ft",
+    "target": "any creature that ends its turn within 5 feet of the dust devil",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -2971,6 +2997,14 @@
     "castingTime": "1 action",
     "level": 2,
     "school": "Conjuration",
+    "save": {
+      "ability": "strength",
+      "damage": "1d8",
+      "damageType": "bludgeoning",
+      "saveFailure": "pushed 10 feet away",
+      "saveSuccess": "half damage and not pushed"
+    },
+    "effects": "Dust devil appears in an unoccupied 5-foot cube of air that you can see within range. Any creature that ends its turn within 5 feet of the dust devil must make a Strength saving throw as outlined above. >As a bonus action, you can move the dust devil up to 30 feet in any direction. If the dust devil moves over sand, dust, loose dirt, or small gravel, it sucks up the material and forms a 10 ft radius cloud of debris around itself that lasts until the start of your next turn. The cloud heavily obscures its area.",
     "classes": [
       "Druid",
       "Sorcerer",
@@ -3002,9 +3036,10 @@
   {
     "name": "Earthbind",
     "description": "Choose one creature you can see within range. Yellow strips of magical energy loop around the creature. The target must succeed on a Strength saving throw or its flying speed (if any) is reduced to 0 feet for the spell's duration. An airborne creature affected by this spell descends at 60 feet per round until it reaches the ground or the spell ends.",
-    "emote": "",
+    "emote": "transmutes yellow strips of magical energy to loop around a creature",
     "source": "ee pc 17",
     "range": "300 ft",
+    "target": "one creature you can see",
     "components": {
       "verbal": true
     },
@@ -3013,6 +3048,10 @@
     "castingTime": "1 action",
     "level": 2,
     "school": "Transmutation",
+    "save": {
+      "ability": "strength",
+      "saveFailure": "its flying speed (if any) is reduced to 0 feet for the spell's duration. An airborne creature affected by this spell descends at 60 feet per round until it reaches the ground or the spell ends."
+    },
     "classes": [
       "Druid",
       "Sorcerer",
@@ -3112,9 +3151,10 @@
     "name": "Enhance Ability",
     "description": "You touch a creature and bestow upon it a magical enhancement. Choose one of the following effects; the target gains that effect until the spell ends.<br><b>Bear's Endurance.</b> The target has advantage on constitution checks. It also gains 2d6 temporary hit points, which are lost when the spell ends. <br><b>Bull's Strength.</b> The target has advantage on strength checks, and his or her carrying capacity doubles.<br><b>Cat's Grace.</b> The target has advantage on dexterity checks. It also doesn't take damage from falling 20 feet or less if it isn't incapacitated.<br><b>Eagle's Splendor.</b> The target has advantage on Charisma checks.<br><b>Fox's Cunning.</b> The target has advantage on intelligence checks.<br><b>Owl's Wisdom.</b> The target has advantage on wisdom checks.",
     "higherLevel": "When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd.",
-    "emote": "",
+    "emote": "bestows magical enchancements with a touch",
     "source": "phb 237",
     "range": "Touch",
+    "target": "a creature",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -3126,6 +3166,7 @@
     "castingTime": "1 action",
     "level": 2,
     "school": "Transmutation",
+    "effects": "Choose one of the following effects; the target gains that effect until the spell ends.<br><b>Bear's Endurance.</b> The target has advantage on constitution checks. It also gains 2d6 temporary hit points, which are lost when the spell ends. <br><b>Bull's Strength.</b> The target has advantage on strength checks, and his or her carrying capacity doubles.<br><b>Cat's Grace.</b> The target has advantage on dexterity checks. It also doesn't take damage from falling 20 feet or less if it isn't incapacitated.<br><b>Eagle's Splendor.</b> The target has advantage on Charisma checks.<br><b>Fox's Cunning.</b> The target has advantage on intelligence checks.<br><b>Owl's Wisdom.</b> The target has advantage on wisdom checks.",
     "classes": [
       "Bard",
       "Cleric",
@@ -3135,10 +3176,11 @@
   },
   {
     "name": "Enlarge/Reduce",
-    "description": "Enlarging or reducing in size a creature or object that you can see and is within range for the duration of the spell. Choose a creature or object that is not worn or carried. If the target does not consent, it can make a constitution saving throw. If successful, the spell has no effect.<br>If the target is a creature, everything she wears and carries with it change size. Any item dropped by the affected creature returns to its normal size.<br><b>Magnification.</b> The double target in all dimensions, and its weight is multiplied by eight. This increases the size of a class of M to G for example. If there is not enough space in the room for the double target size, the creature or object reaches the maximum size possible in the available space. Until the end of the spell, the target also has the advantage of its jets Force and Force saves. Weapons to the target also grow. As long as these weapons are enlarged, the target's attacks cause additional 1d4 damage.<br><b>Reduction.</b> The size of the target is reduced by half in all dimensions, and its weight is divided by eight. This reduction decreases the size of a class from M to P for example. Until the end of the spell, the target has a disadvantage to its jets Force and its Force saves. The weapons of the target shrink too. As long as these weapons are reduced, target attacks cause less damage 1d4 (minimum 1 point of damage). ",
-    "emote": "",
+    "description": "You cause a creature or an object you can see within range to grow larger or smaller for the duration. Choose either a creature or an object that is neither worn nor carried. If the target is unwilling, it can make a Constitution saving throw. On a success, the spell has no effect.<br>If the target is a creature, everything it is wearing and carrying changes size with it. Any item dropped by an affected creature returns to normal size at once.<br><b>Enlarge.</b> The target's size doubles in all dimensions, and its weight is multiplied by eight. This growth increases its size by one category—from Medium to Large, for example. If there isn't enough room for the target to double its size, the creature or object attains the maximum possible size in the space available. Until the spell ends, the target also has advantage on Strength checks and Strength saving throws. The target's weapons also grow to match its new size. While these weapons are enlarged, the target's attacks with them deal 1d4 extra damage.<br><b>Reduce.</b>The target's size is halved in all dimensions, and its weight is reduced to one-eighth o f normal. This reduction decreases its size by one category—from Medium to Small, for example. Until the spell ends, the target also has disadvantage on Strength checks and Strength saving throws. The target's weapons also shrink to match its new size. While these weapons are reduced, the target's attacks with them deal 1d4 less damage (this can't reduce the damage below 1).",
+    "emote": "causes a creature or an object to grow larger or smaller",
     "source": "phb 237",
     "range": "30 ft",
+    "target": "a creature or an object (that is neither worn nor carried) you can see within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -3150,6 +3192,12 @@
     "castingTime": "1 action",
     "level": 2,
     "school": "Transmutation",
+    "save": {
+      "ability": "constitution",
+      "saveSuccess": "the spell has no effect"
+    },
+    "effects": "If the target is unwilling, it can make a Constitution saving throw as outlined above<br>If the target is a creature, everything it is wearing and carrying changes size with it. Any item dropped by an affected creature returns to normal size at once.<br><b>Enlarge.</b> The target's size doubles in all dimensions, and its weight is multiplied by eight. This growth increases its size by one category—from Medium to Large, for example. If there isn't enough room for the target to double its size, the creature or object attains the maximum possible size in the space available. Until the spell ends, the target also has advantage on Strength checks and Strength saving throws. The target's weapons also grow to match its new size. While these weapons are enlarged, the target's attacks with them deal 1d4 extra damage.<br><b>Reduce.</b>The target's size is halved in all dimensions, and its weight is reduced to one-eighth o f normal. This reduction decreases its size by one category—from Medium to Small, for example. Until the spell ends, the target also has disadvantage on Strength checks and Strength saving throws. The target's weapons also shrink to match its new size. While these weapons are reduced, the target's attacks with them deal 1d4 less damage (this can't reduce the damage below 1).",
+    "emote": "enlarges or reduces the size of a creature or object",
     "classes": [
       "Sorcerer",
       "Wizard"
@@ -3200,9 +3248,10 @@
   {
     "name": "Enthrall",
     "description": "You weave a distracting string of words, causing creatures of your choice that you can see within range and that can hear you to make a wisdom saving throw. Any creature that can't be charmed succeeds on this saving throw automatically, and if you or your companions are fighting a creature, it has advantage on the save. On a failed save, the target has disadvantage on Wisdom (Perception) checks made to perceive any creature other than you until the spell ends or until the target can no longer hear you. The spell ends if you are incapacitated or can no longer speak.",
-    "emote": "",
+    "emote": "weaves a distracting string of words",
     "source": "phb 238",
     "range": "60 ft",
+    "target": "creatures of your choice that you can see within range and that can hear you",
     "components": {
       "verbal": true,
       "somatic": true
@@ -3211,6 +3260,11 @@
     "castingTime": "1 action",
     "level": 2,
     "school": "Enchantment",
+    "save": {
+      "ability": "wisdom",
+      "saveFailure": "the target has disadvantage on Wisdom (Perception) checks made to perceive any creature other than you until the spell ends or until the target can no longer hear you"
+    },
+    "effects": "Any creature that can't be charmed succeeds on this saving throw automatically, and if you or your companions are fighting a creature, it has advantage on the save. The spell ends if you are incapacitated or can no longer speak.",
     "classes": [
       "Bard",
       "Warlock"
@@ -7682,7 +7736,7 @@
   },
   {
     "name": "Shatter",
-    "description": "A sudden loud ringing noise, painfully intense, erupts from a point of your choice within range. Each creature in a 10-foot-radius sphere centered on that point must make a Constitution saving throw. A creature takes 3d8 thunder damage on a failed save, or half as much damage on a successful one. A creature made of inorganic material such as stone, crystal, or metal has disadvantage on this saving throw.<br>A nonmagical object that isn’t being worn or carried also takes the damage if it’s in the spell's area.",
+    "description": "A sudden loud ringing noise, painfully intense, erupts from a point of your choice within range. Each creature in a 10-foot-radius sphere centered on that point must make a Constitution saving throw. A creature takes 3d8 thunder damage on a failed save, or half as much damage on a successful one. A creature made of inorganic material such as stone, crystal, or metal has disadvantage on this saving throw.<br>A nonmagical object that isn't being worn or carried also takes the damage if it's in the spell's area.",
     "higherLevel": "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for each slot level above 2nd",
     "emote": "evokes a sudden loud, painfully intense, ringing noise",
     "source": "phb 275",
@@ -7705,7 +7759,7 @@
       "damageType": "thunder",
       "saveSuccess": "half damage"
     },
-    "effects": "A creature made of inorganic material such as stone, crystal, or metal has disadvantage on this saving throw.<br>A nonmagical object that isn’t being worn or carried also takes the damage if it’s in the spell's area.",
+    "effects": "A creature made of inorganic material such as stone, crystal, or metal has disadvantage on this saving throw.<br>A nonmagical object that isn't being worn or carried also takes the damage if it's in the spell's area.",
     "classes": [
       "Bard",
       "Cleric",
