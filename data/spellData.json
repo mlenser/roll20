@@ -5996,10 +5996,10 @@
   {
     "name": "Maximilian's Earthen Grasp",
     "description": "You choose a 5-foot-square unoccupied space on the ground that you can see within range. A Medium hand made from compacted soil rises there and reaches for one creature you can see within 5 feet of it. The target must make a Strength saving throw. On a failed save, the target takes 2d6 bludgeoning damage and is restrained for the spell's duration.<br>As an action, you can cause the hand to crush the restrained target, who must make a Strength saving throw. It takes 2d6 bludgeoning damage on a failed save, or half as much damage on a successful one. To break out, the restrained target can make a Strength check against your spell save DC. On a success, the target escapes and is no longer restrained by the hand.<br>As an action, you can cause the hand to reach for a different creature or to move to a different unoccupied space within range. The hand releases a restrained target if you do either.",
-    "emote": "",
+    "emote": "transmutes the group into a hand made of soil",
     "source": "ee pc 20",
     "range": "30 ft",
-    "target": "1 creature you can see within 5 ft of the hand.",
+    "target": "1 creature you can see within 5 ft of the hand",
     "aoe": "A Medium hand made from compacted soil rises from a 5 ft square unoccupied space on the ground that you can see within range and reaches for the target",
     "components": {
       "verbal": true,
@@ -7246,6 +7246,7 @@
     "emote": "",
     "source": "ee pc 21",
     "range": "60 ft",
+    "target": "an area of flame that you can see and that can fit within a 5 ft cube within range",
     "components": {
       "verbal": true,
       "somatic": true
@@ -7254,6 +7255,11 @@
     "castingTime": "1 action",
     "level": 2,
     "school": "Transmutation",
+    "save": {
+      "ability": "constitution",
+      "saveFailure": "become blinded until the end of your next turn"
+    },
+    "effects": "You can extinguish the fire in that area, and you create either fireworks or smoke.<br>Fireworks. The target explodes with a dazzling display of colors. Each creature within 10 ft of the target must succeed on a Constitution saving throw as outlined above.<br>Smoke. Thick black smoke spreads out from the target in a 20 ft radius, moving around corners. The area of the smoke is heavily obscured. The smoke persists for 1 minute or until a strong wind disperses it.",
     "classes": [
       "Bard",
       "Sorcerer",
@@ -7309,9 +7315,10 @@
   {
     "name": "Ray of Enfeeblement",
     "description": "A black beam of enervating energy springs from your finger toward a creature within range. Make a ranged spell attack against the target. On a hit, the target deals only half damage with weapon attacks that use Strength until the spell ends.<br>At the end of each of the target's turns, it can make a Constitution saving throw against the spell. On a success, the spell ends.",
-    "emote": "",
+    "emote": "shoots a black beam of enervating energy from {{GENDER_PRONOUN_HIS_HER}} finger toward a creature",
     "source": "phb 271",
     "range": "60 ft",
+    "target": "a creature within range",
     "components": {
       "verbal": true,
       "somatic": true
@@ -7321,6 +7328,12 @@
     "castingTime": "1 action",
     "level": 2,
     "school": "Necromancy",
+    "attack": {},
+    "save": {
+      "ability": "constitution",
+      "saveSuccess": "spell ends"
+    },
+    "effects": "On a hit, the target deals only half damage with weapon attacks that use Strength until the spell ends.<br>At the end of each of the target's turns, it can make a Constitution saving throw against the spell as outlined above.",
     "classes": [
       "Warlock",
       "Wizard"
@@ -7528,7 +7541,7 @@
   {
     "name": "Rope Trick",
     "description": "You touch a length of rope that is up to 60 feet long. One end of the rope then rises into the air until the whole rope hangs perpendicular to the ground. At the upper end of the rope, an invisible entrance opens to an extradimensional space that lasts until the spell ends.<br>The extradimensional space can be reached by climbing to the top of the rope. The space can hold as many as eight Medium or smaller creatures. The rope can be pulled into the space, making the rope disappear from view outside the space.<br>Attacks and spells can't cross through the entrance into or out of the extradimensional space, but those inside can see out of it as if through a 3-foot-by-5-foot window centered on the rope.<br>Anything inside the extradimensional space drops out when the spell ends.",
-    "emote": "",
+    "emote": "causes a rope to rise into the air until the whole rope hangs perpendicular to the ground with an invisible entrance opens to an extradimensional space at the upper end of the rope",
     "source": "phb 272",
     "range": "Touch",
     "components": {
@@ -7541,6 +7554,7 @@
     "castingTime": "1 action",
     "level": 2,
     "school": "Transmutation",
+    "effects": "The extradimensional space can be reached by climbing to the top of the rope. The space can hold as many as eight Medium or smaller creatures. The rope can be pulled into the space, making the rope disappear from view outside the space.<br>Attacks and spells can't cross through the entrance into or out of the extradimensional space, but those inside can see out of it as if through a 3 ft by 5 ft window centered on the rope.<br>Anything inside the extradimensional space drops out when the spell ends.",
     "classes": [
       "Wizard"
     ]
@@ -7589,11 +7603,12 @@
   },
   {
     "name": "Scorching Ray",
-    "description": "You generate three rays of fire and will throw to targets in the range of the spell. You can project them on one or more targets.<br>Perform a remote attack spell for each department. If it hits, the target takes 2d6 fire damage.",
+    "description": "You create three rays of fire and hurl them at targets within range. You can hurl them at one target or several.<br>Make a ranged spell attack for each ray. On a hit, the target takes 2d6 fire damage.",
     "higherLevel": "When you cast this spell using a 3 or higher level spell slot, you generate an additional radius for each level of higher spell slot 2.",
-    "emote": "",
+    "emote": "creates 3 rays of fire and hurls them at targets",
     "source": "phb 273",
     "range": "120 ft",
+    "targets": "you can hurl the 3 rays at one target or several - make a ranged spell attack for each ray",
     "components": {
       "verbal": true,
       "somatic": true
@@ -7602,6 +7617,10 @@
     "castingTime": "1 action",
     "level": 2,
     "school": "Evocation",
+    "attack": {
+      "damage": "2d6",
+      "damageType": "fire"
+    },
     "classes": [
       "Cleric",
       "Sorcerer",
@@ -7680,8 +7699,8 @@
   },
   {
     "name": "See Invisibility",
-    "description": "For the duration of the spell, you see invisible creatures and objects as if they were visible, and you can see through Ethereal. The ethereal objects and creatures appear ghostly translucent.",
-    "emote": "",
+    "description": "For the duration, you see invisible creatures and objects as if they were visible, and you can see into the Ethereal Plane. Ethereal creatures and objects appear ghostly and translucent.",
+    "emote": "'s eyes glow",
     "source": "phb 274",
     "range": "Self",
     "components": {
@@ -7694,6 +7713,7 @@
     "castingTime": "1 action",
     "level": 2,
     "school": "Divination",
+    "effects": "you see invisible creatures and objects as if they were visible, and you can see into the Ethereal Plane. Ethereal creatures and objects appear ghostly and translucent.",
     "classes": [
       "Bard",
       "Sorcerer",
@@ -8014,7 +8034,7 @@
   {
     "name": "Skywrite",
     "description": "You cause up to ten words to form in a part of the sky you can see. The words appear to be made of cloud and remain in place for the spell's duration. The words dissipate when the spell ends. A strong wind can disperse the clouds and end the spell early.",
-    "emote": "",
+    "emote": "creates words out of clouds in the sky",
     "source": "ee pc 22",
     "range": "Sight",
     "components": {
@@ -8027,6 +8047,7 @@
     "castingTime": "1 action",
     "level": 2,
     "school": "Transmutation",
+    "effects": "You cause up to 10 words to form in a part of the sky you can see. The words appear to be made of cloud and remain in place for the spell's duration. The words dissipate when the spell ends. A strong wind can disperse the clouds and end the spell early.",
     "classes": [
       "Bard",
       "Druid",
@@ -8125,9 +8146,11 @@
     "name": "Snilloc's Snowball Swarm",
     "description": "A flurry of magic snowballs erupts from a point you choose within range. Each creature in a 5-foot-radius sphere centered on that point must make a Dexterity saving throw. A creature takes 3d6 cold damage on a failed save, or half as much damage on a successful one.",
     "higherLevel": "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d6 for each slot level above 2nd.",
-    "emote": "",
+    "emote": "evokes a flurry of magic snowballs",
     "source": "ee pc 22",
     "range": "90 ft",
+    "target": "each creature in the aoe",
+    "aoe": "5 ft radius sphere centered on a point within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -8139,6 +8162,12 @@
     "castingTime": "1 action",
     "level": 2,
     "school": "Evocation",
+    "save": {
+      "ability": "dexterity",
+      "damage": "3d6",
+      "damageType": "cold",
+      "saveSuccess": "half damage"
+    },
     "classes": [
       "Sorcerer",
       "Wizard"
@@ -8238,9 +8267,10 @@
   {
     "name": "Spider Climb",
     "description": "Until the spell ends, one willing creature you touch gains the ability to move up, down, and across vertical surfaces and upside down along ceilings, while leaving its hands free. The target also gains a climbing speed equal to its walking speed.",
-    "emote": "",
+    "emote": "causes a creature to climb like a spider",
     "source": "phb 277",
     "range": "Touch",
+    "target": "1willing creature",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -8252,6 +8282,7 @@
     "castingTime": "1 action",
     "level": 2,
     "school": "Transmutation",
+    "effects": "the target gains the ability to move up, down, and across vertical surfaces and upside down along ceilings, while leaving its hands free. The target also gains a climbing speed equal to its walking speed.",
     "classes": [
       "Druid",
       "Sorcerer",
@@ -8519,9 +8550,10 @@
   {
     "name": "Suggestion",
     "description": "You suggest a course of activity (limited to a sentence or two) and magically influence a creature you can see within range that can hear and understand you. Creatures that can't be charmed are immune to this effect. The suggestion must be worded in such a manner as to make the course of action sound reasonable. Asking the creature to stab itself, throw itself onto a spear, immolate itself, or do some other obviously harmful act ends the spell.<br>The target must make a Wisdom saving throw. On a failed save, it pursues the course of action you described to the best of its ability. The suggested course of action can continue for the entire duration. If the suggested activity can be completed in a shorter time, the spell ends when the subject finishes what it was asked to do.<br>You can also specify conditions that will trigger a special activity during the duration. For example, you might suggest that a knight give her warhorse to the first beggar she meets. If the condition isn't met before the spell expires, the activity isn't performed.<br>If you or any of your companions damage the target, the spell ends.",
-    "emote": "",
+    "emote": "suggests a course of activity to magically influcence a creature",
     "source": "phb 279",
     "range": "30 ft",
+    "target": "a creature you can see within range",
     "components": {
       "verbal": true,
       "material": true,
@@ -8532,6 +8564,11 @@
     "castingTime": "1 action",
     "level": 2,
     "school": "Enchantment",
+    "save": {
+      "ability": "wisdom",
+      "saveFailure": "it pursues the course of action you described to the best of its ability"
+    },
+    "effects": "course of activity is limited to a sentence or two. Creatures that can't be charmed are immune to this effect. The suggestion must be worded in such a manner as to make the course of action sound reasonable. Asking the creature to stab itself, throw itself onto a spear, immolate itself, or do some other obviously harmful act ends the spell.<br>The target must make a Wisdom saving throw as outlined above. The suggested course of action can continue for the entire duration. If the suggested activity can be completed in a shorter time, the spell ends when the subject finishes what it was asked to do.<br>You can also specify conditions that will trigger a special activity during the duration. For example, you might suggest that a knight give her warhorse to the first beggar she meets. If the condition isn't met before the spell expires, the activity isn't performed.<br>If you or any of your companions damage the target, the spell ends.",
     "classes": [
       "Bard",
       "Cleric",
