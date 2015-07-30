@@ -57,7 +57,7 @@
     "emote": "hurls a bubble of acid",
     "source": "phb 211",
     "range": "60 ft",
-    "target": "one creature within range, or two creatures within range that are within 5 feet of each other",
+    "target": "1 creature within range, or 2 creatures within range that are within 5 ft of each other",
     "components": {
       "verbal": true,
       "somatic": true
@@ -113,7 +113,7 @@
     "emote": "bolsters {{GENDER_PRONOUN_HE_SHE}} allies with toughness and resolve",
     "source": "phb 211",
     "range": "30 ft",
-    "target": "up to three creatures within range",
+    "target": "up to 3 creatures within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -499,7 +499,7 @@
     "emote": "and {{GENDER_PRONOUN_HIS_HER}} allies project their astral bodies into the Astral Plane",
     "source": "phb 215",
     "range": "10 ft",
-    "target": "up to eight willing creatures within range",
+    "target": "up to 8 willing creatures within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -688,6 +688,7 @@
     "emote": "attempts to banish a creature to another plane of existence",
     "source": "phb 217",
     "range": "60 ft",
+    "target": "1 creature that you can see within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -927,7 +928,7 @@
     "emote": "blesses the targets",
     "source": "phb 219",
     "range": "30 ft",
-    "target": "up to 3 creatures",
+    "target": "up to 3 creatures within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -1183,7 +1184,7 @@
     "source": "phb 220",
     "range": "120 ft",
     "target": "each creature in the aoe",
-    "aoe": "5 ft radius centered on a point",
+    "aoe": "5 ft radius centered on a point you can see within range",
     "components": {
       "verbal": true,
       "somatic": true
@@ -1313,10 +1314,10 @@
     "name": "Chill Touch",
     "description": "You create a ghostly, skeletal hand in the space of a creature within range. Make a ranged spell attack against the creature to assail it with the chill of the grave. On a hit, the target takes 1d8 necrotic damage, and it can't regain hit points until the start of your next turn. Until then, the hand clings to the target.<br>If you hit an undead target, it also has disadvantage on attack rolls against you until the end of your next turn.",
     "higherLevel": "This spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).",
-    "emote": "creates a ghostly, skeletal hand in the space of a creature within range",
+    "emote": "creates a ghostly, skeletal hand in the space of a creature",
     "source": "phb 221",
     "range": "120 ft",
-    "target": "a creature",
+    "target": "a creature within range",
     "components": {
       "verbal": true,
       "somatic": true
@@ -1795,7 +1796,7 @@
     "emote": "calls forth an elemental servant",
     "source": "phb 225",
     "range": "90 ft",
-    "target": "an area of air, earth, fire, or water that fills a 10-foot cube within range",
+    "target": "an area of air, earth, fire, or water that fills a 10 ft cube within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -2138,7 +2139,7 @@
     "source": "ee pc 16",
     "range": "60 ft",
     "target": "any creature in the bonfire's space when you cast the spell or when it enters the bonfire's space for the first time on a turn or ends its turn there",
-    "aoe": "5 ft cube on the ground",
+    "aoe": "5 ft cube on the ground that you can see within range",
     "components": {
       "verbal": true,
       "somatic": true
@@ -2253,9 +2254,10 @@
   {
     "name": "Crown of Madness",
     "description": "One humanoid of your choice that you can see within range must succeed on a wisdom saving throw or become charmed by you for the duration. While the target is charmed in this way, a twisted crown of jagged iron appears on its head, and a madness glows in its eyes.<br>The charmed target must use its action before moving on each of its turns to make a melee attack against a creature other than itself that you mentally choose.<br>The target can act normally on its turn if you choose no creature or if none are within its reach.<br>On your subsequent turns, you must use your action to maintain control over the target, or the spell ends. Also, the target can make a wisdom saving throw at the end of each of its turns. On a success, the spell ends.",
-    "emote": "",
+    "emote": "attempts to place a crown of madness on an opponent",
     "source": "phb 229",
     "range": "120 ft",
+    "target": "1 humanoid that you can see within range",
     "components": {
       "verbal": true,
       "somatic": true
@@ -2265,6 +2267,10 @@
     "castingTime": "1 action",
     "level": 2,
     "school": "Enchantment",
+    "save": {
+      "ability": "wisdom",
+      "saveFailure": "become charmed by you for the duration. While the target is charmed in this way, a twisted crown of jagged iron appears on its head, and a madness glows in its eyes.<br>The charmed target must use its action before moving on each of its turns to make a melee attack against a creature other than itself that you mentally choose.<br>The target can act normally on its turn if you choose no creature or if none are within its reach.<br>On your subsequent turns, you must use your action to maintain control over the target, or the spell ends. Also, the target can make a wisdom saving throw at the end of each of its turns. On a success, the spell ends."
+    },
     "classes": [
       "Bard",
       "Sorcerer",
@@ -2986,6 +2992,7 @@
     "source": "ee pc 17",
     "range": "60 ft",
     "target": "any creature that ends its turn within 5 feet of the dust devil",
+    "aoe": "Dust devil appears in an unoccupied 5 ft cube of air that you can see within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -3004,7 +3011,7 @@
       "saveFailure": "pushed 10 feet away",
       "saveSuccess": "half damage and not pushed"
     },
-    "effects": "Dust devil appears in an unoccupied 5-foot cube of air that you can see within range. Any creature that ends its turn within 5 feet of the dust devil must make a Strength saving throw as outlined above. >As a bonus action, you can move the dust devil up to 30 feet in any direction. If the dust devil moves over sand, dust, loose dirt, or small gravel, it sucks up the material and forms a 10 ft radius cloud of debris around itself that lasts until the start of your next turn. The cloud heavily obscures its area.",
+    "effects": "Any creature that ends its turn within 5 feet of the dust devil must make a Strength saving throw as outlined above. >As a bonus action, you can move the dust devil up to 30 feet in any direction. If the dust devil moves over sand, dust, loose dirt, or small gravel, it sucks up the material and forms a 10 ft radius cloud of debris around itself that lasts until the start of your next turn. The cloud heavily obscures its area.",
     "classes": [
       "Druid",
       "Sorcerer",
@@ -3039,7 +3046,7 @@
     "emote": "transmutes yellow strips of magical energy to loop around a creature",
     "source": "ee pc 17",
     "range": "300 ft",
-    "target": "one creature you can see",
+    "target": "1 creature you can see within range",
     "components": {
       "verbal": true
     },
@@ -3089,6 +3096,7 @@
     "emote": "shoots a beam of crackling energy streaks",
     "source": "phb 237",
     "range": "120 ft",
+    "target": "a creature within range",
     "components": {
       "verbal": true,
       "somatic": true
@@ -3680,10 +3688,10 @@
     "name": "Fire Bolt",
     "description": "You hurl a mote of fire at a creature or object within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 fire damage. A flammable object hit by this spell ignites if it isn't being worn or carried.",
     "higherLevel": "This spell's damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10).",
-    "emote": "You hurl a mote of fire at a creature or object within range",
-    "emote": "",
+    "emote": "hurls a mote of fire at a creature or object",
     "source": "phb 242",
     "range": "120 ft",
+    "target": "a creature or object",
     "components": {
       "verbal": true,
       "somatic": true
@@ -3906,7 +3914,7 @@
     "emote": "creates a sphere of fog",
     "source": "phb 243",
     "range": "120 ft",
-    "aoe": "20 ft radius sphere",
+    "aoe": "20 ft radius sphere centered on a point within range",
     "components": {
       "verbal": true,
       "somatic": true
@@ -4061,7 +4069,7 @@
     "emote": "causes numbing frost to form on a creature",
     "source": "ee pc 18",
     "range": "60 ft",
-    "target": "one creature that you can see within range",
+    "target": "1 creature that you can see within range",
     "components": {
       "verbal": true,
       "somatic": true
@@ -4922,7 +4930,7 @@
     "source": "phb 252",
     "range": "120 ft",
     "target": "each creature in the area who sees the pattern",
-    "aoe": "a 30 ft cube within range",
+    "aoe": "30 ft cube within range",
     "components": {
       "somatic": true,
       "material": true,
@@ -4974,7 +4982,7 @@
     "source": "phb 252",
     "range": "300 ft",
     "target": "each creature in the aoe",
-    "aoe": "20-foot-radius, 40-foot-high cylinder centered on a point within range",
+    "aoe": "20 ft radius, 40 ft high cylinder centered on a point within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -5433,7 +5441,7 @@
     "emote": "causes a creature of object to rise vertically in the air",
     "source": "phb 255",
     "range": "60 ft",
-    "target": "a  creature or object that you can see within range",
+    "target": "a creature or object that you can see within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -7268,6 +7276,7 @@
     "emote": "sends a frigid beam of blue-white light streaking toward a creature",
     "source": "phb 271",
     "range": "60 ft",
+    "target": "a creature within range",
     "components": {
       "verbal": true,
       "somatic": true
@@ -7710,7 +7719,7 @@
     "emote": "manipulates surrounding water",
     "source": "ee pc 21",
     "range": "30 ft",
-    "target": "an area of water that you can see within range and that fits within a 5-foot cube",
+    "target": "an area of water that you can see within range and that fits within a 5 ft cube",
     "components": {
       "somatic": true
     },
@@ -8000,7 +8009,7 @@
     "emote": "summons freezy rain and sleet that fall in an area",
     "source": "phb 276",
     "range": "150 ft",
-    "aoe": "20-foot-tall cylinder with a 40-foot radius centered on a point you choose within range",
+    "aoe": "20 ft tall cylinder with a 40-foot radius centered on a point you choose within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -8429,7 +8438,7 @@
     "source": "ee pc 22",
     "range": "150 ft",
     "target": "each creature in the aoe",
-    "aoe": "20-foot-radius sphere centered on a point within range",
+    "aoe": "20 ft radius sphere centered on a point within range",
     "components": {
       "verbal": true,
       "somatic": true
@@ -9070,7 +9079,7 @@
     "source": "phb 284",
     "range": "Sight",
     "target": "each creature within the wall",
-    "aoe": "wall up to 300 ft long, 300 feet high, and 50 ft thick",
+    "aoe": "wall up to 300 ft long, 300 feet high, and 50 ft thick at a point within range",
     "components": {
       "verbal": true,
       "somatic": true
@@ -9097,6 +9106,7 @@
     "emote": "creates an invisible, mindless, shapeless force that performs simple tasks at your command",
     "source": "phb 284",
     "range": "60 ft",
+    "target": "servant springs into existence in an unoccupied space on the ground within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -9108,7 +9118,7 @@
     "castingTime": "1 action",
     "level": 1,
     "school": "Conjuration",
-    "effects": "The servant springs into existence in an unoccupied space on the ground within range. It has AC 10, 1 hit point, and a Strength of 2, and it can't attack. If it drops to 0 hit points, the spell ends.<br>Once on each of your turns as a bonus action, you can mentally command the servant to move up to 15 ft and interact with an object. The servant can perform simple tasks that a human servant could do, such as fetching things, cleaning, mending, folding clothes, lighting fires, serving food, and pouring wind. Once you give the command, the servant performs the task to the best of its ability until it completes the task, then waits for your next command.<br>If you command the servant to perform a task that would move it more than 60 feet away from you, the spell ends.",
+    "effects": "The servant has AC 10, 1 hit point, and a Strength of 2, and it can't attack. If it drops to 0 hit points, the spell ends.<br>Once on each of your turns as a bonus action, you can mentally command the servant to move up to 15 ft and interact with an object. The servant can perform simple tasks that a human servant could do, such as fetching things, cleaning, mending, folding clothes, lighting fires, serving food, and pouring wind. Once you give the command, the servant performs the task to the best of its ability until it completes the task, then waits for your next command.<br>If you command the servant to perform a task that would move it more than 60 feet away from you, the spell ends.",
     "classes": [
       "Bard",
       "Warlock",
@@ -9148,7 +9158,7 @@
     "emote": "unleashes a string of insults laced with subtle enchantments",
     "source": "phb 285",
     "range": "60 ft",
-    "target": "a creature you can see",
+    "target": "a creature you can see within range",
     "components": {
       "verbal": true
     },
@@ -9174,7 +9184,7 @@
     "emote": "you create a glowing ball of emerald acid that streaks and explodes",
     "source": "ee pc 23",
     "range": "150 ft",
-    "target": "each creature",
+    "target": "each creature in the aoe",
     "aoe": "20 ft radius",
     "components": {
       "verbal": true,
@@ -9206,7 +9216,7 @@
     "source": "phb 285",
     "range": "120 ft",
     "target": "each creature within its area when it appears",
-    "aoe": "wall on a solid surface: up to 60 ft long, 20 ft high, and 1 ft thick, or a ringed wall up to 20 ft in diameter, 20 ft high, and 1 ft thick",
+    "aoe": "wall on a solid surface within range: up to 60 ft long, 20 ft high, and 1 ft thick, or a ringed wall up to 20 ft in diameter, 20 ft high, and 1 ft thick",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -9245,7 +9255,7 @@
     "emote": "causes a wall of force to spring into existence",
     "source": "phb 285",
     "range": "120 ft",
-    "aoe": "wall at a point: appears in any orientation you choose, as a horizontal or vertical barrier or at an angle. It can be free floating or resting on a solid surface. You can form it into a hemispherical dome or a sphere with a radius of up to 10 ft, or you can shape a flat surface made up of ten 10 ft by 10 ft panels. Each panel must be contiguous with another panel. In any form, the wall is 1/4 inch thick",
+    "aoe": "wall at a point within range: appears in any orientation you choose, as a horizontal or vertical barrier or at an angle. It can be free floating or resting on a solid surface. You can form it into a hemispherical dome or a sphere with a radius of up to 10 ft, or you can shape a flat surface made up of ten 10 ft by 10 ft panels. Each panel must be contiguous with another panel. In any form, the wall is 1/4 inch thick",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -9270,7 +9280,7 @@
     "source": "phb 285",
     "range": "120 ft",
     "target": "each creature within its area when it appears",
-    "aoe": "wall on a solid surface: hemispherical dome or a sphere with a radius of up to 10 ft, or you can shape a flat surface made up of ten 10 ft square panels. Each panel must be contiguous with another panel. In any form, the wall is 1 ft thick and lasts for the duration.",
+    "aoe": "wall on a solid surface within range: hemispherical dome or a sphere with a radius of up to 10 ft, or you can shape a flat surface made up of ten 10 ft square panels. Each panel must be contiguous with another panel. In any form, the wall is 1 ft thick and lasts for the duration.",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -9299,7 +9309,7 @@
     "emote": "conjures up a wall of swirling sand on the ground",
     "source": "ee pc 23",
     "range": "90 ft",
-    "aoe": "wall on the ground at a point you can see: up to 30 ft long, 10 ft high, and 10 ft thick",
+    "aoe": "wall on the ground at a point you can see within range: up to 30 ft long, 10 ft high, and 10 ft thick",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -9323,7 +9333,7 @@
     "source": "phb 287",
     "range": "120 ft",
     "target": "each creature within its area when it appears",
-    "aoe": "wall on the ground at a point you can see: up to 6 inches thick and is composed of ten 10 ft by 10 ft panels. Each panel must be contiguous with at least one other panel. Alternatively, you can create 10 ft by 20 ft panels that are only 3 inches thick",
+    "aoe": "wall on the ground at a point you can see within range: up to 6 inches thick and is composed of ten 10 ft by 10 ft panels. Each panel must be contiguous with at least one other panel. Alternatively, you can create 10 ft by 20 ft panels that are only 3 inches thick",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -9358,7 +9368,7 @@
     "source": "phb 287",
     "range": "120 ft",
     "target": "each creature within its area when it appears",
-    "aoe": "wall on a solid surface: up to 60 ft long, 10 ft high, and 5 ft thick or a circle that has a 20 ft diameter and is up to 20 ft high and 5 ft thick",
+    "aoe": "wall on a solid surface within range: up to 60 ft long, 10 ft high, and 5 ft thick or a circle that has a 20 ft diameter and is up to 20 ft high and 5 ft thick",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -9387,7 +9397,7 @@
     "emote": "conjures a wall of water on the ground",
     "source": "ee pc 23",
     "range": "60 ft",
-    "aoe": "wall on the ground at a point you can see: up to 30 ft long, 10 ft high, and 1 foot thick, or you can make a ringed wall up to 20 ft in diameter, 20 ft high, and 1 ft thick",
+    "aoe": "wall on the ground at a point you can see within range: up to 30 ft long, 10 ft high, and 1 foot thick, or you can make a ringed wall up to 20 ft in diameter, 20 ft high, and 1 ft thick",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -9456,7 +9466,7 @@
     "emote": "and {{GENDER_PRONOUN_HIS_HER}} allies can breathe water",
     "source": "phb 287",
     "range": "30 ft",
-    "target": "up to ten willing creatures you can see within range",
+    "target": "up to 10 willing creatures you can see within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -9485,7 +9495,7 @@
     "emote": "and {{GENDER_PRONOUN_HIS_HER}} allies can nimbly walk across liquid surfaces",
     "source": "phb 287",
     "range": "30 ft",
-    "target": "up to ten willing creatures you can see within range",
+    "target": "up to 10 willing creatures you can see within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -9515,7 +9525,7 @@
     "source": "ee pc 23",
     "range": "90 ft",
     "target": "any creature in the sphere's space",
-    "aoe": "10' radius on a point you can see within range",
+    "aoe": "10 ft radius on a point you can see within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -9577,7 +9587,8 @@
     "emote": "draws on the deepest fears of a group of creatures to create illusory creatures in their minds, visible only to them",
     "source": "phb 288",
     "range": "120 ft",
-    "target": "each creature in a 30 ft radius sphere centered on a point",
+    "target": "each creature in the aoe",
+    "aoe": "30 ft radius sphere centered on a point within range",
     "components": {
       "verbal": true,
       "somatic": true
@@ -9630,7 +9641,7 @@
     "emote": "and {{GENDER_PRONOUN_HIS_HER}} allies assume a gaseous form",
     "source": "phb 288",
     "range": "30 ft",
-    "target": "you and up to ten willing creatures you can see within range",
+    "target": "you and up to 10 willing creatures you can see within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -9653,7 +9664,7 @@
     "source": "phb 288",
     "range": "120 ft",
     "target": "each creature within the wall when it appears",
-    "aoe": "wall up to 50 ft long, 15 ft high, and 1 ft thick. The wall can be shaped in any way you choose so long as it makes one continuous path along the ground",
+    "aoe": "wall on the ground at a point within range: up to 50 ft long, 15 ft high, and 1 ft thick. The wall can be shaped in any way you choose so long as it makes one continuous path along the ground",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -9704,9 +9715,10 @@
     "name": "Witch Bolt",
     "description": "A beam of crackling, blue energy lances out toward a creature within range, forming a sustained arc of lightning between you and the target. Make a ranged spell attack against that creature. On a hit, the target takes 1d12 lightning damage, and on each of your turns for the duration, you can use your action to deal 1d12 lightning damage to the target automatically. The spell ends if you use your action to do anything else. The spell also ends if the target is ever outside the spell's range or if it has total cover from you.",
     "higherLevel": "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d12 for each slot level above 1st.",
-    "emote": "creates a beam of crackling, blue energy that lances out toward a creature. It forms a sustained arc of lightning.",
+    "emote": "evokes a beam of crackling, blue energy that lances out toward a creature. It forms a sustained arc of lightning.",
     "source": "phb 289",
     "range": "30 ft",
+    "target": "a creature within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -9781,7 +9793,7 @@
     "source": "phb 289",
     "source": "phb 289",
     "range": "60 ft",
-    "aoe": "15 ft radius sphere",
+    "aoe": "15 ft radius sphere on a point within range",
     "components": {
       "verbal": true,
       "somatic": true
