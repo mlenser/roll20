@@ -5066,9 +5066,10 @@
     "name": "Hunter's Mark",
     "description": "You choose a creature you can see within range and mystically mark it as your quarry. Until the spell ends, you deal an extra 1d6 damage to the target whenever you hit it with a weapon attack, and you have advantage on any Wisdom (Perception) or Wisdom (Survival) check you make to find it. If the target drops to 0 hit points before this spell ends, you can use a bonus action on a subsequent turn of yours to mark a new creature.",
     "higherLevel": "When you cast this spell using a spell slot of 3rd or 4th level, you can maintain your concentration on the spell for up to 8 hours. When you use a spell slot of 5th level or higher, you can maintain your concentration on the spell for up to 24 hours.",
-    "emote": "",
+    "emote": "mystically marks a target as {{GENDER_PRONOUN_HIS_HER}} quarry",
     "source": "phb 251",
     "range": "90 ft",
+    "target": "a creature you can see within range",
     "components": {
       "verbal": true
     },
@@ -5077,6 +5078,7 @@
     "castingTime": "1 bonus action",
     "level": 1,
     "school": "Divination",
+    "effects": "Until the spell ends, you deal an extra 1d6 damage to the target whenever you hit it with a weapon attack, and you have advantage on any Wisdom (Perception) or Wisdom (Survival) check you make to find it. If the target drops to 0 hit points before this spell ends, you can use a bonus action on a subsequent turn of yours to mark a new creature.",
     "classes": [
       "Paladin",
       "Ranger"
@@ -5184,9 +5186,10 @@
   {
     "name": "Identify",
     "description": "You choose one object that you must touch throughout the casting of the spell. If it is a magic item or some other magic-imbued object, you learn its properties and how to use them, whether it requires attunement to use, and how many charges it has, if any. You learn whether any spells are affecting the item and what they are. If the item was created by a spell, you learn which spell created it.<br>If you instead touch a creature throughout the casting, you learn what spells, if any, are currently affecting it.",
-    "emote": "",
+    "emote": "identifies an object",
     "source": "phb 252",
     "range": "Touch",
+    "target": "1 object that you must touch throughout the casting of this spell",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -5198,6 +5201,7 @@
     "castingTime": "1 minute",
     "level": 1,
     "school": "Divination",
+    "effects": "You choose one object that you must touch throughout the casting of the spell. If it is a magic item or some other magic-imbued object, you learn its properties and how to use them, whether it requires attunement to use, and how many charges it has, if any. You learn whether any spells are affecting the item and what they are. If the item was created by a spell, you learn which spell created it.<br>If you instead touch a creature throughout the casting, you learn what spells, if any, are currently affecting it.",
     "classes": [
       "Bard",
       "Cleric",
@@ -5210,7 +5214,7 @@
   {
     "name": "Illusory Script",
     "description": "You write on parchment, paper, or some other suitable writing material and imbue it with a potent illusion that lasts for the duration.<br>To you and any creatures you designate when you cast the spell, the writing appears normal, written in your hand, and conveys whatever meaning you intended when you wrote the text. To all others, the writing appears as if it were written in an unknown or magical script that is unintelligible. Alternatively, you can cause the writing to appear to be an entirely different message, written in a different hand and language, though the language must be one you know.<br>Should the spell be dispelled, the original script and the illusion both disappear.<br>A creature with truesight can read the hidden message.",
-    "emote": "",
+    "emote": "writes words imbued with a potent illusion",
     "source": "phb 252",
     "range": "Touch",
     "components": {
@@ -5223,6 +5227,7 @@
     "castingTime": "1 minute",
     "level": 1,
     "school": "Illusion",
+    "effects": "To you and any creatures you designate when you cast the spell, the writing appears normal, written in your hand, and conveys whatever meaning you intended when you wrote the text. To all others, the writing appears as if it were written in an unknown or magical script that is unintelligible. Alternatively, you can cause the writing to appear to be an entirely different message, written in a different hand and language, though the language must be one you know.<br>Should the spell be dispelled, the original script and the illusion both disappear.<br>A creature with truesight can read the hidden message.",
     "classes": [
       "Bard",
       "Warlock",
@@ -5293,9 +5298,10 @@
     "name": "Inflict Wounds",
     "description": "Make a melee spell attack against a creature you can reach. On a hit, the target takes 3d10 necrotic damage.",
     "higherLevel": "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d10 for each slot level above 1st.",
-    "emote": "",
+    "emote": "inflicts wounds",
     "source": "phb 253",
     "range": "Touch",
+    "target": "a creature that",
     "components": {
       "verbal": true,
       "somatic": true
@@ -5304,6 +5310,10 @@
     "castingTime": "1 action",
     "level": 1,
     "school": "Necromancy",
+    "attack": {
+      "damage": "3d10",
+      "damageType": "necrotic"
+    },
     "classes": [
       "Cleric"
     ]
@@ -5463,9 +5473,10 @@
   {
     "name": "Jump",
     "description": "You touch a creature. The creature's jump distance is tripled until the spell ends.",
-    "emote": "",
+    "emote": "gains the ability to jump far and high",
     "source": "phb 254",
     "range": "Touch",
+    "target": "a creature within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -5476,6 +5487,7 @@
     "castingTime": "1 action",
     "level": 1,
     "school": "Transmutation",
+    "effects": "The creature's jump distance is tripled until the spell ends.",
     "classes": [
       "Druid",
       "Ranger",
@@ -5631,9 +5643,10 @@
   {
     "name": "Light",
     "description": "You touch one object that is no larger than 10 feet in any dimension. Until the spell ends, the object sheds bright light in a 20-foot radius and dim light for an additional 20 feet. The light can be colored as you like. Completely covering the object with something opaque blocks the light. The spell ends if you cast it again or dismiss it as an action.<br>If you target an object held or worn by a hostile creature, that creature must succeed on a Dexterity saving throw to avoid the spell.",
-    "emote": "",
+    "emote": "Lights an object with magical energy",
     "source": "phb 255",
     "range": "Touch",
+    "target": "1 object that is no larger than 10 ft in any dimension",
     "components": {
       "verbal": true,
       "material": true,
@@ -5643,6 +5656,10 @@
     "castingTime": "1 action",
     "level": 0,
     "school": "Evocation",
+    "save": {
+      "ability": "dexterity"
+    },
+    "effects": "Until the spell ends, the object sheds bright light in a 20-foot radius and dim light for an additional 20 feet. The light can be colored as you like. Completely covering the object with something opaque blocks the light. The spell ends if you cast it again or dismiss it as an action.<br>If you target an object held or worn by a hostile creature, that creature must succeed on a Dexterity saving throw to avoid the spell.",
     "classes": [
       "Bard",
       "Cleric",
@@ -5789,9 +5806,10 @@
     "name": "Longstrider",
     "description": "You touch a creature. The target's speed increases by 10 feet until the spell ends.",
     "higherLevel": "When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each spell slot above 1st.",
-    "emote": "",
+    "emote": "you lengthen the target's step",
     "source": "phb 256",
     "range": "Touch",
+    "target": "a creature within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -5802,6 +5820,7 @@
     "castingTime": "1 action",
     "level": 1,
     "school": "Transmutation",
+    "effects": "The target's speed increases by 10 ft until the spell ends.",
     "classes": [
       "Bard",
       "Druid",
@@ -5856,7 +5875,7 @@
   {
     "name": "Mage Hand",
     "description": "A spectral, floating hand appears at a point you choose within range. The hand lasts for the duration or until you dismiss it as an action. The hand vanishes if it is ever more than 30 feet away from you or if you cast this spell again.<br>You can use your action to control the hand. You can use the hand to manipulate an object, open an unlocked door or container, stow or retrieve an item from an open container, or pour the contents out of a vial. You can move the hand up to 30 feet each time you use it.<br>The hand can't attack, activate magic items, or carry more than 10 pounds.",
-    "emote": "",
+    "emote": "conjures a spectral, floating hand",
     "source": "phb 256",
     "range": "30 ft",
     "components": {
@@ -5867,6 +5886,7 @@
     "castingTime": "1 action",
     "level": 0,
     "school": "Conjuration",
+    "effects": "The hand lasts for the duration or until you dismiss it as an action. The hand vanishes if it is ever more than 30 ft away from you or if you cast this spell again.<br>You can use your action to control the hand. You can use the hand to manipulate an object, open an unlocked door or container, stow or retrieve an item from an open container, or pour the contents out of a vial. You can move the hand up to 30 ft each time you use it.<br>The hand can't attack, activate magic items, or carry more than 10 lbs.",
     "classes": [
       "Bard",
       "Sorcerer",
@@ -5922,9 +5942,10 @@
     "name": "Magic Missile",
     "description": "You create three glowing darts of magical force. Each dart hits a creature of your choice that you can see within range. A dart deals 1d4 + 1 force damage to its target. The darts all strike simultaneously, and you can direct them to hit one creature or several.",
     "higherLevel": "When you cast this spell using a spell slot of 2nd level or higher, the spell creates one more dart for each slot level above 1st.",
-    "emote": "",
+    "emote": "hurls 3 glowing darts of magical force",
     "source": "phb 257",
     "range": "120 ft",
+    "target": "each dart hits a creature of your choice that you can see within range",
     "components": {
       "verbal": true,
       "somatic": true
@@ -5933,6 +5954,9 @@
     "castingTime": "1 action",
     "level": 1,
     "school": "Evocation",
+    "damage": "1d4 + 1",
+    "damageType": "force",
+    "effects": "The darts all strike simultaneously, and you can direct them to hit one creature or several.",
     "classes": [
       "Sorcerer",
       "Wizard"
@@ -6264,10 +6288,11 @@
   },
   {
     "name": "Mending",
-    "description": "This spell repairs a single break or tear in an object you touch, such as a broken key, a torn cloak, or a leaking wineskin. As long as the break or tear is no longer than 1 foot in any dimension, you mend it, leaving no trace of the former damage.<br>This spell can physically repair a magic item or construct, but the spell can't restore magic to such an object.",
-    "emote": "",
+    "description": "This spell repairs a single break or tear in an object you touch, such as a broken key, a torn cloak, or a leaking wineskin. As long as the break or tear is no longer than 1 foot in any dimension, you mend it, leaving no trace of the former damage.<br>This spell can physically repair a magic item or construct, but the spell can't restore magic to such an object such as a broken key, a torn cloak, or a leaking wineskin",
+    "emote": "repairs a single break or tear in an object",
     "source": "phb 259",
     "range": "Touch",
+    "target": "1 broken or torn object whose tear isn't bigger than 1 ft in diameter",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -6278,6 +6303,7 @@
     "castingTime": "1 minute",
     "level": 0,
     "school": "Transmutation",
+    "effects": "You leave no trace of the former damage.<br>This spell can physically repair a magic item or construct, but the spell can't restore magic to such an object.",
     "classes": [
       "Cleric",
       "Bard",
@@ -6289,9 +6315,10 @@
   {
     "name": "Message",
     "description": "You point your finger toward a creature within range and whisper a message. The target (and only the target) hears the message and can reply in a whisper that only you can hear.<br>You can cast this spell through solid objects if you are familiar with the target and know it is beyond the barrier. Magical silence, 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood blocks the spell. The spell doesn't have to follow a straight line and can travel freely around corners or through openings.",
-    "emote": "",
+    "emote": "points {{GENDER_PRONOUN_HIS_HER}} finger toward a creature and whispers a message",
     "source": "phb 259",
     "range": "120 ft",
+    "target": "1 creature within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -6302,6 +6329,7 @@
     "castingTime": "1 action",
     "level": 0,
     "school": "Transmutation",
+    "effects": "The target (and only the target) hears the message and can reply in a whisper that only you can hear.<br>You can cast this spell through solid objects if you are familiar with the target and know it is beyond the barrier. Magical silence, 1 ft of stone, 1 inch of common metal, a thin sheet of lead, or 3 ft of wood blocks the spell. The spell doesn't have to follow a straight line and can travel freely around corners or through openings.",
     "classes": [
       "Bard",
       "Sorcerer",
@@ -6349,9 +6377,10 @@
   {
     "name": "Minor Illusion",
     "description": "You create a sound or an image of an object within range that lasts for the duration. The illusion also ends if you dismiss it as an action or cast this spell again.<br>If you create a sound, its volume can range from a whisper to a scream. It can be your voice, someone else's voice, a lion's roar, a beating of drums, or any other sound you choose. The sound continues unabated throughout the duration, or you can make discrete sounds at different times before the spell ends.<br>If you create an image of an object—such as a chair, muddy footprints, or a small chest—it must be no larger than a 5-foot cube. The image can't create sound, light, smell, or any other sensory effect. Physical interaction with the image reveals it to be an illusion, because things can pass through it.<br>If a creature uses its action to examine the sound or image, the creature can determine that it is an illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the illusion becomes faint to the creature.",
-    "emote": "",
+    "emote": "creates an illusory sound or an image of an object",
     "source": "phb 260",
     "range": "30 ft",
+    "target": "a point within range",
     "components": {
       "somatic": true,
       "material": true,
@@ -6361,6 +6390,7 @@
     "castingTime": "1 action",
     "level": 0,
     "school": "Illusion",
+    "effects": "The illusion ends if you dismiss it as an action or cast this spell again.<br>If you create a sound, its volume can range from a whisper to a scream. It can be your voice, someone else's voice, a lion's roar, a beating of drums, or any other sound you choose. The sound continues unabated throughout the duration, or you can make discrete sounds at different times before the spell ends.<br>If you create an image of an object—such as a chair, muddy footprints, or a small chest—it must be no larger than a 5-foot cube. The image can't create sound, light, smell, or any other sensory effect. Physical interaction with the image reveals it to be an illusion, because things can pass through it.<br>If a creature uses its action to examine the sound or image, the creature can determine that it is an illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the illusion becomes faint to the creature.",
     "classes": [
       "Bard",
       "Sorcerer",
@@ -6493,9 +6523,10 @@
   {
     "name": "Mold Earth",
     "description": "You choose a portion of dirt or stone that you can see within range and that fits within a 5-foot cube. You manipulate it in one of the following ways:<br>- If you target an area of loose earth, you can instantaneously excavate it, move it along the ground, and deposit it up to 5 feet away. This movement doesn't have enough force to cause damage.<br>- You cause shapes, colors, or both to appear on the dirt or stone, spelling out words, creating images, or shaping patterns. The changes last for 1 hour.<br>- If the dirt or stone you target is on the ground, you cause it to become difficult terrain. Alternatively, you can cause the ground to become normal terrain if it is already difficult terrain. This change lasts for 1 hour. If you cast this spell multiple times, you can have no more than two of its non-instantaneous effects active at a time, and you can dismiss such an effect as an action.",
-    "emote": "",
+    "emote": "shapes the earth to {{GENDER_PRONOUN_HIS_HER}} will",
     "source": "ee pc 21",
     "range": "30 ft",
+    "target": "a portion of dirt or stone within range that you can see and that fits within a 5 ft cube",
     "components": {
       "somatic": true
     },
@@ -6503,6 +6534,7 @@
     "castingTime": "1 action",
     "level": 0,
     "school": "Transmutation",
+    "effects": "You manipulate it in one of the following ways:<br>- If you target an area of loose earth, you can instantaneously excavate it, move it along the ground, and deposit it up to 5 feet away. This movement doesn't have enough force to cause damage.<br>- You cause shapes, colors, or both to appear on the dirt or stone, spelling out words, creating images, or shaping patterns. The changes last for 1 hour.<br>- If the dirt or stone you target is on the ground, you cause it to become difficult terrain. Alternatively, you can cause the ground to become normal terrain if it is already difficult terrain. This change lasts for 1 hour. If you cast this spell multiple times, you can have no more than two of its non-instantaneous effects active at a time, and you can dismiss such an effect as an action.",
     "classes": [
       "Druid",
       "Sorcerer",
@@ -7128,9 +7160,10 @@
   {
     "name": "Prestidigitation",
     "description": "This spell is a minor magical trick that novice spellcasters use for practice. You create one of the following magical effects within 'range':<br>You create an instantaneous, harmless sensory effect, such as a shower of sparks, a puff of wind, faint musical notes, or an odd odor.<br>You instantaneously light or snuff out a candle, a torch, or a small campfire.<br>You instantaneously clean or soil an object no larger than 1 cubic foot.<br>You chill, warm, or flavor up to 1 cubic foot of non-living material for 1 hour.<br>You make a color, a small mark, or a symbol appear on an object or a surface for 1 hour.<br>You create a nonmagical trinket or an illusory image that can fit in your hand and that lasts until the end of your next turn.<br>If you cast this spell multiple times, you can have up to three of its non-instantaneous effects active at a time, and you can dismiss such an effect as an action.",
-    "emote": "",
+    "emote": "performs minor magical effects",
     "source": "phb 267",
     "range": "10 ft",
+    "target": "a point within range",
     "components": {
       "verbal": true,
       "somatic": true
@@ -7139,6 +7172,7 @@
     "castingTime": "1 action",
     "level": 0,
     "school": "Transmutation",
+    "effects": "You create one of the following magical effects within range:<br>You create an instantaneous, harmless sensory effect, such as a shower of sparks, a puff of wind, faint musical notes, or an odd odor.<br>You instantaneously light or snuff out a candle, a torch, or a small campfire.<br>You instantaneously clean or soil an object no larger than 1 cubic foot.<br>You chill, warm, or flavor up to 1 cubic foot of nonliving material for 1 hour.<br>You make a color, a small mark, or a symbol appear on an object or a surface for 1 hour.<br>You create a nonmagical trinket or an illusory image that can fit in your hand and that lasts until the end of your next turn.<br>If you cast this spell multiple times, you can have up to three of its non-instantaneous effects active at a time, and you can dismiss such an effect as an action.",
     "classes": [
       "Bard",
       "Sorcerer",
@@ -7303,9 +7337,10 @@
   {
     "name": "Protection from Evil and Good",
     "description": "Until the spell ends, one willing creature you touch is protected against certain types of creatures: aberrations, celestials, elementals, fey, fiends, and undead.<br>The protection grants several benefits. Creatures of those types have disadvantage on attack rolls against the target. The target also can't be charmed, frightened, or possessed by them. If the target is already charmed, frightened, or possessed by such a creature, the target has advantage on any new saving throw against the relevant effect.",
-    "emote": "",
+    "emote": "wards against aberrations, celestials, elementals, fey, fiends, and undead",
     "source": "phb 270",
     "range": "Touch",
+    "target": "1 willing creature",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -7317,6 +7352,7 @@
     "castingTime": "1 action",
     "level": 1,
     "school": "Abjuration",
+    "effets": "target is protected against certain types of creatures: aberrations, celestials, elementals, fey, fiends, and undead.<br>The protection grants several benefits. Creatures of those types have disadvantage on attack rolls against the target. The target also can't be charmed, frightened, or possessed by them. If the target is already charmed, frightened, or possessed by such a creature, the target has advantage on any new saving throw against the relevant effect.",
     "classes": [
       "Cleric",
       "Paladin",
@@ -7353,9 +7389,11 @@
   {
     "name": "Purify Food and Drink",
     "description": "All nonmagical food and drink within a 5-foot radius sphere centered on a point of your choice within range is purified and rendered free of poison and disease.",
-    "emote": "",
+    "emote": "purifies all nonmagical food and drink near {{GENDER_PRONOUN_HIM_HER}}",
     "source": "phb 270",
     "range": "10 ft",
+    "target": "All nonmagical food and drink within the aoe",
+    "aoe": "5 ft radius sphere centered on a point within range",
     "components": {
       "verbal": true,
       "somatic": true
@@ -7365,6 +7403,7 @@
     "castingTime": "1 action",
     "level": 1,
     "school": "Transmutation",
+    "effects": "targeted food is purified and rendered free of poison and disease.",
     "classes": [
       "Cleric",
       "Druid",
@@ -7500,9 +7539,10 @@
     "name": "Ray of Sickness",
     "description": "A ray of sickening greenish energy lashes out toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 2d8 poison damage and must make a Constitution saving throw. On a failed save, it is also poisoned until the end of your next turn.",
     "higherLevel": "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st.",
-    "emote": "",
+    "emote": "shoots a ray of sickening greenish energy at the target creature",
     "source": "phb 271",
     "range": "60 ft",
+    "target": "a creature within range",
     "components": {
       "verbal": true,
       "somatic": true
@@ -7511,6 +7551,15 @@
     "castingTime": "1 action",
     "level": 1,
     "school": "Necromancy",
+    "attack": {
+      "damage": "2d8",
+      "damageType": "poison"
+    },
+    "save": {
+      "ability": "constitution",
+      "saveFailure": "be poisoned until the end of your next turn."
+    },
+    "effects": "On a hit, the target must make a Constitution saving throw as outlined above.",
     "classes": [
       "Sorcerer",
       "Wizard"
@@ -7582,9 +7631,10 @@
   {
     "name": "Resistance",
     "description": "You touch one willing creature. Once before the spell ends, the target can roll a d4 and add the number rolled to one saving throw of its choice. It can roll the die before or after making the saving throw. The spell then ends.",
-    "emote": "",
+    "emote": "imbues the target with resistance",
     "source": "phb 272",
     "range": "Touch",
+    "target": "1 willing creature",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -7596,6 +7646,7 @@
     "castingTime": "1 action",
     "level": 0,
     "school": "Abjuration",
+    "effects": "Once before the spell ends, the target can roll a d4 and add the number rolled to one saving throw of its choice. It can roll the die before or after making the saving throw. The spell then ends.",
     "classes": [
       "Cleric",
       "Druid"
@@ -7692,10 +7743,12 @@
   },
   {
     "name": "Sacred Flame",
-    "description": "Flame-like radiance descends on a creature that you can see within range. The target must succeed on a Dexterity saving throw or take 1d8 radiant damage. The target gains no benefit from cover for this saving throw.<br>The spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).",
-    "emote": "",
+    "description": "Flame-like radiance descends on a creature that you can see within range. The target must succeed on a Dexterity saving throw or take 1d8 radiant damage. The target gains no benefit from cover for this saving throw.",
+    "higherLevel": "The spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).",
+    "emote": "conjures Flame-like radiance that descends on a creature",
     "source": "phb 272",
     "range": "60 ft",
+    "target": "a creature that you can see within range",
     "components": {
       "verbal": true,
       "somatic": true
@@ -7704,6 +7757,12 @@
     "castingTime": "1 action",
     "level": 0,
     "school": "Evocation",
+    "save": {
+      "ability": "dexterity",
+      "damage": "d8",
+      "damageType": "radiant"
+    },
+    "effects": "The target gains no benefit from cover for this saving throw.",
     "classes": [
       "Cleric"
     ]
@@ -7711,9 +7770,10 @@
   {
     "name": "Sanctuary",
     "description": "You ward a creature within range against attack. Until the spell ends, any creature who targets the warded creature with an attack or a harmful spell must first make a Wisdom saving throw. On a failed save, the creature must choose a new target or lose the attack or spell. This spell doesn't protect the warded creature from area effects, such as the explosion of a fireball.<br>If the warded creature makes an attack or casts a spell that affects an enemy creature, this spell ends.",
-    "emote": "",
+    "emote": "wards the target against attack",
     "source": "phb 272",
     "range": "30 ft",
+    "target": "a creature within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -7724,6 +7784,11 @@
     "castingTime": "1 bonus action",
     "level": 1,
     "school": "Abjuration",
+    "save": {
+      "ability": "wisdom",
+      "saveFailure": "target has to choose a new target or lose the attack or spell"
+    },
+    "effects": "Until the spell ends, any creature who targets the warded creature with an attack or a harmful spell must first make a Wisdom saving throw as outlined above. This spell doesn't protect the warded creature from area effects, such as the explosion of a fireball.<br>If the warded creature makes an attack or casts a spell that affects an enemy creature, this spell ends.",
     "classes": [
       "Cleric",
       "Paladin"
@@ -8004,7 +8069,7 @@
   {
     "name": "Shield",
     "description": "An invisible barrier of magical force appears and protects you. Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack, and you take no damage from magic missile.",
-    "emote": "",
+    "emote": "creates an invisible barrier of magical force to protect {{GENDER_PRONOUN_HIMSELF_HERSELF}}",
     "source": "phb 275",
     "range": "Self",
     "components": {
@@ -8015,6 +8080,7 @@
     "castingTime": "1 reaction",
     "level": 1,
     "school": "Abjuration",
+    "effects": "Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack, and you take no damage from magic missile.",
     "classes": [
       "Sorcerer",
       "Wizard"
@@ -8023,9 +8089,10 @@
   {
     "name": "Shield of Faith",
     "description": "A shimmering field appears and surrounds a creature of your choice within range, granting it a +2 bonus to AC for the duration.",
-    "emote": "",
+    "emote": "conjures a shimmering field that surrounds a creature and protects it",
     "source": "phb 275",
     "range": "60 ft",
+    "target": "a creature within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -8037,6 +8104,7 @@
     "castingTime": "1 bonus action",
     "level": 1,
     "school": "Abjuration",
+    "effects": "For the duration of the spell, the target creature is granted a +2 bonus to AC",
     "classes": [
       "Cleric",
       "Paladin"
@@ -8048,9 +8116,10 @@
   {
     "name": "Shillelagh",
     "description": "The wood of a club or a quarterstaff you are holding is imbued with nature's power. For the duration, you can use your spellcasting ability instead of Strength for the attack and damage rolls of melee attacks using that weapon, and the weapon's damage die becomes a d8. The weapon also becomes magical, if it isn't already. The spell ends if you cast it again or if you let go of the weapon.",
-    "emote": "",
+    "emote": "imbues {{GENDER_PRONOUN_HIS_HER}} weapon with nature's power",
     "source": "phb 275",
     "range": "Touch",
+    "target": "a wooden club or a wooden quarterstaff you are holding",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -8061,6 +8130,7 @@
     "castingTime": "1 bonus action",
     "level": 0,
     "school": "Transmutation",
+    "effects": "For the duration, you can use your spellcasting ability instead of Strength for the attack and damage rolls of melee attacks using that weapon, and the weapon's damage die becomes a d8. The weapon also becomes magical, if it isn't already. The spell ends if you cast it again or if you let go of the weapon.",
     "classes": [
       "Druid"
     ]
@@ -8122,9 +8192,10 @@
   {
     "name": "Silent Image",
     "description": "You create the image of an object, a creature, or some other visible phenomenon that is no larger than a 15-foot cube. The image appears at a spot within range and lasts for the duration. The image is purely visual; it isn't accompanied by sound, smell, or other sensory effects.<br>You can use your action to cause the image to move to any spot within range. As the image changes location, you can alter its appearance so that its movements appear natural for the image. For example, if you create an image of a creature and move it, you can alter the image so that it appears to be walking.<br>Physical interaction with the image reveals it to be an illusion, because things can pass through it. A creature that uses its action to examine the image can determine that it is an illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image.",
-    "emote": "",
+    "emote": "creates an illusory image of an object, a creature, or some other visible phenomenon",
     "source": "phb 276",
     "range": "60 ft",
+    "target": "a point within range no larger than a 15 ft cube",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -8136,6 +8207,7 @@
     "castingTime": "1 action",
     "level": 1,
     "school": "Illusion",
+    "effects": "The image appears at a spot within range and lasts for the duration. The image is purely visual; it isn't accompanied by sound, smell, or other sensory effects.<br>You can use your action to cause the image to move to any spot within range. As the image changes location, you can alter its appearance so that its movements appear natural for the image. For example, if you create an image of a creature and move it, you can alter the image so that it appears to be walking.<br>Physical interaction with the image reveals it to be an illusion, because things can pass through it. A creature that uses its action to examine the image can determine that it is an illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image.",
     "classes": [
       "Bard",
       "Sorcerer",
@@ -8189,9 +8261,11 @@
     "name": "Sleep",
     "description": "This spell sends creatures into a magical slumber. Roll 5d8; the total is how many hit points of creatures this spell can affect. Creatures within 20 feet of a point you choose within range are affected in ascending order of their current hit points (ignoring unconscious creatures).<br>Starting with the creature that has the lowest current hit points, each creature affected by this spell falls unconscious until the spell ends, the sleeper takes damage, or someone uses an action to shake or slap the sleeper awake. Subtract each creature's hit points from the total before moving on to the creature with the next lowest hit points. A creature's hit points must be equal to or less than the remaining total for that creature to be affected.<br>Undead and creatures immune to being charmed aren't affected by this spell.",
     "higherLevel": "When you cast this spell using a spell slot of 2nd level or higher, roll an additional 2d8 for each slot level above 1st.",
-    "emote": "",
+    "emote": "sends creatures into a magical slumbers",
     "source": "phb 276",
     "range": "90 ft",
+    "target": "each creature inside the aoe",
+    "aoe": "20 ft radius sphere centered on a point within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -8202,6 +8276,7 @@
     "castingTime": "1 action",
     "level": 1,
     "school": "Enchantment",
+    "effects": "Roll 5d8; the total is how many hit points of creatures this spell can affect. The targets are affected in ascending order of their current hit points (ignoring unconscious creatures).<br>Starting with the creature that has the lowest current hit points, each creature affected by this spell falls unconscious until the spell ends, the sleeper takes damage, or someone uses an action to shake or slap the sleeper awake. Subtract each creature's hit points from the total before moving on to the creature with the next lowest hit points. A creature's hit points must be equal to or less than the remaining total for that creature to be affected.<br>Undead and creatures immune to being charmed aren't affected by this spell.",
     "classes": [
       "Bard",
       "Sorcerer",
@@ -8307,9 +8382,10 @@
   {
     "name": "Spare the Dying",
     "description": "You touch a living creature that has 0 hit points. The creature becomes stable. This spell has no effect on undead or constructs.",
-    "emote": "",
+    "emote": "stabilizes the target",
     "source": "phb 277",
     "range": "Touch",
+    "target": "a living creature that has 0 hit points",
     "components": {
       "verbal": true,
       "somatic": true
@@ -8318,6 +8394,7 @@
     "castingTime": "1 action",
     "level": 0,
     "school": "Necromancy",
+    "effects": "The creature becomes stable. This spell has no effect on undead or constructs.",
     "classes": [
       "Cleric"
     ]
@@ -8325,7 +8402,7 @@
   {
     "name": "Speak with Animals",
     "description": "You gain the ability to comprehend and verbally communicate with beasts for the duration. The knowledge and awareness of many beasts is limited by their intelligence, but at a minimum, beasts can give you information about nearby locations and monsters, including whatever they can perceive or have perceived within the past day. You might be able to persuade a beast to perform a small favor for you, at the DM's discretion.",
-    "emote": "",
+    "emote": "gains the ability o comprehend verbally communicate with beasts",
     "source": "phb 277",
     "range": "Self",
     "components": {
@@ -8337,6 +8414,7 @@
     "castingTime": "1 action",
     "level": 1,
     "school": "Divination",
+    "effects": "You gain the ability to comprehend and verbally communicate with beasts for the duration. The knowledge and awareness of many beasts is limited by their intelligence, but at a minimum, beasts can give you information about nearby locations and monsters, including whatever they can perceive or have perceived within the past day. You might be able to persuade a beast to perform a small favor for you, at the DM's discretion.",
     "classes": [
       "Bard",
       "Cleric",
@@ -8802,9 +8880,10 @@
   {
     "name": "Tasha's Hideous Laughter",
     "description": "A creature of your choice that you can see within range perceives everything as hilariously funny and falls into fits of laughter if this spell affects it. The target must succeed on a Wisdom saving throw or fall prone, becoming incapacitated and unable to stand up for the duration. A creature with an Intelligence score of 4 or less isn't affected.<br>At the end of each of its turns, and each time it takes damage, the target can make another Wisdom saving throw. The target had advantage on the saving throw if it's triggered by damage. On a success, the spell ends.",
-    "emote": "",
+    "emote": "enchants a creature to perceive everything as hilariously funny and fall into fits of laughter if this spell affects it",
     "source": "phb 280",
     "range": "30 ft",
+    "target": "a creature that you can see within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -8816,6 +8895,11 @@
     "castingTime": "1 action",
     "level": 1,
     "school": "Enchantment",
+    "save": {
+      "ability": "wisdom",
+      "saveFailure": "or fall prone, becoming incapacitated and unable to stand up for the duration"
+    },
+    "effects": "A creature with an Intelligence score of 4 or less isn't affected.<br>At the end of each of its turns, and each time it takes damage, the target can make another Wisdom saving throw. The target had advantage on the saving throw if it's triggered by damage. On a success, the spell ends.",
     "classes": [
       "Bard",
       "Warlock",
@@ -8912,9 +8996,11 @@
   {
     "name": "Tenser's Floating Disk",
     "description": "This spell creates a circular, horizontal plane of force, 3 feet in diameter and 1 inch thick, that floats 3 feet above the ground in an unoccupied space of your choice that you can see within range. The disk remains for the duration, and can hold up to 500 pounds. If more weight is placed on it, the spell ends, and everything on the disk falls to the ground.<br>The disk is immobile while you are within 20 feet of it. If you move more than 20 feet away from it, the disk follows you so that it remains within 20 feet of you. If can move across uneven terrain, up or down stairs, slopes and the like, but it can't cross an elevation change of 10 feet or more. For example, the disk can't move across a 10-foot-deep pit, nor could it leave such a pit if it was created at the bottom.<br>If you move more than 100 feet away from the disk (typically because it can't move around an obstacle to follow you), the spell ends.",
-    "emote": "",
+    "emote": "creates a circular, horizontal plane of force",
     "source": "phb 282",
     "range": "30 ft",
+    "target": "a point within range that you can see",
+    "aoe": "3 ft in diameter and 1 inch thick",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -8926,6 +9012,7 @@
     "castingTime": "1 action",
     "level": 1,
     "school": "Conjuration",
+    "effects": "The disk remains for the duration, and can hold up to 500 lbs. If more weight is placed on it, the spell ends, and everything on the disk falls to the ground.<br>The disk is immobile while you are within 20 ft of it. If you move more than 20 ft away from it, the disk follows you so that it remains within 20 ft of you. If can move across uneven terrain, up or down stairs, slopes and the like, but it can't cross an elevation change of 10 ft or more. For example, the disk can't move across a 10 ftdeep pit, nor could it leave such a pit if it was created at the bottom.<br>If you move more than 100 ft away from the disk (typically because it can't move around an obstacle to follow you), the spell ends.",
     "classes": [
       "Wizard"
     ]
@@ -8933,9 +9020,10 @@
   {
     "name": "Thaumaturgy",
     "description": "You manifest a minor wonder, a sign of supernatural power, within range. You create one of the following magical effects within range.<br>- Your voice booms up to three times as loud as normal for 1 minute.<br>- You cause flames to flicker, brighten, dim, or change color for 1 minute.<br>- You cause harmless tremors in the ground for 1 minute.<br>- You create an instantaneous sound that originates from a point of your choice within range, such as a rumble of thunder, the cry of a raven, or ominous whispers.<br>- You instantaneously cause an unlocked door or window to fly open or slam shut.<br>- You alter the appearance of your eyes for 1 minute.<br>If you cast this spell multiple times, you can have up to three of its 1-minute effects active at a time, and you can dismiss such an effect as an action.",
-    "emote": "",
+    "emote": "manifests a minor wonder, a sign of supernatural power",
     "source": "phb 282",
     "range": "30 ft",
+    "target": "a point within range",
     "components": {
       "verbal": true
     },
@@ -8943,6 +9031,7 @@
     "castingTime": "1 action",
     "level": 0,
     "school": "Transmutation",
+    "effects": "You create one of the following magical effects within range.<br>- Your voice booms up to three times as loud as normal for 1 minute.<br>- You cause flames to flicker, brighten, dim, or change color for 1 minute.<br>- You cause harmless tremors in the ground for 1 minute.<br>- You create an instantaneous sound that originates from a point of your choice within range, such as a rumble of thunder, the cry of a raven, or ominous whispers.<br>- You instantaneously cause an unlocked door or window to fly open or slam shut.<br>- You alter the appearance of your eyes for 1 minute.<br>If you cast this spell multiple times, you can have up to three of its 1-minute effects active at a time, and you can dismiss such an effect as an action.",
     "classes": [
       "Cleric"
     ]
