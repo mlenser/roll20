@@ -6796,10 +6796,12 @@
   },
   {
     "name": "Poison Spray",
-    "description": "You extend your hand toward a creature you can see within range and project a puff of noxious gas from your palm. The creature must succeed on a constitution saving throw or take 1d12 poison damage.<br>This spell's damage increases by 1d12 when you reach 5th level (2d12), 11th level (3d12), and 17th level (4d12).",
-    "emote": "",
+    "description": "You extend your hand toward a creature you can see within range and project a puff of noxious gas from your palm. The creature must succeed on a constitution saving throw or take 1d12 poison damage.",
+    "higherLevel": "This spell's damage increases by 1d12 when you reach 5th level (2d12), 11th level (3d12), and 17th level (4d12).",
+    "emote": "extends {{GENDER_PRONOUN_HIS_HER}} hand toward a creature and project a puff of noxious gas from {{GENDER_PRONOUN_HIS_HER}} palm",
     "source": "phb 266",
     "range": "10 ft",
+    "target": "a creature you can see within range",
     "components": {
       "verbal": true,
       "somatic": true
@@ -6808,6 +6810,11 @@
     "castingTime": "1 action",
     "level": 0,
     "school": "Conjuration",
+    "save": {
+      "ability": "constitution",
+      "damage": "((@{level} + 1) / 6 + 0.5)d12",
+      "damageType": "poison"
+    },
     "classes": [
       "Sorcerer",
       "Warlock",
@@ -7003,10 +7010,11 @@
   },
   {
     "name": "Produce Flame",
-    "description": "A flickering flame appears in your hand. The flame remains there for the duration and harms neither you nor your equipment. The flame sheds bright light in a 10-foot radius and dim light for an additional 10 feet. The spell ends if you dismiss it as an action or if you cast it again.<br>You can also attack with the flame, although doing so ends the spell. When you cast this spell, or as an action on a later turn, you can hurl the flame at a creature within 30 feet of you. Make a ranged spell attack. On a hit, the target takes 1d8 fire damage.<br>This spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).",
-    "emote": "",
+    "description": "A flickering flame appears in your hand. The flame remains there for the duration and harms neither you nor your equipment. The flame sheds bright light in a 10-foot radius and dim light for an additional 10 feet. The spell ends if you dismiss it as an action or if you cast it again.<br>You can also attack with the flame, although doing so ends the spell. When you cast this spell, or as an action on a later turn, you can hurl the flame at a creature within 30 feet of you. Make a ranged spell attack. On a hit, the target takes 1d8 fire damage.",
+    "higherLevel": "This spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).",
+    "emote": "conjures a flickering flame appears in {{GENDER_PRONOUN_HIS_HER}} hand",
     "source": "phb 269",
-    "range": "Self",
+    "range": "30 ft",
     "components": {
       "verbal": true,
       "somatic": true
@@ -7015,6 +7023,11 @@
     "castingTime": "1 action",
     "level": 0,
     "school": "Conjuration",
+    "attack": {
+      "damage": "((@{level} + 1) / 6 + 0.5)d8",
+      "damageType": "fire"
+    },
+    "effects": "The flame remains there for the duration and harms neither you nor your equipment. The flame sheds bright light in a 10-foot radius and dim light for an additional 10 feet. The spell ends if you dismiss it as an action or if you cast it again.<br>You can also attack with the flame, although doing so ends the spell. When you cast this spell, or as an action on a later turn, you can hurl the flame at a creature within range.",
     "classes": [
       "Druid"
     ]
@@ -7837,10 +7850,12 @@
   },
   {
     "name": "Shocking Grasp",
-    "description": "Lightning springs from your hand to deliver a shock to a creature you try to touch. Make a melee spell attack against the target. You have advantage on the attack roll if the target is wearing armor made of metal. On a hit, the target takes 1d8 lightning damage, and it can't take reactions until the start of its next turn.<br>The spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).",
-    "emote": "",
+    "description": "Lightning springs from your hand to deliver a shock to a creature you try to touch. Make a melee spell attack against the target. You have advantage on the attack roll if the target is wearing armor made of metal. On a hit, the target takes 1d8 lightning damage, and it can't take reactions until the start of its next turn.",
+    "higherLevel": "The spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).",
+    "emote": "'s hand shoots forth lightning to deliver a shock to a creature",
     "source": "phb 275",
     "range": "Touch",
+    "target": "a creature",
     "components": {
       "verbal": true,
       "somatic": true
@@ -7849,6 +7864,11 @@
     "castingTime": "1 action",
     "level": 0,
     "school": "Evocation",
+    "attack": {
+      "damage": "((@{level} + 1) / 6 + 0.5)d8",
+      "damageType": "lightning"
+    },
+    "effects": "ou have advantage on the attack roll if the target is wearing armor made of metal. On a hit the target can't take reactions until the start of its next turn.",
     "classes": [
       "Sorcerer",
       "Wizard"
