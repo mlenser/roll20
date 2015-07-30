@@ -2013,6 +2013,14 @@
       }
     }
 
+    if(spell.heal) {
+      setAttribute(spellBase + 'spell_toggle_healing', '@{@{spell_var_healing}}');
+      setAttribute(spellBase + 'spellhealamount', spell.heal.amount);
+      if(spell.heal.castingStat) {
+        setAttribute(spellBase + 'spellhealamount', spell.heal.castingStat);
+      }
+    }
+
 
     //TODO: {{GENDER_PRONOUN_HE_SHE}}, {{GENDER_PRONOUN_HIM_HER}}, {{GENDER_PRONOUN_HIS_HER}}, {{GENDER_PRONOUN_HIMSELF_HERSELF}}
 
