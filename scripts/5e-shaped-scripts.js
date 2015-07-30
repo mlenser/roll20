@@ -2016,29 +2016,7 @@
         .replace('{{GENDER_PRONOUN_HIMSELF_HERSELF}}', himselfHerself);
 
       setAttribute(spellBase + 'spellemote', spell.emote);
-      setAttribute(spellBase + 'spellshowemote', '@{spellshowemotevar}');
-    }
-
-    if(spell.attack || spell.save) {
-      var intelligenceScore = parseInt(getAttrByName(characterId, 'intelligence', 'current') || 0, 10),
-        intelligenceBonus = parseInt(getAttrByName(characterId, 'intelligence_bonus', 'current') || 0, 10),
-        intelligenceMod = Math.floor((intelligenceScore-10)/2) + intelligenceBonus,
-        wisdomScore = parseInt(getAttrByName(characterId, 'wisdom', 'current') || 0, 10),
-        wisdomBonus = parseInt(getAttrByName(characterId, 'wisdom_bonus', 'current') || 0, 10),
-        wisdomMod = Math.floor((wisdomScore-10)/2) + wisdomBonus,
-        charismaScore = parseInt(getAttrByName(characterId, 'charisma', 'current') || 0, 10),
-        charismaBonus = parseInt(getAttrByName(characterId, 'charisma_bonus', 'current') || 0, 10),
-        charismaMod = Math.floor((charismaScore-10)/2) + charismaBonus,
-        highestCastingStat = Math.max(intelligenceMod, wisdomMod, charismaMod),
-        castingAbility;
-
-      if(highestCastingStat === wisdomMod) {
-        castingAbility = 'wisdom';
-      } else if(highestCastingStat === charismaMod) {
-        castingAbility = 'charisma';
-      } else {
-        castingAbility = 'intelligence';
-      }
+      setAttribute(spellBase + 'spell_toggle_emote', '@{spell_var_emote}');
     }
 
     if(spell.attack) {
@@ -2048,6 +2026,9 @@
         setAttribute(spellBase + 'spell_attack_toggle_damage', '@{spell_attack_var_damage}');
         setAttribute(spellBase + 'spell_attack_toggle_crit', '@{spell_attack_var_crit}');
         setAttribute(spellBase + 'spell_attack_dmg', spell.attack.damage);
+      }
+      if(spell.attack.castingStat) {
+        setAttribute(spellBase + 'spell_attack_dmg_stat', '@{casting_stat}');
       }
       if(spell.attack.damageType) {
         setAttribute(spellBase + 'spell_attack_dmg_type', spell.attack.damageType);
@@ -2063,6 +2044,9 @@
       setAttribute(spellBase + 'spell_attack_toggle_damage', '@{spell_attack_var_damage}');
       setAttribute(spellBase + 'spell_attack_dmg', spell.damage);
     }
+    if(spell.castingStat) {
+      setAttribute(spellBase + 'spell_attack_dmg_stat', '@{casting_stat}');
+    }
     if(spell.damageType) {
       setAttribute(spellBase + 'spell_attack_dmg_type', spell.damageType);
     }
@@ -2074,13 +2058,13 @@
     }
 
     if(spell.save) {
-      setAttribute(spellBase + 'spellshowsavethrow', '@{spellshowsavethrowvar}');
+      setAttribute(spellBase + 'spell_toggle_save', '@{spell_var_save}');
       if(spell.save.condition) {
         setAttribute(spellBase + 'savecondition', spell.save.condition);
       }
       if(spell.save.ability) {
         setAttribute(spellBase + 'savestat', capitalizeFirstLetter(spell.save.ability.substring(0, 3)));
-        setAttribute(spellBase + 'spellsavedc', '@{' + castingAbility + '_save_dc}');
+        setAttribute(spellBase + 'spellsavedc', '@{casting_stat_dc}');
       }
       if(spell.save.saveFailure) {
         setAttribute(spellBase + 'savefailure', spell.save.saveFailure);
