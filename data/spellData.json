@@ -721,7 +721,7 @@
     "emote": "turns the target's skin into a rough, bark-like appearance",
     "source": "phb 217",
     "range": "Touch",
-    "target":"a willing creature",
+    "target": "a willing creature",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -878,7 +878,7 @@
     "emote": "creates a vertical wall of whirling, razor-sharp blades made of magical energy",
     "source": "phb 218",
     "range": "90 ft",
-    "aoe":"a straight wall up to 100 ft long, 20 ft high, and 5 ft thick, or a ringed wall up to 60 ft in diameter, 20 ft high, and 5 ft thick",
+    "aoe": "a straight wall up to 100 ft long, 20 ft high, and 5 ft thick, or a ringed wall up to 60 ft in diameter, 20 ft high, and 5 ft thick",
     "components": {
       "verbal": true,
       "somatic": true
@@ -890,8 +890,8 @@
     "school": "Evocation",
     "save": {
       "ability": "dexterity",
-      "damage":"6d10",
-      "damageType":"slashing",
+      "damage": "6d10",
+      "damageType": "slashing",
       "saveSuccess": "half damage"
     },
     "effects": "The wall provides three-quarters cover to creatures behind it, and its space is difficult terrain.<br>When a creature enters the wall's area for the first time on a turn or starts its turn there, the creature must make a dexterity saving throw.",
