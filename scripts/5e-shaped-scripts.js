@@ -1920,7 +1920,7 @@
     }
     characterId = character.id;
 
-    if(spell.level === '0') {
+    if(spell.level === 0) {
       spellBase += 'cantrip_';
     } else {
       spellBase += 'level' + spell.level + '_';
