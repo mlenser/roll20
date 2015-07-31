@@ -42,7 +42,6 @@ Color Spray
 Commune with Nature
 Compelled Duel
 Compulsion
-Confusion
 Conjure Animals
 Conjure Barrage
 Conjure Celestial
@@ -85,7 +84,6 @@ Enlarge/Reduce
 Ensnaring Strike
 Entangle
 Enthrall
-Evard's Black Tentacles
 Expeditious Retreat
 Eyebite
 Fabricate
@@ -98,7 +96,6 @@ Feign Death
 Find Familiar
 Find Steed
 Find Traps
-Fire Shield
 Flame Blade
 Flesh to Stone
 Fog Cloud
@@ -118,7 +115,6 @@ Guards and Wards
 Gust of Wind
 Hail of Thorns
 Hallow
-Hallucinatory Terrain
 Heat Metal
 Hellish Rebuke
 Heroism
@@ -151,14 +147,12 @@ Mirror Image
 Mislead
 Modify Memory
 Moonbeam
-Mordenkainen's Faithful Hound
 Mordenkainen's Magnificent Mansion
 Mordenkainen's Private Sanctum
 Move Earth
 Nondetection
 Nystul's Magic Aura
 Otiluke's Freezing Sphere
-Otiluke's Resilient Sphere
 Pass without Trace
 Phantasmal Force
 Phantom Steed

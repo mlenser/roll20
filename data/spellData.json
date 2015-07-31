@@ -1683,9 +1683,10 @@
   {
     "name": "Compulsion",
     "description": "Creatures of your choice that you can see within range and that can hear you must make a Wisdom saving throw. A target automatically succeeds on this saving throw if it can't be charmed. On a failed save, a target is affected by this spell. Until the spell ends, you can use a bonus action on each of your turns to designate a direction that is horizontal to you. Each affected target must use as much of its movement as possible to move in that direction on its next turn. It can take any action before it moves. After moving in this way, it can make another Wisdom save to try to end the effect.<br>A target isn't compelled to move into an obviously deadly hazard, such as a fire or a pit, but it will provoke opportunity attacks to move in the designated direction.",
-    "emote": "",
+    "emote": "compells creatures to move away",
     "source": "phb 224",
     "range": "30 ft",
+    "target": "creatures of your choice that you can see within range and that can hear you",
     "components": {
       "verbal": true,
       "somatic": true
@@ -1695,6 +1696,11 @@
     "castingTime": "1 action",
     "level": 4,
     "school": "Enchantment",
+    "save": {
+      "ability": "wisdom",
+      "saveFailure": "affected by this spell"
+    },
+    "effects": "A target automatically succeeds on this saving throw if it can't be charmed.<br>Until the spell ends, you can use a bonus action on each of your turns to designate a direction that is horizontal to you. Each affected target must use as much of its movement as possible to move in that direction on its next turn. It can take any action before it moves. After moving in this way, it can make another Wisdom save to try to end the effect.<br>A target isn't compelled to move into an obviously deadly hazard, such as a fire or a pit, but it will provoke opportunity attacks to move in the designated direction.",
     "classes": [
       "Bard"
     ]
@@ -1736,11 +1742,13 @@
   },
   {
     "name": "Confusion",
-    "description": "This spell assails and distorts the minds of creatures, generating illusions and causing uncontrolled actions. Each creature in a sphere of 10-foot-radius centered on a point chosen in the range of the spell must make a Wisdom saving throw otherwise it will be affected by the spell.<br>An affected target can react and it must start at the beginning of 1d10 each of his game rounds to determine its behavior for that round.<br>At the end of each turn, an affected creature can make a saving throw of Wisdom. If successful, the effect of the spell ends for this target.",
+    "description": "This spell assaults and twists creatures' minds, spawning delusions and provoking uncontrolled action. Each creature in a 10-foot-radius sphere centered on a point you choose within range must succeed on a Wisdom saving throw when you cast this spell or be affected by it.<br>An affected target can't take reactions and must roll a d10 at the start of each of its turns to determine its behavior for that turn.<br>on a 1 the creature uses all its movement to move in a random direction. To determine the direction, roll a d8 and assign a direction to each die face. The creature doesn't take an action this turn.<br>on a 2-6 The creature doesn't move or take actions this turn.<br>on a 7-8 The creature uses its action to make a melee attack against a randomly determined creature within its reach. If there is no creature within its reach, the creature does nothing this turn.<br>on a 9-10 The creature can act and move normally.<br>At the end of each of its turns, an affected target can make a Wisdom saving throw. If it succeeds. this effect ends for that target.",
     "higherLevel": "When you cast this spell using a level spell slot 5 or more, the radius of the sphere increases by 5 feet for each level of higher spell slot to 4.",
-    "emote": "",
+    "emote": "assaults and twists creatures' minds, spawning delusions and provoking uncontrolled action",
     "source": "phb 224",
     "range": "90 ft",
+    "target": "each creature in the aoe",
+    "aoe": "10 ft radius sphere centered on a point within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -1752,6 +1760,11 @@
     "castingTime": "1 action",
     "level": 4,
     "school": "Enchantment",
+    "save": {
+      "ability": "wisdom",
+      "saveFailure": "affected by this spell"
+    },
+    "effects": "An affected target can't take reactions and must roll a d10 at the start of each of its turns to determine its behavior for that turn.<br>on a 1 the creature uses all its movement to move in a random direction. To determine the direction, roll a d8 and assign a direction to each die face. The creature doesn't take an action this turn.<br>on a 2-6 The creature doesn't move or take actions this turn.<br>on a 7-8 The creature uses its action to make a melee attack against a randomly determined creature within its reach. If there is no creature within its reach, the creature does nothing this turn.<br>on a 9-10 The creature can act and move normally.<br>At the end of each of its turns, an affected target can make a Wisdom saving throw. If it succeeds. this effect ends for that target.",
     "classes": [
       "Bard",
       "Cleric",
@@ -1881,7 +1894,7 @@
     "emote": "summons elementals",
     "source": "phb 226",
     "range": "90 ft",
-    "target": "unoccupied spaces that you can see within range",
+    "target": "elementals appear in unoccupied spaces that you can see within range",
     "components": {
       "verbal": true,
       "somatic": true
@@ -1891,7 +1904,7 @@
     "castingTime": "1 minute",
     "level": 4,
     "school": "Conjuration",
-    "effects": " You choose one the following options for what appears:<br>- One elemental of challenge rating 2 or lower<br>- Two elementals of challenge rating 1 or lower<br>- Four elementals of challenge rating 1/2 or lower<br>- Eight elementals of challenge rating 1/4 or lower.<br>An elemental summoned by this spell disappears when it drops to 0 hit points or when the spell ends.<br>The summoned creatures are friendly to you and your companions. Roll initiative for the summoned creatures as a group, which has its own turns. They obey any verbal commands that you issue to them (no action required by you). If you don't issue any commands to them, they defend themselves from hostile creatures, but otherwise take no actions.<br>The DM has the creatures' statistics.",
+    "effects": "You choose one the following options for what appears:<br>- One elemental of challenge rating 2 or lower<br>- Two elementals of challenge rating 1 or lower<br>- Four elementals of challenge rating 1/2 or lower<br>- Eight elementals of challenge rating 1/4 or lower.<br>An elemental summoned by this spell disappears when it drops to 0 hit points or when the spell ends.<br>The summoned creatures are friendly to you and your companions. Roll initiative for the summoned creatures as a group, which has its own turns. They obey any verbal commands that you issue to them (no action required by you). If you don't issue any commands to them, they defend themselves from hostile creatures, but otherwise take no actions.<br>The DM has the creatures' statistics.",
     "classes": [
       "Druid",
       "Wizard"
@@ -1921,9 +1934,10 @@
     "name": "Conjure Woodland Beings",
     "description": "You summon fey creatures that appear in unoccupied spaces that you can see within range. Choose one of the following options for what appears:<br>- One fey creature of challenge rating 2 or lower<br>- Two fey creatures of challenge rating 1 or lower<br>- Four fey creatures of challenge rating 1/2 or lower<br>- Eight fey creatures of challenge rating 1/4 or lower<br>A summoned creature disappears when it drops to 0 hit points or when the spell ends.<br>The summoned creatures are friendly to you and your companions. Roll initiative for the summoned creatures as a group, which have their own turns. They obey any verbal commands that you issue to them (no action required by you). If you don't issue any commands to them, they defend themselves from hostile creatures, but otherwise take no actions.<br>The DM has the creatures' statistics.",
     "higherLevel": "When you cast this spell using certain higher-level spell slots, you choose one of the summoning options above, and more creatures appear: twice as many with a 6th-level slot and three times as many with an 8th-level slot.",
-    "emote": "",
+    "emote": "summons fey creatures",
     "source": "phb 226",
     "range": "60 ft",
+    "target": "fey creatures appear in unoccupied spaces that you can see within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -1935,6 +1949,7 @@
     "castingTime": "1 action",
     "level": 4,
     "school": "Conjuration",
+    "effects": "Choose one of the following options for what appears:<br>- One fey creature of challenge rating 2 or lower<br>- Two fey creatures of challenge rating 1 or lower<br>- Four fey creatures of challenge rating 1/2 or lower<br>- Eight fey creatures of challenge rating 1/4 or lower<br>A summoned creature disappears when it drops to 0 hit points or when the spell ends.<br>The summoned creatures are friendly to you and your companions. Roll initiative for the summoned creatures as a group, which have their own turns. They obey any verbal commands that you issue to them (no action required by you). If you don't issue any commands to them, they defend themselves from hostile creatures, but otherwise take no actions.<br>The DM has the creatures' statistics.",
     "classes": [
       "Druid",
       "Ranger"
@@ -2047,6 +2062,7 @@
     "emote": "",
     "source": "phb 227",
     "range": "300 ft",
+    "target": "any freestanding water inside an area that is a cube up to 100 ft on a side",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -2058,6 +2074,7 @@
     "castingTime": "1 action",
     "level": 4,
     "school": "Transmutation",
+    "effects": "Until the spell ends, you control the target. You can choose from any of the following effects when you cast this spell. As an action on your turn, you can repeat the same effect or choose a different one.<br><b>Flood.</b> You cause the water level of all standing water in the area to rise by as much as 20 ft. If the area includes a shore, the flooding water spills over onto dry land.<br>instead create a 20 ft tall wave that travels from one side of the area to the other and then crashes down. Any Huge or smaller vehicles in the wave's path are carried with it to the other side. Any Huge or smaller vehicles struck by the wave have a 25% chance of capsizing.<br>The water level remains elevated until the spell ends or you choose a different effect. If this effect produced a wave, the wave repeats on the start of your next turn while the flood effect lasts.<br><b>Part Water.</b> You cause water in the area to move apart and create a trench. The trench extends across the spell's area, and the separated water forms a wall to either side. The trench remains until the spell ends or you choose a different effect. The water then slowly fills in the trench over the course of the next round until the normal water level is restored.<br><b>Redirect Flow.</b> You cause flowing water in the area to move in a direction you choose, even if the water has to flow over obstacles, up walls, or in other unlikely directions. The water in the area moves as you direct it, but once it moves beyond the spell's area, it resumes its flow based on the terrain conditions. The water continues to move in the direction you chose until the spell ends or you choose a different effect.<br><b>Whirlpool.</b> This effect requires a body of water at least 50 ft square and 25 ft deep. You cause a whirlpool to form in the center of the area. The whirlpool forms a vortex that is 5 ft wide at the base, up to 50 ft wide at the top, and 25 ft tall. Any creature or object in the water and within 25 ft of the vortex is pulled 10 ft toward it. A creature can swim away from the vortex by making a Strength (Athletics) check against your spell save DC.<br>When a creature enters the vortex for the first time on a turn or starts its turn there, it must make a Strength saving throw. On a failed save, the creature takes 2d8 bludgeoning damage and is caught in the vortex until the spell ends. On a successful save, the creature takes half damage, and isn't caught in the vortex. A creature caught in the vortex can use its action to try to swim away from the vortex as described above, but has disadvantage on the Strength (Athletics) check to do so.<br>The first time each turn that an object enters the vortex, the object takes 2d8 bludgeoning damage; this damage occurs each round it remains in the vortex.",
     "classes": [
       "Cleric",
       "Druid",
@@ -2476,9 +2493,10 @@
   {
     "name": "Death Ward",
     "description": "You touch a creature and grant it a measure of protection from death.<br>The first time the target would drop to 0 hit points as a result of taking damage, the target instead drops to 1 hit point, and the spell ends.<br>If the spell is still in effect when the target is subjected to an effect that would kill it instantaneously without dealing damage, that effect is instead negated against the target, and the spell ends.",
-    "emote": "",
+    "emote": "wards a creature a measure of protection from death",
     "source": "phb 230",
     "range": "Touch",
+    "target": "a creature",
     "components": {
       "verbal": true,
       "somatic": true
@@ -2487,6 +2505,7 @@
     "castingTime": "1 action",
     "level": 4,
     "school": "Abjuration",
+    "effects": "The first time the target would drop to 0 hit points as a result of taking damage, the target instead drops to 1 hit point, and the spell ends.<br>If the spell is still in effect when the target is subjected to an effect that would kill it instantaneously without dealing damage, that effect is instead negated against the target, and the spell ends.",
     "classes": [
       "Cleric",
       "Paladin"
@@ -2667,10 +2686,11 @@
   },
   {
     "name": "Dimension Door",
-    "description": "You teleport yourself from your current location to any other spot within range. You arrive at exactly the spot desired. It can be a place you can see, one you can visualize, or one you can describe by stating distance and direction, such as \"200 feet straight downward\" or \"upward to the northwest at a 45-degree angle, 300 feet.\"<br>You can bring along objects as long as their weight doesn't exceed what you can carry. You can also bring one willing creature of your size or smaller who is carrying gear up to its carrying capacity. The creature must be within 5 feet of you when you cast this spell.<br>If you would arrive in a place already occupied by an object or a creature, you and any creature traveling with you each take 4d6 force damage, and the spell fails to teleport you.",
-    "emote": "",
+    "description": "You teleport yourself from your current location to any other spot within range. You arrive at exactly the spot desired. It can be a place you can see, one you can visualize, or one you can describe by stating distance and direction, such as \"200 feet straight downward\" or \"upward to the northwest at a 45° angle, 300 feet.\"<br>You can bring along objects as long as their weight doesn't exceed what you can carry. You can also bring one willing creature of your size or smaller who is carrying gear up to its carrying capacity. The creature must be within 5 feet of you when you cast this spell.<br>If you would arrive in a place already occupied by an object or a creature, you and any creature traveling with you each take 4d6 force damage, and the spell fails to teleport you.",
+    "emote": "teleports away",
     "source": "phb 233",
     "range": "500 ft",
+    "target": "you and up to 1 willing creature of your size or smaller who is carrying gear up to its carrying capacity who must be within 5ft of you",
     "components": {
       "verbal": true
     },
@@ -2678,6 +2698,7 @@
     "castingTime": "1 action",
     "level": 4,
     "school": "Conjuration",
+    "effects": "You teleport yourself from your current location to any other spot within range. You arrive at exactly the spot desired. It can be a place you can see, one you can visualize, or one you can describe by stating distance and direction, such as \"200 ft straight downward\" or \"upward to the northwest at a 45° angle, 300 ft.\"<br>You can bring along objects as long as their weight doesn't exceed what you can carry.<br>If you would arrive in a place already occupied by an object or a creature, you and any creature traveling with you each take 4d6 ([[4d6]]) force damage, and the spell fails to teleport you.",
     "classes": [
       "Bard",
       "Cleric",
@@ -2827,7 +2848,7 @@
   {
     "name": "Divination",
     "description": "Your magic and an offering put you in contact with a god or a god's servants. You ask a single question concerning a specific goal, event, or activity to occur within 7 days. The DM offers a truthful reply. The reply might be a short phrase, a cryptic rhyme, or an omen.<br>The spell doesn't take into account any possible circumstances that might change the outcome, such as the casting of additional spells or the loss or gain of a companion.<br>If you cast the spell two or more times before finishing your next long rest, there is a cumulative 25 percent chance for each casting after the first that you get a random reading. The DM makes this roll in secret.",
-    "emote": "",
+    "emote": "'s magic and an offering puts {{GENDER_PRONOUN_HIM_HER}} in contact with a god or a god's servant.",
     "source": "phb 234",
     "range": "Self",
     "components": {
@@ -2841,6 +2862,7 @@
     "castingTime": "1 action",
     "level": 4,
     "school": "Divination",
+    "effects": "You ask a single question concerning a specific goal, event, or activity to occur within 7 days. The DM offers a truthful reply. The reply might be a short phrase, a cryptic rhyme, or an omen.<br>The spell doesn't take into account any possible circumstances that might change the outcome, such as the casting of additional spells or the loss or gain of a companion.<br>If you cast the spell two or more times before finishing your next long rest, there is a cumulative 25% chance for each casting after the first that you get a random reading. The DM makes this roll in secret.",
     "classes": [
       "Cleric",
       "Druid"
@@ -2895,9 +2917,10 @@
     "name": "Dominate Beast",
     "description": "You attempt to beguile a creature that you can see within range. It must succeed on a Wisdom saving throw or be charmed by you for the duration. If you or creatures that are friendly to you are fighting it, it has advantage on the saving throw.<br>While the creature is charmed, you have a telepathic link with it as long as the two of you are on the same plane of existence. You can use this telepathic link to issue commands to the creature while you are conscious (no action required), which it does its best to obey. You can specify a simple and general course of action, such as \"Attack that creature,\" \"Run over there,\" or \"Fetch that object.\" If the creature completes the order and doesn't receive further direction from you, it defends and preserves itself to the best of its ability.<br>You can use your action to take total and precise control of the target. Until the end of your next turn, the creature takes only the actions you choose, and doesn't do anything that you don't allow it to do. During this time, you can also cause the creature to use a reaction, but this requires you to use your own reaction as well. Each time the target takes damage, it makes a new Wisdom saving throw against the spell. If the saving throw succeeds, the spell ends.",
     "higherLevel": "When you cast this spell with a 9th level spell slot, the duration is concentration, up to 8 hours.",
-    "emote": "",
+    "emote": "attempts to beguile a creature",
     "source": "phb 234",
     "range": "60 ft",
+    "target": "a creature that you can see within range",
     "components": {
       "verbal": true,
       "somatic": true
@@ -2907,6 +2930,11 @@
     "castingTime": "1 action",
     "level": 4,
     "school": "Enchantment",
+    "save": {
+      "ability": "wisdom",
+      "saveFailure": "become charmed by you for the duration"
+    },
+    "effects": "If you or creatures that are friendly to you are fighting it, it has advantage on the saving throw.<br>While the creature is charmed, you have a telepathic link with it as long as the two of you are on the same plane of existence. You can use this telepathic link to issue commands to the creature while you are conscious (no action required), which it does its best to obey. You can specify a simple and general course of action, such as \"Attack that creature,\" \"Run over there,\" or \"Fetch that object.\" If the creature completes the order and doesn't receive further direction from you, it defends and preserves itself to the best of its ability.<br>You can use your action to take total and precise control of the target. Until the end of your next turn, the creature takes only the actions you choose, and doesn't do anything that you don't allow it to do. During this time, you can also cause the creature to use a reaction, but this requires you to use your own reaction as well. Each time the target takes damage, it makes a new Wisdom saving throw against the spell. If the saving throw succeeds, the spell ends.",
     "classes": [
       "Cleric",
       "Druid",
@@ -3183,9 +3211,10 @@
     "name": "Elemental Bane",
     "description": "Choose one creature you can see within range, and choose one of the following damage types: acid, cold, fire, lightning, or thunder. The target must succeed on a Constitution saving throw or be affected by the spell for its duration. The first time each turn the affected target takes damage of the chosen type, the target takes an extra 2d6 damage of that type. Moreover, the target loses any resistance to that damage type until the spell ends.",
     "higherLevel": "When you cast this spell using a spell slot of 5th level or higher, you can target one additional creature for each slot level above 4th. The creatures must be within 30 feet of each other when you target them.",
-    "emote": "",
+    "emote": "causes a creature to to be vulnerable to an element",
     "source": "ee pc 17",
     "range": "90 ft",
+    "target": "1 creature you can see within range",
     "components": {
       "verbal": true,
       "somatic": true
@@ -3195,6 +3224,11 @@
     "castingTime": "1 action",
     "level": 4,
     "school": "Transmutation",
+    "save": {
+      "ability": "constitution",
+      "saveFailure": "The first time each turn the affected target takes damage of the chosen type, the target takes an extra 2d6 ([[2d6]]) damage of that type. Moreover, the target loses any resistance to that damage type until the spell ends.",
+    },
+    "effects": "choose one of the following damage types: acid, cold, fire, lightning, or thunder. The target must succeed on a Constitution saving throw as outlined above.",
     "classes": [
       "Druid",
       "Warlock",
@@ -3404,10 +3438,11 @@
   },
   {
     "name": "Evard's Black Tentacles",
-    "description": "Dark writhing tentacles occupy the ground in a square of 90 feet ridge you can see the range of the spell. For the duration of the spell, the tentacles make the difficult terrain.<br>When a creature enters the affected area for the first time in a turn or where it begins its turn, it must make a Dexterity saving throw or it suffers 3d6 bludgeoning damage and is hampered by tentacles until the end of the spell. A creature that starts its turn in the area and is already hampered by the tentacles suffers 3d6 bludgeoning damage.<br>A creature hampered by the tentacles can use his action to a test Strength or Dexterity (at its option) opposite to the SD backup of your fate. If successful, it is free.",
-    "emote": "",
+    "description": "Squirming, ebony tentacles fill a 20-foot square on ground that you can see within range. For the duration, these tentacles turn the ground in the area into difficult terrain. When a creature enters the affected area for the first time on a turn or starts its turn there, the creature must succeed on a Dexterity saving throw or take 3d6 bludgeoning damage and be restrained by the tentacles until the spell ends. A creature that starts its turn in the area and is already restrained by the tentacles takes 3d6 bludgeoning damage. A creature restrained by the tentacles can use its action to make a Strength or Dexterity check (its choice) against your spell save DC. On a success, it frees itself.",
+    "emote": "conjures squirming, ebony tentacles",
     "source": "phb 238",
     "range": "90 ft",
+    "aoe": "20 ft square on ground that you can see within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -3419,6 +3454,13 @@
     "castingTime": "1 action",
     "level": 4,
     "school": "Conjuration",
+    "save": {
+      "ability": "dexterity",
+      "damage": "3d6",
+      "damageType": "bludgeoning",
+      "saveFailure": "restrained for the spell's duration"
+    },
+    "effects": "For the duration, these tentacles turn the ground in the area into difficult terrain. When a creature enters the affected area for the first time on a turn or starts its turn there, the creature must succeed on a Dexterity saving throw as outlined above. A creature that starts its turn in the area and is already restrained by the tentacles takes the damage again. A creature restrained by the tentacles can use its action to make a Strength or Dexterity check (its choice) against your spell save DC. On a success, it frees itself.",
     "classes": [
       "Warlock",
       "Wizard"
@@ -3474,7 +3516,7 @@
   {
     "name": "Fabricate",
     "description": "You convert raw materials into products of the same material. For example, you can fabricate a wooden bridge from a clump of trees, a rope from a patch of hemp, and clothes from flax or wool.<br>Choose raw materials that you can see within range. You can fabricate a Large or smaller object (contained within a 10-foot cube, or eight connected 5-foot cubes), given a sufficient quantity of raw material. If you are working with metal, stone, or another mineral substance, however, the fabricated object can be no larger than Medium (contained within a single 5-foot cube). The quality of objects made by the spell is commensurate with the quality of the raw materials.<br>Creatures or magic items can't be created or transmuted by this spell. You also can't use it to create items that ordinarily require a high degree of craftsmanship, such as jewelry, weapons, glass, or armor, unless you have proficiency with the type of artisan's tools used to craft such objects.",
-    "emote": "",
+    "emote": "transmutes raw materials into products of the same material. For example, {{GENDER_PRONOUN_HE_SHE}} can fabricate a wooden bridge from a clump of trees, a rope from a patch of hemp, and clothes from flax or wool.",
     "source": "phb 239",
     "range": "120 ft",
     "components": {
@@ -3485,6 +3527,7 @@
     "castingTime": "10 minutes",
     "level": 4,
     "school": "Transmutation",
+    "effects": "Choose raw materials that you can see within range. You can fabricate a Large or smaller object (contained within a 10 ft cube, or eight connected 5 ft cubes), given a sufficient quantity of raw material. If you are working with metal, stone, or another mineral substance, however, the fabricated object can be no larger than Medium (contained within a single 5-foot cube). The quality of objects made by the spell is commensurate with the quality of the raw materials.<br>Creatures or magic items can't be created or transmuted by this spell. You also can't use it to create items that ordinarily require a high degree of craftsmanship, such as jewelry, weapons, glass, or armor, unless you have proficiency with the type of artisan's tools used to craft such objects.",
     "classes": [
       "Wizard"
     ]
@@ -3804,8 +3847,8 @@
   },
   {
     "name": "Fire Shield",
-    "description": "Thin and vaporous flame surround your body for the duration of the spell, radiating a bright light bright light in a 10-foot radius and dim light for an additional 10 feet. You can end the spell using an action to make it disappear.<br>The flames are around you a heat shield or cold, your choice. The heat shield gives you cold damage resistance and the cold resistance to fire damage.<br>In addition, whenever a creature within 5 feet of you hits you with a melee attack, flames spring from the shield. The attacker then suffers 2d8 points of fire damage or cold, depending on the model. ",
-    "emote": "",
+    "description": "Thin and vaporous flame surround your body for the duration of the spell, radiating a bright light bright light in a 10-foot radius and dim light for an additional 10 feet. You can end the spell using an action to make it disappear.<br>The flames are around you a heat shield or cold, your choice. The heat shield gives you cold damage resistance and the cold resistance to fire damage.<br>In addition, whenever a creature within 5 feet of you hits you with a melee attack, flames spring from the shield. The attacker then suffers 2d8 points of fire damage or cold, depending on the model.",
+    "emote": "evokes thin and vaporous flames that surround {{GENDER_PRONOUN_HIS_HER}} body, radiating a bright light bright light in a 10 ft radius and dim light for an additional 10 ft",
     "source": "phb 242",
     "range": "Self",
     "components": {
@@ -3818,6 +3861,7 @@
     "castingTime": "1 action",
     "level": 4,
     "school": "Evocation",
+    "effects": "You can end the spell using an action to make it disappear.<br>The flames are around you a heat shield or cold, your choice. The heat shield gives you cold damage resistance and the cold resistance to fire damage.<br>In addition, whenever a creature within 5 ft of you hits you with a melee attack, flames spring from the shield. The attacker then suffers 2d8 points of fire damage or cold, depending on the model.",
     "classes": [
       "Warlock",
       "Wizard"
@@ -4111,9 +4155,10 @@
   {
     "name": "Freedom of Movement",
     "description": "You touch a willing creature. For the duration, the target's movement is unaffected by difficult terrain, and spells and other magical effects can neither reduce the target's speed nor cause the target to be paralyzed or restrained.<br>The target can also spend 5 feet of movement to automatically escape from nonmagical restraints, such as manacles or a creature that has it grappled. Finally, being underwater imposes no penalties on the target's movement or attacks.",
-    "emote": "",
+    "emote": "alters a creature to be as nimble as a cat",
     "source": "phb 244",
     "range": "Touch",
+    "target": "a willing creature",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -4124,6 +4169,7 @@
     "castingTime": "1 action",
     "level": 4,
     "school": "Abjuration",
+    "effects": "the target's movement is unaffected by difficult terrain, and spells and other magical effects can neither reduce the target's speed nor cause the target to be paralyzed or restrained.<br>The target can also spend 5 ft of movement to automatically escape from nonmagical restraints, such as manacles or a creature that has it grappled. Finally, being underwater imposes no penalties on the target's movement or attacks.",
     "classes": [
       "Bard",
       "Cleric",
@@ -4297,9 +4343,10 @@
   {
     "name": "Giant Insect",
     "description": "You transform up to ten centipedes, three spiders, five wasps, or one scorpion within range into giant versions of their natural forms for the duration. A centipede becomes a giant centipede, a spider becomes a giant spider, a wasp becomes a giant wasp, and a scorpion becomes a giant scorpion.<br>Each creature obeys your verbal commands, and in combat, they act on your turn each round. The DM has the statistics for these creatures and resolves their actions and movement.<br>A creature remains in its giant size for the duration, until it drops to 0 hit points, or until you use an action to dismiss the effect on it.<br>The DM might allow you to choose different targets. For example, if you transform a bee, its giant version might have the same statistics as a giant wasp.",
-    "emote": "",
+    "emote": "transmutes insects into giant versions of their natural forms",
     "source": "phb 245",
     "range": "30 ft",
+    "target": "up to 10 centipedes, 3 spiders, 5 wasps, or 1 scorpion within range",
     "components": {
       "verbal": true,
       "somatic": true
@@ -4309,6 +4356,7 @@
     "castingTime": "1 action",
     "level": 4,
     "school": "Transmutation",
+    "effects": "A centipede becomes a giant centipede, a spider becomes a giant spider, a wasp becomes a giant wasp, and a scorpion becomes a giant scorpion.<br>Each creature obeys your verbal commands, and in combat, they act on your turn each round. The DM has the statistics for these creatures and resolves their actions and movement.<br>A creature remains in its giant size for the duration, until it drops to 0 hit points, or until you use an action to dismiss the effect on it.<br>The DM might allow you to choose different targets. For example, if you transform a bee, its giant version might have the same statistics as a giant wasp.",
     "classes": [
       "Druid"
     ]
@@ -4401,10 +4449,12 @@
   },
   {
     "name": "Grasping Vine",
-    "description": "You conjure a vine that sprouts from the ground in an unoccupied space of your choice that you can see within range. When you cast this spell, you can direct the vine to lash out at a creature within 30 feet of it that you can see. That creature must succeed on a Dexterity saving throw or be pulled 20 feet directly toward the vine. <br>Until the spell ends, you can direct the vine to lash out at the same creature or another one as a bonus action on each of your turns.",
-    "emote": "",
+    "description": "You conjure a vine that sprouts from the ground in an unoccupied space of your choice that you can see within range. When you cast this spell, you can direct the vine to lash out at a creature within 30 feet of it that you can see. That creature must succeed on a Dexterity saving throw or be pulled 20 feet directly toward the vine.<br>Until the spell ends, you can direct the vine to lash out at the same creature or another one as a bonus action on each of your turns.",
+    "emote": "conjures a vine that sprouts from the ground",
     "source": "phb 246",
     "range": "30 ft",
+    "target": "a creature within 30 ft of the vine that you can see",
+    "aoe": "a vine in an unoccupied space of your choice that you can see within range",
     "components": {
       "verbal": true,
       "somatic": true
@@ -4414,6 +4464,11 @@
     "castingTime": "1 bonus action",
     "level": 4,
     "school": "Conjuration",
+    "save": {
+      "ability": "dexterity",
+      "saveFailure": "be pulled 20 ft directly toward the vine"
+    },
+    "effects": "When you cast this spell, you can direct the vine to lash out at a creature. That creature must succeed on a Dexterity saving throw as outlined above.<br>Until the spell ends, you can direct the vine to lash out at the same creature or another one as a bonus action on each of your turns.",
     "classes": [
       "Cleric",
       "Druid",
@@ -4452,9 +4507,10 @@
   {
     "name": "Greater Invisibility",
     "description": "You or a creature you touch becomes invisible until the spell ends. Anything the target is wearing or carrying is invisible as long as it is on the target's person.",
-    "emote": "",
+    "emote": "touches a creature who becomes invisible",
     "source": "phb 246",
     "range": "Touch",
+    "target": "a creature",
     "components": {
       "verbal": true,
       "somatic": true
@@ -4464,6 +4520,7 @@
     "castingTime": "1 action",
     "level": 4,
     "school": "Illusion",
+    "effects": "Anything the target is wearing or carrying is invisible as long as it is on the target's person.",
     "classes": [
       "Bard",
       "Druid",
@@ -4503,9 +4560,11 @@
   {
     "name": "Guardian of Faith",
     "description": "A Large spectral guardian appears and hovers for the duration in an unoccupied space of your choice that you can see within range. The guardian occupies that space and is indistinct except for a gleaming sword and shield emblazoned with the symbol of your deity.<br>Any creature hostile to you that moves to a space within 10 feet of the guardian for the first time on a turn must succeed on a Dexterity saving throw. The creature takes 20 radiant damage on a failed save, or half as much damage on a successful one. The guardian vanishes when it has dealt a total of 60 damage.",
-    "emote": "",
+    "emote": "conjures a Large spectral guardian that hovers",
     "source": "phb 246",
     "range": "30 ft",
+    "target": "any creature hostile to you that moves to a space within 10 ft of the guardian for the first time on a turn",
+    "aoe": "guardian in an unoccupied space that you can see within range",
     "components": {
       "verbal": true
     },
@@ -4513,6 +4572,14 @@
     "castingTime": "1 action",
     "level": 4,
     "school": "Conjuration",
+    "save": {
+      "ability": "dexterity",
+      "damage": "20",
+      "damageType": "radiant",
+      "saveSuccess": "half damage"
+    },
+    "effects": "The guardian occupies that space and is indistinct except for a gleaming sword and shield emblazoned with the symbol of your deity.<br>The guardian vanishes when it has dealt a total of 60 damage.",
+    "emote": "conjures a Large spectral guardian that hovers",
     "classes": [
       "Cleric",
       "Paladin"
@@ -4642,7 +4709,7 @@
       "ability": "strength",
       "saveFailure": "pushed 15 feet away from you in a direction following the line"
     },
-    "effects": "Any creature in the line must spend 2 feet of movement for every 1 foot it moves when moving closer to you.<br>The gust disperses gas or vapor, and it extinguishes candles, torches, and similar unprotected flames in the area. It causes protected flames, such as those of lanterns, to dance wildly and has a 50 percent chance to extinguish them.<br>As a bonus action on each of your turns before the spell ends, you can change the direction in which the line blasts from you.",
+    "effects": "Any creature in the line must spend 2 ft of movement for every 1 ft it moves when moving closer to you.<br>The gust disperses gas or vapor, and it extinguishes candles, torches, and similar unprotected flames in the area. It causes protected flames, such as those of lanterns, to dance wildly and has a 50% chance to extinguish them.<br>As a bonus action on each of your turns before the spell ends, you can change the direction in which the line blasts from you.",
     "classes": [
       "Cleric",
       "Druid",
@@ -4706,10 +4773,11 @@
   },
   {
     "name": "Hallucinatory Terrain",
-    "description": "The tactile characteristics of the terrain are unchanged, so creatures entering the area are likely to see through the illusion. If the difference isn't obvious by touch, a creature carefully examining the illusion can attempt an Intelligence (Investigation) check against your spell save DC to disbelieve it. A creature who discerns the illusion for what it is, sees it as a vague image superimposed on the terrain.",
-    "emote": "",
+    "description": "You make natural terrain in a 150-foot cube in range look, sound, and smell like some other sort of natural terrain. Thus, open fields or a road can be made to resemble a swamp, hill, crevasse, or some other difficult or impassable terrain. A pond can be made to seem like a grassy meadow, a precipice like a gentle slope, or a rock-strewn gully like a wide and smooth road. Manufactured structures, equipment, and creatures within the area aren't changed in appearance.<br>The tactile characteristics of the terrain are unchanged, so creatures entering the area are likely to see through the illusion. If the difference isn't obvious by touch, a creature carefully examining the illusion can attempt an Intelligence (Investigation) check against your spell save DC to disbelieve it. A creature who discerns the illusion for what it is, sees it as a vague image superimposed on the terrain.",
+    "emote": "makes natural terrain look, sound, and smell like some other sort of natural terrain",
     "source": "phb 249",
     "range": "300 ft",
+    "target": "natural terrain in a 150 ft cube",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -4720,6 +4788,7 @@
     "castingTime": "10 minutes",
     "level": 4,
     "school": "Illusion",
+    "effects": "Open fields or a road can be made to resemble a swamp, hill, crevasse, or some other difficult or impassable terrain. A pond can be made to seem like a grassy meadow, a precipice like a gentle slope, or a rock-strewn gully like a wide and smooth road. Manufactured structures, equipment, and creatures within the area aren't changed in appearance.<br>The tactile characteristics of the terrain are unchanged, so creatures entering the area are likely to see through the illusion. If the difference isn't obvious by touch, a creature carefully examining the illusion can attempt an Intelligence (Investigation) check against your spell save DC to disbelieve it. A creature who discerns the illusion for what it is, sees it as a vague image superimposed on the terrain.",
     "classes": [
       "Bard",
       "Druid",
@@ -5544,7 +5613,7 @@
   {
     "name": "Leomund's Secret Chest",
     "description": "You hide a chest, and all its contents, on the Ethereal Plane. You must touch the chest and the miniature replica that serves as a material component for the spell. The chest can contain up to 12 cubic feet of nonliving material (3 feet by 2 feet by 2 feet).<br>While the chest remains on the Ethereal Plane, you can use an action and touch the replica to recall the chest. It appears in an unoccupied space on the ground within 5 feet of you. You can send the chest back to the Ethereal Plane by using an action and touching both the chest and the replica.<br>After 60 days, there is a cumulative 5 percent chance per day that the spell's effect ends. This effect ends if you cast this spell again, if the smaller replica chest is destroyed, or if you choose to end the spell as an action. If the spell ends and the larger chest is on the Ethereal Plane, it is irretrievably lost.",
-    "emote": "",
+    "emote": "hides a chest, and all its contents, on the Ethereal Plane",
     "source": "phb 254",
     "range": "Touch",
     "components": {
@@ -5557,6 +5626,7 @@
     "castingTime": "1 action",
     "level": 4,
     "school": "Conjuration",
+    "effects": "You must touch the chest and the miniature replica that serves as a material component for the spell. The chest can contain up to 12 cubic ft of nonliving material (3 ft by 2 ft by 2 ft).<br>While the chest remains on the Ethereal Plane, you can use an action and touch the replica to recall the chest. It appears in an unoccupied space on the ground within 5 ft of you. You can send the chest back to the Ethereal Plane by using an action and touching both the chest and the replica.<br>After 60 days, there is a cumulative 5% chance per day that the spell's effect ends. This effect ends if you cast this spell again, if the smaller replica chest is destroyed, or if you choose to end the spell as an action. If the spell ends and the larger chest is on the Ethereal Plane, it is irretrievably lost.",
     "classes": [
       "Wizard"
     ]
@@ -5749,7 +5819,7 @@
   {
     "name": "Locate Creature",
     "description": "Describe or name a creature that is familiar to you. You sense the direction to the creature's location, as long as that creature is within 1,000 feet of you. If the creature is moving, you know the direction of its movement.<br>The spell can locate a specific creature known to you, or the nearest creature of a specific kind (such as a human or a unicorn), so long as you have seen such a creature up close—within 30 feet—at least once. If the creature you described or named is in a different form, such as being under the effects of a polymorph spell, this spell doesn't locate the creature.<br>This spell can't locate a creature if running water at least 10 feet wide blocks a direct path between you and the creature.",
-    "emote": "",
+    "emote": "describes or names a creature that is familiar to {{GENDER_PRONOUN_HIS_HER}} and senses the direction to the creature's location, as long as that creature is within 1,000 ft",
     "source": "phb 256",
     "range": "Self",
     "components": {
@@ -5763,6 +5833,7 @@
     "castingTime": "1 action",
     "level": 4,
     "school": "Divination",
+    "effects": "If the creature is moving, you know the direction of its movement.<br>The spell can locate a specific creature known to you, or the nearest creature of a specific kind (such as a human or a unicorn), so long as you have seen such a creature up close—within 30 feet—at least once. If the creature you described or named is in a different form, such as being under the effects of a polymorph spell, this spell doesn't locate the creature.<br>This spell can't locate a creature if running water at least 10 ft wide blocks a direct path between you and the creature.",
     "classes": [
       "Bard",
       "Cleric",
@@ -6578,10 +6649,11 @@
   },
   {
     "name": "Mordenkainen's Faithful Hound",
-    "description": "You create a sword-shaped plane of force that hovers within range. It lasts for the duration.<br>When the sword appears, you make a melee spell attack against a target of your choice within 5 feet of the sword. On a hit, the target takes 3d10 force damage. Until the spell ends, you can use a bonus action on each of your turns to move the sword up to 20 feet to a spot you can see and repeat this attack against the same target or a different one.",
-    "emote": "",
+    "description": "You conjure a phantom watchdog in an unoccupied space that you can see within range, where it remains for the duration, until you dismiss it as an action, or until you move more than 100 feet away from it.<br>The hound is invisible to all creatures except you and can't be harmed. When a Small or larger creature comes within 30 feet of it without first speaking the password that you specify when you cast this spell, the hound starts barking loudly. The hound sees invisible creatures and can see into the Ethereal Plane. It ignores illusions.<br>At the start of each of your turns, the hound attempts to bite one creature within 5 feet of it that is hostile to you. The hound's attack bonus is equal to your spellcasting ability modifier + your proficiency bonus. On a hit, it deals 4d8 piercing damage.",
+    "emote": "conjures a phantom watchdog",
     "source": "phb 261",
     "range": "30 ft",
+    "aoe": "phantom watchdog in an unoccupied space that you can see within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -6592,6 +6664,11 @@
     "castingTime": "1 action",
     "level": 4,
     "school": "Conjuration",
+    "attack": {
+      "damage": "4d8",
+      "damageType": "piercing"
+    },
+    "effects": "The hound remains for the duration, until you dismiss it as an action, or until you move more than 100 ft away from it.<br>The hound is invisible to all creatures except you and can't be harmed. When a Small or larger creature comes within 30 ft of it without first speaking the password that you specify when you cast this spell, the hound starts barking loudly. The hound sees invisible creatures and can see into the Ethereal Plane. It ignores illusions.<br>At the start of each of your turns, the hound attempts to bite one creature within 5 ft of it that is hostile to you. It deals 4d8 piercing damage.",
     "classes": [
       "Wizard"
     ]
@@ -6621,9 +6698,10 @@
     "name": "Mordenkainen's Private Sanctum",
     "description": "You make an area within range magically secure. The area is a cube that can be as small as 5 feet to as large as 100 feet on each side. The spell lasts for the duration or until you use an action to dismiss it.<br>until you use an action to dismiss it. When you cast the spell, you decide what sort of security the spell provides, choosing any or all of the following properties:<br>- Sound can't pass through the barrier at the edge of the warded area.<br>- The barrier of the warded area appears dark and foggy, preventing vision (including darkvision) through it.<br>- Sensors created by divination spells can't appear inside the protected area or pass through the barrier at its perimeter.<br>- Creatures in the area can't be targeted by divination spells.<br>- Nothing can teleport into or out of the warded area.<br>- Planar travel is blocked within the warded area.<br>Casting this spell on the same spot every day for a year makes this effect permanent.",
     "higherLevel": "When you cast this spell using a spell slot of 5th level or higher, you can increase the size of the cube by 100 feet for each slot level beyond 4th. Thus you could protect a cube that can be up to 200 feet on one side by using a spell slot of 5th level.",
-    "emote": "",
+    "emote": "makes an area magically secure",
     "source": "phb 262",
     "range": "120 ft",
+    "aoe": "a cube that can be as small as 5 ft to as large as 100 ft on each side",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -6634,6 +6712,7 @@
     "castingTime": "10 minutes",
     "level": 4,
     "school": "Abjuration",
+    "effects": "The spell lasts for the duration or until you use an action to dismiss it.<br>until you use an action to dismiss it. When you cast the spell, you decide what sort of security the spell provides, choosing any or all of the following properties:<br>- Sound can't pass through the barrier at the edge of the warded area.<br>- The barrier of the warded area appears dark and foggy, preventing vision (including darkvision) through it.<br>- Sensors created by divination spells can't appear inside the protected area or pass through the barrier at its perimeter.<br>- Creatures in the area can't be targeted by divination spells.<br>- Nothing can teleport into or out of the warded area.<br>- Planar travel is blocked within the warded area.<br>Casting this spell on the same spot every day for a year makes this effect permanent.",
     "classes": [
       "Wizard"
     ]
@@ -6755,9 +6834,10 @@
   {
     "name": "Otiluke's Resilient Sphere",
     "description": "A sphere of shimmering force encloses a creature or object of Large size or smaller within range. An unwilling creature must make a Dexterity saving throw. On a failed save, the creature is enclosed for the duration.<br>Nothing—not physical objects, energy, or other spell effects—can pass through the barrier, in or out, though a creature in the sphere can breathe there. The sphere is immune to all damage, and a creature or object inside can't be damaged by attacks or effects originating from outside, nor can a creature inside the sphere damage anything outside it.<br>The sphere is weightless and just large enough to contain the creature or object inside. An enclosed creature can use its action to push against the sphere's walls and thus roll the sphere at up to half the creature's speed. Similarly, the globe can be picked up and moved by other creatures.<br>A disintegrate spell targeting the globe destroys it without harming anything inside it.",
-    "emote": "",
+    "emote": "evokes a sphere of shimmering force encloses a creature or object",
     "source": "phb 264",
     "range": "30 ft",
+    "target": "a creature or object of Large size or smaller within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -6769,6 +6849,11 @@
     "castingTime": "1 action",
     "level": 4,
     "school": "Evocation",
+    "save": {
+      "ability": "dexterity",
+      "saveFailure": "the creature is enclosed for the duration."
+    },
+    "effects": "An unwilling creature must make a Dexterity saving throw as outlined above.<br>Nothing—not physical objects, energy, or other spell effects—can pass through the barrier, in or out, though a creature in the sphere can breathe there. The sphere is immune to all damage, and a creature or object inside can't be damaged by attacks or effects originating from outside, nor can a creature inside the sphere damage anything outside it.<br>The sphere is weightless and just large enough to contain the creature or object inside. An enclosed creature can use its action to push against the sphere's walls and thus roll the sphere at up to half the creature's speed. Similarly, the globe can be picked up and moved by other creatures.<br>A disintegrate spell targeting the globe destroys it without harming anything inside it.",
     "classes": [
       "Wizard"
     ]
@@ -6883,11 +6968,12 @@
   },
   {
     "name": "Phantasmal Killer",
-    "description": "You tap into the nightmares of a creature you can see within range and create an illusory manifestation of its deepest fears, visible only to that creature. The target must make a Wisdom saving throw. On a failed save, the target becomes frightened for the duration. At the start of each of the target's turns before the spell ends, the target must succeed on a Wisdom saving throw or take 4 d10 psychic damage. On a successful save, the spell ends.",
+    "description": "You tap into the nightmares of a creature you can see within range and create an illusory manifestation of its deepest fears, visible only to that creature. The target must make a Wisdom saving throw. On a failed save, the target becomes frightened for the duration. At the start of each of the target's turns before the spell ends, the target must succeed on a Wisdom saving throw or take 4d10 psychic damage. On a successful save, the spell ends.",
     "higherLevel": "When you cast this spell using a spell slot of 5th level or higher, the damage increases by 1dlO for each slot level above 4th.",
-    "emote": "",
+    "emote": "taps into the nightmares of a creature and creates an illusory manifestation of its deepest fears, visible only to that creature",
     "source": "phb 265",
     "range": "120 ft",
+    "target": "a creature you can see within range",
     "components": {
       "verbal": true,
       "somatic": true
@@ -6897,6 +6983,10 @@
     "castingTime": "1 action",
     "level": 4,
     "school": "Illusion",
+    "save": {
+      "ability": "wisdom",
+      "saveFailure": "becomes frightened for the duration. At the start of each of the target's turns before the spell ends, the target must succeed on a Wisdom saving throw or take 4d10 psychic damage. On a successful save, the spell ends."
+    },
     "classes": [
       "Wizard"
     ]
@@ -7050,9 +7140,10 @@
   {
     "name": "Polymorph",
     "description": "This spell transforms a creature that you can see within range into a new form. An unwilling creature must make a Wisdom saving throw to avoid the effect. A shapechanger automatically succeeds on this saving throw.<br>The transformation lasts for the duration, or until the target drops to 0 hit points or dies. The new form can be any beast whose challenge rating is equal to or less than the target's (or the target's level, if it doesn't have a challenge rating). The target's game statistics, including mental ability scores, are replaced by the statistics of the chosen beast. It retains its alignment and personality.<br>The target assumes the hit points of its new form. When it reverts to its normal form, the creature returns to the number of hit points it had before it transformed. If it reverts as a result of dropping to 0 hit points, any excess damage carries over to its normal form. As long as the excess damage doesn't reduce the creature's normal form to 0 hit points, it isn't knocked unconscious.<br>The creature is limited in the actions it can perform by the nature of its new form, and it can't speak, cast spells, or take any other action that requires hands or speech.<br>The target's gear melds into the new form. The creature can't activate, use, wield, or otherwise benefit from any of its equipment.",
-    "emote": "",
+    "emote": "transforms a creature into a new form",
     "source": "phb 266",
     "range": "60 ft",
+    "target": "a creature that you can see within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -7064,6 +7155,11 @@
     "castingTime": "1 action",
     "level": 4,
     "school": "Transmutation",
+    "save": {
+      "ability": "wisdom",
+      "saveFailure": "affected by this spell"
+    },
+    "effects": "An unwilling creature must make a Wisdom saving throw to avoid the effect. A shapechanger automatically succeeds on this saving throw.<br>The transformation lasts for the duration, or until the target drops to 0 hit points or dies. The new form can be any beast whose challenge rating is equal to or less than the target's (or the target's level, if it doesn't have a challenge rating). The target's game statistics, including mental ability scores, are replaced by the statistics of the chosen beast. It retains its alignment and personality.<br>The target assumes the hit points of its new form. When it reverts to its normal form, the creature returns to the number of hit points it had before it transformed. If it reverts as a result of dropping to 0 hit points, any excess damage carries over to its normal form. As long as the excess damage doesn't reduce the creature's normal form to 0 hit points, it isn't knocked unconscious.<br>The creature is limited in the actions it can perform by the nature of its new form, and it can't speak, cast spells, or take any other action that requires hands or speech.<br>The target's gear melds into the new form. The creature can't activate, use, wield, or otherwise benefit from any of its equipment.",
     "classes": [
       "Bard",
       "Cleric",
@@ -8650,9 +8746,10 @@
   {
     "name": "Stone Shape",
     "description": "You touch a stone object of Medium size or smaller or a section of stone no more than 5 feet in any dimension and form it into any shape that suits your purpose. So, for example, you could shape a large rock into a weapon, idol, or coffer, or make a small passage through a wall, as long as the wall is less than 5 feet thick. You could also shape a stone door or its frame to seal the door shut. The object you create can have up to two hinges and a latch, but finer mechanical detail isn't possible.",
-    "emote": "",
+    "emote": "forms stone into any shape that suits {{GENDER_PRONOUN_HIS_HER}} purpose",
     "source": "phb 278",
     "range": "Touch",
+    "target": "a stone object of Medium size or smaller or a section of stone no more than 5 ft in any dimension",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -8663,6 +8760,7 @@
     "castingTime": "1 action",
     "level": 4,
     "school": "Transmutation",
+    "effects": "So, for example, you could shape a large rock into a weapon, idol, or coffer, or make a small passage through a wall, as long as the wall is less than 5 ft thick. You could also shape a stone door or its frame to seal the door shut. The object you create can have up to two hinges and a latch, but finer mechanical detail isn't possible.",
     "classes": [
       "Cleric",
       "Druid",
@@ -8676,9 +8774,10 @@
   {
     "name": "Stoneskin",
     "description": "This spell turns the flesh of a willing creature you touch as hard as stone. Until the spell ends, the target has resistance to nonmagical bludgeoning, piercing, and slashing damage.",
-    "emote": "",
+    "emote": "turns the flesh of a creature as hard as stone",
     "source": "phb 278",
     "range": "Touch",
+    "target": "a willing creature",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -8690,6 +8789,7 @@
     "castingTime": "1 action",
     "level": 4,
     "school": "Abjuration",
+    "effects": "Until the spell ends, the target has resistance to nonmagical bludgeoning, piercing, and slashing damage.",
     "classes": [
       "Cleric",
       "Druid",
@@ -8750,7 +8850,7 @@
       "damage": "2d6",
       "damageType": "bludgeoning"
     },
-    "effects": "The sphere's space is difficult terrain.<br>Until the spell ends, you can use a bonus action on each of your turns to cause a bolt of lightning to leap from the center of the sphere toward one creature you choose within 60 feet of the center. Make a ranged spell attack. You have advantage on the attack roll if the target is in the sphere. On a hit, the target takes 4d6 lightning damage.<br>Creatures within 30 feet of the sphere have disadvantage on Wisdom (Perception) checks made to listen.",
+    "effects": "The sphere's space is difficult terrain.<br>Until the spell ends, you can use a bonus action on each of your turns to cause a bolt of lightning to leap from the center of the sphere toward one creature you choose within 60 feet of the center. Make a ranged spell attack. You have advantage on the attack roll if the target is in the sphere. On a hit, the target takes 4d6 lightning damage.<br>Creatures within 30 ft of the sphere have disadvantage on Wisdom (Perception) checks made to listen.",
     "classes": [
       "Sorcerer",
       "Wizard"
