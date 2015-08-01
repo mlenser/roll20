@@ -1985,7 +1985,6 @@
     }
 
     if(spell.description) {
-      var spellDescription = spell.description.replace('<br>', '\n');
       setAttribute(spellBase + 'spelldescription', spellDescription);
       //setAttribute(spellBase + 'spellshowdesc', '{{spellshowdesc=1}} {{spelldescription=@{spelldescription}}}');
     }
@@ -2045,6 +2044,7 @@
       }
       if(param.higherLevelDice) {
         setAttribute(spellBase + 'spell_toggle_higher_lvl', '@{spell_var_higher_lvl}');
+        setAttribute(spellBase + 'spell_toggle_higher_lvl_query', '@{spell_var_higher_lvl_query}');
         setAttribute(spellBase + 'spell_' + type + '_higher_level_dmg_dice', param.higherLevelDice);
       }
       if(param.higherLevelDie) {
@@ -2098,7 +2098,7 @@
     }
 
     if(spell.effects) {
-      setAttribute(spellBase + 'spelleffect', spell.effects);
+      setAttribute(spellBase + 'spelleffect', spellEffects);
       setAttribute(spellBase + 'spell_toggle_effects', '@{spell_var_effects}');
     }
 
