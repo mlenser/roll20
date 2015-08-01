@@ -1985,7 +1985,7 @@
     }
 
     if(spell.description) {
-      setAttribute(spellBase + 'spelldescription', spellDescription);
+      setAttribute(spellBase + 'spelldescription', spell.description);
       //setAttribute(spellBase + 'spellshowdesc', '{{spellshowdesc=1}} {{spelldescription=@{spelldescription}}}');
     }
     if(spell.higherLevel) {
@@ -2098,7 +2098,7 @@
     }
 
     if(spell.effects) {
-      setAttribute(spellBase + 'spelleffect', spellEffects);
+      setAttribute(spellBase + 'spelleffect', spell.effects);
       setAttribute(spellBase + 'spell_toggle_effects', '@{spell_var_effects}');
     }
 
