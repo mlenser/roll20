@@ -8910,7 +8910,7 @@
     "attack": {
       "damage": "1d8",
       "castingStat": true,
-      "higherLevelDice": ".5",
+      "higherLevelDice": "0.49",
       "higherLevelDie": "d8"
     },
     "effects": "As a bonus action on your turn, you can move the weapon up to 20 ft and repeat the attack against a creature within 5 ft of it.",
