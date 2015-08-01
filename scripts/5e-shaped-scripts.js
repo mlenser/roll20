@@ -2019,52 +2019,56 @@
       setAttribute(spellBase + 'spell_toggle_emote', '@{spell_var_emote}');
     }
 
+    function processDamage (param, type) {
+      if(param.damage) {
+        log('spell_toggle_ ' + type + '_damage');
+        log('@{spell_var_' + type + '_damage}');
+        setAttribute(spellBase + 'spell_toggle_' + type + '_damage', '@{spell_var_' + type + '_damage}');
+        setAttribute(spellBase + 'spell_' + type + '_dmg', param.damage);
+      }
+      if(param.damageBonus) {
+        setAttribute(spellBase + 'spell_toggle_bonuses', '@{spell_var_bonuses}');
+        setAttribute(spellBase + 'spell_' + type + '_dmg_bonus', param.damageBonus);
+      }
+      if(param.castingStat) {
+        setAttribute(spellBase + 'spell_' + type + '_dmg_stat', '@{casting_stat}');
+      }
+      if(param.damageType) {
+        setAttribute(spellBase + 'spell_' + type + '_dmg_type', param.damageType);
+      }
+      if(param.secondaryDamage) {
+        setAttribute(spellBase + 'spell_toggle_' + type + '_second_damage', '@{spell_var_' + type + '_second_damage}');
+        setAttribute(spellBase + 'spell_' + type + '_second_dmg', param.secondaryDamage);
+      }
+      if(param.secondaryDamageType) {
+        setAttribute(spellBase + 'spell_' + type + '_second_dmg_type', param.secondaryDamageType);
+      }
+      if(param.higherLevelDice) {
+        setAttribute(spellBase + 'spell_toggle_higher_lvl', '@{spell_var_higher_lvl}');
+        setAttribute(spellBase + 'spell_' + type + '_higher_level_dmg_dice', param.higherLevelDice);
+      }
+      if(param.higherLevelDie) {
+        setAttribute(spellBase + 'spell_' + type + '_higher_level_dmg_die', param.higherLevelDie);
+      }
+      if(param.higherLevelSecondaryDice) {
+        setAttribute(spellBase + 'spell_' + type + '_second_higher_level_dmg_dice', param.higherLevelSecondaryDice);
+      }
+      if(param.higherLevelSecondaryDie) {
+        setAttribute(spellBase + 'spell_' + type + '_second_higher_level_dmg_die', param.higherLevelSecondaryDie);
+      }
+    }
+
+
     if(spell.attack) {
       setAttribute(spellBase + 'attackstat', '@{casting_stat}');
       setAttribute(spellBase + 'spell_toggle_attack', '@{spell_var_attack}');
+      processDamage(spell.attack, 'attack');
       if(spell.attack.damage) {
-        setAttribute(spellBase + 'spell_attack_toggle_damage', '@{spell_attack_var_damage}');
-        setAttribute(spellBase + 'spell_attack_toggle_crit', '@{spell_attack_var_crit}');
-        setAttribute(spellBase + 'spell_attack_dmg', spell.attack.damage);
-      }
-      if(spell.attack.damageBonus) {
-        setAttribute(spellBase + 'spell_toggle_bonuses', '@{spell_var_bonuses}');
-        setAttribute(spellBase + 'spell_attack_dmg_bonus', spell.attack.damageBonus);
-      }
-      if(spell.attack.castingStat) {
-        setAttribute(spellBase + 'spell_attack_dmg_stat', '@{casting_stat}');
-      }
-      if(spell.attack.damageType) {
-        setAttribute(spellBase + 'spell_attack_dmg_type', spell.attack.damageType);
-      }
-      if(spell.attack.secondaryDamage) {
-        setAttribute(spellBase + 'spell_attack_second_dmg', spell.attack.secondaryDamage);
-      }
-      if(spell.attack.secondaryDamageType) {
-        setAttribute(spellBase + 'spell_attack_second_dmg_type', spell.attack.secondaryDamageType);
+        setAttribute(spellBase + 'spell_toggle_attack_crit', '@{spell_var_attack_crit}');
       }
     }
     if(spell.damage) {
-      if(spell.damage.damage) {
-        setAttribute(spellBase + 'spell_attack_toggle_damage', '@{spell_attack_var_damage}');
-        setAttribute(spellBase + 'spell_attack_dmg', spell.damage.damage);
-      }
-      if(spell.damage.damageBonus) {
-        setAttribute(spellBase + 'spell_toggle_bonuses', '@{spell_var_bonuses}');
-        setAttribute(spellBase + 'spell_attack_dmg_bonus', spell.damage.damageBonus);
-      }
-      if(spell.damage.castingStat) {
-        setAttribute(spellBase + 'spell_attack_dmg_stat', '@{casting_stat}');
-      }
-      if(spell.damage.damageType) {
-        setAttribute(spellBase + 'spell_attack_dmg_type', spell.damage.damageType);
-      }
-      if(spell.damage.secondaryDamage) {
-        setAttribute(spellBase + 'spell_attack_second_dmg', spell.damage.secondaryDamage);
-      }
-      if(spell.damage.secondaryDamageType) {
-        setAttribute(spellBase + 'spell_attack_second_dmg_type', spell.damage.secondaryDamageType);
-      }
+      processDamage(spell.damage, 'attack');
     }
 
     if(spell.save) {
@@ -2082,23 +2086,7 @@
       if(spell.save.saveSuccess) {
         setAttribute(spellBase + 'savesuccess', spell.save.saveSuccess);
       }
-      if(spell.save.damage) {
-        setAttribute(spellBase + 'spell_toggle_save_damage', '@{spell_var_save_damage}');
-        setAttribute(spellBase + 'spell_save_dmg', spell.save.damage);
-      }
-      if(spell.save.damageBonus) {
-        setAttribute(spellBase + 'spell_toggle_bonuses', '@{spell_var_bonuses}');
-        setAttribute(spellBase + 'spell_attack_dmg_bonus', spell.save.damageBonus);
-      }
-      if(spell.save.damageType) {
-        setAttribute(spellBase + 'spell_save_dmg_type', spell.save.damageType);
-      }
-      if(spell.save.secondaryDamage) {
-        setAttribute(spellBase + 'spell_save_second_dmg', spell.save.secondaryDamage);
-      }
-      if(spell.save.secondaryDamageType) {
-        setAttribute(spellBase + 'spell_save_second_dmg_type', spell.save.secondaryDamageType);
-      }
+      processDamage(spell.save, 'save');
     }
 
     if(spell.heal) {
