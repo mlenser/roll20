@@ -2027,6 +2027,10 @@
         setAttribute(spellBase + 'spell_attack_toggle_crit', '@{spell_attack_var_crit}');
         setAttribute(spellBase + 'spell_attack_dmg', spell.attack.damage);
       }
+      if(spell.attack.damageBonus) {
+        setAttribute(spellBase + 'spell_toggle_bonuses', '@{spell_var_bonuses}');
+        setAttribute(spellBase + 'spell_attack_dmg_bonus', spell.attack.damageBonus);
+      }
       if(spell.attack.castingStat) {
         setAttribute(spellBase + 'spell_attack_dmg_stat', '@{casting_stat}');
       }
@@ -2041,20 +2045,26 @@
       }
     }
     if(spell.damage) {
-      setAttribute(spellBase + 'spell_attack_toggle_damage', '@{spell_attack_var_damage}');
-      setAttribute(spellBase + 'spell_attack_dmg', spell.damage);
-    }
-    if(spell.castingStat) {
-      setAttribute(spellBase + 'spell_attack_dmg_stat', '@{casting_stat}');
-    }
-    if(spell.damageType) {
-      setAttribute(spellBase + 'spell_attack_dmg_type', spell.damageType);
-    }
-    if(spell.secondaryDamage) {
-      setAttribute(spellBase + 'spell_attack_second_dmg', spell.secondaryDamage);
-    }
-    if(spell.secondaryDamageType) {
-      setAttribute(spellBase + 'spell_attack_second_dmg_type', spell.secondaryDamageType);
+      if(spell.damage.damage) {
+        setAttribute(spellBase + 'spell_attack_toggle_damage', '@{spell_attack_var_damage}');
+        setAttribute(spellBase + 'spell_attack_dmg', spell.damage.damage);
+      }
+      if(spell.damage.damageBonus) {
+        setAttribute(spellBase + 'spell_toggle_bonuses', '@{spell_var_bonuses}');
+        setAttribute(spellBase + 'spell_attack_dmg_bonus', spell.damage.damageBonus);
+      }
+      if(spell.damage.castingStat) {
+        setAttribute(spellBase + 'spell_attack_dmg_stat', '@{casting_stat}');
+      }
+      if(spell.damage.damageType) {
+        setAttribute(spellBase + 'spell_attack_dmg_type', spell.damage.damageType);
+      }
+      if(spell.damage.secondaryDamage) {
+        setAttribute(spellBase + 'spell_attack_second_dmg', spell.damage.secondaryDamage);
+      }
+      if(spell.damage.secondaryDamageType) {
+        setAttribute(spellBase + 'spell_attack_second_dmg_type', spell.damage.secondaryDamageType);
+      }
     }
 
     if(spell.save) {
@@ -2075,6 +2085,10 @@
       if(spell.save.damage) {
         setAttribute(spellBase + 'spell_toggle_save_damage', '@{spell_var_save_damage}');
         setAttribute(spellBase + 'spell_save_dmg', spell.save.damage);
+      }
+      if(spell.save.damageBonus) {
+        setAttribute(spellBase + 'spell_toggle_bonuses', '@{spell_var_bonuses}');
+        setAttribute(spellBase + 'spell_attack_dmg_bonus', spell.save.damageBonus);
       }
       if(spell.save.damageType) {
         setAttribute(spellBase + 'spell_save_dmg_type', spell.save.damageType);

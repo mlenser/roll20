@@ -43,7 +43,12 @@
     "castingTime": "1 reaction, which you take when you take acid, cold, fire, lightning, or thunder damage",
     "level": 1,
     "school": "Abjuration",
-    "effects": "You have resistance to the triggering damage type until the start of your next turn. Also, the first time you hit with a melee attack on your next turn, the target takes an extra 1d6 ([[1d6]]) damage of the triggering type, and the spell ends.",
+    "damage": {
+      "damage": "1d6",
+      "damageType": "triggering type",
+      "higherLevelDamage": "1d6"
+    },
+    "effects": "You have resistance to the triggering damage type until the start of your next turn. Also, the first time you hit with a melee attack on your next turn, the target takes extra damage as outlined above, and the spell ends.",
     "classes": [
       "Druid",
       "Ranger",
@@ -674,8 +679,10 @@
     "castingTime": "1 bonus action",
     "level": 5,
     "school": "Abjuration",
-    "damage": "5d10",
-    "damageType": "force",
+    "damage": {
+      "damage": "5d10",
+      "damageType": "force",
+    },
     "effects": "The next time you hit a creature with a weapon attack before this spell ends, your weapon deals extra damage as outlined above. If this attack reduces the target to 50 hit points or less, the target is banished. If the target is native to the plane you are currently on, it is banished to it's native plane for the duration. If the target is native to the plane you're on, the target is vanishes into a harmless demiplane. While the target is banished, he is incapacitated in the plane he has been banished to. The target remains there until the spell ends, at which point the target reappears in the space it left or in the nearest unoccupied space if that space is occupied.",
     "classes": [
       "Paladin"
@@ -996,8 +1003,10 @@
     "castingTime": "1 bonus action",
     "level": 3,
     "school": "Evocation",
-    "damage": "3d8",
-    "damageType": "radiant",
+    "damage": {
+      "damage": "3d8",
+      "damageType": "radiant"
+    },
     "save": {
       "ability": "constitution",
       "saveFailure": "or be blinded. A creature blinded by this spell makes another Constitution saving throw at the end of each of its rounds. On a successful save, it is no longer blinded."
@@ -1132,8 +1141,10 @@
     "castingTime": "1 bonus action",
     "level": 2,
     "school": "Evocation",
-    "damage": "2d6",
-    "damageType": "radiant",
+    "damage": {
+      "damage": "2d6",
+      "damageType": "radiant"
+    },
     "effects": "The next time you hit a creature with a weapon attack before this spell ends, the weapon gleams with astral radiance as you strike. The attack deals deals extra damage as outlined above. The target becomes visible if it's invisible, and the target sheds dim light in a 5 ft radius and can't become invisible until the spell ends.",
     "classes": [
       "Paladin"
@@ -1488,8 +1499,10 @@
     "castingTime": "1 action",
     "level": 2,
     "school": "Conjuration",
-    "damage": "4d4",
-    "damageType": "slashing",
+    "damage": {
+      "damage": "4d4",
+      "damageType": "slashing"
+    },
     "classes": [
       "Bard",
       "Sorcerer",
@@ -4912,8 +4925,10 @@
     "castingTime": "1 action",
     "level": 2,
     "school": "Transmutation",
-    "damage": "2d8",
-    "damageType": "fire",
+    "damage": {
+      "damage": "2d8",
+      "damageType": "fire"
+    },
     "save": {
       "ability": "constitution",
       "saveFailure": "or drop the object if it can. If it doesn't drop the object, it has disadvantage on attack rolls and ability checks until the start of your next turn."
@@ -6025,8 +6040,11 @@
     "castingTime": "1 action",
     "level": 1,
     "school": "Evocation",
-    "damage": "1d4 + 1",
-    "damageType": "force",
+    "damage": {
+      "damage": "1d4",
+      "damageBonus": "1",
+      "damageType": "force"
+    },
     "effects": "The darts all strike simultaneously, and you can direct them to hit one creature or several.",
     "classes": [
       "Sorcerer",
@@ -7978,8 +7996,10 @@
     "castingTime": "1 bonus action",
     "level": 1,
     "school": "Evocation",
-    "damage": "1d6",
-    "damageType": "fire",
+    "damage": {
+      "damage": "1d6",
+      "damageType": "fire"
+    },
     "save": {
       "ability": "constitution",
       "saveFailure": "take more fire damage."
@@ -8700,8 +8720,10 @@
     "castingTime": "1 bonus action",
     "level": 4,
     "school": "Evocation",
-    "damage": "4d6",
-    "damageType": "psychic",
+    "damage": {
+      "damage": "4d6",
+      "damageType": "psychic"
+    },
     "save": {
       "ability": "wisdom",
       "saveFailure": "it has disadvantage on attack rolls and ability checks, and can't take reactions, until the end of its next turn."
@@ -9176,8 +9198,10 @@
     "castingTime": "1 bonus action",
     "level": 1,
     "school": "Evocation",
-    "damage": "2d6",
-    "damageType": "thunder",
+    "damage": {
+      "damage": "2d6",
+      "damageType": "thunder"
+    },
     "save": {
       "ability": "strength",
       "condition": "if the target is a creature",
@@ -10196,8 +10220,10 @@
     "castingTime": "1 bonus action",
     "level": 1,
     "school": "Evocation",
-    "damage": "2d6",
-    "damageType": "radiant",
+    "damage": {
+      "damage": "2d6",
+      "damageType": "radiant"
+    },
     "save": {
       "ability": "wisdom",
       "condition": "if the target is a creature",
