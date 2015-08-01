@@ -1990,7 +1990,14 @@
     }
     if(spell.higherLevel) {
       setAttribute(spellBase + 'spellhighersloteffect', spell.higherLevel);
-      setAttribute(spellBase + 'spell_toggle_higher_lvl', '@{spell_var_higher_lvl}');
+      var noHigherLevelDice = true;
+
+      if((spell.attack && spell.attack.higherLevelDice) || (spell.damage && spell.damage.higherLevelDice) || (spell.save && spell.save.higherLevelDice)) {
+        noHigherLevelDice = false;
+      }
+      if(noHigherLevelDice) {
+        setAttribute(spellBase + 'spell_toggle_higher_lvl', '@{spell_var_higher_lvl}');
+      }
     }
     if(spell.emote) {
       var gender = getAttrByName(characterId, 'gender', 'current'),
@@ -2043,7 +2050,6 @@
         setAttribute(spellBase + 'spell_' + type + '_second_dmg_type', param.secondaryDamageType);
       }
       if(param.higherLevelDice) {
-        setAttribute(spellBase + 'spell_toggle_higher_lvl', '');
         setAttribute(spellBase + 'spell_toggle_higher_lvl_query', '@{spell_var_higher_lvl_query}');
         setAttribute(spellBase + 'spell_' + type + '_higher_level_dmg_dice', param.higherLevelDice);
       }
