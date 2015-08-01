@@ -2114,6 +2114,8 @@
       setAttribute(spellBase + 'spell_toggle_effects', '@{spell_var_effects}');
     }
 
+    //higherLevelAmount (for heals), higherLevelDice, higherLevelDie, higherLevelSecondaryDice, higherLevelSecondaryDie. Check spiritual weapon
+
 
     var message = spell.name + ' imported for ' + characterName + ' on spell level ' + spell.level + ' at index ' + spellIndex;
     log(message);

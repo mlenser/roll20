@@ -46,7 +46,8 @@
     "damage": {
       "damage": "1d6",
       "damageType": "triggering type",
-      "higherLevelDamage": "1d6"
+      "higherLevelDice": "1",
+      "higherLevelDie": "d6"
     },
     "effects": "You have resistance to the triggering damage type until the start of your next turn. Also, the first time you hit with a melee attack on your next turn, the target takes extra damage as outlined above, and the spell ends.",
     "classes": [
@@ -84,7 +85,7 @@
   {
     "name": "Aganazzar's Scorcher",
     "description": "A line of roaring flame 30 feet long and 5 feet wide emanates from you in a direction you choose. Each creature in the line must make a Dexterity saving throw. A creature takes 3d8 fire damage on a failed save, or half as much damage on a successful one.",
-    "higherLevel": "When you cast this spell using a spell slot of 3nd level or higher, the damage increases by 1d8 for each slot level above 2st.",
+    "higherLevel": "When you cast this spell using a spell slot of 3nd level or higher, the damage increases by 1d8 for each slot level above 2nd.",
     "emote": "emanates a line of roaring flame",
     "source": "ee pc 15",
     "range": "30 ft",
@@ -104,7 +105,9 @@
       "ability": "dexterity",
       "damage": "3d8",
       "damageType": "fire",
-      "saveSuccess": "half damage"
+      "saveSuccess": "half damage",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d8"
     },
     "classes": [
       "Sorcerer",
@@ -492,7 +495,9 @@
       "damage": "2d6",
       "damageType": "necrotic",
       "saveFailure": "target can't take reactions until its next turn",
-      "saveSuccess": "half damage, but suffers no other effect"
+      "saveSuccess": "half damage, but suffers no other effect",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d6"
     },
     "classes": [
       "Warlock"
@@ -681,7 +686,7 @@
     "school": "Abjuration",
     "damage": {
       "damage": "5d10",
-      "damageType": "force",
+      "damageType": "force"
     },
     "effects": "The next time you hit a creature with a weapon attack before this spell ends, your weapon deals extra damage as outlined above. If this attack reduces the target to 50 hit points or less, the target is banished. If the target is native to the plane you are currently on, it is banished to it's native plane for the duration. If the target is native to the plane you're on, the target is vanishes into a harmless demiplane. While the target is banished, he is incapacitated in the plane he has been banished to. The target remains there until the spell ends, at which point the target reappears in the space it left or in the nearest unoccupied space if that space is occupied.",
     "classes": [
@@ -976,7 +981,9 @@
       "ability": "constitution",
       "damage": "8d8",
       "damageType": "necrotic",
-      "saveSuccess": "half damage"
+      "saveSuccess": "half damage",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d8"
     },
     "effects": "The spell has no effect on undead or constructs. If you target a plant creature or a magical plant, it makes the saving throw with disadvantage, and the spell deals maximum damage to it.<br>If you target a nonmagical plant that isn't a creature, such as a tree or shrub, it doesn't make a saving throw; it simply withers and dies.",
     "classes": [
@@ -1143,7 +1150,9 @@
     "school": "Evocation",
     "damage": {
       "damage": "2d6",
-      "damageType": "radiant"
+      "damageType": "radiant",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d6"
     },
     "effects": "The next time you hit a creature with a weapon attack before this spell ends, the weapon gleams with astral radiance as you strike. The attack deals deals extra damage as outlined above. The target becomes visible if it's invisible, and the target sheds dim light in a 5 ft radius and can't become invisible until the spell ends.",
     "classes": [
@@ -1171,7 +1180,9 @@
       "ability": "dexterity",
       "damage": "3d6",
       "damageType": "fire",
-      "saveSuccess": "half damage"
+      "saveSuccess": "half damage",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d6"
     },
     "effects": "The fire ignites any flammable objects in the area that aren't being worn or carried.",
     "classes": [
@@ -1209,7 +1220,9 @@
       "ability": "dexterity",
       "damage": "3d10",
       "damageType": "lightning",
-      "saveSuccess": "half damage"
+      "saveSuccess": "half damage",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d10"
     },
     "effects": "A storm cloud appears in the shape of a cylinder that is 10 feet tall with a 60-foot radius, centered on a point you can see 100 feet directly above you. The spell fails if you can't see a point in the air where the storm cloud could appear (for example, if you are in a room that can't accommodate the cloud).<br>On each of your turns until the spell ends, you can use your action to call down lightning in this way again, targeting the same point or a different one.<br>If you are outdoors in stormy conditions when you cast this spell, the spell gives you control over the existing storm instead of creating a new one. Under such conditions, the spell's damage increases by 1d10.",
     "classes": [
@@ -1272,7 +1285,9 @@
       "ability": "dexterity",
       "damage": "3d8",
       "damageType": "bludgeoning",
-      "saveFailure": "the object strikes the target and stops moving"
+      "saveFailure": "the object strikes the target and stops moving",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d8"
     },
     "effects": "The object flies in a straight line up to 90 ft in a direction you choose before falling to the ground, stopping early if it impacts against a solid surface. If the object would strike a creature, that creature must make a Dexterity saving throw as outlined above. Both the object and the creature or solid surface take the damage.",
     "classes": [
@@ -1382,7 +1397,9 @@
     "school": "Evocation",
     "attack": {
       "damage": "3d8",
-      "damageType": "acid, cold, fire, lightning, poison, or thunder"
+      "damageType": "acid, cold, fire, lightning, poison, or thunder",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d8"
     },
     "effects": " choose acid, cold, fire, lightning, poison, or thunder for the type of orb you create",
     "classes": [
@@ -1392,11 +1409,13 @@
   },
   {
     "name": "Circle of Death",
-    "description": "A sphere of negative energy ripples out in a 60-footradius sphere from a point within range. Each creature in that area must make a Constitution saving throw. A target takes 8d6 necrotic damage on a failed save, or half as much damage on a successful one.",
+    "description": "A sphere of negative energy ripples out in a 60-foot-radius sphere from a point within range. Each creature in that area must make a Constitution saving throw. A target takes 8d6 necrotic damage on a failed save, or half as much damage on a successful one.",
     "higherLevel": "When you cast this spell using a spell slot of 7th level or higher, the damage increases by 2d6 for each slot level above 6th.",
-    "emote": "",
+    "emote": "creates a sphere of negative energy that ripples out from a sphere",
     "source": "phb 221",
     "range": "150 ft",
+    "target": "each creature in the aoe",
+    "aoe": "60 ft radius sphere from a point within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -1407,6 +1426,14 @@
     "castingTime": "1 action",
     "level": 6,
     "school": "Necromancy",
+    "save": {
+      "ability": "constitution",
+      "damage": "8d6",
+      "damageType": "necrotic",
+      "saveSuccess": "half damage",
+      "higherLevelDice": "2",
+      "higherLevelDie": "d6"
+    },
     "classes": [
       "Sorcerer",
       "Warlock",
@@ -1501,7 +1528,9 @@
     "school": "Conjuration",
     "damage": {
       "damage": "4d4",
-      "damageType": "slashing"
+      "damageType": "slashing",
+      "higherLevelDice": "2",
+      "higherLevelDie": "d4"
     },
     "classes": [
       "Bard",
@@ -1514,9 +1543,11 @@
     "name": "Cloudkill",
     "description": "You create a 20-foot-radius sphere of poisonous, yellow-green fog centered on a point you choose within range. The fog spreads around corners. It lasts for the duration or until strong wind disperses the fog, ending the spell. Its area is heavily obscured.<br>When a creature enters the spell's area for the first time on a turn or starts its turn there, that creature must make a Constitution saving throw. The creature takes 5d8 poison damage on a failed save, or half as much damage on a successful one. Creatures are affected even if they hold their breath or don't need to breathe.<br>The fog moves 10 feet away from you at the start of each of your turns, rolling along the surface of the ground. The vapors, being heavier than air, sink to the lowest level of the land, even pouring down openings.",
     "higherLevel": "When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d8 for each slot level above 5th.",
-    "emote": "",
+    "emote": "creates a sphere of poisonous, yellow-green fog",
     "source": "phb 222",
     "range": "120 ft",
+    "target": "a creature who enters the spell's area for the first time on a turn or starts its turn there",
+    "aoe": "20 ft radius sphere centered on a point within range",
     "components": {
       "verbal": true,
       "somatic": true
@@ -1526,6 +1557,15 @@
     "castingTime": "1 action",
     "level": 5,
     "school": "Conjuration",
+    "save": {
+      "ability": "constitution",
+      "damage": "5d8",
+      "damageType": "poison",
+      "saveSuccess": "half damage",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d8"
+    },
+    "effects": "The fog spreads around corners. It lasts for the duration or until strong wind disperses the fog, ending the spell. Its area is heavily obscured.<br>Creatures are affected even if they hold their breath or don't need to breathe.<br>The fog moves 10 ft away from you at the start of each of your turns, rolling along the surface of the ground. The vapors, being heavier than air, sink to the lowest level of the land, even pouring down openings.",
     "classes": [
       "Druid",
       "Sorcerer",
@@ -1554,7 +1594,7 @@
     "castingTime": "1 action",
     "level": 1,
     "school": "Illusion",
-    "effects": "Roll [[6d10]]; the total is how many hit points of creatures this spell can effect. Targets are affected in ascending order of their current hit points (ignoring unconscious creatures and creatures that can't see).<br>Starting with the creature that has the lowest current hit points, each creature affected by this spell is blinded until the spell ends. Subtract each creature's hit points from the total before moving on to the creature with the next lowest hit points. A creature's hit points must be equal to or less than the remaining total for that creature to be affected.",
+    "effects": "Roll 6d10 ([[6d10]]); the total is how many hit points of creatures this spell can effect. Targets are affected in ascending order of their current hit points (ignoring unconscious creatures and creatures that can't see).<br>Starting with the creature that has the lowest current hit points, each creature affected by this spell is blinded until the spell ends. Subtract each creature's hit points from the total before moving on to the creature with the next lowest hit points. A creature's hit points must be equal to or less than the remaining total for that creature to be affected.",
     "classes": [
       "Sorcerer",
       "Wizard"
@@ -1741,7 +1781,9 @@
       "ability": "constitution",
       "damage": "8d8",
       "damageType": "cold",
-      "saveSuccess": "half damage"
+      "saveSuccess": "half damage",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d8"
     },
     "effects": "A creature killed by this spell becomes a frozen statue until it thaws.",
     "classes": [
@@ -1870,7 +1912,6 @@
     "level": 5,
     "school": "Conjuration",
     "effects": "An elemental of challenge rating 5 or lower appropriate to the area you chose appears in an unoccupied space within 10 feet of the target. For example, a fire elemental emerges from a bonfire, and an earth elemental rises up from the ground. The elemental disappears when it drops to 0 hit points or when the spell ends.<br>The elemental is friendly to you and your companions for the duration. Roll initiative for the elemental, which has its own turns. It obeys any verbal commands that you issue to it (no action required by you). If you don't issue any commands to the elemental, it defends itself from hostile creatures but otherwise takes no actions.<br>If your concentration is broken, the elemental doesn't disappear. Instead, you lose control of the elemental, it becomes hostile toward you and your companions, and it might attack. An uncontrolled elemental can't be dismissed by you, and it disappears 1 hour after you summoned it.<br>The DM has the elemental's statistics.",
-    "higherLevel": "When you cast this spell using a spell slot of 6th level or higher, the challenge rating increases by 1 for each slot level above 5th.",
     "classes": [
       "Druid",
       "Wizard"
@@ -2384,7 +2425,9 @@
     "school": "Evocation",
     "heal": {
       "amount": "1d8",
-      "castingStat": true
+      "castingStat": true,
+      "higherLevelDice": "1",
+      "higherLevelDie": "d8"
     },
     "effects": "This spell has no effect on undead or constructs.",
     "classes": [
@@ -2531,9 +2574,11 @@
     "name": "Delayed Blast Fireball",
     "description": "A beam of yellow light flashes from your pointing finger, then condenses to linger at a chosen point within range as a glowing bead for the duration. When the spell ends, either because your concentration is broken or because you decide to end it, the bead blossoms with a low roar into an explosion of flame that spreads around corners. Each creature in a 20-foot-radius sphere centered on that point must make a Dexterity saving throw. A creature takes fire damage equal to the total accumulated damage on a failed save, or half as much damage on a successful one.<br>The spell's base damage is 12d6. If at the end of your turn the bead has not yet detonated, the damage increases by 1d6.<br>If the glowing bead is touched before the interval has expired, the creature touching it must make a Dexterity saving throw. On a failed save, the spell ends immediately, causing the bead to erupt in flame. On a successful save, the creature can throw the bead up to 40 feet. When it strikes a creature or a solid object, the spell ends, and the bead explodes.<br>The fire damages objects in the area and ignites flammable objects that aren't being worn or carried.",
     "higherLevel": "When you cast this spell using a spell slot of 8th level or higher, the base damage increases by 1d6 for each slot level above 7th.",
-    "emote": "",
+    "emote": "evokes a beam of yellow light that flashes from {{GENDER_PRONOUN_HIS_HER}} pointing finger, then condenses to linger at a chosen point within range as a glowing bead.",
     "source": "phb 230",
     "range": "150 ft",
+    "target": "each creature in the aoe",
+    "aoe": "20 ft radius sphere centered on a point",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -2545,6 +2590,15 @@
     "castingTime": "1 action",
     "level": 7,
     "school": "Evocation",
+    "save": {
+      "ability": "dexterity",
+      "damage": "12d6",
+      "damageType": "fire",
+      "saveSuccess": "half damage",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d6"
+    },
+    "effects": "When the spell ends, either because your concentration is broken or because you decide to end it, the bead blossoms with a low roar into an explosion of flame that spreads around corners. A creature takes fire damage equal to the total accumulated damage on a failed save, or half as much damage on a successful one.<br>The spell's base damage is 12d6. If at the end of your turn the bead has not yet detonated, the damage increases by 1d6.<br>If the glowing bead is touched before the interval has expired, the creature touching it must make a Dexterity saving throw. On a failed save, the spell ends immediately, causing the bead to erupt in flame. On a successful save, the creature can throw the bead up to 40 ft. When it strikes a creature or a solid object, the spell ends, and the bead explodes.<br>The fire damages objects in the area and ignites flammable objects that aren't being worn or carried.",
     "classes": [
       "Sorcerer",
       "Wizard"
@@ -2756,9 +2810,10 @@
     "name": "Disintegrate",
     "description": "A thin green ray springs from your pointing finger to a target that you can see within range. The target can be a creature, an object, or a creation of magical force, such as the wall created by wall of force.<br>A creature targeted by this spell must make a Dexterity saving throw. On a failed save, the target takes 10d6 + 40 force damage. If this damage reduces the target to 0 hit points, it is disintegrated.<br>A disintegrated creature and everything it is wearing and carrying, except magic items, are reduced to a pile of fine gray dust. The creature can be restored to life only by means of a true resurrection or a wish spell.<br>This spell automatically disintegrates a Large or smaller nonmagical object or a creation of magical force. If the target is a Huge or larger object or creation of force, this spell disintegrates a 10-foot-cube portion of it. A magic item is unaffected by this spell.",
     "higherLevel": "When you cast this spell using a spell slot of 7th level or higher, the damage increases by 3d6 for each slot level above 6th.",
-    "emote": "",
+    "emote": "shoots a thin green ray from {{GENDER_PRONOUN_HIS_HER}} pointing finger",
     "source": "phb 233",
     "range": "60 ft",
+    "target": "a creature, an object, or a creation of magical force that you can see within range. A creation of magical force, such as the wall created by wall of force.",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -2769,6 +2824,16 @@
     "castingTime": "1 action",
     "level": 6,
     "school": "Transmutation",
+    "save": {
+      "ability": "dexterity",
+      "damage": "10d6",
+      "damageBonus": "40",
+      "damageType": "fire",
+      "saveSuccess": "half damage",
+      "higherLevelDice": "3",
+      "higherLevelDie": "d6"
+    },
+    "effects": "If this damage reduces the target to 0 hit points, it is disintegrated. A disintegrated creature and everything it is wearing and carrying, except magic items, are reduced to a pile of fine gray dust. The creature can be restored to life only by means of a true resurrection or a wish spell.<br>This spell automatically disintegrates a Large or smaller nonmagical object or a creation of magical force. If the target is a Huge or larger object or creation of force, this spell disintegrates a 10 ft cube portion of it. A magic item is unaffected by this spell.",
     "classes": [
       "Sorcerer",
       "Wizard"
@@ -2847,7 +2912,9 @@
       "damage": "3d6",
       "damageType": "psychic",
       "saveFailure": "must immediately use its reaction, if available, to move as far as its speed allows away from you. The creature doesn't move into obviously dangerous ground, such as a fire or a pit.",
-      "saveSuccess": "half damage and doesn't have to move away"
+      "saveSuccess": "half damage and doesn't have to move away",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d6"
     },
     "effects": "A deafened creature automatically succeeds on the save.",
     "classes": [
@@ -3107,7 +3174,9 @@
       "damage": "1d8",
       "damageType": "bludgeoning",
       "saveFailure": "pushed 10 feet away",
-      "saveSuccess": "half damage and not pushed"
+      "saveSuccess": "half damage and not pushed",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d8"
     },
     "effects": "Any creature that ends its turn within 5 ft of the dust devil must make a Strength saving throw as outlined above.<br>As a bonus action, you can move the dust devil up to 30 ft in any direction. If the dust devil moves over sand, dust, loose dirt, or small gravel, it sucks up the material and forms a 10 ft radius cloud of debris around itself that lasts until the start of your next turn. The cloud heavily obscures its area.",
     "classes": [
@@ -3137,7 +3206,9 @@
       "ability": "dexterity",
       "damage": "1d6",
       "damageType": "bludgeoning",
-      "saveFailure": "knocked prone."
+      "saveFailure": "knocked prone.",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d6"
     },
     "effects": "If the ground in that area is loose earth or stone, it becomes difficult terrain until cleared.",
     "classes": [
@@ -3252,9 +3323,10 @@
     "name": "Elemental Weapon",
     "description": "A nonmagical weapon you touch becomes a magic weapon. Choose one of the following damage types: acid, cold, fire, lightning, or thunder. For the duration, the weapon has a +1 bonus to attack rolls and deals an extra 1d4 damage of the chosen type when it hits.",
     "higherLevel": "When you cast this spell using a spell slot of 5th or 6th level, the bonus to attack rolls increases to +2 and the extra damage increases to 2d4. When you use a spell slot of 7th level or higher, the bonus increases to +3 and the extra damage increases to 3d4.",
-    "emote": "",
+    "emote": "touches a weapon, causing it to become elemental",
     "source": "phb 237",
     "range": "Touch",
+    "target": "a nonmagical weapon",
     "components": {
       "verbal": true,
       "somatic": true
@@ -3264,6 +3336,11 @@
     "castingTime": "1 action",
     "level": 3,
     "school": "Transmutation",
+    "damage": {
+      "damage": "1d4",
+      "damageType": "acid, cold, fire, lightning, or thunder"
+    },
+    "effects": "Choose one of the following damage types: acid, cold, fire, lightning, or thunder. For the duration, the weapon has a +1 bonus to attack rolls and deals extra damage as outlined above.",
     "classes": [
       "Paladin"
     ]
@@ -3806,9 +3883,11 @@
     "name": "Fireball",
     "description": "A bright streak flashes from your pointing finger to a point you choose within range and then blossoms with a low roar into an explosion of flame. Each creature in a 20-foot-radius sphere centered on that point must make a Dexterity saving throw. A target takes 8d6 fire damage on a failed save, or half as much damage on a successful one.<br>The fire spreads around corners. It ignites flammable objects in the area that aren't being worn or carried.",
     "higherLevel": "When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 for each slot level above 3rd.",
-    "emote": "",
+    "emote": "evokes a bright streak that flashes from {{GENDER_PRONOUN_HIS_HER}} pointing finger to a point and then blossoms with a low roar into an explosion of flame",
     "source": "phb 241",
     "range": "150 ft",
+    "target": "each creature in the aoe",
+    "aoe": "20 ft radius sphere centered on a point within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -3819,6 +3898,15 @@
     "castingTime": "1 action",
     "level": 3,
     "school": "Evocation",
+    "save": {
+      "ability": "dexterity",
+      "damage": "8d6",
+      "damageType": "fire",
+      "saveSuccess": "half damage",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d6"
+    },
+    "effects": "The fire spreads around corners. It ignites flammable objects in the area that aren't being worn or carried.",
     "classes": [
       "Cleric",
       "Sorcerer",
@@ -3946,7 +4034,9 @@
     "school": "Evocation",
     "attack": {
       "damage": "3d6",
-      "damageType": "fire"
+      "damageType": "fire",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d6"
     },
     "effects": "If you let go of the blade, it disappears, but you can evoke the blade again as a bonus action.<br>You can use your action to make a melee spell attack with the fiery blade as outlined above.<br>The flaming blade sheds bright light in a 10 ft radius and dim light for an additional 10 ft.",
     "classes": [
@@ -3957,9 +4047,11 @@
     "name": "Flame Strike",
     "description": "A vertical column of divine fire roars down from the heavens in a location you specify. Each creature in a 10-foot-radius, 40-foot-high cylinder centered on a point within range must make a Dexterity saving throw. A creature takes 4d6 fire damage and 4d6 radiant damage on a failed save, or half as much damage on a successful one.",
     "higherLevel": "When you cast this spell using a spell slot of 6th level or higher, the fire damage or the radiant damage (your choice) increases by 1d6 for each slot level above 5th.",
-    "emote": "",
+    "emote": "evokes a vertical column of divine fire roars down from the heavens",
     "source": "phb 242",
     "range": "60 ft",
+    "target": "each creature in the aoe",
+    "aoe": "10 ft radius, 40 ft high cylinder centered on a point within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -3970,6 +4062,16 @@
     "castingTime": "1 action",
     "level": 5,
     "school": "Evocation",
+    "save": {
+      "ability": "dexterity",
+      "damage": "4d6",
+      "damageType": "fire",
+      "secondaryDamage": "4d6",
+      "secondaryDamageType": "radiant",
+      "saveSuccess": "half damage",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d6"
+    },
     "classes": [
       "Cleric",
       "Paladin",
@@ -4010,7 +4112,9 @@
       "ability": "dexterity",
       "damage": "2d6",
       "damageType": "fire",
-      "saveSuccess": "half damage"
+      "saveSuccess": "half damage",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d6"
     },
     "effects": "As a bonus action, you can move the sphere up to 30 ft. If you ram the sphere into a creature, that creature must make the saving throw against the sphere's damage, and the sphere stops moving this turn.<br>When you move the sphere, you can direct it over barriers up to 5 ft tall and jump it across pits up to 10 ft wide. The sphere ignites flammable objects not being worn or carried, and it sheds bright light in a 20 ft radius and dim light for an additional 20 ft.",
     "classes": [
@@ -4666,7 +4770,9 @@
     "school": "Evocation",
     "attack": {
       "damage": "4d6",
-      "damageType": "radiant"
+      "damageType": "radiant",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d6"
     },
     "effects": "On a hit, the next attack roll made against this target before the end of your next turn has advantage, thanks to the mystical dim light glittering on the target until then.",
     "classes": [
@@ -4753,7 +4859,9 @@
       "ability": "dexterity",
       "damage": "1d10",
       "damageType": "piercing",
-      "saveSuccess": "half damage"
+      "saveSuccess": "half damage",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d10"
     },
     "effects": "The next time you hit a creature with a ranged weapon attack before this spell ends, the targets must make a Dexterity saving throw as outlined above.",
     "classes": [
@@ -4864,9 +4972,10 @@
     "name": "Heal",
     "description": "Choose a creature that you can see within range. A surge of positive energy washes through the creature, causing it to regain 70 hit points. This spell also ends blindness, deafness, and any diseases affecting the target. This spell has no effect on constructs or undead.",
     "higherLevel": "When you cast this spell using a spell slot of 7th level or higher, the amount of healing increases by 10 for each slot level above 6th.",
-    "emote": "",
+    "emote": "heals an ally's wounds",
     "source": "phb 250",
     "range": "60 ft",
+    "target": "a creature that you can see within range",
     "components": {
       "verbal": true,
       "somatic": true
@@ -4875,6 +4984,11 @@
     "castingTime": "1 action",
     "level": 6,
     "school": "Evocation",
+    "heal": {
+      "amount": "70",
+      "higherLevelAmount": "10"
+    },
+    "effects": "his spell also ends blindness, deafness, and any diseases affecting the target. This spell has no effect on constructs or undead.",
     "classes": [
       "Cleric",
       "Druid"
@@ -4887,7 +5001,7 @@
     "emote": "heals an ally's wounds",
     "source": "phb 250",
     "range": "60 ft",
-    "target": "A creature that you can see within range",
+    "target": "a creature that you can see within range",
     "components": {
       "verbal": true
     },
@@ -4897,7 +5011,9 @@
     "school": "Evocation",
     "heal": {
       "amount": "1d4",
-      "castingStat": true
+      "castingStat": true,
+      "higherLevelDice": "1",
+      "higherLevelDie": "d4"
     },
     "effects": "This spell has no effect on undead or constructs.",
     "classes": [
@@ -4927,7 +5043,9 @@
     "school": "Transmutation",
     "damage": {
       "damage": "2d8",
-      "damageType": "fire"
+      "damageType": "fire",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d8"
     },
     "save": {
       "ability": "constitution",
@@ -4959,7 +5077,9 @@
       "ability": "dexterity",
       "damage": "2d10",
       "damageType": "fire",
-      "saveSuccess": "half damage"
+      "saveSuccess": "half damage",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d10"
     },
     "classes": [
       "Warlock"
@@ -5204,9 +5324,10 @@
     "name": "Ice Knife",
     "description": "You create a shard of ice and fling it at one creature within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 piercing damage. Hit or miss, the shard then explodes. The target and each creature within 5 feet of the point where the ice exploded must succeed on a Dexterity saving throw or take 2d6 cold damage.",
     "higherLevel": "When you cast this spell using a spell slot of 2nd level or higher, the cold damage increases by 1d6 for each slot level above 1st.",
-    "emote": "",
+    "emote": "conjures a shard of ice and flings it at a creature",
     "source": "ee pc 19",
     "range": "60 ft",
+    "target": "1 creature within range",
     "components": {
       "somatic": true,
       "material": true,
@@ -5216,6 +5337,18 @@
     "castingTime": "1 action",
     "level": 1,
     "school": "Conjuration",
+    "attack": {
+      "damage": "1d10",
+      "damageType": "piercing"
+    },
+    "save": {
+      "ability": "dexterity",
+      "damage": "2d6",
+      "damageType": "cold",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d6"
+    },
+    "effects": "Hit or miss, the shard then explodes. The target and each creature within 5 ft of the point where the ice exploded must succeed on a Dexterity saving throw as outlined above.",
     "classes": [
       "Druid",
       "Sorcerer",
@@ -5247,7 +5380,9 @@
       "damageType": "bludgeoning",
       "secondaryDamage": "4d6",
       "secondaryDamageType": "cold",
-      "saveSuccess": "half damage"
+      "saveSuccess": "half damage",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d8"
     },
     "effects": "Hailstones turn the storm's area of effect into difficult terrain until the end of your next turn",
     "classes": [
@@ -5396,7 +5531,9 @@
     "school": "Necromancy",
     "attack": {
       "damage": "3d10",
-      "damageType": "necrotic"
+      "damageType": "necrotic",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d10"
     },
     "classes": [
       "Cleric"
@@ -5406,9 +5543,11 @@
     "name": "Insect Plague",
     "description": "Swarming, biting locusts fill a 20-foot-radius sphere centered on a point you choose within range. The sphere spreads around corners. The sphere remains for the duration, and its area is lightly obscured. The sphere's area is difficult terrain.<br>When the area appears, each creature in it must make a Constitution saving throw. A creature takes 4d10 piercing damage on a failed save, or half as much damage on a successful one. A creature must also make this saving throw when it enters the spell's area for the first time on a turn or ends its turn there.",
     "higherLevel": "When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d10 for each slot level above 5th.",
-    "emote": "",
+    "emote": "conjures swarming, biting locusts",
     "source": "phb 254",
     "range": "300 ft",
+    "target": "each creature in the aoe when it appears or when it enters the spell's area for the first time on a turn or ends its turn there.",
+    "aoe": "20 ft radius sphere centered on a point within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -5420,6 +5559,15 @@
     "castingTime": "1 action",
     "level": 5,
     "school": "Conjuration",
+    "save": {
+      "ability": "constitution",
+      "damage": "4d10",
+      "damageType": "piercing",
+      "saveSuccess": "half damage",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d10"
+    },
+    "effects": "The sphere spreads around corners. The sphere remains for the duration, and its area is lightly obscured. The sphere's area is difficult terrain.",
     "classes": [
       "Cleric",
       "Druid",
@@ -5756,7 +5904,7 @@
     "name": "Lightning Arrow",
     "description": "The next time you make a ranged weapon attack during the spell's duration, the weapon's ammunition, or the weapon itself if it's a thrown weapon, transforms into a bolt of lightning. Make the attack roll as normal. The target takes 4d8 lightning damage on a hit, or half as much damage on a miss, instead of the weapon's normal damage.<br>Whether you hit or miss, each creature within 10 feet of the target must make a Dexterity saving throw. Each of these creatures takes 2d8 lightning damage on a failed save, or half as much damage on a successful one.<br>The piece of ammunition or weapon then returns to its normal form.",
     "higherLevel": "When you cast this spell using a spell slot of 4th level or higher, the damage for both effects of the spell increases by 1d8 for each slot level above 3rd.",
-    "emote": "",
+    "emote": "'s next ranged weapon attack transforms into a bolt of lightning",
     "source": "phb 255",
     "range": "Self",
     "components": {
@@ -5768,6 +5916,21 @@
     "castingTime": "1 bonus action",
     "level": 3,
     "school": "Transmutation",
+    "damage": {
+      "damage": "4d8",
+      "damageType": "lightning",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d8"
+    },
+    "save": {
+      "ability": "dexterity",
+      "damage": "2d8",
+      "damageType": "lightning",
+      "saveSuccess": "half damage",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d8"
+    },
+    "effects": "The next time you make a ranged weapon attack during the spell's duration, the weapon's ammunition, or the weapon itself if it's a thrown weapon, transforms into a bolt of lightning. Make the attack roll as normal. The target takes damage as outlined above on a hit, or half as much damage on a miss, instead of the weapon's normal damage.<br>Whether you hit or miss, each creature within 10 ft of the target must make a Dexterity saving throw as outlined above.<br>The piece of ammunition or weapon then returns to its normal form.",
     "classes": [
       "Ranger"
     ]
@@ -5795,7 +5958,9 @@
       "ability": "dexterity",
       "damage": "8d6",
       "damageType": "lightning",
-      "saveSuccess": "half damage"
+      "saveSuccess": "half damage",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d6"
     },
     "effects": "The lightning ignites flammable objects in the area that aren't being worn or carried",
     "classes": [
@@ -6152,9 +6317,11 @@
     "name": "Mass Cure Wounds",
     "description": "A wave of healing energy washes out from a point of your choice within range. Choose up to six creatures in a 30-foot-radius sphere centered on that point. Each target regains hit points equal to 3d8 + your spellcasting ability modifier. This spell has no effect on undead or constructs.",
     "higherLevel": "When you cast this spell using a spell slot of 6th level or higher, the healing increases by 1d8 for each slot level above 5th.",
-    "emote": "",
+    "emote": "conjures a wave of healing energy that washes out from a point",
     "source": "phb 258",
     "range": "60 ft",
+    "target": "up to 6 creatures in the aoe",
+    "aoe": "30 ft radius sphere centered on a point",
     "components": {
       "verbal": true,
       "somatic": true
@@ -6163,6 +6330,13 @@
     "castingTime": "1 action",
     "level": 5,
     "school": "Conjuration",
+    "heal": {
+      "amount": "3d8",
+      "castingStat": true,
+      "higherLevelDice": "1",
+      "higherLevelDie": "d8"
+    },
+    "effects": "This spell has no effect on undead or constructs.",
     "classes": [
       "Bard",
       "Cleric",
@@ -6207,7 +6381,9 @@
     "school": "Evocation",
     "heal": {
       "amount": "1d4",
-      "castingStat": true
+      "castingStat": true,
+      "higherLevelDice": "1",
+      "higherLevelDie": "d4"
     },
     "effects": "This spell has no effect on undead or constructs.",
     "classes": [
@@ -6333,7 +6509,11 @@
       "damage": "4d4",
       "damageType": "acid",
       "secondaryDamage": "2d4",
-      "secondaryDamageType": "acid"
+      "secondaryDamageType": "acid",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d4",
+      "higherLevelSecondaryDice": "1",
+      "higherLevelSecondaryDie": "d4"
     },
     "effects": "secondary at the end of the target's next turn.<br>On a miss, the arrow splashes the target with acid for half as much of the initial damage and no damage at the end of its next turn.",
     "classes": [
@@ -6654,7 +6834,9 @@
       "ability": "constitution",
       "damage": "2d10",
       "damageType": "radiant",
-      "saveSuccess": "half damage"
+      "saveSuccess": "half damage",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d10"
     },
     "effects": "Until the spell ends, dim light fills the cylinder.<br>A shapechanger makes its saving throw with disadvantage. If it fails, it also instantly reverts to its original form and can't assume a different form until it leaves the spell's light.<br>On each of your turns after you cast this spell, you can use an action to move the beam 60 ft in any direction.",
     "classes": [
@@ -6832,9 +7014,11 @@
     "name": "Otiluke's Freezing Sphere",
     "description": "A frigid globe of cold energy streaks from your fingertips to a point of your choice within range, where it explodes in a 60-foot-radius sphere. Each creature within the area must make a Constitution saving throw. On a failed save, a creature takes 10d6 cold damage. On a successful save, it takes half as much damage.<br>If the globe strikes a body of water or a liquid that is principally water (not including water-based creatures), it freezes the liquid to a depth of 6 inches over an area 30 feet square. This ice lasts for 1 minute. Creatures that were swimming on the surface of frozen water are trapped in the ice. A trapped creature can use an action to make a Strength check against your spell save DC to break free.<br>You can refrain from firing the globe after completing the spell, if you wish. A small globe about the size of a sling stone, cool to the touch, appears in your hand. At any time, you or a creature you give the globe to can throw the globe (to a range of 40 feet) or hurl it with a sling (to the sling's normal range). It shatters on impact, with the same effect as the normal casting of the spell. You can also set the globe down without shattering it. After 1 minute, if the globe hasn't already shattered, it explodes.",
     "higherLevel": "When you cast this spell using a spell slot of 7th level or higher, the damage increases by 1d6 for each slot level above 6th.",
-    "emote": "",
+    "emote": "evokes a frigid globe of cold energy that streaks from {{GENDER_PRONOUN_HIS_HER}} fingertips",
     "source": "phb 263",
     "range": "300 ft",
+    "target": "each creature in the aoe",
+    "aoe": "60 ft radius sphere centered on a point",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -6845,6 +7029,15 @@
     "castingTime": "1 action",
     "level": 6,
     "school": "Evocation",
+    "save": {
+      "ability": "constitution",
+      "damage": "10d6",
+      "damageType": "cold",
+      "saveSuccess": "half damage",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d6"
+    },
+    "effects": "If the globe strikes a body of water or a liquid that is principally water (not including water-based creatures), it freezes the liquid to a depth of 6 inches over an area 30 feet square. This ice lasts for 1 minute. Creatures that were swimming on the surface of frozen water are trapped in the ice. A trapped creature can use an action to make a Strength check against your spell save DC to break free.<br>You can refrain from firing the globe after completing the spell, if you wish. A small globe about the size of a sling stone, cool to the touch, appears in your hand. At any time, you or a creature you give the globe to can throw the globe (to a range of 40 feet) or hurl it with a sling (to the sling's normal range). It shatters on impact, with the same effect as the normal casting of the spell. You can also set the globe down without shattering it. After 1 minute, if the globe hasn't already shattered, it explodes.",
     "classes": [
       "Wizard"
     ]
@@ -7264,7 +7457,9 @@
     "school": "Evocation",
     "heal": {
       "amount": "2d8",
-      "castingStat": true
+      "castingStat": true,
+      "higherLevelDice": "1",
+      "higherLevelDie": "d8"
     },
     "effects": "This spell has no effect on undead or constructs.",
     "classes": [
@@ -7667,7 +7862,9 @@
     "school": "Necromancy",
     "attack": {
       "damage": "2d8",
-      "damageType": "poison"
+      "damageType": "poison",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d8"
     },
     "save": {
       "ability": "constitution",
@@ -7998,7 +8195,9 @@
     "school": "Evocation",
     "damage": {
       "damage": "1d6",
-      "damageType": "fire"
+      "damageType": "fire",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d6"
     },
     "save": {
       "ability": "constitution",
@@ -8168,7 +8367,9 @@
       "ability": "constitution",
       "damage": "3d8",
       "damageType": "thunder",
-      "saveSuccess": "half damage"
+      "saveSuccess": "half damage",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d8"
     },
     "effects": "A creature made of inorganic material such as stone, crystal, or metal has disadvantage on this saving throw.<br>A nonmagical object that isn't being worn or carried also takes the damage if it's in the spell's area.",
     "classes": [
@@ -8392,7 +8593,7 @@
     "castingTime": "1 action",
     "level": 1,
     "school": "Enchantment",
-    "effects": "Roll 5d8; the total is how many hit points of creatures this spell can affect. The targets are affected in ascending order of their current hit points (ignoring unconscious creatures).<br>Starting with the creature that has the lowest current hit points, each creature affected by this spell falls unconscious until the spell ends, the sleeper takes damage, or someone uses an action to shake or slap the sleeper awake. Subtract each creature's hit points from the total before moving on to the creature with the next lowest hit points. A creature's hit points must be equal to or less than the remaining total for that creature to be affected.<br>Undead and creatures immune to being charmed aren't affected by this spell.",
+    "effects": "Roll 5d8 ([[5d8]]); the total is how many hit points of creatures this spell can affect. The targets are affected in ascending order of their current hit points (ignoring unconscious creatures).<br>Starting with the creature that has the lowest current hit points, each creature affected by this spell falls unconscious until the spell ends, the sleeper takes damage, or someone uses an action to shake or slap the sleeper awake. Subtract each creature's hit points from the total before moving on to the creature with the next lowest hit points. A creature's hit points must be equal to or less than the remaining total for that creature to be affected.<br>Undead and creatures immune to being charmed aren't affected by this spell.",
     "classes": [
       "Bard",
       "Sorcerer",
@@ -8488,7 +8689,9 @@
       "ability": "dexterity",
       "damage": "3d6",
       "damageType": "cold",
-      "saveSuccess": "half damage"
+      "saveSuccess": "half damage",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d6"
     },
     "classes": [
       "Sorcerer",
@@ -8656,9 +8859,11 @@
     "name": "Spirit Guardians",
     "description": "You call forth spirits to protect you. They flit around you to a distance of 15 feet for the duration. If you are good or neutral, their spectral form appears angelic or fey (your choice). If you are evil, they appear fiendish.<br>When you cast this spell, you can designate any number of creatures you can see to be unaffected by it. An affected creature's speed is halved in the area, and when the creature enters the area for the first time on a turn or starts its turn there, it must make a Wisdom saving throw. On a failed save, the creature takes 3d8 radiant damage (if you are good or neutral) or 3d8 necrotic damage (if you are evil). On a successful save, the creature takes half as much damage.",
     "higherLevel": "When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d8 for each slot level above 3rd.",
-    "emote": "",
+    "emote": "calls forth spirits to protect {{GENDER_PRONOUN_HIM_HER}}",
     "source": "phb 278",
     "range": "Self",
+    "target": "chosen creatures enters the area for the first time on a turn or starts its turn there",
+    "aoe": "15 ft radius that remains centered on you",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -8670,6 +8875,15 @@
     "castingTime": "1 action",
     "level": 3,
     "school": "Conjuration",
+    "save": {
+      "ability": "wisdom",
+      "damage": "3d8",
+      "damageType": "radiant or necrotic",
+      "saveSuccess": "half damage",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d8"
+    },
+    "effects": "The spirits flit around you to a distance of 15 ft for the duration. If you are good or neutral, their spectral form appears angelic or fey (your choice). If you are evil, they appear fiendish.<br>When you cast this spell, you can designate any number of creatures you can see to be unaffected by it. An affected creature's speed is halved in the area. radiant damage (if you are good or neutral) or 3d8 necrotic damage (if you are evil).",
     "classes": [
       "Cleric"
     ],
@@ -8695,7 +8909,9 @@
     "school": "Evocation",
     "attack": {
       "damage": "1d8",
-      "castingStat": true
+      "castingStat": true,
+      "higherLevelDice": ".5",
+      "higherLevelDie": "d8"
     },
     "effects": "As a bonus action on your turn, you can move the weapon up to 20 ft and repeat the attack against a creature within 5 ft of it.",
     "classes": [
@@ -8870,7 +9086,9 @@
     "save": {
       "ability": "strength",
       "damage": "2d6",
-      "damageType": "bludgeoning"
+      "damageType": "bludgeoning",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d6"
     },
     "effects": "The sphere's space is difficult terrain.<br>Until the spell ends, you can use a bonus action on each of your turns to cause a bolt of lightning to leap from the center of the sphere toward one creature you choose within 60 feet of the center. Make a ranged spell attack. You have advantage on the attack roll if the target is in the sphere. On a hit, the target takes 4d6 lightning damage.<br>Creatures within 30 ft of the sphere have disadvantage on Wisdom (Perception) checks made to listen.",
     "classes": [
@@ -9262,7 +9480,9 @@
       "damage": "2d8",
       "damageType": "thunder",
       "saveFailure": "pushed 10 feet away from you",
-      "saveSuccess": "half damage and not pushed"
+      "saveSuccess": "half damage and not pushed",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d8"
     },
     "effects": "In addition, unsecured objects that are completely within the area of effect are automatically pushed 10 feet away from you by the spell's effect, and the spell emits a thunderous boom audible out to 300 feet.",
     "classes": [
@@ -9589,7 +9809,9 @@
     "school": "Necromancy",
     "attack": {
       "damage": "3d6",
-      "damageType": "necrotic"
+      "damageType": "necrotic",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d6"
     },
     "effects": "you regain hit points equal to half the amount of necrotic damage dealt. Until the spell ends, you can make the attack again on each of your turns as an action.",
     "classes": [
@@ -9647,7 +9869,9 @@
       "damage": "10d4",
       "damageType": "acid",
       "saveSuccess": "half damage and no additional damage",
-      "saveFailure": "and 5d4 acid damage at the end of its next turn"
+      "saveFailure": "and 5d4 acid damage at the end of its next turn",
+      "higherLevelDice": "2",
+      "higherLevelDie": "d4"
     },
     "classes": [
       "Sorcerer",
@@ -9678,7 +9902,9 @@
       "ability": "dexterity",
       "damage": "5d8",
       "damageType": "fire",
-      "saveSuccess": "half damage"
+      "saveSuccess": "half damage",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d8"
     },
     "effects": "The wall is opaque.One side of the wall, selected by you when you cast this spell, deals 5d8 ([[5d8]]) fire damage to each creature that ends its turn within 10 ft of that side or inside the wall. A creature takes the same damage when it enters the wall for the first time on a turn or ends its turn there. The other side of the wall deals no damage.",
     "classes": [
@@ -9742,7 +9968,9 @@
       "ability": "dexterity",
       "damage": "10d6",
       "damageType": "cold",
-      "saveSuccess": "half damage"
+      "saveSuccess": "half damage",
+      "higherLevelDice": "2",
+      "higherLevelDie": "d6"
     },
     "effects": "If the wall cuts through a creature's space when it appears, the creature within its area is pushed to one side of the wall and must make a Dexterity saving throw as outlined above.<br>The wall is an object that can be damaged and thus breached. It has AC 12 and 30 hit points per 10 ft section, and it is vulnerable to fire damage. Reducing a 10 ft section of wall to 0 hit points destroys it and leaves behind a sheet of frigid air in the space the wall occupied. A creature moving through the sheet of frigid air for the first time on a turn must make a Constitution saving throw. That creature takes 5d6 ([[5d6]]) cold damage on a failed save, or half as much damage on a successful one.",
     "classes": [
@@ -9830,7 +10058,9 @@
       "ability": "dexterity",
       "damage": "7d8",
       "damageType": "piercing",
-      "saveSuccess": "half damage"
+      "saveSuccess": "half damage",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d8"
     },
     "effects": "The wall blocks line of sight.<br>A creature can move through the wall, albeit slowly and painfully. For every 1 foot a creature moves through the wall, it must spend 4 feet of movement. Furthermore, the first time a creature enters the wall on a turn or ends its turn there, the creature must make a Dexterity saving throw as outlined above.",
     "classes": [
@@ -10178,7 +10408,9 @@
     "school": "Evocation",
     "attack": {
       "damage": "1d12",
-      "damageType": "lightning"
+      "damageType": "lightning",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d12"
     },
     "effect": "on each of your turns for the duration, you can use your action to deal 1d12 lightning damage to the target automatically. The spell ends if you use your action to do anything else. The spell also ends if the target is ever outside the spell's range or if it has total cover from you.",
     "classes": [
