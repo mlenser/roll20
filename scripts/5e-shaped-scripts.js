@@ -1992,7 +1992,7 @@
       setAttribute(spellBase + 'spellhighersloteffect', spell.higherLevel);
       var noHigherLevelDice = true;
 
-      if((spell.attack && spell.attack.higherLevelDice) || (spell.damage && spell.damage.higherLevelDice) || (spell.save && spell.save.higherLevelDice)) {
+      if((spell.attack && spell.attack.higherLevelDice) || (spell.damage && spell.damage.higherLevelDice) || (spell.save && spell.save.higherLevelDice) || (spell.heal && (spell.heal.higherLevelDice || spell.heal.higherLevelAmount))) {
         noHigherLevelDice = false;
       }
       if(noHigherLevelDice) {
@@ -2101,15 +2101,24 @@
       if(spell.heal.castingStat) {
         setAttribute(spellBase + 'healstatbonus', '@{casting_stat}');
       }
+	    if(spell.heal.higherLevelDice || spell.heal.higherLevelAmount) {
+		    setAttribute(spellBase + 'spell_toggle_higher_lvl_query', '@{spell_var_higher_lvl_query}');
+	    }
+	    if(spell.heal.higherLevelDice) {
+		    setAttribute(spellBase + 'spell_heal_higher_level_dmg_dice', spell.heal.higherLevelDice);
+	    }
+	    if(spell.heal.higherLevelDie) {
+		    setAttribute(spellBase + 'spell_heal_higher_level_dmg_die', spell.heal.higherLevelDie);
+	    }
+	    if(spell.heal.higherLevelAmount) {
+		    setAttribute(spellBase + 'spell_heal_higher_level_amount', spell.heal.higherLevelAmount);
+	    }
     }
 
     if(spell.effects) {
       setAttribute(spellBase + 'spelleffect', spell.effects);
       setAttribute(spellBase + 'spell_toggle_effects', '@{spell_var_effects}');
     }
-
-    //higherLevelAmount (for heals), higherLevelDice, higherLevelDie, higherLevelSecondaryDice, higherLevelSecondaryDie. Check spiritual weapon
-
 
     var message = spell.name + ' imported for ' + characterName + ' on spell level ' + spell.level + ' at index ' + spellIndex;
     log(message);
