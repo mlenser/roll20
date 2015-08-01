@@ -6515,7 +6515,7 @@
       "higherLevelSecondaryDice": "1",
       "higherLevelSecondaryDie": "d4"
     },
-    "effects": "secondary at the end of the target's next turn.\nOn a miss, the arrow splashes the target with acid for half as much of the initial damage and no damage at the end of its next turn.",
+    "effects": "Secondary damage occurs at the end of the target's next turn.\nOn a miss, the arrow splashes the target with acid for half as much of the initial damage and no damage at the end of its next turn.",
     "classes": [
       "Druid",
       "Wizard"
