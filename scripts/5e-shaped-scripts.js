@@ -1986,11 +1986,11 @@
 
     if(spell.description) {
       setAttribute(spellBase + 'spelldescription', spell.description);
-      //setAttribute(spellBase + 'spellshowdesc', '{{spellshowdesc=1}} {{spelldescription=@{spelldescription}}}');
+      //setAttribute(spellBase + 'spell_toggle_description', '@{spell_var_description}');
     }
     if(spell.higherLevel) {
       setAttribute(spellBase + 'spellhighersloteffect', spell.higherLevel);
-      setAttribute(spellBase + 'spellshowhigherlvl', '{{spellshowhigherlvl=1}} {{spellhigherlevel=@{spellhighersloteffect}}}');
+      setAttribute(spellBase + 'spell_toggle_higher_lvl', '@{spell_var_higher_lvl}');
     }
     if(spell.emote) {
       var gender = getAttrByName(characterId, 'gender', 'current'),
@@ -2043,7 +2043,7 @@
         setAttribute(spellBase + 'spell_' + type + '_second_dmg_type', param.secondaryDamageType);
       }
       if(param.higherLevelDice) {
-        setAttribute(spellBase + 'spell_toggle_higher_lvl', '@{spell_var_higher_lvl}');
+        setAttribute(spellBase + 'spell_toggle_higher_lvl', '');
         setAttribute(spellBase + 'spell_toggle_higher_lvl_query', '@{spell_var_higher_lvl_query}');
         setAttribute(spellBase + 'spell_' + type + '_higher_level_dmg_dice', param.higherLevelDice);
       }
