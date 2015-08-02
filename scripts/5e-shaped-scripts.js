@@ -611,7 +611,7 @@
     }
 
     // Power
-    regex = /(?:#)([A-Z][\w-\']+(?:\s(?:[A-Z][\w-\']+|[\(\)\d\-]|of|and|or|a)+)*)(?=\s*\.)/gi;
+    regex = /(?:#)([A-Z][\w-\']+(?:\s(?:[A-Z][\w-\']+|[\(\)\/\d\-]|of|and|or|a)+)*)(?=\s*\.)/gi;
     log('parsed statblock: ' + statblock);
     while(match = regex.exec(statblock)) {
       if(!keyword.attr[match[1].toLowerCase()]) {
@@ -748,6 +748,9 @@
     if(section.attr['damage vulnerabilities']) setAttribute('damage_vulnerability', section.attr['damage vulnerabilities']);
     if(section.attr['damage resistances']) setAttribute('damage_resistance', section.attr['damage resistances']);
     if(section.attr.languages) setAttribute('prolanguages', section.attr.languages);
+
+    log('section.actions');
+    log(section.actions);
 
     parseTraits(section.traits);
     parseReactions(section.reactions);
@@ -1190,6 +1193,10 @@
           parsed,
           pos = key.indexOf('(');
 
+        log('value');
+        log(value);
+        log(key);
+
         if(pos > 1) {
           actionPosition[actionNum] = key.substring(0, pos - 1).toLowerCase();
         } else {
@@ -1205,6 +1212,19 @@
             key = key.replace(keyRegex, '');
           }
         }
+        var rechargeDayRegex = /\s*?\((\d+\/Day)\)/gi;
+        while(rechargeDayResult = rechargeDayRegex.exec(key)) {
+          var recharge = rechargeDayResult[1] || rechargeDayResult[2];
+          setNPCActionAttribute('recharge', recharge);
+          setNPCActionToggle('recharge');
+          if(recharge) {
+            key = key.replace(rechargeDayRegex, '');
+          }
+        }
+
+        log('key 2');
+        log(key);
+
         setName(key);
 
         var splitAction = value.split(/\.(.+)?/),
