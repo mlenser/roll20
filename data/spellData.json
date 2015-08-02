@@ -1299,9 +1299,10 @@
     "name": "Chain Lightning",
     "description": "You create a bolt of lightning that arcs toward a target of your choice that you can see within range. Three bolts then leap from that target to as many as three other targets, each of which must be within 30 feet of the first target. A target can be a creature or an object and can be targeted by only one of the bolts.\nA target must make a Dexterity saving throw. The target takes 10d8 lightning damage on a failed save, or half as much damage on a successful one.",
     "higherLevel": "When you cast this spell using a spell slot of 7th level or higher, one additional bolt leaps from the first target to another target for each slot level above 6th.",
-    "emote": "",
+    "emote": "creates a bolt of lightning that arcs toward a target. Three bolts then leap from that target to as many as three other targets",
     "source": "phb 221",
     "range": "150 ft",
+    "target": "a target within range and up to 3 creatures within 30 ft of it. A target can be a creature or an object and can be targeted by only one of the bolts.",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -1312,6 +1313,12 @@
     "castingTime": "1 action",
     "level": 6,
     "school": "Evocation",
+    "save": {
+      "ability": "dexterity",
+      "damage": "10d8",
+      "damageType": "lightning",
+      "saveSuccess": "half damage"
+    },
     "classes": [
       "Sorcerer",
       "Wizard"
@@ -1924,9 +1931,10 @@
     "name": "Conjure Fey",
     "description": "You summon a fey creature of challenge rating 6 or lower, or a fey spirit that takes the form of a beast of challenge rating 6 or lower. It appears in an unoccupied space that you can see within range. The fey creature disappears when it drops to 0 hit points or when the spell ends.\nThe fey creature is friendly to you and your companions for the duration. Roll initiative for the creature, which has its own turns. It obeys any verbal commands that you issue to it (no action required by you), as long as they don't violate its alignment. If you don't issue any commands to the fey creature, it defends itself from hostile creatures but otherwise takes no actions.\nIf your concentration is broken, the fey creature doesn't disappear. Instead, you lose control of the fey creature, it becomes hostile toward you and your companions, and it might attack. An uncontrolled fey creature can't be dismissed by you, and it disappears 1 hour after you summoned it.\nThe DM has the fey creature's statistics.",
     "higherLevel": "When you cast this spell using a spell slot of 7th level or higher, the challenge rating increases by 1 for each slot level above 6th.",
-    "emote": "",
+    "emote": "summons a fey creature",
     "source": "phb 226",
     "range": "90 ft",
+    "target": "an unoccupied space that you can see within range",
     "components": {
       "verbal": true,
       "somatic": true
@@ -1936,6 +1944,7 @@
     "castingTime": "1 minute",
     "level": 6,
     "school": "Conjuration",
+    "effects": "You summon a fey creature of challenge rating 6 or lower, or a fey spirit that takes the form of a beast of challenge rating 6 or lower. It appears in an unoccupied space that you can see within range. The fey creature disappears when it drops to 0 hit points or when the spell ends.\nThe fey creature is friendly to you and your companions for the duration. Roll initiative for the creature, which has its own turns. It obeys any verbal commands that you issue to it (no action required by you), as long as they don't violate its alignment. If you don't issue any commands to the fey creature, it defends itself from hostile creatures but otherwise takes no actions.\nIf your concentration is broken, the fey creature doesn't disappear. Instead, you lose control of the fey creature, it becomes hostile toward you and your companions, and it might attack. An uncontrolled fey creature can't be dismissed by you, and it disappears 1 hour after you summoned it.\nThe DM has the fey creature's statistics.",
     "classes": [
       "Druid",
       "Warlock"
@@ -2050,7 +2059,7 @@
   {
     "name": "Contingency",
     "description": "Choose a spell of 5th level or lower that you can cast, that has a casting time of 1 action, and that can target you. You cast that spell—called the contingent spell—as part of casting contingency, expending spell slots for both, but the contingent spell doesn't come into effect. Instead, it takes effect when a certain circumstance occurs. You describe that circumstance when you cast the two spells. For example, a contingency cast with water breathing might stipulate that water breathing comes into effect when you are engulfed in water or a similar liquid. \nThe contingent spell takes effect immediately after the circumstance is met for the first time, whether or not you want it to. and then contingency ends.\nThe contingent spell takes effect only on you, even if it can normally target others. You can use only one contingency spell at a time. If you cast this spell again, the effect of another contingency spell on you ends. Also, contingency ends on you if its material component is ever not on your person.",
-    "emote": "",
+    "emote": "prepares a spell in case the worst happens",
     "source": "phb 227",
     "range": "Self",
     "components": {
@@ -2063,6 +2072,7 @@
     "castingTime": "10 minutes",
     "level": 6,
     "school": "Evocation",
+    "effects": "Choose a spell of 5th level or lower that you can cast, that has a casting time of 1 action, and that can target you. You cast that spell—called the contingent spell—as part of casting contingency, expending spell slots for both, but the contingent spell doesn't come into effect. Instead, it takes effect when a certain circumstance occurs. You describe that circumstance when you cast the two spells. For example, a contingency cast with water breathing might stipulate that water breathing comes into effect when you are engulfed in water or a similar liquid. \nThe contingent spell takes effect immediately after the circumstance is met for the first time, whether or not you want it to. and then contingency ends.\nThe contingent spell takes effect only on you, even if it can normally target others. You can use only one contingency spell at a time. If you cast this spell again, the effect of another contingency spell on you ends. Also, contingency ends on you if its material component is ever not on your person.",
     "classes": [
       "Wizard"
     ]
@@ -2320,6 +2330,7 @@
     "emote": "",
     "source": "phb 229",
     "range": "10 ft",
+    "target": "up to 3 corpses of Medium or Small humanoids within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -2330,6 +2341,7 @@
     "castingTime": "1 minute",
     "level": 6,
     "school": "Necromancy",
+    "effects": "You can cast this spell only at night. Each corpse becomes a ghoul under your control.\nAs a bonus action on each of your turns, you can mentally command any creature you animated with this spell if the creature is within 120 ft of you (if you control multiple creatures, you can command any or all of them at the same time, issuing the same command to each one). You decide what action the creature will take and where it will move during its next turn, or you can issue a general command, such as to guard a particular chamber or corridor. If you issue no commands, the creature only defends itself against hostile creatures. Once given an order, the creature continues to follow it until its task is complete.\nThe creature is under your control for 24 hrd, after which it stops obeying any command you have given it. To maintain control of the creature for another 24 hrs, you must cast this spell on the creature before the current 24 hr period ends. This use of the spell reasserts your control over up to three creatures you have animated with this spell, rather than animating new ones.",
     "classes": [
       "Cleric",
       "Warlock",
@@ -3032,9 +3044,10 @@
   {
     "name": "Drawmij's Instant Summons",
     "description": "You touch an object weighing 10 pounds or less whose longest dimension is 6 feet or less. The spell leaves an invisible mark on its surface and invisibly inscribes the name of the item on the sapphire you use as the material component. Each time you cast this spell, you must use a different sapphire.\nAt any time thereafter, you can use your action to speak the item's name and crush the sapphire. The item instantly appears in your hand regardless of physical or planar distances, and the spell ends.\nIf another creature is holding or carrying the item, crushing the sapphire doesn't transport the item to you, but instead you learn who the creature possessing the object is and roughly where that creature is located at that moment.\nDispel magic or a similar effect successfully applied to the sapphire ends this spell's effect.",
-    "emote": "",
+    "emote": "touches an object which leaves an invisible mark on its surface and invisibly inscribes the name of the item on the sapphire {{GENDER_PRONOUN_HE_SHE}} uses as the material component",
     "source": "phb 235",
     "range": "Touch",
+    "target": "an object weighing 10 lbs or less whose longest dimension is 6 ft or less",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -3046,6 +3059,7 @@
     "castingTime": "1 minute",
     "level": 6,
     "school": "Conjuration",
+    "effects": "Each time you cast this spell, you must use a different sapphire.\nAt any time thereafter, you can use your action to speak the item's name and crush the sapphire. The item instantly appears in your hand regardless of physical or planar distances, and the spell ends.\nIf another creature is holding or carrying the item, crushing the sapphire doesn't transport the item to you, but instead you learn who the creature possessing the object is and roughly where that creature is located at that moment.\nDispel magic or a similar effect successfully applied to the sapphire ends this spell's effect.",
     "classes": [
       "Wizard"
     ]
@@ -3584,9 +3598,10 @@
   {
     "name": "Eyebite",
     "description": "For the spell's duration, your eyes become an inky void imbued with dread power. One creature of your choice within 60 feet of you that you can see must succeed on a Wisdom saving throw or be affected by one of the following effects of your choice for the duration. On each of your turns until the spell ends, you can use your action to target another creature but can't target a creature again if it has succeeded on a saving throw against this casting of eyebite.\n<b>Asleep.</b> The target falls unconscious. It wakes up if it takes any damage or if another creature uses its action to shake the sleeper awake.\n<b>Panicked.</b> The target is frightened of you. On each of its turns, the frightened creature must take the Dash action and move away from you by the safest and shortest available route, unless there is nowhere to move. If the target moves to a place at least 60 feet away from you where it can no longer see you, this effect ends.\n<b>Sickened.</b> The target has disadvantage on attack rolls and ability checks. At the end of each of its turns, it can make another Wisdom saving throw. If it succeeds, the effect ends.",
-    "emote": "",
+    "emote": "'s eyes become an inky void imbued with dread power",
     "source": "phb 238",
     "range": "Self",
+    "target": "1 creature of your choice within 60 ft",
     "components": {
       "verbal": true,
       "somatic": true
@@ -3596,6 +3611,11 @@
     "castingTime": "1 action",
     "level": 6,
     "school": "Necromancy",
+    "save": {
+      "ability": "wisdom",
+      "saveFailure": "be affected by one of the effects"
+    },
+    "effects": "target must succeed on a Wisdom saving throw as outlined above. On each of your turns until the spell ends, you can use your action to target another creature but can't target a creature again if it has succeeded on a saving throw against this casting of eyebite.\n<b>Asleep.</b> The target falls unconscious. It wakes up if it takes any damage or if another creature uses its action to shake the sleeper awake.\n<b>Panicked.</b> The target is frightened of you. On each of its turns, the frightened creature must take the Dash action and move away from you by the safest and shortest available route, unless there is nowhere to move. If the target moves to a place at least 60 ft away from you where it can no longer see you, this effect ends.\n<b>Sickened.</b> The target has disadvantage on attack rolls and ability checks. At the end of each of its turns, it can make another Wisdom saving throw. If it succeeds, the effect ends.",
     "classes": [
       "Bard",
       "Sorcerer",
@@ -3817,7 +3837,7 @@
   {
     "name": "Find the Path",
     "description": "This spell allows you to find the shortest, most direct physical route to a specific fixed location that you are familiar with on the same plane of existence. If you name a destination on another plane of existence, a destination that moves (such as a mobile fortress), or a destination that isn't specific (such as \"a green dragon's lair\"), the spell fails.\nFor the duration, as long as you are on the same plane of existence as the destination, you know how far it is and in what direction it lies. While you are traveling there, whenever you are presented with a choice of paths along the way, you automatically determine which path is the shortest and most direct route (but not necessarily the safest route) to the destination.",
-    "emote": "",
+    "emote": "divines the shortest, most direct physical route to a specific fixed location that {{GENDER_PRONOUN_HE_SHE}} is familiar with on the same plane of existence",
     "source": "phb 240",
     "range": "Self",
     "components": {
@@ -3831,6 +3851,7 @@
     "castingTime": "1 minute",
     "level": 6,
     "school": "Divination",
+    "effects": "If you name a destination on another plane of existence, a destination that moves (such as a mobile fortress), or a destination that isn't specific (such as \"a green dragon's lair\"), the spell fails.\nFor the duration, as long as you are on the same plane of existence as the destination, you know how far it is and in what direction it lies. While you are traveling there, whenever you are presented with a choice of paths along the way, you automatically determine which path is the shortest and most direct route (but not necessarily the safest route) to the destination.",
     "classes": [
       "Bard",
       "Cleric",
@@ -4129,9 +4150,10 @@
   {
     "name": "Flesh to Stone",
     "description": "You attempt to turn one creature that you can see within range into stone. If the target's body is made of flesh, the creature must make a Constitution saving throw. On a failed save, it is restrained as its flesh begins to harden. On a successful save, the creature isn't affected.\nA creature restrained by this spell must make another Constitution saving throw at the end of each of its turns. If it successfully saves against this spell three times, the spell ends. If it fails its saves three times, it is turned to stone and subjected to the petrified condition for the duration. The successes and failures don't need to be consecutive; keep track of both until the target collects three of a kind.\nIf the creature is physically broken while petrified, it suffers from similar deformities if it reverts to its original state.\nIf you maintain your concentration on this spell for the entire possible duration, the creature is turned to stone until the effect is removed.",
-    "emote": "",
+    "emote": "attempts to turn a creature into stone",
     "source": "phb 243",
     "range": "60 ft",
+    "target": "1 creature that you can see within",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -4143,6 +4165,12 @@
     "castingTime": "1 action",
     "level": 6,
     "school": "Transmutation",
+    "save": {
+      "ability": "constitution",
+      "condition": "if the target's body is made of flesh",
+      "saveFailure": "it is restrained as its flesh begins to harden"
+    },
+    "effects": "A creature restrained by this spell must make another Constitution saving throw at the end of each of its turns. If it successfully saves against this spell three times, the spell ends. If it fails its saves three times, it is turned to stone and subjected to the petrified condition for the duration. The successes and failures don't need to be consecutive; keep track of both until the target collects three of a kind.\nIf the creature is physically broken while petrified, it suffers from similar deformities if it reverts to its original state.\nIf you maintain your concentration on this spell for the entire possible duration, the creature is turned to stone until the effect is removed.",
     "classes": [
       "Warlock",
       "Wizard"
@@ -4206,9 +4234,10 @@
   {
     "name": "Forbiddance",
     "description": "You create a ward against magical travel that protects up to 40,000 square feet of floor space to a height of 30 feet above the floor. For the duration, creatures can't teleport into the area or use portals, such as those created by the gate spell, to enter the area. The spell proofs the area against planar travel, and therefore prevents creatures from accessing the area by way of the Astral Plane, Ethereal Plane, Feywild, Shadowfell, or the plane shift spell.\nIn addition, the spell damages types of creatures that you choose when you cast it. Choose one or more of the following: celestials, elementals, fey, fiends, and undead. When a chosen creature enters the spell's area for the first time on a turn or starts its turn there, the creature takes 5d10 radiant or necrotic damage (your choice when you cast this spell).\nWhen you cast this spell, you can designate a password. A creature that speaks the password as it enters the area takes no damage from the spell.\nThe spell's area can't overlap with the area of another forbiddance spell. If you cast forbiddance every day for 30 days in the same location, the spell lasts until it is dispelled, and the material components are consumed on the last casting.",
-    "emote": "",
+    "emote": "creates a ward against magical travel",
     "source": "phb 243",
     "range": "Touch",
+    "aoe": "protects up to 40,000 sq ft of floor space to a height of 30 ft above the floor",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -4220,6 +4249,7 @@
     "castingTime": "10 minutes",
     "level": 6,
     "school": "Abjuration",
+    "effects": "For the duration, creatures can't teleport into the area or use portals, such as those created by the gate spell, to enter the area. The spell proofs the area against planar travel, and therefore prevents creatures from accessing the area by way of the Astral Plane, Ethereal Plane, Feywild, Shadowfell, or the plane shift spell.\nIn addition, the spell damages types of creatures that you choose when you cast it. Choose one or more of the following: celestials, elementals, fey, fiends, and undead. When a chosen creature enters the spell's area for the first time on a turn or starts its turn there, the creature takes 5d10 radiant or necrotic damage (your choice when you cast this spell).\nWhen you cast this spell, you can designate a password. A creature that speaks the password as it enters the area takes no damage from the spell.\nThe spell's area can't overlap with the area of another forbiddance spell. If you cast forbiddance every day for 30 days in the same location, the spell lasts until it is dispelled, and the material components are consumed on the last casting.",
     "classes": [
       "Cleric"
     ]
@@ -4500,9 +4530,10 @@
     "name": "Globe of Invulnerability",
     "description": "An immobile, faintly shimmering barrier springs into existence in a 10-foot radius around you and remains for the duration.\nAny spell of 5th level or lower cast from outside the barrier can't affect creatures or objects within it, even if the spell is cast using a higher level spell slot. Such a spell can target creatures and objects within the barrier, but the spell has no effect on them. Similarly, the area within the barrier is excluded from the areas affected by such spells.",
     "higherLevel": "When you cast this spell using a spell slot of 7th level or higher, the barrier blocks spells of one level higher for each slot level above 6th.",
-    "emote": "",
+    "emote": "creates an immobile, faintly shimmering barrier",
     "source": "phb 245",
     "range": "Self",
+    "aoe": "10 ft radius that remains centered on you",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -4514,6 +4545,7 @@
     "castingTime": "1 action",
     "level": 6,
     "school": "Abjuration",
+    "effects": "Any spell of 5th level or lower cast from outside the barrier can't affect creatures or objects within it, even if the spell is cast using a higher level spell slot. Such a spell can target creatures and objects within the barrier, but the spell has no effect on them. Similarly, the area within the barrier is excluded from the areas affected by such spells.",
     "classes": [
       "Sorcerer",
       "Wizard"
@@ -4712,9 +4744,10 @@
   {
     "name": "Guards and Wards",
     "description": "You create a ward that protects up to 2,500 square feet of floor space (an area 50 feet square, or one hundred 5-foot squares or twenty-five 10-foot squares). The warded area can be up to 20 feet tall, and shaped as you desire. You can ward several stories of a stronghold by dividing the area among them, as long as you can walk into each contiguous area while you are casting the spell.\nWhen you cast this spell, you can specify individuals that are unaffected by any or all of the effects that you choose. You can also specify a password that, when spoken aloud, makes the speaker immune to these effects.\nGuards and wards creates the following effects within the warded area.\n<b>Corridors.</b> Fog fills all the warded corridors, making them heavily obscured. In addition, at each intersection or branching passage offering a choice of direction, there is a 50% chance that a creature other than you will believe it is going in the opposite direction from the one it chooses.\n<b>Doors.</b> All doors in the warded area are magically locked, as if sealed by an arcane lock spell. In addition, you can cover up to ten doors with an illusion (equivalent to the illusory object function of the minor illusion spell) to make them appear as plain sections of wall. \n<b>Stairs.</b> Webs fill all stairs in the warded area from top to bottom, as the web spell. These strands regrow in 10 minutes if they are burned or torn away while guards and wards lasts.\n<b>Other Spell Effect.</b> You can place your choice of one of the following magical effects within the warded area of the stronghold.\n- Place dancing lights in four corridors. You can design nate a simple program that the lights repeat as long as guards and wards lasts.\n- Place magic mouth in two locations.\n- Place stinking cloud in two locations. The vapors appear in the places you designate; they return within 10 minutes if dispersed by wind while guards and wards lasts.\n- Place a constant gust of wind in one corridor or room.\n- Place a suggestion in one location. You select an area of up to 5 feet square, and any creature that enters or passes through the area receives the suggestion mentally.\nThe whole warded area radiates magic. A dispel magic cast on a specific effect, if successful, removes only that effect.\nYou can create a permanently guarded and warded structure by casting this spell there every day for one year.",
-    "emote": "",
+    "emote": "creates a ward that protects",
     "source": "phb 248",
     "range": "Touch",
+    "aoe": "up to 2,500 sq ft of floor space (an area 50 ft square, or 100 5 ft squares or 25 10 ft squares). The warded area can be up to 20 ft tall, and shaped as you desire",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -4725,6 +4758,7 @@
     "castingTime": "10 minutes",
     "level": 6,
     "school": "Abjuration",
+    "effects": "You can ward several stories of a stronghold by dividing the area among them, as long as you can walk into each contiguous area while you are casting the spell.\nWhen you cast this spell, you can specify individuals that are unaffected by any or all of the effects that you choose. You can also specify a password that, when spoken aloud, makes the speaker immune to these effects.\nGuards and wards creates the following effects within the warded area.\n<b>Corridors.</b> Fog fills all the warded corridors, making them heavily obscured. In addition, at each intersection or branching passage offering a choice of direction, there is a 50% chance that a creature other than you will believe it is going in the opposite direction from the one it chooses.\n<b>Doors.</b> All doors in the warded area are magically locked, as if sealed by an arcane lock spell. In addition, you can cover up to ten doors with an illusion (equivalent to the illusory object function of the minor illusion spell) to make them appear as plain sections of wall. \n<b>Stairs.</b> Webs fill all stairs in the warded area from top to bottom, as the web spell. These strands regrow in 10 minutes if they are burned or torn away while guards and wards lasts.\n<b>Other Spell Effect.</b> You can place your choice of one of the following magical effects within the warded area of the stronghold.\n- Place dancing lights in four corridors. You can design nate a simple program that the lights repeat as long as guards and wards lasts.\n- Place magic mouth in two locations.\n- Place stinking cloud in two locations. The vapors appear in the places you designate; they return within 10 minutes if dispersed by wind while guards and wards lasts.\n- Place a constant gust of wind in one corridor or room.\n- Place a suggestion in one location. You select an area of up to 5 feet square, and any creature that enters or passes through the area receives the suggestion mentally.\nThe whole warded area radiates magic. A dispel magic cast on a specific effect, if successful, removes only that effect.\nYou can create a permanently guarded and warded structure by casting this spell there every day for one year.",
     "classes": [
       "Bard",
       "Wizard"
@@ -4923,9 +4957,10 @@
   {
     "name": "Harm",
     "description": "You unleash a virulent disease on a creature that you can see within range. The target must make a Constitution saving throw. On a failed save, it takes 14d6 necrotic damage, or half as much damage on a successful save. The damage can't reduce the target's hit points below 1. If the target fails the saving throw, its hit point maximum is reduced for 1 hour by an amount equal to the necrotic damage it took. Any effect that removes a disease allows a creature's hit point maximum to return to normal before that time passes.",
-    "emote": "",
+    "emote": "unleashes a virulent disease on a creature",
     "source": "phb 249",
     "range": "60 ft",
+    "target": "a creature that you can see within range",
     "components": {
       "verbal": true,
       "somatic": true
@@ -4934,6 +4969,13 @@
     "castingTime": "1 action",
     "level": 6,
     "school": "Necromancy",
+    "save": {
+      "ability": "constitution",
+      "damage": "14d6",
+      "damageType": "necrotic",
+      "saveSuccess": "half damage"
+    },
+    "effects": "the damage can't reduce the target's hit points below 1. If the target fails the saving throw, its hit point maximum is reduced for 1 hr by an amount equal to the necrotic damage it took. Any effect that removes a disease allows a creature's hit point maximum to return to normal before that time passes.",
     "classes": [
       "Cleric"
     ]
@@ -5088,9 +5130,10 @@
   {
     "name": "Heroes' Feast",
     "description": "You bring forth a great feast, including magnificent food and drink. The feast takes 1 hour to consume and disappears at the end of that time, and the beneficial effects don't set in until this hour is over. Up to twelve other creatures can partake of the feast.\nA creature that partakes of the feast gains several benefits. The creature is cured of all diseases and poison, becomes immune to poison and being frightened, and makes all Wisdom saving throws with advantage. Its hit point maximum also increases by 2d10, and it gains the same number of hit points. These benefits last for 24 hours.",
-    "emote": "",
+    "emote": "conjues a great feast, including magnificent food and drink",
     "source": "phb 250",
     "range": "30 ft",
+    "target": "Up to 12 other creatures can partake of the feast",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -5101,6 +5144,7 @@
     "castingTime": "10 minutes",
     "level": 6,
     "school": "Conjuration",
+    "effects": " The feast takes 1 hr to consume and disappears at the end of that time, and the beneficial effects don't set in until this hour is over.\nA creature that partakes of the feast gains several benefits. The creature is cured of all diseases and poison, becomes immune to poison and being frightened, and makes all Wisdom saving throws with advantage. Its hit point maximum also increases by 2d10 ([[2d10]]), and it gains the same number of hit points. These benefits last for 24 hrs.",
     "classes": [
       "Cleric",
       "Druid"
@@ -5587,7 +5631,7 @@
   {
     "name": "Investiture of Flame",
     "description": "Flames race across your body, shedding bright light in a 30-foot radius and dim light for an additional 30 feet for the spell's duration. The flames don't harm you. Until the spell ends, you gain the following benefits:\n- You are immune to fire damage and have resistance to cold damage.\n- Any creature that moves within 5 feet of you for the first time on a turn or ends its turn there takes 1d10 fire damage.\n- You can use your action to create a line of fire 15 feet long and 5 feet wide extending from you in a direction you choose. Each creature in the line must make a Dexterity saving throw. A creature takes 4d8 fire damage on a failed save, or half as much damage on a successful one.",
-    "emote": "",
+    "emote": "causes flames to race across {{GENDER_PRONOUN_HIS_HER}} body, shedding light",
     "source": "ee pc 19",
     "range": "Self",
     "components": {
@@ -5599,6 +5643,7 @@
     "castingTime": "1 action",
     "level": 6,
     "school": "Transmutation",
+    "effects": "the light sheds bright light in a 30 ft radius and dim light for an additional 30 ft for the spell's duration. The flames don't harm you. Until the spell ends, you gain the following benefits:\n- You are immune to fire damage and have resistance to cold damage.\n- Any creature that moves within 5 ft of you for the first time on a turn or ends its turn there takes 1d10 fire damage.\n- You can use your action to create a line of fire 15 ft long and 5 feet wide extending from you in a direction you choose. Each creature in the line must make a Dexterity saving throw. A creature takes 4d8 fire damage on a failed save, or half as much damage on a successful one.",
     "classes": [
       "Druid",
       "Sorcerer",
@@ -5609,7 +5654,7 @@
   {
     "name": "Investiture of Ice",
     "description": "Until the spell ends, ice rimes your body, and you gain the following benefits:\n- You are immune to cold damage and have resistance to fire damage.\n- You can move across difficult terrain created by ice or snow without spending extra movement.\n- The ground in a 10-foot radius around you is icy and is difficult terrain for creatures other than you. The radius moves with you.\n- You can use your action to create a 15-foot cone of freezing wind extending from your outstretched hand in a direction you choose. Each creature in the cone must make a Constitution saving throw. A creature takes 4d6 cold damage on a failed save, or half as much damage on a successful one. A creature that fails its save against this effect has its speed halved until the start of your next turn.",
-    "emote": "",
+    "emote": "causes ice to rime {{GENDER_PRONOUN_HIS_HER}} body",
     "source": "ee pc 19",
     "range": "Self",
     "components": {
@@ -5621,6 +5666,7 @@
     "castingTime": "1 action",
     "level": 6,
     "school": "Transmutation",
+    "effects": "You gain the following benefits:\n- You are immune to cold damage and have resistance to fire damage.\n- You can move across difficult terrain created by ice or snow without spending extra movement.\n- The ground in a 10 ft radius around you is icy and is difficult terrain for creatures other than you. The radius moves with you.\n- You can use your action to create a 15 ft cone of freezing wind extending from your outstretched hand in a direction you choose. Each creature in the cone must make a Constitution saving throw. A creature takes 4d6 cold damage on a failed save, or half as much damage on a successful one. A creature that fails its save against this effect has its speed halved until the start of your next turn.",
     "classes": [
       "Druid",
       "Sorcerer",
@@ -5631,7 +5677,7 @@
   {
     "name": "Investiture of Stone",
     "description": "Until the spell ends, bits of rock spread across your body, and you gain the following benefits:\n- You have resistance to bludgeoning, piercing, and slashing damage from nonmagical weapons.\n- You can use your action to create a small earthquake on the ground in a 15-foot radius centered on you. Other creatures on that ground must succeed on a Dexterity saving throw or be knocked prone.\n- You can move across difficult terrain made of earth or stone without spending extra movement. You can move through solid earth or stone as if it was air and without destabilizing it, but you can't end your movement there. If you do so, you are ejected to the nearest unoccupied space, this spell ends, and you are stunned until the end of your next turn.",
-    "emote": "",
+    "emote": "causes bits of rock to spread across {{GENDER_PRONOUN_HIS_HER}} body",
     "source": "ee pc 19",
     "range": "Self",
     "components": {
@@ -5643,6 +5689,7 @@
     "castingTime": "1 action",
     "level": 6,
     "school": "Transmutation",
+    "effects": "You gain the following benefits:\n- You have resistance to bludgeoning, piercing, and slashing damage from nonmagical weapons.\n- You can use your action to create a small earthquake on the ground in a 15 ft radius centered on you. Other creatures on that ground must succeed on a Dexterity saving throw or be knocked prone.\n- You can move across difficult terrain made of earth or stone without spending extra movement. You can move through solid earth or stone as if it was air and without destabilizing it, but you can't end your movement there. If you do so, you are ejected to the nearest unoccupied space, this spell ends, and you are stunned until the end of your next turn.",
     "classes": [
       "Druid",
       "Sorcerer",
@@ -5653,7 +5700,7 @@
   {
     "name": "Investiture of Wind",
     "description": "Until the spell ends, wind whirls around you, and you gain the following benefits:\n- Ranged weapon attacks made against you have disadvantage on the attack roll.\n- You gain a flying speed of 60 feet. If you are still flying when the spell ends, you fall, unless you can somehow prevent it.\n- You can use your action to create a 15-foot cube of swirling wind centered on a point you can see within 60 feet of you. Each creature in that area must make a Constitution saving throw. A creature takes 2d10 bludgeoning damage on a failed save, or half as much damage on a successful one. If a Large or smaller creature fails the save, that creature is also pushed up to 10 feet away from the center of the cube.",
-    "emote": "",
+    "emote": "causes wind to whirls around {{GENDER_PRONOUN_HIM_HER}}",
     "source": "ee pc 20",
     "range": "Self",
     "components": {
@@ -5665,6 +5712,7 @@
     "castingTime": "1 action",
     "level": 6,
     "school": "Transmutation",
+    "effects": "You gain the following benefits:\n- Ranged weapon attacks made against you have disadvantage on the attack roll.\n- You gain a flying speed of 60 ft. If you are still flying when the spell ends, you fall, unless you can somehow prevent it.\n- You can use your action to create a 15 ft cube of swirling wind centered on a point you can see within 60 ft of you. Each creature in that area must make a Constitution saving throw. A creature takes 2d10 bludgeoning damage on a failed save, or half as much damage on a successful one. If a Large or smaller creature fails the save, that creature is also pushed up to 10 ft away from the center of the cube.",
     "classes": [
       "Druid",
       "Sorcerer",
@@ -6172,7 +6220,7 @@
   {
     "name": "Magic Jar",
     "description": "Your body falls into a catatonic state as your soul leaves it and enters the container you used for the spell's material component. While your soul inhabits the container, you are aware of your surroundings as if you were in the container's space. You can't move or use reactions. The only action you can take is to project your soul up to 100 feet out of the container, either returning to your living body (and ending the spell) or attempting to possess a humanoids body.\nYou can attempt to possess any humanoid within 100 feet of you that you can see (creatures warded by a protection from evil and good or magic circle spell can't be possessed). The target must make a Charisma saving throw. On a failure, your soul moves into the target's body, and the target's soul becomes trapped in the container. On a success, the target resists your efforts to possess it, and you can't attempt to possess it again for 24 hours.\nOnce you possess a creature's body, you control it. Your game statistics are replaced by the statistics of the creature, though you retain your alignment and your Intelligence, Wisdom, and Charisma scores. You retain the benefit of your own class features. If the target has any class levels, you can't use any of its class features.\nMeanwhile, the possessed creature's soul can perceive from the container using its own senses, but it can't move or take actions at all.\nWhile possessing a body, you can use your action to return from the host body to the container if it is within 100 feet of you, returning the host creature's soul to its body. If the host body dies while you're in it, the creature dies, and you must make a Charisma saving throw against your own spellcasting DC. On a success, you return to the container if it is within 100 feet of you. Otherwise, you die.\nIf the container is destroyed or the spell ends, your soul immediately returns to your body. If your body is more than 100 feet away from you or if your body is dead when you attempt to return to it, you die. If another creature's soul is in the container when it is destroyed, the creature's soul returns to its body if the body is alive and within 100 feet. Otherwise, that creature dies.\nWhen the spell ends, the container is destroyed.",
-    "emote": "",
+    "emote": "'s body falls into a catatonic state as {{GENDER_PRONOUN_HIS_HER}} soul leaves it and enters the container {{GENDER_PRONOUN_HE_SHE}} used for the spell's material component",
     "source": "phb 257",
     "range": "Self",
     "components": {
@@ -6185,6 +6233,12 @@
     "castingTime": "1 minute",
     "level": 6,
     "school": "Necromancy",
+    "save": {
+      "ability": "charisma",
+      "saveFailure": "your soul moves into the target's body, and the target's soul becomes trapped in the container",
+      "saveSuccess": "the target resists your efforts to possess it, and you can't attempt to possess it again for 24 hours"
+    },
+    "effects": "While your soul inhabits the container, you are aware of your surroundings as if you were in the container's space. You can't move or use reactions. The only action you can take is to project your soul up to 100 ft out of the container, either returning to your living body (and ending the spell) or attempting to possess a humanoids body.\nYou can attempt to possess any humanoid within 100 ft of you that you can see (creatures warded by a protection from evil and good or magic circle spell can't be possessed). The target must make a Charisma saving throw as outlined above.\nOnce you possess a creature's body, you control it. Your game statistics are replaced by the statistics of the creature, though you retain your alignment and your Intelligence, Wisdom, and Charisma scores. You retain the benefit of your own class features. If the target has any class levels, you can't use any of its class features.\nMeanwhile, the possessed creature's soul can perceive from the container using its own senses, but it can't move or take actions at all.\nWhile possessing a body, you can use your action to return from the host body to the container if it is within 100 ft of you, returning the host creature's soul to its body. If the host body dies while you're in it, the creature dies, and you must make a Charisma saving throw against your own spellcasting DC. On a success, you return to the container if it is within 100 ft of you. Otherwise, you die.\nIf the container is destroyed or the spell ends, your soul immediately returns to your body. If your body is more than 100 ft away from you or if your body is dead when you attempt to return to it, you die. If another creature's soul is in the container when it is destroyed, the creature's soul returns to its body if the body is alive and within 100 ft. Otherwise, that creature dies.\nWhen the spell ends, the container is destroyed.",
     "classes": [
       "Wizard"
     ]
@@ -6394,9 +6448,10 @@
     "name": "Mass Suggestion",
     "description": "You suggest a course of activity (limited to a sentence or two) and magically influence up to twelve creatures of your choice that you can see within range and that can hear and understand you. Creatures that can't be charmed are immune to this effect. The suggestion must be worded in such a manner as to make the course of action sound reasonable. Asking the creature to stab itself, throw itself onto a spear, immolate itself, or do some other obviously harmful act automatically negates the effect of the spell.\nEach target must make a Wisdom saving throw. On a failed save, it pursues the course of action you described to the best of its ability. The suggested course of action can continue for the entire duration. If the suggested activity can be completed in a shorter time, the spell ends when the subject finishes what it was asked to do.\nYou can also specify conditions that will trigger a special activity during the duration. For example, you might suggest that a group of soldiers give all their money to the first beggar they meet. If the condition isn't met before the spell ends, the activity isn't performed.\nIf you or any of your companions damage a creature affected by this spell, the spell ends for that creature.",
     "higherLevel": "When you cast this spell using a 7th-level spell slot, the duration is 10 days. When you use an 8th-level spell slot, the duration is 30 days. When you use a 9th-level spell slot, the duration is a year and a day.",
-    "emote": "",
+    "emote": "suggests a course of activity and magically influences nearby creatures",
     "source": "phb 258",
     "range": "60 ft",
+    "target": "up to 12 creatures that you can see within range and that can hear and understand you",
     "components": {
       "verbal": true,
       "material": true,
@@ -6406,6 +6461,11 @@
     "castingTime": "1 action",
     "level": 6,
     "school": "Enchantment",
+    "save": {
+      "ability": "wisdom",
+      "saveFailure": "it pursues the course of action you described to the best of its ability",
+    },
+    "effects": "Creatures that can't be charmed are immune to this effect. The suggestion must be limited to a sentence or two and must be worded in such a manner as to make the course of action sound reasonable. Asking the creature to stab itself, throw itself onto a spear, immolate itself, or do some other obviously harmful act automatically negates the effect of the spell.\nThe suggested course of action can continue for the entire duration. If the suggested activity can be completed in a shorter time, the spell ends when the subject finishes what it was asked to do.\nYou can also specify conditions that will trigger a special activity during the duration. For example, you might suggest that a group of soldiers give all their money to the first beggar they meet. If the condition isn't met before the spell ends, the activity isn't performed.\nIf you or any of your companions damage a creature affected by this spell, the spell ends for that creature.",
     "classes": [
       "Bard",
       "Sorcerer",
