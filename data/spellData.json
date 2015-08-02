@@ -8070,7 +8070,7 @@
     "school": "Evocation",
     "save": {
       "ability": "dexterity",
-      "damage": "d8",
+      "damage": "((@{level} + 1) / 6 + 0.5)d8",
       "damageType": "radiant"
     },
     "effects": "The target gains no benefit from cover for this saving throw.",
