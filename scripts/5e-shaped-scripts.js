@@ -2015,7 +2015,7 @@
       if((spell.attack && spell.attack.higherLevelDice) || (spell.damage && spell.damage.higherLevelDice) || (spell.save && spell.save.higherLevelDice) || (spell.heal && (spell.heal.higherLevelDice || spell.heal.higherLevelAmount))) {
         noHigherLevelDice = false;
       }
-      if(noHigherLevelDice) {
+      if(spell.level > 0 && noHigherLevelDice) {
         setAttribute(spellBase + 'spell_toggle_higher_lvl', '@{spell_var_higher_lvl}');
       }
     }
@@ -2047,8 +2047,6 @@
 
     function processDamage (param, type) {
       if(param.damage) {
-        log('spell_toggle_ ' + type + '_damage');
-        log('@{spell_var_' + type + '_damage}');
         setAttribute(spellBase + 'spell_toggle_' + type + '_damage', '@{spell_var_' + type + '_damage}');
         setAttribute(spellBase + 'spell_' + type + '_dmg', param.damage);
       }
