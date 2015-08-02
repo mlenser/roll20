@@ -1224,7 +1224,7 @@
       "higherLevelDice": "1",
       "higherLevelDie": "d10"
     },
-    "effects": "A storm cloud appears in the shape of a cylinder that is 10 feet tall with a 60-foot radius, centered on a point you can see 100 feet directly above you. The spell fails if you can't see a point in the air where the storm cloud could appear (for example, if you are in a room that can't accommodate the cloud).\nOn each of your turns until the spell ends, you can use your action to call down lightning in this way again, targeting the same point or a different one.\nIf you are outdoors in stormy conditions when you cast this spell, the spell gives you control over the existing storm instead of creating a new one. Under such conditions, the spell's damage increases by 1d10.",
+    "effects": "A storm cloud appears in the shape of a cylinder that is 10 ft tall with a 60 ft radius, centered on a point you can see 100 ft directly above you. The spell fails if you can't see a point in the air where the storm cloud could appear (for example, if you are in a room that can't accommodate the cloud).\nOn each of your turns until the spell ends, you can use your action to call down lightning in this way again, targeting the same point or a different one.\nIf you are outdoors in stormy conditions when you cast this spell, the spell gives you control over the existing storm instead of creating a new one. Under such conditions, the spell's damage increases by 1d10.",
     "classes": [
       "Cleric",
       "Druid"
@@ -9952,7 +9952,7 @@
     "source": "phb 285",
     "range": "120 ft",
     "target": "each creature within its area when it appears",
-    "aoe": "wall on a solid surface within range: hemispherical dome or a sphere with a radius of up to 10 ft, or you can shape a flat surface made up of ten 10 ft square panels. Each panel must be contiguous with another panel. In any form, the wall is 1 ft thick and lasts for the duration.",
+    "aoe": "wall on a solid surface within range: hemispherical dome or a sphere with a radius of up to 10 ft, or you can shape a flat surface made up of ten 10 ft square panels. Each panel must be contiguous with another panel.",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -9972,7 +9972,7 @@
       "higherLevelDice": "2",
       "higherLevelDie": "d6"
     },
-    "effects": "If the wall cuts through a creature's space when it appears, the creature within its area is pushed to one side of the wall and must make a Dexterity saving throw as outlined above.\nThe wall is an object that can be damaged and thus breached. It has AC 12 and 30 hit points per 10 ft section, and it is vulnerable to fire damage. Reducing a 10 ft section of wall to 0 hit points destroys it and leaves behind a sheet of frigid air in the space the wall occupied. A creature moving through the sheet of frigid air for the first time on a turn must make a Constitution saving throw. That creature takes 5d6 ([[5d6]]) cold damage on a failed save, or half as much damage on a successful one.",
+    "effects": "In any form, the wall is 1 ft thick and lasts for the duration.<br>If the wall cuts through a creature's space when it appears, the creature within its area is pushed to one side of the wall and must make a Dexterity saving throw as outlined above.\nThe wall is an object that can be damaged and thus breached. It has AC 12 and 30 hit points per 10 ft section, and it is vulnerable to fire damage. Reducing a 10 ft section of wall to 0 hit points destroys it and leaves behind a sheet of frigid air in the space the wall occupied. A creature moving through the sheet of frigid air for the first time on a turn must make a Constitution saving throw. That creature takes 5d6 ([[5d6]]) cold damage on a failed save, or half as much damage on a successful one.",
     "classes": [
       "Wizard"
     ]
