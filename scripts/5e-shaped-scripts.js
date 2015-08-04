@@ -1193,10 +1193,6 @@
           parsed,
           pos = key.indexOf('(');
 
-        log('value');
-        log(value);
-        log(key);
-
         if(pos > 1) {
           actionPosition[actionNum] = key.substring(0, pos - 1).toLowerCase();
         } else {
@@ -1221,9 +1217,6 @@
             key = key.replace(rechargeDayRegex, '');
           }
         }
-
-        log('key 2');
-        log(key);
 
         setName(key);
 
