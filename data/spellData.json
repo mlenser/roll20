@@ -1450,9 +1450,11 @@
   {
     "name": "Circle of Power",
     "description": "Divine energy radiates from you, distorting and diffusing magical energy within 30 feet of you. Until the spell ends, the sphere moves with you, centered on you. For the duration, each friendly creature in the area (including you) has advantage on saving throws against spells and other magical effects. Additionally, when an affected creature succeeds on a saving throw made against a spell or magical effect that allows it to make a saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw.",
-    "emote": "",
+    "emote": "radiates divine energy, distorting and diffusing magical energy within 30 ft",
     "source": "phb 221",
     "range": "Self",
+    "target": "each friendly creature in the aoe (including you)",
+    "aoe": "30 ft radius that remains centered on you",
     "components": {
       "verbal": true
     },
@@ -1461,6 +1463,7 @@
     "castingTime": "1 action",
     "level": 5,
     "school": "Abjuration",
+    "effects": "targets have advantage on saving throws against spells and other magical effects. Additionally, when an affected creature succeeds on a saving throw made against a spell or magical effect that allows it to make a saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw.",
     "classes": [
       "Paladin"
     ]
@@ -1496,7 +1499,7 @@
   {
     "name": "Clone",
     "description": "This spell grows an inert duplicate of a living creature as a safeguard against death. This clone forms inside a sealed vessel and grows to full size and maturity after 120 days; you can also choose to have the clone be a younger version of the same creature. It remains inert and endures indefinitely, as long as its vessel remains undisturbed.\nAt any time after the clone matures, if the original creature dies, its soul transfers to the clone, provided that the soul is free and willing to return. The clone is physically identical to the original and has the same personality, memories, and abilities, but none of the original's equipment. The original creature's physical remains, if they still exist, become inert and can't thereafter be restored to life, since the creature's soul is elsewhere.",
-    "emote": "",
+    "emote": "grows an inert duplicate of a living creature as a safeguard against death",
     "source": "phb 222",
     "range": "Touch",
     "components": {
@@ -1509,6 +1512,7 @@
     "castingTime": "1 hour",
     "level": 8,
     "school": "Necromancy",
+    "effects": "This clone forms inside a sealed vessel and grows to full size and maturity after 120 days; you can also choose to have the clone be a younger version of the same creature. It remains inert and endures indefinitely, as long as its vessel remains undisturbed.\nAt any time after the clone matures, if the original creature dies, its soul transfers to the clone, provided that the soul is free and willing to return. The clone is physically identical to the original and has the same personality, memories, and abilities, but none of the original's equipment. The original creature's physical remains, if they still exist, become inert and can't thereafter be restored to life, since the creature's soul is elsewhere.",
     "classes": [
       "Wizard"
     ]
@@ -1641,7 +1645,7 @@
   {
     "name": "Commune",
     "description": "You contact your deity or a divine proxy and ask up to three questions that can be answered with a yes or no. You must ask your questions before the spell ends. You receive a correct answer for each question.\nDivine beings aren't necessarily omniscient, so you might receive \"unclear\" as an answer if a question pertains to information that lies beyond the deity's knowledge. In a case where a one-word answer could be misleading or contrary to the deity's interests, the DM might offer a short phrase as an answer instead.\nIf you cast the spell two or more times before finishing your next long rest, there is a cumulative 25% chance for each casting after the first that you get no answer. The DM makes this roll in secret.",
-    "emote": "",
+    "emote": "communes with {{GENDER_PRONOUN_HIS_HER}} deity or divine proxy",
     "source": "phb 223",
     "range": "Self",
     "components": {
@@ -1655,6 +1659,7 @@
     "castingTime": "1 minute",
     "level": 5,
     "school": "Divination",
+    "effects": "You can ask up to 3 questions that can be answered with a yes or no. You must ask your questions before the spell ends. You receive a correct answer for each question.\nDivine beings aren't necessarily omniscient, so you might receive \"unclear\" as an answer if a question pertains to information that lies beyond the deity's knowledge. In a case where a one-word answer could be misleading or contrary to the deity's interests, the DM might offer a short phrase as an answer instead.\nIf you cast the spell two or more times before finishing your next long rest, there is a cumulative 25% chance for each casting after the first that you get no answer. The DM makes this roll in secret.",
     "classes": [
       "Cleric",
       "Paladin"
@@ -1666,7 +1671,7 @@
   {
     "name": "Commune with Nature",
     "description": "You briefly become one with nature and gain knowledge of the surrounding territory. In the outdoors, the spell gives you knowledge of the land within 3 miles of you. In caves and other natural underground settings, the radius is limited to 300 feet. The spell doesn't function where nature has been replaced by construction, such as in dungeons and towns.\n You instantly gain knowledge of up to three facts of your choice about any of the following subjects as they relate to the area:\n- terrain and bodies of water\n- prevalent plants, minerals, animals, or peoples\n- powerful celestials, fey, fiends, elementals, or undead\n- influence from other planes of existence\n- buildings\nFor example, you could determine the location of powerful undead in the area, the location of major sources of safe drinking water, and the location of any nearby towns.",
-    "emote": "",
+    "emote": "briefly becomes one with nature and gains knowledge of the surrounding territory",
     "source": "phb 224",
     "range": "Self",
     "components": {
@@ -1678,6 +1683,7 @@
     "castingTime": "1 minute",
     "level": 5,
     "school": "Divination",
+    "effects": "In the outdoors, the spell gives you knowledge of the land within 3 miles of you. In caves and other natural underground settings, the radius is limited to 300 ft. The spell doesn't function where nature has been replaced by construction, such as in dungeons and towns.\n You instantly gain knowledge of up to three facts of your choice about any of the following subjects as they relate to the area:\n- terrain and bodies of water\n- prevalent plants, minerals, animals, or peoples\n- powerful celestials, fey, fiends, elementals, or undead\n- influence from other planes of existence\n- buildings\nFor example, you could determine the location of powerful undead in the area, the location of major sources of safe drinking water, and the location of any nearby towns.",
     "classes": [
       "Druid",
       "Paladin",
@@ -1883,9 +1889,10 @@
     "name": "Conjure Celestial",
     "description": "You summon a celestial of challenge rating 4 or lower, which appears in an unoccupied space that you can see within range. The celestial disappears when it drops to 0 hit points or when the spell ends.\nThe celestial is friendly to you and your companions for the duration. Roll initiative for the celestial, which has its own turns. It obeys any verbal commands that you issue to it (no action required by you), as long as they don't violate its alignment. If you don't issue any commands to the celestial, it defends itself from hostile creatures but otherwise takes no actions.\nThe DM has the celestial's statistics.",
     "higherLevel": "When you cast this spell using a 9th-level spell slot, you summon a celestial of challenge rating 5 or lower.",
-    "emote": "",
+    "emote": "summons a celestial",
     "source": "phb 225",
     "range": "90 ft",
+    "target": "an unoccupied space that you can see within range",
     "components": {
       "verbal": true,
       "somatic": true
@@ -1895,6 +1902,7 @@
     "castingTime": "1 minute",
     "level": 7,
     "school": "Conjuration",
+    "effects": "a celestial of challenge rating 4 or lower. The celestial disappears when it drops to 0 hit points or when the spell ends.\nThe celestial is friendly to you and your companions for the duration. Roll initiative for the celestial, which has its own turns. It obeys any verbal commands that you issue to it (no action required by you), as long as they don't violate its alignment. If you don't issue any commands to the celestial, it defends itself from hostile creatures but otherwise takes no actions.",
     "classes": [
       "Cleric"
     ]
@@ -1918,7 +1926,7 @@
     "castingTime": "1 minute",
     "level": 5,
     "school": "Conjuration",
-    "effects": "An elemental of challenge rating 5 or lower appropriate to the area you chose appears in an unoccupied space within 10 feet of the target. For example, a fire elemental emerges from a bonfire, and an earth elemental rises up from the ground. The elemental disappears when it drops to 0 hit points or when the spell ends.\nThe elemental is friendly to you and your companions for the duration. Roll initiative for the elemental, which has its own turns. It obeys any verbal commands that you issue to it (no action required by you). If you don't issue any commands to the elemental, it defends itself from hostile creatures but otherwise takes no actions.\nIf your concentration is broken, the elemental doesn't disappear. Instead, you lose control of the elemental, it becomes hostile toward you and your companions, and it might attack. An uncontrolled elemental can't be dismissed by you, and it disappears 1 hour after you summoned it.\nThe DM has the elemental's statistics.",
+    "effects": "An elemental of challenge rating 5 or lower appropriate to the area you chose appears in an unoccupied space within 10 feet of the target. For example, a fire elemental emerges from a bonfire, and an earth elemental rises up from the ground. The elemental disappears when it drops to 0 hit points or when the spell ends.\nThe elemental is friendly to you and your companions for the duration. Roll initiative for the elemental, which has its own turns. It obeys any verbal commands that you issue to it (no action required by you). If you don't issue any commands to the elemental, it defends itself from hostile creatures but otherwise takes no actions.\nIf your concentration is broken, the elemental doesn't disappear. Instead, you lose control of the elemental, it becomes hostile toward you and your companions, and it might attack. An uncontrolled elemental can't be dismissed by you, and it disappears 1 hour after you summoned it.",
     "classes": [
       "Druid",
       "Wizard"
@@ -1944,7 +1952,7 @@
     "castingTime": "1 minute",
     "level": 6,
     "school": "Conjuration",
-    "effects": "You summon a fey creature of challenge rating 6 or lower, or a fey spirit that takes the form of a beast of challenge rating 6 or lower. It appears in an unoccupied space that you can see within range. The fey creature disappears when it drops to 0 hit points or when the spell ends.\nThe fey creature is friendly to you and your companions for the duration. Roll initiative for the creature, which has its own turns. It obeys any verbal commands that you issue to it (no action required by you), as long as they don't violate its alignment. If you don't issue any commands to the fey creature, it defends itself from hostile creatures but otherwise takes no actions.\nIf your concentration is broken, the fey creature doesn't disappear. Instead, you lose control of the fey creature, it becomes hostile toward you and your companions, and it might attack. An uncontrolled fey creature can't be dismissed by you, and it disappears 1 hour after you summoned it.\nThe DM has the fey creature's statistics.",
+    "effects": "You summon a fey creature of challenge rating 6 or lower, or a fey spirit that takes the form of a beast of challenge rating 6 or lower. It appears in an unoccupied space that you can see within range. The fey creature disappears when it drops to 0 hit points or when the spell ends.\nThe fey creature is friendly to you and your companions for the duration. Roll initiative for the creature, which has its own turns. It obeys any verbal commands that you issue to it (no action required by you), as long as they don't violate its alignment. If you don't issue any commands to the fey creature, it defends itself from hostile creatures but otherwise takes no actions.\nIf your concentration is broken, the fey creature doesn't disappear. Instead, you lose control of the fey creature, it becomes hostile toward you and your companions, and it might attack. An uncontrolled fey creature can't be dismissed by you, and it disappears 1 hour after you summoned it.",
     "classes": [
       "Druid",
       "Warlock"
@@ -1967,7 +1975,7 @@
     "castingTime": "1 minute",
     "level": 4,
     "school": "Conjuration",
-    "effects": "You choose one the following options for what appears:\n- One elemental of challenge rating 2 or lower\n- Two elementals of challenge rating 1 or lower\n- Four elementals of challenge rating 1/2 or lower\n- Eight elementals of challenge rating 1/4 or lower.\nAn elemental summoned by this spell disappears when it drops to 0 hit points or when the spell ends.\nThe summoned creatures are friendly to you and your companions. Roll initiative for the summoned creatures as a group, which has its own turns. They obey any verbal commands that you issue to them (no action required by you). If you don't issue any commands to them, they defend themselves from hostile creatures, but otherwise take no actions.\nThe DM has the creatures' statistics.",
+    "effects": "You choose one the following options for what appears:\n- One elemental of challenge rating 2 or lower\n- Two elementals of challenge rating 1 or lower\n- Four elementals of challenge rating 1/2 or lower\n- Eight elementals of challenge rating 1/4 or lower.\nAn elemental summoned by this spell disappears when it drops to 0 hit points or when the spell ends.\nThe summoned creatures are friendly to you and your companions. Roll initiative for the summoned creatures as a group, which has its own turns. They obey any verbal commands that you issue to them (no action required by you). If you don't issue any commands to them, they defend themselves from hostile creatures, but otherwise take no actions.",
     "classes": [
       "Druid",
       "Wizard"
@@ -2012,7 +2020,7 @@
     "castingTime": "1 action",
     "level": 4,
     "school": "Conjuration",
-    "effects": "Choose one of the following options for what appears:\n- One fey creature of challenge rating 2 or lower\n- Two fey creatures of challenge rating 1 or lower\n- Four fey creatures of challenge rating 1/2 or lower\n- Eight fey creatures of challenge rating 1/4 or lower\nA summoned creature disappears when it drops to 0 hit points or when the spell ends.\nThe summoned creatures are friendly to you and your companions. Roll initiative for the summoned creatures as a group, which have their own turns. They obey any verbal commands that you issue to them (no action required by you). If you don't issue any commands to them, they defend themselves from hostile creatures, but otherwise take no actions.\nThe DM has the creatures' statistics.",
+    "effects": "Choose one of the following options for what appears:\n- One fey creature of challenge rating 2 or lower\n- Two fey creatures of challenge rating 1 or lower\n- Four fey creatures of challenge rating 1/2 or lower\n- Eight fey creatures of challenge rating 1/4 or lower\nA summoned creature disappears when it drops to 0 hit points or when the spell ends.\nThe summoned creatures are friendly to you and your companions. Roll initiative for the summoned creatures as a group, which have their own turns. They obey any verbal commands that you issue to them (no action required by you). If you don't issue any commands to them, they defend themselves from hostile creatures, but otherwise take no actions.",
     "classes": [
       "Druid",
       "Ranger"
@@ -2619,9 +2627,10 @@
   {
     "name": "Demiplane",
     "description": "You create a shadowy door on a flat solid surface that you can see within range. The door is large enough to allow Medium creatures to pass through unhindered. When opened, the door leads to a demiplane that appears to be an empty room 30 feet in each dimension, made of wood or stone. When the spell ends, the door disappears, and any creatures or objects inside the demiplane remain trapped there, as the door also disappears from the other side.\nEach time you cast this spell, you can create a new demiplane, or have the shadowy door connect to a demiplane you created with a previous casting of this spell. Additionally, if you know the nature and contents of a demiplane created by a casting of this spell by another creature, you can have the shadowy door connect to its demiplane instead.",
-    "emote": "",
+    "emote": "creates a shadowy",
     "source": "phb 231",
     "range": "60 ft",
+    "aoe": "door on a flat solid surface that you can see within range",
     "components": {
       "somatic": true
     },
@@ -2637,9 +2646,10 @@
   {
     "name": "Destructive Wave",
     "description": "You strike the ground, creating a burst of divine energy that ripples outward from you. Each creature you choose within 30 feet of you must succeed on a Constitution saving throw or take 5d6 thunder damage, as well as 5d6 radiant or necrotic damage (your choice), and be knocked prone. A creature that succeeds on its saving throw takes half as much damage and isn't knocked prone.",
-    "emote": "",
+    "emote": "strikes the ground, creating a burst of divine energy that ripples outward from {{GENDER_PRONOUN_HIM_HER}}",
     "source": "phb 231",
     "range": "Self",
+    "target": "each creature within 30 ft of you",
     "components": {
       "verbal": true
     },
@@ -2647,6 +2657,15 @@
     "castingTime": "1 action",
     "level": 5,
     "school": "Evocation",
+    "save": {
+      "ability": "constitution",
+      "damage": "5d6",
+      "damageType": "thunder",
+      "secondaryDamage": "5d6",
+      "secondaryDamageType": "radiant or necrotic damage (your choice)",
+      "saveFailure": "be knocked prone",
+      "saveSuccess": "half damage and not knocked prone"
+    },
     "classes": [
       "Cleric",
       "Paladin"
@@ -3726,7 +3745,7 @@
   {
     "name": "Feather Fall",
     "description": "Choose up to five falling creatures within range. A falling creature's rate of descent slows to 60 feet per round until the spell ends. If the creature lands before the spell ends, it takes no falling damage and can land on its feet, and the spell ends for that creature.",
-    "emote": "slows {{GENDER_PRONOUN_HIS_HER}} and {{GENDER_PRONOUN_HIS_HER}} allies' descent",
+    "emote": "slows {{GENDER_PRONOUN_HIMSELF_HERSELF}} and {{GENDER_PRONOUN_HIS_HER}} allies' descent",
     "source": "phb 239",
     "range": "60 ft",
     "target": "up to 5 falling creatures within range.",
@@ -4511,7 +4530,7 @@
   {
     "name": "Glibness",
     "description": "Until the spell ends, when you make a Charisma check, you can replace the number you roll with a 15. Additionally, no matter what you say, magic that would determine if you are telling the truth indicates that you are being truthful.",
-    "emote": "",
+    "emote": "'s speech becomes fluent and more believable",
     "source": "phb 245",
     "range": "Self",
     "components": {
@@ -4521,6 +4540,7 @@
     "castingTime": "1 action",
     "level": 8,
     "school": "Transmutation",
+    "effects": "Until the spell ends, when you make a Charisma check, you can replace the number you roll with a 15. Additionally, no matter what you say, magic that would determine if you are telling the truth indicates that you are being truthful.",
     "classes": [
       "Bard",
       "Warlock"
@@ -4687,9 +4707,10 @@
   {
     "name": "Greater Restoration",
     "description": "You imbue a creature you touch with positive energy to undo a debilitating effect. You can reduce the target's exhaustion level by one, or end one of the following effects on the target:\n- One effect that charmed or petrified the target\n- One curse, including the target's attunement to a cursed magic item\n- Any reduction to one of the target's ability scores\n- One effect reducing the target's hit point maximum",
-    "emote": "",
+    "emote": "imbuse a creature with positive energy to undo a debilitating effect",
     "source": "phb 246",
     "range": "Touch",
+    "target": "a creature",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -4700,6 +4721,7 @@
     "castingTime": "1 action",
     "level": 5,
     "school": "Abjuration",
+    "effects": "You can reduce the target's exhaustion level by one, or end one of the following effects on the target:\n- One effect that charmed or petrified the target\n- One curse, including the target's attunement to a cursed magic item\n- Any reduction to one of the target's ability scores\n- One effect reducing the target's hit point maximum",
     "classes": [
       "Bard",
       "Cleric",
@@ -4986,6 +5008,7 @@
     "emote": "",
     "source": "phb 250",
     "range": "30 ft",
+    "target": "a willing creature that you can see within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -6129,7 +6152,7 @@
   },
   {
     "name": "Maelstrom",
-    "description": "A mass of 5-foot-deep water appears and swirls in a 30-foot radius centered on a point you can see within range. The point must be on ground or in a body of water. Until the spell ends, that area is difficult terrain, and any creature that starts its turn there must succeed on a Strength saving throw or take 6d6 bludgeoning damage and be pulled 10 feet toward the center.",
+    "description": "A mass of 5-foot-deep water appears anfdd swirls in a 30-foot radius centered on a point you can see within range. The point must be on ground or in a body of water. Until the spell ends, that area is difficult terrain, and any creature that starts its turn there must succeed on a Strength saving throw or take 6d6 bludgeoning damage and be pulled 10 feet toward the center.",
     "emote": "",
     "source": "ee pc 20",
     "range": "120 ft",
@@ -8667,9 +8690,10 @@
   {
     "name": "Sleet Storm",
     "description": "Until the spell ends, freezing rain and sleet fall in a 20-foot-tall cylinder with a 40-foot radius centered on a point you choose within range. The area is heavily obscured, and exposed flames in the area are doused.\nThe ground in the area is covered with slick ice, making it difficult terrain. When a creature enters the spell's area for the first time on a turn or starts its turn there, it must make a Dexterity saving throw. On a failed save, it falls prone.\nIf a creature is concentrating in the spell's area, the creature must make a successful Constitution saving throw against your spell save DC or lose concentration.",
-    "emote": "summons freezy rain and sleet that fall in an area",
+    "emote": "summons freezing rain and sleet that fall in an area",
     "source": "phb 276",
     "range": "150 ft",
+    "target": "a creature enters the spell's area for the first time on a turn or starts its turn there",
     "aoe": "20 ft tall cylinder with a 40-foot radius centered on a point you choose within range",
     "components": {
       "verbal": true,
@@ -8683,9 +8707,10 @@
     "level": 3,
     "school": "Conjuration",
     "save": {
-      "ability": "dexterity"
+      "ability": "dexterity",
+      "saveFailure": "fall prone"
     },
-    "effects": "The area is heavily obscured, and exposed flames in the area are doused.\nThe ground in the area is covered with slick ice, making it difficult terrain. When a creature enters the spell's area for the first time on a turn or starts its turn there, it must make a Dexterity saving throw. On a failed save, it falls prone.\nIf a creature is concentrating in the spell's area, the creature must make a successful Constitution saving throw against your spell save DC or lose concentration.",
+    "effects": "The area is heavily obscured, and exposed flames in the area are doused.\nThe ground in the area is covered with slick ice, making it difficult terrain.\nIf a creature is concentrating in the spell's area, the creature must make a successful Constitution saving throw against your spell save DC or lose concentration.",
     "classes": [
       "Cleric",
       "Druid",
@@ -9237,7 +9262,7 @@
   {
     "name": "Swift Quiver",
     "description": "You transmute your quiver so it produces an endless supply of nonmagical ammunition, which seems to leap into your hand when you reach for it.\nOn each of your turns until the spell ends, you can use a bonus action to make two attacks with a weapon that uses ammunition from the quiver. Each time you make such a ranged attack, your quiver magically replaces the piece of ammunition you used with a similar piece of nonmagical ammunition. Any pieces of ammunition created by this spell disintegrate when the spell ends. If the quiver leaves your possession, the spell ends.",
-    "emote": "",
+    "emote": "transmutes {{GENDER_PRONOUN_HIS_HER}} quiver so it produces an endless supply of nonmagical ammunition, which seems to leap into {{GENDER_PRONOUN_HIS_HER}} hand when {{GENDER_PRONOUN_HE_SHE}} reaches for it",
     "source": "phb 279",
     "range": "Touch",
     "components": {
@@ -9251,6 +9276,7 @@
     "castingTime": "1 bonus action",
     "level": 5,
     "school": "Transmutation",
+    "effects": "On each of your turns until the spell ends, you can use a bonus action to make two attacks with a weapon that uses ammunition from the quiver. Each time you make such a ranged attack, your quiver magically replaces the piece of ammunition you used with a similar piece of nonmagical ammunition. Any pieces of ammunition created by this spell disintegrate when the spell ends. If the quiver leaves your possession, the spell ends.",
     "classes": [
       "Ranger"
     ]
@@ -9336,9 +9362,10 @@
   {
     "name": "Telepathy",
     "description": "You create a telepathic link between yourself and a willing creature with which you are familiar. The creature can be anywhere on the same plane of existence as you. The spell ends if you or the target are no longer on the same plane.\nUntil the spell ends, you and the target can instantaneously share words, images, sounds, and other sensory messages with one another through the link, and the target recognizes you as the creature it is communicating with. The spell enables a creature with an Intelligence score of at least 1 to understand the meaning of your words and take in the scope of any sensory messages you send to it.",
-    "emote": "",
+    "emote": "creates a telepathic link between {{GENDER_PRONOUN_HIMSELF_HERSELF}} and another creature on the same plane of existence as you",
     "source": "phb 281",
     "range": "Unlimited",
+    "target": "yourself and a willing creature with which you are familiar",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -9349,6 +9376,7 @@
     "castingTime": "1 action",
     "level": 8,
     "school": "Evocation",
+    "effects": "The spell ends if you or the target are no longer on the same plane.\nUntil the spell ends, you and the target can instantaneously share words, images, sounds, and other sensory messages with one another through the link, and the target recognizes you as the creature it is communicating with. The spell enables a creature with an Intelligence score of at least 1 to understand the meaning of your words and take in the scope of any sensory messages you send to it.",
     "classes": [
       "Wizard"
     ]
@@ -9356,9 +9384,10 @@
   {
     "name": "Teleport",
     "description": "This spell instantly transports you and up to eight willing creatures of your choice that you can see within range, or a single object that you can see within range, to a destination you select. If you target an object, it must be able to fit entirely inside a 10-foot cube, and it can't be held or carried by an unwilling creature.\nThe destination you choose must be known to you, and it must be on the same plane of existence as you. Your familiarity with the destination determines whether you arrive there successfully. The DM rolls d100 and consults the table.",
-    "emote": "",
+    "emote": "instantly teleports {{GENDER_PRONOUN_HIMSELF_HERSELF}} and {{GENDER_PRONOUN_HIS_HER}} allies'",
     "source": "phb 281",
     "range": "10 ft",
+    "target": "up to 8 willing creatures or a single object that you can see within range",
     "components": {
       "verbal": true
     },
@@ -9366,6 +9395,7 @@
     "castingTime": "1 action",
     "level": 7,
     "school": "Conjuration",
+    "effects": "targets are teleported to a destination you select. If you target an object, it must be able to fit entirely inside a 10 ft cube, and it can't be held or carried by an unwilling creature.\nThe destination you choose must be known to you, and it must be on the same plane of existence as you. Your familiarity with the destination determines whether you arrive there successfully. The DM rolls d100 and consults the table.",
     "classes": [
       "Bard",
       "Sorcerer",
@@ -9375,7 +9405,7 @@
   {
     "name": "Teleportation Circle",
     "description": "As you cast the spell, you draw a 10-foot-diameter circle on the ground inscribed with sigils that link your location to a permanent teleportation circle of your choice whose sigil sequence you know and that is on the same plane of existence as you. A shimmering portal opens within the circle you drew and remains open until the end of your next turn. Any creature that enters the portal instantly appears within 5 feet of the destination circle or in the nearest unoccupied space if that space is occupied.\nMany major temples, guilds, and other important places have permanent teleportation circles inscribed somewhere within their confines. Each such circle includes a unique sigil sequence—a string of magical runes arranged in a particular pattern. When you first gain the ability to cast this spell, you learn the sigil sequences for two destinations on the Material Plane, determined by the DM. You can learn additional sigil sequences during your adventures. You can commit a new sigil sequence to memory after studying it for 1 minute.\nYou can create a permanent teleportation circle by casting this spell in the same location every day for one year. You need not use the circle to teleport when you cast the spell in this way.",
-    "emote": "",
+    "emote": "draws a circle on the ground inscribed with sigils",
     "source": "phb 282",
     "range": "10 ft",
     "components": {
@@ -9387,6 +9417,7 @@
     "castingTime": "1 minute",
     "level": 5,
     "school": "Conjuration",
+    "effects": "the circle link your location to a permanent teleportation circle of your choice whose sigil sequence you know and that is on the same plane of existence as you. A shimmering portal opens within the circle you drew and remains open until the end of your next turn. Any creature that enters the portal instantly appears within 5 ft of the destination circle or in the nearest unoccupied space if that space is occupied.\nMany major temples, guilds, and other important places have permanent teleportation circles inscribed somewhere within their confines. Each such circle includes a unique sigil sequence—a string of magical runes arranged in a particular pattern. When you first gain the ability to cast this spell, you learn the sigil sequences for two destinations on the Material Plane, determined by the DM. You can learn additional sigil sequences during your adventures. You can commit a new sigil sequence to memory after studying it for 1 minute.\nYou can create a permanent teleportation circle by casting this spell in the same location every day for one year. You need not use the circle to teleport when you cast the spell in this way.",
     "classes": [
       "Bard",
       "Sorcerer",
@@ -9580,7 +9611,7 @@
   {
     "name": "Time Stop",
     "description": "You briefly stop the flow of time for everyone but yourself. No time passes for other creatures, while you take 1d4 + 1 turns in a row, during which you can use actions and move as normal.\nThis spell ends if one of the actions you use during this period, or any effects that you create during this period, affects a creature other than you or an object being worn or carried by someone other than you. In addition, the spell ends if you move to a place more than 1,000 feet from the location where you cast it.",
-    "emote": "",
+    "emote": "briefly stop the flow of time for everyone but {{GENDER_PRONOUN_HIMSELF_HERSELF}}",
     "source": "phb 283",
     "range": "Self",
     "components": {
@@ -9590,6 +9621,7 @@
     "castingTime": "1 action",
     "level": 9,
     "school": "Transmutation",
+    "effects": "No time passes for other creatures, while you take 1d4 + 1 ([[1d4+1]]) turns in a row, during which you can use actions and move as normal.\nThis spell ends if one of the actions you use during this period, or any effects that you create during this period, affects a creature other than you or an object being worn or carried by someone other than you. In addition, the spell ends if you move to a place more than 1,000 feet from the location where you cast it.",
     "classes": [
       "Sorcerer",
       "Wizard"
@@ -9598,9 +9630,10 @@
   {
     "name": "Tongues",
     "description": "This spell grants the creature you touch the ability to understand any spoken language it hears. Moreover, when the target speaks, any creature that knows at least one language and can hear the target understands what it says.",
-    "emote": "",
+    "emote": "grants the target the ability to understand any spoken language it hears",
     "source": "phb 283",
     "range": "Touch",
+    "target": "a creature",
     "components": {
       "verbal": true,
       "material": true,
@@ -9610,6 +9643,7 @@
     "castingTime": "1 action",
     "level": 3,
     "school": "Divination",
+    "effects": "target gains the ability to understand any spoken language it hears. Moreover, when the target speaks, any creature that knows at least one language and can hear the target understands what it says.",
     "classes": [
       "Bard",
       "Cleric",
@@ -9621,9 +9655,11 @@
   {
     "name": "Transmute Rock",
     "description": "You choose an area of stone or mud that you can see that fits within a 40-foot cube and that is within range, and choose one of the following effects.\nTransmute Rock to Mud. Nonmagical rock of any sort in the area becomes an equal volume of thick and flowing mud that remains for the spell's duration.\nIf you cast the spell on an area of ground, it becomes muddy enough that creatures can sink into it. Each foot that a creature moves through the mud costs 4 feet of movement, and any creature on the ground when you cast the spell must make a Strength saving throw. A creature must also make this save the first time it enters the area on a turn or ends its turn there. On a failed save, a creature sinks into the mud and is restrained, though it can use an action to end the restrained condition on itself by pulling itself free of the mud.\nIf you cast the spell on a ceiling, the mud falls. Any creature under the mud when it falls must make a Dexterity saving throw. A creature takes 4d8 bludgeoning damage on a failed save, or half as much damage on a successful one.\nTransmute Mud to Rock. Nonmagical mud or quicksand in the area no more than 10 feet deep transforms into soft stone for the spell's duration. Any creature in the mud when it transforms must make a Dexterity saving throw. On a failed save, a creature becomes restrained by the rock. The restrained creature can use an action to try to break free by succeeding on a Strength check (DC 20) or by dealing 25 damage to the rock around it. On a successful save, a creature is shunted safely to the surface to an unoccupied space.",
-    "emote": "",
+    "emote": "transmutes rock into another form",
     "source": "ee pc 22",
     "range": "120 ft",
+    "target": "an area of stone or mud that you can see that fits within the aoe",
+    "aoe": "40 ft cube and that is within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -9634,6 +9670,7 @@
     "castingTime": "1 action",
     "level": 5,
     "school": "Transmutation",
+    "effects": "choose one of the following effects.\nTransmute Rock to Mud. Nonmagical rock of any sort in the area becomes an equal volume of thick and flowing mud that remains for the spell's duration.\nIf you cast the spell on an area of ground, it becomes muddy enough that creatures can sink into it. Each foot that a creature moves through the mud costs 4 feet of movement, and any creature on the ground when you cast the spell must make a Strength saving throw. A creature must also make this save the first time it enters the area on a turn or ends its turn there. On a failed save, a creature sinks into the mud and is restrained, though it can use an action to end the restrained condition on itself by pulling itself free of the mud.\nIf you cast the spell on a ceiling, the mud falls. Any creature under the mud when it falls must make a Dexterity saving throw. A creature takes 4d8 bludgeoning damage on a failed save, or half as much damage on a successful one.\nTransmute Mud to Rock. Nonmagical mud or quicksand in the area no more than 10 feet deep transforms into soft stone for the spell's duration. Any creature in the mud when it transforms must make a Dexterity saving throw. On a failed save, a creature becomes restrained by the rock. The restrained creature can use an action to try to break free by succeeding on a Strength check (DC 20) or by dealing 25 damage to the rock around it. On a successful save, a creature is shunted safely to the surface to an unoccupied space.",
     "classes": [
       "Druid",
       "Wizard"
@@ -9642,9 +9679,10 @@
   {
     "name": "Transport via Plants",
     "description": "This spell creates a magical link between a Large or larger inanimate plant within range and another plant, at any distance, on the same plane of existence. You must have seen or touched the destination plant at least once before. For the duration, any creature can step into the target plant and exit from the destination plant by using 5 feet of movement.",
-    "emote": "",
+    "emote": "creates a magical link between plants",
     "source": "phb 283",
     "range": "10 ft",
+    "target": "a Large or larger inanimate plant within rangeand another plant, at any distance, on the same plane of existence. You must have seen or touched the destination plant at least once before",
     "components": {
       "verbal": true,
       "somatic": true
@@ -9653,33 +9691,15 @@
     "castingTime": "1 action",
     "level": 6,
     "school": "Conjuration",
+    "effects": "For the duration, any creature can step into the target plant and exit from the destination plant by using 5 ft of movement.",
     "classes": [
       "Druid"
     ]
   },
   {
-    "name": "Trap the Soul",
-    "description": "This spell name was added as an error and does not exist. Refer to the spell named \"imprisonment\" for information on what this spell was intended to be.",
-    "emote": "",
-    "source": "phb Error",
-    "range": "30 ft",
-    "components": {
-      "verbal": true,
-      "somatic": true,
-      "material": true
-    },
-    "duration": "Until dispelled",
-    "castingTime": "1 minute",
-    "level": 8,
-    "school": "Conjuration",
-    "classes": [
-      "Wizard"
-    ]
-  },
-  {
     "name": "Tree Stride",
     "description": "You gain the ability to enter a tree and move from inside it to inside another tree of the same kind within 500 feet. Both trees must be living and at least the same size as you. You must use 5 feet of movement to enter a tree. You instantly know the location of all other trees of the same kind within 500 feet and, as part of the move used to enter the tree, can either pass into one of those trees or step out of the tree you're in. You appear in a spot of your choice within 5 feet of the destination tree, using another 5 feet of movement. If you have no movement left, you appear within 5 feet of the tree you entered.\nYou can use this transportation ability once per round for the duration. You must end each turn outside a tree.",
-    "emote": "",
+    "emote": "gains the ability to enter a tree and move from inside it to inside another tree of the same kind",
     "source": "phb 283",
     "range": "Self",
     "components": {
@@ -9691,6 +9711,7 @@
     "castingTime": "1 action",
     "level": 5,
     "school": "Conjuration",
+    "effects": "Both trees must be within 500 ft, be living, and at least the same size as you. You must use 5 ft of movement to enter a tree. You instantly know the location of all other trees of the same kind within 500 ft and, as part of the move used to enter the tree, can either pass into one of those trees or step out of the tree you're in. You appear in a spot of your choice within 5 ft of the destination tree, using another 5 ft of movement. If you have no movement left, you appear within 5 ft of the tree you entered.\nYou can use this transportation ability once per round for the duration. You must end each turn outside a tree.",
     "classes": [
       "Cleric",
       "Druid",
@@ -9710,9 +9731,10 @@
   {
     "name": "True Polymorph",
     "description": "Choose one creature or nonmagical object that you can see within range. You transform the creature into a different creature, the creature into an object, or the object into a creature (the object must be neither worn nor carried by another creature). The transformation lasts for the duration, or until the target drops to 0 hit points or dies. If you concentrate on this spell for the full duration, the transformation becomes permanent.\nShapechangers aren't affected by this spell. An unwilling creature can make a Wisdom saving throw, and if it succeeds, it isn't affected by this spell.\n<b>Creature into Creature.</b> If you turn a creature into another kind of creature, the new form can be any kind you choose whose challenge rating is equal to or less than the target's (or its level, if the target doesn't have a challenge rating). The target's game statistics, including mental ability scores, are replaced by the statistics of the new form. It retains its alignment and personality.\nThe target assumes the hit points of its new form, and when it reverts to its normal form, the creature returns to the number of hit points it had before it transformed. If it reverts as a result of dropping to 0 hit points, any excess damage carries over to its normal form. As long as the excess damage doesn't reduce the creature's normal form to 0 hit points, it isn't knocked unconscious.\nThe creature is limited in the actions it can perform by the nature of its new form, and it can't speak, cast spells, or take any other action that requires hands or speech unless its new form is capable of such actions.\nThe target's gear melds into the new form. The creature can't activate, use, wield, or otherwise benefit from any of its equipment.\n<b>Object into Creature.</b> You can turn an object into any kind of creature, as long as the creature's size is no larger than the object's size and the creature's challenge rating is 9 or lower. The creature is friendly to you and your companions. It acts on each of your turns. You decide what action it takes and how it moves. The DM has the creature's statistics and resolves all of its actions and movement.\nIf the spell becomes permanent, you no longer control the creature. It might remain friendly to you, depending on how you have treated it.\n<b>Creature into Object.</b> If you turn a creature into an object, it transforms along with whatever it is wearing and carrying into that form. The creature's statistics become those of the object, and the creature has no memory of time spent in this form, after the spell ends and it returns to its normal form.",
-    "emote": "",
+    "emote": "transforms the target into a different creature or object",
     "source": "phb 283",
     "range": "30 ft",
+    "target": "1 creature or nonmagical object that you can see within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -9724,6 +9746,11 @@
     "castingTime": "1 action",
     "level": 9,
     "school": "Transmutation",
+    "save": {
+      "ability": "wisdom",
+      "saveFailure": "affected by this spell"
+    },
+    "effects": "You transform the target into a different creature, the creature into an object, or the object into a creature (the object must be neither worn nor carried by another creature). The transformation lasts for the duration, or until the target drops to 0 hit points or dies. If you concentrate on this spell for the full duration, the transformation becomes permanent.\nShapechangers aren't affected by this spell. An unwilling creature can make a Wisdom saving throw as outlined above.\n<b>Creature into Creature.</b> If you turn a creature into another kind of creature, the new form can be any kind you choose whose challenge rating is equal to or less than the target's (or its level, if the target doesn't have a challenge rating). The target's game statistics, including mental ability scores, are replaced by the statistics of the new form. It retains its alignment and personality.\nThe target assumes the hit points of its new form, and when it reverts to its normal form, the creature returns to the number of hit points it had before it transformed. If it reverts as a result of dropping to 0 hit points, any excess damage carries over to its normal form. As long as the excess damage doesn't reduce the creature's normal form to 0 hit points, it isn't knocked unconscious.\nThe creature is limited in the actions it can perform by the nature of its new form, and it can't speak, cast spells, or take any other action that requires hands or speech unless its new form is capable of such actions.\nThe target's gear melds into the new form. The creature can't activate, use, wield, or otherwise benefit from any of its equipment.\n<b>Object into Creature.</b> You can turn an object into any kind of creature, as long as the creature's size is no larger than the object's size and the creature's challenge rating is 9 or lower. The creature is friendly to you and your companions. It acts on each of your turns. You decide what action it takes and how it moves. The DM has the creature's statistics and resolves all of its actions and movement.\nIf the spell becomes permanent, you no longer control the creature. It might remain friendly to you, depending on how you have treated it.\n<b>Creature into Object.</b> If you turn a creature into an object, it transforms along with whatever it is wearing and carrying into that form. The creature's statistics become those of the object, and the creature has no memory of time spent in this form, after the spell ends and it returns to its normal form.",
     "classes": [
       "Bard",
       "Warlock",
@@ -9733,9 +9760,10 @@
   {
     "name": "True Resurrection",
     "description": "You touch a creature that has been dead for no longer than 200 years and that died for any reason except old age. If the creature's soul is free and willing, the creature is restored to life with all its hit points.\nThis spell closes all wounds, neutralizes any poison, cures all diseases, and lifts any curses affecting the creature when it died. The spell replaces damaged or missing organs and limbs.\nThe spell can even provide a new body if the original no longer exists, in which case you must speak the creature's name. The creature then appears in an unoccupied space you choose within 10 feet of you.",
-    "emote": "",
+    "emote": "attempts to return a creature to life",
     "source": "phb 284",
     "range": "Touch",
+    "target": "a creature that has been dead for no longer than 200 years and that died for any reason except old age",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -9746,6 +9774,7 @@
     "castingTime": "1 hour",
     "level": 9,
     "school": "Necromancy",
+    "effects": "If the target's soul is free and willing, the creature is restored to life with all its hit points.\nThis spell closes all wounds, neutralizes any poison, cures all diseases, and lifts any curses affecting the creature when it died. The spell replaces damaged or missing organs and limbs.\nThe spell can even provide a new body if the original no longer exists, in which case you must speak the creature's name. The creature then appears in an unoccupied space you choose within 10 feet of you.",
     "classes": [
       "Cleric",
       "Druid"
@@ -9754,9 +9783,10 @@
   {
     "name": "True Seeing",
     "description": "This spell gives the willing creature you touch the ability to see things as they actually are. For the duration, the creature has truesight, notices secret doors hidden by magic, and can see into the Ethereal Plane, all out to a range of 120 feet.",
-    "emote": "",
+    "emote": "grants yo ability to see things as they actually are",
     "source": "phb 284",
     "range": "Touch",
+    "target": "a willing creature",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -9767,6 +9797,7 @@
     "castingTime": "1 action",
     "level": 6,
     "school": "Divination",
+    "effects": "For the duration, the target  has truesight, notices secret doors hidden by magic, and can see into the Ethereal Plane, all out to a range of 120 ft.",
     "classes": [
       "Bard",
       "Cleric",
