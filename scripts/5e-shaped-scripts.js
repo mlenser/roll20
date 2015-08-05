@@ -18,7 +18,7 @@
     addInitiativeTokenAbility: true, //change to false if you do not want a macro "Init" on every token
 
     attacksVsTargetAC: false, //show the target's AC when using attacks
-    attacksVsTargetName: false, //show the target's AC when using attacks
+    attacksVsTargetName: false, //show the target's Name when using attacks
 
     addSaveQueryMacroTokenAbility: true, //change to false if you do not want a macro "Save" on every token
     addCheckQueryMacroTokenAbility: true, //change to false if you do not want a macro "Check" on every token
@@ -496,7 +496,7 @@
       .replace(/\s\./g, '.')
       .replace(/–/g, '-')
       .replace(/<br[^>]*>/g, '#')
-      .replace(/\s+#\s+/g, '#')
+      .replace(/\s*#\s*/g, '#')
       .replace(/(<([^>]+)>)/gi, '')
       .replace(/#(?=[a-z]|DC)/g, ' ')
       .replace(/\s+/g, ' ')
@@ -544,6 +544,7 @@
       'lfthe':'If the',
       'Ifthe':'If the',
       'lnt':'Int',
+      'jDay':'/day',
       'magica lly':'magically',
       'minlilte':'minute',
       'natura l':'natural',
