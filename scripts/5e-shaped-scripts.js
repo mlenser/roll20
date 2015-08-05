@@ -20,6 +20,10 @@
     attacksVsTargetAC: false, //show the target's AC when using attacks
     attacksVsTargetName: false, //show the target's AC when using attacks
 
+    addSaveQueryMacroTokenAbility: true, //change to false if you do not want a macro "Save" on every token
+    addCheckQueryMacroTokenAbility: true, //change to false if you do not want a macro "Check" on every token
+    addSkillQueryMacroTokenAbility: true, //change to false if you do not want a macro "Skill" on every token
+
     useAmmoAutomatically: true,
 
     bar: [
@@ -1456,6 +1460,16 @@
     }
     if(shaped.settings.addInitiativeTokenAbility) {
       setAbility('Init', '', '%{'+characterName+'|Initiative}', shaped.settings.createAbilityAsToken);
+    }
+
+    if(shaped.settings.addSaveQueryMacroTokenAbility) {
+      setAbility('Save', '', '%{'+characterName+'|save_query_macro}', shaped.settings.createAbilityAsToken);
+    }
+    if(shaped.settings.addCheckQueryMacroTokenAbility) {
+      setAbility('Check', '', '%{'+characterName+'|check_query_macro}', shaped.settings.createAbilityAsToken);
+    }
+    if(shaped.settings.addSkillQueryMacroTokenAbility) {
+      setAbility('Skill', '', '%{'+characterName+'|skill_query_macro}', shaped.settings.createAbilityAsToken);
     }
 
     for(var key in actions) {
