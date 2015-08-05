@@ -9,6 +9,7 @@ Scripts for 5e roll20
 **26th July - Aug 4th 2015 (1.90)**
 
 * Huge update of spells see https://app.roll20.net/forum/permalink/2267695/
+* Added token query macros
 
 **25th July 2015 (1.88)**
 
