@@ -520,6 +520,7 @@
     text = text.replace(/(\d+)\s*?plus\s*?((?:\d+d\d+)|(?:\d+))/gi, '$2 + $1');
     var replaceObj = {
       'ljday':'1/day',
+      'jday':'/day',
       'abol eth':'aboleth',
       'ACT IONS':'ACTIONS',
       'Afrightened':'A frightened',
@@ -544,7 +545,6 @@
       'lfthe':'If the',
       'Ifthe':'If the',
       'lnt':'Int',
-      'jDay':'/day',
       'magica lly':'magically',
       'minlilte':'minute',
       'natura l':'natural',
