@@ -6,6 +6,10 @@ Scripts for 5e roll20
 
 ### Changelog
 
+**26th July - Aug 4th 2015 (1.90)**
+
+* Huge update of spells see https://app.roll20.net/forum/permalink/2267695/
+
 **25th July 2015 (1.88)**
 
 * Spells are now imported based on the selected token(s)
