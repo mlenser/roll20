@@ -3,6 +3,7 @@ Scripts for 5e roll20
 
 ### TODO
 
+* Write command to create roll query macros
 
 ### Changelog
 
