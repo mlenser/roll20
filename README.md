@@ -7,6 +7,11 @@ Scripts for 5e roll20
 
 ### Changelog
 
+**Aug 10th 2015 (1.91)**
+
+* Fixed Earth Elemental
+* Created new commands to create token macros. "!shaped-token-macro --bootstrap" for them all (initiative and query macros). "!shaped-token-macro --init" for initiative. "!shaped-token-macro --query" for the query macros.
+
 **26th July - Aug 4th 2015 (1.90)**
 
 * Huge update of spells see https://app.roll20.net/forum/permalink/2267695/

@@ -52,7 +52,7 @@
   var spellsData = [];
 
   shaped.statblock = {
-    version: '1.90',
+    version: '1.91',
     RegisterHandlers: function () {
       on('chat:message', HandleInput);
 
@@ -125,6 +125,9 @@
       case '!shaped-convert':
         shaped.getSelectedToken(msg, shaped.parseOldToNew);
         break;
+      case '!shaped-token-macro':
+        shaped.getSelectedToken(msg, shaped.tokenMacros, args);
+        break;
     }
   }
 
@@ -166,6 +169,34 @@
       log('old sheet removed before importing');
     }
   };
+
+  shaped.tokenMacros = function(token, args) {
+    if(args[0] === 'init') {
+      createInitTokenAction();
+    } else if(args[0] === 'query') {
+      createSaveQueryTokenAction();
+      createCheckQueryTokenAction();
+      createSkillQueryTokenAction();
+    } else if(args[0] === 'bootstrap') {
+      createInitTokenAction();
+      createSaveQueryTokenAction();
+      createCheckQueryTokenAction();
+      createSkillQueryTokenAction();
+    }
+  };
+
+  function createInitTokenAction() {
+    setAbility('Init', '', '%{'+characterName+'|Initiative}', shaped.settings.createAbilityAsToken);
+  }
+  function createSaveQueryTokenAction() {
+    setAbility('Save', '', '%{'+characterName+'|save_query_macro}', shaped.settings.createAbilityAsToken);
+  }
+  function createCheckQueryTokenAction() {
+    setAbility('Check', '', '%{'+characterName+'|check_query_macro}', shaped.settings.createAbilityAsToken);
+  }
+  function createSkillQueryTokenAction() {
+    setAbility('Skill', '', '%{'+characterName+'|skill_query_macro}', shaped.settings.createAbilityAsToken);
+  }
 
   shaped.decrementAmmo = function (characterName, attributeName) {
     var obj = findObjs({
@@ -1483,18 +1514,18 @@
         setAttribute('legendary_action_notes', legendaryActionsNotes.join('\n'));
       }
     }
-    if(shaped.settings.addInitiativeTokenAbility) {
-      setAbility('Init', '', '%{'+characterName+'|Initiative}', shaped.settings.createAbilityAsToken);
-    }
 
+    if(shaped.settings.addInitiativeTokenAbility) {
+      createInitTokenAction();
+    }
     if(shaped.settings.addSaveQueryMacroTokenAbility) {
-      setAbility('Save', '', '%{'+characterName+'|save_query_macro}', shaped.settings.createAbilityAsToken);
+      createSaveQueryTokenAction();
     }
     if(shaped.settings.addCheckQueryMacroTokenAbility) {
-      setAbility('Check', '', '%{'+characterName+'|check_query_macro}', shaped.settings.createAbilityAsToken);
+      createCheckQueryTokenAction();
     }
     if(shaped.settings.addSkillQueryMacroTokenAbility) {
-      setAbility('Skill', '', '%{'+characterName+'|skill_query_macro}', shaped.settings.createAbilityAsToken);
+      createSkillQueryTokenAction();
     }
 
     for(var key in actions) {
