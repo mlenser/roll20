@@ -1166,8 +1166,8 @@
     "emote": "holds {{GENDER_PRONOUN_HIS_HER}} hands with thumbs touching and fingers pread as a thin sheet of flames shoorts forth from {{GENDER_PRONOUN_HIS_HER}} fingertips",
     "source": "phb 220",
     "range": "Self",
+    "target": "Every creature in the aoe",
     "aoe": "15 ft cone",
-    "target": "Every creature inside a 15-foot cone",
     "components": {
       "verbal": true,
       "somatic": true
