@@ -171,30 +171,55 @@
   };
 
   shaped.tokenMacros = function(token, args) {
-    if(args[0] === 'init') {
-      createInitTokenAction();
-    } else if(args[0] === 'query') {
-      createSaveQueryTokenAction();
-      createCheckQueryTokenAction();
-      createSkillQueryTokenAction();
-    } else if(args[0] === 'bootstrap') {
-      createInitTokenAction();
-      createSaveQueryTokenAction();
-      createCheckQueryTokenAction();
-      createSkillQueryTokenAction();
+    var id = token.get('represents'),
+      character = findObjs({
+        _type: 'character',
+        id: id
+      })[0],
+      characterName = getAttrByName(id, 'character_name', 'current'),
+      message;
+
+    if(typeof(character) === 'undefined') {
+      var message = 'Error: cannot find a character by the name of "' + characterName + '".';
+      log(message);
+      sendChat('GM', '/w gm ' + message);
+      return
+    }
+    characterId = character.id;
+
+    if(args[1] === 'init') {
+      createInitTokenAction(characterName);
+      message = 'created init token macro for ' + characterName + '.';
+      log(message);
+      sendChat('GM', '/w gm ' + message);
+    } else if(args[1] === 'query') {
+      createSaveQueryTokenAction(characterName);
+      createCheckQueryTokenAction(characterName);
+      createSkillQueryTokenAction(characterName);
+      message = 'created query token macros for ' + characterName + '.';
+      log(message);
+      sendChat('GM', '/w gm ' + message);
+    } else if(args[1] === 'bootstrap') {
+      createInitTokenAction(characterName);
+      createSaveQueryTokenAction(characterName);
+      createCheckQueryTokenAction(characterName);
+      createSkillQueryTokenAction(characterName);
+      message = 'bootstraped all token macros for ' + characterName + '.';
+      log(message);
+      sendChat('GM', '/w gm ' + message);
     }
   };
 
-  function createInitTokenAction() {
+  function createInitTokenAction(characterName) {
     setAbility('Init', '', '%{'+characterName+'|Initiative}', shaped.settings.createAbilityAsToken);
   }
-  function createSaveQueryTokenAction() {
+  function createSaveQueryTokenAction(characterName) {
     setAbility('Save', '', '%{'+characterName+'|save_query_macro}', shaped.settings.createAbilityAsToken);
   }
-  function createCheckQueryTokenAction() {
+  function createCheckQueryTokenAction(characterName) {
     setAbility('Check', '', '%{'+characterName+'|check_query_macro}', shaped.settings.createAbilityAsToken);
   }
-  function createSkillQueryTokenAction() {
+  function createSkillQueryTokenAction(characterName) {
     setAbility('Skill', '', '%{'+characterName+'|skill_query_macro}', shaped.settings.createAbilityAsToken);
   }
 
