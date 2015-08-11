@@ -109,7 +109,7 @@
         if(args[1] && args[1] === 'clean') {
           shaped.getSelectedToken(msg, shaped.deleteOldSheet);
         }
-        shaped.getSelectedToken(msg, shaped.ImportStatblock);
+        shaped.getSelectedToken(msg, shaped.importStatblock);
         break;
       case '!shaped-rollhp':
         shaped.getSelectedToken(msg, shaped.rollTokenHp);
@@ -118,7 +118,7 @@
         args.shift();
         shaped.changeSettings(args);
         break;
-      case '!shaped-spell-import':
+      case '!shaped-spell':
         args.shift();
         shaped.getSelectedToken(msg, shaped.spellImport, args);
         break;
@@ -405,60 +405,44 @@
     return a - b;
   }
 
-  shaped.ImportStatblock = function(token) {
-    status = 'Nothing modified';
-    errors = [];
-    try {
-      var statblock = token.get('gmnotes').trim();
+  shaped.importStatblock = function(token) {
+    var statblock = token.get('gmnotes').trim();
 
-      if(statblock === '') {
-        throw('Selected token GM Notes was empty.');
-      }
-
-      shaped.parseStatblock(statblock);
-      if(characterId) {
-        token.set('represents', characterId);
-        var tokenName = characterName;
-        if(shaped.settings.useAaronsNumberedScript && characterName.indexOf('%%NUMBERED%%') !== 1) {
-          tokenName += ' %%NUMBERED%%';
-        }
-        token.set('name', tokenName);
-
-        if(shaped.settings.showName) {
-          token.set('showname', true);
-        }
-        if(shaped.settings.showNameToPlayers) {
-          token.set('showplayers_name', true);
-        }
-
-        setUserDefinedScriptSettings();
-
-        setBarValueAfterConvert(token);
-
-        if(shaped.settings.bar[0].show) {
-          token.set('showplayers_bar1', 'true');
-        }
-        if(shaped.settings.bar[1].show) {
-          token.set('showplayers_bar2', 'true');
-        }
-        if(shaped.settings.bar[2].show) {
-          token.set('showplayers_bar3', 'true');
-        }
-
-        setTokenVision(token);
-      }
-    } catch(e) {
-      status = 'Parsing was incomplete due to error(s)';
-      log(e);
-      errors.push(e);
+    if(statblock === '') {
+      throw('Selected token GM Notes was empty.');
     }
 
-    log(status);
-    sendChat('Shaped', '/w GM ' + status);
+    shaped.parseStatblock(statblock);
+    if(characterId) {
+      token.set('represents', characterId);
+      var tokenName = characterName;
+      if(shaped.settings.useAaronsNumberedScript && characterName.indexOf('%%NUMBERED%%') !== 1) {
+        tokenName += ' %%NUMBERED%%';
+      }
+      token.set('name', tokenName);
 
-    if(errors.length > 0) {
-      log(errors.join('\n'));
-      sendChat('Shaped', '/w GM Error(s):\n/w GM ' + errors.join('\n/w GM '));
+      if(shaped.settings.showName) {
+        token.set('showname', true);
+      }
+      if(shaped.settings.showNameToPlayers) {
+        token.set('showplayers_name', true);
+      }
+
+      setUserDefinedScriptSettings();
+
+      setBarValueAfterConvert(token);
+
+      if(shaped.settings.bar[0].show) {
+        token.set('showplayers_bar1', 'true');
+      }
+      if(shaped.settings.bar[1].show) {
+        token.set('showplayers_bar2', 'true');
+      }
+      if(shaped.settings.bar[2].show) {
+        token.set('showplayers_bar3', 'true');
+      }
+
+      setTokenVision(token);
     }
   };
 
