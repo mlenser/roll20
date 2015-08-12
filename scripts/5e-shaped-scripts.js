@@ -406,6 +406,9 @@
   }
 
   shaped.importStatblock = function(token) {
+    status = 'Nothing modified';
+    errors = [];
+
     var statblock = token.get('gmnotes').trim();
 
     if(statblock === '') {
@@ -443,6 +446,14 @@
       }
 
       setTokenVision(token);
+    }
+
+    log(status);
+    sendChat('Shaped', '/w GM ' + status);
+
+    if(errors.length > 0) {
+      log(errors.join('\n'));
+      sendChat('Shaped', '/w GM Error(s):\n/w GM ' + errors.join('\n/w GM '));
     }
   };
 
@@ -817,9 +828,6 @@
     if(section.attr['damage vulnerabilities']) setAttribute('damage_vulnerability', section.attr['damage vulnerabilities']);
     if(section.attr['damage resistances']) setAttribute('damage_resistance', section.attr['damage resistances']);
     if(section.attr.languages) setAttribute('prolanguages', section.attr.languages);
-
-    log('section.actions');
-    log(section.actions);
 
     parseTraits(section.traits);
     parseReactions(section.reactions);
@@ -1525,16 +1533,16 @@
     }
 
     if(shaped.settings.addInitiativeTokenAbility) {
-      createInitTokenAction();
+      createInitTokenAction(characterName);
     }
     if(shaped.settings.addSaveQueryMacroTokenAbility) {
-      createSaveQueryTokenAction();
+      createSaveQueryTokenAction(characterName);
     }
     if(shaped.settings.addCheckQueryMacroTokenAbility) {
-      createCheckQueryTokenAction();
+      createCheckQueryTokenAction(characterName);
     }
     if(shaped.settings.addSkillQueryMacroTokenAbility) {
-      createSkillQueryTokenAction();
+      createSkillQueryTokenAction(characterName);
     }
 
     for(var key in actions) {
