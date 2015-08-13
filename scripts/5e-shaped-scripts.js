@@ -26,6 +26,8 @@
 
     useAmmoAutomatically: true,
 
+    hideGMInfo: false, //hide some roll template info from your players. This requires that the gm uses a browser extension
+
     bar: [
       /* Setting these to a sheet value will set the token bar value. If they are set to '' or not set then it will use whatever you already have set on the token
        Do not use npc_HP, use HP instead
@@ -351,43 +353,31 @@
     }
     if(shaped.settings.sheetOutput === 'hidden') {
       setAttribute('output_option', '@{output_to_gm}');
-    } else {
-      setAttribute('output_option', '@{output_to_all}');
     }
     if(shaped.settings.whisperDeathSaves) {
       setAttribute('death_save_output_option', '@{output_to_gm}');
-    } else {
-      setAttribute('death_save_output_option', '@{output_to_all}');
     }
     if(shaped.settings.whisperInitiative) {
       setAttribute('initiative_output_option', '@{output_to_gm}');
-    } else {
-      setAttribute('initiative_output_option', '@{output_to_all}');
     }
     if(shaped.settings.showCharacterNameOnRollTemplate) {
       setAttribute('show_character_name', '@{show_character_name_yes}');
-    } else {
-      setAttribute('show_character_name', '@{show_character_name_no}');
     }
     if(shaped.settings.initiativeTieBreaker) {
       setAttribute('initiative_tie_breaker', '((@{initiative_overall}) / 100)');
-    } else {
-      setAttribute('initiative_tie_breaker', '');
     }
     if(shaped.settings.initiativeAddsToTracker) {
       setAttribute('initiative_to_tracker', '@{initiative_to_tracker_yes}');
-    } else {
-      setAttribute('initiative_to_tracker', '@{initiative_to_tracker_no}');
     }
     if(shaped.settings.attacksVsTargetAC) {
       setAttribute('attacks_vs_target_ac', '@{attacks_vs_target_ac_yes}');
-    } else {
-      setAttribute('attacks_vs_target_ac', '@{attacks_vs_target_ac_no}');
     }
-    if(shaped.settings.attacksVsTargetName) {
-      setAttribute('attacks_vs_target_name', '@{attacks_vs_target_name_yes}');
-    } else {
-      setAttribute('attacks_vs_target_name', '@{attacks_vs_target_name_no}');
+    if(shaped.settings.hideGMInfo) {
+      setAttribute('hide_save_dc', '@{hide_save_dc_var}');
+      setAttribute('hide_save_failure', '@{hide_save_failure_var}');
+      setAttribute('hide_save_success', '@{hide_save_success_var}');
+      setAttribute('hide_effects', '@{hide_effects_var}');
+      setAttribute('hide_recharge', '@{hide_recharge_var}');
     }
   }
 
