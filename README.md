@@ -5,6 +5,10 @@ Scripts for 5e roll20
 
 ### Changelog
 
+**Aug 12th 2015 (1.92)**
+
+* hidden gm info
+
 **Aug 10th 2015 (1.91)**
 
 * Fixed Earth Elemental

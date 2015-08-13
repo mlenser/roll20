@@ -52,7 +52,7 @@
   var spellsData = [];
 
   shaped.statblock = {
-    version: '1.91',
+    version: '1.92',
     RegisterHandlers: function () {
       on('chat:message', HandleInput);
 
@@ -1882,8 +1882,8 @@
     log(args);
     var changeNPCs = false,
       changePCs = false,
-      attributeName,
-      attributeValue;
+      attributesToChange = {},
+      attributeName;
 
     if (args[0] === 'npcs') {
       changeNPCs = true;
@@ -1898,7 +1898,7 @@
       sendChat('GM', '/w GM ' + errorMessage);
     }
 
-    var validAttributeName = ['output_option', 'death_save_output_option', 'initiative_output_option', 'show_character_name', 'initiative_tie_breaker', 'initiative_to_tracker', 'attacks_vs_target_ac', 'attacks_vs_target_name'];
+    var validAttributeName = ['output_option', 'death_save_output_option', 'initiative_output_option', 'show_character_name', 'initiative_tie_breaker', 'initiative_to_tracker', 'attacks_vs_target_ac', 'attacks_vs_target_name', 'gm_info', 'save_dc', 'save_failure', 'save_success', 'effects', 'recharge'];
     if (validAttributeName.indexOf(args[1]) !== -1) {
       attributeName = args[1];
     } else {
@@ -1908,50 +1908,65 @@
       return
     }
 
+    function showHide (field, prefix, show, hide) {
+      if(attributeName === field) {
+        attributeName = prefix + '_' + field;
+        if (args[2] === 'show') {
+          attributesToChange[attributeName] = show;
+        } else if (args[2] === 'hide') {
+          attributesToChange[attributeName] = hide;
+        }
+      }
+    }
+    function yesNo (field, yes, no) {
+      if(attributeName === field) {
+        if (args[2] === 'yes') {
+          attributesToChange[attributeName] = yes;
+        } else if (args[2] === 'no') {
+          attributesToChange[attributeName] = no;
+        }
+      }
+    }
+
     var validAttributeValue = ['hide', 'show', 'yes', 'no'];
     if (validAttributeValue.indexOf(args[2]) !== -1) {
       if(attributeName === 'output_option' || attributeName === 'death_save_output_option' || attributeName === 'initiative_output_option') {
         if(args[2] === 'show') {
-          attributeValue = '@{output_to_all}';
+          attributesToChange[attributeName] = '@{output_to_all}';
         } else if(args[2] === 'hide') {
-          attributeValue = '@{output_to_gm}';
+          attributesToChange[attributeName] = '@{output_to_gm}';
         }
       }
-      if(attributeName === 'show_character_name') {
-        if(args[2] === 'no') {
-          attributeValue = '@{show_character_name_no}';
-        } else if(args[2] === 'yes') {
-          attributeValue = '@{show_character_name_yes}';
+
+      showHide('character_name', 'show', '@{show_character_name_yes}', '@{show_character_name_no}');
+
+      yesNo('initiative_tie_breaker', '((@{initiative_overall}) / 100)', '');
+      yesNo('initiative_to_tracker', '@{initiative_to_tracker_yes}', '@{initiative_to_tracker_no}');
+      yesNo('attacks_vs_target_ac', '@{attacks_vs_target_ac_yes}', '@{attacks_vs_target_ac_no}');
+      yesNo('attacks_vs_target_name', '@{attacks_vs_target_name_yes}', '@{attacks_vs_target_name_no}');
+
+      showHide('save_dc', 'hide', '', '@{hide_save_dc_var}');
+      showHide('save_failure', 'hide', '', '@{hide_save_failure_var}');
+      showHide('save_success', 'hide', '', '@{hide_save_success_var}');
+      showHide('effects', 'hide', '', '@{hide_effects_var}');
+      showHide('recharge', 'hide', '', '@{hide_recharge_var}');
+
+      if(attributeName === 'gm_info') {
+        if(args[2] === 'show') {
+          attributesToChange['hide_save_dc'] = '';
+          attributesToChange['hide_save_failure'] = '';
+          attributesToChange['hide_save_success'] = '';
+          attributesToChange['hide_effects'] = '';
+          attributesToChange['hide_recharge'] = '';
+        } else if(args[2] === 'hide') {
+          attributesToChange['hide_save_dc'] = '@{hide_save_dc_var}';
+          attributesToChange['hide_save_failure'] = '@{hide_save_failure_var}';
+          attributesToChange['hide_save_success'] = '@{hide_save_success_var}';
+          attributesToChange['hide_effects'] = '@{hide_effects_var}';
+          attributesToChange['hide_recharge'] = '@{hide_recharge_var}';
         }
       }
-      if(attributeName === 'initiative_tie_breaker') {
-        if(args[2] === 'no') {
-          attributeValue = '';
-        } else if(args[2] === 'yes') {
-          attributeValue = '((@{initiative_overall}) / 100)';
-        }
-      }
-      if(attributeName === 'initiative_to_tracker') {
-        if(args[2] === 'no') {
-          attributeValue = '@{initiative_to_tracker_no}';
-        } else if(args[2] === 'yes') {
-          attributeValue = '@{initiative_to_tracker_yes}';
-        }
-      }
-      if(attributeName === 'attacks_vs_target_ac') {
-        if(args[2] === 'no') {
-          attributeValue = '@{attacks_vs_target_ac_no}';
-        } else if(args[2] === 'yes') {
-          attributeValue = '@{attacks_vs_target_ac_yes}';
-        }
-      }
-      if(attributeName === 'attacks_vs_target_name') {
-        if(args[2] === 'no') {
-          attributeValue = '@{attacks_vs_target_name_no}';
-        } else if(args[2] === 'yes') {
-          attributeValue = '@{attacks_vs_target_name_yes}';
-        }
-      }
+
     } else {
       var errorMessage = 'invalid value. Please use one of the following: ' + validAttributeValue.join(', ');
       log(errorMessage);
@@ -1969,33 +1984,37 @@
       return null;
     });
 
-    creaturesToChange.forEach(function (obj) {
-      var attr = findObjs({
-        _type: 'attribute',
-        _characterid: obj.id,
-        name: attributeName
-      })[0];
 
-      if(!attr) {
-        createObj('attribute', {
-          name: attributeName,
-          current: attributeValue,
-          characterid: obj.id
+    for (var attribute in attributesToChange) {
+      if (attributesToChange.hasOwnProperty(attribute)) {
+        creaturesToChange.forEach(function (obj) {
+          var attr = findObjs({
+            _type: 'attribute',
+            _characterid: obj.id,
+            name: attribute
+          })[0];
+
+          if (!attr) {
+            createObj('attribute', {
+              name: attribute,
+              current: attributesToChange[attribute],
+              characterid: obj.id
+            });
+          } else if (!attr.get('current') || attr.get('current').toString() !== attributesToChange[attribute]) {
+            attr.set({
+              current: attributesToChange[attribute]
+            });
+          }
         });
-      } else if(!attr.get('current') || attr.get('current').toString() !== attributeValue) {
-        attr.set({
-          current: attributeValue
-        });
+        if(creaturesToChange.length > 0) {
+          log('changed ' + attribute + ' to ' + attributesToChange[attribute] + ' for ' + creaturesToChange.length + ' creatures');
+          sendChat('GM', '/w GM changed "' + attribute + '" to ' + attributesToChange[attribute].replace('@', '&#64;') + ' for ' + creaturesToChange.length + ' creatures');
+        } else {
+          var errorMessage = 'no creatures match those parameters';
+          log(errorMessage);
+          sendChat('GM', '/w GM ' + errorMessage);
+        }
       }
-    });
-
-    if(creaturesToChange.length > 0) {
-      log('changed ' + attributeName + ' to ' + attributeValue + ' for ' + creaturesToChange.length + ' creatures');
-      sendChat('GM', '/w GM changed "' + attributeName + '" to ' + attributeValue.replace('@{', '"').replace('}', '"') + ' for ' + creaturesToChange.length + ' creatures');
-    } else {
-      var errorMessage = 'no creatures match those parameters';
-      log(errorMessage);
-      sendChat('GM', '/w GM ' + errorMessage);
     }
   };
 
