@@ -2205,6 +2205,9 @@
     if(spell.heal) {
       setAttribute(spellBase + 'spell_toggle_healing', '@{spell_var_healing}');
       setAttribute(spellBase + 'spellhealamount', spell.heal.amount);
+      if(spell.heal.bonus) {
+        setAttribute(spellBase + 'healbonus', spell.heal.bonus);
+      }
       if(spell.heal.castingStat) {
         setAttribute(spellBase + 'healstatbonus', '@{casting_stat}');
       }
