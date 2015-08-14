@@ -1,5 +1,5 @@
 var BloodSpatterAndStatusMarkers = {
-	version: '0.03',
+	version: '0.04',
 	wiki: 'https://wiki.roll20.net/Script:Blood_And_Honor:_Automatic_blood_spatter,_pooling_and_trail_effects',
 
 	// This will make it so only the GM can use the !clearblood command. Change to "true" if you want to check for authorization.
