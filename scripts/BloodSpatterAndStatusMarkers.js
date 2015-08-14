@@ -125,18 +125,39 @@ var BloodSpatterAndStatusMarkers = {
 			bloodTokenHeight = bloodTokenHeight * heightRatioMultiplier * sizeAdjustment;
 		}
 
-		toFront(BloodSpatterAndStatusMarkers.fixedCreateObj('graphic', {
-			imgsrc: bloodTokenSource,
-			gmnotes: 'blood',
-			pageid: token.get('_pageid'),
-			left: token.get('left') + (randomInteger(Math.floor(size / 2)) * BloodSpatterAndStatusMarkers.getOffset()),
-			tint_color: BloodSpatterAndStatusMarkers.bloodColor(gmNotes),
-			top: token.get('top') + (randomInteger(Math.floor(size / 2)) * BloodSpatterAndStatusMarkers.getOffset()),
-			rotation: randomInteger(360) - 1,
-			width: bloodTokenWidth,
-			height: bloodTokenHeight,
-			layer: 'map'
-		}));
+		var widthIncrement = bloodTokenWidth * 0.1,
+			widthIncrementTotal = widthIncrement,
+			heightIncrement = bloodTokenHeight * 0.1,
+			heightIncrementTotal = heightIncrement,
+			spatterToken = BloodSpatterAndStatusMarkers.fixedCreateObj('graphic', {
+				pageid: token.get('_pageid'),
+				imgsrc: bloodTokenSource,
+				tint_color: BloodSpatterAndStatusMarkers.bloodColor(gmNotes),
+				gmnotes: 'blood',
+				top: token.get('top') + (randomInteger(Math.floor(size / 2)) * BloodSpatterAndStatusMarkers.getOffset()),
+				left: token.get('left') + (randomInteger(Math.floor(size / 2)) * BloodSpatterAndStatusMarkers.getOffset()),
+				width: widthIncrement,
+				height: heightIncrement,
+				rotation: randomInteger(360) - 1,
+				layer: 'map'
+			});
+
+		toFront(spatterToken);
+
+		(function splatterEnlargeFunction (count) {
+			if (count < 10) {
+				setTimeout(function () {
+					widthIncrementTotal += widthIncrement;
+					heightIncrementTotal += heightIncrement;
+					spatterToken.set({
+						width: widthIncrementTotal,
+						height: heightIncrementTotal
+					});
+					splatterEnlargeFunction(count + 1);
+				}, 30);
+			}
+		})(0);
+
 	},
 	getTokenSize: function (token) {
 		return (token.get('height') + token.get('width')) / 2; //average the height and the width
