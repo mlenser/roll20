@@ -1,5 +1,5 @@
-var BloodSplatterAndStatusMarkers = {
-	version: '0.02',
+var BloodSpatterAndStatusMarkers = {
+	version: '0.03',
 	wiki: 'https://wiki.roll20.net/Script:Blood_And_Honor:_Automatic_blood_spatter,_pooling_and_trail_effects',
 
 	// This will make it so only the GM can use the !clearblood command. Change to "true" if you want to check for authorization.
@@ -69,10 +69,10 @@ var BloodSplatterAndStatusMarkers = {
 	],
 	chooseBlood: function (type) {
 		if (type === 'spatter') {
-			return BloodSplatterAndStatusMarkers.spatters[randomInteger(BloodSplatterAndStatusMarkers.spatters.length) - 1];
+			return BloodSpatterAndStatusMarkers.spatters[randomInteger(BloodSpatterAndStatusMarkers.spatters.length) - 1];
 		}
 		if (type === 'pool') {
-			return BloodSplatterAndStatusMarkers.pools[randomInteger(BloodSplatterAndStatusMarkers.pools.length) - 1];
+			return BloodSpatterAndStatusMarkers.pools[randomInteger(BloodSpatterAndStatusMarkers.pools.length) - 1];
 		}
 	},
 	getOffset: function () {
@@ -98,8 +98,8 @@ var BloodSplatterAndStatusMarkers = {
 			return;
 		}
 
-		var	size = Math.floor(BloodSplatterAndStatusMarkers.getTokenSize(token) * multiplier),
-			bloodImage = BloodSplatterAndStatusMarkers.chooseBlood(bloodType),
+		var	size = Math.floor(BloodSpatterAndStatusMarkers.getTokenSize(token) * multiplier),
+			bloodImage = BloodSpatterAndStatusMarkers.chooseBlood(bloodType),
 			bloodTokenSource = bloodImage,
 			bloodTokenWidth = size * multiplier,
 			bloodTokenHeight = size * multiplier;
@@ -125,13 +125,13 @@ var BloodSplatterAndStatusMarkers = {
 			bloodTokenHeight = bloodTokenHeight * heightRatioMultiplier * sizeAdjustment;
 		}
 
-		toFront(BloodSplatterAndStatusMarkers.fixedCreateObj('graphic', {
+		toFront(BloodSpatterAndStatusMarkers.fixedCreateObj('graphic', {
 			imgsrc: bloodTokenSource,
 			gmnotes: 'blood',
 			pageid: token.get('_pageid'),
-			left: token.get('left') + (randomInteger(Math.floor(size / 2)) * BloodSplatterAndStatusMarkers.getOffset()),
-			tint_color: BloodSplatterAndStatusMarkers.bloodColor(gmNotes),
-			top: token.get('top') + (randomInteger(Math.floor(size / 2)) * BloodSplatterAndStatusMarkers.getOffset()),
+			left: token.get('left') + (randomInteger(Math.floor(size / 2)) * BloodSpatterAndStatusMarkers.getOffset()),
+			tint_color: BloodSpatterAndStatusMarkers.bloodColor(gmNotes),
+			top: token.get('top') + (randomInteger(Math.floor(size / 2)) * BloodSpatterAndStatusMarkers.getOffset()),
 			rotation: randomInteger(360) - 1,
 			width: bloodTokenWidth,
 			height: bloodTokenHeight,
@@ -143,18 +143,18 @@ var BloodSplatterAndStatusMarkers = {
 	},
 	timeout: 0,
 	increaseTimeout: function () {
-		BloodSplatterAndStatusMarkers.timeout += 2;
-		BloodSplatterAndStatusMarkers.watchTimeout();
+		BloodSpatterAndStatusMarkers.timeout += 2;
+		BloodSpatterAndStatusMarkers.watchTimeout();
 	},
 	interval: null,
 	watchTimeout: function () {
-		if (BloodSplatterAndStatusMarkers.interval === null) {
-			BloodSplatterAndStatusMarkers.interval = setInterval(function () {
-				if (BloodSplatterAndStatusMarkers.timeout > 0) {
-					BloodSplatterAndStatusMarkers.timeout--;
+		if (BloodSpatterAndStatusMarkers.interval === null) {
+			BloodSpatterAndStatusMarkers.interval = setInterval(function () {
+				if (BloodSpatterAndStatusMarkers.timeout > 0) {
+					BloodSpatterAndStatusMarkers.timeout--;
 				} else {
-					clearInterval(BloodSplatterAndStatusMarkers.interval);
-					BloodSplatterAndStatusMarkers.interval = null;
+					clearInterval(BloodSpatterAndStatusMarkers.interval);
+					BloodSpatterAndStatusMarkers.interval = null;
 				}
 			}, 2000);
 		}
@@ -177,16 +177,18 @@ on('ready', function () {
 		if (maxHealth === '') {
 			return;
 		}
-		var currentHealth = obj.get('bar3_value');
+		var currentHealth = obj.get('bar3_value'),
+			damageTaken = prev.bar3_value - currentHealth,
+			percentOfHpLost = damageTaken / maxHealth,
+			damageMultiplier = 1 + Math.min(percentOfHpLost / 2, 0.5);
 
 		if (currentHealth <= maxHealth / 2) {
 			obj.set({
 				status_redmarker: true
 			});
 			// Create spatter near token if "bloodied". Chance of spatter depends on severity of damage
-			if (currentHealth > 0 && currentHealth < prev.bar3_value && currentHealth < randomInteger(maxHealth)) {
-				var bloodMult = 1 + ((currentHealth - prev.bar3_value) / maxHealth);
-				BloodSplatterAndStatusMarkers.createBlood(obj, bloodMult, 'spatter');
+			if (damageTaken > 0 && currentHealth > 0 && currentHealth < randomInteger(maxHealth)) {
+				BloodSpatterAndStatusMarkers.createBlood(obj, damageMultiplier, 'spatter');
 			}
 		} else {
 			obj.set({
@@ -198,7 +200,9 @@ on('ready', function () {
 				status_dead: true
 			});
 			// Create pool near token if health drops below 1.
-			BloodSplatterAndStatusMarkers.createBlood(obj, 1.2, 'pool');
+			if(damageTaken > 0) {
+				BloodSpatterAndStatusMarkers.createBlood(obj, damageMultiplier, 'pool');
+			}
 		} else {
 			obj.set({
 				status_dead: false
@@ -210,21 +214,24 @@ on('ready', function () {
 	on('change:graphic:lastmove', function (obj) {
 		var maxHealth = obj.get('bar3_max');
 
-		if (maxHealth === '' || BloodSplatterAndStatusMarkers.timeout !== 0) {
+		if (maxHealth === '' || BloodSpatterAndStatusMarkers.timeout !== 0) {
 			return;
 		}
 
-		var currentHealth = obj.get('bar3_value');
+		var currentHealth = obj.get('bar3_value'),
+			healthLost = maxHealth - currentHealth,
+			percentOfHpLost = healthLost / maxHealth,
+			damageMultiplier = .5 + Math.min(percentOfHpLost / 2, 0.5);
 
 		if (currentHealth <= maxHealth / 2 && currentHealth < randomInteger(maxHealth)) {
-			BloodSplatterAndStatusMarkers.createBlood(obj, 0.9, 'spatter');
-			BloodSplatterAndStatusMarkers.increaseTimeout();
+			BloodSpatterAndStatusMarkers.createBlood(obj, damageMultiplier, 'spatter');
+			BloodSpatterAndStatusMarkers.increaseTimeout();
 		}
 	});
 
 	on('chat:message', function (msg) {
 		if (msg.type === 'api' && msg.content.indexOf('!clearblood') !== -1) {
-			if (BloodSplatterAndStatusMarkers.onlyAllowGMtoRunCommands && !playerIsGM(msg.playerid)) {
+			if (BloodSpatterAndStatusMarkers.onlyAllowGMtoRunCommands && !playerIsGM(msg.playerid)) {
 				sendChat(msg.who, '/w ' + msg.who + ' You are not authorized to use that command!');
 				return;
 			} else {
