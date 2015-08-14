@@ -5,6 +5,10 @@ Scripts for 5e roll20
 
 ### Changelog
 
+**Aug 13th 2015 (1.93)**
+
+* Toggle higher level query output
+
 **Aug 12th 2015 (1.92)**
 
 * hidden gm info

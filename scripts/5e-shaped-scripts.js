@@ -54,7 +54,7 @@
   var spellsData = [];
 
   shaped.statblock = {
-    version: '1.92',
+    version: '1.93',
     RegisterHandlers: function () {
       on('chat:message', HandleInput);
 
@@ -2158,6 +2158,7 @@
       }
       if(param.higherLevelDice) {
         setAttribute(spellBase + 'spell_toggle_higher_lvl_query', '@{spell_var_higher_lvl_query}');
+        setAttribute(spellBase + 'spell_toggle_output_higher_lvl_query', '@{spell_var_output_higher_lvl_query}');
         setAttribute(spellBase + 'spell_' + type + '_higher_level_dmg_dice', param.higherLevelDice);
       }
       if(param.higherLevelDie) {
