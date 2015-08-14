@@ -51,7 +51,7 @@ var BloodSplatterAndStatusMarkers = {
 	createBlood: function (gPage_id, gLeft, gTop, gWidth, gType, gColor) {
 		gLeft = gLeft + (randomInteger(Math.floor(gWidth / 2)) * BloodSplatterAndStatusMarkers.getOffset());
 		gTop = gTop + (randomInteger(Math.floor(gWidth / 2)) * BloodSplatterAndStatusMarkers.getOffset());
-		toFront(createObj('graphic', {
+		toFront(BloodSplatterAndStatusMarkers.fixedCreateObj('graphic', {
 			imgsrc: gType,
 			gmnotes: 'blood',
 			pageid: gPage_id,
@@ -81,21 +81,19 @@ var BloodSplatterAndStatusMarkers = {
 				}
 			}, 2000);
 		}
-	}
+	},
+	fixedCreateObj: function () {
+		return function () {
+			var obj = createObj.apply(this, arguments);
+			if (obj && !obj.fbpath) {
+				obj.fbpath = obj.changed._fbpath.replace(/([^\/]*\/){4}/, '/');
+			}
+			return obj;
+		};
+	}()
 };
 
-createObj = (function () {
-	return function () {
-		var obj = createObj.apply(this, arguments);
-		if (obj && !obj.fbpath) {
-			obj.fbpath = obj.changed._fbpath.replace(/([^\/]*\/){4}/, '/');
-		}
-		return obj;
-	};
-}());
-
 on('ready', function () {
-
 	on('change:graphic:bar3_value', function (obj, prev) {
 		var maxHealth = obj.get('bar3_max'),
 			bloodiedValue = maxHealth / 2,
