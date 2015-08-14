@@ -7050,9 +7050,10 @@
   {
     "name": "Nondetection",
     "description": "For the duration, you hide a target that you touch from divination magic. The target can be a willing creature or a place or an object no larger than 10 feet in any dimension. The target can't be targeted by any divination magic or perceived through magical scrying sensors.",
-    "emote": "",
+    "emote": "hides target that from divination magic",
     "source": "phb 263",
     "range": "Touch",
+    "target": "a willing creature or a place or an object no larger than 10 feet in any dimension",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -7063,6 +7064,7 @@
     "castingTime": "1 action",
     "level": 3,
     "school": "Abjuration",
+    "effects": "The target can't be targeted by any divination magic or perceived through magical scrying sensors.",
     "classes": [
       "Bard",
       "Cleric",
@@ -7157,9 +7159,10 @@
   {
     "name": "Otto's Irresistible Dance",
     "description": "Choose one creature that you can see within range. The target begins a comic dance in place: shuffling, tapping its feet, and capering for the duration. Creatures that can't be charmed are immune to this spell.\nA dancing creature must use all its movement to dance without leaving its space and has disadvantage on Dexterity saving throws and attack rolls. While the target is affected by this spell, other creatures have advantage on attack rolls against it. As an action, a dancing creature makes a Wisdom saving throw to regain control of itself. On a successful save, the spell ends.",
-    "emote": "",
+    "emote": "enchants a creature to comically dance in place: shuffling, tapping its feet, and capering",
     "source": "phb 264",
     "range": "30 ft",
+    "target": "1 creature that you can see within range",
     "components": {
       "verbal": true
     },
@@ -7168,6 +7171,7 @@
     "castingTime": "1 action",
     "level": 6,
     "school": "Enchantment",
+    "effects": "Creatures that can't be charmed are immune to this spell.\nA dancing creature must use all its movement to dance without leaving its space and has disadvantage on Dexterity saving throws and attack rolls. While the target is affected by this spell, other creatures have advantage on attack rolls against it. As an action, a dancing creature makes a Wisdom saving throw to regain control of itself. On a successful save, the spell ends.",
     "classes": [
       "Bard",
       "Wizard"
@@ -7207,9 +7211,11 @@
   {
     "name": "Passwall",
     "description": "A passage appears at a point of your choice that you can see on a wooden, plaster, or stone surface (such as a wall, a ceiling, or a floor) within range, and lasts for the duration. You choose the opening's dimensions: up to 5 feet wide, 8 feet tall, and 20 feet deep. The passage creates no instability in a structure surrounding it.\nWhen the opening disappears, any creatures or objects still in the passage created by the spell are safely ejected to an unoccupied space nearest to the surface on which you cast the spell.",
-    "emote": "",
+    "emote": "creates a passage through an obstacles",
     "source": "phb 264",
     "range": "30 ft",
+    "target": "a point that you can see on a wooden, plaster, or stone surface (such as a wall, a ceiling, or a floor) within range",
+    "aoe": "passage up to 5 ft wide, 8 ft tall, and 20 ft deep",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -7220,6 +7226,7 @@
     "castingTime": "1 action",
     "level": 5,
     "school": "Transmutation",
+    "effects": "The passage creates no instability in a structure surrounding it.\nWhen the opening disappears, any creatures or objects still in the passage created by the spell are safely ejected to an unoccupied space nearest to the surface on which you cast the spell.",
     "classes": [
       "Druid",
       "Wizard"
@@ -7290,9 +7297,10 @@
   {
     "name": "Phantom Steed",
     "description": "A Large quasi-real, horselike creature appears on the ground in an unoccupied space of your choice within range. You decide the creature's appearance, but it is equipped with a saddle, bit, and bridle. Any of the equipment created by the spell vanishes in a puff of smoke if it is carried more than 10 feet away from the steed.\nFor the duration, you or a creature you choose can ride the steed. The creature uses the statistics for a riding horse, except it has a speed of 100 feet and can travel 10 miles in an hour, or 13 miles at a fast pace. When the spell ends, the steed gradually fades, giving the rider 1 minute to dismount. The spell ends if you use an action to dismiss it or if the steed takes any damage.",
-    "emote": "",
+    "emote": "conjures a Large quasi-real, horselike creature",
     "source": "phb 265",
     "range": "30 ft",
+    "targer": "on the ground in an unoccupied space within range",
     "components": {
       "verbal": true,
       "somatic": true
@@ -7302,6 +7310,7 @@
     "castingTime": "1 minute",
     "level": 3,
     "school": "Illusion",
+    "effects": "You decide the creature's appearance, but it is equipped with a saddle, bit, and bridle. Any of the equipment created by the spell vanishes in a puff of smoke if it is carried more than 10 feet away from the steed.\nFor the duration, you or a creature you choose can ride the steed. The creature uses the statistics for a riding horse, except it has a speed of 100 ft and can travel 10 miles in an hour, or 13 miles at a fast pace. When the spell ends, the steed gradually fades, giving the rider 1 minute to dismount. The spell ends if you use an action to dismiss it or if the steed takes any damage.",
     "classes": [
       "Wizard"
     ]
@@ -7309,7 +7318,7 @@
   {
     "name": "Planar Ally",
     "description": "You beseech an otherworldly entity for aid. The being must be known to you: a god, a primordial, a demon prince, or some other being of cosmic power. That entity sends a celestial, an elemental, or a fiend loyal to it to aid you, making the creature appear in an unoccupied space within range. If you know a specific creature's name, you can speak that name when you cast this spell to request that creature, though you might get a different creature anyway (DM's choice).\nWhen the creature appears, it is under no compulsion to behave in any particular way. You can ask the creature to perform a service in exchange for payment, but it isn't obliged to do so. The requested task could range from simple (fly us across the chasm, or help us fight a battle) to complex (spy on our enemies, or protect us during our foray into the dungeon). You must be able to communicate with the creature to bargain for its services.\nPayment can take a variety of forms. A celestial might require a sizable donation of gold or magic items to an allied temple, while a fiend might demand a living sacrifice or a gift of treasure. Some creatures might exchange their service for a quest undertaken by you.\nAs a rule of thumb, a task that can be measured in minutes requires a payment worth 100 gp per minute. A task measured in hours requires 1,000 gp per hour. And a task measured in days (up to 10 days) requires 10,000 gp per day. The DM can adjust these payments based on the circumstances under which you cast the spell. If the task is aligned with the creature's ethos, the payment might be halved or even waived. Nonhazardous tasks typically require only half the suggested payment, while especially dangerous tasks might require a greater gift Creatures rarely accept tasks that seem suicidal.\nAfter the creature completes the task, or when the agreed-upon duration of service expires, the creature returns to its home plane after reporting back to you, if appropriate to the task and if possible. If you are unable to agree on a price for the creature's service, the creature immediately returns to its home plane.\nA creature enlisted to join your group counts as a member of it, receiving a full share of experience points awarded.",
-    "emote": "",
+    "emote": "beseeches an otherworldly entity for aid",
     "source": "phb 265",
     "range": "60 ft",
     "components": {
@@ -7320,6 +7329,7 @@
     "castingTime": "10 minutes",
     "level": 6,
     "school": "Conjuration",
+    "effects": " The being must be known to you: a god, a primordial, a demon prince, or some other being of cosmic power. That entity sends a celestial, an elemental, or a fiend loyal to it to aid you, making the creature appear in an unoccupied space within range. If you know a specific creature's name, you can speak that name when you cast this spell to request that creature, though you might get a different creature anyway (DM's choice).\nWhen the creature appears, it is under no compulsion to behave in any particular way. You can ask the creature to perform a service in exchange for payment, but it isn't obliged to do so. The requested task could range from simple (fly us across the chasm, or help us fight a battle) to complex (spy on our enemies, or protect us during our foray into the dungeon). You must be able to communicate with the creature to bargain for its services.\nPayment can take a variety of forms. A celestial might require a sizable donation of gold or magic items to an allied temple, while a fiend might demand a living sacrifice or a gift of treasure. Some creatures might exchange their service for a quest undertaken by you.\nAs a rule of thumb, a task that can be measured in minutes requires a payment worth 100 gp per minute. A task measured in hours requires 1,000 gp per hour. And a task measured in days (up to 10 days) requires 10,000 gp per day. The DM can adjust these payments based on the circumstances under which you cast the spell. If the task is aligned with the creature's ethos, the payment might be halved or even waived. Nonhazardous tasks typically require only half the suggested payment, while especially dangerous tasks might require a greater gift Creatures rarely accept tasks that seem suicidal.\nAfter the creature completes the task, or when the agreed-upon duration of service expires, the creature returns to its home plane after reporting back to you, if appropriate to the task and if possible. If you are unable to agree on a price for the creature's service, the creature immediately returns to its home plane.\nA creature enlisted to join your group counts as a member of it, receiving a full share of experience points awarded.",
     "classes": [
       "Cleric"
     ]
@@ -7328,7 +7338,7 @@
     "name": "Planar Binding",
     "description": "With this spell, you attempt to bind a celestial, an elemental, a fey, or a fiend to your service. The creature must be within range for the entire casting of the spell. (Typically, the creature is first summoned into the center of an inverted magic circle in order to keep it trapped while this spell is cast.) At the completion of the casting, the target must make a Charisma saving throw. On a failed save, it is bound to serve you for the duration. If the creature was summoned or created by another spell, that spell's duration is extended to match the duration of this spell.\nA bound creature must follow your instructions to the best of its ability. You might command the creature to accompany you on an adventure, to guard a location, or to deliver a message. The creature obeys the letter of your instructions, but if the creature is hostile to you, it strives to twist your words to achieve its own objectives. If the creature carries out your instructions completely before the spell ends, it travels to you to report this fact if you are on the same plane of existence. If you are on a different plane of existence, it returns to the place where you bound it and remains there until the spell ends.",
     "higherLevel": "When you cast this spell using a spell slot of a higher level, the duration increases to 10 days with a 6th-level slot, to 30 days with a 7th-level slot, to 180 days with an 8th-level slot, and to a year and a day with a 9th-level spell slot.",
-    "emote": "",
+    "emote": "attempts to bind a celestial, an elemental, a fey, or a fiend to {{GENDER_PRONOUN_HIS_HER}} service",
     "source": "phb 265",
     "range": "60 ft",
     "components": {
@@ -7341,6 +7351,7 @@
     "castingTime": "1 hour",
     "level": 5,
     "school": "Abjuration",
+    "effects": "The creature must be within range for the entire casting of the spell. (Typically, the creature is first summoned into the center of an inverted magic circle in order to keep it trapped while this spell is cast.) At the completion of the casting, the target must make a Charisma saving throw. On a failed save, it is bound to serve you for the duration. If the creature was summoned or created by another spell, that spell's duration is extended to match the duration of this spell.\nA bound creature must follow your instructions to the best of its ability. You might command the creature to accompany you on an adventure, to guard a location, or to deliver a message. The creature obeys the letter of your instructions, but if the creature is hostile to you, it strives to twist your words to achieve its own objectives. If the creature carries out your instructions completely before the spell ends, it travels to you to report this fact if you are on the same plane of existence. If you are on a different plane of existence, it returns to the place where you bound it and remains there until the spell ends.",
     "classes": [
       "Bard",
       "Cleric",
@@ -7351,9 +7362,10 @@
   {
     "name": "Plane Shift",
     "description": "You and up to eight willing creatures who link hands in a circle are transported to a different plane of existence. You can specify a target destination in general terms, such as the City of Brass on the Elemental Plane of Fire or the palace of Dispater on the second level of the Nine Hells, and you appear in or near that destination. If you are trying to reach the City of Brass, for example, you might arrive in its Street of Steel, before its Gate of Ashes, or looking at the city from across the Sea of Fire, at the DM's discretion.\nAlternatively, if you know the sigil sequence of a teleportation circle on another plane of existence, this spell can take you to that circle. If the teleportation circle is too small to hold all the creatures you transported, they appear in the closest unoccupied spaces next to the circle.\nYou can use this spell to banish an unwilling creature to another plane. Choose a creature within your reach and make a melee spell attack against it. On a hit, the creature must make a Charisma saving throw. If the creature fails this save, it is transported to a random location on the plane of existence you specify. A creature so transported must find its own way back to your current plane of existence.",
-    "emote": "",
+    "emote": "links hands in a circle with {{GENDER_PRONOUN_HIS_HER}} allies and is transported to a different plane of existence",
     "source": "phb 266",
     "range": "Touch",
+    "target": "you and up to 8 willing creatures",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -7364,6 +7376,7 @@
     "castingTime": "1 action",
     "level": 7,
     "school": "Conjuration",
+    "effects": "You can specify a target destination in general terms, such as the City of Brass on the Elemental Plane of Fire or the palace of Dispater on the second level of the Nine Hells, and you appear in or near that destination. If you are trying to reach the City of Brass, for example, you might arrive in its Street of Steel, before its Gate of Ashes, or looking at the city from across the Sea of Fire, at the DM's discretion.\nAlternatively, if you know the sigil sequence of a teleportation circle on another plane of existence, this spell can take you to that circle. If the teleportation circle is too small to hold all the creatures you transported, they appear in the closest unoccupied spaces next to the circle.\nYou can use this spell to banish an unwilling creature to another plane. Choose a creature within your reach and make a melee spell attack against it. On a hit, the creature must make a Charisma saving throw. If the creature fails this save, it is transported to a random location on the plane of existence you specify. A creature so transported must find its own way back to your current plane of existence.",
     "classes": [
       "Cleric",
       "Sorcerer",
