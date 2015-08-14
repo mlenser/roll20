@@ -101,9 +101,8 @@ var BloodSplatterAndStatusMarkers = {
 		var	size = Math.floor(BloodSplatterAndStatusMarkers.getTokenSize(token) * multiplier),
 			bloodImage = BloodSplatterAndStatusMarkers.chooseBlood(bloodType),
 			bloodTokenSource = bloodImage,
-			randomSizeAdjustment = 1.25 - (Math.random() / 2),
-			bloodTokenWidth = size * multiplier * randomSizeAdjustment,
-			bloodTokenHeight = size * multiplier * randomSizeAdjustment;
+			bloodTokenWidth = size * multiplier,
+			bloodTokenHeight = size * multiplier;
 
 		if(bloodImage !== null && typeof(bloodImage) === 'object') {
 			bloodTokenSource = bloodImage.src;
