@@ -1,6 +1,6 @@
 var BloodSplatterAndStatusMarkers = {
-	version: "0.01",
-	wiki: "https://wiki.roll20.net/Script:Blood_And_Honor:_Automatic_blood_spatter,_pooling_and_trail_effects",
+	version: '0.01',
+	wiki: 'https://wiki.roll20.net/Script:Blood_And_Honor:_Automatic_blood_spatter,_pooling_and_trail_effects',
 
 	// This value should match the size of a standard grid in your campaign. Default is 70 px x 70 px square, Roll20's default.
 	tokenSize: 70,
@@ -23,10 +23,10 @@ var BloodSplatterAndStatusMarkers = {
 		'https://s3.amazonaws.com/files.d20.io/images/8956396/13_IKIeiBDhuhxTGysUIqQ/thumb.png?1429629268'
 	],
 	chooseBlood: function (type) {
-		if (type == "spatter") {
+		if (type === 'spatter') {
 			return BloodSplatterAndStatusMarkers.spatters[randomInteger(BloodSplatterAndStatusMarkers.spatters.length) - 1];
 		}
-		if (type == "pool") {
+		if (type === 'pool') {
 			return BloodSplatterAndStatusMarkers.pools[randomInteger(BloodSplatterAndStatusMarkers.pools.length) - 1];
 		}
 	},
@@ -38,22 +38,22 @@ var BloodSplatterAndStatusMarkers = {
 		}
 	},
 	bloodColor: function (gmnotes) {
-		if (gmnotes.indexOf("bloodcolor_purple") !== -1) {
-			return "#0000ff";
-		} else if (gmnotes.indexOf("bloodcolor_blue") !== -1) {
-			return "#00ffff";
-		} else if (gmnotes.indexOf("bloodcolor_orange") !== -1) {
-			return "#ffff00";
+		if (gmnotes.indexOf('bloodcolor_purple') !== -1) {
+			return '#0000ff';
+		} else if (gmnotes.indexOf('bloodcolor_blue') !== -1) {
+			return '#00ffff';
+		} else if (gmnotes.indexOf('bloodcolor_orange') !== -1) {
+			return '#ffff00';
 		} else {
-			return "transparent";
+			return 'transparent';
 		}
 	},
 	createBlood: function (gPage_id, gLeft, gTop, gWidth, gType, gColor) {
 		gLeft = gLeft + (randomInteger(Math.floor(gWidth / 2)) * BloodSplatterAndStatusMarkers.getOffset());
 		gTop = gTop + (randomInteger(Math.floor(gWidth / 2)) * BloodSplatterAndStatusMarkers.getOffset());
-		toFront(fixedCreateObj("graphic", {
+		toFront(createObj('graphic', {
 			imgsrc: gType,
-			gmnotes: "blood",
+			gmnotes: 'blood',
 			pageid: gPage_id,
 			left: gLeft,
 			tint_color: gColor,
@@ -61,7 +61,7 @@ var BloodSplatterAndStatusMarkers = {
 			rotation: randomInteger(360) - 1,
 			width: gWidth,
 			height: gWidth,
-			layer: "map"
+			layer: 'map'
 		}));
 	},
 	timeout: 0,
@@ -84,24 +84,24 @@ var BloodSplatterAndStatusMarkers = {
 	}
 };
 
-fixedCreateObj = (function () {
+createObj = (function () {
 	return function () {
 		var obj = createObj.apply(this, arguments);
 		if (obj && !obj.fbpath) {
-			obj.fbpath = obj.changed._fbpath.replace(/([^\/]*\/){4}/, "/");
+			obj.fbpath = obj.changed._fbpath.replace(/([^\/]*\/){4}/, '/');
 		}
 		return obj;
 	};
 }());
 
-on("ready", function () {
+on('ready', function () {
 
-	on("change:graphic:bar3_value", function (obj, prev) {
-		var maxHealth = obj.get("bar3_max"),
+	on('change:graphic:bar3_value', function (obj, prev) {
+		var maxHealth = obj.get('bar3_max'),
 			bloodiedValue = maxHealth / 2,
-			currentHealth = obj.get("bar3_value");
+			currentHealth = obj.get('bar3_value');
 
-		if (maxHealth === "" || obj.get("layer") != "objects" || (obj.get("gmnotes")).indexOf("noblood") !== -1) {
+		if (maxHealth === '' || obj.get('layer') != 'objects' || (obj.get('gmnotes')).indexOf('noblood') !== -1) {
 			return;
 		}
 		if (currentHealth <= bloodiedValue) {
@@ -109,21 +109,21 @@ on("ready", function () {
 				status_redmarker: true
 			});
 			// Create spatter near token if "bloodied". Chance of spatter depends on severity of damage
-			if (currentHealth > 0 && currentHealth < prev["bar3_value"] && currentHealth < randomInteger(maxHealth)) {
-				var bloodMult = 1 + ((currentHealth - prev["bar3_value"]) / maxHealth);
-				BloodSplatterAndStatusMarkers.createBlood(obj.get("_pageid"), obj.get("left"), obj.get("top"), Math.floor(BloodSplatterAndStatusMarkers.tokenSize * bloodMult), BloodSplatterAndStatusMarkers.chooseBlood("spatter"), BloodSplatterAndStatusMarkers.bloodColor(obj.get("gmnotes")));
+			if (currentHealth > 0 && currentHealth < prev.bar3_value && currentHealth < randomInteger(maxHealth)) {
+				var bloodMult = 1 + ((currentHealth - prev.bar3_value) / maxHealth);
+				BloodSplatterAndStatusMarkers.createBlood(obj.get('_pageid'), obj.get('left'), obj.get('top'), Math.floor(BloodSplatterAndStatusMarkers.tokenSize * bloodMult), BloodSplatterAndStatusMarkers.chooseBlood('spatter'), BloodSplatterAndStatusMarkers.bloodColor(obj.get('gmnotes')));
 			}
 		} else if (currentHealth > bloodiedValue) {
 			obj.set({
 				status_redmarker: false
-			})
+			});
 		}
 		if (currentHealth <= 0) {
 			obj.set({
 				status_dead: true
 			});
 			// Create pool near token if health drops below 1.
-			BloodSplatterAndStatusMarkers.createBlood(obj.get("_pageid"), obj.get("left"), obj.get("top"), Math.floor(BloodSplatterAndStatusMarkers.tokenSize * 1.5), BloodSplatterAndStatusMarkers.chooseBlood("pool"), BloodSplatterAndStatusMarkers.bloodColor(obj.get("gmnotes")));
+			BloodSplatterAndStatusMarkers.createBlood(obj.get('_pageid'), obj.get('left'), obj.get('top'), Math.floor(BloodSplatterAndStatusMarkers.tokenSize * 1.5), BloodSplatterAndStatusMarkers.chooseBlood('pool'), BloodSplatterAndStatusMarkers.bloodColor(obj.get('gmnotes')));
 		} else if (currentHealth > 0) {
 			obj.set({
 				status_dead: false
@@ -132,29 +132,29 @@ on("ready", function () {
 	});
 
 	//Make blood trails, chance goes up depending on how injured a token is
-	on("change:graphic:lastmove", function (obj) {
-		var maxHealth = obj.get("bar3_max"),
+	on('change:graphic:lastmove', function (obj) {
+		var maxHealth = obj.get('bar3_max'),
 			bloodiedValue = maxHealth / 2,
-			currentHealth = obj.get("bar3_value");
+			currentHealth = obj.get('bar3_value');
 
-		if (maxHealth === "" || obj.get("layer") != "objects" || (obj.get("gmnotes")).indexOf("noblood") !== -1 || BloodSplatterAndStatusMarkers.timeout !== 0) {
+		if (maxHealth === '' || obj.get('layer') != 'objects' || (obj.get('gmnotes')).indexOf('noblood') !== -1 || BloodSplatterAndStatusMarkers.timeout !== 0) {
 			return;
 		}
 
 		if (currentHealth <= bloodiedValue && currentHealth < randomInteger(maxHealth)) {
-			BloodSplatterAndStatusMarkers.createBlood(obj.get("_pageid"), obj.get("left"), obj.get("top"), Math.floor(BloodSplatterAndStatusMarkers.tokenSize / 2), BloodSplatterAndStatusMarkers.chooseBlood("spatter"), BloodSplatterAndStatusMarkers.bloodColor(obj.get("gmnotes")));
+			BloodSplatterAndStatusMarkers.createBlood(obj.get('_pageid'), obj.get('left'), obj.get('top'), Math.floor(BloodSplatterAndStatusMarkers.tokenSize / 2), BloodSplatterAndStatusMarkers.chooseBlood('spatter'), BloodSplatterAndStatusMarkers.bloodColor(obj.get('gmnotes')));
 			BloodSplatterAndStatusMarkers.increaseTimeout();
 		}
 	});
 
-	on("chat:message", function (msg) {
-		if (msg.type == "api" && msg.content.indexOf("!clearblood") !== -1) {
+	on('chat:message', function (msg) {
+		if (msg.type == 'api' && msg.content.indexOf('!clearblood') !== -1) {
 			if (BloodSplatterAndStatusMarkers.onlyAllowGMtoRunCommands && !playerIsGM(msg.playerid)) {
-				sendChat(msg.who, "/w " + msg.who + " You are not authorized to use that command!");
+				sendChat(msg.who, '/w ' + msg.who + ' You are not authorized to use that command!');
 				return;
 			} else {
 				var objects = filterObjs(function (obj) {
-					if (obj.get("type") == "graphic" && obj.get("gmnotes") == "blood") {
+					if (obj.get('type') == 'graphic' && obj.get('gmnotes') == 'blood') {
 						return true;
 					} else {
 						return false;
