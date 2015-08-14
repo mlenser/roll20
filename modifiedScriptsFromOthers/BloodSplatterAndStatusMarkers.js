@@ -6,7 +6,7 @@ var BloodSplatterAndStatusMarkers = {
 	tokenSize: 70,
 
 	// This will make it so only the GM can use the !clearblood command. Change to "true" if you want to check for authorization.
-	useIsGM: true,
+	onlyAllowGMtoRunCommands: true,
 
 	// YOU MUST ADD YOUR OWN SPATTERS AND POOLS TO YOUR LIBRARY AND GET THE IMAGE LINK VIA YOUR WEB BROWSER. FOLLOW THE INSTRUCTIONS HERE: https://wiki.roll20.net/API:Objects#imgsrc_and_avatar_property_restrictions
 	// You can add as many as you'd like to either category. Spatters are also used for blood trails.
@@ -149,7 +149,7 @@ on("ready", function () {
 
 	on("chat:message", function (msg) {
 		if (msg.type == "api" && msg.content.indexOf("!clearblood") !== -1) {
-			if (BloodSplatterAndStatusMarkers.useIsGM && !playerIsGM(msg.playerid)) {
+			if (BloodSplatterAndStatusMarkers.onlyAllowGMtoRunCommands && !playerIsGM(msg.playerid)) {
 				sendChat(msg.who, "/w " + msg.who + " You are not authorized to use that command!");
 				return;
 			} else {
