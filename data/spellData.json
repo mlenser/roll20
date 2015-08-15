@@ -2532,7 +2532,7 @@
     "castingTime": "1 action",
     "level": 2,
     "school": "Transmutation",
-    "effects": "For the duration, that creature has darkvision out to a range of 60 feet.",
+    "effects": "For the duration, that creature has darkvision out to a range of 60 ft",
     "classes": [
       "Druid",
       "Ranger",
@@ -7195,7 +7195,7 @@
     "castingTime": "1 action",
     "level": 2,
     "school": "Abjuration",
-    "effects": "targets hav a +10 bonus to Dexterity (Stealth) checks and can't be tracked except by magical means. A creature that receives this bonus leaves behind no tracks or other traces of its passage.",
+    "effects": "targets have a +10 bonus to Dexterity (Stealth) checks and can't be tracked except by magical means. A creature that receives this bonus leaves behind no tracks or other traces of its passage.",
     "classes": [
       "Cleric",
       "Druid",
@@ -9696,11 +9696,11 @@
     "name": "Thunderwave",
     "description": "A wave of thunderous force sweeps out from you. Each creature in a 15-foot cube originating from you must make a Constitution saving throw. On a failed save, a creature takes 2d8 thunder damage and is pushed 10 feet away from you. On a successful save, the creature takes half as much damage and isn't pushed.\nIn addition, unsecured objects that are completely within the area of effect are automatically pushed 10 feet away from you by the spell's effect, and the spell emits a thunderous boom audible out to 300 feet.",
     "higherLevel": "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st.",
-    "emote": "sends out a wave of thunderous force, which can be heard 300 feet away",
+    "emote": "sends out a wave of thunderous force, which can be heard 300 ft away",
     "source": "phb 282",
     "range": "Self",
     "target": "Each creature in the aoe",
-    "aoe": "15-foot cube originating from you",
+    "aoe": "15 ft cube originating from you",
     "components": {
       "verbal": true,
       "somatic": true
@@ -9713,12 +9713,12 @@
       "ability": "constitution",
       "damage": "2d8",
       "damageType": "thunder",
-      "saveFailure": "pushed 10 feet away from you",
+      "saveFailure": "pushed 10 ft away from you",
       "saveSuccess": "half damage and not pushed",
       "higherLevelDice": "1",
       "higherLevelDie": "d8"
     },
-    "effects": "In addition, unsecured objects that are completely within the area of effect are automatically pushed 10 feet away from you by the spell's effect, and the spell emits a thunderous boom audible out to 300 feet.",
+    "effects": "Unsecured objects that are completely within the area of effect are automatically pushed 10 ft away from you by the spell's effect, and the spell emits a thunderous boom audible out to 300 ft.",
     "classes": [
       "Bard",
       "Cleric",
