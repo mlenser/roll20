@@ -2,6 +2,8 @@ var BloodSpatterAndStatusMarkers = {
 	version: '0.04',
 	wiki: 'https://wiki.roll20.net/Script:Blood_And_Honor:_Automatic_blood_spatter,_pooling_and_trail_effects',
 
+	hpBar: 3, //1, 2, or 3
+
 	// This will make it so only the GM can use the !clearblood command. Change to "true" if you want to check for authorization.
 	onlyAllowGMtoRunCommands: true,
 
@@ -188,64 +190,66 @@ var BloodSpatterAndStatusMarkers = {
 			}
 			return obj;
 		};
-	}()
-};
-
-on('ready', function () {
-	on('change:graphic:bar3_value', function (obj, prev) {
-		var maxHealth = obj.get('bar3_max');
-
+	}(),
+	tokenHPChanged: function (token, maxHealth, currentHealth, damageTaken) {
 		if (maxHealth === '') {
 			return;
 		}
-		var currentHealth = obj.get('bar3_value'),
-			damageTaken = prev.bar3_value - currentHealth,
-			percentOfHpLost = damageTaken / maxHealth,
+		var percentOfHpLost = damageTaken / maxHealth,
 			damageMultiplier = 1 + Math.min(percentOfHpLost / 2, 0.5);
 
 		if (currentHealth <= maxHealth / 2) {
-			obj.set({
+			token.set({
 				status_redmarker: true
 			});
 			// Create spatter near token if "bloodied". Chance of spatter depends on severity of damage
 			if (damageTaken > 0 && currentHealth > 0 && currentHealth < randomInteger(maxHealth)) {
-				BloodSpatterAndStatusMarkers.createBlood(obj, damageMultiplier, 'spatter');
+				BloodSpatterAndStatusMarkers.createBlood(token, damageMultiplier, 'spatter');
 			}
 		} else {
-			obj.set({
+			token.set({
 				status_redmarker: false
 			});
 		}
 		if (currentHealth <= 0) {
-			obj.set({
+			token.set({
 				status_dead: true
 			});
 			// Create pool near token if health drops below 1.
 			if(damageTaken > 0) {
-				BloodSpatterAndStatusMarkers.createBlood(obj, damageMultiplier, 'pool');
+				BloodSpatterAndStatusMarkers.createBlood(token, damageMultiplier, 'pool');
 			}
 		} else {
-			obj.set({
+			token.set({
 				status_dead: false
 			});
 		}
+	}
+};
+
+on('ready', function () {
+	on('change:graphic:bar' + BloodSpatterAndStatusMarkers.hpBar + '_value', function (token, prev) {
+		var maxHealth = token.get('bar' + BloodSpatterAndStatusMarkers.hpBar + '_max'),
+			currentHealth = token.get('bar' + BloodSpatterAndStatusMarkers.hpBar + '_value'),
+			damageTaken = prev['bar' + BloodSpatterAndStatusMarkers.hpBar + '_value'] - currentHealth;
+		BloodSpatterAndStatusMarkers.tokenHPChanged(token, maxHealth, currentHealth, damageTaken);
 	});
 
 	//Make blood trails, chance goes up depending on how injured a token is
-	on('change:graphic:lastmove', function (obj) {
-		var maxHealth = obj.get('bar3_max');
+	on('change:graphic:lastmove', function (token) {
+		var maxHealth = token.get('bar' + BloodSpatterAndStatusMarkers.hpBar + '_max');
 
 		if (maxHealth === '' || BloodSpatterAndStatusMarkers.timeout !== 0) {
 			return;
 		}
 
-		var currentHealth = obj.get('bar3_value'),
+		var currentHealth = token.get('bar' + BloodSpatterAndStatusMarkers.hpBar + '_value'),
 			healthLost = maxHealth - currentHealth,
 			percentOfHpLost = healthLost / maxHealth,
 			damageMultiplier = .5 + Math.min(percentOfHpLost / 2, 0.5);
 
 		if (currentHealth <= maxHealth / 2 && currentHealth < randomInteger(maxHealth)) {
-			BloodSpatterAndStatusMarkers.createBlood(obj, damageMultiplier, 'spatter');
+			BloodSpatterAndStatusMarkers.createBlood(token, damageMultiplier, 'spatter');
 			BloodSpatterAndStatusMarkers.increaseTimeout();
 		}
 	});
