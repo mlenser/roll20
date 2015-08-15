@@ -782,7 +782,7 @@
     "domains": [
       "Life"
     ],
-    "domains": [
+    "oaths": [
       "Devotion"
     ]
   },
@@ -2921,7 +2921,7 @@
     "domains": [
       "Trickery"
     ],
-    "domains": [
+    "oaths": [
       "Devotion"
     ]
   },
@@ -3430,7 +3430,6 @@
       "saveSuccess": "the spell has no effect"
     },
     "effects": "If the target is unwilling, it can make a Constitution saving throw as outlined above\nIf the target is a creature, everything it is wearing and carrying changes size with it. Any item dropped by an affected creature returns to normal size at once.\nEnlarge. The target's size doubles in all dimensions, and its weight is multiplied by eight. This growth increases its size by one category—from Medium to Large, for example. If there isn't enough room for the target to double its size, the creature or object attains the maximum possible size in the space available. Until the spell ends, the target also has advantage on Strength checks and Strength saving throws. The target's weapons also grow to match its new size. While these weapons are enlarged, the target's attacks with them deal 1d4 extra damage.\nReduce.The target's size is halved in all dimensions, and its weight is reduced to one-eighth o f normal. This reduction decreases its size by one category—from Medium to Small, for example. Until the spell ends, the target also has disadvantage on Strength checks and Strength saving throws. The target's weapons also shrink to match its new size. While these weapons are reduced, the target's attacks with them deal 1d4 less damage (this can't reduce the damage below 1).",
-    "emote": "enlarges or reduces the size of a creature or object",
     "classes": [
       "Sorcerer",
       "Wizard"
@@ -4123,7 +4122,7 @@
       "Light",
       "War"
     ],
-    "domains": [
+    "oaths": [
       "Devotion"
     ],
     "patrons": [
@@ -4355,7 +4354,7 @@
       "Grassland",
       "Swamp"
     ],
-    "domains": [
+    "oaths": [
       "Devotion"
     ]
   },
@@ -4752,7 +4751,6 @@
       "saveSuccess": "half damage"
     },
     "effects": "The guardian occupies that space and is indistinct except for a gleaming sword and shield emblazoned with the symbol of your deity.\nThe guardian vanishes when it has dealt a total of 60 damage.",
-    "emote": "conjures a Large spectral guardian that hovers",
     "classes": [
       "Cleric",
       "Paladin"
@@ -4761,7 +4759,7 @@
       "Life",
       "Light"
     ],
-    "domains": [
+    "oaths": [
       "Devotion"
     ]
   },
@@ -5915,7 +5913,7 @@
     "domains": [
       "Life"
     ],
-    "domains": [
+    "oaths": [
       "Devotion"
     ]
   },
@@ -10714,7 +10712,6 @@
     "name": "Zone of Truth",
     "description": "You create a magical zone that guards against deception in a 15-foot-radius sphere centered on a point of your choice within range. Until the spell ends, a creature that enters the spell's area for the first time on a turn or starts its turn there must make a Charisma saving throw. On a failed save, a creature can't speak a deliberate lie while in the radius. You know whether each creature succeeds or fails on its saving throw.\nAn affected creature is aware of the fate and can avoid answering questions she would normally have responded with a lie. Such a creature can remain evasive in his answers as they remain within the limits of truth.",
     "emote": "creates a magical zone that guards against deception",
-    "source": "phb 289",
     "source": "phb 289",
     "range": "60 ft",
     "aoe": "15 ft radius sphere on a point within range",
