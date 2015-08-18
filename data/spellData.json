@@ -3282,9 +3282,10 @@
   {
     "name": "Earthquake",
     "description": "You create a seismic disturbance at a point on the ground that you can see within range. For the duration, an intense tremor rips through the ground in a 100-foot-radius circle centered on that point and shakes creatures and structures in contact with the ground in that area.\nThe ground in the area becomes difficult terrain. Each creature on the ground that is concentrating must make a Constitution saving throw. On a failed save, the creature's concentration is broken.\nWhen you cast this spell and at the end of each turn you spend concentrating on it, each creature on the ground in the area must make a Dexterity saving throw. On a failed save, the creature is knocked prone.\nThis spell can have additional effects depending on the terrain in the area, as determined by the DM.\nFissures. Fissures open throughout the spell's area at the start of your next turn after you cast the spell. A total of 1d6 such fissures open in locations chosen by the DM. Each is 1d10 × 10 feet deep, 10 feet wide, and extends from one edge of the spell's area to the opposite side. A creature standing on a spot where a fissure opens must succeed on a Dexterity saving throw or fall in. A creature that successfully saves moves with the fissure's edge as it opens.\nA fissure that opens beneath a structure causes it to automatically collapse (see below).\nStructures. The tremor deals 50 bludgeoning damage to any structure in contact with the ground in the area when you cast the spell and at the start of each of your turns until the spell ends. If a structure drops to 0 hit points, it collapses and potentially damages nearby creatures. A creature within half the distance of a structure's height must make a Dexterity saving throw. On a failed save, the creature takes 5d6 bludgeoning damage, is knocked prone, and is buried in the rubble, requiring a DC 20 Strength (Athletics) check as an action to escape. The DM can adjust the DC higher or lower, depending on the nature of the rubble. On a successful save, the creature takes half as much damage and doesn't fall prone or become buried.",
-    "emote": "",
+    "emote": "creates a seismic disturbance",
     "source": "phb 236",
     "range": "500 ft",
+    "aoe": "100 ft radius circle centered on a point on the ground that you can see within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -3296,6 +3297,7 @@
     "castingTime": "1 action",
     "level": 8,
     "school": "Evocation",
+    "effects": "For the duration, an intense tremor rips through the ground in the aoe and shakes creatures and structures in contact with the ground in that area.\nThe ground in the area becomes difficult terrain. Each creature on the ground that is concentrating must make a Constitution saving throw. On a failed save, the creature's concentration is broken.\nWhen you cast this spell and at the end of each turn you spend concentrating on it, each creature on the ground in the area must make a Dexterity saving throw. On a failed save, the creature is knocked prone.\nThis spell can have additional effects depending on the terrain in the area, as determined by the DM.\nFissures. Fissures open throughout the spell's area at the start of your next turn after you cast the spell. A total of 1d6 such fissures open in locations chosen by the DM. Each is 1d10 × 10 ft deep, 10 ft wide, and extends from one edge of the spell's area to the opposite side. A creature standing on a spot where a fissure opens must succeed on a Dexterity saving throw or fall in. A creature that successfully saves moves with the fissure's edge as it opens.\nA fissure that opens beneath a structure causes it to automatically collapse (see below).\nStructures. The tremor deals 50 bludgeoning damage to any structure in contact with the ground in the area when you cast the spell and at the start of each of your turns until the spell ends. If a structure drops to 0 hit points, it collapses and potentially damages nearby creatures. A creature within half the distance of a structure's height must make a Dexterity saving throw. On a failed save, the creature takes 5d6 bludgeoning damage, is knocked prone, and is buried in the rubble, requiring a DC 20 Strength (Athletics) check as an action to escape. The DM can adjust the DC higher or lower, depending on the nature of the rubble. On a successful save, the creature takes half as much damage and doesn't fall prone or become buried.",
     "classes": [
       "Cleric",
       "Druid",
@@ -3320,7 +3322,7 @@
     "school": "Evocation",
     "attack": {
       "damage": "d10",
-      "damageType": "necrotic"
+      "damageType": "force"
     },
     "classes": [
       "Warlock"
@@ -3371,11 +3373,7 @@
     "castingTime": "1 action",
     "level": 3,
     "school": "Transmutation",
-    "damage": {
-      "damage": "1d4",
-      "damageType": "acid, cold, fire, lightning, or thunder"
-    },
-    "effects": "Choose one of the following damage types: acid, cold, fire, lightning, or thunder. For the duration, the weapon has a +1 bonus to attack rolls and deals extra damage as outlined above.",
+    "effects": "Choose one of the following damage types: acid, cold, fire, lightning, or thunder. For the duration, the weapon has a +1 bonus to attack rolls and deals an extra 1d4 damage of the chosen type when it hits.",
     "classes": [
       "Paladin"
     ]
@@ -3409,7 +3407,7 @@
   },
   {
     "name": "Enlarge/Reduce",
-    "description": "You cause a creature or an object you can see within range to grow larger or smaller for the duration. Choose either a creature or an object that is neither worn nor carried. If the target is unwilling, it can make a Constitution saving throw. On a success, the spell has no effect.\nIf the target is a creature, everything it is wearing and carrying changes size with it. Any item dropped by an affected creature returns to normal size at once.\nEnlarge. The target's size doubles in all dimensions, and its weight is multiplied by eight. This growth increases its size by one category—from Medium to Large, for example. If there isn't enough room for the target to double its size, the creature or object attains the maximum possible size in the space available. Until the spell ends, the target also has advantage on Strength checks and Strength saving throws. The target's weapons also grow to match its new size. While these weapons are enlarged, the target's attacks with them deal 1d4 extra damage.\nReduce.The target's size is halved in all dimensions, and its weight is reduced to one-eighth o f normal. This reduction decreases its size by one category—from Medium to Small, for example. Until the spell ends, the target also has disadvantage on Strength checks and Strength saving throws. The target's weapons also shrink to match its new size. While these weapons are reduced, the target's attacks with them deal 1d4 less damage (this can't reduce the damage below 1).",
+    "description": "You cause a creature or an object you can see within range to grow larger or smaller for the duration. Choose either a creature or an object that is neither worn nor carried. If the target is unwilling, it can make a Constitution saving throw. On a success, the spell has no effect.\nIf the target is a creature, everything it is wearing and carrying changes size with it. Any item dropped by an affected creature returns to normal size at once.\nEnlarge. The target's size doubles in all dimensions, and its weight is multiplied by eight. This growth increases its size by one category—from Medium to Large, for example. If there isn't enough room for the target to double its size, the creature or object attains the maximum possible size in the space available. Until the spell ends, the target also has advantage on Strength checks and Strength saving throws. The target's weapons also grow to match its new size. While these weapons are enlarged, the target's attacks with them deal 1d4 extra damage.\nReduce.The target's size is halved in all dimensions, and its weight is reduced to one-eighth of normal. This reduction decreases its size by one category—from Medium to Small, for example. Until the spell ends, the target also has disadvantage on Strength checks and Strength saving throws. The target's weapons also shrink to match its new size. While these weapons are reduced, the target's attacks with them deal 1d4 less damage (this can't reduce the damage below 1).",
     "emote": "causes a creature or an object to grow larger or smaller",
     "source": "phb 237",
     "range": "30 ft",
@@ -3429,7 +3427,7 @@
       "ability": "constitution",
       "saveSuccess": "the spell has no effect"
     },
-    "effects": "If the target is unwilling, it can make a Constitution saving throw as outlined above\nIf the target is a creature, everything it is wearing and carrying changes size with it. Any item dropped by an affected creature returns to normal size at once.\nEnlarge. The target's size doubles in all dimensions, and its weight is multiplied by eight. This growth increases its size by one category—from Medium to Large, for example. If there isn't enough room for the target to double its size, the creature or object attains the maximum possible size in the space available. Until the spell ends, the target also has advantage on Strength checks and Strength saving throws. The target's weapons also grow to match its new size. While these weapons are enlarged, the target's attacks with them deal 1d4 extra damage.\nReduce.The target's size is halved in all dimensions, and its weight is reduced to one-eighth o f normal. This reduction decreases its size by one category—from Medium to Small, for example. Until the spell ends, the target also has disadvantage on Strength checks and Strength saving throws. The target's weapons also shrink to match its new size. While these weapons are reduced, the target's attacks with them deal 1d4 less damage (this can't reduce the damage below 1).",
+    "effects": "If the target is unwilling, it can make a Constitution saving throw as outlined above\nIf the target is a creature, everything it is wearing and carrying changes size with it. Any item dropped by an affected creature returns to normal size at once.\nEnlarge. The target's size doubles in all dimensions, and its weight is multiplied by eight. This growth increases its size by one category—from Medium to Large, for example. If there isn't enough room for the target to double its size, the creature or object attains the maximum possible size in the space available. Until the spell ends, the target also has advantage on Strength checks and Strength saving throws. The target's weapons also grow to match its new size. While these weapons are enlarged, the target's attacks with them deal 1d4 extra damage.\nReduce.The target's size is halved in all dimensions, and its weight is reduced to one-eighth of normal. This reduction decreases its size by one category—from Medium to Small, for example. Until the spell ends, the target also has disadvantage on Strength checks and Strength saving throws. The target's weapons also shrink to match its new size. While these weapons are reduced, the target's attacks with them deal 1d4 less damage (this can't reduce the damage below 1).",
     "classes": [
       "Sorcerer",
       "Wizard"
@@ -3518,9 +3516,11 @@
     "name": "Erupting Earth",
     "description": "Choose a point you can see on the ground within range. A fountain of churned earth and stone erupts in a 20-foot cube centered on that point. Each creature in that area must make a Dexterity saving throw. A creature takes 3d12 bludgeoning damage on a failed save, or half as much damage on a successful one. Additionally, the ground in that area becomes difficult terrain until cleared away. Each 5-foot-square portion of the area requires at least 1 minute to clear by hand.",
     "higherLevel": "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d12 for each slot level above 2nd.",
-    "emote": "",
+    "emote": "causes a fountain of churned earth and stone to  erupt",
     "source": "ee pc 17",
     "range": "120 ft",
+    "target": "each creature in the aoe",
+    "aoe": "20 ft cube centered on a point you can see on the ground within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -3531,6 +3531,13 @@
     "castingTime": "1 action",
     "level": 3,
     "school": "Transmutation",
+    "save": {
+      "ability": "dexterity",
+      "damage": "3d12",
+      "damageType": "bludgeoning",
+      "saveSuccess": "half damage"
+    },
+    "effects": "The ground in that area becomes difficult terrain until cleared away. Each 5 ft square portion of the area requires at least 1 minute to clear by hand.",
     "classes": [
       "Druid",
       "Sorcerer",
@@ -3541,7 +3548,7 @@
     "name": "Etherealness",
     "description": "You step into the border regions of the Ethereal Plane, in the area where it overlaps with your current plane. You remain in the Border Ethereal for the duration or until you use your action to dismiss the spell. During this time, you can move in any direction. If you move up or down, every foot of movement costs an extra foot. You can see and hear the plane you originated from, but everything there looks gray, and you can't see anything more than 60 feet away.\nWhile on the Ethereal Plane, you can only affect and be affected by other creatures on that plane. Creatures that aren't on the Ethereal Plane can't perceive you and can't interact with you, unless a special ability or magic has given them the ability to do so.\nYou ignore all objects and effects that aren't on the Ethereal Plane, allowing you to move through objects you perceive on the plane you originated from.\nWhen the spell ends, you immediately return to the plane you originated from in the spot you currently occupy. If you occupy the same spot as a solid object or creature when this happens, you are immediately shunted to the nearest unoccupied space that you can occupy and take force damage equal to twice the number of feet you are moved.\nThis spell has no effect if you cast it while you are on the Ethereal Plane or a plane that doesn't border it, such as one of the Outer Planes.",
     "higherLevel": "When you cast this spell using a spell slot of 8th level or higher, you can target up to three willing creatures (including you) for each slot level above 7th. The creatures must be within 10 feet of you when you cast the spell.",
-    "emote": "",
+    "emote": "steps into the border regions of the Ethereal Plane, in the area where it overlaps with {{GENDER_PRONOUN_HIS_HER}} current plane",
     "source": "phb 238",
     "range": "Self",
     "components": {
@@ -3552,6 +3559,7 @@
     "castingTime": "1 action",
     "level": 7,
     "school": "Transmutation",
+    "effects": "You remain in the Border Ethereal for the duration or until you use your action to dismiss the spell. During this time, you can move in any direction. If you move up or down, every foot of movement costs an extra foot. You can see and hear the plane you originated from, but everything there looks gray, and you can't see anything more than 60 feet away.\nWhile on the Ethereal Plane, you can only affect and be affected by other creatures on that plane. Creatures that aren't on the Ethereal Plane can't perceive you and can't interact with you, unless a special ability or magic has given them the ability to do so.\nYou ignore all objects and effects that aren't on the Ethereal Plane, allowing you to move through objects you perceive on the plane you originated from.\nWhen the spell ends, you immediately return to the plane you originated from in the spot you currently occupy. If you occupy the same spot as a solid object or creature when this happens, you are immediately shunted to the nearest unoccupied space that you can occupy and take force damage equal to twice the number of feet you are moved.\nThis spell has no effect if you cast it while you are on the Ethereal Plane or a plane that doesn't border it, such as one of the Outer Planes.",
     "classes": [
       "Bard",
       "Cleric",
@@ -3722,9 +3730,11 @@
   {
     "name": "Fear",
     "description": "You project a phantasmal image of a creature's worst fears. Each creature in a 30-foot cone must succeed on a Wisdom saving throw or drop whatever it is holding and become frightened for the duration.\nWhile frightened by this spell, a creature must take the Dash action and move away from you by the safest available route on each of its turns, unless there is nowhere to move. If the creature ends its turn in a location where it doesn't have line of sight to you, the creature can make a Wisdom saving throw. On a successful save, the spell ends for that creature.",
-    "emote": "",
+    "emote": "projects a phantasmal image of a creature's worst fears",
     "source": "phb 239",
     "range": "Self",
+    "target": "each creature in the aoe",
+    "aoe": "30 ft cone",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -3736,6 +3746,10 @@
     "castingTime": "1 action",
     "level": 3,
     "school": "Illusion",
+    "save": {
+      "ability": "wisdom",
+      "saveFailure": "drop whatever it is holding and become frightened for the duration.\nWhile frightened by this spell, a creature must take the Dash action and move away from you by the safest available route on each of its turns, unless there is nowhere to move. If the creature ends its turn in a location where it doesn't have line of sight to you, the creature can make a Wisdom saving throw. On a successful save, the spell ends for that creature."
+    },
     "classes": [
       "Bard",
       "Sorcerer",
@@ -3769,9 +3783,10 @@
   {
     "name": "Feeblemind",
     "description": "You blast the mind of a creature that you can see within range, attempting to shatter its intellect and personality. The target takes 4d6 psychic damage and must make an Intelligence saving throw.\nOn a failed save, the creature's Intelligence and Charisma scores become 1. The creature can't cast spells, activate magic items, understand language, or communicate in any intelligible way. The creature can, however, identify its friends, follow them, and even protect them.\nAt the end of every 30 days, the creature can repeat its saving throw against this spell. If it succeeds on its saving throw, the spell ends.\nThe spell can also be ended by greater restoration, heal, or wish.",
-    "emote": "",
+    "emote": "blasts the mind of a creature, attempting to shatter its intellect and personality",
     "source": "phb 239",
     "range": "150 ft",
+    "target": "a creature that you can see within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -3782,6 +3797,14 @@
     "castingTime": "1 action",
     "level": 8,
     "school": "Enchantment",
+    "damage": {
+      "damage": "4d6",
+      "damageType": "psychic"
+    },
+    "save": {
+      "ability": "intelligence",
+      "saveFailure": "the creature's Intelligence and Charisma scores become 1. The creature can't cast spells, activate magic items, understand language, or communicate in any intelligible way. The creature can, however, identify its friends, follow them, and even protect them.\nAt the end of every 30 days, the creature can repeat its saving throw against this spell. If it succeeds on its saving throw, the spell ends.\nThe spell can also be ended by greater restoration, heal, or wish."
+    },
     "classes": [
       "Bard",
       "Druid",
@@ -3792,9 +3815,10 @@
   {
     "name": "Feign Death",
     "description": "You touch a willing creature and put it into a cataleptic state that is indistinguishable from death.\nFor the spell's duration, or until you use an action to touch the target and dismiss the spell, the target appears dead to all outward inspection and to spells used to determine the target's status. The target is blinded and incapacitated, and its speed drops to 0. The target has resistance to all damage except psychic damage. If the target is diseased or poisoned when you cast the spell, or becomes diseased or poisoned while under the spell's effect, the disease and poison have no effect until the spell ends.",
-    "emote": "",
+    "emote": "puts a creature into a cataleptic state that is indistinguishable from death",
     "source": "phb 240",
     "range": "Touch",
+    "target": "a willing creature",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -3806,6 +3830,7 @@
     "castingTime": "1 action",
     "level": 3,
     "school": "Necromancy",
+    "effects": "For the spell's duration, or until you use an action to touch the target and dismiss the spell, the target appears dead to all outward inspection and to spells used to determine the target's status. The target is blinded and incapacitated, and its speed drops to 0. The target has resistance to all damage except psychic damage. If the target is diseased or poisoned when you cast the spell, or becomes diseased or poisoned while under the spell's effect, the disease and poison have no effect until the spell ends.",
     "classes": [
       "Bard",
       "Cleric",
@@ -3903,9 +3928,10 @@
   {
     "name": "Finger of Death",
     "description": "You send negative energy coursing through a creature that you can see within range, causing it searing pain. The target must make a Constitution saving throw. It takes 7d8 + 30 necrotic damage on a failed save, or half as much damage on a successful one.\nA humanoid killed by this spell rises at the start of your next turn as a zombie that is permanently under your command, following your verbal orders to the best of its ability.",
-    "emote": "",
+    "emote": "sends negative energy coursing through a creature, causing it searing pain",
     "source": "phb 241",
     "range": "60 ft",
+    "target": "a creature that you can see within range",
     "components": {
       "verbal": true,
       "somatic": true
@@ -3914,6 +3940,14 @@
     "castingTime": "1 action",
     "level": 7,
     "school": "Necromancy",
+    "save": {
+      "ability": "constitution",
+      "damage": "7d8",
+      "damageBonus": "30",
+      "damageType": "necrotic",
+      "saveSuccess": "half damage"
+    },
+    "effects": "A humanoid killed by this spell rises at the start of your next turn as a zombie that is permanently under your command, following your verbal orders to the best of its ability.",
     "classes": [
       "Sorcerer",
       "Warlock",
@@ -4015,9 +4049,11 @@
   {
     "name": "Fire Storm",
     "description": "A storm made up of sheets of roaring flame appears in a location you choose within range. The area of the storm consists of up to ten 10-foot cubes, which you can arrange as you wish. Each cube must have at least one face adjacent to the face of another cube. Each creature in the area must make a Dexterity saving throw. It takes 7d10 fire damage on a failed save, or half as much damage on a successful one.\nThe fire damages objects in the area and ignites flammable objects that aren't being worn or carried. If you choose, plant life in the area is unaffected by this spell.",
-    "emote": "",
+    "emote": "evokes a storm made up of sheets of roaring flame",
     "source": "phb 242",
     "range": "150 ft",
+    "target": "each creature in the aoe",
+    "aoe": "up to 10  10 ft cubes, which you can arrange as you wish at a location you choose within range. Each cube must have at least one face adjacent to the face of another cube",
     "components": {
       "verbal": true,
       "somatic": true
@@ -4026,6 +4062,13 @@
     "castingTime": "1 action",
     "level": 7,
     "school": "Evocation",
+    "save": {
+      "ability": "dexterity",
+      "damage": "7d10",
+      "damageType": "fire",
+      "saveSuccess": "half damage"
+    },
+    "effects": "The fire damages objects in the area and ignites flammable objects that aren't being worn or carried. If you choose, plant life in the area is unaffected by this spell.",
     "classes": [
       "Cleric",
       "Druid",
@@ -4036,7 +4079,7 @@
     "name": "Flame Arrows",
     "description": "You touch a quiver containing arrows or bolts. When a target is hit by a ranged weapon attack using a piece of ammunition drawn from the quiver, the target takes an extra 1d6 fire damage. The spell's magic ends on the piece of ammunition when it hits or misses, and the spell ends when twelve pieces of ammunition have been drawn from the quiver.",
     "higherLevel": "When you cast this spell using a spell slot of 4th level or higher, the number of pieces of ammunition you can affect with this spell increases by two for each slot level above 3rd.",
-    "emote": "",
+    "emote": "transmutes ammunition inside of a quiver",
     "source": "ee pc 18",
     "range": "Touch",
     "components": {
@@ -4048,6 +4091,7 @@
     "castingTime": "1 action",
     "level": 3,
     "school": "Transmutation",
+    "effects": "When a target is hit by a ranged weapon attack using a piece of ammunition drawn from the quiver, the target takes an extra 1d6 fire damage. The spell's magic ends on the piece of ammunition when it hits or misses, and the spell ends when 12 pieces of ammunition have been drawn from the quiver.",
     "classes": [
       "Druid",
       "Ranger",
@@ -4186,8 +4230,8 @@
     "level": 6,
     "school": "Transmutation",
     "save": {
-      "ability": "constitution",
       "condition": "if the target's body is made of flesh",
+      "ability": "constitution",
       "saveFailure": "it is restrained as its flesh begins to harden"
     },
     "effects": "A creature restrained by this spell must make another Constitution saving throw at the end of each of its turns. If it successfully saves against this spell three times, the spell ends. If it fails its saves three times, it is turned to stone and subjected to the petrified condition for the duration. The successes and failures don't need to be consecutive; keep track of both until the target collects three of a kind.\nIf the creature is physically broken while petrified, it suffers from similar deformities if it reverts to its original state.\nIf you maintain your concentration on this spell for the entire possible duration, the creature is turned to stone until the effect is removed.",
@@ -4277,9 +4321,11 @@
   {
     "name": "Forcecage",
     "description": "An immobile, invisible, cube-shaped prison composed of magical force springs into existence around an area you choose within range. The prison can be a cage or a solid box, as you choose.\nA prison in the shape of a cage can be up to 20 feet on a side and is made from 1/2-inch diameter bars spaced 1/2 inch apart. \nA prison in the shape of a box can be up to 10 feet on a side, creating a solid barrier that prevents any matter from passing through it and blocking any spells cast into or out from the area.\nWhen you cast the spell, any creature that is completely inside the cage's area is trapped. Creatures only partially within the area, or those too large to fit inside the area, are pushed away from the center of the area until they are completely outside the area.\nA creature inside the cage can't leave it by nonmagical means. If the creature tries to use teleportation or interplanar travel to leave the cage, it must first make a Charisma saving throw. On a success, the creature can use that magic to exit the cage. On a failure, the creature can't exit the cage and wastes the use of the spell or effect. The cage also extends into the Ethereal Plane, blocking ethereal travel.\nThis spell can't be dispelled by dispel magic.",
-    "emote": "",
+    "emote": "evokes an immobile, invisible, cube-shaped prison composed of magical force springs into existence around an area",
     "source": "phb 243",
     "range": "100 ft",
+    "target": "any creature that is completely inside the cage's area is trapped",
+    "aoe": "prison: cage up to 20 ft on a side and is made from 1/2-inch diameter bars spaced 1/2 inch apart or solid box up to 10 ft on a side, creating a solid barrier that prevents any matter from passing through it and blocking any spells cast into or out from the area",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -4290,6 +4336,12 @@
     "castingTime": "1 action",
     "level": 7,
     "school": "Evocation",
+    "save": {
+      "ability": "charisma",
+      "saveFailure": "the creature can't exit the cage and wastes the use of the spell or effect",
+      "saveSuccess": "the creature can use that magic to exit the cage"
+    },
+    "effects": "Creatures only partially within the area, or those too large to fit inside the area, are pushed away from the center of the area until they are completely outside the area.\nA creature inside the cage can't leave it by nonmagical means. If the creature tries to use teleportation or interplanar travel to leave the cage, it must first make a Charisma saving throw as outlined above. The cage also extends into the Ethereal Plane, blocking ethereal travel.\nThis spell can't be dispelled by dispel magic.",
     "classes": [
       "Bard",
       "Warlock",
@@ -4299,7 +4351,7 @@
   {
     "name": "Foresight",
     "description": "You touch a willing creature and bestow a limited ability to see into the immediate future. For the duration, the target can't be surprised and has advantage on attack rolls, ability checks, and saving throws. Additionally, other creatures have disadvantage on attack rolls against the target for the duration.\nThis spell immediately ends if you cast it again before its duration ends.",
-    "emote": "",
+    "emote": "bestows a limited ability to see into the immediate future upon a creature",
     "source": "phb 244",
     "range": "Touch",
     "components": {
@@ -4312,6 +4364,7 @@
     "castingTime": "1 minute",
     "level": 9,
     "school": "Divination",
+    "effects": "For the duration, the target can't be surprised and has advantage on attack rolls, ability checks, and saving throws. Additionally, other creatures have disadvantage on attack rolls against the target for the duration.\nThis spell immediately ends if you cast it again before its duration ends.",
     "classes": [
       "Bard",
       "Druid",
@@ -4414,7 +4467,7 @@
   {
     "name": "Gaseous Form",
     "description": "You transform a willing creature you touch, along with everything it's wearing and carrying, into a misty cloud for the duration. The spell ends if the creature drops to 0 hit points. An incorporeal creature isn't affected.\nWhile in this form, the target's only method of movement is a flying speed of 10 feet. The target can enter and occupy the space of another creature. The target has resistance to nonmagical damage, and it has advantage on Strength, Dexterity, and Constitution saving throws. The target can pass through small holes, narrow openings, and even mere cracks, though it treats liquids as though they were solid surfaces. The target can't fall and remains hovering in the air even when stunned or otherwise incapacitated.\nWhile in the form of a misty cloud, the target can't talk or manipulate objects, and any objects it was carrying or holding can't be dropped, used, or otherwise interacted with. The target can't attack or cast spells.",
-    "emote": "",
+    "emote": "transforms a creature, along with everything it's wearing and carrying, into a misty cloud ",
     "source": "phb 244",
     "range": "Touch",
     "components": {
@@ -4428,6 +4481,7 @@
     "castingTime": "1 action",
     "level": 3,
     "school": "Transmutation",
+    "effects": "The spell ends if the creature drops to 0 hit points. An incorporeal creature isn't affected.\nWhile in this form, the target's only method of movement is a flying speed of 10 ft. The target can enter and occupy the space of another creature. The target has resistance to nonmagical damage, and it has advantage on Strength, Dexterity, and Constitution saving throws. The target can pass through small holes, narrow openings, and even mere cracks, though it treats liquids as though they were solid surfaces. The target can't fall and remains hovering in the air even when stunned or otherwise incapacitated.\nWhile in the form of a misty cloud, the target can't talk or manipulate objects, and any objects it was carrying or holding can't be dropped, used, or otherwise interacted with. The target can't attack or cast spells.",
     "classes": [
       "Druid",
       "Sorcerer",
@@ -4441,9 +4495,10 @@
   {
     "name": "Gate",
     "description": "You conjure a portal linking an unoccupied space you can see within range to a precise location on a different plane of existence. The portal is a circular opening, which you can make 5 to 20 feet in diameter. You can orient the portal in any direction you choose. The portal lasts for the duration.\nThe portal has a front and a back on each plane where it appears. Travel through the portal is possible only by moving through its front. Anything that does so is instantly transported to the other plane, appearing in the unoccupied space nearest to the portal.\nDeities and other planar rulers can prevent portals created by this spell from opening in their presence or anywhere within their domains.\nWhen you cast this spell, you can speak the name of a specific creature (a pseudonym, title, or nickname doesn't work). If that creature is on a plane other than the one you are on, the portal opens in the named creature's immediate vicinity and draws the creature through it to the nearest unoccupied space on your side of the portal. You gain no special power over the creature, and it is free to act as the DM deems appropriate. It might leave, attack you, or help you.",
-    "emote": "",
+    "emote": "conjures a portal linking an unoccupied space you can see within range to a precise location on a different plane of existence.",
     "source": "phb 244",
     "range": "60 ft",
+    "aoe": "portal is a circular opening, which you can make 5 to 20 ft in diameter",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -4455,6 +4510,7 @@
     "castingTime": "1 action",
     "level": 9,
     "school": "Conjuration",
+    "effects": "You can orient the portal in any direction you choose. The portal lasts for the duration.\nThe portal has a front and a back on each plane where it appears. Travel through the portal is possible only by moving through its front. Anything that does so is instantly transported to the other plane, appearing in the unoccupied space nearest to the portal.\nDeities and other planar rulers can prevent portals created by this spell from opening in their presence or anywhere within their domains.\nWhen you cast this spell, you can speak the name of a specific creature (a pseudonym, title, or nickname doesn't work). If that creature is on a plane other than the one you are on, the portal opens in the named creature's immediate vicinity and draws the creature through it to the nearest unoccupied space on your side of the portal. You gain no special power over the creature, and it is free to act as the DM deems appropriate. It might leave, attack you, or help you.",
     "classes": [
       "Cleric",
       "Sorcerer",
@@ -4465,9 +4521,10 @@
     "name": "Geas",
     "description": "You place a magical command on a creature that you can see within range, forcing it to carry out some service or refrain from some action or course of activity as you decide. If the creature can understand you, it must succeed on a Wisdom saving throw or become charmed by you for the duration. While the creature is charmed by you, it takes 5d10 psychic damage each time it acts in a manner directly counter to your instructions, but no more than once each day. A creature that can't understand you is unaffected by the spell.\nYou can issue any command you choose, short of an activity that would result in certain death. Should you issue a suicidal command, the spell ends.\nYou can end the spell early by using an action to dismiss it. A remove curse, greater restoration, or wish spell also ends it.",
     "higherLevel": "When you cast this spell using a spell slot of 7th or 8th level, the duration is 1 year. When you cast this spell using a spell slot of 9th level, the spell lasts until it is ended by one of the spells mentioned above.",
-    "emote": "",
+    "emote": "place a magical command on a creature, forcing it to carry out some service or refrain from some action or course of activity as you decide",
     "source": "phb 244",
     "range": "60 ft",
+    "target": "a creature that you can see within range",
     "components": {
       "verbal": true
     },
@@ -4475,6 +4532,11 @@
     "castingTime": "1 minute",
     "level": 5,
     "school": "Enchantment",
+    "save": {
+      "condition": "If the creature can understand you",
+      "ability": "wisdom",
+      "saveFailure": "become charmed by you for the duration. While the creature is charmed by you, it takes 5d10 psychic damage each time it acts in a manner directly counter to your instructions, but no more than once each day. A creature that can't understand you is unaffected by the spell.\nYou can issue any command you choose, short of an activity that would result in certain death. Should you issue a suicidal command, the spell ends.\nYou can end the spell early by using an action to dismiss it. A remove curse, greater restoration, or wish spell also ends it."
+    },
     "classes": [
       "Bard",
       "Cleric",
@@ -4574,11 +4636,12 @@
   },
   {
     "name": "Glyph of Warding",
-    "description": "When you cast this spell, you enter a glyph that hurt other creatures, either on a surface (like a table or a portion of a floor or wall) or inside an object that can be closed (like a book a parchment or cabinet) to hide the glyph. If you opt for a surface, the glyph can cover an area of ​​10 feet or less in diameter. If you select an object, it must remain in place. If the object is moved to over 10 feet from where the spell was spell casts, the glyph breeze and the spell expires without being triggered.\nThe glyph is virtually invisible and roll Intelligence (Investigation) against the fate of your save DC is required to find out.\nYou determine the shutter glyph while casting the spell. For the glyphs inscribed on a surface, the triggers are typically hit or stand on a glyph remove an object placed on the glyph, approach at a certain distance of the glyph or manipulate an object on which is inscribed the glyph. For the glyphs inscribed in an object, triggers are typically open the object, approaching at a distance from the object, seen or read the glyph. Once the glyph is triggered, the spell ends.\nYou can refine the trigger conditions so that the spell will work only in certain circumstances or in physical attributes (height or weight), the creature type (eg, only aberrations or the Dark Elves trigger the glyph) or alignment. You can also determine the conditions for certain creatures do not trigger the glyph, using a password, for example.\nWhen you sign the glyph, make a choice between the explosive runes or glyph fate.\nExplosive runes. When triggered, magical energy springs from the glyph in a 20-foot-radius sphere centered on the glyph. The sphere bypasses the corners. Each creature in the area must make a Dexterity saving throw or it suffers 5d8 acid damage, lightning, fire, cold or thunder (to be determined during the creation of the glyph). If successful, the damage is halved.\nSort glyph. You can store a level of 3 or less prepared spell in the glyph to chant during the creation of the glyph. The spell must target one creature or area. The stored spell has no immediate effect when spell casts that way. When the glyph is activated, the stored spell spell casts. If the spell is a target, it will target the creature that triggered the glyph. If the spell affects an area, the area is centered on that creature. If the spell invokes hostile creatures or creates sharp objects or traps, they also appear close as possible to the intruder and attack. If the spell requires concentration, it persists for the duration of the spell.",
-    "higherLevel": "When you cast this spell using a 4 or higher is level, the damage explosive runes increased by 1d8 for each level of top slot 3. If you create a glyph spell, you may store a spell whose level is equivalent or less to spell slot used for the custody of the glyph.",
-    "emote": "",
+    "description": "When you cast this spell, you inscribe a glyph that harms other creatures, either upon a surface (such as a table or a section of floor or wall) or within an object that can be closed (such as a book, a scroll, or a treasure chest) to conceal the glyph. If you choose a surface, the glyph can cover an area of the surface no larger than 10 feet in diameter. If you choose an object, that object must remain in its place; if the object is moved more than 10 feet from where you cast this spell, the glyph is broken, and the spell ends without being triggered.\nThe glyph is nearly invisible and requires a successful Intelligence (Investigation) check against your spell save DC to be found.\nYou decide what triggers the glyph when you cast the spell. For glyphs inscribed on a surface, the most typical triggers include touching or standing on the glyph, removing another object covering the glyph, approaching within a certain distance of the glyph, or manipulating the object on which the glyph is inscribed. For glyphs inscribed within an object, the most commontriggers include opening that object, approaching within a certain distance of the object, or seeing or reading the glyph. Once a glyph is triggered, this spell ends.\nYou can further refine the trigger so the spell activates only under certain circumstances or according to physical characteristics (such as height or weight), creature kind (for example, the ward could be set to affect aberrations or drow), or alignment. You can also set conditions for creatures that don't trigger the glyph, such as those w ho say a certain password.\nWhen you inscribe the glyph, choose explosive runes or a spell glyph.\nExplosive Runes. When triggered, the glyph erupts with magical energy in a 20-foot-radius sphere centered on the glyph. The sphere spreads around corners. Each creature in the area must make a Dexterity saving throw. A creature takes 5d8 acid, cold, fire, lightning, or thunder damage on a failed saving throw (your choice when you create the glyph), or half as much damage on a successful one.\nSpell Glyph. You can store a prepared spell of 3rd level or lower in the glyph by casting it as part of creating the glyph. The spell must target a single creature or an area. The spell being stored has no immediate effect when cast in this way. When the glyph is triggered, the stored spell is cast. If the spell has a target, it targets the creature that triggered the glyph. If the spell affects an area, the area is centered on that creature. If the spell summons hostile creatures or creates harmful objects or traps, they appear as close as possible to the intruder and attack it. If the spell requires concentration, it lasts until the end of its full duration.",
+    "higherLevel": "when you cast this spell using a spell slot of 4th level or higher, the damage of an explosive runes glyph increases by 1d8 for each slot level above 3rd. If you create a spell glyph, you can store any spell of up to the same level as the slot you use for the glyph of warding.",
+    "emote": "inscribes a glyph that harms other creatures, either upon a surface (such as a table or a section of floor or wall) or within an object that can be closed (such as a book, a scroll, or a treasure chest) to conceal the glyph",
     "source": "phb 245",
     "range": "Touch",
+    "target": "a surface or inside an object that can be closed",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -4589,6 +4652,7 @@
     "castingTime": "1 hour",
     "level": 3,
     "school": "Abjuration",
+    "effects": "If you choose an object, that object must remain in its place; if the object is moved more than 10 ft from where you cast this spell, the glyph is broken, and the spell ends without being triggered.\nThe glyph is nearly invisible and requires a successful Intelligence (Investigation) check against your spell save DC to be found.\nYou decide what triggers the glyph when you cast the spell. For glyphs inscribed on a surface, the most typical triggers include touching or standing on the glyph, removing another object covering the glyph, approaching within a certain distance of the glyph, or manipulating the object on which the glyph is inscribed. For glyphs inscribed within an object, the most commontriggers include opening that object, approaching within a certain distance of the object, or seeing or reading the glyph. Once a glyph is triggered, this spell ends.\nYou can further refine the trigger so the spell activates only under certain circumstances or according to physical characteristics (such as height or weight), creature kind (for example, the ward could be set to affect aberrations or drow), or alignment. You can also set conditions for creatures that don't trigger the glyph, such as those w ho say a certain password.\nWhen you inscribe the glyph, choose explosive runes or a spell glyph.\nExplosive Runes. When triggered, the glyph erupts with magical energy in a 20 ftradius sphere centered on the glyph. The sphere spreads around corners. Each creature in the area must make a Dexterity saving throw. A creature takes 5d8 acid, cold, fire, lightning, or thunder damage on a failed saving throw (your choice when you create the glyph), or half as much damage on a successful one.\nSpell Glyph. You can store a prepared spell of 3rd level or lower in the glyph by casting it as part of creating the glyph. The spell must target a single creature or an area. The spell being stored has no immediate effect when cast in this way. When the glyph is triggered, the stored spell is cast. If the spell has a target, it targets the creature that triggered the glyph. If the spell affects an area, the area is centered on that creature. If the spell summons hostile creatures or creates harmful objects or traps, they appear as close as possible to the intruder and attack it. If the spell requires concentration, it lasts until the end of its full duration.",
     "classes": [
       "Bard",
       "Cleric",
@@ -4927,9 +4991,10 @@
   {
     "name": "Hallow",
     "description": "You touch a point and infuse an area around it with holy (or unholy) power. The area can have a radius up to 60 feet, and the spell fails if the radius includes an area already under the effect a hallow spell. The affected area is subject to the following effects.\nFirst, celestials, elementals, fey, fiends, and undead can't enter the area, nor can such creatures charm, frighten, or possess creatures within it. Any creature charmed, frightened, or possessed by such a creature is no longer charmed, frightened, or possessed upon entering the area. You can exclude one or more of those types of creatures from this effect.\nSecond, you can bind an extra effect to the area. Choose the effect from the following list, or choose an effect offered by the DM. Some of these effects apply to creatures in the area; you can designate whether the effect applies to all creatures, creatures that follow a specific deity or leader, or creatures of a specific sort, such as ores or trolls. When a creature that would be affected enters the spell's area for the first time on a turn or starts its turn there, it can make a Charisma saving throw. On a success, the creature ignores the extra effect until it leaves the area.\nCourage. Affected creatures can't be frightened while in the area.\nDarkness. Darkness fills the area. Normal light, as well as magical light created by spells of a lower level than the slot you used to cast this spell, can't illuminate the area.\nDaylight. Bright light fills the area. Magical darkness created by spells of a lower level than the slot you used to cast this spell can't extinguish the light.\nEnergy Protection. Affected creatures in the area have resistance to one damage type of your choice, except for bludgeoning, piercing, or slashing.\nEnergy Vulnerability. Affected creatures in the area have vulnerability to one damage type of your choice, except for bludgeoning, piercing, or slashing.\nEverlasting Rest. Dead bodies interred in the area can't be turned into undead.\nExtradimensional Interference. Affected creatures can't move or travel using teleportation or by extradimensional or interplanar means.\nFear. Affected creatures are frightened while in the area.\nSilence. No sound can emanate from within the area, and no sound can reach into it.\nTongues. Affected creatures can communicate with any other creature in the area, even if they don't share a common language.",
-    "emote": "",
+    "emote": "infuses an area around a point with holy (or unholy) power",
     "source": "phb 249",
     "range": "Touch",
+    "aoe": "up to 60 ft radius on a point",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -4940,6 +5005,7 @@
     "castingTime": "24 hours",
     "level": 5,
     "school": "Evocation",
+    "effects": "The spell fails if the radius includes an area already under the effect a hallow spell. The affected area is subject to the following effects.\nFirst, celestials, elementals, fey, fiends, and undead can't enter the area, nor can such creatures charm, frighten, or possess creatures within it. Any creature charmed, frightened, or possessed by such a creature is no longer charmed, frightened, or possessed upon entering the area. You can exclude one or more of those types of creatures from this effect.\nSecond, you can bind an extra effect to the area. Choose the effect from the following list, or choose an effect offered by the DM. Some of these effects apply to creatures in the area; you can designate whether the effect applies to all creatures, creatures that follow a specific deity or leader, or creatures of a specific sort, such as ores or trolls. When a creature that would be affected enters the spell's area for the first time on a turn or starts its turn there, it can make a Charisma saving throw. On a success, the creature ignores the extra effect until it leaves the area.\nCourage. Affected creatures can't be frightened while in the area.\nDarkness. Darkness fills the area. Normal light, as well as magical light created by spells of a lower level than the slot you used to cast this spell, can't illuminate the area.\nDaylight. Bright light fills the area. Magical darkness created by spells of a lower level than the slot you used to cast this spell can't extinguish the light.\nEnergy Protection. Affected creatures in the area have resistance to one damage type of your choice, except for bludgeoning, piercing, or slashing.\nEnergy Vulnerability. Affected creatures in the area have vulnerability to one damage type of your choice, except for bludgeoning, piercing, or slashing.\nEverlasting Rest. Dead bodies interred in the area can't be turned into undead.\nExtradimensional Interference. Affected creatures can't move or travel using teleportation or by extradimensional or interplanar means.\nFear. Affected creatures are frightened while in the area.\nSilence. No sound can emanate from within the area, and no sound can reach into it.\nTongues. Affected creatures can communicate with any other creature in the area, even if they don't share a common language.",
     "classes": [
       "Cleric",
       "Warlock"
@@ -5005,7 +5071,7 @@
   {
     "name": "Haste",
     "description": "Choose a willing creature that you can see within range. Until the spell ends, the target's speed is doubled, it gains a +2 bonus to AC, it has advantage on Dexterity saving throws, and it gains an additional action on each of its turns. That action can be used only to take the Attack (one weapon attack only), Dash, Disengage, Hide, or Use an Object action.\nWhen the spell ends, the target can't move or take actions until after its next turn, as a wave of lethargy sweeps over it.",
-    "emote": "",
+    "emote": "transmutes a creature to move with lightning speed",
     "source": "phb 250",
     "range": "30 ft",
     "target": "a willing creature that you can see within range",
@@ -5020,6 +5086,7 @@
     "castingTime": "1 action",
     "level": 3,
     "school": "Transmutation",
+    "effects": "the target's speed is doubled, it gains a +2 bonus to AC, it has advantage on Dexterity saving throws, and it gains an additional action on each of its turns. That action can be used only to take the Attack (one weapon attack only), Dash, Disengage, Hide, or Use an Object action.\nWhen the spell ends, the target can't move or take actions until after its next turn, as a wave of lethargy sweeps over it.",
     "classes": [
       "Druid",
       "Paladin",
@@ -5221,11 +5288,12 @@
   },
   {
     "name": "Hold Monster",
-    "description": "Choose a creature you can see and reach. The target must make a saving throw of Wisdom or be paralyzed for the duration of the spell. This spell has no effect against the undead. At the end of each round, the target can make a new saving throw of Wisdom. If successful, the spell ends for the creature.",
-    "higherLevel": "When you cast this spell using a level 6 or higher location, you can target an additional creature for each level of location beyond the fifth. The creatures must be within 30 feet of each other when you target them.",
-    "emote": "",
+    "description": "Choose a creature that you can see within range. The target must succeed on a Wisdom saving throw or be paralyzed for the duration. This spell has no effect on undead. At the end of each of its turns, the target can make another Wisdom saving throw. On a success, the spell ends on the target.",
+    "higherLevel": "When you cast this spell using a spell slot of 6th level or higher, you can target one additional creature for each slot level above 5th. The creatures must be within 30 ft of each other when you target them.",
+    "emote": "compels a creature to be unable to move",
     "source": "phb 251",
     "range": "90 ft",
+    "target": "a creature that you can see within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -5237,6 +5305,11 @@
     "castingTime": "1 action",
     "level": 5,
     "school": "Enchantment",
+    "save": {
+      "ability": "wisdom",
+      "saveFailure": "be paralyzed for the duration. At the end of each of its turns, the target can make another Wisdom saving throw. On a success, the spell ends on the target."
+    },
+    "effects": "This spell has no effect on undead",
     "classes": [
       "Bard",
       "Cleric",
@@ -5294,9 +5367,10 @@
   {
     "name": "Holy Aura",
     "description": "Divine light washes out from you and coalesces in a soft radiance in a 30-foot radius around you. Creatures of your choice in that radius when you cast this spell shed dim light in a 5-foot radius and have advantage on all saving throws, and other creatures have disadvantage on attack rolls against them until the spell ends. In addition, when a fiend or an undead hits an affected creature with a melee attack, the aura flashes with brilliant light. The attacker must succeed on a Constitution saving throw or be blinded until the spell ends.",
-    "emote": "",
+    "emote": "causes divine light to wash out from {{GENDER_PRONOUN_HIM_HER}} which coalesces in a soft radiance around {{GENDER_PRONOUN_HIM_HER}}",
     "source": "phb 251",
     "range": "Self",
+    "aoe": "30 ft radius that remains centered on you",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -5308,6 +5382,11 @@
     "castingTime": "1 action",
     "level": 8,
     "school": "Abjuration",
+    "save": {
+      "ability": "constitution",
+      "saveFailure": "be blinded until the spell ends"
+    },
+    "effects": "Creatures of your choice in the aoe when you cast this spell shed dim light in a 5-foot radius and have advantage on all saving throws, and other creatures have disadvantage on attack rolls against them until the spell ends. In addition, when a fiend or an undead hits an affected creature with a melee attack, the aura flashes with brilliant light. The attacker must succeed on a Constitution saving throw as outlined above or be blinded until the spell ends.",
     "classes": [
       "Cleric"
     ]
@@ -5315,9 +5394,10 @@
   {
     "name": "Hunger of Hadar",
     "description": "You open a gateway to the dark between the stars, a region infested with unknown horrors. A 20-foot-radius sphere of blackness and bitter cold appears, centered on a point with range and lasting for the duration. This void is filled with a cacophony of soft whispers and slurping noises that can be heard up to 30 feet away. No light, magical or otherwise, can illuminate the area, and creatures fully within the area are blinded.\nThe void creates a warp in the fabric of space, and the area is difficult terrain. Any creature that starts its turn in the area takes 2d6 cold damage. Any creature that ends its turn in the area must succeed on a Dexterity saving throw or take 2d6 acid damage as milky, otherworldly tentacles rub against it.",
-    "emote": "",
+    "emote": "opens a gateway to the dark between the stars, a region infested with unknown horrors. A sphere of blackness and bitter cold appears",
     "source": "phb 251",
     "range": "150 ft",
+    "aoe": "20 ft radius centered on a point within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -5329,6 +5409,12 @@
     "castingTime": "1 action",
     "level": 3,
     "school": "Conjuration",
+    "save": {
+      "ability": "dexterity",
+      "damage": "2d6",
+      "damageType": "acid"
+    },
+    "effects": "This void is filled with a cacophony of soft whispers and slurping noises that can be heard up to 30 ft away. No light, magical or otherwise, can illuminate the area, and creatures fully within the area are blinded.\nThe void creates a warp in the fabric of space, and the area is difficult terrain. Any creature that starts its turn in the area takes 2d6 cold damage. Any creature that ends its turn in the area must succeed on a Dexterity saving throw as outlined above as milky, otherworldly tentacles rub against it.",
     "classes": [
       "Warlock"
     ]
@@ -5523,9 +5609,10 @@
   {
     "name": "Immolation",
     "description": "Flames wreathe one creature you can see within range. The target must make a Dexterity saving throw. It takes 7d6 fire damage on a failed save, or half as much damage on a successful one. On a failed save, the target also burns for the spell's duration. The burning target sheds bright light in a 30-foot radius and dim light for an additional 30 feet. At the end of each of its turns, the target repeats the saving throw. It takes 3d6 fire damage on a failed save, and the spell ends on a successful one. These magical flames can't be extinguished through nonmagical means.\nIf damage from this spell reduces a target to 0 hit points, the target is turned to ash.",
-    "emote": "",
+    "emote": "evokes flames that wreathe a creature",
     "source": "ee pc 19",
     "range": "90 ft",
+    "target": "1 creature you can see within range",
     "components": {
       "verbal": true
     },
@@ -5534,6 +5621,14 @@
     "castingTime": "1 action",
     "level": 5,
     "school": "Evocation",
+    "save": {
+      "ability": "dexterity",
+      "damage": "7d6",
+      "damageType": "fire",
+      "saveFailure": "the target also burns for the spell's duration. The burning target sheds bright light in a 30 ft radius and dim light for an additional 30 ft. At the end of each of its turns, the target repeats the saving throw. It takes 3d6 fire damage on a failed save, and the spell ends on a successful one. These magical flames can't be extinguished through nonmagical means.",
+      "saveSuccess": "half damage"
+    },
+    "effects": "If damage from this spell reduces a target to 0 hit points, the target is turned to ash.",
     "classes": [
       "Sorcerer",
       "Wizard"
@@ -5542,9 +5637,10 @@
   {
     "name": "Imprisonment",
     "description": "You create a magical restraint to hold a creature that you can see within range. The target must succeed on a Wisdom saving throw or be bound by the spell; if it succeeds, it is immune to this spell if you cast it again. While affected by this spell, the creature doesn't need to breathe, eat, or drink, and it doesn't age. Divination spells can't locate or perceive the target.\nWhen you cast the spell, you choose one of the following forms of imprisonment.\nBurial. The target is entombed far beneath the earth in a sphere of magical force that is just large enough to contain the target. Nothing can pass through the sphere, nor can any creature teleport or use planar travel to get into or out of it.\nThe special component for this version of the spell is a small mithral orb.\nChaining. Heavy chains, firmly rooted in the ground, hold the target in place. The target is restrained until the spell ends, and it can't move or be moved by any means until then.\nThe special component for this version of the spell is a fine chain of precious metal.\nHedged Prison. The spell transports the target into a tiny demiplane that is warded against teleportation and planar travel. The demiplane can be a labyrinth, a cage, a tower, or any similar confined structure or area of your choice.\nThe special component for this version of the spell is a miniature representation of the prison made from jade.\nMinimus Containment. The target shrinks to a height of 1 inch and is imprisoned inside a gemstone or similar object. Light can pass through the gemstone normally (allowing the target to see out and other creatures to see in), but nothing else can pass through, even by means of teleportation or planar travel. The gemstone can't be cut or broken while the spell remains in effect.\nThe special component for this version of the spell is a large, transparent gemstone, such as a corundum, diamond, or ruby.\nSlumber. The target falls asleep and can't be awoken.\nThe special component for this version of the spell consists of rare soporific herbs.\nEnding the Spell. During the casting of the spell, in any of its versions, you can specify a condition that will cause the spell to end and release the target. The condition can be as specific or as elaborate as you choose, but the DM must agree that the condition is reasonable and has a likelihood of coming to pass. The conditions can be based on a creature's name, identity, or deity but otherwise must be based on observable actions or qualities and not based on intangibles such as level, class, or hit points.\nA dispel magic spell can end the spell only if it is cast as a 9th-level spell, targeting either the prison or the special component used to create it.\nYou can use a particular special component to create only one prison at a time. If you cast the spell again using the same component, the target of the first casting is immediately freed from its binding.",
-    "emote": "",
+    "emote": "creates a magical restraint to hold a creature",
     "source": "phb 252",
     "range": "30 ft",
+    "target": "a creature that you can see within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -5555,6 +5651,12 @@
     "castingTime": "1 minute",
     "level": 9,
     "school": "Abjuration",
+    "save": {
+      "ability": "wisdom",
+      "saveFailure": "be bound by the spell. While affected by this spell, the creature doesn't need to breathe, eat, or drink, and it doesn't age. Divination spells can't locate or perceive the target",
+      "saveSuccess": "it is immune to this spell if you cast it again"
+    },
+    "effects": "When you cast the spell, you choose one of the following forms of imprisonment.\nBurial. The target is entombed far beneath the earth in a sphere of magical force that is just large enough to contain the target. Nothing can pass through the sphere, nor can any creature teleport or use planar travel to get into or out of it.\nThe special component for this version of the spell is a small mithral orb.\nChaining. Heavy chains, firmly rooted in the ground, hold the target in place. The target is restrained until the spell ends, and it can't move or be moved by any means until then.\nThe special component for this version of the spell is a fine chain of precious metal.\nHedged Prison. The spell transports the target into a tiny demiplane that is warded against teleportation and planar travel. The demiplane can be a labyrinth, a cage, a tower, or any similar confined structure or area of your choice.\nThe special component for this version of the spell is a miniature representation of the prison made from jade.\nMinimus Containment. The target shrinks to a height of 1 inch and is imprisoned inside a gemstone or similar object. Light can pass through the gemstone normally (allowing the target to see out and other creatures to see in), but nothing else can pass through, even by means of teleportation or planar travel. The gemstone can't be cut or broken while the spell remains in effect.\nThe special component for this version of the spell is a large, transparent gemstone, such as a corundum, diamond, or ruby.\nSlumber. The target falls asleep and can't be awoken.\nThe special component for this version of the spell consists of rare soporific herbs.\nEnding the Spell. During the casting of the spell, in any of its versions, you can specify a condition that will cause the spell to end and release the target. The condition can be as specific or as elaborate as you choose, but the DM must agree that the condition is reasonable and has a likelihood of coming to pass. The conditions can be based on a creature's name, identity, or deity but otherwise must be based on observable actions or qualities and not based on intangibles such as level, class, or hit points.\nA dispel magic spell can end the spell only if it is cast as a 9th-level spell, targeting either the prison or the special component used to create it.\nYou can use a particular special component to create only one prison at a time. If you cast the spell again using the same component, the target of the first casting is immediately freed from its binding.",
     "classes": [
       "Warlock",
       "Wizard"
@@ -5563,9 +5665,11 @@
   {
     "name": "Incendiary Cloud",
     "description": "A swirling cloud of smoke shot through with white-hot embers appears in a 20-foot-radius sphere centered on a point within range. The cloud spreads around corners and is heavily obscured. It lasts for the duration or until a wind of moderate or greater speed (at least 10 miles per hour) disperses it.\nWhen the cloud appears, each creature in it must make a Dexterity saving throw. A creature takes 10d8 fire damage on a failed save, or half as much damage on a successful one. A creature must also make this saving throw when it enters the spell's area for the first time on a turn or ends its turn there.\nThe cloud moves 10 feet directly away from you in a direction that you choose at the start of each of your turns.",
-    "emote": "",
+    "emote": "conjures a swirling cloud of smoke shot through with white-hot embers",
     "source": "phb 253",
     "range": "150 ft",
+    "target": "each creature in the aoe when it appears or when it enters the spell's area for the first time on a turn or ends its turn there.",
+    "aoe": "20 ft radius sphere centered on a point within range",
     "components": {
       "verbal": true,
       "somatic": true
@@ -5575,6 +5679,13 @@
     "castingTime": "1 action",
     "level": 8,
     "school": "Conjuration",
+    "save": {
+      "ability": "dexterity",
+      "damage": "10d8",
+      "damageType": "fire",
+      "saveSuccess": "half damage"
+    },
+    "effects": "The cloud spreads around corners and is heavily obscured. It lasts for the duration or until a wind of moderate or greater speed (at least 10 mph) disperses it.\nThe cloud moves 10 ft directly away from you in a direction that you choose at the start of each of your turns.",
     "classes": [
       "Sorcerer",
       "Wizard"
@@ -5821,8 +5932,8 @@
   },
   {
     "name": "Legend Lore",
-    "description": "Name or describe a person, place or object. The fate brings to mind a brief and summary information about the thing you named. Information can be presented as tales of forgotten history or even secret information that have never been revealed. If the thing you named is not legendary resonance, you get no information. More information you already have about the thing, more precise and detailed the information you will receive.\nWhat you learn is accurate but can be hidden in figurative language. For example, if you have a mysterious magical ax in your hand, the spell can reveal this information: \"Woe to the wicked that affects his hands the ax because the handle decide those of malignant Only a true child of the stone magnet. and loved Moradin could awaken the true power of this ax, and only with the sacred Rudnogg word on the lips.\"",
-    "emote": "",
+    "description": "Name or describe a person, place, or object. The spell brings to your mind a brief summary of the significant lore about the thing you named. The lore might consist of current tales, forgotten stories, or even secret lore that has never been widely known. If the thing you named isn't of legendary importance, you gain no information. The more information you already have about the thing, the more precise and detailed the information you receive is.\nThe information you learn is accurate but might be couched in figurative language. For example, if you have a mysterious magic axe on hand, the spell might yield this information: \"Woe to the evildoer whose hand touches the axe, for even the haft slices the hand of the evil ones. Only a true Child of Stone, lover and beloved of Moradin, may awaken the true powers of the axe, and only with the sacred word Rudnogg on the lips.\"",
+    "emote": "names or describes a person, place or object, gaining a brief summary of the significant lore about the thing named",
     "source": "phb 254",
     "range": "Self",
     "components": {
@@ -5840,6 +5951,7 @@
       "Cleric",
       "Wizard"
     ],
+    "effects": "The lore might consist of current tales, forgotten stories, or even secret lore that has never been widely known. If the thing you named isn't of legendary importance, you gain no information. The more information you already have about the thing, the more precise and detailed the information you receive is.\nThe information you learn is accurate but might be couched in figurative language. For example, if you have a mysterious magic axe on hand, the spell might yield this information: \"Woe to the evildoer whose hand touches the axe, for even the haft slices the hand of the evil ones. Only a true Child of Stone, lover and beloved of Moradin, may awaken the true powers of the axe, and only with the sacred word Rudnogg on the lips.\"",
     "domains": [
       "Knowledge"
     ]
@@ -5868,9 +5980,10 @@
   {
     "name": "Leomund's Tiny Hut",
     "description": "A 10-foot-radius immobile dome of force springs into existence around and above you and remains stationary for the duration. The spell ends if you leave its area.\nNine creatures of Medium size or smaller can fit inside the dome with you. The spell fails if its area includes a larger creature or more than nine creatures. Creatures and objects within the dome when you cast this spell can move through it freely. All other creatures and objects are barred from passing through it. Spells and other magical effects can't extend through the dome or be cast through it. The atmosphere inside the space is comfortable and dry, regardless of the weather outside.\nUntil the spell ends, you can command the interior to become dimly lit or dark. The dome is opaque from the outside, of any color you choose, but it is transparent from the inside.",
-    "emote": "",
+    "emote": "evokes an immobile dome of force into existence around and above {{GENDER_PRONOUN_HIM_HER}}",
     "source": "phb 255",
     "range": "Self",
+    "aoe": "10 ft radius immobile dome around and above you that remains stationary",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -5882,6 +5995,7 @@
     "castingTime": "1 minute",
     "level": 3,
     "school": "Evocation",
+    "effects": "The spell ends if you leave its area.\nNine creatures of Medium size or smaller can fit inside the dome with you. The spell fails if its area includes a larger creature or more than nine creatures. Creatures and objects within the dome when you cast this spell can move through it freely. All other creatures and objects are barred from passing through it. Spells and other magical effects can't extend through the dome or be cast through it. The atmosphere inside the space is comfortable and dry, regardless of the weather outside.\nUntil the spell ends, you can command the interior to become dimly lit or dark. The dome is opaque from the outside, of any color you choose, but it is transparent from the inside.",
     "classes": [
       "Bard",
       "Wizard"
@@ -6152,10 +6266,12 @@
   },
   {
     "name": "Maelstrom",
-    "description": "A mass of 5-foot-deep water appears anfdd swirls in a 30-foot radius centered on a point you can see within range. The point must be on ground or in a body of water. Until the spell ends, that area is difficult terrain, and any creature that starts its turn there must succeed on a Strength saving throw or take 6d6 bludgeoning damage and be pulled 10 feet toward the center.",
-    "emote": "",
+    "description": "A mass of 5-foot-deep water appears and swirls in a 30-foot radius centered on a point you can see within range. The point must be on ground or in a body of water. Until the spell ends, that area is difficult terrain, and any creature that starts its turn there must succeed on a Strength saving throw or take 6d6 bludgeoning damage and be pulled 10 feet toward the center.",
+    "emote": "evokes a swirling maelstrom",
     "source": "ee pc 20",
     "range": "120 ft",
+    "target": "any creature that starts its turn in the aoe",
+    "aoe": "5 ft deep water that swirls in a 30 ft radius centered on a point you can see within range on the ground or in a body of water",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -6167,6 +6283,13 @@
     "castingTime": "1 action",
     "level": 5,
     "school": "Evocation",
+    "save": {
+      "ability": "strength",
+      "damage": "6d6",
+      "damageType": "bludgeoning",
+      "saveFailure": "be pulled 10 feet toward the center"
+    },
+    "effects": "Until the spell ends, that area is difficult terrain.",
     "classes": [
       "Druid"
     ]
@@ -6218,11 +6341,12 @@
   },
   {
     "name": "Magic Circle",
-    "description": "Choose one or more of the following types of creatures: celestials, elementals, fey, fiends, or undead. The circle affects a creature of the chosen type in the following ways:\n- The creature can't willingly enter the cylinder by nonmagical means. If the creature tries to use teleportation or interplanar travel to do so, it must first succeed on a Charisma saving throw.\n- The creature has disadvantage on attack rolls against targets within the cylinder.\n- Targets within the cylinder can't be charmed, frightened, or possessed by the creature.\nWhen you cast this spell, you can elect to cause its magic to operate in the reverse direction, preventing a creature of the specified type from leaving the cylinder and protecting targets outside it.",
+    "description": "You create a 10-foot-radius, 20-foot-tall cylinder of magical energy centered on a point on the ground that you can see within range. Glowing runes appear wherever the cylinder intersects with the floor or other surface. Choose one or more of the following types of creatures: celestials, elementals, fey, fiends, or undead. The circle affects a creature of the chosen type in the following ways:\n- The creature can't willingly enter the cylinder by nonmagical means. If the creature tries to use teleportation or interplanar travel to do so, it must first succeed on a Charisma saving throw.\n- The creature has disadvantage on attack rolls against targets within the cylinder.\n- Targets within the cylinder can't be charmed, frightened, or possessed by the creature.\nWhen you cast this spell, you can elect to cause its magic to operate in the reverse direction, preventing a creature of the specified type from leaving the cylinder and protecting targets outside it.",
     "higherLevel": "When you cast this spell using a spell slot of 4th level or higher, the duration increases by 1 hour for each slot level above 3rd.",
-    "emote": "",
+    "emote": "creates a cylinder of magical energy. Glowing runes appear wherever the cylinder intersects with the floor or other surface",
     "source": "phb 256",
     "range": "10 ft",
+    "aoe": "10 ft radius, 20 ft tall cylinder",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -6233,6 +6357,15 @@
     "castingTime": "1 minute",
     "level": 3,
     "school": "Abjuration",
+    "save": {
+      "ability": "constitution",
+      "damage": "4d10",
+      "damageType": "piercing",
+      "saveSuccess": "half damage",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d10"
+    },
+    "effects": "Choose one or more of the following types of creatures: celestials, elementals, fey, fiends, or undead. The circle affects a creature of the chosen type in the following ways:\n- The creature can't willingly enter the cylinder by nonmagical means. If the creature tries to use teleportation or interplanar travel to do so, it must first succeed on a Charisma saving throw.\n- The creature has disadvantage on attack rolls against targets within the cylinder.\n- Targets within the cylinder can't be charmed, frightened, or possessed by the creature.\nWhen you cast this spell, you can elect to cause its magic to operate in the reverse direction, preventing a creature of the specified type from leaving the cylinder and protecting targets outside it.",
     "classes": [
       "Cleric",
       "Paladin",
@@ -6369,9 +6502,10 @@
     "name": "Major Image",
     "description": "You create the image of an object, a creature, or some other visible phenomenon that is no larger than a 20-foot cube. The image appears at a spot that you can see within range and lasts for the duration. It seems completely real, including sounds, smells, and temperature appropriate to the thing depicted. You can't create sufficient heat or cold to cause damage, a sound loud enough to deal thunder damage or deafen a creature, or a smell that might sicken a creature (like a troglodyte's stench).\nAs long as you are within range of the illusion, you can use your action to cause the image to move to any other spot within range. As the image changes location, you can alter its appearance so that its movements appear natural for the image. For example, if you create an image of a creature and move it, you can alter the image so that it appears to be walking. Similarly, you can cause the illusion to make different sounds at different times, even making it carry on a conversation, for example.\nPhysical interaction with the image reveals it to be an illusion, because things can pass through it. A creature that uses its action to examine the image can determine that it is an illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image, and its other sensory qualities become faint to the creature.",
     "higherLevel": "When you cast this spell using a spell slot of 6th level or higher, the spell lasts until dispelled, without requiring your concentration.",
-    "emote": "",
+    "emote": "creates an image of an object, a creature, or some other visible phenomenon",
     "source": "phb 258",
     "range": "120 ft",
+    "target": "an object, a creature, or some other visible phenomenon that is no larger than a 20 ft cube at a spot that you can see within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -6383,6 +6517,7 @@
     "castingTime": "1 action",
     "level": 3,
     "school": "Illusion",
+    "effects": "The image seems completely real, including sounds, smells, and temperature appropriate to the thing depicted. You can't create sufficient heat or cold to cause damage, a sound loud enough to deal thunder damage or deafen a creature, or a smell that might sicken a creature (like a troglodyte's stench).\nAs long as you are within range of the illusion, you can use your action to cause the image to move to any other spot within range. As the image changes location, you can alter its appearance so that its movements appear natural for the image. For example, if you create an image of a creature and move it, you can alter the image so that it appears to be walking. Similarly, you can cause the illusion to make different sounds at different times, even making it carry on a conversation, for example.\nPhysical interaction with the image reveals it to be an illusion, because things can pass through it. A creature that uses its action to examine the image can determine that it is an illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image, and its other sensory qualities become faint to the creature.",
     "classes": [
       "Bard",
       "Sorcerer",
@@ -6426,9 +6561,10 @@
   {
     "name": "Mass Heal",
     "description": "A flood of healing energy flows from you into injured creatures around you. You restore up to 700 hit points, divided as you choose among any number of creatures that you can see within range. Creatures healed by this spell are also cured of all diseases and any effect making them blinded or deafened. This spell has no effect on undead or constructs.",
-    "emote": "",
+    "emote": "conjures a flood of healing energy that flows from {{GENDER_PRONOUN_HIM_HER}} into injured creatures around {{GENDER_PRONOUN_HIMSELF_HERSELF}}",
     "source": "phb 258",
     "range": "60 ft",
+    "target": "any number of creatures that you can see within range",
     "components": {
       "verbal": true,
       "somatic": true
@@ -6437,6 +6573,7 @@
     "castingTime": "1 action",
     "level": 9,
     "school": "Conjuration",
+    "effects": "You restore up to 700 hit points, divided as you choose among the targets. Creatures healed by this spell are also cured of all diseases and any effect making them blinded or deafened. This spell has no effect on undead or constructs.",
     "classes": [
       "Cleric"
     ]
@@ -6531,9 +6668,10 @@
   {
     "name": "Maze",
     "description": "You banish a creature that you can see within range into a labyrinthine demiplane. The target remains there for the duration or until it escapes the maze.\nThe target can use its action to attempt to escape. When it does so, it makes a DC 20 Intelligence check. If it succeeds, it escapes, and the spell ends (a minotaur or goristro demon automatically succeeds).\nWhen the spell ends, the target reappears in the space it left or, if that space is occupied, in the nearest unoccupied space.",
-    "emote": "",
+    "emote": "banishes a creature into a labyrinthine demiplane",
     "source": "phb 258",
     "range": "60 ft",
+    "target": "a creature that you can see within range",
     "components": {
       "verbal": true,
       "somatic": true
@@ -6543,6 +6681,7 @@
     "castingTime": "1 action",
     "level": 8,
     "school": "Conjuration",
+    "effects": "The target remains there for the duration or until it escapes the maze.\nThe target can use its action to attempt to escape. When it does so, it makes a DC [[20]] Intelligence check. If it succeeds, it escapes, and the spell ends (a minotaur or goristro demon automatically succeeds).\nWhen the spell ends, the target reappears in the space it left or, if that space is occupied, in the nearest unoccupied space.",
     "classes": [
       "Wizard"
     ]
@@ -6550,9 +6689,10 @@
   {
     "name": "Meld into Stone",
     "description": "You step into a stone object or surface large enough to fully contain your body, melding yourself and all the equipment you carry with the stone for the duration. Using your movement, you step into the stone at a point you can touch. Nothing of your presence remains visible or otherwise detectable by nonmagical senses.\nWhile merged with the stone, you can't see what occurs outside it, and any Wisdom (Perception) checks you make to hear sounds outside it are made with disadvantage. You remain aware of the passage of time and can cast spells on yourself while merged in the stone. You can use your movement to leave the stone where you entered it, which ends the spell. You otherwise can't move.\nMinor physical damage to the stone doesn't harm you, but its partial destruction or a change in its shape (to the extent that you no longer fit within it) expels you and deals 6d6 bludgeoning damage to you. The stone's complete destruction (or transmutation into a different substance) expels you and deals 50 bludgeoning damage to you. If expelled, you fall prone in an unoccupied space closest to where you first entered.",
-    "emote": "",
+    "emote": "steps into a stone object or surface, melding yourself and all the equipment you carry with the stone for the duration",
     "source": "phb 259",
     "range": "Touch",
+    "target": "a stone object or surface large enough to fully contain your body",
     "components": {
       "verbal": true,
       "somatic": true
@@ -6562,6 +6702,7 @@
     "castingTime": "1 action",
     "level": 3,
     "school": "Transmutation",
+    "effects": "Using your movement, you step into the stone at a point you can touch. Nothing of your presence remains visible or otherwise detectable by nonmagical senses.\nWhile merged with the stone, you can't see what occurs outside it, and any Wisdom (Perception) checks you make to hear sounds outside it are made with disadvantage. You remain aware of the passage of time and can cast spells on yourself while merged in the stone. You can use your movement to leave the stone where you entered it, which ends the spell. You otherwise can't move.\nMinor physical damage to the stone doesn't harm you, but its partial destruction or a change in its shape (to the extent that you no longer fit within it) expels you and deals 6d6 bludgeoning damage to you. The stone's complete destruction (or transmutation into a different substance) expels you and deals 50 bludgeoning damage to you. If expelled, you fall prone in an unoccupied space closest to where you first entered.",
     "classes": [
       "Cleric",
       "Druid"
@@ -6691,9 +6832,11 @@
   {
     "name": "Meteor Swarm",
     "description": "Blazing orbs of fire plummet to the ground at four different points you can see within range. Each creature in a 40-foot-radius sphere centered on each point you choose must make a Dexterity saving throw. The sphere spreads around corners. A creature takes 20d6 fire damage and 20d6 bludgeoning damage on a failed save, or half as much damage on a successful one. A creature in the area of more than one fiery burst is affected only once.\nThe spell damages objects in the area and ignites flammable objects that aren't being worn or carried.",
-    "emote": "",
+    "emote": "evokes blazing orbs of fire plummet to the ground",
     "source": "phb 259",
     "range": "1 mile",
+    "target": "each creature in the aoes",
+    "aoe": "40 ft radius sphere centered on four different points you can see within range",
     "components": {
       "verbal": true,
       "somatic": true
@@ -6702,6 +6845,15 @@
     "castingTime": "1 action",
     "level": 9,
     "school": "Evocation",
+    "save": {
+      "ability": "dexterity",
+      "damage": "20d6",
+      "damageType": "fire",
+      "secondaryDamage": "20d6",
+      "secondaryDamageType": "bludgeoning",
+      "saveSuccess": "half damage"
+    },
+    "effects": "The sphere spreads around corners.  A creature in the area of more than one fiery burst is affected only once.\nThe spell damages objects in the area and ignites flammable objects that aren't being worn or carried.",
     "classes": [
       "Sorcerer",
       "Wizard"
@@ -6710,9 +6862,10 @@
   {
     "name": "Mind Blank",
     "description": "Until the spell ends, one willing creature you touch is immune to psychic damage, any effect that would sense its emotions or read its thoughts, divination spells, and the charmed condition. The spell even foils wish spells and spells or effects of similar power used to affect the target's mind or to gain information about the target.",
-    "emote": "",
+    "emote": "wards the mind of an ally against psychic efects",
     "source": "phb 259",
     "range": "Touch",
+    "target": "one willing creature",
     "components": {
       "verbal": true,
       "somatic": true
@@ -6721,6 +6874,7 @@
     "castingTime": "1 action",
     "level": 8,
     "school": "Abjuration",
+    "effects": "target is immune to psychic damage, any effect that would sense its emotions or read its thoughts, divination spells, and the charmed condition. The spell even foils wish spells and spells or effects of similar power used to affect the target's mind or to gain information about the target.",
     "classes": [
       "Bard",
       "Wizard"
@@ -6753,9 +6907,10 @@
   {
     "name": "Mirage Arcane",
     "description": "You make terrain in an area up to 1 mile square look, sound, smell, and even feel like some other sort of terrain. The terrain's general shape remains the same, however. Open fields or a road could be made to resemble a swamp, hill, crevasse, or some other difficult or impassable terrain. A pond can be made to seem like a grassy meadow, a precipice like a gentle slope, or a rock-strewn gully like a wide and smooth road.\nSimilarly, you can alter the appearance of structures, or add them where none are present. The spell doesn't disguise, conceal, or add creatures.\nThe illusion includes audible, visual, tactile, and olfactory elements, so it can turn clear ground into difficult terrain (or vice versa) or otherwise impede movement through the area. Any piece of the illusory terrain (such as a rock or stick) that is removed from the spell's area disappears immediately.\nCreatures with truesight can see through the illusion to the terrain's true form; however, all other elements of the illusion remain, so while the creature is aware of the illusion's presence, the creature can still physically interact with the illusion.",
-    "emote": "",
+    "emote": "makes terrain look, sound, smell, and even feel like some other sort of terrain",
     "source": "phb 260",
     "range": "Sight",
+    "target": "terrain in an area up to 1 mile square",
     "components": {
       "verbal": true,
       "somatic": true
@@ -6764,6 +6919,7 @@
     "castingTime": "10 minutes",
     "level": 7,
     "school": "Illusion",
+    "effects": "The terrain's general shape remains the same, however. Open fields or a road could be made to resemble a swamp, hill, crevasse, or some other difficult or impassable terrain. A pond can be made to seem like a grassy meadow, a precipice like a gentle slope, or a rock-strewn gully like a wide and smooth road.\nSimilarly, you can alter the appearance of structures, or add them where none are present. The spell doesn't disguise, conceal, or add creatures.\nThe illusion includes audible, visual, tactile, and olfactory elements, so it can turn clear ground into difficult terrain (or vice versa) or otherwise impede movement through the area. Any piece of the illusory terrain (such as a rock or stick) that is removed from the spell's area disappears immediately.\nCreatures with truesight can see through the illusion to the terrain's true form; however, all other elements of the illusion remain, so while the creature is aware of the illusion's presence, the creature can still physically interact with the illusion.",
     "classes": [
       "Bard",
       "Druid",
@@ -6802,7 +6958,7 @@
   {
     "name": "Mislead",
     "description": "You become invisible at the same time that an illusory double of you appears where you are standing. The double lasts for the duration, but the invisibility ends if you attack or cast a spell.\nYou can use your action to move your illusory double up to twice your speed and make it gesture, speak, and behave in whatever way you choose.\nYou can see through its eyes and hear through its ears as if you were located where it is. On each of your turns as a bonus action, you can switch from using its senses to using your own, or back again. While you are using its senses, you are blinded and deafened in regard to your own surroundings.",
-    "emote": "",
+    "emote": "becomes invisible at the same time that an illusory double of {{GENDER_PRONOUN_HIM_HER}} appears where {{GENDER_PRONOUN_HE_SHE}} is standing",
     "source": "phb 260",
     "range": "Self",
     "components": {
@@ -6813,6 +6969,7 @@
     "castingTime": "1 action",
     "level": 5,
     "school": "Illusion",
+    "effects": "The double lasts for the duration, but the invisibility ends if you attack or cast a spell.\nYou can use your action to move your illusory double up to twice your speed and make it gesture, speak, and behave in whatever way you choose.\nYou can see through its eyes and hear through its ears as if you were located where it is. On each of your turns as a bonus action, you can switch from using its senses to using your own, or back again. While you are using its senses, you are blinded and deafened in regard to your own surroundings.",
     "classes": [
       "Bard",
       "Wizard"
@@ -6851,9 +7008,10 @@
     "name": "Modify Memory",
     "description": "You attempt to reshape another creature's memories. One creature that you can see must make a Wisdom saving throw. If you are fighting the creature, it has advantage on the saving throw. On a failed save, the target becomes charmed by you for the duration. The charmed target is incapacitated and unaware of its surroundings, though it can still hear you. If it takes any damage or is targeted by another spell, this spell ends, and none of the target's memories are modified.\nWhile this charm lasts, you can affect the target's memory of an event that it experienced within the last 24 hours and that lasted no more than 10 minutes. You can permanently eliminate all memory of the event, allow the target to recall the event with perfect clarity and exacting detail, change its memory of the details of the event, or create a memory of some other event.\nYou must speak to the target to describe how its memories are affected, and it must be able to understand your language for the modified memories to take root. Its mind fills in any gaps in the details of your description. If the spell ends before you have finished describing the modified memories, the creature's memory isn't altered. Otherwise, the modified memories take hold when the spell ends.\nA modified memory doesn't necessarily affect how a creature behaves, particularly if the memory contradicts the creature's natural inclinations, alignment, or beliefs. An illogical modified memory, such as implanting a memory of how much the creature enjoyed dousing itself in acid, is dismissed, perhaps as a bad dream. The DM might deem a modified memory too nonsensical to affect a creature in a significant manner.\nA remove curse or greater restoration spell cast on the target restores the creature's true memory.",
     "higherLevel": "If you cast this spell using a spell slot of 6th level or higher, you can alter the target's memories of an event that took place up to 7 days ago (6th level), 30 days ago (7th level), 1 year ago (8th level), or any time in the creature's past (9th level).",
-    "emote": "",
+    "emote": "attempts to reshape another creature's memories",
     "source": "phb 261",
     "range": "30 ft",
+    "target": "1 creature that you can see within range",
     "components": {
       "verbal": true,
       "somatic": true
@@ -6863,6 +7021,11 @@
     "castingTime": "1 action",
     "level": 5,
     "school": "Enchantment",
+    "save": {
+      "condition": "if you are fighting the creature, it has advantage on the saving throw",
+      "ability": "wisdom",
+      "saveFailure": "the target becomes charmed by you for the duration. The charmed target is incapacitated and unaware of its surroundings, though it can still hear you. If it takes any damage or is targeted by another spell, this spell ends, and none of the target's memories are modified.\nWhile this charm lasts, you can affect the target's memory of an event that it experienced within the last 24 hours and that lasted no more than 10 minutes. You can permanently eliminate all memory of the event, allow the target to recall the event with perfect clarity and exacting detail, change its memory of the details of the event, or create a memory of some other event.\nYou must speak to the target to describe how its memories are affected, and it must be able to understand your language for the modified memories to take root. Its mind fills in any gaps in the details of your description. If the spell ends before you have finished describing the modified memories, the creature's memory isn't altered. Otherwise, the modified memories take hold when the spell ends.\nA modified memory doesn't necessarily affect how a creature behaves, particularly if the memory contradicts the creature's natural inclinations, alignment, or beliefs. An illogical modified memory, such as implanting a memory of how much the creature enjoyed dousing itself in acid, is dismissed, perhaps as a bad dream. The DM might deem a modified memory too nonsensical to affect a creature in a significant manner.\nA remove curse or greater restoration spell cast on the target restores the creature's true memory."
+    },
     "classes": [
       "Bard",
       "Cleric",
@@ -6959,7 +7122,7 @@
   {
     "name": "Mordenkainen's Magnificent Mansion",
     "description": "You conjure an extradimensional dwelling in range that lasts for the duration. You choose where its one entrance is located. The entrance shimmers faintly and is 5 feet wide and 10 feet tall. You and any creature you designate when you cast the spell can enter the extradimensional dwelling as long as the portal remains open. You can open or close the portal if you are within 30 feet of it. While closed, the portal is invisible.\nBeyond the portal is a magnificent foyer with numerous chambers beyond. The atmosphere is clean, fresh, and warm.\nYou can create any floor plan you like, but the space can't exceed 50 cubes, each cube being 10 feet on each side. The place is furnished and decorated as you choose. It contains sufficient food to serve a nine course banquet for up to 100 people. A staff of 100 near-transparent servants attends all who enter. You decide the visual appearance of these servants and their attire. They are completely obedient to your orders. Each servant can perform any task a normal human servant could perform, but they can't attack or take any action that would directly harm another creature. Thus the servants can fetch things, clean, mend, fold clothes, light fires, serve food, pour wine, and so on. The servants can go anywhere in the mansion but can't leave it. Furnishings and other objects created by this spell dissipate into smoke if removed from the mansion. When the spell ends, any creatures inside the extradimensional space are expelled into the open spaces nearest to the entrance.",
-    "emote": "",
+    "emote": "conjures an extradimensional dwelling",
     "source": "phb 261",
     "range": "300 ft",
     "components": {
@@ -6972,6 +7135,7 @@
     "castingTime": "1 minute",
     "level": 7,
     "school": "Conjuration",
+    "effects": "You choose where its one entrance is located. The entrance shimmers faintly and is 5 ft wide and 10 ft tall. You and any creature you designate when you cast the spell can enter the extradimensional dwelling as long as the portal remains open. You can open or close the portal if you are within 30 ft of it. While closed, the portal is invisible.\nBeyond the portal is a magnificent foyer with numerous chambers beyond. The atmosphere is clean, fresh, and warm.\nYou can create any floor plan you like, but the space can't exceed 50 cubes, each cube being 10 feet on each side. The place is furnished and decorated as you choose. It contains sufficient food to serve a nine course banquet for up to 100 people. A staff of 100 near-transparent servants attends all who enter. You decide the visual appearance of these servants and their attire. They are completely obedient to your orders. Each servant can perform any task a normal human servant could perform, but they can't attack or take any action that would directly harm another creature. Thus the servants can fetch things, clean, mend, fold clothes, light fires, serve food, pour wine, and so on. The servants can go anywhere in the mansion but can't leave it. Furnishings and other objects created by this spell dissipate into smoke if removed from the mansion. When the spell ends, any creatures inside the extradimensional space are expelled into the open spaces nearest to the entrance.",
     "classes": [
       "Bard",
       "Wizard"
@@ -7003,9 +7167,10 @@
   {
     "name": "Mordenkainen's Sword",
     "description": "You create a sword-shaped plane of force that hovers within range. It lasts for the duration.\nWhen the sword appears, you make a melee spell attack against a target of your choice within 5 feet of the sword. On a hit, the target takes 3d10 force damage. Until the spell ends, you can use a bonus action on each of your turns to move the sword up to 20 feet to a spot you can see and repeat this attack against the same target or a different one.",
-    "emote": "",
+    "emote": "creates a sword-shaped plane of force that hovers within range",
     "source": "phb 262",
     "range": "60 ft",
+    "target": "a creature within 5 ft of the sword",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -7017,6 +7182,11 @@
     "castingTime": "1 action",
     "level": 7,
     "school": "Evocation",
+    "attack": {
+      "damage": "3d10",
+      "damageType": "force"
+    },
+    "effects": "As a bonus action on your turn, you can move the sword up to 20 ft and repeat the attack against a creature within 5 ft of it.",
     "classes": [
       "Bard",
       "Wizard"
@@ -7025,9 +7195,11 @@
   {
     "name": "Move Earth",
     "description": "Choose an area of terrain no larger than 40 feet on a side within range. You can reshape dirt, sand, or clay in the area in any manner you choose for the duration. You can raise or lower the area's elevation, create or fill in a trench, erect or flatten a wall, or form a pillar. The extent of any such changes can't exceed half the area's largest dimension. So, if you affect a 40-foot square, you can create a pillar up to 20 feet high, raise or lower the square's elevation by up to 20 feet, dig a trench up to 20 feet deep, and so on. It takes 10 minutes for these changes to complete.\nAt the end of every 10 minutes you spend concentrating on the spell, you can choose a new area of terrain to affect.\nBecause the terrain's transformation occurs slowly, creatures in the area can't usually be trapped or injured by the ground's movement.\nThis spell can't manipulate natural stone or stone construction. Rocks and structures shift to accommodate the new terrain. If the way you shape the terrain would make a structure unstable, it might collapse.\nSimilarly, this spell doesn't directly affect plant growth. The moved earth carries any plants along with it.",
-    "emote": "",
+    "emote": "reshapes dirt, sand, or clay in any manner you choose",
     "source": "phb 263",
     "range": "120 ft",
+    "target": "dirt, sand, or clay in the aoe",
+    "aoe": "an area of terrain no larger than 40 ft on a side within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -7039,6 +7211,7 @@
     "castingTime": "1 action",
     "level": 6,
     "school": "Transmutation",
+    "effects": "You can reshape for the duration. You can raise or lower the area's elevation, create or fill in a trench, erect or flatten a wall, or form a pillar. The extent of any such changes can't exceed half the area's largest dimension. So, if you affect a 40 ft square, you can create a pillar up to 20 ft high, raise or lower the square's elevation by up to 20 ft, dig a trench up to 20 ft deep, and so on. It takes 10 minutes for these changes to complete.\nAt the end of every 10 minutes you spend concentrating on the spell, you can choose a new area of terrain to affect.\nBecause the terrain's transformation occurs slowly, creatures in the area can't usually be trapped or injured by the ground's movement.\nThis spell can't manipulate natural stone or stone construction. Rocks and structures shift to accommodate the new terrain. If the way you shape the terrain would make a structure unstable, it might collapse.\nSimilarly, this spell doesn't directly affect plant growth. The moved earth carries any plants along with it.",
     "classes": [
       "Druid",
       "Sorcerer",
@@ -7740,7 +7913,7 @@
   },
   {
     "name": "Protection from Energy",
-    "description": "Until the spell ends, one willing creature you touch is protected against certain types of creatures: aberrations, celestials, elementals, fey, fiends, and undead. The protection grants several benefits. Creatures of those types have disadvantage on attack rolls against the target. The target also can’t be charmed, frightened, or possessed by them. If the target is already charmed, frightened, or p ossessed by such a creature, the target has advantage on any new saving throw against the relevant effect.",
+    "description": "Until the spell ends, one willing creature you touch is protected against certain types of creatures: aberrations, celestials, elementals, fey, fiends, and undead. The protection grants several benefits. Creatures of those types have disadvantage on attack rolls against the target. The target also can't be charmed, frightened, or possessed by them. If the target is already charmed, frightened, or p ossessed by such a creature, the target has advantage on any new saving throw against the relevant effect.",
     "emote": "protects a creature against certain enemies",
     "source": "phb 270",
     "range": "Touch",
@@ -7754,7 +7927,7 @@
     "castingTime": "1 action",
     "level": 3,
     "school": "Abjuration",
-    "effects": "target is protected against certain types of creatures: aberrations, celestials, elementals, fey, fiends, and undead. The protection grants several benefits. Creatures of those types have disadvantage on attack rolls against the target. The target also can’t be charmed, frightened, or possessed by them. If the target is already charmed, frightened, or possessed by such a creature, the target has advantage on any new saving throw against the relevant effect.",
+    "effects": "target is protected against certain types of creatures: aberrations, celestials, elementals, fey, fiends, and undead. The protection grants several benefits. Creatures of those types have disadvantage on attack rolls against the target. The target also can't be charmed, frightened, or possessed by them. If the target is already charmed, frightened, or possessed by such a creature, the target has advantage on any new saving throw against the relevant effect.",
     "classes": [
       "Cleric",
       "Druid",
@@ -9094,6 +9267,7 @@
     "attack": {
       "damage": "1d8",
       "castingStat": true,
+      "damageType": "force",
       "higherLevelDice": "0.49",
       "higherLevelDie": "d8"
     },
@@ -9653,8 +9827,8 @@
       "damageType": "thunder"
     },
     "save": {
-      "ability": "strength",
       "condition": "if the target is a creature",
+      "ability": "strength",
       "saveFailure": " pushed 10 feet away from you and knocked prone."
     },
     "effects": "The first time you hit with a melee weapon attack during this spell's duration, the attack deals extra damage and it must make a Strength saving throw as outlined above.",
@@ -10077,10 +10251,10 @@
     "level": 0,
     "school": "Enchantment",
     "save": {
+      "condition": "if the target can hear you (though it need not understand you)",
       "ability": "wisdom",
       "damage": "1d4",
       "damageType": "psychic",
-      "condition": "if the target can hear you (though it need not understand you)",
       "saveFailure": "disadvantage on the next attack roll it makes before the end of its next turn"
     },
     "classes": [
@@ -10699,8 +10873,8 @@
       "damageType": "radiant"
     },
     "save": {
-      "ability": "wisdom",
       "condition": "if the target is a creature",
+      "ability": "wisdom",
       "saveFailure": "or be frightened until the spell ends. As an action, the creature can make a Wisdom check against your spell save DC to steel its resolve and end this spell"
     },
     "effects": "The next time you hit with a melee weapon attack during this spell's duration, your attack deals extra damage and it must make a Wisdom saving throw as outlined above",
