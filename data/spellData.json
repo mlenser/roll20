@@ -10191,7 +10191,7 @@
   {
     "name": "True Strike",
     "description": "You extend your hand and point a finger at a target in range. Your magic grants you a brief insight into the target's defenses. On your next turn, you gain advantage on your first attack roll against the target, provided that this spell hasn't ended.",
-    "emote": "points a finger at the target and {{GENDER_PRONOUN_HIS_HER}} magic grants you a brief insight into the target's defenses",
+    "emote": "points a finger at the target and {{GENDER_PRONOUN_HIS_HER}} magic grants {{GENDER_PRONOUN_HIM_HER}} a brief insight into the target's defenses",
     "source": "phb 284",
     "range": "30 ft",
     "target": "a target in range",
