@@ -5,7 +5,7 @@ Scripts for 5e roll20
 
 ### Changelog
 
-**Aug 19th 2015 (1.93)**
+**Aug 19th 2015 (1.94)**
 
 * New spell duration
 
