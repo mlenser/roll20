@@ -1,0 +1,40 @@
+[
+  {
+    "name": "Color Spray",
+    "description": "A dazzling array of flashing, colored light springs from your hand. Roll 6d10; the total is how many hit points of creatures this spell can effect. Creatures in a 15-foot cone originating from you are affected in ascending order of their current hit points (ignoring unconscious creatures and creatures that can't see).\nStarting with the creature that has the lowest current hit points, each creature affected by this spell is blinded until the spell ends. Subtract each creature's hit points from the total before moving on to the creature with the next lowest hit points. A creature's hit points must be equal to or less than the remaining total for that creature to be affected. At the end of each affected creature's turns, the creature can make an Intelligence saving throw. If it succeeds, this effect ends for that target.",
+    "duration": "1 minute",
+    "effects": "Roll 6d10 ([[6d10]]); the total is how many hit points of creatures this spell can effect. Targets are affected in ascending order of their current hit points (ignoring unconscious creatures and creatures that can't see).\nStarting with the creature that has the lowest current hit points, each creature affected by this spell is blinded until the spell ends. Subtract each creature's hit points from the total before moving on to the creature with the next lowest hit points. A creature's hit points must be equal to or less than the remaining total for that creature to be affected.At the end of each affected creature's turns, the creature can make an Intelligence saving throw. If it succeeds, this effect ends for that target. At the end of each affected creature's turns, the creature can make an Intelligence saving throw. If it succeeds, this effect ends for that target."
+  },
+  {
+    "name": "Jump",
+    "remove": true
+  },
+  {
+    "name": "Longstrider",
+    "newName": "Striding and Springing",
+    "description": "You touch a creature. The target's speed increases by 10 feet until the spell ends. In addition, the target can jump three times their normal distance, though they can't jump farther than your remaining movement would allow.",
+    "duration": "1 hour",
+    "effects": "The target's speed increases by 10 ft until the spell ends. In addition, the target can jump three times their normal distance, though they can't jump farther than your remaining movement would allow."
+  },
+  {
+    "name": "Magic Mouth",
+    "level": 1
+  },
+  {
+    "name": "Produce Flame",
+    "description": "A flickering flame appears in your hand. The flame remains there for the duration and harms neither you nor your equipment. The flame sheds bright light in a 10-foot radius and dim light for an additional 10 feet. The spell ends if you dismiss it as an action or if you cast it again.\nYWhen you cast this spell, or as an action on a later turn, you can change the flame into a flaming blade and make a melee spell attack or you can hurl the flame at a creature within 30 feet of you and make a ranged spell attack. On a hit of either, the target takes 1d8 fire damage. Making a ranged spell attack ends the spell.",
+    "effects": "The flame remains there for the duration and harms neither you nor your equipment. The flame sheds bright light in a 10 ft radius and dim light for an additional 10 ft. The spell ends if you dismiss it as an action or if you cast it again.\nWhen you cast this spell, or as an action on a later turn, you can change the flame into a flaming blade and make a melee spell attack or you can hurl the flame at a creature within 30 feet of you and make a ranged spell attack. On a hit of either, the target takes 1d8 fire damage. Making a ranged spell attack ends the spell."
+  },
+  {
+    "name": "Spider Climb",
+    "higherLevel": "When you cast this spell using a spell slot of 2nd level or higher, you can affect one additional beast for each slot level above 1st.",
+    "level": 1
+  },
+  {
+    "name": "True Strike",
+    "description": "Your magic grants you a strike that lands true. On your next turn, you gain advantage on your first attack roll against the target, provided that this spell hasn't ended.",
+    "emote": "'s magic grants {{GENDER_PRONOUN_HIM_HER}} a strike that lands true",
+    "range": "Self",
+    "duration": "up to 1 minute"
+  }
+]
