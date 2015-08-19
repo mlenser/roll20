@@ -5,6 +5,10 @@ Scripts for 5e roll20
 
 ### Changelog
 
+**Aug 19th 2015 (1.93)**
+
+* New spell duration
+
 **Aug 14th 2015 (1.93)**
 
 * Toggle higher level query output

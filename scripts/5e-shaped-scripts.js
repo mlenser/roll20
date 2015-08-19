@@ -54,7 +54,7 @@
   var spellsData = [];
 
   shaped.statblock = {
-    version: '1.93',
+    version: '1.94',
     RegisterHandlers: function () {
       on('chat:message', HandleInput);
 
@@ -2060,7 +2060,18 @@
       setAttribute(spellBase + 'spellschool', spell.school);
     }
     if(spell.castingTime) {
-      setAttribute(spellBase + 'spellcasttime', spell.castingTime);
+      if(spell.castingTime === 'reaction') {
+        setAttribute(spellBase + 'spell_casting_time', '@{spell_casting_time_reaction_var}');
+      } else if(spell.castingTime === 'bonus') {
+        setAttribute(spellBase + 'spell_casting_time', '@{spell_casting_time_bonus_var}');
+      } else if(spell.castingTime === 'action') {
+        setAttribute(spellBase + 'spell_casting_time', '@{spell_casting_time_action_var}');
+      } else if(spell.castingTime === 'minute') {
+        setAttribute(spellBase + 'spell_casting_time', '@{spell_casting_time_minute_var}');
+      } else {
+        setAttribute(spellBase + 'spell_casting_time', '@{spell_casting_time_longer_var}');
+        setAttribute(spellBase + 'spellcasttime', spell.castingTime);
+      }
     }
     if(spell.range) {
       setAttribute(spellBase + 'spellrange', spell.range);
