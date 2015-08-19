@@ -11,62 +11,166 @@ var BloodSpatterAndStatusMarkers = {
 	// You can add as many as you'd like to either category. Spatters are also used for blood trails.
 	spatters: [
 		{
-			'src': 'https://s3.amazonaws.com/files.d20.io/images/11530945/w9YARDmX38ZaVHqZWKNfIA/thumb.png?1439558875',
-			'width': 200,
-			'height': 72
-		},
-		{
-			'src': 'https://s3.amazonaws.com/files.d20.io/images/11530943/zEFXGKQcEnadKnwx5s4VZg/thumb.png?1439558861',
-			'width': 200,
-			'height': 130
-		},
-		{
-			'src': 'https://s3.amazonaws.com/files.d20.io/images/11530942/PqwTCJsxW8HGhGNg0b0G8Q/thumb.png?1439558853',
+			'src': 'https://s3.amazonaws.com/files.d20.io/images/11638270/8nmNImR20gW1hYYonWU9EA/thumb.png?1439938892',
 			'width': 200,
 			'height': 100
 		},
 		{
-			'src': 'https://s3.amazonaws.com/files.d20.io/images/8956394/Iwjwl-T9bJRHo-0T8epYLA/thumb.png?1429629267',
+			'src': 'https://s3.amazonaws.com/files.d20.io/images/11638265/F2Mw_sx4YKSZEhQcoy2ncw/thumb.png?1439938884',
 			'width': 200,
-			'height': 180
+			'height': 83
 		},
 		{
-			'src': 'https://s3.amazonaws.com/files.d20.io/images/8956393/p_OuH4S5zCOy6-RFXgdJkA/thumb.png?1429629266',
+			'src': 'https://s3.amazonaws.com/files.d20.io/images/11638261/-1Gv5e3O5f4h_JeFLH5A7g/thumb.png?1439938877',
+			'width': 200,
+			'height': 40
+		},
+		{
+			'src': 'https://s3.amazonaws.com/files.d20.io/images/11638259/xZxDeGB2Tr_q3UEt082_lw/thumb.png?1439938869',
+			'width': 200,
+			'height': 134
+		},
+		{
+			'src': 'https://s3.amazonaws.com/files.d20.io/images/11638254/v6LFCczCxnX3AYmkngA8ow/thumb.png?1439938857',
+			'width': 200,
+			'height': 46
+		},
+		{
+			'src': 'https://s3.amazonaws.com/files.d20.io/images/11638252/H13406ht412U_WRgYVtCwg/thumb.png?1439938846',
+			'width': 200,
+			'height': 179
+		},
+		{
+			'src': 'https://s3.amazonaws.com/files.d20.io/images/11638246/5Sp_Dk2MR-_EMBpJLLiXcA/thumb.png?1439938833',
+			'width': 200,
+			'height': 146
+		},
+		{
+			'src': 'https://s3.amazonaws.com/files.d20.io/images/11638244/iIJPw_YBucZWYMknD028Gw/thumb.png?1439938822',
+			'width': 200,
+			'height': 139
+		},
+		{
+			'src': 'https://s3.amazonaws.com/files.d20.io/images/11638242/A7eIviKjyG6x9Q5wxy8xkQ/thumb.png?1439938811',
+			'width': 200,
+			'height': 100
+		},
+		{
+			'src': 'https://s3.amazonaws.com/files.d20.io/images/11638235/ViN4vWlxbL1PSxkjOFASLg/thumb.png?1439938798',
+			'width': 200,
+			'height': 134
+		},
+		{
+			'src': 'https://s3.amazonaws.com/files.d20.io/images/11638231/kKVxusJuBQMxDUSzNk0QAg/thumb.png?1439938780',
+			'width': 200,
+			'height': 40
+		},
+		{
+			'src': 'https://s3.amazonaws.com/files.d20.io/images/11638226/nN6P5U5vWRoaAd5-XMS5dA/thumb.png?1439938768',
+			'width': 200,
+			'height': 99
+		},
+		{
+			'src': 'https://s3.amazonaws.com/files.d20.io/images/11638217/ZZaTOGr5pPNY01RZKapl6g/thumb.png?1439938744',
+			'width': 200,
+			'height': 72
+		},
+		{
+			'src': 'https://s3.amazonaws.com/files.d20.io/images/11638212/_eaJ7fr_QPWWEW7PmvPzqg/thumb.png?1439938727',
+			'width': 200,
+			'height': 35
+		},
+		{
+			'src': 'https://s3.amazonaws.com/files.d20.io/images/11638206/RE2PGgNz11RZtV1rIzHfpA/thumb.png?1439938712',
+			'width': 200,
+			'height': 51
+		},
+		{
+			'src': 'https://s3.amazonaws.com/files.d20.io/images/11638204/U90Jjp_cIYQRJsT_4XM8eA/thumb.png?1439938698',
+			'width': 200,
+			'height': 31
+		},
+		{
+			'src': 'https://s3.amazonaws.com/files.d20.io/images/11638202/vRaCrr-SoQd1DORtK9IGfg/thumb.png?1439938687',
+			'width': 200,
+			'height': 130
+		},
+		{
+			'src': 'https://s3.amazonaws.com/files.d20.io/images/11638194/JZgn6ALhb3DuCWeSEd2S8g/thumb.png?1439938672',
+			'width': 200,
+			'height': 182
+		},
+		{
+			'src': 'https://s3.amazonaws.com/files.d20.io/images/11638185/BDOgQLzTlXPeWZHpt_AOYA/thumb.png?1439938657',
+			'width': 200,
+			'height': 100
+		},
+		{
+			'src': 'https://s3.amazonaws.com/files.d20.io/images/11638182/nBWgsf-zsN6wHVTKAXMY1g/thumb.png?1439938643',
+			'width': 200,
+			'height': 146
+		},
+		{
+			'src': 'https://s3.amazonaws.com/files.d20.io/images/11638174/qJvQwWJr20D7ShU6bBJ8Qw/thumb.png?1439938628',
+			'width': 200,
+			'height': 89
+		},
+		{
+			'src': 'https://s3.amazonaws.com/files.d20.io/images/11638170/Qe-4mHgUs2zsYGDpjU_5TA/thumb.png?1439938618',
+			'width': 200,
+			'height': 193
+		},
+		{
+			'src': 'https://s3.amazonaws.com/files.d20.io/images/11638163/rd-CJLyawUbLAb0YVxIAxg/thumb.png?1439938604',
 			'width': 200,
 			'height': 88
-		},
-		{
-			'src': 'https://s3.amazonaws.com/files.d20.io/images/8956392/1JyidqIpo2FJYzkinSUgPA/thumb.png?1429629266',
-			'width': 200,
-			'height': 146
-		},
-		{
-			'src': 'https://s3.amazonaws.com/files.d20.io/images/8954514/j9J34y5OMt3CgsMjqtW4wQ/thumb.png?1429618180',
-			'width': 200,
-			'height': 146
 		}
 	],
 	pools: [
 		{
-			'src': 'https://s3.amazonaws.com/files.d20.io/images/11530949/t8ND85zP6KCEaWJ-bd1NAg/thumb.png?1439558885',
+			'src': 'https://s3.amazonaws.com/files.d20.io/images/11638609/oowTOShdIP-PLoxtz-IkCg/thumb.png?1439939580',
+			'width': 181,
+			'height': 200
+		},
+		{
+			'src': 'https://s3.amazonaws.com/files.d20.io/images/11638598/DIlJabyrE3ducucpa93v6A/thumb.png?1439939571',
+			'width': 200,
+			'height': 161
+		},
+		{
+			'src': 'https://s3.amazonaws.com/files.d20.io/images/11638587/QPdMU5VryXp86pf5ZFsvDA/thumb.png?1439939564',
+			'width': 200,
+			'height': 128
+		},
+		{
+			'src': 'https://s3.amazonaws.com/files.d20.io/images/11638577/havO5udqh2-bjX81r_V51g/thumb.png?1439939550',
+			'width': 200,
+			'height': 155
+		},
+		{
+			'src': 'https://s3.amazonaws.com/files.d20.io/images/11638566/jxAyAP-FK5s52tcfV_oaUw/thumb.png?1439939537',
+			'width': 200,
+			'height': 77
+		},
+		{
+			'src': 'https://s3.amazonaws.com/files.d20.io/images/11638558/xZgwCOqTFYTU4_hfKsDUAg/thumb.png?1439939528',
+			'width': 200,
+			'height': 196
+		},
+		{
+			'src': 'https://s3.amazonaws.com/files.d20.io/images/11638550/VWjQJxKhtJ1qQrLb-Z4Cvg/thumb.png?1439939518',
+			'width': 180,
+			'height': 200
+		},
+		{
+			'src': 'https://s3.amazonaws.com/files.d20.io/images/11638541/Xb1KTMqgty5tAEcr_-53Jg/thumb.png?1439939506',
 			'width': 200,
 			'height': 173
 		},
 		{
-			'src': 'https://s3.amazonaws.com/files.d20.io/images/11530892/8ZXJdAdcHPUSDzkCeoOPTg/thumb.png?1439558577',
-			'width': 160,
-			'height': 290,
-			'sizeAdjustment': 1.4
-		},
-		{
-			'src': 'https://s3.amazonaws.com/files.d20.io/images/8956396/13_IKIeiBDhuhxTGysUIqQ/thumb.png?1429629268',
+			'src': 'https://s3.amazonaws.com/files.d20.io/images/11638533/a3xycjVLmVKHainc6a3htg/thumb.png?1439939496',
 			'width': 200,
 			'height': 200
-		},
-		{
-			'src': 'https://s3.amazonaws.com/files.d20.io/images/8954513/vd0R4uHgI2ZfAE3jbMH8mA/thumb.png?1429618170',
-			'width': 200,
-			'height': 135
 		}
 	],
 	chooseBlood: function (type) {
@@ -111,20 +215,15 @@ var BloodSpatterAndStatusMarkers = {
 
 			var bloodImageAspectRatio = bloodImage.width / bloodImage.height,
 				widthRatioMultiplier = 1,
-				heightRatioMultiplier = 1,
-				sizeAdjustment = 1;
-
-			if(bloodImage.sizeAdjustment) {
-				sizeAdjustment = bloodImage.sizeAdjustment;
-			}
+				heightRatioMultiplier = 1;
 
 			if(bloodImageAspectRatio < 1) {
 				widthRatioMultiplier = bloodImageAspectRatio;
 			} else if (bloodImageAspectRatio > 1) {
 				heightRatioMultiplier = bloodImage.height / bloodImage.width;
 			}
-			bloodTokenWidth = bloodTokenWidth * widthRatioMultiplier * sizeAdjustment;
-			bloodTokenHeight = bloodTokenHeight * heightRatioMultiplier * sizeAdjustment;
+			bloodTokenWidth = bloodTokenWidth * widthRatioMultiplier;
+			bloodTokenHeight = bloodTokenHeight * heightRatioMultiplier;
 		}
 
 		var widthIncrement = bloodTokenWidth * 0.1,
