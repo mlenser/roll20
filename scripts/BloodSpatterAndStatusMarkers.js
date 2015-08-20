@@ -4,6 +4,8 @@ var BloodSpatterAndStatusMarkers = {
 
 	hpBar: 3, //1, 2, or 3
 
+	hpCountUp: false,
+
 	// This will make it so only the GM can use the !clearblood command. Change to "true" if you want to check for authorization.
 	onlyAllowGMtoRunCommands: true,
 
@@ -297,12 +299,20 @@ var BloodSpatterAndStatusMarkers = {
 		var percentOfHpLost = damageTaken / maxHealth,
 			damageMultiplier = 1 + Math.min(percentOfHpLost / 2, 0.5);
 
-		if (currentHealth <= maxHealth / 2) {
+		if (
+			(!BloodSpatterAndStatusMarkers.hpCountUp && currentHealth <= maxHealth / 2)
+			||
+			(BloodSpatterAndStatusMarkers.hpCountUp && currentHealth >= maxHealth / 2)
+		) {
 			token.set({
 				status_redmarker: true
 			});
 			// Create spatter near token if "bloodied". Chance of spatter depends on severity of damage
-			if (damageTaken > 0 && currentHealth > 0 && currentHealth < randomInteger(maxHealth)) {
+			if (damageTaken > 0 && currentHealth > 0 && (
+				(!BloodSpatterAndStatusMarkers.hpCountUp &&  currentHealth < randomInteger(maxHealth))
+				||
+				(BloodSpatterAndStatusMarkers.hpCountUp &&  currentHealth > randomInteger(maxHealth))
+				)) {
 				BloodSpatterAndStatusMarkers.createBlood(token, damageMultiplier, 'spatter');
 			}
 		} else {
@@ -310,7 +320,11 @@ var BloodSpatterAndStatusMarkers = {
 				status_redmarker: false
 			});
 		}
-		if (currentHealth <= 0) {
+		if (
+			(!BloodSpatterAndStatusMarkers.hpCountUp && currentHealth <= 0)
+			||
+			(BloodSpatterAndStatusMarkers.hpCountUp && currentHealth >= maxHealth)
+		) {
 			token.set({
 				status_dead: true
 			});
@@ -330,7 +344,15 @@ on('ready', function () {
 	on('change:graphic:bar' + BloodSpatterAndStatusMarkers.hpBar + '_value', function (token, prev) {
 		var maxHealth = token.get('bar' + BloodSpatterAndStatusMarkers.hpBar + '_max'),
 			currentHealth = token.get('bar' + BloodSpatterAndStatusMarkers.hpBar + '_value'),
-			damageTaken = prev['bar' + BloodSpatterAndStatusMarkers.hpBar + '_value'] - currentHealth;
+			previousHealth = prev['bar' + BloodSpatterAndStatusMarkers.hpBar + '_value'],
+			damageTaken;
+
+		if(!BloodSpatterAndStatusMarkers.hpCountUp) {
+			damageTaken = previousHealth - currentHealth
+		} else {
+			damageTaken = currentHealth - previousHealth;
+		}
+
 		BloodSpatterAndStatusMarkers.tokenHPChanged(token, maxHealth, currentHealth, damageTaken);
 	});
 
@@ -347,7 +369,11 @@ on('ready', function () {
 			percentOfHpLost = healthLost / maxHealth,
 			damageMultiplier = .5 + Math.min(percentOfHpLost / 2, 0.5);
 
-		if (currentHealth <= maxHealth / 2 && currentHealth < randomInteger(maxHealth)) {
+		if (
+			(!BloodSpatterAndStatusMarkers.hpCountUp && currentHealth <= maxHealth / 2 && currentHealth < randomInteger(maxHealth))
+			||
+			(BloodSpatterAndStatusMarkers.hpCountUp && currentHealth >= maxHealth / 2 && currentHealth > randomInteger(maxHealth))
+		) {
 			BloodSpatterAndStatusMarkers.createBlood(token, damageMultiplier, 'spatter');
 			BloodSpatterAndStatusMarkers.increaseTimeout();
 		}
