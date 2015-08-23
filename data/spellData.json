@@ -952,7 +952,7 @@
     "castingTime": "action",
     "level": 1,
     "school": "Enchantment",
-    "effects": "Whenever a target that fails this saving throw makes an attack roll or a saving throw before the spell ends, the target must roll a d4 and subtract the number rolled from the attack roll or saving throw.",
+    "effects": "Whenever a target makes an attack roll or a saving throw before the spell ends, the target can roll a d4 and add the number rolled to the attack roll or saving throw.",
     "classes": [
       "Cleric",
       "Paladin"
