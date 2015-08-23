@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
 	inject = require('gulp-inject'),
 	uglify = require('gulp-uglify'),
+	minifyHTML = require('gulp-minify-html'),
 	fs = require("fs");
 
 
@@ -30,40 +31,36 @@ gulp.task('compile', function() {
 				var fileData = file.contents.toString('utf8'),
 					spellData = JSON.parse(fileData);
 
-				fs.readFile('./data/spellDataHouseruleAlterations.json', 'utf-8', function(err, data) {
-					var houseruleData = JSON.parse(data);
+				var houseruleData = JSON.parse(fs.readFileSync('./data/spellDataHouseruleAlterations.json', 'utf-8'));
 
-					for (var key = 0; key < houseruleData.length; key++) {
-						var houseruleSpell = houseruleData[key],
-							spellToAdjust = search(houseruleSpell.name, spellData);
+				for (var key = 0; key < houseruleData.length; key++) {
+					var houseruleSpell = houseruleData[key],
+						spellToAdjust = search(houseruleSpell.name, spellData);
 
-						if(houseruleSpell.remove) {
-							console.log('remove', spellToAdjust.name);
-							var indexOfSpell = arrayObjectIndexOf(spellData, spellToAdjust.name, 'name');
-							console.log('indexOfSpell', indexOfSpell);
-							spellData.splice(indexOfSpell, 1);
+					if(houseruleSpell.remove) {
+						var indexOfSpell = arrayObjectIndexOf(spellData, spellToAdjust.name, 'name');
+						spellData.splice(indexOfSpell, 1);
+						console.log('removed', spellToAdjust.name, indexOfSpell);
+						continue;
+					}
 
-							houseruleData.splice(key, 1);
-							console.log('remove2');
-							key--;
-							continue;
-						}
-
-						for (var property in houseruleSpell) {
-							if (houseruleSpell.hasOwnProperty(property)) {
-								if (property === 'newName') {
-									spellToAdjust.name = property.newName;
-								} else if (property !== 'name' && property !== 'newName') {
-									spellToAdjust[property] = houseruleSpell[property];
-								}
+					for (var property in houseruleSpell) {
+						if (houseruleSpell.hasOwnProperty(property)) {
+							if (property === 'newName') {
+								spellToAdjust.name = houseruleSpell[property];
+							} else if (property !== 'name' && property !== 'newName') {
+								spellToAdjust[property] = houseruleSpell[property];
 							}
 						}
 					}
-				});
+				}
+
 				var returnedData = JSON.stringify(spellData);
 
 				return returnedData.substring(1, returnedData.length-1);
 			}
 		}))
+		.pipe(uglify())
+		//.pipe(minifyHTML({}))
 		.pipe(gulp.dest('./scripts/dist'));
 });
