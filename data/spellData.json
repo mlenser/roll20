@@ -9857,7 +9857,7 @@
     "level": 0,
     "school": "Transmutation",
     "attack": {
-      "damage": "1d6",
+      "damage": "((@{level} + 1) / 6 + 0.5)d6",
       "damageType": "piercing"
     },
     "effects": "If the attack hits, and if the creature is Large or smaller, you pull the creature up to 10 ft closer to you.",
