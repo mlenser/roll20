@@ -49,7 +49,7 @@
     "name": "Flame Arrows",
     "description": "You touch a quiver containing arrows or bolts. When a target is hit by a ranged weapon attack using a piece of ammunition drawn from the quiver, the target takes an extra 1d6 fire damage. The spell's magic ends on the piece of ammunition when it hits or misses. When the quiver runs out of ammunition is takes an action to fill it from another quiver.",
     "higherLevel": "When you cast this spell using a spell slot of 4th or 5th leveI, you can maintain your concentration on the spell for up to 8 hours. When you use a spell slot of 6th level or higher, you can maintain your concentration on the spell for up to 24 hours.",
-    "effects": "When a target is hit by a ranged weapon attack using a piece of ammunition drawn from the quiver, the target takes an extra 1d6 fire damage. The spell's magic ends on the piece of ammunition when it hits or misses. When the quiver runs out of ammunition is takes an action to fill it from another quiver."
+    "effects": "When a target is hit by a ranged weapon attack using a piece of ammunition drawn from the quiver, the target takes an extra 1d6 fire damage. The spell's magic ends on the piece of ammunition when it hits or misses. When the quiver runs out of ammunition it takes an action to fill it from another quiver."
   },
   {
     "name": "Glyph of Warding",
