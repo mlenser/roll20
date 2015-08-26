@@ -47,7 +47,8 @@
 			case '!darkvision':
 				break;
 		}
-	}
+	};
+
 	vision.dayNightToggle = function (token, dayNight) {
 		var page = getObj('page', (token && token.get('pageid')) || Campaign().get('playerpageid'));
 
@@ -128,7 +129,7 @@
 			page: token.get('pageid'),
 			lightRadius: radius,
 			lightRadiusMax: radius ,
-			light_dimradius: radius,
+			light_dimradius: radius
 		};
 	};
 
@@ -165,7 +166,7 @@
 							flicker.lightRadius += vision.lightRadiusDelta;
 						}
 
-						if(flicker.lightRadius < flicker.lightRadiusMax * .95) {
+						if(flicker.lightRadius < flicker.lightRadiusMax * 0.95) {
 							flicker.lightRadius += vision.lightRadiusDelta;
 						} else if (flicker.lightRadius > flicker.lightRadiusMax) {
 							flicker.lightRadius -= vision.lightRadiusDelta;
@@ -182,17 +183,19 @@
 
 	vision.moveAllFlickers = function () {
 		for(var key in state.Vision.flickers) {
-			var flicker = state.Vision.flickers[key],
-				token = getObj('graphic', flicker.parent),
-				flickerToken = getObj('graphic', flicker.id);
+			if(key) {
+				var flicker = state.Vision.flickers[key],
+					token = getObj('graphic', flicker.parent),
+					flickerToken = getObj('graphic', flicker.id);
 
-			if(flickerToken) {
-				flickerToken.set({
-					'top': token.get('top'),
-					'left': token.get('left')
-				});
-			} else {
-				delete state.Vision.flickers[key];
+				if(flickerToken) {
+					flickerToken.set({
+						'top': token.get('top'),
+						'left': token.get('left')
+					});
+				} else {
+					delete state.Vision.flickers[key];
+				}
 			}
 		}
 	};
@@ -200,15 +203,17 @@
 	vision.checkForTokenMove = function(obj) {
 		if(obj) {
 			for(var key in state.Vision.flickers) {
-				var flicker = state.Vision.flickers[key];
-				if(flicker.parent == obj.id) {
-					var flickerObj = getObj('graphic', flicker.id);
+				if(key) {
+					var flicker = state.Vision.flickers[key];
+					if(flicker.parent == obj.id) {
+						var flickerObj = getObj('graphic', flicker.id);
 
-					flickerObj.set({
-						'top': obj.get('top'),
-						'left': obj.get('left')
-					});
-					break;
+						flickerObj.set({
+							'top': obj.get('top'),
+							'left': obj.get('left')
+						});
+						break;
+					}
 				}
 			}
 		}
@@ -228,6 +233,7 @@
 	};
 
 	vision.getSelectedToken = vision.getSelectedToken || function(msg, veryify, callback) {
+		var message;
 		if(playerIsGM(msg.playerid)) {
 			if (msg.selected || (msg.selected && msg.selected.length)) {
 				for (var i = 0; i < msg.selected.length; i++) {
@@ -240,7 +246,7 @@
 				}
 			} else {
 				if(veryify === 'verify') {
-					var message = 'No token selected';
+					message = 'No token selected';
 					log(message);
 					sendChat('GM', '/w gm ' + message);
 				} else {
@@ -248,7 +254,7 @@
 				}
 			}
 		} else {
-			var message = 'You are not the GM';
+			message = 'You are not the GM';
 			log(message);
 			sendChat('GM', '/w ' + msg.who + ' + message');
 		}
