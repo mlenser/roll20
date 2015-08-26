@@ -3630,6 +3630,7 @@
     "emote": "conjures squirming, ebony tentacles",
     "source": "phb 238",
     "range": "90 ft",
+    "target": "a creature that enters the affected area for the first time on a turn or starts its turn there",
     "aoe": "20 ft square on ground that you can see within range",
     "components": {
       "verbal": true,
@@ -3648,7 +3649,7 @@
       "damageType": "bludgeoning",
       "saveFailure": "restrained for the spell's duration"
     },
-    "effects": "For the duration, these tentacles turn the ground in the area into difficult terrain. When a creature enters the affected area for the first time on a turn or starts its turn there, the creature must succeed on a Dexterity saving throw as outlined above. A creature that starts its turn in the area and is already restrained by the tentacles takes the damage again. A creature restrained by the tentacles can use its action to make a Strength or Dexterity check (its choice) against your spell save DC. On a success, it frees itself.",
+    "effects": "For the duration, these tentacles turn the ground in the area into difficult terrain. A creature that starts its turn in the area and is already restrained by the tentacles takes the damage again. A creature restrained by the tentacles can use its action to make a Strength or Dexterity check (its choice) against your spell save DC. On a success, it frees itself.",
     "classes": [
       "Warlock",
       "Wizard"
@@ -4135,7 +4136,7 @@
     "name": "Flame Arrows",
     "description": "You touch a quiver containing arrows or bolts. When a target is hit by a ranged weapon attack using a piece of ammunition drawn from the quiver, the target takes an extra 1d6 fire damage. The spell's magic ends on the piece of ammunition when it hits or misses, and the spell ends when twelve pieces of ammunition have been drawn from the quiver.",
     "higherLevel": "When you cast this spell using a spell slot of 4th level or higher, the number of pieces of ammunition you can affect with this spell increases by two for each slot level above 3rd.",
-    "emote": "transmutes ammunition inside of a quiver",
+    "emote": "transmutes a quiver to ignite ammunition",
     "source": "ee pc 18",
     "range": "Touch",
     "components": {
@@ -4704,7 +4705,7 @@
       "material": true,
       "materialMaterial": "Incense and powdered diamond worth at least 200 gp, the spell consumes"
     },
-    "duration": "Until dispelled",
+    "duration": "Until dispelled or triggered",
     "castingTime": "1 hour",
     "level": 3,
     "school": "Abjuration",
@@ -5968,11 +5969,11 @@
   },
   {
     "name": "Knock",
-    "description": "Choose an object that you can see within range. The object can be a door, a box, a chest, a set of manacles, a padlock, or another object that contains a mundane or magical means that prevents access.\nA target that is held shut by a mundane lock or that is stuck or barred becomes unlocked, unstuck, or unbarred. If the object has multiple locks, only one of them is unlocked.\nIf you choose a target that is held shut with arcane lock, that spell is suppressed for 10 minutes, during which time the target can be opened and shut normally.\nWhen you cast the spell, a loud knock, audible from as far away as 300 feet, emanates from the target object.",
+    "description": "Choose an object that you can see within range. The object can be a door, a box, a chest, a set of manacles, a pad10ck, or another object that contains a mundane or magical means that prevents access.\nA target that is held shut by a mundane lock or that is stuck or barred becomes unlocked, unstuck, or unbarred. If the object has multiple locks, only one of them is unlocked.\nIf you choose a target that is held shut with arcane lock, that spell is suppressed for 10 minutes, during which time the target can be opened and shut normally.\nWhen you cast the spell, a loud knock, audible from as far away as 300 feet, emanates from the target object.",
     "emote": "causes an object to magically open with a loud knock",
     "source": "phb 254",
     "range": "60 ft",
-    "target": "an object that you can see within range. The object can be a door, a box, a chest, a set of manacles, a padlock, or another object that contains a mundane or magical means that prevents access.",
+    "target": "an object that you can see within range. The object can be a door, a box, a chest, a set of manacles, a pad10ck, or another object that contains a mundane or magical means that prevents access.",
     "components": {
       "verbal": true
     },
@@ -7500,7 +7501,7 @@
   {
     "name": "Phantasmal Killer",
     "description": "You tap into the nightmares of a creature you can see within range and create an illusory manifestation of its deepest fears, visible only to that creature. The target must make a Wisdom saving throw. On a failed save, the target becomes frightened for the duration. At the start of each of the target's turns before the spell ends, the target must succeed on a Wisdom saving throw or take 4d10 psychic damage. On a successful save, the spell ends.",
-    "higherLevel": "When you cast this spell using a spell slot of 5th level or higher, the damage increases by 1dlO for each slot level above 4th.",
+    "higherLevel": "When you cast this spell using a spell slot of 5th level or higher, the damage increases by 1d10 for each slot level above 4th.",
     "emote": "taps into the nightmares of a creature and creates an illusory manifestation of its deepest fears, visible only to that creature",
     "source": "phb 265",
     "range": "120 ft",
@@ -7970,7 +7971,7 @@
   },
   {
     "name": "Protection from Energy",
-    "description": "Until the spell ends, one willing creature you touch is protected against certain types of creatures: aberrations, celestials, elementals, fey, fiends, and undead. The protection grants several benefits. Creatures of those types have disadvantage on attack rolls against the target. The target also can't be charmed, frightened, or possessed by them. If the target is already charmed, frightened, or p ossessed by such a creature, the target has advantage on any new saving throw against the relevant effect.",
+    "description": "For the duration, the willing creature you touch has resistance to one damage type of your choice: acid, cold, fire, lightning, or thunder.",
     "emote": "protects a creature against certain enemies",
     "source": "phb 270",
     "range": "Touch",
@@ -7984,7 +7985,7 @@
     "castingTime": "action",
     "level": 3,
     "school": "Abjuration",
-    "effects": "target is protected against certain types of creatures: aberrations, celestials, elementals, fey, fiends, and undead. The protection grants several benefits. Creatures of those types have disadvantage on attack rolls against the target. The target also can't be charmed, frightened, or possessed by them. If the target is already charmed, frightened, or possessed by such a creature, the target has advantage on any new saving throw against the relevant effect.",
+    "effects": "target has resistance to one damage type of your choice: acid, cold, fire, lightning, or thunder.",
     "classes": [
       "Cleric",
       "Druid",
@@ -10704,6 +10705,7 @@
     "emote": "conjures a mass of thick, sticky webbing",
     "source": "phb 287",
     "range": "60 ft",
+    "target": "each creature that starts its turn in the webs or that enters them during its turn",
     "aoe": "20 ft cube from a point within range",
     "components": {
       "verbal": true,
@@ -10720,7 +10722,7 @@
       "ability": "dexterity",
       "saveFailure": "the creature is restrained as long as it remains in the webs or until it breaks free.\nA creature restrained by the webs can use its action to make a Strength check against your spell save DC. If it succeeds, it is no longer restrained.\nThe webs are flammable. Any 5 ft cube of webs exposed to fire burns away in 1 round, dealing 2d4 fire damage to any creature that starts its turn in the fire."
     },
-    "effects": "The webs are difficult terrain and lightly obscure their area.\nIf the webs aren't anchored between two solid masses (such as walls or trees) or layered across a floor, wall, or ceiling, the conjured web collapses on itself, and the spell ends at the start of your next turn. Webs layered over a flat surface have a depth of 5 feet.\nEach creature that starts its turn in the webs or that enters them during its turn must make a Dexterity saving throw as outlined above.",
+    "effects": "The webs are difficult terrain and lightly obscure their area.\nIf the webs aren't anchored between two solid masses (such as walls or trees) or layered across a floor, wall, or ceiling, the conjured web collapses on itself, and the spell ends at the start of your next turn. Webs layered over a flat surface have a depth of 5 feet.",
     "classes": [
       "Druid",
       "Sorcerer",

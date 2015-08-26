@@ -1,5 +1,21 @@
 [
   {
+    "name": "Beacon of Hope",
+    "duration": "1 minute",
+    "concentration": false
+  },
+  {
+    "name": "Blight",
+    "save": {
+      "ability": "constitution",
+      "damage": "10d8",
+      "damageType": "necrotic",
+      "saveSuccess": "half damage",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d8"
+    }
+  },
+  {
     "name": "Blur",
     "duration": "Up to 10 minutes"
   },
@@ -26,8 +42,70 @@
     }
   },
   {
+    "name": "Feign Death",
+    "level": 2
+  },
+  {
+    "name": "Flame Arrows",
+    "description": "You touch a quiver containing arrows or bolts. When a target is hit by a ranged weapon attack using a piece of ammunition drawn from the quiver, the target takes an extra 1d6 fire damage. The spell's magic ends on the piece of ammunition when it hits or misses. When the quiver runs out of ammunition is takes an action to fill it from another quiver.",
+    "higherLevel": "When you cast this spell using a spell slot of 4th or 5th leveI, you can maintain your concentration on the spell for up to 8 hours. When you use a spell slot of 6th level or higher, you can maintain your concentration on the spell for up to 24 hours.",
+    "effects": "When a target is hit by a ranged weapon attack using a piece of ammunition drawn from the quiver, the target takes an extra 1d6 fire damage. The spell's magic ends on the piece of ammunition when it hits or misses. When the quiver runs out of ammunition is takes an action to fill it from another quiver."
+  },
+  {
+    "name": "Glyph of Warding",
+    "description": "When you cast this spell, you inscribe a glyph that harms other creatures, either upon a surface (such as a table or a section of floor or wall) or within an object that can be closed (such as a book, a scroll, or a treasure chest) to conceal the glyph. If you choose a surface, the glyph can cover an area of the surface no larger than 10 feet in diameter. If the spell is cast without consuming the powered diamond then the spell will only last an hour. If you choose an object, that object must remain in its place; if the object is moved more than 10 feet from where you cast this spell, the glyph is broken, and the spell ends without being triggered.\nThe glyph is nearly invisible and requires a successful Intelligence (Investigation) check against your spell save DC to be found.\nYou decide what triggers the glyph when you cast the spell. For glyphs inscribed on a surface, the most typical triggers include touching or standing on the glyph, removing another object covering the glyph, approaching within a certain distance of the glyph, or manipulating the object on which the glyph is inscribed. For glyphs inscribed within an object, the most commontriggers include opening that object, approaching within a certain distance of the object, or seeing or reading the glyph. Once a glyph is triggered, this spell ends.\nYou can further refine the trigger so the spell activates only under certain circumstances or according to physical characteristics (such as height or weight), creature kind (for example, the ward could be set to affect aberrations or drow), or alignment. You can also set conditions for creatures that don't trigger the glyph, such as those w ho say a certain password.\nWhen you inscribe the glyph, choose explosive runes or a spell glyph.\nExplosive Runes. When triggered, the glyph erupts with magical energy in a 20-foot-radius sphere centered on the glyph. The sphere spreads around corners. Each creature in the area must make a Dexterity saving throw. A creature takes 5d8 acid, cold, fire, lightning, or thunder damage on a failed saving throw (your choice when you create the glyph), or half as much damage on a successful one.\nSpell Glyph. You can store a prepared spell of 3rd level or lower in the glyph by casting it as part of creating the glyph. The spell must target a single creature or an area. The spell being stored has no immediate effect when cast in this way. When the glyph is triggered, the stored spell is cast. If the spell has a target, it targets the creature that triggered the glyph. If the spell affects an area, the area is centered on that creature. If the spell summons hostile creatures or creates harmful objects or traps, they appear as close as possible to the intruder and attack it. If the spell requires concentration, it lasts until the end of its full duration.",
+    "castingTime": "1 minute",
+    "effects": "If the spell is cast without consuming the powered diamond then the spell will only last an hour. If you choose an object, that object must remain in its place; if the object is moved more than 10 ft from where you cast this spell, the glyph is broken, and the spell ends without being triggered.\nThe glyph is nearly invisible and requires a successful Intelligence (Investigation) check against your spell save DC to be found.\nYou decide what triggers the glyph when you cast the spell. For glyphs inscribed on a surface, the most typical triggers include touching or standing on the glyph, removing another object covering the glyph, approaching within a certain distance of the glyph, or manipulating the object on which the glyph is inscribed. For glyphs inscribed within an object, the most commontriggers include opening that object, approaching within a certain distance of the object, or seeing or reading the glyph. Once a glyph is triggered, this spell ends.\nYou can further refine the trigger so the spell activates only under certain circumstances or according to physical characteristics (such as height or weight), creature kind (for example, the ward could be set to affect aberrations or drow), or alignment. You can also set conditions for creatures that don't trigger the glyph, such as those w ho say a certain password.\nWhen you inscribe the glyph, choose explosive runes or a spell glyph.\nExplosive Runes. When triggered, the glyph erupts with magical energy in a 20 ftradius sphere centered on the glyph. The sphere spreads around corners. Each creature in the area must make a Dexterity saving throw. A creature takes 5d8 acid, cold, fire, lightning, or thunder damage on a failed saving throw (your choice when you create the glyph), or half as much damage on a successful one.\nSpell Glyph. You can store a prepared spell of 3rd level or lower in the glyph by casting it as part of creating the glyph. The spell must target a single creature or an area. The spell being stored has no immediate effect when cast in this way. When the glyph is triggered, the stored spell is cast. If the spell has a target, it targets the creature that triggered the glyph. If the spell affects an area, the area is centered on that creature. If the spell summons hostile creatures or creates harmful objects or traps, they appear as close as possible to the intruder and attack it. If the spell requires concentration, it lasts until the end of its full duration."
+  },
+  {
+    "name": "Grasping Vine",
+    "newName": "Grasping Vines",
+    "description": "Squirming vines fill a 20-foot square on ground that you can see within range. For the duration, these vines turn the ground in the area into difficult terrain. When a creature enters the affected area for the first time on a turn or starts its turn there, the creature must succeed on a Dexterity saving throw or take 3d6 bludgeoning damage and be restrained by the vines until the spell ends. A creature that starts its turn in the area and is already restrained by the vines takes 3d6 bludgeoning damage. A creature restrained by the vines can use its action to make a Strength or Dexterity check (its choice) against your spell save DC. On a success, it frees itself.",
+
+    "emote": "conjures vines that sprout from the ground",
+    "source": "phb 238 / phb 246",
+    "range": "90 ft",
+    "target": "a creature that enters the affected area for the first time on a turn or starts its turn there",
+    "aoe": "20 ft square on ground that you can see within range",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": true,
+      "materialMaterial": "A piece of vine"
+    },
+    "duration": "Up to 1 minute",
+    "concentration": true,
+    "castingTime": "action",
+    "level": 4,
+    "school": "Conjuration",
+    "save": {
+      "ability": "dexterity",
+      "damage": "3d6",
+      "damageType": "bludgeoning",
+      "saveFailure": "restrained for the spell's duration"
+    },
+    "effects": "For the duration, these vines turn the ground in the area into difficult terrain. A creature that starts its turn in the area and is already restrained by the vines takes the damage again. A creature restrained by the vines can use its action to make a Strength or Dexterity check (its choice) against your spell save DC. On a success, it frees itself.",
+    "classes": [
+      "Cleric",
+      "Druid",
+      "Ranger"
+    ],
+    "domains": [
+      "Nature"
+    ]
+  },
+  {
     "name": "Jump",
     "remove": true
+  },
+
+  {
+    "name": "Locate Creature",
+    "ritual": true
+  },
+  {
+    "name": "Locate Object",
+    "ritual": true
   },
   {
     "name": "Longstrider",
@@ -61,9 +139,36 @@
     ]
   },
   {
+    "name": "Nondetection",
+    "higherLevel": "When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd.",
+    "level": 2,
+    "effects": "The target can't be targeted by any divination magic or perceived through magical scrying sensors."
+  },
+  {
+    "name": "Phantasmal Killer",
+    "description": "You tap into the nightmares of a creature you can see within range and create an illusory manifestation of its deepest fears, visible only to that creature in a square that you can see within 5 feet of the target. The target must make an Intelligence saving throw. On a failed save, the target becomes frightened for the duration. If the creature ends its turn in a location where it doesn't have line of sight to the phantom, the creature can make an Intelligence saving throw. On a successful save, the spell end for that creature. The phantom pursues the target, moving up 30 feet toward the target after the target's turn.",
+    "aoe": "phantom in a square that you can see within 5 feet of the target",
+    "save": {
+      "ability": "intelligence",
+      "saveFailure": "becomes frightened for the duration. If the creature ends its turn in a location where it doesn't have line of sight to the phantom, the creature can make an Intelligence saving throw. On a successful save, the spell end for that creature. The phantom pursues the target, moving up 30 ft toward the target after the target's turn."
+    }
+  },
+  {
+    "name": "Phantom Steed",
+    "higherLevel": "When you cast this spell using a spell slot of 3rd level or higher, you can create one additional steed for each slot level above 2nd. When you use a spell of 3rd level or higher, the steeds can ride over sandy, muddy, or even swampy ground without difficulty or a decrease in speed. When you use a spell of 4th level or higher, the steeds can walk on water (per the water walk spell). When you use a spell of 5th level or higher, the steeds can fly at its speed for up to 1 round, after which it falls to the ground. When you use a spell of 6th level or higher, the steeds can fly at its speed.",
+    "level": 2
+  },
+  {
     "name": "Produce Flame",
     "description": "A flickering flame appears in your hand. The flame remains there for the duration and harms neither you nor your equipment. The flame sheds bright light in a 10-foot radius and dim light for an additional 10 feet. The spell ends if you dismiss it as an action or if you cast it again.\nYWhen you cast this spell, or as an action on a later turn, you can change the flame into a flaming blade and make a melee spell attack or you can hurl the flame at a creature within 30 feet of you and make a ranged spell attack. On a hit of either, the target takes 1d8 fire damage. Making a ranged spell attack ends the spell.",
     "effects": "The flame remains there for the duration and harms neither you nor your equipment. The flame sheds bright light in a 10 ft radius and dim light for an additional 10 ft. The spell ends if you dismiss it as an action or if you cast it again.\nWhen you cast this spell, or as an action on a later turn, you can change the flame into a flaming blade and make a melee spell attack or you can hurl the flame at a creature within 30 feet of you and make a ranged spell attack. On a hit of either, the target takes 1d8 fire damage. Making a ranged spell attack ends the spell."
+  },
+  {
+    "name": "Protection from Energy",
+    "description": "For the duration, up to two willing creatures you touch have resistance to one damage type of your choice: acid, cold, fire, lightning, or thunder.",
+    "higherLevel": "When you cast this spell using a spell slot of 4th level or higher, you can target one additional creature for each slot level above 3rd.",
+    "target": "up to 2 willing creatures",
+    "effects": "targets have resistance to one damage type of your choice: acid, cold, fire, lightning, or thunder."
   },
   {
     "name": "Ray of Enfeeblement",
@@ -77,6 +182,13 @@
     ]
   },
   {
+    "name": "Slow",
+    "save": {
+      "ability": "strength",
+      "saveFailure": "affected by this spell"
+    }
+  },
+  {
     "name": "Spider Climb",
     "higherLevel": "When you cast this spell using a spell slot of 2nd level or higher, you can affect one additional beast for each slot level above 1st.",
     "level": 1
@@ -87,6 +199,31 @@
     "emote": "'s magic grants {{GENDER_PRONOUN_HIM_HER}} a strike that lands true",
     "range": "Self",
     "duration": "up to 1 minute"
+  },
+  {
+    "name": "Vitriolic Sphere",
+    "save": {
+      "ability": "dexterity",
+      "damage": "10d4",
+      "damageType": "acid",
+      "saveSuccess": "half damage and no additional damage",
+      "saveFailure": "and 7d4 acid damage at the end of its next turn",
+      "higherLevelDice": "2",
+      "higherLevelDie": "d4"
+    }
+  },
+  {
+    "name": "Wall of Sand",
+    "description": "You conjure up a wall of swirling sand on the ground at a point you can see within range. You can make the wall up to 30 feet long, 10 feet high, and 10 feet thick, and it vanishes when the spell ends. It blocks line of sight but not movement. A creature must spend 3 feet of movement for every 1 foot it moves through the wall. Each creature within the wall when it appears, or that starts its turn in the wall, or that enters it during its turn must make a Constitution saving throw. On a failed save, the creature is blinded for 1 minute. At the end of each of its turns, a blinded target can repeat the saving throw.",
+    "target": "Each creature within the wall when it appears, or that starts its turn in the wall, or that enters it during its turn",
+    "save": {
+      "ability": "constitution",
+      "saveFailure": "blinded for 1 minute. At the end of each of its turns, a blinded target can repeat the saving throw."
+    }
+  },
+  {
+    "name": "Wall of Water",
+    "level": 2
   },
   {
     "name": "Witch Bolt",
