@@ -1,55 +1,55 @@
-(function (vision) {
-	vision.flickerURL = 'https://s3.amazonaws.com/files.d20.io/images/4277467/iQYjFOsYC5JsuOPUCI9RGA/thumb.png?1401938659';
-	vision.flickerPeriod = 400;
-	vision.lightRadiusDelta = 0.15;
-	vision.flickerInterval = false;
+(function (vis) {
+	vis.flickerURL = 'https://s3.amazonaws.com/files.d20.io/images/4277467/iQYjFOsYC5JsuOPUCI9RGA/thumb.png?1401938659';
+	vis.torchRadius = 40;
+	vis.flickerPeriod = 400;
+	vis.lightRadiusDelta = 0.15;
+	vis.flickerInterval = false;
+	vis.version = 0.002;
+	vis.schemaVersion = 0.002;
 
-	vision.version = 0.001;
-	vision.schemaVersion = 0.001;
-
-	vision.registerHandlers = function () {
-		on('chat:message', vision.handleInput);
-		on('destroy:graphic', vision.handleTokenDelete);
-		on("change:graphic", vision.checkForTokenMove);
-
-		log('vision ' + vision.version + ' ready');
+	vis.registerHandlers = function () {
+		on('chat:message', vis.handleInput);
+		on('destroy:graphic', vis.handleTokenDelete);
+		on("change:graphic", vis.checkForTokenMove);
+		log('vision ' + vis.version + ' ready');
 	};
 
-	vision.checkInstall = function () {
-		if( ! _.has(state,'Vision') || state.Vision.version !==  vision.schemaVersion) {
-			log('  > Updating Schema to v' +  vision.schemaVersion + ' <');
-			/* Default Settings stored in the state. */
+	vis.checkInstall = function () {
+		if(!_.has(state,'Vision') || state.Vision.version !==  vis.schemaVersion) {
+			log('  > Updating Schema to v' +  vis.schemaVersion + ' <');
 			state.Vision = {
-				version:  vision.schemaVersion,
-				flickers: {}
+				version:  vis.schemaVersion,
+				visions: {}
 			};
 		}
-
-		vision.flickerInterval = setInterval(vision.animateFlicker, vision.flickerPeriod);
+		vis.flickerInterval = setInterval(vis.animateFlicker, vis.flickerPeriod);
 	};
 
+	function getGraphic (graphic) {
+		return getObj('graphic', graphic);
+	}
 
-	vision.handleInput = function (msg) {
+	vis.handleInput = function (msg) {
 		if(msg.type !== 'api') {
 			return;
 		}
 		var args = msg.content.split(/\s+--/);
 		switch(args[0]) {
 			case '!day':
-				vision.getSelectedToken(msg, '', vision.day);
+				vis.getSelectedToken(msg, '', vis.day);
 				break;
 			case '!night':
-				vision.getSelectedToken(msg, '', vision.night);
+				vis.getSelectedToken(msg, '', vis.night);
 				break;
 			case '!torch':
-				vision.getSelectedToken(msg, 'verify', vision.torch);
+				vis.getSelectedToken(msg, 'verify', vis.torch);
 				break;
 			case '!darkvision':
 				break;
 		}
 	};
 
-	vision.dayNightToggle = function (token, dayNight) {
+	vis.dayNightToggle = function (token, dayNight) {
 		var page = getObj('page', (token && token.get('pageid')) || Campaign().get('playerpageid'));
 
 		if(page) {
@@ -60,39 +60,33 @@
 		}
 	};
 
-	vision.day = function (token) {
-		vision.dayNightToggle(token, 'Day');
+	vis.day = function (token) {
+		vis.dayNightToggle(token, 'Day');
 	};
-	vision.night = function (token) {
-		vision.dayNightToggle(token, 'Night');
-	};
-
-	vision.torch = function(token, args) {
-		var radius = parseInt(args[1],10) || 40,
-			dim_radius = parseInt(args[2],10) || (radius/2),
-			other_players = _.contains([1,'1','on','yes','true','sure','yup','-'], args[3] || 1 );
-
-		vision.setFlicker(token, radius, dim_radius, other_players);
+	vis.night = function (token) {
+		vis.dayNightToggle(token, 'Night');
 	};
 
+	vis.torch = function(token, args) {
+		var radius = parseInt(args[1], 10) || vis.torchRadius,
+			dim_radius = parseInt(args[2], 10) || (radius/2),
+			other_players = _.contains([1, '1', 'on', 'yes', 'true', 'sure', 'yup', '-'], args[3] || 1),
+			vision = _.findWhere(state.Vision.visions, {parent: token.id}),
+			visionToken;
 
-	vision.setFlicker = function(token, radius, dim_radius, other_players) {
-		var found = _.findWhere(state.Vision.flickers, {parent: token.id}),
-			torch;
-
-		if(found) {
-			torch = getObj('graphic', found.id);
-			if(torch) {
-				torch.remove();
-				delete state.Vision.flickers[found.id];
+		if(vision) {
+			visionToken = getGraphic(vision.id);
+			if(visionToken) {
+				visionToken.remove();
+				delete state.Vision.visions[vision.id];
 			}
 		}
-		if(!torch) {
-			found = _.findWhere(state.Vision.flickers, {page: token.get('pageid'), active: false});
-			while(!torch && found ) {
-				torch = getObj('graphic', found.id);
-				if(torch) {
-					torch.set({
+		if(!visionToken) {
+			vision = _.findWhere(state.Vision.visions, {page: token.get('pageid'), active: false});
+			while(!visionToken && vision) {
+				visionToken = getGraphic(vision.id);
+				if(visionToken) {
+					visionToken.set({
 						layer: 'objects',
 						showname: false,
 						aura1_radius: '',
@@ -102,12 +96,12 @@
 						light_otherplayers: other_players
 					});
 				} else {
-					delete state.Vision.flickers[found.id];
-					found = _.findWhere(state.Vision.flickers, {page: token.get('pageid'), active: false});
+					delete state.Vision.visions[vision.id];
+					vision = _.findWhere(state.Vision.visions, {page: token.get('pageid'), active: false});
 				}
 			}
-			torch = createObj('graphic',{
-				imgsrc: vision.flickerURL,
+			visionToken = createObj('graphic',{
+				imgsrc: vis.flickerURL,
 				subtype: 'token',
 				name: 'Flicker',
 				pageid: token.get('pageid'),
@@ -121,9 +115,9 @@
 				light_otherplayers: other_players
 			});
 		}
-		toBack(torch);
-		state.Vision.flickers[torch.id] = {
-			id: torch.id,
+		toBack(visionToken);
+		state.Vision.visions[visionToken.id] = {
+			id: visionToken.id,
 			parent: token.id,
 			active: true,
 			page: token.get('pageid'),
@@ -133,46 +127,46 @@
 		};
 	};
 
-	vision.clearFlicker = function(fid) {
-		var f = getObj('graphic',fid);
-		if(f) {
-			f.remove();
+	vis.clearVision = function(id) {
+		var visionToken = getGraphic(id);
+		if(visionToken) {
+			visionToken.remove();
 		}
-		delete state.Vision.flickers[fid];
+		delete state.Vision.visions[id];
 	};
 
-	vision.animateFlicker = function() {
+	vis.animateFlicker = function() {
 		var pages = _.union([Campaign().get('playerpageid')], _.values(Campaign().get('playerspecificpages')));
 
-		_.chain(state.Vision.flickers).where({active:true})
+		_.chain(state.Vision.visions).where({active:true})
 			.filter(function(obj) {
 				return _.contains(pages, obj.page);
 			})
 			.each(function(flicker) {
-				var token = getObj('graphic', flicker.parent),
-					flickerToken = getObj('graphic', flicker.id);
+				var token = getGraphic(flicker.parent),
+					visionToken = getGraphic(flicker.id);
 
 				if(!token) {
-					clearFlicker(flicker.id);
+					clearVision(flicker.id);
 				} else {
-					if(!flickerToken) {
-						delete state.Vision.flickers[flicker.id];
+					if(!visionToken) {
+						delete state.Vision.visions[flicker.id];
 					} else {
 						var positiveOrNegative = Math.random() < 0.5 ? -1 : 1;
 
 						if(positiveOrNegative === 1) {
-							flicker.lightRadius -= vision.lightRadiusDelta;
+							flicker.lightRadius -= vis.lightRadiusDelta;
 						} else if(positiveOrNegative === -1) {
-							flicker.lightRadius += vision.lightRadiusDelta;
+							flicker.lightRadius += vis.lightRadiusDelta;
 						}
 
 						if(flicker.lightRadius < flicker.lightRadiusMax * 0.95) {
-							flicker.lightRadius += vision.lightRadiusDelta;
+							flicker.lightRadius += vis.lightRadiusDelta;
 						} else if (flicker.lightRadius > flicker.lightRadiusMax) {
-							flicker.lightRadius -= vision.lightRadiusDelta;
+							flicker.lightRadius -= vis.lightRadiusDelta;
 						}
 
-						flickerToken.set({
+						visionToken.set({
 							light_radius: flicker.lightRadius,
 							light_dimradius: flicker.lightRadius / 2
 						});
@@ -181,64 +175,62 @@
 			});
 	};
 
-	vision.moveAllFlickers = function () {
-		for(var key in state.Vision.flickers) {
+	vis.moveAllVisions = function () {
+		for(var key in state.Vision.visions) {
 			if(key) {
-				var flicker = state.Vision.flickers[key],
-					token = getObj('graphic', flicker.parent),
-					flickerToken = getObj('graphic', flicker.id);
+				var visionObj = state.Vision.visions[key],
+					token = getGraphic(visionObj.parent),
+					visionToken = getGraphic(visionObj.id);
 
-				if(flickerToken) {
-					flickerToken.set({
+				if(visionToken) {
+					visionToken.set({
 						'top': token.get('top'),
 						'left': token.get('left')
 					});
 				} else {
-					delete state.Vision.flickers[key];
+					delete state.Vision.visions[key];
 				}
 			}
 		}
 	};
 
-	vision.checkForTokenMove = function(obj) {
-		if(obj) {
-			for(var key in state.Vision.flickers) {
-				if(key) {
-					var flicker = state.Vision.flickers[key];
-					if(flicker.parent == obj.id) {
-						var flickerObj = getObj('graphic', flicker.id);
+	vis.checkForTokenMove = function(token) {
+		var vision = _.findWhere(state.Vision.visions, {parent: token.id}),
+			visionToken;
 
-						flickerObj.set({
-							'top': obj.get('top'),
-							'left': obj.get('left')
-						});
-						break;
-					}
-				}
+		if(vision) {
+			visionToken = getGraphic(vision.id);
+			if(visionToken) {
+				visionToken.set({
+					'top': token.get('top'),
+					'left': token.get('left')
+				});
+			} else {
+				delete state.Vision.visions[key];
 			}
 		}
 	};
 
-	vision.handleTokenDelete = function(obj) {
-		var found = _.findWhere(state.Vision.flickers, {parent: obj.id});
+	vis.handleTokenDelete = function(token) {
+		var vision = _.findWhere(state.Vision.visions, {parent: token.id});
 
-		if(found) {
-			clearFlicker(found.id);
+		if(vision) {
+			clearVision(vision.id);
 		} else {
-			found = _.findWhere(state.Vision.flickers, {id: obj.id});
-			if(found) {
-				delete state.Vision.flickers[obj.id];
+			vision = _.findWhere(state.Vision.visions, {id: token.id});
+			if(vision) {
+				delete state.Vision.visions[token.id];
 			}
 		}
 	};
 
-	vision.getSelectedToken = vision.getSelectedToken || function(msg, veryify, callback) {
+	vis.getSelectedToken = vis.getSelectedToken || function(msg, veryify, callback) {
 		var message;
 		if(playerIsGM(msg.playerid)) {
 			if (msg.selected || (msg.selected && msg.selected.length)) {
 				for (var i = 0; i < msg.selected.length; i++) {
 					if (msg.selected[i]._type === 'graphic') {
-						var token = getObj('graphic', msg.selected[i]._id);
+						var token = getGraphic(msg.selected[i]._id);
 						if (token && token.get('subtype') === 'token') {
 							callback(token, arguments[2]);
 						}
@@ -259,11 +251,11 @@
 			sendChat('GM', '/w ' + msg.who + ' + message');
 		}
 	};
-}(typeof vision === 'undefined' ? vision = {} : vision));
+}(typeof vis === 'undefined' ? vis = {} : vis));
 
 on('ready', function() {
 	'use strict';
-	vision.checkInstall();
-	vision.registerHandlers();
-	vision.moveAllFlickers();
+	vis.checkInstall();
+	vis.registerHandlers();
+	vis.moveAllVisions();
 });
