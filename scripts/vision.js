@@ -42,7 +42,7 @@
 				vis.getSelectedToken(msg, '', vis.night);
 				break;
 			case '!torch':
-				vis.getSelectedToken(msg, 'verify', vis.torch);
+				vis.getSelectedToken(msg, 'verify', vis.torch, args);
 				break;
 			case '!darkvision':
 				break;
@@ -77,8 +77,17 @@
 		if(vision) {
 			visionToken = getGraphic(vision.id);
 			if(visionToken) {
-				visionToken.remove();
-				delete state.Vision.visions[vision.id];
+				if(radius === vision.lightRadiusMax && dim_radius === vision.lightDimRadius) {
+					visionToken.remove();
+					delete state.Vision.visions[vision.id];
+				} else {
+					visionToken.set({
+						layer: 'objects',
+						light_radius: radius,
+						light_dimradius: dim_radius,
+						light_otherplayers: other_players
+					});
+				}
 			}
 		}
 		if(!visionToken) {
@@ -88,9 +97,6 @@
 				if(visionToken) {
 					visionToken.set({
 						layer: 'objects',
-						showname: false,
-						aura1_radius: '',
-						showplayers_aura1: false,
 						light_radius: radius,
 						light_dimradius: dim_radius,
 						light_otherplayers: other_players
@@ -122,8 +128,9 @@
 			active: true,
 			page: token.get('pageid'),
 			lightRadius: radius,
-			lightRadiusMax: radius ,
-			light_dimradius: radius
+			lightRadiusMax: radius,
+			lightDimRadius: dim_radius,
+			lightDimRadiusPercentage: radius/dim_radius
 		};
 	};
 
@@ -134,6 +141,22 @@
 		}
 		delete state.Vision.visions[id];
 	};
+
+	function varyLightRadius (flicker) {
+		if(flicker.lightRadiusMax - flicker.lightRadius < vis.lightRadiusDelta) {
+			decreaseLightRadius(flicker);
+		} else if(flicker.lightRadius - flicker.lightRadiusMax * 0.95 < vis.lightRadiusDelta) {
+			increaseLightRadius(flicker);
+		} else {
+			(Math.random() < 0.5 ? -1 : 1) ? decreaseLightRadius(flicker) : increaseLightRadius(flicker);
+		}
+	}
+	function decreaseLightRadius (flicker) {
+		flicker.lightRadius -= vis.lightRadiusDelta;
+	}
+	function increaseLightRadius (flicker) {
+		flicker.lightRadius += vis.lightRadiusDelta;
+	}
 
 	vis.animateFlicker = function() {
 		var pages = _.union([Campaign().get('playerpageid')], _.values(Campaign().get('playerspecificpages')));
@@ -152,23 +175,11 @@
 					if(!visionToken) {
 						delete state.Vision.visions[flicker.id];
 					} else {
-						var positiveOrNegative = Math.random() < 0.5 ? -1 : 1;
-
-						if(positiveOrNegative === 1) {
-							flicker.lightRadius -= vis.lightRadiusDelta;
-						} else if(positiveOrNegative === -1) {
-							flicker.lightRadius += vis.lightRadiusDelta;
-						}
-
-						if(flicker.lightRadius < flicker.lightRadiusMax * 0.95) {
-							flicker.lightRadius += vis.lightRadiusDelta;
-						} else if (flicker.lightRadius > flicker.lightRadiusMax) {
-							flicker.lightRadius -= vis.lightRadiusDelta;
-						}
+						varyLightRadius(flicker);
 
 						visionToken.set({
 							light_radius: flicker.lightRadius,
-							light_dimradius: flicker.lightRadius / 2
+							light_dimradius: flicker.lightRadius / flicker.lightDimRadiusPercentage
 						});
 					}
 				}
@@ -224,7 +235,7 @@
 		}
 	};
 
-	vis.getSelectedToken = vis.getSelectedToken || function(msg, veryify, callback) {
+	vis.getSelectedToken = vis.getSelectedToken || function(msg, verify, callback) {
 		var message;
 		if(playerIsGM(msg.playerid)) {
 			if (msg.selected || (msg.selected && msg.selected.length)) {
@@ -232,17 +243,17 @@
 					if (msg.selected[i]._type === 'graphic') {
 						var token = getGraphic(msg.selected[i]._id);
 						if (token && token.get('subtype') === 'token') {
-							callback(token, arguments[2]);
+							callback(token, arguments[3]);
 						}
 					}
 				}
 			} else {
-				if(veryify === 'verify') {
+				if(verify === 'verify') {
 					message = 'No token selected';
 					log(message);
 					sendChat('GM', '/w gm ' + message);
 				} else {
-					callback('', arguments[2]);
+					callback('', arguments[3]);
 				}
 			}
 		} else {
