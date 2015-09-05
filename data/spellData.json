@@ -7046,7 +7046,7 @@
     "castingTime": "bonus",
     "level": 2,
     "school": "Conjuration",
-    "effects": "you teleport up to 30 feet to an unoccupied space that you can see.",
+    "effects": "you teleport up to 30 ft to an unoccupied space that you can see.",
     "classes": [
       "Druid",
       "Paladin",
