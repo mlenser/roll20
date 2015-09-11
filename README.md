@@ -5,6 +5,10 @@ Scripts for 5e roll20
 
 ### Changelog
 
+**Sep 11th 2015 (1.95)**
+
+* Import custom skills
+
 **Aug 19th 2015 (1.94)**
 
 * New spell duration

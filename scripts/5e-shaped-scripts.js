@@ -26,7 +26,7 @@
 
     useAmmoAutomatically: true,
 
-    hideGMInfo: false, //hide some roll template info from your players. This requires that the gm uses a browser extension
+    //hideGMInfo: true, //hide some roll template info from your players. This requires that the gm uses a browser extension
 
     bar: [
       /* Setting these to a sheet value will set the token bar value. If they are set to '' or not set then it will use whatever you already have set on the token
@@ -54,7 +54,7 @@
   var spellsData = [];
 
   shaped.statblock = {
-    version: '1.94',
+    version: '1.95',
     RegisterHandlers: function () {
       on('chat:message', HandleInput);
 
@@ -1022,38 +1022,67 @@
   function parseSkills(skills) {
     // Need to substract ability modifier skills this field since sheet compute it
     var skillAbility = {
-      'acrobatics':'dexterity',
-      'animal handling':'wisdom',
-      'arcana':'intelligence',
-      'athletics':'strength',
-      'deception':'charisma',
-      'history':'intelligence',
-      'insight':'wisdom',
-      'intimidation':'charisma',
-      'investigation':'intelligence',
-      'medicine':'wisdom',
-      'nature':'intelligence',
-      'perception':'wisdom',
-      'performance':'charisma',
-      'persuasion':'charisma',
-      'religion':'intelligence',
-      'sleight of hand':'dexterity',
-      'stealth':'dexterity',
-      'survival':'wisdom'
-    };
+        'acrobatics':'dexterity',
+        'animal handling':'wisdom',
+        'arcana':'intelligence',
+        'athletics':'strength',
+        'deception':'charisma',
+        'history':'intelligence',
+        'insight':'wisdom',
+        'intimidation':'charisma',
+        'investigation':'intelligence',
+        'medicine':'wisdom',
+        'nature':'intelligence',
+        'perception':'wisdom',
+        'performance':'charisma',
+        'persuasion':'charisma',
+        'religion':'intelligence',
+        'sleight of hand':'dexterity',
+        'stealth':'dexterity',
+        'survival':'wisdom',
+      },
+      extraSkillAbility = {
+        "alchemist's supplies": "intelligence",
+        "navigator's tools": "wisdom",
+        "thieves' tools": "dexterity"
+      };
 
-    var regex = /([\w\s]+).*?(\d+)/gi;
+    var regex = /([\w\s\']+).*?(\d+)/gi,
+      customSkillNum = 0;
     while(match = regex.exec(skills.replace(/Skills\s+/i, ''))) {
-      var skill = match[1].trim().toLowerCase();
+      var skill = match[1].trim().toLowerCase(),
+        proficiencyBonus = (2 + Math.floor(Math.abs((eval(getAttrByName(characterId, 'challenge'))-1)/4))),
+        expertise = proficiencyBonus * 2;
+
       if(skill in skillAbility) {
         var abilitymod = skillAbility[skill],
-          attr = skill.replace(/\s/g, '');
-
-
-        var proficiencyBonus = (2 + Math.floor(Math.abs((eval(getAttrByName(characterId, 'challenge'))-1)/4))),
+          attr = skill.replace(/\s/g, ''),
           totalSkillBonus = match[2] - Math.floor((getAttrByName(characterId, abilitymod) - 10) / 2);
 
-        var expertise = proficiencyBonus * 2;
+        if(totalSkillBonus >= expertise) {
+          setAttribute(attr + '_prof_exp', '@{exp}');
+          if(totalSkillBonus > expertise) {
+            setAttribute(attr + '_bonus', totalSkillBonus - expertise);
+          }
+        } else if (totalSkillBonus >= proficiencyBonus) {
+          setAttribute(attr + '_prof_exp', '@{PB}');
+          if(totalSkillBonus > proficiencyBonus) {
+            setAttribute(attr + '_bonus', totalSkillBonus - proficiencyBonus);
+          }
+        } else {
+          setAttribute(attr + '_prof_exp', '@{jack_of_all_trades}');
+          if(totalSkillBonus > 0) {
+            setAttribute(attr + '_bonus', totalSkillBonus);
+          }
+        }
+      } else if (skill in extraSkillAbility) {
+        customSkillNum++;
+        var abilitymod = extraSkillAbility[skill],
+          attr = 'custom_skill_' + customSkillNum,
+          totalSkillBonus = match[2] - Math.floor((getAttrByName(characterId, abilitymod) - 10) / 2);
+
+        setAttribute(attr + '_name', capitalizeEachWord(skill));
+        log('added ' + capitalizeEachWord(skill) + ' to custom skills');
 
         if(totalSkillBonus >= expertise) {
           setAttribute(attr + '_prof_exp', '@{exp}');
@@ -1073,6 +1102,9 @@
         }
       } else {
         errors.push('Skill ' + skill + ' is not a valid skill');
+      }
+      if(customSkillNum > 0) {
+        setAttribute('custom_skills_toggle', 'on');
       }
     }
   }
