@@ -1163,7 +1163,7 @@
     "name": "Burning Hands",
     "description": "As you hold your hands with thumbs touching and fingers spread, a thin sheet of flames shoots forth from your outstretched fingertips. Each creature in a 15-foot cone must make a Dexterity saving throw. A creature takes 3d6 fire damage on a failed save, or half as much damage on a successful one.\nThe fire ignites any flammable objects in the area that aren't being worn or carried.",
     "higherLevel": "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st.",
-    "emote": "holds {{GENDER_PRONOUN_HIS_HER}} hands with thumbs touching and fingers pread as a thin sheet of flames shoorts forth from {{GENDER_PRONOUN_HIS_HER}} fingertips",
+    "emote": "holds {{GENDER_PRONOUN_HIS_HER}} hands with thumbs touching and fingers spread as a thin sheet of flames shoots forth from {{GENDER_PRONOUN_HIS_HER}} fingertips",
     "source": "phb 220",
     "range": "Self",
     "target": "Every creature in the aoe",

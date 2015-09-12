@@ -42,6 +42,38 @@
     }
   },
   {
+    "name": "Eroding Mist",
+    "description": "As you hold your hands with thumbs touching and fingers spread, a green mist shoots forth from your outstretched fingertips. Each creature in a 15-foot cone must make a Dexterity saving throw. A creature takes 3d6 acid damage on a failed save, or half as much damage on a successful one.\nThe acid can eat through objects in the area that aren't being worn or carried.",
+    "higherLevel": "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st.",
+    "emote": "holds {{GENDER_PRONOUN_HIS_HER}} hands with thumbs touching and fingers spread as a thin sheet of flames shoots forth from {{GENDER_PRONOUN_HIS_HER}} fingertips",
+    "source": "phb 220",
+    "range": "Self",
+    "target": "Every creature in the aoe",
+    "aoe": "15 ft cone",
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": "Instantaneous",
+    "castingTime": "action",
+    "level": 1,
+    "school": "Evocation",
+    "save": {
+      "ability": "dexterity",
+      "damage": "3d6",
+      "damageType": "acid",
+      "saveSuccess": "half damage",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d6"
+    },
+    "effects": "The acid can eat through objects in the area that aren't being worn or carried.",
+    "classes": [
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
+    ]
+  },
+  {
     "name": "Feign Death",
     "level": 2
   },
@@ -61,7 +93,6 @@
     "name": "Grasping Vine",
     "newName": "Grasping Vines",
     "description": "Squirming vines fill a 20-foot square on ground that you can see within range. For the duration, these vines turn the ground in the area into difficult terrain. When a creature enters the affected area for the first time on a turn or starts its turn there, the creature must succeed on a Dexterity saving throw or take 3d6 bludgeoning damage and be restrained by the vines until the spell ends. A creature that starts its turn in the area and is already restrained by the vines takes 3d6 bludgeoning damage. A creature restrained by the vines can use its action to make a Strength or Dexterity check (its choice) against your spell save DC. On a success, it frees itself.",
-
     "emote": "conjures vines that sprout from the ground",
     "source": "phb 238 / phb 246",
     "range": "90 ft",
@@ -95,6 +126,35 @@
     ]
   },
   {
+    "name": "Hydraulic Push",
+    "description": "You summon a blast of water that soaks one creature or square. Make a ranged spell attack against a creature, if it hits the creature takes 2d8 bludgeoning damage and is pushed back 10 feet. This spells also extinguishes any normal fire on a creature or object, or in a 5-foot square. Magical fire is unaffected.",
+    "higherLevel": "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st.",
+    "emote": "summons a blast of water that soaks a creature",
+    "source": "houserules",
+    "range": "30 ft",
+    "target": "a creature that you can see within range",
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "castingTime": "action",
+    "duration": "Instantaneous",
+    "level": 1,
+    "school": "Evocation",
+    "attack": {
+      "damage": "2d8",
+      "damageType": "bludgeoning",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d8"
+    },
+    "effects": "target is pushed back 10 ft. This spells also extinguishes any normal fire on a creature or object, or in a 5 ft square. Magical fire is unaffected.",
+    "classes": [
+      "Druid",
+      "Sorcerer",
+      "Wizard"
+    ]
+  },
+  {
     "name": "Jump",
     "remove": true
   },
@@ -118,7 +178,36 @@
     "name": "Magic Mouth",
     "level": 1
   },
-
+  {
+    "name": "Make Whole",
+    "description": "An object or construct creature up 20 cubic feet within 30 feet regains a number of hit points equal to 2d6. This can fix destroyed magic items (at 0 hit points or less), and restores the magic properties of the item if your caster level is at least twice that of the item. Items with charges (such as wands) and single-use items (such as potions and scrolls) cannot be repaired in this way. The spell does not repair items that have been warped, burned, disintegrated, ground to powder, melted, or vaporized, nor does it affect creatures (including constructs).",
+    "higherLevel": "When you cast this spell using a spell slot of 3rd level or higher, the target cubic foot range adds 10 cubic feet and the healing increases by 1d6 for each slot level above 2nd.",
+    "emote": "repairs an object",
+    "source": "houserules",
+    "range": "30 ft",
+    "target": "an object or construct creature up 20 cubic ft within range",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": true,
+      "materialMaterial": "a large lodestone"
+    },
+    "duration": "Instantaneous",
+    "castingTime": "action",
+    "level": 2,
+    "school": "Transmutation",
+    "heal": {
+      "amount": "2d6",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d6"
+    },
+    "effects": "This can fix destroyed magic items (at 0 hit points or less), and restores the magic properties of the item if your caster level is at least twice that of the item. Items with charges (such as wands) and single-use items (such as potions and scrolls) cannot be repaired in this way. The spell does not repair items that have been warped, burned, disintegrated, ground to powder, melted, or vaporized, nor does it affect creatures (including constructs).",
+    "classes": [
+      "Cleric",
+      "Sorcerer",
+      "Wizard"
+    ]
+  },
   {
     "name": "Melf's Acid Arrow",
     "description": "A shimmering green arrow streaks toward a target within range and bursts in a spray of acid. Make a ranged spell attack against the target. On a hit, the target takes 4d4 acid damage immediately and 4d4 acid damage at the end of its next turn. On a miss, the arrow splashes the target with acid for half as much of the initial damage and no damage at the end of its next turn.",
