@@ -2895,7 +2895,7 @@
       "ability": "dexterity",
       "damage": "10d6",
       "damageBonus": "40",
-      "damageType": "fire",
+      "damageType": "force",
       "saveSuccess": "half damage",
       "higherLevelDice": "3",
       "higherLevelDie": "d6"
@@ -8758,7 +8758,7 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "A burst of mica"
+      "materialMaterial": "A chip of mica"
     },
     "duration": "Instantaneous",
     "castingTime": "action",
@@ -10446,7 +10446,7 @@
       "higherLevelDice": "2",
       "higherLevelDie": "d6"
     },
-    "effects": "In any form, the wall is 1 ft thick and lasts for the duration.<br>If the wall cuts through a creature's space when it appears, the creature within its area is pushed to one side of the wall and must make a Dexterity saving throw as outlined above.\nThe wall is an object that can be damaged and thus breached. It has AC 12 and 30 hit points per 10 ft section, and it is vulnerable to fire damage. Reducing a 10 ft section of wall to 0 hit points destroys it and leaves behind a sheet of frigid air in the space the wall occupied. A creature moving through the sheet of frigid air for the first time on a turn must make a Constitution saving throw. That creature takes 5d6 ([[5d6]]) cold damage on a failed save, or half as much damage on a successful one.",
+    "effects": "In any form, the wall is 1 ft thick and lasts for the duration.\nIf the wall cuts through a creature's space when it appears, the creature within its area is pushed to one side of the wall and must make a Dexterity saving throw as outlined above.\nThe wall is an object that can be damaged and thus breached. It has AC 12 and 30 hit points per 10 ft section, and it is vulnerable to fire damage. Reducing a 10 ft section of wall to 0 hit points destroys it and leaves behind a sheet of frigid air in the space the wall occupied. A creature moving through the sheet of frigid air for the first time on a turn must make a Constitution saving throw. That creature takes 5d6 ([[5d6]]) cold damage on a failed save, or half as much damage on a successful one.",
     "classes": [
       "Wizard"
     ]
