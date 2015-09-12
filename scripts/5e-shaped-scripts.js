@@ -1037,7 +1037,7 @@
         'religion':'intelligence',
         'sleight of hand':'dexterity',
         'stealth':'dexterity',
-        'survival':'wisdom',
+        'survival':'wisdom'
       },
       extraSkillAbility = {
         "alchemist's supplies": "intelligence",
