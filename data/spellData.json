@@ -3105,29 +3105,6 @@
     ]
   },
   {
-    "name": "Drawmij's Instant Summons",
-    "description": "You touch an object weighing 10 pounds or less whose longest dimension is 6 feet or less. The spell leaves an invisible mark on its surface and invisibly inscribes the name of the item on the sapphire you use as the material component. Each time you cast this spell, you must use a different sapphire.\nAt any time thereafter, you can use your action to speak the item's name and crush the sapphire. The item instantly appears in your hand regardless of physical or planar distances, and the spell ends.\nIf another creature is holding or carrying the item, crushing the sapphire doesn't transport the item to you, but instead you learn who the creature possessing the object is and roughly where that creature is located at that moment.\nDispel magic or a similar effect successfully applied to the sapphire ends this spell's effect.",
-    "emote": "touches an object which leaves an invisible mark on its surface and invisibly inscribes the name of the item on the sapphire {{GENDER_PRONOUN_HE_SHE}} uses as the material component",
-    "source": "phb 235",
-    "range": "Touch",
-    "target": "an object weighing 10 lbs or less whose longest dimension is 6 ft or less",
-    "components": {
-      "verbal": true,
-      "somatic": true,
-      "material": true,
-      "materialMaterial": "A sapphire worth 1,000 gp"
-    },
-    "ritual": true,
-    "duration": "Until dispelled",
-    "castingTime": "minute",
-    "level": 6,
-    "school": "Conjuration",
-    "effects": "Each time you cast this spell, you must use a different sapphire.\nAt any time thereafter, you can use your action to speak the item's name and crush the sapphire. The item instantly appears in your hand regardless of physical or planar distances, and the spell ends.\nIf another creature is holding or carrying the item, crushing the sapphire doesn't transport the item to you, but instead you learn who the creature possessing the object is and roughly where that creature is located at that moment.\nDispel magic or a similar effect successfully applied to the sapphire ends this spell's effect.",
-    "classes": [
-      "Wizard"
-    ]
-  },
-  {
     "name": "Dominate Monster",
     "description": "You attempt to beguile a creature that you can see within range. It must succeed on a Wisdom saving throw or be charmed by you for the duration. If you or creatures that are friendly to you are fighting it, it has advantage on the saving throw.\nWhile the creature is charmed, you have a telepathic link with it as long as the two of you are on the same plane of existence. You can use this telepathic link to issue commands to the creature while you are conscious (no action required), which it does its best to obey. You can specify a simple and general course of action, such as \"Attack that creature,\" \"Run over there,\" or \"Fetch that object.\" If the creature completes the order and doesn't receive further direction from you, it defends and preserves itself to the best of its ability.\nYou can use your action to take total and precise control of the target. Until the end of your next turn, the creature takes only the actions you choose, and doesn't do anything that you don't allow it to do. During this time, you can also cause the creature to use a reaction, but this requires you to use your own reaction as well.\nEach time the target takes damage, it makes a new Wisdom saving throw against the spell. If the saving throw succeeds, the spell ends.",
     "higherLevel": "When you cast this spell with a 9th-level spell slot, the duration is concentration, up to 8 hours.",
@@ -3191,6 +3168,29 @@
     "patrons": [
       "Archfey",
       "Great Old One"
+    ]
+  },
+  {
+    "name": "Drawmij's Instant Summons",
+    "description": "You touch an object weighing 10 pounds or less whose longest dimension is 6 feet or less. The spell leaves an invisible mark on its surface and invisibly inscribes the name of the item on the sapphire you use as the material component. Each time you cast this spell, you must use a different sapphire.\nAt any time thereafter, you can use your action to speak the item's name and crush the sapphire. The item instantly appears in your hand regardless of physical or planar distances, and the spell ends.\nIf another creature is holding or carrying the item, crushing the sapphire doesn't transport the item to you, but instead you learn who the creature possessing the object is and roughly where that creature is located at that moment.\nDispel magic or a similar effect successfully applied to the sapphire ends this spell's effect.",
+    "emote": "touches an object which leaves an invisible mark on its surface and invisibly inscribes the name of the item on the sapphire {{GENDER_PRONOUN_HE_SHE}} uses as the material component",
+    "source": "phb 235",
+    "range": "Touch",
+    "target": "an object weighing 10 lbs or less whose longest dimension is 6 ft or less",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": true,
+      "materialMaterial": "A sapphire worth 1,000 gp"
+    },
+    "ritual": true,
+    "duration": "Until dispelled",
+    "castingTime": "minute",
+    "level": 6,
+    "school": "Conjuration",
+    "effects": "Each time you cast this spell, you must use a different sapphire.\nAt any time thereafter, you can use your action to speak the item's name and crush the sapphire. The item instantly appears in your hand regardless of physical or planar distances, and the spell ends.\nIf another creature is holding or carrying the item, crushing the sapphire doesn't transport the item to you, but instead you learn who the creature possessing the object is and roughly where that creature is located at that moment.\nDispel magic or a similar effect successfully applied to the sapphire ends this spell's effect.",
+    "classes": [
+      "Wizard"
     ]
   },
   {
@@ -4509,7 +4509,7 @@
     "level": 0,
     "school": "Evocation",
     "save": {
-      "ability": "consitution",
+      "ability": "constitution",
       "damage": "((@{level} + 1) / 6 + 0.5)d6",
       "damageType": "cold",
       "saveFailure": "it has disadvantage on the next weapon attack roll it makes before the end of its next turn"
@@ -5338,7 +5338,7 @@
     "castingTime": "bonus",
     "level": 1,
     "school": "Enchantment",
-    "effects": "YUntil the spell ends, you deal an extra 1d6 necrotic damage to the target whenever you hit it with an attack. Also choose one ability when you cast the spell. The target has disadvantage on ability checks made with the chosen ability.\nIf the target drops to 0 hit points before this spell ends, you can use a bonus action on a subsequent turn of yours to curse a new creature.\nA remove curse cast on the target ends this spell early.",
+    "effects": "Until the spell ends, you deal an extra 1d6 necrotic damage to the target whenever you hit it with an attack. Also choose one ability when you cast the spell. The target has disadvantage on ability checks made with the chosen ability.\nIf the target drops to 0 hit points before this spell ends, you can use a bonus action on a subsequent turn of yours to curse a new creature.\nA remove curse cast on the target ends this spell early.",
     "classes": [
       "Warlock"
     ]
@@ -9887,7 +9887,7 @@
     "save": {
       "condition": "if the target is a creature",
       "ability": "strength",
-      "saveFailure": " pushed 10 feet away from you and knocked prone."
+      "saveFailure": "pushed 10 feet away from you and knocked prone."
     },
     "effects": "The first time you hit with a melee weapon attack during this spell's duration, the attack deals extra damage and it must make a Strength saving throw as outlined above.",
     "classes": [
