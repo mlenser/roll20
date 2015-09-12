@@ -273,7 +273,7 @@
   {
     "name": "Flame Arrows",
     "description": "You touch a quiver containing arrows or bolts. When a target is hit by a ranged weapon attack using a piece of ammunition drawn from the quiver, the target takes an extra 1d6 fire damage. The spell's magic ends on the piece of ammunition when it hits or misses. When the quiver runs out of ammunition is takes an action to fill it from another quiver.",
-    "higherLevel": "When you cast this spell using a spell slot of 4th or 5th leveI, you can maintain your concentration on the spell for up to 8 hours. When you use a spell slot of 6th level or higher, you can maintain your concentration on the spell for up to 24 hours.",
+    "higherLevel": "When you cast this spell using a spell slot of 4th or 5th level, you can maintain your concentration on the spell for up to 8 hours. When you use a spell slot of 6th level or higher, you can maintain your concentration on the spell for up to 24 hours.",
     "effects": "When a target is hit by a ranged weapon attack using a piece of ammunition drawn from the quiver, the target takes an extra 1d6 fire damage. The spell's magic ends on the piece of ammunition when it hits or misses. When the quiver runs out of ammunition it takes an action to fill it from another quiver."
   },
   {
@@ -317,6 +317,11 @@
     "domains": [
       "Nature"
     ]
+  },
+  {
+    "name": "Hallucinatory Terrain",
+    "ritual": true,
+    "level": 3
   },
   {
     "name": "Hydraulic Push",
@@ -428,6 +433,12 @@
     "name": "Longstrider",
     "newName": "Striding and Springing",
     "description": "You touch a creature. The target's speed increases by 10 feet until the spell ends. In addition, the target can jump three times their normal distance, though they can't jump farther than your remaining movement would allow.",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": true,
+      "materialMaterial": "A pinch of dirt and a grasshopper's hind leg"
+    },
     "duration": "1 hour",
     "effects": "The target's speed increases by 10 ft until the spell ends. In addition, the target can jump three times their normal distance, though they can't jump farther than your remaining movement would allow."
   },
@@ -504,7 +515,7 @@
     "save": {
       "condition": "against poison",
       "ability": "constitution",
-      "saveFailure": "the creature spends its action that turn retching and reeling. Creatures that don’t need to breathe or are immune to poison automatically succeed on this saving throw"
+      "saveFailure": "the creature spends its action that turn retching and reeling. Creatures that don't need to breathe or are immune to poison automatically succeed on this saving throw"
     },
     "effects": "The spell ends if the creature drops to 0 hit points. An incorporeal creature isn't affected.\nWhile in this form, the target's only method of movement is a flying speed of 10 ft. The target can enter and occupy the space of another creature. The target's body nauseates creatures. Each creature that is completely within the cloud at the start of its turn must make a Constitution saving throw as outlined above. The target has resistance to nonmagical damage, and it has advantage on Strength, Dexterity, and Constitution saving throws. The target can pass through small holes, narrow openings, and even mere cracks, though it treats liquids as though they were solid surfaces. The target can't fall and remains hovering in the air even when stunned or otherwise incapacitated.\nWhile in the form of a misty cloud, the target can't talk or manipulate objects, and any objects it was carrying or holding can't be dropped, used, or otherwise interacted with. The target can't attack or cast spells.",
     "classes": [
@@ -520,17 +531,17 @@
   },
   {
     "name": "Phantasmal Killer",
-    "description": "You tap into the nightmares of a creature you can see within range and create an illusory manifestation of its deepest fears, visible only to that creature in a square that you can see within 5 feet of the target. The target must make an Intelligence saving throw. On a failed save, the target becomes frightened for the duration. If the creature ends its turn in a location where it doesn't have line of sight to the phantom, the creature can make an Intelligence saving throw. On a successful save, the spell end for that creature. The phantom pursues the target, moving up 30 feet toward the target after the target's turn.",
-    "aoe": "phantom in a square that you can see within 5 feet of the target",
+    "description": "You tap into the nightmares of a creature you can see within range and create an illusory manifestation of its deepest fears, visible only to that creature. The target must make an Intelligence saving throw. On a failed save, the target becomes frightened for the duration. At the start of each of the target's turns before the spell ends, the target takes 4d10 psychic damage. At the end of each of the target's turn before the spell ends, the target can make a Intelligence saving throw. On a successful save, the spell ends.",
     "save": {
       "ability": "intelligence",
-      "saveFailure": "becomes frightened for the duration. If the creature ends its turn in a location where it doesn't have line of sight to the phantom, the creature can make an Intelligence saving throw. On a successful save, the spell end for that creature. The phantom pursues the target, moving up 30 ft toward the target after the target's turn."
+      "saveFailure": "becomes frightened for the duration. At the start of each of the target’s turns before the spell ends, the target takes 4d10 psychic damage. At the end of each of the target's turn before the spell ends, the target can make a Intelligence saving throw. On a successful save, the spell ends."
     }
   },
   {
     "name": "Phantom Steed",
     "higherLevel": "When you cast this spell using a spell slot of 3rd level or higher, you can create one additional steed for each slot level above 2nd. When you use a spell of 3rd level or higher, the steeds can ride over sandy, muddy, or even swampy ground without difficulty or a decrease in speed. When you use a spell of 4th level or higher, the steeds can walk on water (per the water walk spell). When you use a spell of 5th level or higher, the steeds can fly at its speed for up to 1 round, after which it falls to the ground. When you use a spell of 6th level or higher, the steeds can fly at its speed.",
-    "level": 2
+    "level": 2,
+    "school": "Conjuration"
   },
   {
     "name": "Produce Flame",
@@ -556,11 +567,25 @@
     ]
   },
   {
+    "name": "Sending",
+    "level": 2
+  },
+  {
     "name": "Slow",
     "save": {
       "ability": "strength",
       "saveFailure": "affected by this spell"
     }
+  },
+  {
+    "name": "Speak with Dead",
+    "ritual": true,
+    "level": 2
+  },
+  {
+    "name": "Speak with Plants",
+    "ritual": true,
+    "level": 2
   },
   {
     "name": "Spider Climb",
@@ -569,10 +594,10 @@
   },
   {
     "name": "True Strike",
-    "description": "Your magic grants you a strike that lands true. On your next turn, you gain advantage on your first attack roll against the target, provided that this spell hasn't ended.",
-    "emote": "'s magic grants {{GENDER_PRONOUN_HIM_HER}} a strike that lands true",
+    "description": "Your magic grants you strikes that land true. On your next turn, you gain advantage on your attack rolls, provided that this spell hasn't ended.",
+    "emote": "'s magic grants {{GENDER_PRONOUN_HIM_HER}} strikes that land true",
     "range": "Self",
-    "duration": "up to 1 minute"
+    "effects": "On your next turn, you gain advantage on your attack rolls, provided that this spell hasn't ended"
   },
   {
     "name": "Vitriolic Sphere",
@@ -634,9 +659,9 @@
   },
   {
     "name": "Witch Bolt",
-    "description": "A beam of crackling, blue energy lances out toward a creature within range, forming a sustained arc of lightning between you and the target. Make a ranged spell attack against that creature. On a hit, the target takes 1d12 lightning damage, and on each of your turns for the duration, you can use your bonus action to deal 1d12 lightning damage to the target automatically. The spell ends if the target is outside the spell’s range or if it has total cover from you at the end of your turn.",
+    "description": "A beam of crackling, blue energy lances out toward a creature within range, forming a sustained arc of lightning between you and the target. Make a ranged spell attack against that creature. On a hit, the target takes 1d12 lightning damage, and on each of your turns for the duration, you can use your bonus action to deal 1d12 lightning damage to the target automatically. The spell ends if the target is outside the spell's range or if it has total cover from you at the end of your turn.",
     "duration": "1 minute",
     "concentration": false,
-    "effect": "on each of your turns for the duration, you can use your bonus action to deal 1d12 lightning damage to the target automatically. The spell ends if the target is outside the spell’s range or if it has total cover from you at the end of your turn."
+    "effect": "on each of your turns for the duration, you can use your bonus action to deal 1d12 lightning damage to the target automatically. The spell ends if the target is outside the spell's range or if it has total cover from you at the end of your turn."
   }
 ]
