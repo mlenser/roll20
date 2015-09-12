@@ -167,6 +167,12 @@
     "ritual": true
   },
   {
+    "name": "Creation",
+    "description": "You create a non-magical, nonliving object of vegetable matter within range: soft goods, rope, wood, or something similar. You can also use this spell to create mineral objects such as stone, crystal, or metal. The object created must be no larger than a 5-foot cube, and the object must be of a form and material that you have seen before.\nThe duration depends on the object's material. If the object is composed of multiple materials, use the shortest duration.\nVegetable matter 1 day\nStone or crystal 12 hours\nPrecious metals 1 hour\nGems 10 minutes\nAdamantine or mithral 1 minute\nUsing any material created by this spell as another spell's material component causes that spell to fail.",
+    "emote": "creates a non-magical, nonliving object of vegetable matter",
+    "school": "Conjuration"
+  },
+  {
     "name": "Crown of Madness",
     "description": "One humanoid of your choice that you can see within range must succeed on a Wisdom saving throw or become charmed by you for the duration. While the target is charmed in this way, a twisted crown of jagged iron appears on its head, and a madness glows in its eyes.\nThe charmed target must use its action to make melee attacks against a creature other than itself that you mentally choose. The charmed target can move up to half its speed before making the attacks.\nThe target can act normally on its turn if you choose no creature or if none are within its reach.\nOn your subsequent turns, you must use your action to maintain control over the target, or the spell ends. Also, the target can make a Wisdom saving throw at the end of each of its turns. On a success, the spell ends.",
     "save": {
