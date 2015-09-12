@@ -1,5 +1,40 @@
 [
   {
+    "name": "Aggressive Thundercloud",
+    "description": "A 5-foot-diameter sphere of crackling storm clouds appears in an unoccupied space of your choice within range and lasts for the duration. Any creature that ends its turn within 5 feet of the sphere must make a Dexterity saving throw. The creature takes 2d6 lightning damage on a failed save, or half as much damage on a successful one.\nAs a bonus action, you can move the sphere up to 30 feet. If you ram the sphere into a creature, that creature must make the saving throw against the sphere's damage, and the sphere stops moving this turn.\nWhen you move the sphere, you can direct it over barriers up to 5 feet tall and jump it across pits up to 10 feet wide.",
+    "higherLevel": "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d6 for each slot level above 2nd.",
+    "emote": "conjures a sphere of crackling storm clouds",
+    "source": "houserules",
+    "range": "60 ft",
+    "target": "Any creature that ends its turn within 5 feet of the sphere",
+    "aoe": "5 ft diameter sphere in an unoccupied space within range",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": true,
+      "materialMaterial": "a piece of tree struck by lightning"
+    },
+    "duration": "Up to 1 minute",
+    "concentration": true,
+    "castingTime": "action",
+    "level": 2,
+    "school": "Conjuration",
+    "save": {
+      "ability": "dexterity",
+      "damage": "2d6",
+      "damageType": "lightning",
+      "saveSuccess": "half damage",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d6"
+    },
+    "effects": "As a bonus action, you can move the sphere up to 30 ft. If you ram the sphere into a creature, that creature must make the saving throw against the sphere's damage, and the sphere stops moving this turn.\nWhen you move the sphere, you can direct it over barriers up to 5 ft tall and jump it across pits up to 10 ft wide.",
+    "classes": [
+      "Druid",
+      "Sorcerer",
+      "Wizard"
+    ]
+  },
+  {
     "name": "Beacon of Hope",
     "duration": "1 minute",
     "concentration": false
@@ -21,6 +56,39 @@
   },
   {
     "name": "Cloud of Daggers",
+    "description": "You fill the air with an acidic cloud in a 5-foot-radius, centered on a point you choose within range. A creature takes 4d4 acid damage when it enters the spell's area for the first time on a turn or starts its turn there.",
+    "higherLevel": "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 2d4 for each slot level above 2nd.",
+    "emote": "fills the the air with an acidic cloud",
+    "source": "phb 222",
+    "range": "60 ft",
+    "target": "a creature who enters the spell's area for the first time on a turn or starts its turn there",
+    "aoe": "5 ft radius centered on a point within range",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": true,
+      "materialMaterial": "a small poisonous beetle"
+    },
+    "duration": "Up to 1 minute",
+    "concentration": true,
+    "castingTime": "action",
+    "level": 2,
+    "school": "Conjuration",
+    "damage": {
+      "damage": "4d4",
+      "damageType": "acid",
+      "higherLevelDice": "2",
+      "higherLevelDie": "d4"
+    },
+    "classes": [
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
+    ]
+  },
+  {
+    "name": "Cloud of Daggers",
+    "description": "You fill the air with spinning daggers in a 5-foot-radius, centered on a point you choose within range. A creature takes 4d4 slashing damage when it enters the spell's area for the first time on a turn or starts its turn there.",
     "aoe": "5 ft radius centered on a point within range"
   },
   {
