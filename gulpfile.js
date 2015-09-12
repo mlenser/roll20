@@ -1,7 +1,6 @@
 var gulp = require('gulp'),
 	inject = require('gulp-inject'),
 	uglify = require('gulp-uglify'),
-	minifyHTML = require('gulp-minify-html'),
 	fs = require("fs");
 
 
@@ -24,9 +23,15 @@ function arrayObjectIndexOf(myArray, searchTerm, property) {
 
 gulp.task('compile', function() {
 	return gulp.src('./scripts/5e-shaped-scripts.js')
+		.pipe(uglify())
+		.pipe(gulp.dest('./scripts/dist'));
+});
+
+gulp.task('compileSpells', function() {
+	return gulp.src('./scripts/5e-spells.js')
 		.pipe(inject(gulp.src(['./data/spellData.json']), {
-			starttag: 'spellsData = [',
-			endtag: '];',
+			starttag: '[',
+			endtag: ']',
 			transform: function (filePath, file) {
 				var fileData = file.contents.toString('utf8'),
 					spellData = JSON.parse(fileData);
@@ -60,7 +65,7 @@ gulp.task('compile', function() {
 				return returnedData.substring(1, returnedData.length-1);
 			}
 		}))
-		.pipe(uglify())
-		//.pipe(minifyHTML({}))
 		.pipe(gulp.dest('./scripts/dist'));
 });
+
+gulp.task('compileAll', ['compile', 'compileSpells']);

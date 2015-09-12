@@ -5,6 +5,12 @@ Scripts for 5e roll20
 
 ### Changelog
 
+**Sep 12th 2015 (1.96)**
+
+* Spell import default to male if there is no gender specified (previously errored out)
+* Spells have been moved to their own file
+* Included dist versions of the script to make it easier for others to use
+
 **Sep 11th 2015 (1.95)**
 
 * Import custom skills

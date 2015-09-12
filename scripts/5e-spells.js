@@ -1,0 +1,3 @@
+fifthSpells = {
+	'spellsData': []
+};

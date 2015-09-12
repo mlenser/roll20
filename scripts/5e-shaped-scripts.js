@@ -51,10 +51,8 @@
     ]
   };
 
-  var spellsData = [];
-
   shaped.statblock = {
-    version: '1.95',
+    version: '1.96',
     RegisterHandlers: function () {
       on('chat:message', HandleInput);
 
@@ -2041,7 +2039,7 @@
   };
 
   shaped.importSpell = function(character, characterName, spellName) {
-    var spell = spellsData.filter(function ( obj ) {
+    var spell = fifthSpells.spellsData.filter(function ( obj ) {
         return obj.name.toLowerCase() === spellName.toLowerCase();
       })[0],
       spellBase = 'repeating_spellbook',
@@ -2155,16 +2153,16 @@
       var gender = getAttrByName(characterId, 'gender', 'current'),
         heShe, himHer, hisHer, himselfHerself;
 
-      if(gender.match(/f|female|girl|woman|feminine/gi)) {
-        heShe = 'she';
-        himHer = 'her';
-        hisHer = 'her';
-        himselfHerself = 'herself';
-      } else {
+      if(!gender || !gender.match(/f|female|girl|woman|feminine/gi)) {
         heShe = 'he';
         himHer = 'him';
         hisHer = 'his';
         himselfHerself = 'himself';
+      } else {
+        heShe = 'she';
+        himHer = 'her';
+        hisHer = 'her';
+        himselfHerself = 'herself';
       }
 
       spell.emote = spell.emote
