@@ -1,7 +1,72 @@
 [
   {
+    "name": "Acid Fog",
+    "description": "You create a 20-foot-radius sphere of acidic, green fog centered on a point you choose within range. The fog spreads around corners. It lasts for the duration or until strong wind disperses the fog, ending the spell. Its area is heavily obscured.\nWhen a creature enters the spell's area for the first time on a turn or starts its turn there, that creature must make a Constitution saving throw. The creature takes 5d8 acid  damage on a failed save, or half as much damage on a successful one. Creatures are affected even if they hold their breath or don't need to breathe.\nThe fog moves 10 feet away from you at the start of each of your turns, rolling along the surface of the ground. The vapors, being heavier than air, sink to the lowest level of the land, even pouring down openings.",
+    "higherLevel": "When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d8 for each slot level above 5th.",
+    "emote": "creates a sphere of acidic, green fog",
+    "source": "houserules",
+    "range": "120 ft",
+    "target": "a creature who enters the spell's area for the first time on a turn or starts its turn there",
+    "aoe": "20 ft radius sphere centered on a point within range",
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": "Up to 10 minutes",
+    "concentration": true,
+    "castingTime": "action",
+    "level": 5,
+    "school": "Conjuration",
+    "save": {
+      "ability": "constitution",
+      "damage": "5d8",
+      "damageType": "acid",
+      "saveSuccess": "half damage",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d8"
+    },
+    "effects": "The fog spreads around corners. It lasts for the duration or until strong wind disperses the fog, ending the spell. Its area is heavily obscured.\nCreatures are affected even if they hold their breath or don't need to breathe.\nThe fog moves 10 ft away from you at the start of each of your turns, rolling along the surface of the ground. The vapors, being heavier than air, sink to the lowest level of the land, even pouring down openings.",
+    "classes": [
+      "Sorcerer",
+      "Wizard"
+    ]
+  },
+  {
+    "name": "Acidic Spray",
+    "description": "An acidic spray erupts from your hands. Each creature in a 60-foot cone must make a Constitution saving throw. A creature takes 8d8 acid damage on a failed save, or half as much damage on a successful one.\nA creature killed by this spell is affected by rigor mortis.",
+    "higherLevel": "When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d8 for each slot level above 5th.",
+    "emote": "'s hands erupt with an acidic spray",
+    "source": "phb 224",
+    "range": "Self",
+    "target": "each creature in the aoe",
+    "aoe": "60 ft cone",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": true,
+      "materialMaterial": "an Ankheg's mandible"
+    },
+    "duration": "Instantaneous",
+    "castingTime": "action",
+    "level": 5,
+    "school": "Evocation",
+    "save": {
+      "ability": "constitution",
+      "damage": "8d8",
+      "damageType": "acid",
+      "saveSuccess": "half damage",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d8"
+    },
+    "effects": "A creature killed by this spell is affected by rigor mortis.",
+    "classes": [
+      "Sorcerer",
+      "Wizard"
+    ]
+  },
+  {
     "name": "Aggressive Thundercloud",
-    "description": "A 5-foot-diameter sphere of crackling storm clouds appears in an unoccupied space of your choice within range and lasts for the duration. Any creature that ends its turn within 5 feet of the sphere must make a Dexterity saving throw. The creature takes 2d6 lightning damage on a failed save, or half as much damage on a successful one.\nAs a bonus action, you can move the sphere up to 30 feet. If you ram the sphere into a creature, that creature must make the saving throw against the sphere's damage, and the sphere stops moving this turn.\nWhen you move the sphere, you can direct it over barriers up to 5 feet tall and jump it across pits up to 10 feet wide.",
+    "description": "A 5-foot-diameter sphere of crackling storm clouds appears in an unoccupied space of your choice within range and lasts for the duration. Any creature that ends its turn within 5 feet of the sphere must make a Dexterity saving throw. The creature takes 2d6 lightning damage on a failed save, or half as much damage on a successful one.\nAs a bonus action, you can move the sphere up to 30 feet. If you ram the sphere into a creature, that creature must make the saving throw against the sphere's damage, and the sphere stops moving this turn.\nWhen you move the sphere, you can direct it over barriers up to 5 feet tall and jump it across pits up to 10 feet wide. The sphere ignites flammable objects not being worn or carried.",
     "higherLevel": "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d6 for each slot level above 2nd.",
     "emote": "conjures a sphere of crackling storm clouds",
     "source": "houserules",
@@ -27,7 +92,7 @@
       "higherLevelDice": "1",
       "higherLevelDie": "d6"
     },
-    "effects": "As a bonus action, you can move the sphere up to 30 ft. If you ram the sphere into a creature, that creature must make the saving throw against the sphere's damage, and the sphere stops moving this turn.\nWhen you move the sphere, you can direct it over barriers up to 5 ft tall and jump it across pits up to 10 ft wide.",
+    "effects": "As a bonus action, you can move the sphere up to 30 ft. If you ram the sphere into a creature, that creature must make the saving throw against the sphere's damage, and the sphere stops moving this turn.\nWhen you move the sphere, you can direct it over barriers up to 5 ft tall and jump it across pits up to 10 ft wide. The sphere ignites flammable objects not being worn or carried.",
     "classes": [
       "Druid",
       "Sorcerer",
@@ -110,6 +175,39 @@
     }
   },
   {
+    "name": "Disintegrating Poison",
+    "description": "A thin green ray springs from your pointing finger to a target that you can see within range. The target can be a creature, an object, or a creation of magical force, such as the wall created by wall of force.\nA creature targeted by this spell must make a Dexterity saving throw. On a failed save, the target takes 10d6 + 40 poison damage. If this damage reduces the target to 0 hit points, it is disintegrated.\nA disintegrated creature and everything it is wearing and carrying, except magic items, are reduced to a pile of fine green dust. The creature can be restored to life only by means of a true resurrection or a wish spell.\nThis spell automatically disintegrates a Large or smaller nonmagical object or a creation of magical force. If the target is a Huge or larger object or creation of force, this spell disintegrates a 10-foot-cube portion of it. A magic item is unaffected by this spell.",
+    "higherLevel": "When you cast this spell using a spell slot of 7th level or higher, the damage increases by 3d6 for each slot level above 6th.",
+    "emote": "shoots a thin green ray from {{GENDER_PRONOUN_HIS_HER}} pointing finger",
+    "source": "phb 233",
+    "range": "60 ft",
+    "target": "a creature, an object, or a creation of magical force that you can see within range. A creation of magical force, such as the wall created by wall of force.",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": true,
+      "materialMaterial": "A lodestone and a pinch of mummy wrappings"
+    },
+    "duration": "Instantaneous",
+    "castingTime": "action",
+    "level": 6,
+    "school": "Transmutation",
+    "save": {
+      "ability": "dexterity",
+      "damage": "10d6",
+      "damageBonus": "40",
+      "damageType": "poison",
+      "saveSuccess": "half damage",
+      "higherLevelDice": "3",
+      "higherLevelDie": "d6"
+    },
+    "effects": "If this damage reduces the target to 0 hit points, it is disintegrated. A disintegrated creature and everything it is wearing and carrying, except magic items, are reduced to a pile of fine green dust. The creature can be restored to life only by means of a true resurrection or a wish spell.\nThis spell automatically disintegrates a Large or smaller nonmagical object or a creation of magical force. If the target is a Huge or larger object or creation of force, this spell disintegrates a 10 ft cube portion of it. A magic item is unaffected by this spell.",
+    "classes": [
+      "Sorcerer",
+      "Wizard"
+    ]
+  },
+  {
     "name": "Eroding Mist",
     "description": "As you hold your hands with thumbs touching and fingers spread, a green mist shoots forth from your outstretched fingertips. Each creature in a 15-foot cone must make a Dexterity saving throw. A creature takes 3d6 acid damage on a failed save, or half as much damage on a successful one.\nThe acid can eat through objects in the area that aren't being worn or carried.",
     "higherLevel": "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st.",
@@ -135,6 +233,33 @@
       "higherLevelDie": "d6"
     },
     "effects": "The acid can eat through objects in the area that aren't being worn or carried.",
+    "classes": [
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
+    ]
+  },
+  {
+    "name": "Eruptive Pustules",
+    "description": "Your skin erupts in swollen, pus-filled bumps for the duration. You can end the spell early by using an action to dismiss it. Whenever a creature within 5 feet of you hits you with a melee attack, the pustules burst open. The attacker takes 1d8 points of acid damage and must make a Constitution saving throw or be blinded until the end of it's next turn.",
+    "emote": "'s skin erupts in swollen, pus-filled bumps",
+    "source": "houserules",
+    "range": "Self",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": true,
+      "materialMaterial": "a small amount of oil"
+    },
+    "duration": "10 minutes",
+    "castingTime": "action",
+    "level": 3,
+    "school": "Transmutation",
+    "save": {
+      "ability": "constitution",
+      "saveFailure": "blinded until the end of it's next turn"
+    },
+    "effects": "Whenever a creature within 5 feet of you hits you with a melee attack, the pustules burst open. The attacker takes 1d8 points of acid damage and must make a Constitution saving throw as outlined above",
     "classes": [
       "Sorcerer",
       "Warlock",
@@ -223,10 +348,74 @@
     ]
   },
   {
+    "name": "Ice Slick",
+    "description": "You create a blast of intense cold, coating all solid surfaces in the area with a thin layer of ice from a point of your choice within range. Each creature in a 10-foot-radius sphere centered on that point must make a Dexterity saving throw. A creature takes takes 3d6 cold damage and falls prone on a failed save, or half as much on a successful one.\nA creature that enters the area or ends its turn there must also succeed on a Dexterity saving throw or fall prone.\nA 5-foot square of ice has 3 hit points. The ice is an instantaneous effect, but persists as non-magical ice. Under temperate conditions, the ice lasts 1 minute. In tropical environments, it might last only half as long. In cold environments where ice and snow persist without melting, it could last indefinitely.",
+    "higherLevel": "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for each slot level above 2nd",
+    "emote": "evokes a blast of intense cold, coating all solid surfaces in the area with a thin layer of ice",
+    "source": "houserules",
+    "range": "30 ft",
+    "target": "each creature in the aoe",
+    "aoe": "10 ft radius sphere centered on a point within range",
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": "1 minute",
+    "castingTime": "action",
+    "level": 2,
+    "school": "Evocation",
+    "save": {
+      "ability": "dexterity",
+      "damage": "2d6",
+      "damageType": "cold",
+      "saveSuccess": "half damage",
+      "saveFailure": "fall prone",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d6"
+    },
+    "effects": "A creature that enters the area or ends its turn there must also succeed on a Dexterity saving throw or fall prone.\nA 5 ft square of ice has 3 hit points. The ice is an instantaneous effect, but persists as non-magical ice. Under temperate conditions, the ice lasts 1 minute. In tropical environments, it might last only half as long. In cold environments where ice and snow persist without melting, it could last indefinitely.",
+    "classes": [
+      "Druid",
+      "Ranger",
+      "Sorcerer",
+      "Wizard"
+    ]
+  },
+  {
     "name": "Jump",
     "remove": true
   },
-
+  {
+    "name": "Lightning Arc",
+    "description": "You generate an arc of lightning between two targets that are no more than 60 feet apart. Both targets and any creatures in a line connecting them must make a Dexterity saving throw. A creature takes 8d8 lightning damage on a failed save, or half as much damage on a successful one. The spell fails if there is no line of effect between the targets. Lightning arc sets fire to combustibles and damages objects in its path. It can melt metals that have a low melting point, such as lead, gold, copper, silver, or bronze.",
+    "higherLevel": "When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d8 for each slot level above 5th.",
+    "emote": "generates an arc of lightning between two targets",
+    "source": "houserules",
+    "range": "120 ft",
+    "target": "Both targets and any creatures in the aoe",
+    "aoe": "line connecting the targets",
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": "Instantaneous",
+    "castingTime": "action",
+    "level": 5,
+    "school": "Evocation",
+    "save": {
+      "ability": "constitution",
+      "damage": "8d8",
+      "damageType": "lightning",
+      "saveSuccess": "half damage",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d8"
+    },
+    "effects": "The spell fails if there is no line of effect between the targets. Lightning arc sets fire to combustibles and damages objects in its path. It can melt metals that have a low melting point, such as lead, gold, copper, silver, or bronze.",
+    "classes": [
+      "Sorcerer",
+      "Wizard"
+    ]
+  },
   {
     "name": "Locate Creature",
     "ritual": true
@@ -291,6 +480,34 @@
     },
     "classes": [
       "Druid",
+      "Sorcerer",
+      "Wizard"
+    ]
+  },
+  {
+    "name": "Miasmatic Form",
+    "description": "You transform a willing creature you touch, along with everything it's wearing and carrying, into a misty cloud for the duration. The spell ends if the creature drops to 0 hit points. An incorporeal creature isn't affected.\nWhile in this form, the target's only method of movement is a flying speed of 10 feet. The target can enter and occupy the space of another creature. The target's body nauseates creatures. Each creature that is completely within the cloud at the start of its turn must make a Constitution saving throw against poison. On a failed save, the creature spends its action that turn retching and reeling. Creatures that don't need to breathe or are immune to poison automatically succeed on this saving throw. The target has resistance to nonmagical damage, and it has advantage on Strength, Dexterity, and Constitution saving throws. The target can pass through small holes, narrow openings, and even mere cracks, though it treats liquids as though they were solid surfaces. The target can't fall and remains hovering in the air even when stunned or otherwise incapacitated.\nWhile in the form of a misty cloud, the target can't talk or manipulate objects, and any objects it was carrying or holding can't be dropped, used, or otherwise interacted with. The target can't attack or cast spells.",
+    "emote": "transforms a creature, along with everything it's wearing and carrying, into a misty cloud ",
+    "source": "houserules",
+    "range": "Touch",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": true,
+      "materialMaterial": "A bit of gauze and a wisp of smoke"
+    },
+    "duration": "Up to 1 minute",
+    "concentration": true,
+    "castingTime": "action",
+    "level": 3,
+    "school": "Transmutation",
+    "save": {
+      "condition": "against poison",
+      "ability": "constitution",
+      "saveFailure": "the creature spends its action that turn retching and reeling. Creatures that don’t need to breathe or are immune to poison automatically succeed on this saving throw"
+    },
+    "effects": "The spell ends if the creature drops to 0 hit points. An incorporeal creature isn't affected.\nWhile in this form, the target's only method of movement is a flying speed of 10 ft. The target can enter and occupy the space of another creature. The target's body nauseates creatures. Each creature that is completely within the cloud at the start of its turn must make a Constitution saving throw as outlined above. The target has resistance to nonmagical damage, and it has advantage on Strength, Dexterity, and Constitution saving throws. The target can pass through small holes, narrow openings, and even mere cracks, though it treats liquids as though they were solid surfaces. The target can't fall and remains hovering in the air even when stunned or otherwise incapacitated.\nWhile in the form of a misty cloud, the target can't talk or manipulate objects, and any objects it was carrying or holding can't be dropped, used, or otherwise interacted with. The target can't attack or cast spells.",
+    "classes": [
       "Sorcerer",
       "Wizard"
     ]
@@ -368,6 +585,39 @@
       "higherLevelDice": "2",
       "higherLevelDie": "d4"
     }
+  },
+  {
+    "name": "Wall of Ice, lesser",
+    "description": "You create a wall of ice on a solid surface within range. You can form it into a hemispherical dome or a sphere with a radius of up to 5 feet, or you can shape a flat surface made up of ten 5-foot-square panels. Each panel must be contiguous with another panel. In any form, the wall is 1 foot thick and lasts for the duration.\nIf the wall cuts through a creature's space when it appears, the creature within its area is pushed to one side of the wall and must make a Dexterity saving throw. On a failed save, the creature takes 3d6 cold damage, or half as much damage on a successful save.\nThe wall is an object that can be damaged and thus breached. It has AC 5 and 15 hit points per 5-foot section, and it is vulnerable to fire damage. Reducing a 5-foot section of wall to 0 hit points destroys it and leaves behind a sheet of frigid air in the space the wall occupied. A creature moving through the sheet of frigid air for the first time on a turn must make a Constitution saving throw. That creature takes 2d6 cold damage on a failed save, or half as much damage on a successful one.",
+    "higherLevel": "When you cast this spell using a spell slot of 4th level or higher, the damage the wall deals when it appears increases by 1d6 for each slot above 3rd, and the damage from passing through the sheet of frigid air increases by 1d6, for every 2 spell slots slot level above 3rd.",
+    "emote": "creates a wall of ice",
+    "source": "phb 285",
+    "range": "120 ft",
+    "target": "each creature within its area when it appears",
+    "aoe": "wall on a solid surface within range: hemispherical dome or a sphere with a radius of up to 10 ft, or you can shape a flat surface made up of ten 10 ft square panels. Each panel must be contiguous with another panel.",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": true,
+      "materialMaterial": "A small piece of quartz"
+    },
+    "duration": "Up to 10 minutes",
+    "concentration": true,
+    "castingTime": "action",
+    "level": 6,
+    "school": "Evocation",
+    "save": {
+      "ability": "dexterity",
+      "damage": "10d6",
+      "damageType": "cold",
+      "saveSuccess": "half damage",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d6"
+    },
+    "effects": "In any form, the wall is 1 ft thick and lasts for the duration.\nIf the wall cuts through a creature's space when it appears, the creature within its area is pushed to one side of the wall and must make a Dexterity saving throw as outlined above.\nThe wall is an object that can be damaged and thus breached. It has AC 5 and 15 hit points per 5-foot section, and it is vulnerable to fire damage. Reducing a 5 ft section of wall to 0 hit points destroys it and leaves behind a sheet of frigid air in the space the wall occupied. A creature moving through the sheet of frigid air for the first time on a turn must make a Constitution saving throw. That creature takes 2d6 ([[2d6]]) cold damage on a failed save, or half as much damage on a successful one.",
+    "classes": [
+      "Wizard"
+    ]
   },
   {
     "name": "Wall of Sand",
