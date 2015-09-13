@@ -52,7 +52,7 @@
   };
 
   shaped.statblock = {
-    version: '1.97',
+    version: '1.98',
     RegisterHandlers: function () {
       on('chat:message', HandleInput);
 
@@ -306,7 +306,7 @@
     });
   }
 
-  shaped.setCharacter = function(gmnotes) {
+  shaped.setCharacter = function(token, gmnotes) {
     if(!characterName) {
       throw('Name require to get or create character');
     }
@@ -318,8 +318,10 @@
 
     if(obj.length === 0) {
       obj = createObj('character', {
-        name: characterName
+        name: characterName,
+        avatar: token.get('imgsrc')
       });
+
       status = characterName + ' created';
     } else {
       obj = getObj('character', obj[0].id);
@@ -400,7 +402,7 @@
       throw('Selected token GM Notes was empty.');
     }
 
-    shaped.parseStatblock(statblock);
+    shaped.parseStatblock(token, statblock);
     if(characterId) {
       token.set('represents', characterId);
       var tokenName = characterName;
@@ -497,7 +499,7 @@
         action: action,
         istokenaction: istokenaction
       });
-      log('Ability ' + name + ' created');
+      //log('Ability ' + name + ' created');
     } else {
       ability = getObj('ability', ability[0].id);
       if(ability.get('description') != description || ability.get('action') !== action || ability.get('istokenaction') != istokenaction) {
@@ -506,12 +508,12 @@
           action: action,
           istokenaction: istokenaction
         });
-        log('Ability ' + name + ' updated');
+        //log('Ability ' + name + ' updated');
       }
     }
   }
 
-  shaped.parseStatblock = function(statblock) {
+  shaped.parseStatblock = function(token, statblock) {
     log('---- Parsing statblock ----');
 
     var text = sanitizeText(clean(statblock)),
@@ -520,7 +522,7 @@
 
     characterName = capitalizeEachWord(section.attr.name.toLowerCase());
 
-    shaped.setCharacter(text.replace(/#/g, '<br>'));
+    shaped.setCharacter(token, text.replace(/#/g, '<br>'));
     processSection(section);
   };
 
@@ -1855,7 +1857,7 @@
         }
 
         if(shaped.settings.bar[i].link) {
-          log(barTokenName + ': setting link to: ' + barLink);
+          //log(barTokenName + ': setting link to: ' + barLink);
           token.set(barTokenName + '_link', barLink);
         } else {
           if(token.get(barTokenName + '_link')) {
@@ -1864,7 +1866,7 @@
           }
         }
         if(barName) {
-          log(barTokenName + ': setting current to: ' + barCurrent);
+          //log(barTokenName + ': setting current to: ' + barCurrent);
           token.set(barTokenName + '_value', barCurrent);
         } else {
           if(token.get(barTokenName + '_value')) {
@@ -1873,7 +1875,7 @@
           }
         }
         if(shaped.settings.bar[i].max) {
-          log(barTokenName + ': setting max to: ' + barMax);
+          //log(barTokenName + ': setting max to: ' + barMax);
           token.set(barTokenName + '_max', barMax);
         } else {
           if(token.get(barTokenName + '_max')) {
@@ -1882,7 +1884,7 @@
           }
         }
       } else {
-        messageToChat(barTokenName + ': no defined bar setting in shaped-scripts (at the top of the page), clearing ' + barTokenName + '.');
+        log(barTokenName + ': no defined bar setting in shaped-scripts (at the top of the page), clearing ' + barTokenName + '.');
         clearBar(token, barTokenName);
       }
     }
