@@ -5,6 +5,11 @@ Scripts for 5e roll20
 
 ### Changelog
 
+**Sep 13th 2015 (1.98)**
+
+* Avatar of a creature is set to the token's image source if you've uploaded the image
+* Hp rolling now has a minimum of 1 per level
+
 **Sep 13th 2015 (1.97)**
 
 * Fixed higher level query toggle on spells.
