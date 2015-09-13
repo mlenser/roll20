@@ -135,11 +135,10 @@
 
   function messageToChat (message) {
     log(message);
-    var audience = 'gm';
+    sendChat('Shaped', '/w gm ' + message);
     if(commandExecuter.indexOf('(GM)') === -1) {
-      audience = commandExecuter;
+      sendChat('Shaped', '/w ' + commandExecuter + ' ' + message);
     }
-    sendChat('Shaped', '/w ' + audience + ' ' + message);
   }
 
   function capitalizeEachWord(str) {
