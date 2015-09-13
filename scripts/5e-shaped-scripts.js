@@ -261,50 +261,45 @@
     } else {
       var isNPC = getAttrByName(represent, 'is_npc', 'current');
       if(isNPC === 1 || isNPC === '1') {
-        rollCharacterHp(represent, function(total, average, formula) {
-          token.set(barTokenName + '_value', total);
-          token.set(barTokenName + '_max', total);
 
-          messageToChat('HP ('+ formula +') | average: ' + average + ' | rolled: ' + total);
+        var hdArray = [4, 6, 8, 10, 12, 20],
+          hdFormula = '',
+          totalLevels = 0,
+          hdAverage = 0;
+
+        for (var i = 0; i < hdArray.length; i++) {
+          var numOfHDRow = parseInt(getAttrByName(represent, 'hd_d'+ hdArray[i], 'current'), 10);
+          if(numOfHDRow) {
+            if(hdFormula !== '') {
+              hdFormula += ' + ';
+            }
+            totalLevels += numOfHDRow;
+            hdFormula += numOfHDRow + 'd' + hdArray[i];
+
+            hdAverage += (hdArray[i]/2 +.5) * numOfHDRow;
+          }
+        }
+
+        var conToHp = totalLevels * Math.floor((getAttrByName(represent, 'constitution', 'current') - 10) / 2);
+        //add constitution mod
+        hdFormula += ' + ' + conToHp;
+        hdAverage += conToHp;
+
+        hdAverage = Math.floor(hdAverage);
+
+        sendChat('Shaped', '/roll ' + hdFormula, function(ops) {
+          var rollResult = JSON.parse(ops[0].content);
+          if(_.has(rollResult, 'total')) {
+            token.set(barTokenName + '_value', rollResult.total);
+            token.set(barTokenName + '_max', rollResult.total);
+
+            messageToChat('HP ('+ hdFormula +') | average: ' + hdAverage + ' | rolled: ' + rollResult.total);
+          }
         });
       }
     }
     log('Still working after trying to roll hp');
   };
-
-  function rollCharacterHp(id, callback) {
-    var hdArray = [4, 6, 8, 10, 12, 20],
-      hdFormula = '',
-      totalLevels = 0,
-      hdAverage = 0;
-
-    for (var i = 0; i < hdArray.length; i++) {
-      var numOfHDRow = parseInt(getAttrByName(id, 'hd_d'+ hdArray[i], 'current'), 10);
-      if(numOfHDRow) {
-        if(hdFormula !== '') {
-          hdFormula += ' + ';
-        }
-        totalLevels += numOfHDRow;
-        hdFormula += numOfHDRow + 'd' + hdArray[i];
-
-        hdAverage += (hdArray[i]/2 +.5) * numOfHDRow;
-      }
-    }
-
-    var conToHp = totalLevels * Math.floor((getAttrByName(id, 'constitution', 'current') - 10) / 2);
-    //add constitution mod
-    hdFormula += ' + ' + conToHp;
-    hdAverage += conToHp;
-
-    hdAverage = Math.floor(hdAverage);
-
-    sendChat('Shaped', '/roll ' + hdFormula, function(ops) {
-      var rollResult = JSON.parse(ops[0].content);
-      if(_.has(rollResult, 'total')) {
-        callback(rollResult.total, hdAverage, hdFormula);
-      }
-    });
-  }
 
   shaped.setCharacter = function(token, gmnotes) {
     if(!characterName) {
