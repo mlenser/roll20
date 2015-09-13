@@ -264,28 +264,33 @@
 
         var hdArray = [4, 6, 8, 10, 12, 20],
           hdFormula = '',
+          hdFormulaChat = '',
+          hdAverage = 0,
           totalLevels = 0,
-          hdAverage = 0;
+          conScore = parseInt(getAttrByName(represent, 'constitution', 'current'), 10),
+          conMod = Math.floor((conScore - 10) / 2);
 
         for (var i = 0; i < hdArray.length; i++) {
           var numOfHDRow = parseInt(getAttrByName(represent, 'hd_d'+ hdArray[i], 'current'), 10);
           if(numOfHDRow) {
-            if(hdFormula !== '') {
-              hdFormula += ' + ';
+            if (hdFormulaChat !== '') {
+              hdFormulaChat += ' + ';
             }
             totalLevels += numOfHDRow;
-            hdFormula += numOfHDRow + 'd' + hdArray[i];
+            hdFormulaChat += numOfHDRow + 'd' + hdArray[i];
+            for (var j = 0; j < numOfHDRow; j++) {
+              if (hdFormula !== '') {
+                hdFormula += ' + ';
+              }
+              hdFormula += '{d' + hdArray[i] + ' + ' + conMod + ', 0d0+1}kh1';
 
-            hdAverage += (hdArray[i]/2 +.5) * numOfHDRow;
+              hdAverage += (hdArray[i] / 2 + .5) + conMod;
+            }
           }
         }
 
-        var conToHp = totalLevels * Math.floor((getAttrByName(represent, 'constitution', 'current') - 10) / 2);
-        //add constitution mod
-        hdFormula += ' + ' + conToHp;
-        hdAverage += conToHp;
+        hdFormulaChat += ' + ' + conMod * totalLevels;
 
-        hdAverage = Math.floor(hdAverage);
 
         sendChat('Shaped', '/roll ' + hdFormula, function(ops) {
           var rollResult = JSON.parse(ops[0].content);
@@ -293,7 +298,7 @@
             token.set(barTokenName + '_value', rollResult.total);
             token.set(barTokenName + '_max', rollResult.total);
 
-            messageToChat('HP ('+ hdFormula +') | average: ' + hdAverage + ' | rolled: ' + rollResult.total);
+            messageToChat('HP ('+ hdFormulaChat +') | average: ' + Math.floor(hdAverage) + ' | rolled: ' + rollResult.total);
           }
         });
       }
