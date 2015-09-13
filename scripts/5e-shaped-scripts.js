@@ -2198,7 +2198,7 @@
         setAttribute(spellBase + 'spell_' + type + '_second_dmg_type', param.secondaryDamageType);
       }
       if(param.higherLevelDice) {
-        setAttribute(spellBase + 'spell_toggle_higher_lvl_query', '@{spell_var_higher_lvl_query}');
+        setAttribute(spellBase + 'spell_toggle_higher_lvl_query', '@{higher_level_query}');
         setAttribute(spellBase + 'spell_toggle_output_higher_lvl_query', '@{spell_var_output_higher_lvl_query}');
         setAttribute(spellBase + 'spell_' + type + '_higher_level_dmg_dice', param.higherLevelDice);
       }
