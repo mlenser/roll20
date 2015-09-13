@@ -5,6 +5,11 @@ Scripts for 5e roll20
 
 ### Changelog
 
+**Sep 13th 2015 (1.97)**
+
+* Fixed higher level query toggle on spells.
+* Logs are now sent in chat to whoever invokes the command
+
 **Sep 12th 2015 (1.96)**
 
 * Spell import default to male if there is no gender specified (previously errored out)
