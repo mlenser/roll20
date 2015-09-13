@@ -582,6 +582,7 @@
       'ACT IONS':'ACTIONS',
       'Afrightened':'A frightened',
       'Alesser':'A lesser',
+      'Athl etics':'Athletics',
       'Aundefinedr':'After',
       'blindn ess':'blindness',
       'blind sight':'blindsight',
