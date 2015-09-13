@@ -136,7 +136,7 @@
   function messageToChat (message) {
     log(message);
     sendChat('Shaped', '/w gm ' + message);
-    if(commandExecuter.indexOf('(GM)') === -1) {
+    if(commandExecuter && commandExecuter.indexOf('(GM)') === -1) {
       sendChat('Shaped', '/w ' + commandExecuter + ' ' + message);
     }
   }
