@@ -70,13 +70,15 @@
     errors = [],
     obj = null,
     characterId = null,
-    characterName = null;
+    characterName = null,
+    commandExecuter = null;
 
   function capitalizeFirstLetter (string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
   };
 
   function HandleInput(msg) {
+    commandExecuter = msg.who;
     if(shaped.settings.useAmmoAutomatically && msg.rolltemplate === '5eDefault' && msg.content.indexOf('{{ammo_auto=1}}') !== -1) {
       var character_name,
         attribute,
@@ -131,6 +133,15 @@
     }
   }
 
+  function messageToChat (message) {
+    log(message);
+    var audience = 'gm';
+    if(commandExecuter.indexOf('(GM)') === -1) {
+      audience = commandExecuter;
+    }
+    sendChat('Shaped', '/w ' + audience + ' ' + message);
+  }
+
   function capitalizeEachWord(str) {
     return str.replace(/\w\S*/g, function(txt) {
       return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
@@ -152,9 +163,7 @@
         }
       }
     } catch(e) {
-      log(e);
-      log('Exception: ' + e);
-      sendChat('GM', '/w GM ' + e);
+      messageToChat('Exception: ' + e);
     }
   };
 
@@ -176,37 +185,28 @@
         _type: 'character',
         id: id
       })[0],
-      characterName = getAttrByName(id, 'character_name', 'current'),
-      message;
+      characterName = getAttrByName(id, 'character_name', 'current');
 
     if(typeof(character) === 'undefined') {
-      var message = 'Error: cannot find a character by the name of "' + characterName + '".';
-      log(message);
-      sendChat('GM', '/w gm ' + message);
+      messageToChat('Error: cannot find a character by the name of "' + characterName + '".');
       return
     }
     characterId = character.id;
 
     if(args[1] === 'init') {
       createInitTokenAction(characterName);
-      message = 'created init token macro for ' + characterName + '.';
-      log(message);
-      sendChat('GM', '/w gm ' + message);
+      messageToChat('created init token macro for ' + characterName + '.');
     } else if(args[1] === 'query') {
       createSaveQueryTokenAction(characterName);
       createCheckQueryTokenAction(characterName);
       createSkillQueryTokenAction(characterName);
-      message = 'created query token macros for ' + characterName + '.';
-      log(message);
-      sendChat('GM', '/w gm ' + message);
+      messageToChat('created query token macros for ' + characterName + '.');
     } else if(args[1] === 'bootstrap') {
       createInitTokenAction(characterName);
       createSaveQueryTokenAction(characterName);
       createCheckQueryTokenAction(characterName);
       createSkillQueryTokenAction(characterName);
-      message = 'bootstraped all token macros for ' + characterName + '.';
-      log(message);
-      sendChat('GM', '/w gm ' + message);
+      messageToChat('bootstraped all token macros for ' + characterName + '.');
     }
   };
 
@@ -248,9 +248,7 @@
       }
     }
     if(!barOfHP) {
-      var message = 'One of the bar names has to be set to "HP" for random HP roll';
-      log(message);
-      sendChat('GM', '/w gm ' + message);
+      messageToChat('One of the bar names has to be set to "HP" for random HP roll');
       return;
     }
 
@@ -258,17 +256,17 @@
       represent = token.get('represents');
 
     if(represent === '') {
-      log('Token does not represent a character');
+      messageToChat('Token does not represent a character');
     } else if(token.get(barTokenName + '_link') !== '') {
-      log('Token ' + barTokenName + ' is linked');
+      messageToChat('Token ' + barTokenName + ' is linked');
     } else {
       var isNPC = getAttrByName(represent, 'is_npc', 'current');
       if(isNPC === 1 || isNPC === '1') {
         rollCharacterHp(represent, function(total, average, formula) {
           token.set(barTokenName + '_value', total);
           token.set(barTokenName + '_max', total);
-          var message = 'HP ('+ formula +') | average: ' + average + ' | rolled: ' + total;
-          sendChat('GM', '/w gm ' +message);
+
+          messageToChat('HP ('+ formula +') | average: ' + average + ' | rolled: ' + total);
         });
       }
     }
@@ -301,7 +299,7 @@
 
     hdAverage = Math.floor(hdAverage);
 
-    sendChat('GM', '/roll ' + hdFormula, function(ops) {
+    sendChat('Shaped', '/roll ' + hdFormula, function(ops) {
       var rollResult = JSON.parse(ops[0].content);
       if(_.has(rollResult, 'total')) {
         callback(rollResult.total, hdAverage, hdFormula);
@@ -435,13 +433,10 @@
 
       setTokenVision(token);
     }
-
-    log(status);
-    sendChat('Shaped', '/w GM ' + status);
+    messageToChat(status);
 
     if(errors.length > 0) {
-      log(errors.join('\n'));
-      sendChat('Shaped', '/w GM Error(s):\n/w GM ' + errors.join('\n/w GM '));
+      messageToChat('Error(s): ' + errors.join('\n/w GM '));
     }
   };
 
@@ -453,7 +448,7 @@
     max = max || '';
 
     if(!currentVal) {
-      log('Error setting empty value: ' + name);
+      messageToChat('Error setting empty value: ' + name);
       return;
     }
 
@@ -1825,8 +1820,7 @@
       token.set('showname', true);
     }
 
-    log('Character ' + token.attributes.name + ' converted');
-    sendChat('Shaped', '/w gm Character ' + token.attributes.name + ' converted');
+    messageToChat('Character ' + token.attributes.name + ' converted');
   };
 
   function clearBar(token, bar) {
@@ -1888,7 +1882,7 @@
           }
         }
       } else {
-        log(barTokenName + ': no defined bar setting in shaped-scripts (at the top of the page), clearing ' + barTokenName + '.');
+        messageToChat(barTokenName + ': no defined bar setting in shaped-scripts (at the top of the page), clearing ' + barTokenName + '.');
         clearBar(token, barTokenName);
       }
     }
@@ -1913,19 +1907,14 @@
       changeNPCs = true;
       changePCs = true;
     } else {
-      var errorMessage = "invalid target. Please send 'npcs', 'pcs', or 'all'";
-      log(errorMessage);
-      sendChat('GM', '/w GM ' + errorMessage);
+      messageToChat('invalid target. Please send "npcs", "pcs", or "all"');
     }
 
     var validAttributeName = ['output_option', 'death_save_output_option', 'initiative_output_option', 'show_character_name', 'initiative_tie_breaker', 'initiative_to_tracker', 'attacks_vs_target_ac', 'attacks_vs_target_name', 'gm_info', 'save_dc', 'save_failure', 'save_success', 'effects', 'recharge'];
     if (validAttributeName.indexOf(args[1]) !== -1) {
       attributeName = args[1];
     } else {
-      var errorMessage = 'invalid attribute. Please use one of the following: ' + validAttributeName.join(', ');
-      log(errorMessage);
-      sendChat('GM', '/w GM ' + errorMessage);
-      return
+      messageToChat('invalid attribute. Please use one of the following: ' + validAttributeName.join(', '));
     }
 
     function showHide (field, prefix, show, hide) {
@@ -1986,14 +1975,10 @@
           attributesToChange['hide_recharge'] = '@{hide_recharge_var}';
         }
       }
-
     } else {
-      var errorMessage = 'invalid value. Please use one of the following: ' + validAttributeValue.join(', ');
-      log(errorMessage);
-      sendChat('GM', '/w GM ' + errorMessage);
+      messageToChat('invalid value. Please use one of the following: ' + validAttributeValue.join(', '));
       return;
     }
-
 
     var creaturesToChange = filterObjs(function (obj) {
       if(obj.get('type') === 'character') {
@@ -2003,7 +1988,6 @@
       }
       return null;
     });
-
 
     for (var attribute in attributesToChange) {
       if (attributesToChange.hasOwnProperty(attribute)) {
@@ -2027,12 +2011,9 @@
           }
         });
         if(creaturesToChange.length > 0) {
-          log('changed ' + attribute + ' to ' + attributesToChange[attribute] + ' for ' + creaturesToChange.length + ' creatures');
-          sendChat('GM', '/w GM changed "' + attribute + '" to ' + attributesToChange[attribute].replace('@', '&#64;') + ' for ' + creaturesToChange.length + ' creatures');
+          messageToChat('changed ' + attribute + ' to ' + attributesToChange[attribute].replace('@', '&#64;') + ' for ' + creaturesToChange.length + ' creatures');
         } else {
-          var errorMessage = 'no creatures match those parameters';
-          log(errorMessage);
-          sendChat('GM', '/w GM ' + errorMessage);
+          messageToChat('no creatures match those parameters');
         }
       }
     }
@@ -2046,16 +2027,12 @@
       spellIndex;
 
     if(!spell) {
-      var message = 'Error: cannot find a spell by the name of "' + spellName + '".';
-      log(message);
-      sendChat('GM', '/w gm ' + message);
-      return
+      messageToChat('Error: cannot find a spell by the name of "' + spellName + '".');
+      return;
     }
     if(typeof(character) === 'undefined') {
-      var message = 'Error: cannot find a character by the name of "' + characterName + '".';
-      log(message);
-      sendChat('GM', '/w gm ' + message);
-      return
+      messageToChat('Error: cannot find a character by the name of "' + characterName + '".');
+      return;
     }
     characterId = character.id;
 
@@ -2272,9 +2249,7 @@
       setAttribute(spellBase + 'spell_toggle_effects', '@{spell_var_effects}');
     }
 
-    var message = spell.name + ' imported for ' + characterName + ' on spell level ' + spell.level + ' at index ' + spellIndex;
-    log(message);
-    sendChat('GM', '/w gm ' + message);
+    messageToChat(spell.name + ' imported for ' + characterName + ' on spell level ' + spell.level + ' at index ' + spellIndex);
   };
 
   shaped.spellImport = function(token, args) {
