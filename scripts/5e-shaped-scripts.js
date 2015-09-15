@@ -52,13 +52,17 @@
   };
 
   shaped.statblock = {
-    version: '1.98',
+    version: '1.99',
+    addTokenCache: [],
     RegisterHandlers: function () {
       on('chat:message', HandleInput);
 
       if(shaped.settings.rollMonsterHpOnDrop) {
-        on('add:graphic', function(obj) {
-          shaped.rollTokenHp(obj);
+        on('add:graphic', function (obj) {
+          shaped.statblock.addTokenCache.push(obj.id);
+        });
+        on('change:graphic', function(obj) {
+          shaped.rollTokenHpOnDrop(obj);
         });
       }
 
@@ -236,6 +240,13 @@
     var val = parseInt(attr.get('current'), 10) || 0;
 
     attr.set({current: val - 1});
+  };
+
+  shaped.rollTokenHpOnDrop = function (obj) {
+    if (_.contains(shaped.statblock.addTokenCache, obj.id) && 'graphic' === obj.get('type') && 'token' === obj.get('subtype')) {
+      shaped.statblock.addTokenCache = _.without(shaped.statblock.addTokenCache, obj.id);
+      shaped.rollTokenHp(obj);
+    }
   };
 
   shaped.rollTokenHp = function(token) {

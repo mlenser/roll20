@@ -5,6 +5,10 @@ Scripts for 5e roll20
 
 ### Changelog
 
+**Sep 15th 2015 (1.99)**
+
+* Try to delay rolling hp until token is setup
+
 **Sep 13th 2015 (1.98)**
 
 * Avatar of a creature is set to the token's image source if you've uploaded the image
