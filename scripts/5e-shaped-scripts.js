@@ -380,6 +380,9 @@
     if(shaped.settings.attacksVsTargetAC) {
       setAttribute('attacks_vs_target_ac', '@{attacks_vs_target_ac_yes}');
     }
+    if(shaped.settings.attacksVsTargetName) {
+      setAttribute('attacks_vs_target_name', '@{attacks_vs_target_name_yes}');
+    }
     if(shaped.settings.hideGMInfo) {
       setAttribute('hide_save_dc', '@{hide_save_dc_var}');
       setAttribute('hide_save_failure', '@{hide_save_failure_var}');
