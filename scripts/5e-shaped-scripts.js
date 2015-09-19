@@ -52,7 +52,7 @@
   };
 
   shaped.statblock = {
-    version: '1.99',
+    version: 'Sep 19th',
     addTokenCache: [],
     RegisterHandlers: function () {
       on('chat:message', HandleInput);
@@ -2032,7 +2032,7 @@
     }
   };
 
-  shaped.importSpell = function(character, characterName, spellName) {
+  shaped.importSpell = function(character, characterName, spellName, options) {
     var spell = fifthSpells.spellsData.filter(function ( obj ) {
         return obj.name.toLowerCase() === spellName.toLowerCase();
       })[0],
@@ -2070,6 +2070,9 @@
     }
 
     setAttribute(spellBase + 'spellname', spell.name);
+    if(options[0] && options[0] === 'prepared') {
+      setAttribute(spellBase + 'spellisprepared', 'on');
+    }
     if(spell.ritual) {
       setAttribute(spellBase + 'spellritual', '{{spellritual=1}}');
     }
@@ -2272,10 +2275,15 @@
         _type: 'character',
         id: id
       })[0],
-      characterName = getAttrByName(id, 'character_name', 'current');
+      characterName = getAttrByName(id, 'character_name', 'current'),
+      options = [];
+
+    if(args[1] && args[1] === 'prepared') {
+      options.push('prepared');
+    }
 
     for(var i = 0; i < spells.length; i++) {
-      shaped.importSpell(character, characterName, spells[i]);
+      shaped.importSpell(character, characterName, spells[i], options);
     }
   };
 

@@ -5,6 +5,10 @@ Scripts for 5e roll20
 
 ### Changelog
 
+**Sep 19th 2015**
+
+* Prepared now an option for spells
+
 **Sep 15th 2015 (1.99)**
 
 * Try to delay rolling hp until token is setup
