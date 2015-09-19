@@ -22,7 +22,6 @@
 
     addSaveQueryMacroTokenAbility: true, //change to false if you do not want a macro "Save" on every token
     addCheckQueryMacroTokenAbility: true, //change to false if you do not want a macro "Check" on every token
-    addSkillQueryMacroTokenAbility: true, //change to false if you do not want a macro "Skill" on every token
 
     useAmmoAutomatically: true,
 
@@ -202,13 +201,11 @@
     } else if(args[1] === 'query') {
       createSaveQueryTokenAction(characterName);
       createCheckQueryTokenAction(characterName);
-      createSkillQueryTokenAction(characterName);
       messageToChat('created query token macros for ' + characterName + '.');
     } else if(args[1] === 'bootstrap') {
       createInitTokenAction(characterName);
       createSaveQueryTokenAction(characterName);
       createCheckQueryTokenAction(characterName);
-      createSkillQueryTokenAction(characterName);
       messageToChat('bootstraped all token macros for ' + characterName + '.');
     }
   };
@@ -221,9 +218,6 @@
   }
   function createCheckQueryTokenAction(characterName) {
     setAbility('Check', '', '%{'+characterName+'|check_query_macro}', shaped.settings.createAbilityAsToken);
-  }
-  function createSkillQueryTokenAction(characterName) {
-    setAbility('Skill', '', '%{'+characterName+'|skill_query_macro}', shaped.settings.createAbilityAsToken);
   }
 
   shaped.decrementAmmo = function (characterName, attributeName) {
@@ -1571,9 +1565,6 @@
     }
     if(shaped.settings.addCheckQueryMacroTokenAbility) {
       createCheckQueryTokenAction(characterName);
-    }
-    if(shaped.settings.addSkillQueryMacroTokenAbility) {
-      createSkillQueryTokenAction(characterName);
     }
 
     for(var key in actions) {
