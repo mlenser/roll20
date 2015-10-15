@@ -51,7 +51,7 @@
   };
 
   shaped.statblock = {
-    version: 'Sep 19th',
+    version: 'Oct 15th',
     addTokenCache: [],
     RegisterHandlers: function () {
       on('chat:message', HandleInput);
@@ -237,6 +237,7 @@
   };
 
   shaped.rollTokenHpOnDrop = function (obj) {
+    commandExecuter = null;
     if (_.contains(shaped.statblock.addTokenCache, obj.id) && 'graphic' === obj.get('type') && 'token' === obj.get('subtype')) {
       shaped.statblock.addTokenCache = _.without(shaped.statblock.addTokenCache, obj.id);
       shaped.rollTokenHp(obj);
