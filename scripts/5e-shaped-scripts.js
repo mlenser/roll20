@@ -51,7 +51,7 @@
   };
 
   shaped.statblock = {
-    version: 'Oct 15th',
+    version: 'Oct 17th',
     addTokenCache: [],
     RegisterHandlers: function () {
       on('chat:message', HandleInput);
@@ -297,6 +297,10 @@
 
         hdFormulaChat += ' + ' + conMod * totalLevels;
 
+        if(hdFormula === '') {
+          messageToChat('Character does not have any hit dice, cannot roll');
+          return;
+        }
 
         sendChat('Shaped', '/roll ' + hdFormula, function(ops) {
           var rollResult = JSON.parse(ops[0].content);
