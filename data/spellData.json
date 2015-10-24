@@ -6594,7 +6594,7 @@
     "duration": "Instantaneous",
     "castingTime": "action",
     "level": 5,
-    "school": "Conjuration",
+    "school": "Evocation",
     "heal": {
       "amount": "3d8",
       "castingStat": true,
@@ -6625,7 +6625,7 @@
     "duration": "Instantaneous",
     "castingTime": "action",
     "level": 9,
-    "school": "Conjuration",
+    "school": "Evocation",
     "effects": "You restore up to 700 hit points, divided as you choose among the targets. Creatures healed by this spell are also cured of all diseases and any effect making them blinded or deafened. This spell has no effect on undead or constructs.",
     "classes": [
       "Cleric"
@@ -7495,7 +7495,7 @@
   },
   {
     "name": "Phantasmal Killer",
-    "description": "You tap into the nightmares of a creature you can see within range and create an illusory manifestation of its deepest fears, visible only to that creature. The target must make a Wisdom saving throw. On a failed save, the target becomes frightened for the duration. At the start of each of the target's turns before the spell ends, the target must succeed on a Wisdom saving throw or take 4d10 psychic damage. On a successful save, the spell ends.",
+    "description": "You tap into the nightmares of a creature you can see within range and create an illusory manifestation of its deepest fears, visible only to that creature. The target must make a Wisdom saving throw. On a failed save, the target becomes frightened for the duration. At the end of each of the target's turns before the spell ends, the target must succeed on a Wisdom saving throw or take 4d10 psychic damage. On a successful save, the spell ends.",
     "higherLevel": "When you cast this spell using a spell slot of 5th level or higher, the damage increases by 1d10 for each slot level above 4th.",
     "emote": "taps into the nightmares of a creature and creates an illusory manifestation of its deepest fears, visible only to that creature",
     "source": "phb 265",
@@ -7512,7 +7512,7 @@
     "school": "Illusion",
     "save": {
       "ability": "wisdom",
-      "saveFailure": "becomes frightened for the duration. At the start of each of the target's turns before the spell ends, the target must succeed on a Wisdom saving throw or take 4d10 psychic damage. On a successful save, the spell ends."
+      "saveFailure": "becomes frightened for the duration. At the end of each of the target's turns before the spell ends, the target must succeed on a Wisdom saving throw or take 4d10 psychic damage. On a successful save, the spell ends."
     },
     "classes": [
       "Wizard"
@@ -7679,7 +7679,7 @@
     "emote": "transforms a creature into a new form",
     "source": "phb 266",
     "range": "60 ft",
-    "target": "a creature that you can see within range",
+    "target": "a creature with more than 0 hp that you can see within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -8399,7 +8399,7 @@
     "duration": "Instantaneous",
     "castingTime": "action",
     "level": 3,
-    "school": "Conjuration",
+    "school": "Necromancy",
     "effects": "target creature returns to life with 1 hit point. This spell can't return to life a creature that has died of old age, nor can it restore any missing body parts.",
     "classes": [
       "Cleric",
@@ -10112,7 +10112,7 @@
     "emote": "transforms the target into a different creature or object",
     "source": "phb 283",
     "range": "30 ft",
-    "target": "1 creature or nonmagical object that you can see within range",
+    "target": "1 creature with more than 0 hp or nonmagical object that you can see within range",
     "components": {
       "verbal": true,
       "somatic": true,
@@ -10729,7 +10729,7 @@
   },
   {
     "name": "Weird",
-    "description": "Drawing on the deepest fears of a group of creatures, you create illusory creatures in their minds, visible only to them. Each creature in a 30-foot-radius sphere centered on a point of your choice within range must make a Wisdom saving throw. On a failed save, a creature becomes frightened for the duration. The illusion calls on the creature's deepest fears, manifesting its worst nightmares as an implacable threat. At the start of each of the frightened creature's turns, it must succeed on a Wisdom saving throw or take 4d10 psychic damage. On a successful save, the spell ends for that creature.",
+    "description": "Drawing on the deepest fears of a group of creatures, you create illusory creatures in their minds, visible only to them. Each creature in a 30-foot-radius sphere centered on a point of your choice within range must make a Wisdom saving throw. On a failed save, a creature becomes frightened for the duration. The illusion calls on the creature's deepest fears, manifesting its worst nightmares as an implacable threat. At the end of each of the frightened creature's turns, it must succeed on a Wisdom saving throw or take 4d10 psychic damage. On a successful save, the spell ends for that creature.",
     "emote": "draws on the deepest fears of a group of creatures to create illusory creatures in their minds, visible only to them",
     "source": "phb 288",
     "range": "120 ft",
@@ -10746,7 +10746,7 @@
     "school": "Illusion",
     "save": {
       "ability": "wisdom",
-      "saveFailure": "become frightened for the duration. The illusion calls on the creature's deepest fears, manifesting its worst nightmares as an implacable threat. At the start of each of the frightened creature's turns, it must succeed on a Wisdom saving throw or take 4d10 ([[4d10]]) psychic damage. On a successful save, the spell ends for that creature."
+      "saveFailure": "become frightened for the duration. The illusion calls on the creature's deepest fears, manifesting its worst nightmares as an implacable threat. At the end of each of the frightened creature's turns, it must succeed on a Wisdom saving throw or take 4d10 psychic damage. On a successful save, the spell ends for that creature."
     },
     "classes": [
       "Wizard"
