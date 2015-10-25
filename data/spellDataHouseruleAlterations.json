@@ -214,6 +214,14 @@
     ]
   },
   {
+    "name": "Divine Word",
+    "description": "You utter a divine word, imbued with the power that shaped the world at the dawn of creation. Choose any number of creatures you can see within range. Each creature that can hear you must make a Constitution saving throw. On a failed save, a creature suffers an effect based on its current hit points:\n&#8226; 50 hit points or fewer: deafened for 1 minute\n&#8226; 40 hit points or fewer: deafened and blinded for 10 minutes\n&#8226; 30 hit points or fewer: blinded, deafened, and stunned for 1 hour\n&#8226; 20 hit points or fewer: killed instantly.\nRegardless of its current hit points, a celestial, an elemental, a fey, or a fiend that fails its save is forced back to its plane of origin (if it isn't there already) and can't return to your current plane for 24 hours by any means short of a wish spell.",
+    "save": {
+      "ability": "constitution",
+      "saveFailure": "each target suffers an effect based on its current hit points:\n&#8226; 50 hit points or fewer: deafened for 1 minute\n&#8226; 40 hit points or fewer: deafened and blinded for 10 minutes\n&#8226; 30 hit points or fewer: blinded, deafened, and stunned for 1 hour\n&#8226; 20 hit points or fewer: killed instantly.\nRegardless of its current hit points, a celestial, an elemental, a fey, or a fiend that fails its save is forced back to its plane of origin (if it isn't there already) and can't return to your current plane for 24 hours by any means short of a wish spell."
+    }
+  },
+  {
     "name": "Eroding Mist",
     "description": "As you hold your hands with thumbs touching and fingers spread, a green mist shoots forth from your outstretched fingertips. Each creature in a 15-foot cone must make a Dexterity saving throw. A creature takes 3d6 acid damage on a failed save, or half as much damage on a successful one.\nThe acid can eat through objects in the area that aren't being worn or carried.",
     "higherLevel": "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st.",
@@ -271,6 +279,14 @@
       "Warlock",
       "Wizard"
     ]
+  },
+  {
+    "name": "Faerie Fire",
+    "description": "Each object in a 20-foot cube within range is outlined in blue, green, or violet light (your choice). Any creature in the area when the spell is cast is also outlined in light if it fails a Constitution saving throw. For the duration, objects and affected creatures shed dim light in a 10-foot radius.\nAny attack roll against an affected creature or object has advantage if the attacker can see it, and the affected creature or object can't benefit from being invisible.",
+    "save": {
+      "ability": "constitution",
+      "saveFailure": "Target creature creature is outlined in light."
+    }
   },
   {
     "name": "Feign Death",
@@ -388,12 +404,39 @@
     ]
   },
   {
+    "name": "Ice Storm",
+    "description": "A hail of rock-hard ice pounds to the ground in a 20-foot-radius, 40-foot-high cylinder centered on a point within range. Each creature in the cylinder must make a Constitution saving throw. A creature takes 2d8 bludgeoning damage and 4d6 cold damage on a failed save, or half as much damage on a successful one.\nHailstones turn the storm's area of effect into difficult terrain until the end of your next turn.",
+    "save": {
+      "ability": "constitution",
+      "damage": "2d8",
+      "damageType": "bludgeoning",
+      "secondaryDamage": "4d6",
+      "secondaryDamageType": "cold",
+      "saveSuccess": "half damage",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d8"
+    }
+  },
+  {
+    "name": "Investiture of Wind",
+    "description": "Until the spell ends, wind whirls around you, and you gain the following benefits:\n- Ranged weapon attacks made against you have disadvantage on the attack roll.\n- You gain a flying speed of 60 feet. If you are still flying when the spell ends, you fall, unless you can somehow prevent it.\n- You can use your action to create a 15-foot cube of swirling wind centered on a point you can see within 60 feet of you. Each creature in that area must make a Strength saving throw. A creature takes 2d10 bludgeoning damage on a failed save, or half as much damage on a successful one. If a Large or smaller creature fails the save, that creature is also pushed up to 10 feet away from the center of the cube.",
+    "effects": "You gain the following benefits:\n- Ranged weapon attacks made against you have disadvantage on the attack roll.\n- You gain a flying speed of 60 ft. If you are still flying when the spell ends, you fall, unless you can somehow prevent it.\n- You can use your action to create a 15 ft cube of swirling wind centered on a point you can see within 60 ft of you. Each creature in that area must make a Strength saving throw. A creature takes 2d10 bludgeoning damage on a failed save, or half as much damage on a successful one. If a Large or smaller creature fails the save, that creature is also pushed up to 10 ft away from the center of the cube."
+  },
+  {
     "name": "Jump",
     "remove": true
   },
   {
     "name": "Leomund's Tiny Hut",
     "ritual": false
+  },
+  {
+    "name": "Levitate",
+    "description": "One creature or object of your choice that you can see within range rises vertically, up to 20 feet, and remains suspended there for the duration. The spell can levitate a target that weighs up to 500 pounds. An unwilling creature that succeeds on a Strength saving throw is unaffected.\nThe target can move only by pushing or pulling against a fixed object or surface within reach (such as a wall or a ceiling), which allows it to move as if it were climbing. You can change the target's altitude by up to 20 feet in either direction on your turn. If you are the target, you can move up or down as part of your move. Otherwise, you can use your action to move the target, which must remain within the spell's range.\nWhen the spell ends, the target floats gently to the ground if it is still aloft.",
+    "save": {
+      "ability": "Strength"
+    },
+    "effects": "the target rises vertically, up to 20 ft, and remains suspended there for the duration. The spell can levitate a target that weighs up to 500 lbs. An unwilling creature that succeeds on a Strength saving throw is unaffected.\nThe target can move only by pushing or pulling against a fixed object or surface within reach (such as a wall or a ceiling), which allows it to move as if it were climbing. You can change the target's altitude by up to 20 feet in either direction on your turn. If you are the target, you can move up or down as part of your move. Otherwise, you can use your action to move the target, which must remain within the spell's range.\nWhen the spell ends, the target floats gently to the ground if it is still aloft."
   },
   {
     "name": "Lightning Arc",
@@ -539,9 +582,16 @@
     "effects": "The target can't be targeted by any divination magic or perceived through magical scrying sensors."
   },
   {
+    "name": "Phantasmal Killer",
+    "description": "You tap into the nightmares of a creature you can see within range and create an illusory manifestation of its deepest fears, visible only to that creature. The target must make a Wisdom saving throw. On a failed save, the target becomes frightened for the duration. At the end of each of the target's turns before the spell ends, the target must succeed on a Intelligence saving throw or take 4d10 psychic damage. On a successful save, the spell ends.",
+    "save": {
+      "ability": "wisdom",
+      "saveFailure": "becomes frightened for the duration. At the end of each of the target's turns before the spell ends, the target must succeed on an Intelligence saving throw or take 4d10 psychic damage. On a successful save, the spell ends."
+    }
+  },
+  {
     "name": "Phantom Steed",
-    "higherLevel": "When you cast this spell using a spell slot of 3rd level or higher, you can create one additional steed for each slot level above 2nd. When you use a spell of 3rd level or higher, the steeds can ride over sandy, muddy, or even swampy ground without difficulty or a decrease in speed. When you use a spell of 4th level or higher, the steeds can walk on water (per the water walk spell). When you use a spell of 5th level or higher, the steeds can fly at its speed for up to 1 round, after which it falls to the ground. When you use a spell of 6th level or higher, the steeds can fly at its speed.",
-    "level": 2,
+    "higherLevel": "When you cast this spell using a spell slot of 4th level or higher, you can create one additional steed for each slot level above 3nd. When you use a spell of 4th level or higher, the steeds can ride over sandy, muddy, or even swampy ground without difficulty or a decrease in speed. When you use a spell of 5th level or higher, the steeds can walk on water (per the water walk spell). When you use a spell of 6th level or higher, the steeds can fly at its speed for up to 1 round, after which it falls to the ground. When you use a spell of 7th level or higher, the steeds can fly at its speed.",
     "school": "Conjuration",
     "ritual": false
   },
@@ -597,6 +647,11 @@
     "name": "Spider Climb",
     "higherLevel": "When you cast this spell using a spell slot of 2nd level or higher, you can affect one additional beast for each slot level above 1st.",
     "level": 1
+  },
+  {
+    "name": "Transmute Rock",
+    "description": "You choose an area of stone or mud that you can see that fits within a 40-foot cube and that is within range, and choose one of the following effects.\nTransmute Rock to Mud. Nonmagical rock of any sort in the area becomes an equal volume of thick and flowing mud that remains for the spell's duration.\nIf you cast the spell on an area of ground, it becomes muddy enough that creatures can sink into it. Each foot that a creature moves through the mud costs 4 feet of movement, and any creature on the ground when you cast the spell must make a Strength saving throw. A creature must also make this save the first time it enters the area on a turn or ends its turn there. On a failed save, a creature sinks into the mud and is restrained, though it can use an action to end the restrained condition on itself by pulling itself free of the mud.\nIf you cast the spell on a ceiling, the mud falls. Any creature under the mud when it falls must make a Dexterity saving throw. A creature takes 4d8 bludgeoning damage on a failed save, or half as much damage on a successful one.\nTransmute Mud to Rock. Nonmagical mud or quicksand in the area no more than 10 feet deep transforms into soft stone for the spell's duration. Any creature in the mud when it transforms must make a Strength saving throw. On a failed save, a creature becomes restrained by the rock. The restrained creature can use an action to try to break free by succeeding on a Strength check (DC 20) or by dealing 25 damage to the rock around it. On a successful save, a creature is shunted safely to the surface to an unoccupied space.",
+    "effects": "choose one of the following effects.\nTransmute Rock to Mud. Nonmagical rock of any sort in the area becomes an equal volume of thick and flowing mud that remains for the spell's duration.\nIf you cast the spell on an area of ground, it becomes muddy enough that creatures can sink into it. Each foot that a creature moves through the mud costs 4 feet of movement, and any creature on the ground when you cast the spell must make a Strength saving throw. A creature must also make this save the first time it enters the area on a turn or ends its turn there. On a failed save, a creature sinks into the mud and is restrained, though it can use an action to end the restrained condition on itself by pulling itself free of the mud.\nIf you cast the spell on a ceiling, the mud falls. Any creature under the mud when it falls must make a Dexterity saving throw. A creature takes 4d8 bludgeoning damage on a failed save, or half as much damage on a successful one.\nTransmute Mud to Rock. Nonmagical mud or quicksand in the area no more than 10 feet deep transforms into soft stone for the spell's duration. Any creature in the mud when it transforms must make a Strength saving throw. On a failed save, a creature becomes restrained by the rock. The restrained creature can use an action to try to break free by succeeding on a Strength check (DC 20) or by dealing 25 damage to the rock around it. On a successful save, a creature is shunted safely to the surface to an unoccupied space.",
   },
   {
     "name": "True Strike",
@@ -678,5 +733,13 @@
     "duration": "1 minute",
     "concentration": false,
     "effect": "on each of your turns for the duration, you can use your bonus action to deal 1d12 lightning damage to the target automatically. The spell ends if the target is outside the spell's range or if it has total cover from you at the end of your turn."
+  },
+  {
+    "name": "Web",
+    "description": "You conjure a mass of thick, sticky webbing at a point of your choice within range. The webs fill a 20-foot cube from that point for the duration. The webs are difficult terrain and lightly obscure their area.\nIf the webs aren't anchored between two solid masses (such as walls or trees) or layered across a floor, wall, or ceiling, the conjured web collapses on itself, and the spell ends at the start of your next turn. Webs layered over a flat surface have a depth of 5 feet.\nEach creature that starts its turn in the webs or that enters them during its turn must make a Strength saving throw. On a failed save, the creature is restrained as long as it remains in the webs or until it breaks free.\nA creature restrained by the webs can use its action to make a Strength check against your spell save DC. If it succeeds, it is no longer restrained.\nThe webs are flammable. Any 5-foot cube of webs exposed to fire burns away in 1 round, dealing 2d4 fire damage to any creature that starts its turn in the fire.",
+    "save": {
+      "ability": "strength",
+      "saveFailure": "the creature is restrained as long as it remains in the webs or until it breaks free.\nA creature restrained by the webs can use its action to make a Strength check against your spell save DC. If it succeeds, it is no longer restrained.\nThe webs are flammable. Any 5 ft cube of webs exposed to fire burns away in 1 round, dealing 2d4 fire damage to any creature that starts its turn in the fire."
+    }
   }
 ]
