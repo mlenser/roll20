@@ -542,7 +542,8 @@
     "name": "Phantom Steed",
     "higherLevel": "When you cast this spell using a spell slot of 3rd level or higher, you can create one additional steed for each slot level above 2nd. When you use a spell of 3rd level or higher, the steeds can ride over sandy, muddy, or even swampy ground without difficulty or a decrease in speed. When you use a spell of 4th level or higher, the steeds can walk on water (per the water walk spell). When you use a spell of 5th level or higher, the steeds can fly at its speed for up to 1 round, after which it falls to the ground. When you use a spell of 6th level or higher, the steeds can fly at its speed.",
     "level": 2,
-    "school": "Conjuration"
+    "school": "Conjuration",
+    "ritual": false
   },
   {
     "name": "Produce Flame",
