@@ -325,11 +325,6 @@
     ]
   },
   {
-    "name": "Hallucinatory Terrain",
-    "ritual": true,
-    "level": 3
-  },
-  {
     "name": "Hydraulic Push",
     "description": "You summon a blast of water that soaks one creature or square. Make a ranged spell attack against a creature, if it hits the creature takes 2d8 bludgeoning damage and is pushed back 10 feet. This spells also extinguishes any normal fire on a creature or object, or in a 5-foot square. Magical fire is unaffected.",
     "higherLevel": "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st.",
@@ -395,6 +390,10 @@
   {
     "name": "Jump",
     "remove": true
+  },
+  {
+    "name": "Leomund's Tiny Hut",
+    "ritual": false
   },
   {
     "name": "Lightning Arc",
@@ -483,6 +482,10 @@
     ]
   },
   {
+    "name": "Meld into Stone",
+    "ritual": false
+  },
+  {
     "name": "Melf's Acid Arrow",
     "description": "A shimmering green arrow streaks toward a target within range and bursts in a spray of acid. Make a ranged spell attack against the target. On a hit, the target takes 4d4 acid damage immediately and 4d4 acid damage at the end of its next turn. On a miss, the arrow splashes the target with acid for half as much of the initial damage and no damage at the end of its next turn.",
     "attack": {
@@ -552,6 +555,10 @@
     "higherLevel": "When you cast this spell using a spell slot of 4th level or higher, you can target one additional creature for each slot level above 3rd.",
     "target": "up to 2 willing creatures",
     "effects": "targets have resistance to one damage type of your choice: acid, cold, fire, lightning, or thunder."
+  },
+  {
+    "name": "Rary's Telepathic Bond",
+    "ritual": false
   },
   {
     "name": "Ray of Enfeeblement",
@@ -654,6 +661,15 @@
   {
     "name": "Wall of Water",
     "level": 2
+  },
+  {
+    "name": "Water Breathing",
+    "ritual": false,
+    "duration": "2 hours"
+  },
+  {
+    "name": "Water Walk",
+    "ritual": false
   },
   {
     "name": "Witch Bolt",
