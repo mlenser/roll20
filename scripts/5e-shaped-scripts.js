@@ -71,7 +71,6 @@
 
   var status = '',
     errors = [],
-    obj = null,
     characterId = null,
     characterName = null,
     commandExecuter = null;
@@ -541,9 +540,9 @@
   shaped.parseStatblock = function(token, statblock) {
     log('---- Parsing statblock ----');
 
-    var text = sanitizeText(clean(statblock)),
-      keyword = findKeyword(text),
-      section = splitStatblock(text, keyword);
+    var text = sanitizeText(clean(statblock));
+    var keyword = findKeyword(text);
+    var section = splitStatblock(text, keyword);
 
     characterName = capitalizeEachWord(section.attr.name.toLowerCase());
 
@@ -703,6 +702,7 @@
     // Power
     regex = /(?:#)([A-Z][\w-\']+(?:\s(?:[A-Z][\w-\']+|[\(\)\/\d\-]|of|and|or|a)+)*)(?=\s*\.)/gi;
     log('parsed statblock: ' + statblock);
+    var match;
     while(match = regex.exec(statblock)) {
       if(!keyword.attr[match[1].toLowerCase()]) {
         if(match.index < indexAction) {
@@ -758,11 +758,14 @@
 
   function splitStatblock(statblock, keyword) {
     var indexArray = [];
+    var section;
+    var obj;
+    var key;
 
-    for(var section in keyword) {
+    for(section in keyword) {
       if (keyword.hasOwnProperty(section)) {
-        var obj = keyword[section];
-        for (var key in obj) {
+        obj = keyword[section];
+        for (key in obj) {
           if (obj.hasOwnProperty(key)) {
             indexArray.push(obj[key]);
           }
@@ -774,10 +777,10 @@
 
     keyword.attr.name = extractSection(statblock.substring(0, indexArray[0]), 'name');
 
-    for(var section in keyword) {
+    for(section in keyword) {
       if (keyword.hasOwnProperty(section)) {
-        var obj = keyword[section];
-        for (var key in obj) {
+        obj = keyword[section];
+        for (key in obj) {
           if (obj.hasOwnProperty(key)) {
             var start = obj[key],
               nextPos = indexArray.indexOf(start) + 1,
@@ -851,6 +854,7 @@
     var regex = /(\d+)\s*\(/g;
     var match = [];
 
+    var matches;
     while(matches = regex.exec(abilities)) {
       match.push(matches[1]);
     }
@@ -916,6 +920,7 @@
     var baseAttr = 'speed',
       regex = /(|burrow|climb|fly|swim|)\s*(\d+)\s*?(?:ft)?\s*(\(.*\))?/gi;
 
+    var match;
     while(match = regex.exec(speed)) {
       if(!match[2]) {
         throw 'Character doesn\'t have valid speed format';
@@ -936,6 +941,7 @@
     senses = senses.replace(/[,\s]*passive.*/i,'');
     var regex = /(|blindsight|darkvision|tremorsense|truesight|)\s*?(\d+)\s*?ft?\s*(\(.*\))?/gi;
 
+    var match;
     while(match = regex.exec(senses)) {
       if (!match || !match[1] || !match[2]) {
         throw 'Character doesn\'t have valid senses format';
@@ -1006,6 +1012,7 @@
   function parseSavingThrow(save) {
     var regex = /(STR|DEX|CON|INT|WIS|CHA).*?(\d+)/gi,
       attr;
+    var match;
     while(match = regex.exec(save)) {
       // Substract ability modifier from this field since sheet computes it
       switch(match[1].toLowerCase()) {
@@ -1067,17 +1074,23 @@
         "thieves' tools": "dexterity"
       };
 
-    var regex = /([\w\s\']+).*?(\d+)/gi,
-      customSkillNum = 0;
+    var regex = /([\w\s\']+).*?(\d+)/gi;
+    var customSkillNum = 0;
+    var match;
+
+
     while(match = regex.exec(skills.replace(/Skills\s+/i, ''))) {
-      var skill = match[1].trim().toLowerCase(),
-        proficiencyBonus = (2 + Math.floor(Math.abs((eval(getAttrByName(characterId, 'challenge'))-1)/4))),
-        expertise = proficiencyBonus * 2;
+      var skill = match[1].trim().toLowerCase();
+      var proficiencyBonus = (2 + Math.floor(Math.abs((eval(getAttrByName(characterId, 'challenge'))-1)/4)));
+      var expertise = proficiencyBonus * 2;
+      var abilitymod;
+      var attr;
+      var totalSkillBonus;
 
       if(skill in skillAbility) {
-        var abilitymod = skillAbility[skill],
-          attr = skill.replace(/\s/g, ''),
-          totalSkillBonus = match[2] - Math.floor((getAttrByName(characterId, abilitymod) - 10) / 2);
+        abilitymod = skillAbility[skill];
+        attr = skill.replace(/\s/g, '');
+        totalSkillBonus = match[2] - Math.floor((getAttrByName(characterId, abilitymod) - 10) / 2);
 
         if(totalSkillBonus >= expertise) {
           setAttribute(attr + '_prof_exp', '@{exp}');
@@ -1097,9 +1110,9 @@
         }
       } else if (skill in extraSkillAbility) {
         customSkillNum++;
-        var abilitymod = extraSkillAbility[skill],
-          attr = 'custom_skill_' + customSkillNum,
-          totalSkillBonus = match[2] - Math.floor((getAttrByName(characterId, abilitymod) - 10) / 2);
+        abilitymod = extraSkillAbility[skill];
+        attr = 'custom_skill_' + customSkillNum;
+        totalSkillBonus = match[2] - Math.floor((getAttrByName(characterId, abilitymod) - 10) / 2);
 
         setAttribute(attr + '_name', capitalizeEachWord(skill));
         log('added ' + capitalizeEachWord(skill) + ' to custom skills');
@@ -1156,8 +1169,8 @@
     if(!actionType) {
       actionType = '';
     }
-    var multiAttackText,
-      actionPosition = []; // For use with multiattack.
+    var multiAttackText;
+    var actionPosition = []; // For use with multiattack.
 
     function processActions (actionList) {
       var actionNum = 0,
@@ -1248,7 +1261,6 @@
         commaPeriodDefinitiveSpace = /\,?\.?\s*/,
         commaPeriodOneSpace = /\,?\.?\s?/,
         hit = /Hit:.*?/,
-        each = /(?: Each).*?/,
         damageType = /((?:[\w]+|[\w]+\s(?:or|and)\s[\w]+)(?:\s*?\([\w\s]+\))?)\s*?damage\s?(\([\w\'\s]+\))?/,
         damageSyntax = /(?:(\d+)|.*?\(([\dd\s\+\-]*)\).*?)\s*?/,
         altDamageSyntax = /(?:\,\s*?or\s*?)/,
@@ -1319,6 +1331,7 @@
         }
 
         var keyRegex = /\s*?\((?:Recharge\s*?(\d+\-\d+|\d+)|Recharges\safter\sa\s(.*))\)/gi;
+        var keyResult;
         while(keyResult = keyRegex.exec(key)) {
           var recharge = keyResult[1] || keyResult[2];
           setNPCActionAttribute('recharge', recharge);
@@ -1328,11 +1341,12 @@
           }
         }
         var rechargeDayRegex = /\s*?\((\d+\/Day)\)/gi;
+        var rechargeDayResult;
         while(rechargeDayResult = rechargeDayRegex.exec(key)) {
-          var recharge = rechargeDayResult[1] || rechargeDayResult[2];
-          setNPCActionAttribute('recharge', recharge);
+          var rechargeDay = rechargeDayResult[1] || rechargeDayResult[2];
+          setNPCActionAttribute('recharge', rechargeDay);
           setNPCActionToggle('recharge');
-          if(recharge) {
+          if(rechargeDay) {
             key = key.replace(rechargeDayRegex, '');
             key = key.replace(rechargeDayRegex, '');
           }
@@ -1345,6 +1359,7 @@
           splitAttack = attackInfo.split(',');
 
         var typeRegex = /(melee|ranged|melee or ranged)\s*(spell|weapon)\s*/gi;
+        var type;
         while(type = typeRegex.exec(splitAttack[0])) {
           if(type[1]) {
             var meleeOrRanged = 'Melee or Ranged';
@@ -1353,12 +1368,10 @@
             }
             setType(capitalizeEachWord(type[1]));
           }
-          if(type[2]) {
-            var attackWeaponOrSpell = capitalizeEachWord(type[2]);
-          }
           parsedAttack = true;
         }
         var toHitRegex = /\+\s?(\d+)\s*(?:to hit)/gi;
+        var toHit;
         while(toHit = toHitRegex.exec(splitAttack[0])) {
           if(toHit[1]) {
             setNPCActionAttribute('tohit', toHit[1]);
@@ -1371,6 +1384,7 @@
           parsedAttack = true;
         }
         var reachRegex = /(?:reach)\s?(\d+)\s?(?:ft)/gi;
+        var reach;
         while(reach = reachRegex.exec(splitAttack[1])) {
           if(reach[1]) {
             setNPCActionAttribute('reach', reach[1] + ' ft', reach[1]);
@@ -1379,6 +1393,7 @@
           parsedAttack = true;
         }
         var rangeRegex = /(?:range)\s?(\d+)\/(\d+)\s?(ft)/gi;
+        var range;
         while(range = rangeRegex.exec(splitAttack[1])) {
           if(range[1] && range[2]) {
             setRange(range[1] + '/' + range[2] + ' ft');
@@ -1409,7 +1424,7 @@
           parseDamage(altDamage, 'alt_');
         }
 
-        var damage = damageRegex.exec(value);
+        damage = damageRegex.exec(value);
         if(saveDmg) {
           parseDamage(damage, '');
         }
@@ -1515,6 +1530,7 @@
         }
 
         var saveRangeRegex = /((?:Each | a | an | one ).*(?:creature|target).*)\s(?:within|in)\s*?a?\s*?(\d+)\s*?(?:feet|ft)/gi;
+        var saveRange;
         while(saveRange = saveRangeRegex.exec(value)) {
           if(saveRange[1]) {
             setTarget(saveRange[1].trim());
@@ -1539,6 +1555,7 @@
         }
 
         var lineTargetRegex = /\.\s*(.*in that line)/gi;
+        var lineTarget;
         while(lineTarget = lineTargetRegex.exec(value)) {
           setTarget(lineTarget[1]);
         }
@@ -1584,11 +1601,12 @@
     if(shaped.settings.addCheckQueryMacroTokenAbility) {
       createCheckQueryTokenAction(characterName);
     }
-
+    var multiattackRegex;
     for(var key in actions) {
-      var multiattackRegex = /Multiattack(?:\s*(\(.*\)))?/gi;
+      multiattackRegex = /Multiattack(?:\s*(\(.*\)))?/gi;
       var multi = multiattackRegex.exec(key);
-      var multiAttackText = '';
+
+      multiAttackText = '';
       if(multi) {
         if(multi[1]) {
           multiAttackText = multi[1] + ': ';
@@ -1621,11 +1639,12 @@
     }
 
     if(multiAttackText) {
-      var actionList = actionPosition.join('|'),
-        multiattackRegex = new RegExp('(one|two|three)? (?:with its )?(' + actionList + ')( or)?', 'gi'),
-        multiattackScript = '',
-        actionNumber;
+      var actionList = actionPosition.join('|');
+      multiattackRegex = new RegExp('(one|two|three)? (?:with its )?(' + actionList + ')( or)?', 'gi');
+      var multiattackScript = '';
+      var actionNumber;
 
+      var match;
       while(match = multiattackRegex.exec(multiAttackText)) {
         var action = match[2],
           nb = match[1] || 'one';
@@ -1650,71 +1669,6 @@
 
       setAttribute('multiattack_script', multiattackScript);
 
-    }
-  }
-
-  function parseActionsForConvert() {
-    var actions = {},
-      lairActions = {},
-      legendaryActions = {},
-      reactions = [];
-
-    for (var i = 1; i <= 20; i++) {
-      var name = getAttrByName(characterId, 'npc_action_name' + i, 'current'),
-        type = getAttrByName(characterId, 'npc_action_type' + i, 'current'),
-        description = getAttrByName(characterId, 'npc_action_description' + i, 'current'),
-        effect = getAttrByName(characterId, 'npc_action_effect' + i, 'current'),
-        combinedText = description + ' ' + effect;
-
-      if(name) {
-        combinedText = combinedText.replace(/\s*?\:\s*?\[\[(\d+d\d+[\d\s+|\-]*)\]\]\s*?\|\s*?\[\[(\d+d\d+[\d\s+|\-]*)\]\]/gi, '').replace(/\[\[(\d*d\d+[\d\s+|\-]*)\]\]/gi, '$1');
-
-        if(type.indexOf('Bonus Action') === 1) {
-          log('Bonus Action ' + name + ' changed to a normal action');
-          actions[name] = combinedText;
-        } else if(type.indexOf('Legendary Action') === 1) {
-          log('Legendary Action ' + name);
-          legendaryActions[name] = (combinedText);
-        } else if(type.indexOf('Reaction') === 1) {
-          log('Reaction ' + name);
-          reactions.push(combinedText);
-        } else if(type.indexOf('Lair Action') === 1) {
-          log('Lair Action ' + name);
-          lairActions[name] = (combinedText);
-        } else if(type.indexOf('Special Action') === 1) {
-          log('Special Action ' + name + ' changed to a normal action');
-          actions[name] = combinedText;
-        } else {
-          log('Action ' + name);
-          actions[name] = combinedText;
-        }
-      }
-    }
-    if(Object.keys(actions).length > 0) {
-      parseActions(actions);
-    }
-    if(Object.keys(legendaryActions).length > 0) {
-      parseActions(legendaryActions, 'legendary_');
-    }
-    if(reactions.length > 0) {
-      setAttribute('reactions', reactions.join('\n'));
-      setAttribute('toggle_reactions', 'on');
-    }
-    if(Object.keys(lairActions).length > 0) {
-      parseActions(lairActions, 'lair_');
-    }
-
-
-  }
-
-  function convertAttrFromNPCtoPC(npc_attr_name, attr_name) {
-    var npc_attr = getAttrByName(characterId, npc_attr_name),
-      attr = getAttrByName(characterId, attr_name);
-
-    if(npc_attr && !attr) {
-      log('convert from ' + npc_attr_name + ' to ' + attr_name);
-      npc_attr = sanitizeText(npc_attr);
-      setAttribute(attr_name, npc_attr);
     }
   }
 
@@ -1884,32 +1838,36 @@
       return null;
     });
 
+    function handleAttributeChange (attributesToChange, attribute) {
+      creaturesToChange.forEach(function (obj) {
+        var attr = findObjs({
+          _type: 'attribute',
+          _characterid: obj.id,
+          name: attribute
+        })[0];
+
+        if (!attr) {
+          createObj('attribute', {
+            name: attribute,
+            current: attributesToChange[attribute],
+            characterid: obj.id
+          });
+        } else if (!attr.get('current') || attr.get('current').toString() !== attributesToChange[attribute]) {
+          attr.set({
+            current: attributesToChange[attribute]
+          });
+        }
+      });
+      if(creaturesToChange.length > 0) {
+        messageToChat('changed ' + attribute + ' to ' + attributesToChange[attribute].replace('@', '&#64;') + ' for ' + creaturesToChange.length + ' creatures');
+      } else {
+        messageToChat('no creatures match those parameters');
+      }
+    }
+
     for (var attribute in attributesToChange) {
       if (attributesToChange.hasOwnProperty(attribute)) {
-        creaturesToChange.forEach(function (obj) {
-          var attr = findObjs({
-            _type: 'attribute',
-            _characterid: obj.id,
-            name: attribute
-          })[0];
-
-          if (!attr) {
-            createObj('attribute', {
-              name: attribute,
-              current: attributesToChange[attribute],
-              characterid: obj.id
-            });
-          } else if (!attr.get('current') || attr.get('current').toString() !== attributesToChange[attribute]) {
-            attr.set({
-              current: attributesToChange[attribute]
-            });
-          }
-        });
-        if(creaturesToChange.length > 0) {
-          messageToChat('changed ' + attribute + ' to ' + attributesToChange[attribute].replace('@', '&#64;') + ' for ' + creaturesToChange.length + ' creatures');
-        } else {
-          messageToChat('no creatures match those parameters');
-        }
+        handleAttributeChange(attributesToChange, attribute);
       }
     }
   };
