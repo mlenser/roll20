@@ -868,6 +868,22 @@
 		setAttribute('wisdom', match[4]);
 		setAttribute('charisma', match[5]);
 	}
+	function parseCondensedAbilities(abilities) {
+		var regex = /(\d+)/g;
+		var match = [];
+
+		var matches;
+		while(matches = regex.exec(abilities)) {
+			match.push(matches[1]);
+		}
+
+		setAttribute('strength', match[0]);
+		setAttribute('dexterity', match[1]);
+		setAttribute('constitution', match[2]);
+		setAttribute('intelligence', match[3]);
+		setAttribute('wisdom', match[4]);
+		setAttribute('charisma', match[5]);
+	}
 
 	function parseSize(size) {
 		var match = size.match(/(.*?) (.*?), (.*)/i);
@@ -2152,36 +2168,51 @@
 		var monster = fifthMonsters.monsters.filter(function (obj) {
 			return obj.name.toLowerCase() === monsterName.toLowerCase();
 		})[0];
+		characterName = monster.name;
 
 		if (!monster) {
 			messageToChat('Error: cannot find a monster by the name of "' + monsterName + '".');
 			return;
 		}
+		var obj = findObjs({
+			_type: 'character',
+			name: monster.name
+		});
 
-		characterName = monster.name;
-		setAttribute('character_name', monster.name);
+		if (obj.length === 0) {
+			obj = createObj('character', {
+				name: monster.name,
+				avatar: token.get('imgsrc')
+			});
+			messageToChat(monster.name + ' created');
+		} else {
+			obj = getObj('character', obj[0].id);
+			messageToChat(monster.name + ' updated');
+		}
+
+		characterId = obj.id;
+
+		setAttribute('is_npc', 1);
+
+		if (monster.name) setAttribute('character_name', monster.name);
 		if (monster.size) setAttribute('size', monster.size);
 		if (monster.type) setAttribute('npc_type', monster.type);
 		if (monster.alignment) setAttribute('alignment', monster.alignment);
 		if (monster.AC) parseArmorClass(monster.AC);
 		if (monster.HP) parseHp(monster.HP);
 		if (monster.speed) parseSpeed(monster.speed);
-		if (monster.abilities) parseAbilities(monster.abilities);
+		if (monster.abilities) parseCondensedAbilities(monster.abilities);
 		if (monster.savingThrows) parseSavingThrow(monster.savingThrows);
 		if (monster.skills) parseSkills(monster.skills);
 		if (monster.senses) parseSenses(monster.senses);
 		if (monster.languages) setAttribute('prolanguages', monster.languages);
 		if (monster.challenge) parseChallenge(monster.challenge);
-
 		if (monster.damageResistances) setAttribute('damage_resistance', monster.damageResistances);
 		if (monster.damageVulnerabilities) setAttribute('damage_vulnerability', monster.damageVulnerabilities);
 		if (monster.damageImmunities) setAttribute('damage_immunity', monster.damageImmunities);
 		if (monster.conditionImmunities) setAttribute('condition_immunity', monster.conditionImmunities);
 
 		setAttribute('npc_traits', monster.traits.join('\n'));
-		for (var i = 0; i < monster.actions; i++) {
-			shaped.importSpell(character, characterName, spells[i], options);
-		}
 
 		/*
 		 parseActions(section.actions);
@@ -2191,12 +2222,10 @@
 
 		if (characterId) {
 			token.set('represents', characterId);
-			var tokenName = characterName;
 			if (shaped.settings.useAaronsNumberedScript && characterName.indexOf('%%NUMBERED%%') !== 1) {
-				tokenName += ' %%NUMBERED%%';
+				monster.name += ' %%NUMBERED%%';
 			}
-			token.set('name', tokenName);
-
+			token.set('name', monster.name);
 			if (shaped.settings.showName) {
 				token.set('showname', true);
 			}
@@ -2219,16 +2248,20 @@
 			}
 
 			setTokenVision(token);
+			if(shaped.settings.addInitiativeTokenAbility) {
+				createInitTokenAction(monster.name);
+			}
+			if(shaped.settings.addSaveQueryMacroTokenAbility) {
+				createSaveQueryTokenAction(monster.name);
+			}
+			if(shaped.settings.addCheckQueryMacroTokenAbility) {
+				createCheckQueryTokenAction(monster.name);
+			}
 		}
-		messageToChat(status);
-
-
-		log('monster');
-		log(monster);
 	};
 
 	shaped.monsterImport = function (token, args) {
-		var monsterName = args[0];
+		var monsterName = capitalizeFirstLetter(args[0]);
 		if (args[1] && args[1] === 'clean') {
 			shaped.deleteOldSheetByName(monsterName);
 		}
