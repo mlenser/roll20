@@ -78,7 +78,7 @@
 
   function capitalizeFirstLetter (string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
-  };
+  }
 
   function HandleInput(msg) {
     commandExecuter = msg.who;
@@ -127,10 +127,11 @@
         args.shift();
         shaped.getSelectedToken(msg, shaped.spellImport, args);
         break;
-      case '!shaped-convert':
-        shaped.getSelectedToken(msg, shaped.parseOldToNew);
+      case '!shaped-monster':
+        args.shift();
+        shaped.getSelectedToken(msg, shaped.monsterImport, args);
         break;
-      case '!shaped-token-macro':
+      case '!shaped-token':
         shaped.getSelectedToken(msg, shaped.tokenMacros, args);
         break;
     }
@@ -148,7 +149,7 @@
     return str.replace(/\w\S*/g, function(txt) {
       return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
     });
-  };
+  }
 
   shaped.getSelectedToken = shaped.getSelectedToken || function(msg, callback) {
     try {
@@ -174,6 +175,17 @@
       obj = findObjs({
         _type: 'character',
         id: id
+      })[0];
+    if(obj) {
+      obj.remove();
+      log('old sheet removed before importing');
+    }
+  };
+
+  shaped.deleteOldSheetByName = function(name) {
+    var obj = findObjs({
+        _type: 'character',
+        name: name
       })[0];
     if(obj) {
       obj.remove();
@@ -1706,136 +1718,6 @@
     }
   }
 
-  shaped.parseOldToNew = function(token) {
-    log('---- Parsing old attributes to new ----');
-
-    characterId = token.attributes.represents;
-
-
-    convertAttrFromNPCtoPC('npc_initiative', 'initiative');
-    convertAttrFromNPCtoPC('npc_initiative_overall', 'initiative_overall');
-
-
-    convertAttrFromNPCtoPC('npc_strength', 'strength');
-    convertAttrFromNPCtoPC('npc_strength_save_bonus', 'strength_save_bonus');
-    convertAttrFromNPCtoPC('npc_basic_strength_bonus', 'basic_strength_bonus');
-    convertAttrFromNPCtoPC('npc_dexterity', 'dexterity');
-    convertAttrFromNPCtoPC('npc_dexterity_save_bonus', 'dexterity_save_bonus');
-    convertAttrFromNPCtoPC('npc_basic_dexterity_bonus', 'basic_dexterity_bonus');
-    convertAttrFromNPCtoPC('npc_constitution', 'constitution');
-    convertAttrFromNPCtoPC('npc_constitution_save_bonus', 'constitution_save_bonus');
-    convertAttrFromNPCtoPC('npc_basic_constitution_bonus', 'basic_constitution_bonus');
-    convertAttrFromNPCtoPC('npc_intelligence', 'intelligence');
-    convertAttrFromNPCtoPC('npc_intelligence_save_bonus', 'intelligence_save_bonus');
-    convertAttrFromNPCtoPC('npc_basic_intelligence_bonus', 'basic_intelligence_bonus');
-    convertAttrFromNPCtoPC('npc_wisdom', 'wisdom');
-    convertAttrFromNPCtoPC('npc_wisdom_save_bonus', 'wisdom_save_bonus');
-    convertAttrFromNPCtoPC('npc_basic_wisdom_bonus', 'basic_wisdom_bonus');
-    convertAttrFromNPCtoPC('npc_charisma', 'charisma');
-    convertAttrFromNPCtoPC('npc_charisma_save_bonus', 'charisma_save_bonus');
-    convertAttrFromNPCtoPC('npc_basic_charisma_bonus', 'basic_charisma_bonus');
-
-
-    convertAttrFromNPCtoPC('npc_alignment', 'alignment');
-
-
-    var npc_HP = getAttrByName(characterId, 'npc_HP'),
-      HP = getAttrByName(characterId, 'HP'),
-      npc_HP_max = getAttrByName(characterId, 'npc_HP', 'max'),
-      HP_max = getAttrByName(characterId, 'HP', 'max');
-    if(npc_HP && !HP && npc_HP_max && !HP_max) {
-      setAttribute('HP', npc_HP, npc_HP_max);
-    } else if (npc_HP && !HP) {
-      setAttribute('HP', npc_HP);
-    } else if (npc_HP_max && !HP_max) {
-      setAttribute('HP', 0, npc_HP_max);
-    }
-    convertAttrFromNPCtoPC('npc_temp_HP', 'temp_HP');
-
-    var npc_hd = getAttrByName(characterId, 'npc_HP_hit_dice');
-    if(npc_hd) {
-      parseHD(npc_hd);
-    }
-
-    var speedConvertToOrig = [],
-      speed = getAttrByName(characterId, 'npc_speed'),
-      speed_fly = getAttrByName(characterId, 'npc_speed_fly'),
-      speed_climb = getAttrByName(characterId, 'npc_speed_climb'),
-      speed_swim = getAttrByName(characterId, 'npc_speed_swim');
-
-    if(speed) {
-      if(speed.indexOf('ft') !== 1) {
-        speed += ' ft';
-      }
-      speedConvertToOrig.push(speed );
-    }
-    if(speed_fly) {
-      if(speed_fly.indexOf('ft') !== 1) {
-        speed_fly += ' ft';
-      }
-      speedConvertToOrig.push('fly ' + speed_fly);
-    }
-    if(speed_climb) {
-      if(speed_climb.indexOf('ft') !== 1) {
-        speed_climb += ' ft';
-      }
-      speedConvertToOrig.push('climb' + speed_climb);
-    }
-    if(speed_swim) {
-      if(speed_swim.indexOf('ft') !== 1) {
-        speed_swim += ' ft';
-      }
-      speedConvertToOrig.push('swim' + speed_swim);
-    }
-    parseSpeed(speedConvertToOrig.join(', '));
-
-    convertAttrFromNPCtoPC('npc_xp', 'xp');
-    convertAttrFromNPCtoPC('npc_challenge', 'challenge');
-    convertAttrFromNPCtoPC('npc_size', 'size');
-    parseSenses(sanitizeText(getAttrByName(characterId, 'npc_senses')));
-    convertAttrFromNPCtoPC('npc_languages', 'prolanguages');
-
-
-    convertAttrFromNPCtoPC('npc_damage_resistance', 'damage_resistance');
-    convertAttrFromNPCtoPC('npc_damage_vulnerability', 'damage_vulnerability');
-    convertAttrFromNPCtoPC('npc_damage_immunity', 'damage_immunity');
-    convertAttrFromNPCtoPC('npc_condition_immunity', 'condition_immunity');
-
-
-    convertAttrFromNPCtoPC('npc_acrobatics_bonus', 'acrobatics_bonus');
-    convertAttrFromNPCtoPC('npc_animalhandling_bonus', 'animalhandling_bonus');
-    convertAttrFromNPCtoPC('npc_arcana_bonus', 'arcana_bonus');
-    convertAttrFromNPCtoPC('npc_athletics_bonus', 'athletics_bonus');
-    convertAttrFromNPCtoPC('npc_deception_bonus', 'deception_bonus');
-    convertAttrFromNPCtoPC('npc_history_bonus', 'history_bonus');
-    convertAttrFromNPCtoPC('npc_insight_bonus', 'insight_bonus');
-    convertAttrFromNPCtoPC('npc_intimidation_bonus', 'intimidation_bonus');
-    convertAttrFromNPCtoPC('npc_investigation_bonus', 'investigation_bonus');
-    convertAttrFromNPCtoPC('npc_medicine_bonus', 'medicine_bonus');
-    convertAttrFromNPCtoPC('npc_nature_bonus', 'nature_bonus');
-    convertAttrFromNPCtoPC('npc_perception_bonus', 'perception_bonus');
-    convertAttrFromNPCtoPC('npc_performance_bonus', 'performance_bonus');
-    convertAttrFromNPCtoPC('npc_persuasion_bonus', 'persuasion_bonus');
-    convertAttrFromNPCtoPC('npc_religion_bonus', 'religion_bonus');
-    convertAttrFromNPCtoPC('npc_sleightofhand_bonus', 'sleightofhand_bonus');
-    convertAttrFromNPCtoPC('npc_stealth_bonus', 'stealth_bonus');
-    convertAttrFromNPCtoPC('npc_survival_bonus', 'survival_bonus');
-
-    setUserDefinedScriptSettings();
-
-    parseActionsForConvert();
-
-    shaped.setBars(token);
-
-    setTokenVision(token);
-
-    if(shaped.settings.showName) {
-      token.set('showname', true);
-    }
-
-    messageToChat('Character ' + token.attributes.name + ' converted');
-  };
-
   function clearBar(token, bar) {
     token.set(bar + '_link', '');
     token.set(bar + '_value', '');
@@ -2286,6 +2168,26 @@
       shaped.importSpell(character, characterName, spells[i], options);
     }
   };
+
+  shaped.importMonster = function (token, monsterName) {
+    var monster = fifthMonsters.monsters.filter(function (obj) {
+      return obj.name.toLowerCase() === monsterName.toLowerCase();
+    })[0];
+
+    if(!monster) {
+      messageToChat('Error: cannot find a monster by the name of "' + monsterName + '".');
+      return;
+    }
+  };
+
+  shaped.monsterImport = function (token, args) {
+    var monsterName = args[0];
+    if(args[1] && args[1] === 'clean') {
+      shaped.deleteOldSheetByName(monsterName);
+    }
+
+    shaped.importMonster(token, monsterName);
+  }
 
 }(typeof shaped === 'undefined' ? shaped = {} : shaped));
 
