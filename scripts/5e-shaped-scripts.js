@@ -2136,6 +2136,8 @@
       messageToChat('Error: cannot find a monster by the name of "' + monsterName + '".');
       return;
     }
+
+    console.log('monsterName', monsterName);
   };
 
   shaped.monsterImport = function (token, args) {
