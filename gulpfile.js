@@ -98,56 +98,6 @@ gulp.task('compileHouseruledSpells', function() {
 		.pipe(gulp.dest('./scripts/dist'));
 });
 
-/*
-gulp.task('compileHouseruledSpells', function() {
-	return gulp.src('./scripts/5e-spells.js')
-		.pipe(inject(gulp.src(['./data/spells/spellData.json']), {
-			starttag: '[',
-			endtag: ']',
-			transform: function (filePath, file) {
-				var fileData = file.contents.toString('utf8'),
-					spellData = JSON.parse(fileData);
-
-				var houseruleData = JSON.parse(fs.readFileSync('./data/spells/spellDataHouseruleAlterations.json', 'utf-8'));
-
-				for (var key = 0; key < houseruleData.length; key++) {
-					var houseruleSpell = houseruleData[key],
-						spellToAdjust = search(houseruleSpell.name, spellData);
-
-					if(!spellToAdjust) {
-						spellData.push(houseruleSpell);
-					} else {
-						if(houseruleSpell.remove) {
-							var indexOfSpell = arrayObjectIndexOf(spellData, spellToAdjust.name, 'name');
-							spellData.splice(indexOfSpell, 1);
-							console.log('removed', spellToAdjust.name, indexOfSpell);
-							continue;
-						}
-
-						for (var property in houseruleSpell) {
-							if (houseruleSpell.hasOwnProperty(property)) {
-								if (property === 'newName') {
-									spellToAdjust.name = houseruleSpell[property];
-								} else if (property !== 'name' && property !== 'newName') {
-									spellToAdjust[property] = houseruleSpell[property];
-								}
-							}
-						}
-					}
-				}
-
-				var returnedData = JSON.stringify(spellData);
-
-				return returnedData.substring(1, returnedData.length-1);
-			}
-		}))
-		.pipe(rename('5e-spells-houserules.js'))
-		.pipe(gulp.dest('./scripts/dist'));
-});
-*/
-
-
-
 gulp.task('compileMonsters', function() {
 	gulp.src('./data/monsters/*.json')
 		.pipe(jsoncombine('5e-monsters.js', function(sources) {
