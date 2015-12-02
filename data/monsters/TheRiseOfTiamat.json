@@ -1,0 +1,207 @@
+[
+    {
+        "name": "Dragonfang",
+        "size": "Medium",
+        "type": "humanoid (human), tyranny of dragons",
+        "alignment": "neutral evil",
+        "AC": "15 (studded leather)",
+        "HP": "78 (12d8+24)",
+        "speed": "30 ft.",
+        "abilities": "STR 11 DEX 16 CON 14 INT 12 WIS 12 CHA 14",
+        "savingThrows": "Wis +3",
+        "skills": "Deception +4, Stealth +5",
+        "damageResistances": "one of the following: acid, cold, fire, lightning or poison",
+        "senses": "passive Perception 11",
+        "languages": "Common, Draconic, Infernal",
+        "challenge": "5",
+        "traits": [
+            "Dragon Fanatic. The dragonfang has advantage on saving throws against being charmed or frightened. While the dragonfang can see a dragon or higher-ranking Cult of the Dragon cultist friendly to it, the dragonfang ignores the effects of being charmed or frightened.",
+            "Fanatic Advantage. Once per turn, if the dragonfang makes a weapon attack with advantage on the attack roll and hits, the target takes an extra 10 (3d6) damage.",
+            "Limited Flight. The dragonfang can use a bonus action to gain a flying speed of 30 feet until the end of its turn."
+        ],
+        "actions": [
+            "Multiattack. The Dragonfang attacks twice with its shortsword.",
+            "Shortsword. Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) piercing damage+7 (2d6) damage of the type to which the dragonfang has resistance.",
+            "Orb of Dragon's Breath (2/Day). Ranged Spell Attack: +5 to hit, range 50 ft., one target. Hit: 22 (5d8) damage of the type to which the dragonfang has damage resistance."
+        ]
+    },
+    {
+        "name": "Dragonsoul",
+        "size": "Medium",
+        "type": "humanoid (human), tyranny of dragons",
+        "alignment": "neutral evil",
+        "AC": "16 (studded leather)",
+        "HP": "110 (17d8+34)",
+        "speed": "30 ft.",
+        "abilities": "STR 11 DEX 18 CON 14 INT 13 WIS 12 CHA 16",
+        "savingThrows": "Wis +4",
+        "skills": "Deception +6, Stealth +7",
+        "damageResistances": "one of the following: acid, cold, fire, lightning or poison",
+        "senses": "passive Perception 11",
+        "languages": "Common, Draconic, Infernal",
+        "challenge": "7",
+        "traits": [
+            "Dragon Fanatic. The dragonsoul has advantage on saving throws against being charmed or frightened. While the dragonsoul can see a dragon or higher-ranking Cult of the Dragon cultist friendly to it, the dragonsoul ignores the effects of being charmed or frightened.",
+            "Fanatic Advantage. Once per turn, if the dragonsoul makes a weapon attack with advantage on the attack roll and hits, the target takes an extra 10 (3d6) damage.",
+            "Limited Flight. The dragonsoul can use a bonus action to gain a flying speed of 30 feet until the end of its turn.",
+            "Pack Tactics. The dragonsoul has advantage on an attack roll against a creature if at least one of the dragonclaw's allies is within 5 feet of the creature and the ally isn't incapacitated."
+        ],
+        "actions": [
+            "Multiattack. The Dragonsoul attacks twice with its shortsword.",
+            "Shortsword. Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) piercing damage+10 (3d6) damage of the type to which the dragonsoul has resistance.",
+            "Orb of Dragon's Breath (3/Day). Ranged Spell Attack: +7 to hit, range 90 ft., one target. Hit: 27 (6d8) damage of the type to which the dragonsoul has damage resistance."
+        ]
+    },
+    {
+        "name": "Ice Toad",
+        "size": "Medium",
+        "type": "monstrosity, tyranny of dragons",
+        "alignment": "neutral",
+        "AC": "12 (natural armor)",
+        "HP": "32 (5d8+10)",
+        "speed": "30 ft., swim 30 ft.",
+        "abilities": "STR 13 DEX 10 CON 14 INT 8 WIS 10 CHA 6",
+        "skills": "Perception +2",
+        "damageImmunities": "cold",
+        "senses": "darkvision 60 ft., passive Perception 12",
+        "languages": "Ice Toad",
+        "challenge": "1",
+        "traits": [
+            "Amphibious. The toad can breathe air or water.",
+            "Cold Aura. Any creature that starts its turn within 5 feet of the toad takes 3 (1d6) cold damage.",
+            "Standing Leap. The toad's long jump is up to 20 feet and its high jump is up to 10 feet, with or without a running start."
+        ],
+        "actions": [
+            "Bite. Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 4 (1d8) cold damage. If the target is a Medium or smaller creature it is grappled (escape DC 11). Until this grapple ends, the toad can't bite another target."
+        ]
+    },
+    {
+        "name": "Naergoth Bladelord",
+        "size": "Medium",
+        "type": "undead, tyranny of dragons",
+        "alignment": "neutral evil",
+        "AC": "18 (plate)",
+        "HP": "135 (18d8+54)",
+        "speed": "30 ft.",
+        "abilities": "STR 20 DEX 12 CON 16 INT 12 WIS 14 CHA 16",
+        "savingThrows": "Dex +5, Wis +4",
+        "skills": "Perception +6, Stealth +5",
+        "damageResistances": "necrotic; bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered",
+        "damageImmunities": "poison",
+        "conditionImmunities": "exhaustion, poisoned",
+        "senses": "darkvision 60 ft., passive Perception 16",
+        "languages": "Common, Draconic",
+        "challenge": "11",
+        "traits": [
+            "Sunlight Sensitivity. While in sunlight, Naergoth has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight."
+        ],
+        "actions": [
+            "Multiattack. Naergoth makes three attacks, either with his longsword or longbow. He can use Life Drain in place of one longsword attack.",
+            "Life Drain. Melee Weapon Attack: +9 to hit, reach 5 ft., one target. Hit: 20 (5d6 + 3) necrotic damage. The target must succeed on a DC 15 Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0.",
+            "Longsword. Melee Weapon Attack: +9 to hit, reach 5 ft., one target. Hit: 9 (1d8 + 5) slashing damage, or 10 (1d10 + 5) if used with two hands, plus 10 (3d6) necrotic damage.",
+            "Longbow. Ranged Weapon Attack: +5 to hit, range 150/600 ft., one target. Hit: 5 (1d8 + 1) piercing damage plus 10 (3d6) necrotic damage."
+        ]
+    },
+    {
+        "name": "Neronvain",
+        "size": "Medium",
+        "type": "humanoid (elf), tyranny of dragons",
+        "alignment": "neutral evil",
+        "AC": "17",
+        "HP": "117 (18d8+36)",
+        "speed": "30 ft.",
+        "abilities": "STR 8 DEX 17 CON 15 INT 16 WIS 13 CHA 18",
+        "savingThrows": "Con +6, Wis +5",
+        "skills": "Arcana +7, Perception +5",
+        "damageImmunities": "poison",
+        "conditionImmunities": "charmed, frightened, poisoned",
+        "senses": "darkvision 60 ft., passive Perception 15",
+        "languages": "Common, Draconic, Elvish, Infernal",
+        "challenge": "9",
+        "traits": [
+            "Draconic Majesty. Neronvain adds his Charisma bonus to his AC (included)."
+        ],
+        "actions": [
+            "Fey Ancestry. Magic can't put Neronvain to sleep.",
+            "Multiattack. Neronvain makes two attacks, either with his shortsword or Eldritch Arrow.",
+            "Shortsword. Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) piercing damage plus 13 (3d8) poison damage.",
+            "Eldritch Arrow. Ranged Spell Attack: +7 to hit, range 120 ft., one target. Hit: 11 (2d10) force damage plus 9 (2d8) poison damage.",
+            "Poisonous Cloud (2/Day). Poison gas fills a 20-foot-radius sphere centered on a point Neronvain can see within 50 feet of him. The gas spreads around corners and remains until the start of Neronvain's next turn. Each creature that starts its turn in the gas must succeed on a DC 16 Constitution saving throw or be poisoned for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. \t\t\t"
+        ]
+    },
+    {
+        "name": "Severin",
+        "size": "Medium",
+        "type": "humanoid (human), tyranny of dragons",
+        "alignment": "neutral evil",
+        "AC": "16",
+        "HP": "150 (20d8+60)",
+        "speed": "30 ft.",
+        "abilities": "STR 10 DEX 13 CON 16 INT 17 WIS 12 CHA 20",
+        "savingThrows": "Dex +5, Wis +5",
+        "skills": "Arcana +7, Religion +7",
+        "damageResistances": "While wearing the mask of the Dragon Queen: acid, cold, lightning, poison; bludgeoning, piercing, and slashing damage from nonmagical weapons",
+        "damageImmunities": "While wearing the mask of the Dragon Queen: fire",
+        "conditionImmunities": "While wearing the mask of the Dragon Queen: charmed, frightened, poisoned",
+        "senses": "While wearing the Mask of the Dragon Queen: darkvision 60 ft., passive Perception 11",
+        "languages": "Common, Draconic, Infernal",
+        "challenge": "11",
+        "traits": [
+            "Special Equipment. Severin has the Mask of the Dragon Queen.",
+            "Draconic Majesty. Severin adds his Charisma bonus to his AC (included).",
+            "Ignite Enemy. If Severin deals fire damage to a creature while wearing the Mask of the Dragon Queen, the target catches fire. At the start of each of its turns, the burning target takes 5 (1d10) fire damage. A creature within reach of the fire can use an action to extinguish it.",
+            "Legendary Resistance (5/Day). While wearing the Mask of the Dragon Queen, if Severin fails a saving throw, he can choose to succeed instead."
+        ],
+        "actions": [
+            "Burning Touch. Melee Spell Attack: +5 to hit, reach 5 ft., one target. Hit: 18 (4d8) fire damage.",
+            "Flaming Orb. Ranged Spell Attack: +5 to hit, range 90 ft., one target. Hit: 40 (9d8) fire damage.",
+            "Scorching Burst. Severin chooses a point he can see within 60 feet of him. Each creature within 5 feet of that point must make a DC 17 Dexterity saving throw, taking 18 (4d8) fire damage on a failed save, or half as much damage on a successful one."
+        ],
+        "legendaryActions": [
+            "Attack. If Severin is wearing the Mask of the Dragon Queen, he can take 3 legendary actions, choosing from the options listed. Only one legendary action option can be used at a time and only at the end of another creature's turn. Severin regains spent legendary actions at the start of his turn.",
+            "Fiery Teleport (Costs 2 Actions). Severin, along with any objects he is wearing or carrying, teleports up to 60 feet to an unoccupied space he can see. Each creature within 5 feet of Severin before he teleports takes 5 (1dlO) fire damage.",
+            "Hellish Chains (Costs 3 Actions). Severin targets one creature he can see within 30 feet of him. The target is wrapped in magical chains of fire and restrained. The restrained target takes 21 (6d6) fire damage at the start of each of its turns. At the end of its turns, the target can make a DC 17 Strength saving throw, ending the effect on itself on a success."
+        ]
+    },
+    {
+        "name": "Tiamat",
+        "size": "Gargantuan",
+        "type": "fiend, tyranny of dragons",
+        "alignment": "chaotic evil",
+        "AC": "25 (natural armor)",
+        "HP": "615 (30d20+300)",
+        "speed": "60 ft., fly 120 ft.",
+        "abilities": "STR 30 DEX 10 CON 30 INT 26 WIS 26 CHA 28",
+        "savingThrows": "Str +19, Dex +9, Wis +17",
+        "skills": "Arcana +17, Perception +26, Religion +17",
+        "damageImmunities": " acid, cold, fire, lightning, poison; bludgeoning, piercing, and slashing damage from nonmagical weapons",
+        "conditionImmunities": "blinded, charmed, deafened, frightened, poisoned, stunned",
+        "senses": "darkvision 240 ft., truesight 120 ft., passive Perception 36",
+        "languages": "Common, Draconic, Infernal",
+        "challenge": "30",
+        "traits": [
+            "Discorporation. When Tiamat drops to 0 hit points or dies, her body is destroyed but her essence travels back to her domain in the Nine Hells, and she is unable to take physical form for a time.",
+            "Innate Spellcasting (3/Day). Tiamat can innately cast divine word (spell save DC 26). Her spellcasting ability is Charisma.",
+            "Legendary Resistance (5/Day). If Tiamat fails a saving throw, she can choose to succeed instead.",
+            "Limited Magic Immunity. Unless she wishes to be affected, Tiamat is immune to spells of 6th level or lower. She has advantage on saving throws against all other spells and magical effects.",
+            "Magic Weapons. Tiamat's weapon attacks are magical.",
+            "Multiple Heads. Tiamat can take one reaction per turn, rather than only one per round. She also has advantage on saving throws against being knocked unconscious. If she fails a saving throw against an effect that would stun a creature, one of her unspent legendary actions is spent.",
+            "Regeneration. Tiamat regains 30 hit points at the start of her turn."
+        ],
+        "spells": "divine word",
+        "actions": [
+            "Multiattack. Tiamat can use her Frightful Presence. She then makes three attacks: two with her claws and one with her tail.",
+            "Claw. Melee Weapon Attack: +19 to hit, reach 15 ft., one target. Hit: 24 (4d6 + 10) slashing damage.",
+            "Tail. Melee Weapon Attack: +19 to hit, reach 25 ft., one target. Hit: 28 (4d8 + 10) piercing damage.",
+            "Frightful Presence. Each creature of Tiamat's choice that is within 240 feet of Tiamat and aware of her must succeed on a DC 26 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to Tiamat's Frightful Presence for the next 24 hours."
+        ],
+        "legendaryActions": [
+            "Bite. Tiamat can take 5 legendary actions, choosing from the options listed. Only one legendary action option can be used at a time and only at the end of another creature's turn. Tiamat regains spent legendary actions at the start of her turn.",
+            "Black Dragon Head: Acid Breath (Costs 2 Actions). Tiamat breathes acid in a 120-foot line that is 10 feet wide. Each creature in that line must make a DC 27 Dexterity saving throw, taking 67 (15d8) acid damage on a failed save, or half as much damage on a successful one.",
+            "Blue Dragon Head: Lightning Breath (Costs 2 Actions). Tiamat breathes lightning in a 120-foot line that is 10 feet wide. Each creature in that line must make a DC 27 Dexterity saving throw, taking 88 (16d10) lightning damage on a failed save, or half as much damage on a successful one.",
+            "Green Dragon Head: Poison Breath (Costs 2 Actions). Tiamat breathes poisonous gas in a 90-foot cone. Each creature in that area must make a DC 27 Constitution saving throw, taking 77 (22d6) poison damage on a failed save, or half as much damage on a successful one.",
+            "Red Dragon Head: Fire Breath (Costs 2 Actions). Tiamat breathes fire in a 90-foot cone. Each creature in that area must make a DC 27 Dexterity saving throw, taking 91 (26d6) fire damage on a failed save, or half as much damage on a successful one.",
+            "White Dragon Head: Cold Breath (Costs 2 Actions). Tiamat breathes an icy blast in a 90-foot cone. Each creature in that area must make a DC 27 Dexterity saving throw, taking 72 (16d8) cold damage on a failed save, or half as much damage on a successful one."
+        ]
+    }
+]

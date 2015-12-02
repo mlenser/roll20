@@ -51,7 +51,7 @@
   };
 
   shaped.statblock = {
-    version: 'Oct 17th',
+    version: 'Dec 2nd, 2015',
     addTokenCache: [],
     RegisterHandlers: function () {
       on('chat:message', HandleInput);
@@ -1322,6 +1322,7 @@
           setNPCActionToggle('recharge');
           if(recharge) {
             key = key.replace(rechargeDayRegex, '');
+            key = key.replace(rechargeDayRegex, '');
           }
         }
 
@@ -2032,7 +2033,7 @@
   };
 
   shaped.importSpell = function(character, characterName, spellName, options) {
-    var spell = fifthSpells.spellsData.filter(function ( obj ) {
+    var spell = fifthSpells.spells.filter(function ( obj ) {
         return obj.name.toLowerCase() === spellName.toLowerCase();
       })[0],
       spellBase = 'repeating_spellbook',
