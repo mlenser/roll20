@@ -29,7 +29,7 @@ gulp.task('compile', function() {
 
 gulp.task('compileSpells', function() {
 	return gulp.src('./scripts/5e-spells.js')
-		.pipe(inject(gulp.src(['./data/spellData.json']), {
+		.pipe(inject(gulp.src(['./data/spells/spellData.json']), {
 			starttag: '[',
 			endtag: ']',
 			transform: function (filePath, file) {
@@ -46,14 +46,14 @@ gulp.task('compileSpells', function() {
 
 gulp.task('compileHouseruledSpells', function() {
 	return gulp.src('./scripts/5e-spells.js')
-		.pipe(inject(gulp.src(['./data/spellData.json']), {
+		.pipe(inject(gulp.src(['./data/spells/spellData.json']), {
 			starttag: '[',
 			endtag: ']',
 			transform: function (filePath, file) {
 				var fileData = file.contents.toString('utf8'),
 					spellData = JSON.parse(fileData);
 
-				var houseruleData = JSON.parse(fs.readFileSync('./data/spellDataHouseruleAlterations.json', 'utf-8'));
+				var houseruleData = JSON.parse(fs.readFileSync('./data/spells/spellDataHouseruleAlterations.json', 'utf-8'));
 
 				for (var key = 0; key < houseruleData.length; key++) {
 					var houseruleSpell = houseruleData[key],
