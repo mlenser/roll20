@@ -5,6 +5,18 @@ Scripts for 5e roll20
 
 ### Changelog
 
+**Dec 2nd 2015**
+
+* Removed the scripting to convert from the D&D 5e Legacy sheet
+* Added a new monster import that imports from JSON. Command is "!shaped-monset --MONSTER_NAME". You can also add on the "--clean" command at the end. For example: "!shaped-monset --MONSTER_NAME --clean". I verified that the following work:
+  * All normal things like name, size, type, alignment, AC, HP, speed, abilities, saving throws, skills, senses, languages, challenge, damage resistances, damage vulnerabilities, damage immunities, condition immunities, token macros (init, save, check), traits
+  * Actions
+  * Multiattack
+  * Legendary Action
+  * Lair Actions (if they're setup, none of mine have them yet)
+  * All token items like name, vision, bars, etc
+  * Spells import automatically if they're included in the JSON
+
 **Sep 19th 2015**
 
 * Prepared now an option for spells

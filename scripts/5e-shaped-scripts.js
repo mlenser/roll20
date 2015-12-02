@@ -868,12 +868,13 @@
 		setAttribute('wisdom', match[4]);
 		setAttribute('charisma', match[5]);
 	}
+
 	function parseCondensedAbilities(abilities) {
 		var regex = /(\d+)/g;
 		var match = [];
 
 		var matches;
-		while(matches = regex.exec(abilities)) {
+		while (matches = regex.exec(abilities)) {
 			match.push(matches[1]);
 		}
 
@@ -1183,450 +1184,463 @@
 		}
 	}
 
+
+	function processActions(actionList, actionType) {
+		var actionNum = 0;
+		var actionPosition = [];
+		var legendaryActionsNotes = [];
+
+		if (!actionType) {
+			actionType = '';
+		}
+
+		function setNPCActionAttribute(attribute, value, ifQuery) {
+			if (typeof ifQuery === 'undefined') {
+				ifQuery = value;
+			}
+			if (ifQuery) {
+				setAttribute('repeating_' + actionType + 'actions_' + actionNum + '_' + attribute, value.trim());
+			}
+		}
+
+		function setNPCActionToggle(attribute, toggle) {
+			if (typeof toggle === 'undefined' || toggle) {
+				setAttribute('repeating_' + actionType + 'actions_' + actionNum + '_toggle_' + attribute, '@{repeating_' + actionType + 'actions_' + actionNum + '_var_' + attribute + '}');
+			}
+		}
+
+		function parseCritDamage(damage) {
+			return damage.replace(/\s?[\+\-]\s?\d+/g, '');
+		}
+
+		function setName(name) {
+			setNPCActionAttribute('name', name);
+		}
+
+		function setType(type) {
+			setNPCActionAttribute('type', type);
+		}
+
+		function setTarget(target) {
+			setNPCActionAttribute('target', target);
+			setNPCActionToggle('target');
+		}
+
+		function setRange(type) {
+			setNPCActionAttribute('range', type);
+			setNPCActionToggle('range');
+		}
+
+		function setDamage(damage, altSecondary) {
+			setNPCActionAttribute(altSecondary + 'dmg', damage);
+		}
+
+		function toggleDamage(altSecondary) {
+			setNPCActionToggle(altSecondary + 'damage');
+		}
+
+		function setDamageType(type, altSecondary) {
+			setNPCActionAttribute(altSecondary + 'dmg_type', type);
+		}
+
+		function setCritDamage(critDamage, altSecondary) {
+			setNPCActionAttribute(altSecondary + 'crit_dmg', critDamage);
+		}
+
+		function setAltDamageReason(damageReason) {
+			setNPCActionAttribute('alt_' + 'dmg_reason', damageReason);
+		}
+
+		function setEffect(effect) {
+			if (effect) {
+				setNPCActionAttribute('effect', effect.replace(/(\s*?Hit:\s?)/gi, '').replace(/(\d+)d(\d+)/g, '[[$1d$2]]').replace(/\s(\d+)\s/g, ' [[$1]] '));
+			}
+			setNPCActionToggle('effects', effect);
+		}
+
+		function setSaveDC(saveDC) {
+			setNPCActionAttribute('save_dc', saveDC);
+		}
+
+		function setSaveStat(saveStat) {
+			if (saveStat) {
+				setNPCActionAttribute('save_stat', saveStat.substring(0, 3));
+			}
+		}
+
+		function toggleSave(toggle) {
+			setNPCActionToggle('save', toggle);
+		}
+
+		function toggleSaveDamage(toggle) {
+			setNPCActionToggle('save_damage', toggle);
+		}
+
+		function setSaveDamage(saveDamage) {
+			setNPCActionAttribute('save_dmg', saveDamage);
+		}
+
+		function setSaveDamageType(saveDamageType) {
+			setNPCActionAttribute('save_dmg_type', saveDamageType);
+		}
+
+		function setSaveSuccess(saveSuccess) {
+			setNPCActionAttribute('save_success', saveSuccess);
+		}
+
+		function setSaveEffect(saveEffect) {
+			setEffect(saveEffect);
+		}
+
+		var commaPeriodSpace = /\,?\.?\s*?/,
+			commaPeriodDefinitiveSpace = /\,?\.?\s*/,
+			commaPeriodOneSpace = /\,?\.?\s?/,
+			hit = /Hit:.*?/,
+			damageType = /((?:[\w]+|[\w]+\s(?:or|and)\s[\w]+)(?:\s*?\([\w\s]+\))?)\s*?damage\s?(\([\w\'\s]+\))?/,
+			damageSyntax = /(?:(\d+)|.*?\(([\dd\s\+\-]*)\).*?)\s*?/,
+			altDamageSyntax = /(?:\,\s*?or\s*?)/,
+			altDamageReasonSyntax = /((?:if|in)[\w\s]+)/,
+			altDamageExtraSyntax = /(The.*|If the.*)?/,
+			plus = /\s*?plus\s*?/,
+			savingThrow = /(?:DC)\s*?(\d+)\s*?([a-zA-Z]*)\s*?(?:saving throw)/,
+			takeOrTaking = /\,?\s*?(?:taking|or take)/,
+			againstDisease = /(?: against disease)?/,
+			saveSuccess = /(?:.*or\s(.*)?\son a successful one.)?/,
+			saveSuccessTwo = /(?:On a successful save,)?(.*)?/,
+			saveFailure = /(?:On a (?:failure|failed save))\,\s(?:(.*). On a success,\s(.*)?)?(.*)?/,
+			andAnythingElse = /(\s?and.*)?/,
+			orAnythingElseNoTake = /(or\s(?!take).*)/,
+			anythingElse = /(.*)?/,
+			damageRegex = new RegExp(hit.source + damageSyntax.source + damageType.source + commaPeriodSpace.source + andAnythingElse.source, 'i'),
+			damagePlusRegex = new RegExp(plus.source + damageSyntax.source + damageType.source + commaPeriodSpace.source + anythingElse.source, 'i'),
+			altDamageRegex = new RegExp(altDamageSyntax.source + damageSyntax.source + damageType.source + commaPeriodSpace.source + altDamageReasonSyntax.source + commaPeriodOneSpace.source + altDamageExtraSyntax.source, 'i'),
+			hitEffectRegex = new RegExp(hit.source + anythingElse.source, 'i'),
+			saveDamageRegex = new RegExp(savingThrow.source + takeOrTaking.source + damageSyntax.source + damageType.source + saveSuccess.source + commaPeriodSpace.source + anythingElse.source + saveSuccessTwo.source, 'i'),
+			saveOrRegex = new RegExp(savingThrow.source + againstDisease.source + commaPeriodDefinitiveSpace.source + orAnythingElseNoTake.source, 'i'),
+			saveFailedSaveRegex = new RegExp(savingThrow.source + commaPeriodSpace.source + saveFailure.source, 'i');
+
+		function parseDamage(damage, altSecondary) {
+			//log('parseDamage: ' + damage);
+			if (damage) {
+				//1 is damage without dice. Example "1"
+				//2 is damage with dice. Example "2d6+4"
+				//3 is damage type. Example "slashing" or "lightning or thunder"
+				//4 is damage type explanation. Example "(djinni's choice)"
+				//5 is effects
+				if (damage[1]) {
+					damage[2] = damage[1];
+				}
+				if (damage[2]) {
+					setDamage(damage[2], altSecondary);
+					setCritDamage(parseCritDamage(damage[2]), altSecondary);
+				}
+				if (damage[4]) {
+					damage[3] += ' ' + damage[4];
+				}
+				if (damage[3]) {
+					setDamageType(damage[3], altSecondary);
+				}
+				if (damage[2] || damage[3]) {
+					toggleDamage(altSecondary);
+				}
+				if (damage[5]) {
+					setEffect(damage[5].trim());
+				}
+				if (damage[6]) {
+					setAltDamageReason(damage[6]);
+				}
+			}
+		}
+
+		_.each(actionList, function (value, key) {
+			var parsedAttack = false;
+			var parsedSave = false;
+			var parsedDamage = false;
+			var parsed;
+			var pos = key.indexOf('(');
+
+			if (pos > 1) {
+				actionPosition[actionNum] = key.substring(0, pos - 1).toLowerCase();
+			} else {
+				actionPosition[actionNum] = key.toLowerCase();
+			}
+
+			var keyRegex = /\s*?\((?:Recharge\s*?(\d+\-\d+|\d+)|Recharges\safter\sa\s(.*))\)/gi;
+			var keyResult;
+			while (keyResult = keyRegex.exec(key)) {
+				var recharge = keyResult[1] || keyResult[2];
+				setNPCActionAttribute('recharge', recharge);
+				setNPCActionToggle('recharge');
+				if (recharge) {
+					key = key.replace(keyRegex, '');
+				}
+			}
+			var rechargeDayRegex = /\s*?\((\d+\/Day)\)/gi;
+			var rechargeDayResult;
+			while (rechargeDayResult = rechargeDayRegex.exec(key)) {
+				var rechargeDay = rechargeDayResult[1] || rechargeDayResult[2];
+				setNPCActionAttribute('recharge', rechargeDay);
+				setNPCActionToggle('recharge');
+				if (rechargeDay) {
+					key = key.replace(rechargeDayRegex, '');
+					key = key.replace(rechargeDayRegex, '');
+				}
+			}
+
+			setName(key);
+
+			var splitAction = value.split(/\.(.+)?/);
+			var attackInfo = splitAction[0];
+			var splitAttack = attackInfo.split(',');
+
+			var typeRegex = /(melee|ranged|melee or ranged)\s*(spell|weapon)\s*/gi;
+			var type;
+			while (type = typeRegex.exec(splitAttack[0])) {
+				if (type[1]) {
+					var meleeOrRanged = 'Melee or Ranged';
+					if (type[1].toLowerCase() === meleeOrRanged.toLowerCase()) {
+						type[1] = 'Thrown';
+					}
+					setType(capitalizeEachWord(type[1]));
+				}
+				parsedAttack = true;
+			}
+			var toHitRegex = /\+\s?(\d+)\s*(?:to hit)/gi;
+			var toHit;
+			while (toHit = toHitRegex.exec(splitAttack[0])) {
+				if (toHit[1]) {
+					setNPCActionAttribute('tohit', toHit[1]);
+					setNPCActionToggle('attack');
+					setNPCActionToggle('crit');
+				}
+				if (splitAttack[2]) {
+					setTarget(splitAttack[2].trim().toLowerCase());
+				}
+				parsedAttack = true;
+			}
+			var reachRegex = /(?:reach)\s?(\d+)\s?(?:ft)/gi;
+			var reach;
+			while (reach = reachRegex.exec(splitAttack[1])) {
+				if (reach[1]) {
+					setNPCActionAttribute('reach', reach[1] + ' ft', reach[1]);
+					setNPCActionToggle('reach');
+				}
+				parsedAttack = true;
+			}
+			var rangeRegex = /(?:range)\s?(\d+)\/(\d+)\s?(ft)/gi;
+			var range;
+			while (range = rangeRegex.exec(splitAttack[1])) {
+				if (range[1] && range[2]) {
+					setRange(range[1] + '/' + range[2] + ' ft');
+				}
+				parsedAttack = true;
+			}
+
+			var damage = damageRegex.exec(value);
+			if (damage) {
+				parseDamage(damage, '');
+			} else {
+				var hitEffect = hitEffectRegex.exec(value);
+				if (hitEffect) {
+					if (hitEffect[1]) {
+						setEffect(hitEffect[1].trim());
+					}
+				}
+			}
+
+			var damagePlus = damagePlusRegex.exec(value);
+			if (damagePlus) {
+				parseDamage(damagePlus, 'second_');
+			}
+			var altDamage = altDamageRegex.exec(value);
+			if (altDamage) {
+				altDamage[6] = [altDamage[5], altDamage[5] = altDamage[6]][0]; //swap 5 and 6
+				parseDamage(altDamage, 'alt_');
+			}
+
+			damage = damageRegex.exec(value);
+			if (saveDmg) {
+				parseDamage(damage, '');
+			}
+
+			var saveDmg = saveDamageRegex.exec(value);
+			if (saveDmg) {
+				//1 is save DC. Example "13"
+				//2 is save stat. Example "Dexterity"
+				//3 is damage without dice. Example "1"
+				//4 is damage with dice. Example "2d6+4"
+				//5 is damage type. Example "slashing" or "lightning or thunder"
+				//6 is damage type explanation. Example "(djinni's choice)"
+				//7 is save success. Example "half as much damage"
+				//8 is effects
+				//9 is the other form of save success
+
+				if (saveDmg[1]) {
+					setSaveDC(saveDmg[1]);
+				}
+				if (saveDmg[2]) {
+					setSaveStat(saveDmg[2]);
+				}
+				if (saveDmg[3]) {
+					saveDmg[4] = saveDmg[3];
+				}
+				if (saveDmg[4]) {
+					setSaveDamage(saveDmg[4]);
+				}
+				if (saveDmg[6]) {
+					saveDmg[5] += ' ' + saveDmg[6];
+				}
+				if (saveDmg[5]) {
+					setSaveDamageType(saveDmg[5]);
+				}
+				if (saveDmg[9]) {
+					saveDmg[7] = saveDmg[9];
+				}
+				if (saveDmg[7]) {
+					setSaveSuccess(saveDmg[7]);
+				}
+				if (saveDmg[8]) {
+					setSaveEffect(saveDmg[8]);
+				}
+				if (saveDmg[1] || saveDmg[2] || saveDmg[8]) {
+					toggleSave();
+				}
+				if (saveDmg[4] || saveDmg[5] || saveDmg[7]) {
+					toggleSaveDamage();
+				}
+				parsedSave = true;
+			}
+
+			var saveOr = saveOrRegex.exec(value);
+			if (saveOr) {
+				//1 is save DC. Example "13"
+				//2 is save stat. Example "Dexterity"
+				//3 is effects
+
+				//log('saveOr: ' + saveOr);
+				if (saveOr[1]) {
+					setSaveDC(saveOr[1]);
+				}
+				if (saveOr[2]) {
+					setSaveStat(saveOr[2]);
+				}
+				if (saveOr[3]) {
+					setSaveEffect(saveOr[3]);
+				}
+				if (saveOr[1] || saveOr[2] || saveOr[3]) {
+					toggleSave();
+				}
+				parsedSave = true;
+			}
+
+			var saveFailed = saveFailedSaveRegex.exec(value);
+			if (saveFailed) {
+				//1 is save DC. Example "13"
+				//2 is save stat. Example "Dexterity"
+				//3 is failure state (effects)
+				//4 is success state
+				//5 is failure state w/o success sate.
+
+				//log('saveFailed: ' + saveFailed);
+				if (saveFailed[1]) {
+					setSaveDC(saveFailed[1]);
+				}
+				if (saveFailed[2]) {
+					setSaveStat(saveFailed[2]);
+				}
+				if (saveFailed[5]) {
+					saveFailed[3] = saveFailed[5];
+				}
+				if (saveFailed[3]) {
+					setSaveEffect(saveFailed[3]);
+				}
+				if (saveFailed[4]) {
+					setSaveSuccess(saveFailed[4]);
+				}
+				if (saveFailed[1] || saveFailed[2] || saveFailed[3] || saveFailed[4]) {
+					toggleSave();
+				}
+				parsedSave = true;
+			}
+
+			var saveRangeRegex = /((?:Each | a | an | one ).*(?:creature|target).*)\s(?:within|in)\s*?a?\s*?(\d+)\s*?(?:feet|ft)/gi;
+			var saveRange;
+			while (saveRange = saveRangeRegex.exec(value)) {
+				if (saveRange[1]) {
+					setTarget(saveRange[1].trim());
+				}
+				if (saveRange[2]) {
+					setRange(saveRange[2] + ' ft', saveRange[2]);
+				}
+			}
+
+			var lineRangeFootRegex = /(\d+)\-foot line\s*?that is (\d+) feet wide/gi,
+				lineRangeFoot = lineRangeFootRegex.exec(value),
+				lineRangeFeetRegex = /line that is (\d+)\sfeet long\s*?and (\d+) feet wide/gi,
+				lineRangeFeet = lineRangeFeetRegex.exec(value),
+				lineRange = lineRangeFoot || lineRangeFeet;
+			if (lineRange) {
+				setType('Line');
+				if (lineRange[1] && lineRange[2]) {
+					setRange(lineRange[1] + '-foot line that is ' + lineRange[2] + ' feet wide');
+				} else if (lineRange[1]) {
+					setRange(lineRange[1]);
+				}
+			}
+
+			var lineTargetRegex = /\.\s*(.*in that line)/gi;
+			var lineTarget;
+			while (lineTarget = lineTargetRegex.exec(value)) {
+				setTarget(lineTarget[1]);
+			}
+
+
+			function createTokenAction() {
+				// Create token action
+				setAbility(key, '', '%{' + characterName + '|repeating_' + actionType + 'actions_' + actionNum + '_action}', shaped.settings.createAbilityAsToken);
+			}
+
+			parsed = parsedAttack || parsedDamage || parsedSave;
+			if (!parsed) {
+				if (actionType === 'legendary_') {
+					legendaryActionsNotes.push(key + '. ' + value);
+				} else {
+					setEffect(value);
+					createTokenAction();
+					actionNum++;
+				}
+			} else {
+				if (actionType === 'legendary_') {
+					legendaryActionsNotes.push(key + '. See below');
+				}
+				if (key.indexOf('Costs ') > 0) {
+					key = key.replace(/\s*\(Costs\s*\d+\s*Actions\)/gi, '');
+					setName(key);
+				}
+				createTokenAction();
+				actionNum++;
+			}
+		});
+
+		if (legendaryActionsNotes.length > 0) {
+			setAttribute('legendary_action_notes', legendaryActionsNotes.join('\n'));
+		}
+		return actionPosition;
+	}
+
+	function addActionToMultiattack(actionNumber, multiattackScript) {
+		if (multiattackScript !== '') {
+			multiattackScript += '\n';
+		}
+		multiattackScript += '%{' + characterName + '|repeating_actions_' + actionNumber + '_action}';
+		return multiattackScript
+	}
+
 	function parseActions(actions, actionType) {
 		if (!actionType) {
 			actionType = '';
 		}
 		var multiAttackText;
-		var actionPosition = []; // For use with multiattack.
-
-		function processActions(actionList) {
-			var actionNum = 0,
-				legendaryActionsNotes = [];
-
-			function setNPCActionAttribute(attribute, value, ifQuery) {
-				if (typeof ifQuery === 'undefined') {
-					ifQuery = value;
-				}
-				if (ifQuery) {
-					setAttribute('repeating_' + actionType + 'actions_' + actionNum + '_' + attribute, value.trim());
-				}
-			}
-
-			function setNPCActionToggle(attribute, toggle) {
-				if (typeof toggle === 'undefined' || toggle) {
-					setAttribute('repeating_' + actionType + 'actions_' + actionNum + '_toggle_' + attribute, '@{repeating_' + actionType + 'actions_' + actionNum + '_var_' + attribute + '}');
-				}
-			}
-
-			function parseCritDamage(damage) {
-				return damage.replace(/\s?[\+\-]\s?\d+/g, '');
-			}
-
-			function setName(name) {
-				setNPCActionAttribute('name', name);
-			}
-
-			function setType(type) {
-				setNPCActionAttribute('type', type);
-			}
-
-			function setTarget(target) {
-				setNPCActionAttribute('target', target);
-				setNPCActionToggle('target');
-			}
-
-			function setRange(type) {
-				setNPCActionAttribute('range', type);
-				setNPCActionToggle('range');
-			}
-
-			function setDamage(damage, altSecondary) {
-				setNPCActionAttribute(altSecondary + 'dmg', damage);
-			}
-
-			function toggleDamage(altSecondary) {
-				setNPCActionToggle(altSecondary + 'damage');
-			}
-
-			function setDamageType(type, altSecondary) {
-				setNPCActionAttribute(altSecondary + 'dmg_type', type);
-			}
-
-			function setCritDamage(critDamage, altSecondary) {
-				setNPCActionAttribute(altSecondary + 'crit_dmg', critDamage);
-			}
-
-			function setAltDamageReason(damageReason) {
-				setNPCActionAttribute('alt_' + 'dmg_reason', damageReason);
-			}
-
-			function setEffect(effect) {
-				if (effect) {
-					setNPCActionAttribute('effect', effect.replace(/(\s*?Hit:\s?)/gi, '').replace(/(\d+)d(\d+)/g, '[[$1d$2]]').replace(/\s(\d+)\s/g, ' [[$1]] '));
-				}
-				setNPCActionToggle('effects', effect);
-			}
-
-			function setSaveDC(saveDC) {
-				setNPCActionAttribute('save_dc', saveDC);
-			}
-
-			function setSaveStat(saveStat) {
-				if (saveStat) {
-					setNPCActionAttribute('save_stat', saveStat.substring(0, 3));
-				}
-			}
-
-			function toggleSave(toggle) {
-				setNPCActionToggle('save', toggle);
-			}
-
-			function toggleSaveDamage(toggle) {
-				setNPCActionToggle('save_damage', toggle);
-			}
-
-			function setSaveDamage(saveDamage) {
-				setNPCActionAttribute('save_dmg', saveDamage);
-			}
-
-			function setSaveDamageType(saveDamageType) {
-				setNPCActionAttribute('save_dmg_type', saveDamageType);
-			}
-
-			function setSaveSuccess(saveSuccess) {
-				setNPCActionAttribute('save_success', saveSuccess);
-			}
-
-			function setSaveEffect(saveEffect) {
-				setEffect(saveEffect);
-			}
-
-			var commaPeriodSpace = /\,?\.?\s*?/,
-				commaPeriodDefinitiveSpace = /\,?\.?\s*/,
-				commaPeriodOneSpace = /\,?\.?\s?/,
-				hit = /Hit:.*?/,
-				damageType = /((?:[\w]+|[\w]+\s(?:or|and)\s[\w]+)(?:\s*?\([\w\s]+\))?)\s*?damage\s?(\([\w\'\s]+\))?/,
-				damageSyntax = /(?:(\d+)|.*?\(([\dd\s\+\-]*)\).*?)\s*?/,
-				altDamageSyntax = /(?:\,\s*?or\s*?)/,
-				altDamageReasonSyntax = /((?:if|in)[\w\s]+)/,
-				altDamageExtraSyntax = /(The.*|If the.*)?/,
-				plus = /\s*?plus\s*?/,
-				savingThrow = /(?:DC)\s*?(\d+)\s*?([a-zA-Z]*)\s*?(?:saving throw)/,
-				takeOrTaking = /\,?\s*?(?:taking|or take)/,
-				againstDisease = /(?: against disease)?/,
-				saveSuccess = /(?:.*or\s(.*)?\son a successful one.)?/,
-				saveSuccessTwo = /(?:On a successful save,)?(.*)?/,
-				saveFailure = /(?:On a (?:failure|failed save))\,\s(?:(.*). On a success,\s(.*)?)?(.*)?/,
-				andAnythingElse = /(\s?and.*)?/,
-				orAnythingElseNoTake = /(or\s(?!take).*)/,
-				anythingElse = /(.*)?/,
-				damageRegex = new RegExp(hit.source + damageSyntax.source + damageType.source + commaPeriodSpace.source + andAnythingElse.source, 'i'),
-				damagePlusRegex = new RegExp(plus.source + damageSyntax.source + damageType.source + commaPeriodSpace.source + anythingElse.source, 'i'),
-				altDamageRegex = new RegExp(altDamageSyntax.source + damageSyntax.source + damageType.source + commaPeriodSpace.source + altDamageReasonSyntax.source + commaPeriodOneSpace.source + altDamageExtraSyntax.source, 'i'),
-				hitEffectRegex = new RegExp(hit.source + anythingElse.source, 'i'),
-				saveDamageRegex = new RegExp(savingThrow.source + takeOrTaking.source + damageSyntax.source + damageType.source + saveSuccess.source + commaPeriodSpace.source + anythingElse.source + saveSuccessTwo.source, 'i'),
-				saveOrRegex = new RegExp(savingThrow.source + againstDisease.source + commaPeriodDefinitiveSpace.source + orAnythingElseNoTake.source, 'i'),
-				saveFailedSaveRegex = new RegExp(savingThrow.source + commaPeriodSpace.source + saveFailure.source, 'i');
-
-			function parseDamage(damage, altSecondary) {
-				//log('parseDamage: ' + damage);
-				if (damage) {
-					//1 is damage without dice. Example "1"
-					//2 is damage with dice. Example "2d6+4"
-					//3 is damage type. Example "slashing" or "lightning or thunder"
-					//4 is damage type explanation. Example "(djinni's choice)"
-					//5 is effects
-					if (damage[1]) {
-						damage[2] = damage[1];
-					}
-					if (damage[2]) {
-						setDamage(damage[2], altSecondary);
-						setCritDamage(parseCritDamage(damage[2]), altSecondary);
-					}
-					if (damage[4]) {
-						damage[3] += ' ' + damage[4];
-					}
-					if (damage[3]) {
-						setDamageType(damage[3], altSecondary);
-					}
-					if (damage[2] || damage[3]) {
-						toggleDamage(altSecondary);
-					}
-					if (damage[5]) {
-						setEffect(damage[5].trim());
-					}
-					if (damage[6]) {
-						setAltDamageReason(damage[6]);
-					}
-				}
-			}
-
-			_.each(actionList, function (value, key) {
-				var parsedAttack = false,
-					parsedSave = false,
-					parsedDamage = false,
-					parsed,
-					pos = key.indexOf('(');
-
-				if (pos > 1) {
-					actionPosition[actionNum] = key.substring(0, pos - 1).toLowerCase();
-				} else {
-					actionPosition[actionNum] = key.toLowerCase();
-				}
-
-				var keyRegex = /\s*?\((?:Recharge\s*?(\d+\-\d+|\d+)|Recharges\safter\sa\s(.*))\)/gi;
-				var keyResult;
-				while (keyResult = keyRegex.exec(key)) {
-					var recharge = keyResult[1] || keyResult[2];
-					setNPCActionAttribute('recharge', recharge);
-					setNPCActionToggle('recharge');
-					if (recharge) {
-						key = key.replace(keyRegex, '');
-					}
-				}
-				var rechargeDayRegex = /\s*?\((\d+\/Day)\)/gi;
-				var rechargeDayResult;
-				while (rechargeDayResult = rechargeDayRegex.exec(key)) {
-					var rechargeDay = rechargeDayResult[1] || rechargeDayResult[2];
-					setNPCActionAttribute('recharge', rechargeDay);
-					setNPCActionToggle('recharge');
-					if (rechargeDay) {
-						key = key.replace(rechargeDayRegex, '');
-						key = key.replace(rechargeDayRegex, '');
-					}
-				}
-
-				setName(key);
-
-				var splitAction = value.split(/\.(.+)?/),
-					attackInfo = splitAction[0],
-					splitAttack = attackInfo.split(',');
-
-				var typeRegex = /(melee|ranged|melee or ranged)\s*(spell|weapon)\s*/gi;
-				var type;
-				while (type = typeRegex.exec(splitAttack[0])) {
-					if (type[1]) {
-						var meleeOrRanged = 'Melee or Ranged';
-						if (type[1].toLowerCase() === meleeOrRanged.toLowerCase()) {
-							type[1] = 'Thrown';
-						}
-						setType(capitalizeEachWord(type[1]));
-					}
-					parsedAttack = true;
-				}
-				var toHitRegex = /\+\s?(\d+)\s*(?:to hit)/gi;
-				var toHit;
-				while (toHit = toHitRegex.exec(splitAttack[0])) {
-					if (toHit[1]) {
-						setNPCActionAttribute('tohit', toHit[1]);
-						setNPCActionToggle('attack');
-						setNPCActionToggle('crit');
-					}
-					if (splitAttack[2]) {
-						setTarget(splitAttack[2].trim().toLowerCase());
-					}
-					parsedAttack = true;
-				}
-				var reachRegex = /(?:reach)\s?(\d+)\s?(?:ft)/gi;
-				var reach;
-				while (reach = reachRegex.exec(splitAttack[1])) {
-					if (reach[1]) {
-						setNPCActionAttribute('reach', reach[1] + ' ft', reach[1]);
-						setNPCActionToggle('reach');
-					}
-					parsedAttack = true;
-				}
-				var rangeRegex = /(?:range)\s?(\d+)\/(\d+)\s?(ft)/gi;
-				var range;
-				while (range = rangeRegex.exec(splitAttack[1])) {
-					if (range[1] && range[2]) {
-						setRange(range[1] + '/' + range[2] + ' ft');
-					}
-					parsedAttack = true;
-				}
-
-
-				var damage = damageRegex.exec(value);
-				if (damage) {
-					parseDamage(damage, '');
-				} else {
-					var hitEffect = hitEffectRegex.exec(value);
-					if (hitEffect) {
-						if (hitEffect[1]) {
-							setEffect(hitEffect[1].trim());
-						}
-					}
-				}
-
-				var damagePlus = damagePlusRegex.exec(value);
-				if (damagePlus) {
-					parseDamage(damagePlus, 'second_');
-				}
-				var altDamage = altDamageRegex.exec(value);
-				if (altDamage) {
-					altDamage[6] = [altDamage[5], altDamage[5] = altDamage[6]][0]; //swap 5 and 6
-					parseDamage(altDamage, 'alt_');
-				}
-
-				damage = damageRegex.exec(value);
-				if (saveDmg) {
-					parseDamage(damage, '');
-				}
-
-				var saveDmg = saveDamageRegex.exec(value);
-				if (saveDmg) {
-					//1 is save DC. Example "13"
-					//2 is save stat. Example "Dexterity"
-					//3 is damage without dice. Example "1"
-					//4 is damage with dice. Example "2d6+4"
-					//5 is damage type. Example "slashing" or "lightning or thunder"
-					//6 is damage type explanation. Example "(djinni's choice)"
-					//7 is save success. Example "half as much damage"
-					//8 is effects
-					//9 is the other form of save success
-
-					if (saveDmg[1]) {
-						setSaveDC(saveDmg[1]);
-					}
-					if (saveDmg[2]) {
-						setSaveStat(saveDmg[2]);
-					}
-					if (saveDmg[3]) {
-						saveDmg[4] = saveDmg[3];
-					}
-					if (saveDmg[4]) {
-						setSaveDamage(saveDmg[4]);
-					}
-					if (saveDmg[6]) {
-						saveDmg[5] += ' ' + saveDmg[6];
-					}
-					if (saveDmg[5]) {
-						setSaveDamageType(saveDmg[5]);
-					}
-					if (saveDmg[9]) {
-						saveDmg[7] = saveDmg[9];
-					}
-					if (saveDmg[7]) {
-						setSaveSuccess(saveDmg[7]);
-					}
-					if (saveDmg[8]) {
-						setSaveEffect(saveDmg[8]);
-					}
-					if (saveDmg[1] || saveDmg[2] || saveDmg[8]) {
-						toggleSave();
-					}
-					if (saveDmg[4] || saveDmg[5] || saveDmg[7]) {
-						toggleSaveDamage();
-					}
-					parsedSave = true;
-				}
-
-				var saveOr = saveOrRegex.exec(value);
-				if (saveOr) {
-					//1 is save DC. Example "13"
-					//2 is save stat. Example "Dexterity"
-					//3 is effects
-
-					//log('saveOr: ' + saveOr);
-					if (saveOr[1]) {
-						setSaveDC(saveOr[1]);
-					}
-					if (saveOr[2]) {
-						setSaveStat(saveOr[2]);
-					}
-					if (saveOr[3]) {
-						setSaveEffect(saveOr[3]);
-					}
-					if (saveOr[1] || saveOr[2] || saveOr[3]) {
-						toggleSave();
-					}
-					parsedSave = true;
-				}
-
-				var saveFailed = saveFailedSaveRegex.exec(value);
-				if (saveFailed) {
-					//1 is save DC. Example "13"
-					//2 is save stat. Example "Dexterity"
-					//3 is failure state (effects)
-					//4 is success state
-					//5 is failure state w/o success sate.
-
-					//log('saveFailed: ' + saveFailed);
-					if (saveFailed[1]) {
-						setSaveDC(saveFailed[1]);
-					}
-					if (saveFailed[2]) {
-						setSaveStat(saveFailed[2]);
-					}
-					if (saveFailed[5]) {
-						saveFailed[3] = saveFailed[5];
-					}
-					if (saveFailed[3]) {
-						setSaveEffect(saveFailed[3]);
-					}
-					if (saveFailed[4]) {
-						setSaveSuccess(saveFailed[4]);
-					}
-					if (saveFailed[1] || saveFailed[2] || saveFailed[3] || saveFailed[4]) {
-						toggleSave();
-					}
-					parsedSave = true;
-				}
-
-				var saveRangeRegex = /((?:Each | a | an | one ).*(?:creature|target).*)\s(?:within|in)\s*?a?\s*?(\d+)\s*?(?:feet|ft)/gi;
-				var saveRange;
-				while (saveRange = saveRangeRegex.exec(value)) {
-					if (saveRange[1]) {
-						setTarget(saveRange[1].trim());
-					}
-					if (saveRange[2]) {
-						setRange(saveRange[2] + ' ft', saveRange[2]);
-					}
-				}
-
-				var lineRangeFootRegex = /(\d+)\-foot line\s*?that is (\d+) feet wide/gi,
-					lineRangeFoot = lineRangeFootRegex.exec(value),
-					lineRangeFeetRegex = /line that is (\d+)\sfeet long\s*?and (\d+) feet wide/gi,
-					lineRangeFeet = lineRangeFeetRegex.exec(value),
-					lineRange = lineRangeFoot || lineRangeFeet;
-				if (lineRange) {
-					setType('Line');
-					if (lineRange[1] && lineRange[2]) {
-						setRange(lineRange[1] + '-foot line that is ' + lineRange[2] + ' feet wide');
-					} else if (lineRange[1]) {
-						setRange(lineRange[1]);
-					}
-				}
-
-				var lineTargetRegex = /\.\s*(.*in that line)/gi;
-				var lineTarget;
-				while (lineTarget = lineTargetRegex.exec(value)) {
-					setTarget(lineTarget[1]);
-				}
-
-
-				function createTokenAction() {
-					// Create token action
-					setAbility(key, '', '%{' + characterName + '|repeating_' + actionType + 'actions_' + actionNum + '_action}', shaped.settings.createAbilityAsToken);
-				}
-
-				parsed = parsedAttack || parsedDamage || parsedSave;
-				if (!parsed) {
-					if (actionType === 'legendary_') {
-						legendaryActionsNotes.push(key + '. ' + value);
-					} else {
-						setEffect(value);
-						createTokenAction();
-						actionNum++;
-					}
-				} else {
-					if (actionType === 'legendary_') {
-						legendaryActionsNotes.push(key + '. See below');
-					}
-					if (key.indexOf('Costs ') > 0) {
-						key = key.replace(/\s*\(Costs\s*\d+\s*Actions\)/gi, '');
-						setName(key);
-					}
-					createTokenAction();
-					actionNum++;
-				}
-			});
-
-			if (legendaryActionsNotes.length > 0) {
-				setAttribute('legendary_action_notes', legendaryActionsNotes.join('\n'));
-			}
-		}
 
 		if (shaped.settings.addInitiativeTokenAbility) {
 			createInitTokenAction(characterName);
@@ -1658,20 +1672,13 @@
 			}
 		}
 
-		processActions(actions);
+		var actionPosition = processActions(actions, actionType);
 
 		if (actionType === 'lair_' && Object.keys(actions).length > 0) {
 			setAttribute('toggle_lair_actions', 'on');
 		}
 		if (actionType === 'legendary_' && Object.keys(actions).length > 0) {
 			setAttribute('toggle_legendary_actions', 'on');
-		}
-
-		function addActionToMultiattack(actionNumber) {
-			if (multiattackScript !== '') {
-				multiattackScript += '\n';
-			}
-			multiattackScript += '%{' + characterName + '|repeating_actions_' + actionNumber + '_action}';
 		}
 
 		if (multiAttackText) {
@@ -1688,12 +1695,12 @@
 				actionNumber = actionPosition.indexOf(action.toLowerCase());
 
 				if (actionNumber !== -1) {
-					addActionToMultiattack(actionNumber);
+					multiattackScript = addActionToMultiattack(actionNumber, multiattackScript);
 					if (nb == 'two') {
-						addActionToMultiattack(actionNumber);
+						multiattackScript = addActionToMultiattack(actionNumber, multiattackScript);
 					}
 					if (nb == 'three') {
-						addActionToMultiattack(actionNumber);
+						multiattackScript = addActionToMultiattack(actionNumber, multiattackScript);
 					}
 					if (match[3]) {
 						multiattackScript += 'or\n';
@@ -2206,19 +2213,107 @@
 		if (monster.skills) parseSkills(monster.skills);
 		if (monster.senses) parseSenses(monster.senses);
 		if (monster.languages) setAttribute('prolanguages', monster.languages);
-		if (monster.challenge) parseChallenge(monster.challenge);
+		if (monster.challenge) setAttribute('challenge', monster.challenge);
 		if (monster.damageResistances) setAttribute('damage_resistance', monster.damageResistances);
 		if (monster.damageVulnerabilities) setAttribute('damage_vulnerability', monster.damageVulnerabilities);
 		if (monster.damageImmunities) setAttribute('damage_immunity', monster.damageImmunities);
 		if (monster.conditionImmunities) setAttribute('condition_immunity', monster.conditionImmunities);
+		if (shaped.settings.addInitiativeTokenAbility) {
+			createInitTokenAction(monster.name);
+		}
+		if (shaped.settings.addSaveQueryMacroTokenAbility) {
+			createSaveQueryTokenAction(monster.name);
+		}
+		if (shaped.settings.addCheckQueryMacroTokenAbility) {
+			createCheckQueryTokenAction(monster.name);
+		}
 
-		setAttribute('npc_traits', monster.traits.join('\n'));
+		if (monster.traits) {
+			setAttribute('toggle_traits', 'on');
+			setAttribute('npc_traits', monster.traits.join('\n'));
+		}
+		if (monster.actions) {
+			monster.parsedActions = {};
+			setAttribute('toggle_actions', 'on');
+			for (var i = 0; i < monster.actions.length; i++) {
+				var split = monster.actions[i].split('.');
+				var actionName = split[0];
+				split.splice(0, 1);
+				split = split.join();
+				monster.parsedActions[actionName] = split.trim();
+			}
+			if (monster.parsedActions['Multiattack']) {
+				var multiAttackText = monster.parsedActions['Multiattack'];
+				setAttribute('toggle_multiattack', 'on');
+				setAttribute('multiattack', multiAttackText);
+				setAbility('MultiAtk', '', '%{' + characterName + '|multiattack}', shaped.settings.createAbilityAsToken);
+				delete monster.parsedActions['Multiattack'];
+			}
 
-		/*
-		 parseActions(section.actions);
-		 parseActions(section.legendary, 'legendary_');
-		 parseActions(section.lair, 'lair_');
-		 */
+			var actionPosition = processActions(monster.parsedActions);
+
+			if (multiAttackText) {
+				var actionList = actionPosition.join('|');
+				var multiattackRegex = new RegExp('(one|two|three)? (?:with its )?(' + actionList + ')( or)?', 'gi');
+				var multiattackScript = '';
+				var actionNumber;
+
+				var match;
+				while (match = multiattackRegex.exec(multiAttackText)) {
+					var action = match[2];
+					var nb = match[1] || 'one';
+
+					actionNumber = actionPosition.indexOf(action.toLowerCase());
+
+					if (actionNumber !== -1) {
+						multiattackScript = addActionToMultiattack(actionNumber, multiattackScript);
+						if (nb == 'two') {
+							multiattackScript = addActionToMultiattack(actionNumber, multiattackScript);
+						}
+						if (nb == 'three') {
+							multiattackScript = addActionToMultiattack(actionNumber, multiattackScript);
+						}
+						if (match[3]) {
+							multiattackScript += 'or\n';
+						}
+
+						delete actionPosition[actionNumber]; // Remove
+					}
+				}
+
+				setAttribute('multiattack_script', multiattackScript);
+
+			}
+		}
+		if (monster.legendaryActions) {
+			monster.parsedLegendaryActions = {};
+			setAttribute('toggle_legendary_actions', 'on');
+			for (var i = 0; i < monster.legendaryActions.length; i++) {
+				var split = monster.legendaryActions[i].split('.');
+				var actionName = split[0];
+				split.splice(0, 1);
+				split = split.join();
+				monster.parsedLegendaryActions[actionName] = split.trim();
+			}
+
+			processActions(monster.parsedLegendaryActions, 'legendary_');
+		}
+		if (monster.lairActions) {
+			monster.parsedLairActions = {};
+			setAttribute('toggle_lair_actions', 'on');
+			for (var i = 0; i < monster.parsedLairActions.length; i++) {
+				var split = monster.parsedLairActions[i].split('.');
+				var actionName = split[0];
+				split.splice(0, 1);
+				split = split.join();
+				monster.parsedLairActions[actionName] = split.trim();
+			}
+
+			processActions(monster.parsedLairActions, 'lair_');
+		}
+		if (monster.spells) {
+			shaped.spellImport(token, [monster.spells]);
+		}
 
 		if (characterId) {
 			token.set('represents', characterId);
@@ -2248,15 +2343,6 @@
 			}
 
 			setTokenVision(token);
-			if(shaped.settings.addInitiativeTokenAbility) {
-				createInitTokenAction(monster.name);
-			}
-			if(shaped.settings.addSaveQueryMacroTokenAbility) {
-				createSaveQueryTokenAction(monster.name);
-			}
-			if(shaped.settings.addCheckQueryMacroTokenAbility) {
-				createCheckQueryTokenAction(monster.name);
-			}
 		}
 	};
 
