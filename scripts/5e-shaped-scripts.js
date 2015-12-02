@@ -203,7 +203,7 @@
 
     if(typeof(character) === 'undefined') {
       messageToChat('Error: cannot find a character by the name of "' + characterName + '".');
-      return
+      return;
     }
     characterId = character.id;
 
@@ -258,9 +258,9 @@
 
   shaped.rollTokenHp = function(token) {
     var barOfHP;
-    for(var i = 0; i < 3; i++) {
-      if(shaped.settings.bar[i].name === 'HP') {
-        barOfHP = i + 1;
+    for(var index = 0; index < 3; index++) {
+      if(shaped.settings.bar[index].name === 'HP') {
+        barOfHP = index + 1;
         break;
       }
     }
@@ -302,7 +302,7 @@
               }
               hdFormula += '{d' + hdArray[i] + ' + ' + conMod + ', 0d0+1}kh1';
 
-              hdAverage += (hdArray[i] / 2 + .5) + conMod;
+              hdAverage += (hdArray[i] / 2 + 0.5) + conMod;
             }
           }
         }
@@ -1586,9 +1586,9 @@
     }
 
     for(var key in actions) {
-      var multiattackRegex = /Multiattack(?:\s*(\(.*\)))?/gi,
-        multi = multiattackRegex.exec(key),
-        multiAttackText = '';
+      var multiattackRegex = /Multiattack(?:\s*(\(.*\)))?/gi;
+      var multi = multiattackRegex.exec(key);
+      var multiAttackText = '';
       if(multi) {
         if(multi[1]) {
           multiAttackText = multi[1] + ': ';
@@ -1857,17 +1857,17 @@
 
       if(attributeName === 'gm_info') {
         if(args[2] === 'show') {
-          attributesToChange['hide_save_dc'] = '';
-          attributesToChange['hide_save_failure'] = '';
-          attributesToChange['hide_save_success'] = '';
-          attributesToChange['hide_effects'] = '';
-          attributesToChange['hide_recharge'] = '';
+          attributesToChange.hide_save_dc = '';
+          attributesToChange.hide_save_failure = '';
+          attributesToChange.hide_save_success = '';
+          attributesToChange.hide_effects = '';
+          attributesToChange.hide_recharge = '';
         } else if(args[2] === 'hide') {
-          attributesToChange['hide_save_dc'] = '@{hide_save_dc_var}';
-          attributesToChange['hide_save_failure'] = '@{hide_save_failure_var}';
-          attributesToChange['hide_save_success'] = '@{hide_save_success_var}';
-          attributesToChange['hide_effects'] = '@{hide_effects_var}';
-          attributesToChange['hide_recharge'] = '@{hide_recharge_var}';
+          attributesToChange.hide_save_dc = '@{hide_save_dc_var}';
+          attributesToChange.hide_save_failure = '@{hide_save_failure_var}';
+          attributesToChange.hide_save_success = '@{hide_save_success_var}';
+          attributesToChange.hide_effects = '@{hide_effects_var}';
+          attributesToChange.hide_recharge = '@{hide_recharge_var}';
         }
       }
     } else {
@@ -2187,7 +2187,7 @@
     }
 
     shaped.importMonster(token, monsterName);
-  }
+  };
 
 }(typeof shaped === 'undefined' ? shaped = {} : shaped));
 
