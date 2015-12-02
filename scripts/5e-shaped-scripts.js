@@ -213,7 +213,7 @@
 			createSaveQueryTokenAction(characterName);
 			createCheckQueryTokenAction(characterName);
 			messageToChat('created query token macros for ' + characterName + '.');
-		} else if (args[1] === 'bootstrap') {
+		} else {
 			createInitTokenAction(characterName);
 			createSaveQueryTokenAction(characterName);
 			createCheckQueryTokenAction(characterName);
