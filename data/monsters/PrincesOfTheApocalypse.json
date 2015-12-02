@@ -17,13 +17,13 @@
             "Fey Ancestry. Aerisi has advantage on saving throws against being charmed, and magic can't put her to sleep.",
             "Howling Defeat. When Aerisi drops to 0 hit points, her body disappears in a howling whirlwind that disperses quickly and harmlessly. Anything she is wearing or carrying is left behind.",
             "Legendary Resistance (2/Day). If Aerisi fails a saving throw, she can choose to succeed instead.",
-            "Spellcasting. Aerisi is a 12th-level spellcaster. Her spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks). Aerisi has the following wizard spells prepared: ",
+            "Spellcasting. Aerisi is a 12th-level spellcaster. Her spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks). Aerisi has the following wizard spells prepared:",
             "• Cantrips (at will): gust, mage hand, message, prestidigitation, ray of frost, shocking grasp",
             "• 1st level (4 slots): charm person, feather fall, mage armor, thunderwave",
             "• 2nd level (3 slots): dust devil, gust of wind, invisibility",
             "• 3rd level (3 slots): fly, gaseous form, lightning bolt",
             "• 4th level (3 slots): ice storm, storm sphere",
-            "• 5th level (2 slots): cloudkill, seeming (cast each day) ",
+            "• 5th level (2 slots): cloudkill, seeming (cast each day)",
             "• 6th level (1 slot): chain lightning"
         ],
         "spells": "gust (ee), mage hand, message, prestidigitation, ray of frost, shocking grasp, charm person, feather fall, mage armor, thunderwave, dust devil (ee), gust of wind, invisibility, fly, gaseous form, lightning bolt, ice storm, storm sphere (ee), cloudkill, seeming, chain lightning",
@@ -70,10 +70,10 @@
         "languages": "Common, Ignan",
         "challenge": "8",
         "traits": [
-            "Innate Spellcasting. Bastian's innate spellcasting ability is Constitution (spell save DC 13, +5 to hit with spell attacks). He can innately cast the following spells: ",
+            "Innate Spellcasting. Bastian's innate spellcasting ability is Constitution (spell save DC 13, +5 to hit with spell attacks). He can innately cast the following spells:",
             "• At will: produce flame",
             "• 1/day: burning hands",
-            "Spellcasting. Bastian is a 9th-level spellcaster. His spellcasting ability is Charisma (spell save DC 15, +7 to hit with spell attacks). Bastian knows the following sorcerer spells: ",
+            "Spellcasting. Bastian is a 9th-level spellcaster. His spellcasting ability is Charisma (spell save DC 15, +7 to hit with spell attacks). Bastian knows the following sorcerer spells:",
             "• Cantrips (at will): fire bolt, mage hand, message, prestidigitation, shocking grasp",
             "• 1st level (4 slots): mage armor, magic missile, shield",
             "• 2nd level (3 slots): misty step, scorching ray",
@@ -118,7 +118,7 @@
         "languages": "Common, Terran",
         "challenge": "3",
         "traits": [
-            "Spellcasting. The priest is a 5th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). It knows the following sorcerer spells: ",
+            "Spellcasting. The priest is a 5th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). It knows the following sorcerer spells:",
             "• Cantrips (at will): acid splash, blade ward, light, mending, mold earth",
             "• 1st level (4 slots): earth tremor, expeditious retreat, shield",
             "• 2nd level (3 slots): shatter, spider climb",
@@ -165,7 +165,7 @@
         "languages": "Aquan, Common",
         "challenge": "2",
         "traits": [
-            "Spellcasting. The priest is a 5th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). It knows the following sorcerer spells: ",
+            "Spellcasting. The priest is a 5th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). It knows the following sorcerer spells:",
             "• Cantrips (at will): chill touch, mage hand, minor illusion, prestidigitation, ray of frost",
             "• 1st level (4 slots): expeditious retreat, ice knife, magic missile, shield",
             "• 2nd level (3 slots): blur, hold person",
@@ -282,7 +282,7 @@
         "languages": "Common, Druidic",
         "challenge": "5",
         "traits": [
-            "Spellcasting. Elizar is a 7th-level spellcaster. His spellcasting ability is Wisdom (spell save DC 15, +7 to hit with spell attacks). Elizar has the following druid spells prepared: ",
+            "Spellcasting. Elizar is a 7th-level spellcaster. His spellcasting ability is Wisdom (spell save DC 15, +7 to hit with spell attacks). Elizar has the following druid spells prepared:",
             "• Cantrips (at will): druidcraft, guidance, poison spray, produce flame",
             "• 1st level (4 slots): animal friendship, faerie fire, healing word, jump, thunderwave",
             "• 2nd level (3 slots): flame blade, spike growth",
@@ -333,7 +333,7 @@
         "languages": "Common, Ignan",
         "challenge": "3",
         "traits": [
-            "Spellcasting. The priest is a 5th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). It knows the following sorcerer spells: ",
+            "Spellcasting. The priest is a 5th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). It knows the following sorcerer spells:",
             "• Cantrips (at will): control flames, create bonfire, fire bolt, light, minor illusion",
             "• 1st level (4 slots): burning hands, expeditious retreat, mage armor",
             "• 2nd level (3 slots): blur, scorching ray",
@@ -361,7 +361,7 @@
             "Shapechanger (2/day). The fathomer can use its action to polymorph into a Medium serpent composed of water, or back into its true form. Anything the fathomer is wearing or carrying is subsumed into the serpent form during the change, inaccessible until the fathomer returns to its true form. The fathomer reverts to its true form after 4 hours, unless it can expend another use of this trait. If the fathomer is knocked unconscious or dies, it also reverts to its true form.",
             "While in serpent form, the fathomer gains a swimming speed of 40 feet, the ability to breathe underwater, immunity to poison damage, as well as resistance to fire damage and bludgeoning, piercing, and slashing damage from nonmagical weapons. It also has immunity to the following conditions: exhaustion, grappled, paralyzed, poisoned, restrained, prone, unconscious. The serpent form can enter a hostile creature's space and stop there. In addition, if water can pass through a space, the serpent can do so without squeezing.",
             "Olhydra's Armor (Human Form Only). The fathomer can cast mage armor at will, without expending material components.",
-            "Spellcasting (Human Form Only). The fathomer is a 5th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 12, +4 to hit with spell attacks). It has two 3rd-level spell slots, which it regains after finishing a short or long rest, and knows the following warlock spells: ",
+            "Spellcasting (Human Form Only). The fathomer is a 5th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 12, +4 to hit with spell attacks). It has two 3rd-level spell slots, which it regains after finishing a short or long rest, and knows the following warlock spells:",
             "• Cantrips (at will): chill touch, eldritch blast, mage hand",
             "• 1st level: armor of Agathys, expeditious retreat, hex",
             "• 2nd level: invisibility",
@@ -387,7 +387,7 @@
         "languages": "Auran, Common",
         "challenge": "1",
         "traits": [
-            "Spellcasting. The knight is a 1st-level spellcaster. Its spellcasting ability is Charisma (spell save DC 12, +4 to hit with spell attacks). It knows the following sorcerer spell: ",
+            "Spellcasting. The knight is a 1st-level spellcaster. Its spellcasting ability is Charisma (spell save DC 12, +4 to hit with spell attacks). It knows the following sorcerer spell:",
             "• Cantrips (at will): gust, light, message, ray of frost",
             "• 1st level (2 slots): expeditious retreat, feather fall"
         ],
@@ -439,7 +439,7 @@
         "languages": "Common, Ignan",
         "challenge": "6",
         "traits": [
-            "Spellcasting. The flamewrath is a 7th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 14, +6 to hit with spell attacks). It knows the following sorcerer spells: ",
+            "Spellcasting. The flamewrath is a 7th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 14, +6 to hit with spell attacks). It knows the following sorcerer spells:",
             "• Cantrips (at will): control flames, fire bolt, friends, light, minor illusion",
             "• 1st level (4 slots): burning hands, color spray, mage armor",
             "• 2nd level (3 slots): scorching ray, suggestion",
@@ -469,7 +469,7 @@
         "traits": [
             "Amphibious. Gar can breathe air and water.",
             "Legendary Resistance (2/Day). If Gar fails a saving throw, he can choose to succeed instead.",
-            "Spellcasting. Gar is a 9th-level spellcaster. His spellcasting ability is Wisdom (spell save DC 16, +8 to hit with spell attacks). He has the following druid spells prepared: ",
+            "Spellcasting. Gar is a 9th-level spellcaster. His spellcasting ability is Wisdom (spell save DC 16, +8 to hit with spell attacks). He has the following druid spells prepared:",
             "• Cantrips (at will): mending, resistance, shape water",
             "• 1st level (4 slots): create or destroy water, cure wounds, fog cloud, thunderwave",
             "• 2nd level (3 slots): darkvision, hold person, protection from poison",
@@ -575,7 +575,7 @@
         "challenge": "2",
         "traits": [
             "Hold Breath. The priest can hold its breath for 30 minutes.",
-            "Spellcasting. The priest is a 5th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 12, +4 to hit with spell attacks). It knows the following sorcerer spells: ",
+            "Spellcasting. The priest is a 5th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 12, +4 to hit with spell attacks). It knows the following sorcerer spells:",
             "• Cantrips (at will): blade ward, gust, light, prestidigitation, shocking grasp",
             "• 1st level (4 slots): featherfall, shield, witch bolt",
             "• 2nd level (3 slots): dust devil, gust of wind",
@@ -602,7 +602,7 @@
         "languages": "Auran, Common",
         "challenge": "2",
         "traits": [
-            "Spellcasting. The hurricane is a 3rd-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 11, +3 to hit with spell attacks). It knows the following sorcerer spells: ",
+            "Spellcasting. The hurricane is a 3rd-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 11, +3 to hit with spell attacks). It knows the following sorcerer spells:",
             "• Cantrips (at will): blade ward, gust, light, prestidigitation",
             "• 1st level (4 slots): feather fall, jump, thunderwave",
             "• 2nd level (2 slots): gust of wind",
@@ -637,7 +637,7 @@
             "Fire Form. Imix can enter a hostile creature's space and stop there. He can move through a space as narrow as 1 inch without squeezing if fire could pass through that space.",
             "Illumination. Imix sheds bright light in a 60-foot radius and dim light for an additional 60 feet.",
             "Legendary Resistance (3/Day). If Imix fails a saving throw, he can choose to succeed instead.",
-            "Innate Spellcasting. Imix's innate spellcasting ability is Charisma (spell save DC 20, +12 to hit with spell attacks). He can innately cast the following spells, requiring no material components: ",
+            "Innate Spellcasting. Imix's innate spellcasting ability is Charisma (spell save DC 20, +12 to hit with spell attacks). He can innately cast the following spells, requiring no material components:",
             "• At will: fireball, wall of fire",
             "• 3/day each: fire storm, haste, teleport",
             "Magic Resistance. Imix has advantage on saving throws against spells and other magical effects."
@@ -698,9 +698,9 @@
         "challenge": "6",
         "traits": [
             "Earth Walk. Moving through difficult terrain made of earth or stone costs Miraj no extra movement.",
-            "Innate Spellcasting. Miraj's innate spellcasting ability is Constitution (spell save DC 14). He can innately cast the following spell, requiring no material components: ",
+            "Innate Spellcasting. Miraj's innate spellcasting ability is Constitution (spell save DC 14). He can innately cast the following spell, requiring no material components:",
             "• 1/day: pass without trace",
-            "Spellcasting. Miraj is an 11th-level spellcaster. His spellcasting ability is Charisma (spell save DC 15, +7 to hit with spell attacks). He knows the following sorcerer spells: ",
+            "Spellcasting. Miraj is an 11th-level spellcaster. His spellcasting ability is Charisma (spell save DC 15, +7 to hit with spell attacks). He knows the following sorcerer spells:",
             "• Cantrips (at will): acid splash, blade ward, friends, light, message, mold earth",
             "• 1st level (4 slots): chromatic orb, mage armor, magic missile",
             "• 2nd level (3 slots): Maximilian's earthen grasp, shatter, suggestion",
@@ -732,7 +732,7 @@
         "challenge": "20",
         "traits": [
             "Empowered Attacks. Ogremoch's slam attacks are treated as magical and adamantine for the purpose of bypassing resistance and immunity to nonmagical weapons.",
-            "Innate Spellcasting. Ogremoch's innate spellcasting ability is Charisma (spell save DC 20, +12 to hit with spell attacks). He can innately cast the following spells, requiring no material components: ",
+            "Innate Spellcasting. Ogremoch's innate spellcasting ability is Charisma (spell save DC 20, +12 to hit with spell attacks). He can innately cast the following spells, requiring no material components:",
             "• At will: meld into stone, move earth, wall of stone",
             "Legendary Resistance (3/Day). If Ogremoch fails a saving throw, he can choose to succeed instead.",
             "Magic Resistance. Ogremoch has advantage on saving throws against spells and other magical effects.",
@@ -769,7 +769,7 @@
         "challenge": "18",
         "traits": [
             "Empowered Attacks. Olhydra's slam attacks are treated as magical for the purpose of bypassing resistance and immunity to nonmagical weapons.",
-            "Innate Spellcasting. Olhydra's innate spellcasting ability is Charisma (spell save DC 20, +12 to hit with spell attacks). She can innately cast the following spells, requiring no material components: ",
+            "Innate Spellcasting. Olhydra's innate spellcasting ability is Charisma (spell save DC 20, +12 to hit with spell attacks). She can innately cast the following spells, requiring no material components:",
             "• At will: wall of ice",
             "• 3/day: ice storm",
             "• 1/day: storm of vengeance",
@@ -806,7 +806,7 @@
         "challenge": "3",
         "traits": [
             "Chilling Mist. While it is alive, the one-eyed shiver projects an aura of cold mist within 10 feet of itself. If the one-eyed shiver deals damage to a creature in this area, the creature also takes 5 (1d10) cold damage.",
-            "Spellcasting. The one-eyed shiver is a 5th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). It knows the following sorcerer spells: ",
+            "Spellcasting. The one-eyed shiver is a 5th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). It knows the following sorcerer spells:",
             "• Cantrips (at will): chill touch, mage hand",
             "• 1st level (4 slots): fog cloud, mage armor, thunderwave",
             "• 2nd level (3 slots): mirror image, misty step",
@@ -834,7 +834,7 @@
         "challenge": "2",
         "traits": [
             "Grim Harvest. Once per turn when Oreioth kills one or more creatures with a spell of 1st level or higher, he regains hit points equal to twice the spell's level.",
-            "Spellcasting. Oreioth is a 6th-level spellcaster. His spellcasting ability is Intelligence (spell save DC 13, +5 to hit with spell attacks). He has the following wizard spells prepared: ",
+            "Spellcasting. Oreioth is a 6th-level spellcaster. His spellcasting ability is Intelligence (spell save DC 13, +5 to hit with spell attacks). He has the following wizard spells prepared:",
             "• Cantrips (at will): chill touch, minor illusion, prestidigitation, shocking grasp",
             "• 1st level (4 slots): false life, mage armor, magic missile, ray of sickness",
             "• 2nd level (3 slots): crown of madness, misty step",
@@ -907,10 +907,10 @@
         "challenge": "4",
         "traits": [
             "Amphibious. Shoalar can breathe air and water.",
-            "Innate Spellcasting. Shoalar's innate spellcasting ability is Constitution (spell save DC 13, +5 to hit with spell attacks). He can innately cast the following spells: ",
+            "Innate Spellcasting. Shoalar's innate spellcasting ability is Constitution (spell save DC 13, +5 to hit with spell attacks). He can innately cast the following spells:",
             "• At will: shape water",
             "• 1/day: create or destroy water",
-            "Spellcasting. Shoalar is a 5th-level spellcaster. His spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). He knows the following sorcerer spells: ",
+            "Spellcasting. Shoalar is a 5th-level spellcaster. His spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). He knows the following sorcerer spells:",
             "• Cantrips (at will): acid splash, chill touch, friends, prestidigitation, ray of frost",
             "• 1st level (4 slots): disguise self, mage armor, magic missile",
             "• 2nd level (3 slots): hold person, misty step",
@@ -935,7 +935,7 @@
         "languages": "Auran, Common",
         "challenge": "3",
         "traits": [
-            "Spellcasting. The Skyweaver is a 6th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). It knows the following sorcerer spells: ",
+            "Spellcasting. The Skyweaver is a 6th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). It knows the following sorcerer spells:",
             "• Cantrips (at will): blade ward, light, message, ray of frost, shocking grasp",
             "• 1st level (4 slots): feather fall, mage armor, witch bolt",
             "• 2nd level (3 slots): gust of wind, invisibility",
@@ -961,7 +961,7 @@
         "challenge": "4",
         "traits": [
             "Death Burst. When the Stonemelder dies, it turns to stone and explodes in a burst of rock shards, becoming a smoking pile of rubble. Each creature within 10 feet of the exploding Stonemelder must make a DC 14 Dexterity saving throw, taking 11 (2d10) bludgeoning damage on a failed save, or half as much damage on a successful one.",
-            "Spellcasting. The Stonemelder is a 7th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). It knows the following sorcerer spells: ",
+            "Spellcasting. The Stonemelder is a 7th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). It knows the following sorcerer spells:",
             "• Cantrips (at will): acid splash, blade ward, light, mending, mold earth",
             "• 1st level (4 slots): expeditious retreat, false life, shield",
             "• 2nd level (3 slots): Maximilian's earthen grasp, shatter",
@@ -987,7 +987,7 @@
         "languages": "Auran, Common",
         "challenge": "3",
         "traits": [
-            "Spellcasting. Thurl is a 5th-level spellcaster. His spellcasting ability is Charisma (spell save DC 12, +4 to hit with spell attacks). Thurl knows the following sorcerer spells: ",
+            "Spellcasting. Thurl is a 5th-level spellcaster. His spellcasting ability is Charisma (spell save DC 12, +4 to hit with spell attacks). Thurl knows the following sorcerer spells:",
             "• Cantrips (at will): friends, gust, light, message, ray of frost",
             "• 1st level (4 slots): expeditious retreat, feather fall, jump",
             "• 2nd level (3 slots): levitate, misty step",
@@ -1017,7 +1017,7 @@
         "traits": [
             "Funeral Pyre. When Vanifer drops to 0 hit points, her body is consumed in a flash of fire and smoke. Anything she was wearing or carrying is left behind among ashes.",
             "Legendary Resistance (2/Day). If Vanifer fails a saving throw, she can choose to succeed instead.",
-            "Spellcasting. Vanifer is a 10th-level spellcaster. Her spellcasting ability is Charisma (spell save DC 16, +8 to hit with spell attacks). Vanifer knows the following sorcerer spells: ",
+            "Spellcasting. Vanifer is a 10th-level spellcaster. Her spellcasting ability is Charisma (spell save DC 16, +8 to hit with spell attacks). Vanifer knows the following sorcerer spells:",
             "• Cantrips (at will): chill touch, fire bolt, friends, mage hand, message, produce flame, thaumaturgy",
             "• 1st level (4 slots): burning hands, chromatic orb, hellish rebuke, shield",
             "• 2nd level (3 slots): darkness, detect thoughts, misty step, scorching ray",
@@ -1070,7 +1070,7 @@
         "challenge": "2",
         "traits": [
             "Brave Devotion. Wiggan has advantage on saving throws against being charmed or frightened.",
-            "Spellcasting. Wiggan is a 4th-level spellcaster. His spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). He has the following cleric spells prepared: ",
+            "Spellcasting. Wiggan is a 4th-level spellcaster. His spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). He has the following cleric spells prepared:",
             "• Cantrips (at will): guidance, light, mending, shillelagh, thaumaturgy",
             "• 1st Level (4 slots): animal friendship, cure wounds, healing word, inflict wounds, speak with animals",
             "• 2nd Level (3 slots): barkskin, spike growth, spiritual weapon"
@@ -1096,7 +1096,7 @@
         "challenge": "3",
         "traits": [
             "Fey Ancestry. Windharrow has advantage on saving throws against being charmed, and magic can't put him to sleep.",
-            "Spellcasting. Windharrow is an 8th-level spellcaster. His spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). Windharrow knows the following bard spells: ",
+            "Spellcasting. Windharrow is an 8th-level spellcaster. His spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). Windharrow knows the following bard spells:",
             "• Cantrips (at will): friends, prestidigitation, vicious mockery",
             "• 1st level (4 slots): disguise self, dissonant whispers, thunderwave",
             "• 2nd level (3 slots): invisibility, shatter, silence",
@@ -1128,7 +1128,7 @@
         "traits": [
             "Air Form. Yan-C-Bin can enter a hostile creature's space and stop there. He can move through a space as narrow as 1 inch wide without squeezing if air could pass through that space.",
             "Empowered Attacks. Yan-C-Bin's slam attacks are treated as magical for the purpose of bypassing resistance and immunity to nonmagical weapons.",
-            "Innate Spellcasting. Yan-C-Bin's innate spellcasting ability is Charisma (spell save DC 20, +12 to hit with spell attacks). He can innately cast the following spells, requiring no material components: ",
+            "Innate Spellcasting. Yan-C-Bin's innate spellcasting ability is Charisma (spell save DC 20, +12 to hit with spell attacks). He can innately cast the following spells, requiring no material components:",
             "• At will: gust of wind, invisibility, lightning bolt",
             "• 2/day each: chain lightning, cloudkill, haste",
             "Legendary Resistance (3/Day). If Yan-C-Bin fails a saving throw, he can choose to succeed instead.",
