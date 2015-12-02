@@ -2137,7 +2137,74 @@
       return;
     }
 
-    console.log('monsterName', monsterName);
+    characterName = monster.name;
+    setAttribute('character_name', monster.name);
+    if(monster.size) setAttribute('size', monster.size);
+    if(monster.type) setAttribute('npc_type', monster.type);
+    if(monster.alignment) setAttribute('alignment', monster.alignment);
+    if(monster.AC) parseArmorClass(monster.AC);
+    if(monster.HP) parseHp(monster.HP);
+    if(monster.speed) parseSpeed(monster.speed);
+    if(monster.abilities) parseAbilities(monster.abilities);
+    if(monster.savingThrows) parseSavingThrow(monster.savingThrows);
+    if(monster.skills) parseSkills(monster.skills);
+    if(monster.senses) parseSenses(monster.senses);
+    if(monster.languages) setAttribute('prolanguages', monster.languages);
+    if(monster.challenge) parseChallenge(monster.challenge);
+
+    if(monster.damageResistances) setAttribute('damage_resistance', monster.damageResistances);
+    if(monster.damageVulnerabilities) setAttribute('damage_vulnerability', monster.damageVulnerabilities);
+    if(monster.damageImmunities) setAttribute('damage_immunity', monster.damageImmunities);
+    if(monster.conditionImmunities) setAttribute('condition_immunity', monster.conditionImmunities);
+
+    setAttribute('npc_traits', monster.traits.join('\n'));
+    for(var i = 0; i < monster.actions; i++) {
+      shaped.importSpell(character, characterName, spells[i], options);
+    }
+
+    /*
+    parseActions(section.actions);
+    parseActions(section.legendary, 'legendary_');
+    parseActions(section.lair, 'lair_');
+    */
+
+    if(characterId) {
+      token.set('represents', characterId);
+      var tokenName = characterName;
+      if(shaped.settings.useAaronsNumberedScript && characterName.indexOf('%%NUMBERED%%') !== 1) {
+        tokenName += ' %%NUMBERED%%';
+      }
+      token.set('name', tokenName);
+
+      if(shaped.settings.showName) {
+        token.set('showname', true);
+      }
+      if(shaped.settings.showNameToPlayers) {
+        token.set('showplayers_name', true);
+      }
+
+      setUserDefinedScriptSettings();
+
+      setBarValueAfterConvert(token);
+
+      if(shaped.settings.bar[0].show) {
+        token.set('showplayers_bar1', 'true');
+      }
+      if(shaped.settings.bar[1].show) {
+        token.set('showplayers_bar2', 'true');
+      }
+      if(shaped.settings.bar[2].show) {
+        token.set('showplayers_bar3', 'true');
+      }
+
+      setTokenVision(token);
+    }
+    messageToChat(status);
+
+
+
+    log('monster');
+    log(monster);
   };
 
   shaped.monsterImport = function (token, args) {
