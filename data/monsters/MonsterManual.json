@@ -93,9 +93,7 @@
         "languages": "any one language (usually Common)",
         "challenge": "1/4",
         "traits": [
-            "Spellcasting. The acolyte is a 1st-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). The acolyte has following cleric spells prepared:",
-            "• Cantrips (at will): light, sacred flame, thaumaturgy",
-            "• 1st level (3 slots): bless, cure wounds, sanctuary"
+            "Spellcasting. The acolyte is a 1st-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). The acolyte has following cleric spells prepared:\nCantrips (at will): light, sacred flame, thaumaturgy\n1st level (3 slots): bless, cure wounds, sanctuary"
         ],
         "spells": "light, sacred flame, thaumaturgy, bless, cure wounds, sanctuary",
         "actions": [
@@ -871,14 +869,7 @@
         "traits": [
             "Inscrutable. The sphinx is immune to any effect that would sense its emotions or read its thoughts, as well as any divination spell that it refuses. Wisdom (Insight) checks made to ascertain the sphinx's intentions or sincerity have disadvantage.",
             "Magic Weapons. The sphinx's weapon attacks are magical.",
-            "Spellcasting. The sphinx is a 12th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 18, +10 to hit with spell attacks). It requires no material components to cast its spells. The sphinx has the following cleric spells prepared:",
-            "• Cantrips (at will): sacred flame, spare the dying, thaumaturgy",
-            "• 1st level (4 slots): command, detect evil and good, detect magic",
-            "• 2nd level (3 slots): lesser restoration, zone of truth",
-            "• 3rd level (3 slots): dispel magic, tongues",
-            "• 4th level (3 slots): banishment, freedom of movement",
-            "• 5th level (2 slots): flame strike, greater restoration",
-            "• 6th level (1 slot): heroes' feast"
+            "Spellcasting. The sphinx is a 12th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 18, +10 to hit with spell attacks). It requires no material components to cast its spells. The sphinx has the following cleric spells prepared:\nCantrips (at will): sacred flame, spare the dying, thaumaturgy\n1st level (4 slots): command, detect evil and good, detect magic\n2nd level (3 slots): lesser restoration, zone of truth\n3rd level (3 slots): dispel magic, tongues\n4th level (3 slots): banishment, freedom of movement\n5th level (2 slots): flame strike, greater restoration\n5th level (1 slot): heroes' feast"
         ],
         "spells": "sacred flame, spare the dying, thaumaturgy, command, detect evil and good, detect magic, lesser restoration, zone of truth, dispel magic, tongues, banishment, freedom of movement, flame strike, greater restoration, heroes' feast",
         "actions": [
@@ -988,16 +979,7 @@
             "At will: alter self, darkness, heat metal, invisibility (self only), magic missile",
             "Magic Resistance. The arcanaloth has advantage on saving throws against spells and other magical effects.",
             "Magic Weapons. The arcanaloth's weapon attacks are magical.",
-            "Spellcasting. The arcanaloth is a 16th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 17, +9 to hit with spell attacks). The arcanaloth has the following wizard spells prepared:",
-            "• Cantrips (at will): fire bolt, mage hand, minor illusion, prestidigitation",
-            "• 1st level (4 slots): detect magic, identify, shield, Tenser's floating disk",
-            "• 2nd level (3 slots): detect thoughts, mirror image, phantasmal force, suggestion",
-            "• 3rd level (3 slots): counterspell, fear, fireball",
-            "• 4th level (3 slots): banishment, dimension door",
-            "• 5th level (2 slots): contact other plane, hold monster",
-            "• 6th level (1 slot): chain lightning",
-            "• 7th level (1 slot): finger of death",
-            "• 8th level (1 slot): mind blank"
+            "Spellcasting. The arcanaloth is a 16th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 17, +9 to hit with spell attacks). The arcanaloth has the following wizard spells prepared:\nCantrips (at will): fire bolt, mage hand, minor illusion, prestidigitation\n1st level (4 slots): detect magic, identify, shield, Tenser's floating disk\n2nd level (3 slots): detect thoughts, mirror image, phantasmal force, suggestion\n3rd level (3 slots): counterspell, fear, fireball\n4th level (3 slots): banishment, dimension door\n5th level (2 slots): contact other plane, hold monster\n5th level (1 slot): chain lightning\n7th level (1 slot): finger of death\n8th level (1 slot): mind blank"
         ],
         "spells": "alter self, darkness, heat metal, invisibility, magic missile, fire bolt, mage hand, minor illusion, prestidigitation, detect magic, identify, shield, Tenser's floating disk, detect thoughts, mirror image, phantasmal force, suggestion, counterspell, fear, fireball, banishment, dimension door, contact other plane, hold monster, chain lightning, finger of death, mind blank",
         "actions": [
@@ -1025,17 +1007,7 @@
         "challenge": "12",
         "traits": [
             "Magic Resistance. The archmage has advantage on saving throws against spells and other magical effects.",
-            "Spellcasting. The archmage is an 18th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 17, +9 to hit with spell attacks). The archmage can cast disguise self and invisibility at will and has the following wizard spells prepared:",
-            "• Cantrips (at will): fire bolt, light, mage hand, prestidigitation, shocking grasp",
-            "• 1st level (4 slots): detect magic, identify, mage armor*, magic missile",
-            "• 2nd level (3 slots): detect thoughts, mirror image, misty step",
-            "• 3rd level (3 slots): counterspell,fly, lightning bolt",
-            "• 4th level (3 slots): banishment, fire shield, stoneskin*",
-            "• 5th level (3 slots): cone of cold, scrying, wall of force",
-            "• 6th level (1 slot): globe of invulnerability",
-            "• 7th level (1 slot): teleport",
-            "• 8th level (1 slot): mind blank*",
-            "• 9th level (1 slot): time stop",
+            "Spellcasting. The archmage is an 18th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 17, +9 to hit with spell attacks). The archmage can cast disguise self and invisibility at will and has the following wizard spells prepared:\nCantrips (at will): fire bolt, light, mage hand, prestidigitation, shocking grasp\n1st level (4 slots): detect magic, identify, mage armor*, magic missile\n2nd level (3 slots): detect thoughts, mirror image, misty step\n3rd level (3 slots): counterspell,fly, lightning bolt\n4th level (3 slots): banishment, fire shield, stoneskin*\n5th level (3 slots): cone of cold, scrying, wall of force\n5th level (1 slot): globe of invulnerability\n7th level (1 slot): teleport\n8th level (1 slot): mind blank*\n9th level (1 slot): time stop",
             "* The archmage casts these spells on itself before combat."
         ],
         "spells": "fire bolt, light, mage hand, prestidigitation, shocking grasp, detect magic, identify, mage armor, magic missile, detect thoughts, mirror image, misty step, counterspell, fly, lightning bolt, banishment, fire shield, stoneskin, cone of cold, scrying, wall of force, globe of invulnerability, teleport, mind blank, time stop",
@@ -1772,11 +1744,7 @@
         "languages": "Common plus one other language",
         "challenge": "4",
         "traits": [
-            "Spellcasting. The naga is a 5th-level spellcaster (spell save DC 12, +4 to hit with spell attacks) that needs only verbal components to cast its spells. Its spellcasting ability is Wisdom, and it has the following cleric spells prepared:",
-            "• Cantrips (at will): mending, sacred flame, thaumaturgy",
-            "• 1st level (4 slots): command, shield of faith",
-            "• 2nd level (3 slots): calm emotions, hold person",
-            "• 3rd level (2 slots): bestow curse"
+            "Spellcasting. The naga is a 5th-level spellcaster (spell save DC 12, +4 to hit with spell attacks) that needs only verbal components to cast its spells. Its spellcasting ability is Wisdom, and it has the following cleric spells prepared:\nCantrips (at will): mending, sacred flame, thaumaturgy\n1st level (4 slots): command, shield of faith\n2nd level (3 slots): calm emotions, hold person\n3rd level (2 slots): bestow curse"
         ],
         "spells": "mending, sacred flame, thaumaturgy, command, shield of faith, calm emotions, hold person, bestow curse",
         "actions": [
@@ -1798,11 +1766,7 @@
         "languages": "Common plus one other language",
         "challenge": "4",
         "traits": [
-            "Spellcasting. The naga is a 5th-level spellcaster (spell save DC 12, +4 to hit with spell attacks) that needs only verbal components to cast its spells. Its spellcasting ability is Intelligence, and it has the following wizard spells prepared:",
-            "• Cantrips (at will): mage hand, minor illusion, ray of frost",
-            "• 1st level (4 slots): charm person, sleep",
-            "• 2nd level (3 slots): detect thoughts, hold person",
-            "• 3rd level (2 slots): lightning bolt"
+            "Spellcasting. The naga is a 5th-level spellcaster (spell save DC 12, +4 to hit with spell attacks) that needs only verbal components to cast its spells. Its spellcasting ability is Intelligence, and it has the following wizard spells prepared:\nCantrips (at will): mage hand, minor illusion, ray of frost\n1st level (4 slots): charm person, sleep\n2nd level (3 slots): detect thoughts, hold person\n3rd level (2 slots): lightning bolt"
         ],
         "spells": "mage hand, minor illusion, ray of frost, charm person, sleep, detect thoughts, hold person, lightning bolt",
         "actions": [
@@ -2452,10 +2416,7 @@
         "challenge": "2",
         "traits": [
             "Dark Devotion. The fanatic has advantage on saving throws against being charmed or frightened.",
-            "Spellcasting. The fanatic is a 4th-level spellcaster. Its spell casting ability is Wisdom (spell save DC 11, +3 to hit with spell attacks). The fanatic has the following cleric spells prepared:",
-            "Cantrips (at will): light, sacred flame, thaumaturgy",
-            "• 1st level (4 slots): command, inflict wounds, shield of faith",
-            "• 2nd level (3 slots): hold person, spiritual weapon"
+            "Spellcasting. The fanatic is a 4th-level spellcaster. Its spell casting ability is Wisdom (spell save DC 11, +3 to hit with spell attacks). The fanatic has the following cleric spells prepared:\nCantrips (at will): light, sacred flame, thaumaturgy\n1st level (4 slots): command, inflict wounds, shield of faith\n2nd level (3 slots): hold person, spiritual weapon"
         ],
         "spells": "light, sacred flame, thaumaturgy, command, inflict wounds, shield of faith, hold person, spiritual weapon",
         "actions": [
@@ -2601,12 +2562,7 @@
         "traits": [
             "Magic Resistance. The death knight has advantage on saving throws against spells and other magical effects.",
             "Marshal Undead. Unless the death knight is incapacitated, it and undead creatures of its choice within 60 feet of it have advantage on saving throws against features that turn undead.",
-            "Spellcasting. The death knight is a 19th-level spell caster. Its spellcasting ability is Charisma (spell save DC 18, +10 to hit with spell attacks). It has the following paladin spells prepared:",
-            "• 1st level (4 slots): command, compelled duel, searing smite",
-            "• 2nd level (3 slots): hold person, magic weapon",
-            "• 3rd level (3 slots): dispel magic, elemental weapon",
-            "• 4th level (3 slots): banishment, staggering smite",
-            "• 5th level (2 slots): destructive wave (necrotic)"
+            "Spellcasting. The death knight is a 19th-level spell caster. Its spellcasting ability is Charisma (spell save DC 18, +10 to hit with spell attacks). It has the following paladin spells prepared:\n1st level (4 slots): command, compelled duel, searing smite\n2nd level (3 slots): hold person, magic weapon\n3rd level (3 slots): dispel magic, elemental weapon\n4th level (3 slots): banishment, staggering smite\n5th level (2 slots): destructive wave (necrotic)"
         ],
         "spells": "command, compelled duel, searing smite, hold person, magic weapon, dispel magic, elemental weapon, banishment, staggering smite, destructive wave",
         "actions": [
@@ -3006,12 +2962,7 @@
             "Spider Climb. The drider can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.",
             "Sunlight Sensitivity. While in sunlight, the drider has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.",
             "Web Walker. The drider ignores movement restrictions caused by webbing.",
-            "Spellcasting. The drider is a 7th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 14, +6 to hit with spell attacks). The drider has the following spells prepared from the cleric spell list:",
-            "• Cantrips (at will): poison spray, thaumaturgy",
-            "• 1st level (4 slots): bane, detect magic, sanctuary",
-            "• 2nd level (3 slots): hold person, silence",
-            "• 3rd level (3 slots): clairvoyance, dispel magic",
-            "• 4th level (2 slots): divination,freedom of movement"
+            "Spellcasting. The drider is a 7th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 14, +6 to hit with spell attacks). The drider has the following spells prepared from the cleric spell list:\nCantrips (at will): poison spray, thaumaturgy\n1st level (4 slots): bane, detect magic, sanctuary\n2nd level (3 slots): hold person, silence\n3rd level (3 slots): clairvoyance, dispel magic\n4th level (2 slots): divination,freedom of movement"
         ],
         "spells": "dancing lights, darkness, faerie fire, poison spray, thaumaturgy, bane, detect magic, sanctuary, hold person, silence, clairvoyance, dispel magic, divination, freedom of movement"
     },
@@ -3087,13 +3038,7 @@
             "Innate Spellcasting. The drow's spellcasting ability is Charisma (spell save DC 12). It can innately cast the following spells, requiring no material components:",
             "At will: dancing lights",
             "1/day each: darkness, faerie fire, levitate (self only)",
-            "Spellcasting. The drow is a 10th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks). The drow has the following wizard spells prepared:",
-            "• Cantrips (at will): mage hand, minor illusion, poison spray, ray of frost",
-            "• 1st level (4 slots): mage armor, magic missile, shield, witch bolt",
-            "• 2nd level (3 slots): alter self, misty step, web",
-            "• 3rd level (3 slots): fly, lightning bolt",
-            "• 4th level (3 slots): Evard's black tentacles, greater invisibility",
-            "• 5th level (2 slots): cloudkill",
+            "Spellcasting. The drow is a 10th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks). The drow has the following wizard spells prepared:\nCantrips (at will): mage hand, minor illusion, poison spray, ray of frost\n1st level (4 slots): mage armor, magic missile, shield, witch bolt\n2nd level (3 slots): alter self, misty step, web\n3rd level (3 slots): fly, lightning bolt\n4th level (3 slots): Evard's black tentacles, greater invisibility\n5th level (2 slots): cloudkill",
             "Sunlight Sensitivity. While in sunlight, the drow has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight."
         ],
         "spells": "dancing lights, darkness, faerie fire, levitate, mage hand, minor illusion, poison spray, ray of frost, mage armor, magic missile, shield, witch bolt, alter self, misty step, web, fly, lightning bolt, Evard's black tentacles, greater invisibility, cloudkill",
@@ -3121,13 +3066,7 @@
             "Innate Spellcasting. The drow's spellcasting ability is Charisma (spell save DC 15. She can innately cast the following spells, requiring no material components:",
             "At will: dancing lights",
             "1/day each: darkness, faerie fire, levitate (self only)",
-            "Spellcasting. The drow is a 10th-level spellcaster. Her spellcasting ability is Wisdom (save DC 14, +6 to hit with spell attacks). The drow has the following cleric spells prepared:",
-            "• Cantrips (at will): guidance, poison spray, resistance, spare the dying, thaumaturgy",
-            "• 1st level (4 slots): animal friendship, cure wounds, detect poison and disease, ray of sickness",
-            "• 2nd level (3 slots): lesser restoration, protection from poison, web",
-            "• 3rd level (3 slots): conjure animals (2 giant spiders), dispel magic",
-            "• 4th level (3 slots): divination, freedom of movement",
-            "• 5th level (2 slots): insect plague, mass cure wounds",
+            "Spellcasting. The drow is a 10th-level spellcaster. Her spellcasting ability is Wisdom (save DC 14, +6 to hit with spell attacks). The drow has the following cleric spells prepared:\nCantrips (at will): guidance, poison spray, resistance, spare the dying, thaumaturgy\n1st level (4 slots): animal friendship, cure wounds, detect poison and disease, ray of sickness\n2nd level (3 slots): lesser restoration, protection from poison, web\n3rd level (3 slots): conjure animals (2 giant spiders), dispel magic\n4th level (3 slots): divination, freedom of movement\n5th level (2 slots): insect plague, mass cure wounds",
             "Sunlight Sensitivity. While in sunlight, the drow has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight."
         ],
         "spells": "dancing lights, darkness, faerie fire, levitate, guidance, poison spray, resistance, spare the dying, thaumaturgy, animal friendship, cure wounds, detect poison and disease, ray of sickness, lesser restoration, protection from poison, web, conjure animals, dispel magic, divination, freedom of movement, insect plague, mass cure wounds",
@@ -3151,10 +3090,7 @@
         "languages": "Druidic plus any two languages",
         "challenge": "2",
         "traits": [
-            "Spellcasting. The druid is a 4th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). It has the following druid spells prepared:",
-            "• Cantrips (at will): druidcraft, produce flame, shillelagh",
-            "• 1st level (4 slots): entangle, longstrider, speak with animals, thunderwave",
-            "• 2nd level (3 slots): animal messenger, barkskin"
+            "Spellcasting. The druid is a 4th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). It has the following druid spells prepared:\nCantrips (at will): druidcraft, produce flame, shillelagh\n1st level (4 slots): entangle, longstrider, speak with animals, thunderwave\n2nd level (3 slots): animal messenger, barkskin"
         ],
         "spells": "druidcraft, produce flame, shillelagh, entangle, longstrider, speak with animals, thunderwave, animal messenger, barkskin",
         "actions": [
@@ -3837,11 +3773,7 @@
             "Illumination. The flameskull sheds either dim light in a 15- foot radius, or bright light in a 15-foot radius and dim light for an additional 15 ft.. It can switch between the options as an action.",
             "Magic Resistance. The flameskull has advantage on saving throws against spells and other magical effects.",
             "Rejuvenation. If the flameskull is destroyed, it regains all its hit points in 1 hour unless holy water is sprinkled on its remains or a dispel magic or remove curse spell is cast on them.",
-            "Spellcasting. The flameskull is a 5th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 13, +5 to hit with spell attacks). It requires no somatic or material components to cast its spells. The flameskull has the following wizard spells prepared:",
-            "• Cantrips (at will): mage hand",
-            "• 1st level (3 slots): magic missile, shield",
-            "• 2nd level (2 slots): blur, flaming sphere",
-            "• 3rd level (1 slot): fireball"
+            "Spellcasting. The flameskull is a 5th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 13, +5 to hit with spell attacks). It requires no somatic or material components to cast its spells. The flameskull has the following wizard spells prepared:\nCantrips (at will): mage hand\n1st level (3 slots): magic missile, shield\n2nd level (2 slots): blur, flaming sphere\n3rd level (1 slot): fireball"
         ],
         "spells": "mage hand, magic missile, shield, blur, flaming sphere, fireball",
         "actions": [
@@ -5243,13 +5175,7 @@
             "Mimicry. The hag can mimic animal sounds and humanoid voices. A creature that hears the sounds can tell they are imitations with a successful DC 14 Wisdom (Insight) check.",
             "Hag Coven. When hags must work together, they form covens, in spite of their selfish natures. A coven is made up of hags of any type, all of whom are equals within the group. However, each of the hags continues to desire more personal power.",
             "A coven consists of three hags so that any arguments between two hags can be settled by the third. If more than three hags ever come together, as might happen if two covens come into conflict, the result is usually chaos.",
-            "Shared Spellcasting (Coven Only). While all three members of a hag coven are within 30 feet of one another, they can each cast the following spells from the wizard's spell list but must share the spell slots among themselves:",
-            "• 1st level (4 slots): identify, ray of sickness",
-            "• 2nd level (3 slots): hold person, locate object",
-            "• 3rd level (3 slots): bestow curse, counterspell, lightning bolt",
-            "• 4th level (3 slots): phantasmal killer, polymorph",
-            "• 5th level (2 slots): contact other plane, scrying",
-            "• 6th level (1 slot): eye bite",
+            "Shared Spellcasting (Coven Only). While all three members of a hag coven are within 30 feet of one another, they can each cast the following spells from the wizard's spell list but must share the spell slots among themselves:\n1st level (4 slots): identify, ray of sickness\n2nd level (3 slots): hold person, locate object\n3rd level (3 slots): bestow curse, counterspell, lightning bolt\n4th level (3 slots): phantasmal killer, polymorph\n5th level (2 slots): contact other plane, scrying\n5th level (1 slot): eye bite",
             "For casting these spells, each hag is a 12th-level spellcaster that uses Intelligence as her spellcasting ability. The spell save DC is 12+the hag's Intelligence modifier, and the spell attack bonus is 4+the hag's Intelligence modifier.",
             "Hag Eye (Coven Only). A hag coven can craft a magic item called a hag eye, which is made from a real eye coated in varnish and often fitted to a pendant or other wearable item. The hag eye is usually entrusted to a minion for safekeeping and transport. A hag in the coven can take an action to see what the hag eye sees if the hag eye is on the same plane of existence. A hag eye has AC 10, 1 hit point, and darkvision with a radius of 60 feet. If it is destroyed, each coven member takes 3d10 psychic damage and is blinded for 24 hours.",
             "A hag coven can have only one hag eye at a time, and creating a new one requires all three members of the coven to perform a ritual. The ritual takes 1 hour, and the hags can't perform it while blinded. During the ritual, if the hags take any action other than performing the ritual, they must start over."
@@ -5441,14 +5367,7 @@
         "challenge": "10",
         "traits": [
             "Rejuvenation. If it dies, the naga returns to life in 1d6 days and regains all its hit points. Only a wish spell can prevent this trait from functioning.",
-            "Spellcasting. The naga is an 11th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 16, +8 to hit with spell attacks), and it needs only verbal components to cast its spells. It has the following cleric spells prepared:",
-            "• Cantrips (at will): mending, sacred flame, thaumaturgy",
-            "• 1st level (4 slots): command, cure wounds, shield of faith",
-            "• 2nd level (3 slots): calm emotions, hold person",
-            "• 3rd level (3 slots): bestow curse, clairvoyance",
-            "• 4th level (3 slots): banishment, freedom of movement",
-            "• 5th level (2 slots): flame strike, geas",
-            "• 6th level (1 slot): true seeing"
+            "Spellcasting. The naga is an 11th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 16, +8 to hit with spell attacks), and it needs only verbal components to cast its spells. It has the following cleric spells prepared:\nCantrips (at will): mending, sacred flame, thaumaturgy\n1st level (4 slots): command, cure wounds, shield of faith\n2nd level (3 slots): calm emotions, hold person\n3rd level (3 slots): bestow curse, clairvoyance\n4th level (3 slots): banishment, freedom of movement\n5th level (2 slots): flame strike, geas\n5th level (1 slot): true seeing"
         ],
         "spells": "mending, sacred flame, thaumaturgy, command, cure wounds, shield of faith, calm emotions, hold person, bestow curse, clairvoyance, banishment, freedom of movement, flame strike, geas, true seeing",
         "actions": [
@@ -5475,13 +5394,7 @@
         "traits": [
             "Inscrutable. The sphinx is immune to any effect that would sense its emotions or read its thoughts, as well as any divination spell that it refuses. Wisdom (Insight) checks made to ascertain the sphinx's intentions or sincerity have disadvantage.",
             "Magic Weapons. The sphinx's weapon attacks are magical.",
-            "Spellcasting. The sphinx is a 9th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 17, +9 to hit with spell attacks). It requires no material components to cast its spells. The sphinx has the following wizard spells prepared:",
-            "• Cantrips (at will): mage hand, minor illusion, prestidigitation",
-            "• 1st level (4 slots): detect magic, identify, shield",
-            "• 2nd level (3 slots): darkness, locate object, suggestion",
-            "• 3rd level (3 slots): dispel magic, remove curse, tongues",
-            "• 4th level (3 slots): banishment, greater invisibility",
-            "• 5th level (1 slot): legend lore"
+            "Spellcasting. The sphinx is a 9th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 17, +9 to hit with spell attacks). It requires no material components to cast its spells. The sphinx has the following wizard spells prepared:\nCantrips (at will): mage hand, minor illusion, prestidigitation\n1st level (4 slots): detect magic, identify, shield\n2nd level (3 slots): darkness, locate object, suggestion\n3rd level (3 slots): dispel magic, remove curse, tongues\n4th level (3 slots): banishment, greater invisibility\n5th level (1 slot): legend lore"
         ],
         "spells": "mage hand, minor illusion, prestidigitation, detect magic, identify, shield, darkness, locate object, suggestion, dispel magic, remove curse, tongues, banishment, greater invisibility, legend lore",
         "actions": [
@@ -6289,13 +6202,7 @@
             "Otherwordly Perception. The kuo-toa can sense the presence of any creature within 30 feet of it that is invisible or on the Ethereal Plane. It can pinpoint such a creature that is moving.",
             "Slippery. The kuo-toa has advantage on ability checks and saving throws made to escape a grapple.",
             "Sunlight Sensitivity. While in sunlight, the kuo-toa has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.",
-            "Spellcasting. The kuo-toa is a 10th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 14, +6 to hit with spell attacks). The kuo-toa has the following cleric spells prepared:",
-            "• Cantrips (at will): guidance, sacred flame, thaumaturgy",
-            "• 1st level (4 slots): detect magic, sanctuary, shield of faith",
-            "• 2nd level (3 slots): hold person, spiritual weapon",
-            "• 3rd level (3 slots): spirit guardians, tongues",
-            "• 4th level (3 slots): control water, divination",
-            "• 5th level (2 slots): mass cure wounds, scrying"
+            "Spellcasting. The kuo-toa is a 10th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 14, +6 to hit with spell attacks). The kuo-toa has the following cleric spells prepared:\nCantrips (at will): guidance, sacred flame, thaumaturgy\n1st level (4 slots): detect magic, sanctuary, shield of faith\n2nd level (3 slots): hold person, spiritual weapon\n3rd level (3 slots): spirit guardians, tongues\n4th level (3 slots): control water, divination\n5th level (2 slots): mass cure wounds, scrying"
         ],
         "spells": "guidance, sacred flame, thaumaturgy, detect magic, sanctuary, shield of faith, hold person, spiritual weapon, spirit guardians, tongues, control water, divination, mass cure wounds, scrying",
         "actions": [
@@ -6348,9 +6255,7 @@
             "Otherwordly Perception. The kuo-toa can sense the presence of any creature within 30 feet of it that is invisible or on the Ethereal Plane. It can pinpoint such a creature that is moving.",
             "Slippery. The kuo-toa has advantage on ability checks and saving throws made to escape a grapple.",
             "Sunlight Sensitivity. While in sunlight, the kuo-toa has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.",
-            "Spellcasting. The kuo-toa is a 2nd-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). The kuo-toa has the following cleric spells prepared:",
-            "• Cantrips (at will): sacred flame, thaumaturgy",
-            "• 1st level (3 slots): bane, shield of faith"
+            "Spellcasting. The kuo-toa is a 2nd-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). The kuo-toa has the following cleric spells prepared:\nCantrips (at will): sacred flame, thaumaturgy\n1st level (3 slots): bane, shield of faith"
         ],
         "spells": "sacred flame, thaumaturgy, bane, shield of faith",
         "actions": [
@@ -6422,17 +6327,7 @@
         "traits": [
             "Legendary Resistance (3/Day). If the lich fails a saving throw, it can choose to succeed instead.",
             "Rejuvenation. If it has a phylactery, a destroyed lich gains a new body in 1d10 days, regaining all its hit points and becoming active again. The new body appears within 5 feet of the phylactery.",
-            "Spellcasting. The lich is an 18th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 20, +12 to hit with spell attacks). The lich has the following wizard spells prepared:",
-            "• Cantrips (at will): mage hand, prestidigitation, ray of frost",
-            "• 1st level (4 slots): detect magic, magic missile, shield, thunderwave",
-            "• 2nd level (3 slots): detect thoughts, invisibility, Melf's acid arrow, mirror image",
-            "• 3rd level (3 slots): animate dead, counterspell, dispel magic, fireball",
-            "• 4th level (3 slots): blight, dimension door",
-            "• 5th level (3 slots): cloudkill, scrying",
-            "• 6th level (1 slot): disintegrate, globe of invulnerability",
-            "• 7th level (1 slot): finger of death, plane shift",
-            "• 8th level (1 slot): dominate monster, power word stun",
-            "• 9th level (1 slot): power word kill",
+            "Spellcasting. The lich is an 18th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 20, +12 to hit with spell attacks). The lich has the following wizard spells prepared:\nCantrips (at will): mage hand, prestidigitation, ray of frost\n1st level (4 slots): detect magic, magic missile, shield, thunderwave\n2nd level (3 slots): detect thoughts, invisibility, Melf's acid arrow, mirror image\n3rd level (3 slots): animate dead, counterspell, dispel magic, fireball\n4th level (3 slots): blight, dimension door\n5th level (3 slots): cloudkill, scrying\n5th level (1 slot): disintegrate, globe of invulnerability\n7th level (1 slot): finger of death, plane shift\n8th level (1 slot): dominate monster, power word stun\n9th level (1 slot): power word kill",
             "Turn Resistance. The lich has advantage on saving throws against any effect that turns undead."
         ],
         "spells": "mage hand, prestidigitation, ray of frost, detect magic, magic missile, shield, thunderwave, detect thoughts, invisibility, Melf's acid arrow, mirror image, animate dead, counterspell, dispel magic, fireball, blight, dimension door, cloudkill, scrying, disintegrate, globe of invulnerability, finger of death, plane shift, dominate monster, power word stun, power word kill",
@@ -6548,11 +6443,10 @@
         "challenge": "2",
         "traits": [
             "Hold Breath. The lizardfolk can hold its breath for 15 minutes.",
-            "Spellcasting (Lizardfolk Form Only). The lizardfolk is a 5th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). The lizardfolk has the following druid spells prepared:",
-            "• Cantrips (at will): druidcraft, produce flame, thorn whip",
-            "• 1st Level (4 slots): entangle, fog cloud",
-            "• 2nd Level (3 slots): heat metal, spike growth",
-            "• 3rd Level (2 slots): conjure animals (reptiles only), plant growth"
+            "Spellcasting (Lizardfolk Form Only). The lizardfolk is a 5th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). The lizardfolk has the following druid spells prepared:\nCantrips (at will): druidcraft, produce flame, thorn whip",
+            "1st Level (4 slots): entangle, fog cloud",
+            "2nd Level (3 slots): heat metal, spike growth",
+            "3rd Level (2 slots): conjure animals (reptiles only), plant growth"
         ],
         "spells": "druidcraft, produce flame, thorn whip, entangle, fog cloud, heat metal, spike growth, conjure animals, plant growth",
         "actions": [
@@ -6578,13 +6472,7 @@
         "languages": "any four languages",
         "challenge": "6",
         "traits": [
-            "Spellcasting. The mage is a 9th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks). The mage has the following wizard spells prepared:",
-            "• Cantrips (at will): fire bolt, light, mage hand, prestidigitation",
-            "• 1st level (4 slots): detect magic, mage armor, magic missile, shield",
-            "• 2nd level (3 slots): misty step, suggestion",
-            "• 3rd level (3 slots): counterspell, fireball, fly",
-            "• 4th level (3 slots): greater invisibility, ice storm",
-            "• 5th level (1 slot): cone of cold"
+            "Spellcasting. The mage is a 9th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks). The mage has the following wizard spells prepared:\nCantrips (at will): fire bolt, light, mage hand, prestidigitation\n1st level (4 slots): detect magic, mage armor, magic missile, shield\n2nd level (3 slots): misty step, suggestion\n3rd level (3 slots): counterspell, fireball, fly\n4th level (3 slots): greater invisibility, ice storm\n5th level (1 slot): cone of cold"
         ],
         "spells": "fire bolt, light, mage hand, prestidigitation, detect magic, mage armor, magic missile, shield, misty step, suggestion, counterspell, fireball, fly, greater invisibility, ice storm, cone of cold",
         "actions": [
@@ -6957,13 +6845,7 @@
             "Innate Spellcasting (Psionics). The mind flayer's innate spellcasting ability is Intelligence (spell save DC 15). It can innately cast the following spells, requiring no components:",
             "At will: detect thoughts, levitate",
             "1/day each: dominate monster, plane shift (self only)",
-            "Spellcasting. The mind flayer is a 10th-level spellcaster. Its spellcasting ability is Intelligence (save DC 15, +7 to hit with spell attacks). The mind flayer has the following wizard spells prepared:",
-            "• Cantrips (at will): blade ward, dancing lights, mage hand, shocking grasp",
-            "• 1st level (4 slots): detect magic, disguise self, shield, sleep",
-            "• 2nd level (3 slots): blur, invisibility, ray of enfeeblement",
-            "• 3rd level (3 slots): clairvoyance, lightning bolt, sending",
-            "• 4th level (3 slots): confusion, hallucinatory terrain",
-            "• 5th level (2 slots): telekinesis, wall of force"
+            "Spellcasting. The mind flayer is a 10th-level spellcaster. Its spellcasting ability is Intelligence (save DC 15, +7 to hit with spell attacks). The mind flayer has the following wizard spells prepared:\nCantrips (at will): blade ward, dancing lights, mage hand, shocking grasp\n1st level (4 slots): detect magic, disguise self, shield, sleep\n2nd level (3 slots): blur, invisibility, ray of enfeeblement\n3rd level (3 slots): clairvoyance, lightning bolt, sending\n4th level (3 slots): confusion, hallucinatory terrain\n5th level (2 slots): telekinesis, wall of force"
         ],
         "spells": "detect thoughts, levitate, dominate monster, plane shift, blade ward, dancing lights, mage hand, shocking grasp, detect magic, disguise self, shield, sleep, blur, invisibility, ray of enfeeblement, clairvoyance, lightning bolt, sending, confusion, hallucinatory terrain, telekinesis, wall of force",
         "actions": [
@@ -7125,14 +7007,7 @@
         "traits": [
             "Magic Resistance. The mummy lord has advantage on saving throws against spells and other magical effects.",
             "Rejuvenation. A destroyed mummy lord gains a new body in 24 hours if its heart is intact, regaining all its hit points and becoming active again. The new body appears within 5 feet of the mummy lord's heart.",
-            "Spellcasting. The mummy lord is a 10th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 17, +9 to hit with spell attacks). The mummy lord has the following cleric spells prepared:",
-            "• Cantrips (at will): sacred flame, thaumaturgy",
-            "• 1st level (4 slots): command, guiding bolt, shield of faith",
-            "• 2nd level (3 slots): hold person, silence, spiritual weapon",
-            "• 3rd level (3 slots): animate dead, dispel magic",
-            "• 4th level (3 slots): divination, guardian of faith",
-            "• 5th level (2 slots): contagion, insect plague",
-            "• 6th level (1 slot): harm"
+            "Spellcasting. The mummy lord is a 10th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 17, +9 to hit with spell attacks). The mummy lord has the following cleric spells prepared:\nCantrips (at will): sacred flame, thaumaturgy\n1st level (4 slots): command, guiding bolt, shield of faith\n2nd level (3 slots): hold person, silence, spiritual weapon\n3rd level (3 slots): animate dead, dispel magic\n4th level (3 slots): divination, guardian of faith\n5th level (2 slots): contagion, insect plague\n5th level (1 slot): harm"
         ],
         "spells": "sacred flame, thaumaturgy, command, guiding bolt, shield of faith, hold person, silence, spiritual weapon, animate dead, dispel magic, divination, guardian of faith, contagion, insect plague, harm",
         "actions": [
@@ -7285,13 +7160,7 @@
             "Soul Bag: When an evil humanoid dies as a result of a night hag's Nightmare Haunting, the hag catches the soul in this black sack made of stitched flesh. A soul bag can hold only one evil soul at a time, and only the night hag who crafted the bag can catch a soul with it. Crafting a soul bag takes 7 days and a humanoid sacrifice (whose flesh is used to make the bag).",
             "Hag Coven. When hags must work together, they form covens, in spite of their selfish natures. A coven is made up of hags of any type, all of whom are equals within the group. However, each of the hags continues to desire more personal power.",
             "A coven consists of three hags so that any arguments between two hags can be settled by the third. If more than three hags ever come together, as might happen if two covens come into conflict, the result is usually chaos.",
-            "Shared Spellcasting (Coven Only). While all three members of a hag coven are within 30 feet of one another, they can each cast the following spells from the wizard's spell list but must share the spell slots among themselves:",
-            "• 1st level (4 slots): identify, ray of sickness",
-            "• 2nd level (3 slots): hold person, locate object",
-            "• 3rd level (3 slots): bestow curse, counterspell, lightning bolt",
-            "• 4th level (3 slots): phantasmal killer, polymorph",
-            "• 5th level (2 slots): contact other plane, scrying",
-            "• 6th level (1 slot): eye bite",
+            "Shared Spellcasting (Coven Only). While all three members of a hag coven are within 30 feet of one another, they can each cast the following spells from the wizard's spell list but must share the spell slots among themselves:\n1st level (4 slots): identify, ray of sickness\n2nd level (3 slots): hold person, locate object\n3rd level (3 slots): bestow curse, counterspell, lightning bolt\n4th level (3 slots): phantasmal killer, polymorph\n5th level (2 slots): contact other plane, scrying\n5th level (1 slot): eye bite",
             "For casting these spells, each hag is a 12th-level spellcaster that uses Intelligence as her spellcasting ability. The spell save DC is 12+the hag's Intelligence modifier, and the spell attack bonus is 4+the hag's Intelligence modifier.",
             "Hag Eye (Coven Only). A hag coven can craft a magic item called a hag eye, which is made from a real eye coated in varnish and often fitted to a pendant or other wearable item. The hag eye is usually entrusted to a minion for safekeeping and transport. A hag in the coven can take an action to see what the hag eye sees if the hag eye is on the same plane of existence. A hag eye has AC 10, 1 hit point, and darkvision with a radius of 60 feet. If it is destroyed, each coven member takes 3d10 psychic damage and is blinded for 24 hours.",
             "A hag coven can have only one hag eye at a time, and creating a new one requires all three members of the coven to perform a ritual. The ritual takes 1 hour, and the hags can't perform it while blinded. During the ritual, if the hags take any action other than performing the ritual, they must start over."
@@ -7547,10 +7416,7 @@
         "traits": [
             "Aggressive. As a bonus action, the orc can move up to its speed toward a hostile creature that it can see.",
             "Gruumsh's Fury. The orc deals an extra 4 (1d8) damage when it hits with a weapon attack (included in the attacks).",
-            "Spellcasting. The orc is a 3rd-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 11, +3 to hit with spell attacks). The orc has the following cleric spells prepared:",
-            "• Cantrips (at will): guidance, resistance, thaumaturgy",
-            "• 1st level (4 slots): bless, command",
-            "• 2nd level (2 slots): augury, spiritual weapon (spear)"
+            "Spellcasting. The orc is a 3rd-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 11, +3 to hit with spell attacks). The orc has the following cleric spells prepared:\nCantrips (at will): guidance, resistance, thaumaturgy\n1st level (4 slots): bless, command\n2nd level (2 slots): augury, spiritual weapon (spear)"
         ],
         "spells": "guidance, resistance, thaumaturgy, bless, command, augury, spiritual weapon",
         "actions": [
@@ -7990,11 +7856,7 @@
         "challenge": "2",
         "traits": [
             "Divine Eminence. As a bonus action, the priest can expend a spell slot to cause its melee weapon attacks to magically deal an extra 10 (3d6) radiant damage to a target on a hit. This benefit lasts until the end of the turn. If the priest expends a spell slot of 2nd level or higher, the extra damage increases by 1d6 for each level above 1st.",
-            "Spellcasting. The priest is a 5th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 13, +5 to hit with spell attacks). The priest has the following cleric spells prepared:",
-            "• Cantrips (at will): light, sacred flame, thaumaturgy",
-            "• 1st level (4 slots): cure wounds, guiding bolt, sanctuary",
-            "• 2nd level (3 slots): lesser restoration, spiritual weapon",
-            "• 3rd level (2 slots): dispel magic, spirit guardians"
+            "Spellcasting. The priest is a 5th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 13, +5 to hit with spell attacks). The priest has the following cleric spells prepared:\nCantrips (at will): light, sacred flame, thaumaturgy\n1st level (4 slots): cure wounds, guiding bolt, sanctuary\n2nd level (3 slots): lesser restoration, spiritual weapon\n3rd level (2 slots): dispel magic, spirit guardians"
         ],
         "spells": "light, sacred flame, thaumaturgy, cure wounds, guiding bolt, sanctuary, lesser restoration, spiritual weapon, dispel magic, spirit guardians",
         "actions": [
@@ -8596,11 +8458,7 @@
             "Blood Frenzy. The sahuagin has advantage on melee attack rolls against any creature that doesn't have all its hit points.",
             "Limited Amphibiousness. The sahuagin can breathe air and water, but it needs to be submerged at least once every 4 hours to avoid suffocating.",
             "Shark Telepathy. The sahuagin can magically command any shark within 120 feet of it, using a limited telepathy.",
-            "Spellcasting. The sahuagin is a 6th-level spellcaster. Her spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). She has the following cleric spells prepared:",
-            "• Cantrips (at will): guidance, thaumaturgy",
-            "• 1st level (4 slots): bless, detect magic, guiding bolt",
-            "• 2nd level (3 slots): hold person, spiritual weapon (trident)",
-            "• 3rd level (3 slots): mass healing word, tongues"
+            "Spellcasting. The sahuagin is a 6th-level spellcaster. Her spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). She has the following cleric spells prepared:\nCantrips (at will): guidance, thaumaturgy\n1st level (4 slots): bless, detect magic, guiding bolt\n2nd level (3 slots): hold person, spiritual weapon (trident)\n3rd level (3 slots): mass healing word, tongues"
         ],
         "spells": "guidance, thaumaturgy, bless, detect magic, guiding bolt, hold person, spiritual weapon, mass healing word, tongues",
         "actions": [
@@ -8736,13 +8594,7 @@
             "Unless the target is surprised or the revelation of the hag's true form is sudden, the target can avert its eyes and avoid making the initial saving throw. Until the start of its next turn, a creature that averts its eyes has disadvantage on attack rolls against the hag.",
             "Hag Coven. When hags must work together, they form covens, in spite of their selfish natures. A coven is made up of hags of any type, all of whom are equals within the group. However, each of the hags continues to desire more personal power.",
             "A coven consists of three hags so that any arguments between two hags can be settled by the third. If more than three hags ever come together, as might happen if two covens come into conflict, the result is usually chaos.",
-            "Shared Spellcasting (Coven Only). While all three members of a hag coven are within 30 feet of one another, they can each cast the following spells from the wizard's spell list but must share the spell slots among themselves:",
-            "• 1st level (4 slots): identify, ray of sickness",
-            "• 2nd level (3 slots): hold person, locate object",
-            "• 3rd level (3 slots): bestow curse, counterspell, lightning bolt",
-            "• 4th level (3 slots): phantasmal killer, polymorph",
-            "• 5th level (2 slots): contact other plane, scrying",
-            "• 6th level (1 slot): eye bite",
+            "Shared Spellcasting (Coven Only). While all three members of a hag coven are within 30 feet of one another, they can each cast the following spells from the wizard's spell list but must share the spell slots among themselves:\n1st level (4 slots): identify, ray of sickness\n2nd level (3 slots): hold person, locate object\n3rd level (3 slots): bestow curse, counterspell, lightning bolt\n4th level (3 slots): phantasmal killer, polymorph\n5th level (2 slots): contact other plane, scrying\n5th level (1 slot): eye bite",
             "For casting these spells, each hag is a 12th-level spellcaster that uses Intelligence as her spellcasting ability. The spell save DC is 12+the hag's Intelligence modifier, and the spell attack bonus is 4+the hag's Intelligence modifier.",
             "Hag Eye (Coven Only). A hag coven can craft a magic item called a hag eye, which is made from a real eye coated in varnish and often fitted to a pendant or other wearable item. The hag eye is usually entrusted to a minion for safekeeping and transport. A hag in the coven can take an action to see what the hag eye sees if the hag eye is on the same plane of existence. A hag eye has AC 10, 1 hit point, and darkvision with a radius of 60 feet. If it is destroyed, each coven member takes 3d10 psychic damage and is blinded for 24 hours.",
             "A hag coven can have only one hag eye at a time, and creating a new one requires all three members of the coven to perform a ritual. The ritual takes 1 hour, and the hags can't perform it while blinded. During the ritual, if the hags take any action other than performing the ritual, they must start over."
@@ -9122,13 +8974,7 @@
         "challenge": "8",
         "traits": [
             "Rejuvenation. If it dies, the naga returns to life in 1d6 days and regains all its hit points. Only a wish spell can prevent this trait from functioning.",
-            "Spellcasting. The naga is a 10th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks), and it needs only verbal components to cast its spells. It has the following wizard spells prepared:",
-            "• Cantrips (at will): mage hand, minor illusion, ray of frost",
-            "• 1st level (4 slots): charm person, detect magic, sleep",
-            "• 2nd level (3 slots): detect thoughts, hold person",
-            "• 3rd level (3 slots): lightning bolt, water breathing",
-            "• 4th level (3 slots): blight, dimension door",
-            "• 5th level (2 slots): dominate person"
+            "Spellcasting. The naga is a 10th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks), and it needs only verbal components to cast its spells. It has the following wizard spells prepared:\nCantrips (at will): mage hand, minor illusion, ray of frost\n1st level (4 slots): charm person, detect magic, sleep\n2nd level (3 slots): detect thoughts, hold person\n3rd level (3 slots): lightning bolt, water breathing\n4th level (3 slots): blight, dimension door\n5th level (2 slots): dominate person"
         ],
         "spells": "mage hand, minor illusion, ray of frost, charm person, detect magic, sleep, detect thoughts, hold person, lightning bolt, water breathing, blight, dimension door, dominate person",
         "actions": [
@@ -10048,13 +9894,7 @@
             "Harmed by Running Water. The vampire takes 20 acid damage if it ends its turn in running water.",
             "Stake to the Heart. If a piercing weapon made of wood is driven into the vampire's heart while the vampire is incapacitated in its resting place, the vampire is paralyzed until the stake is removed.",
             "Sunlight Hypersensitivity. The vampire takes 20 radiant damage when it starts its turn in sunlight. While in sunlight, it has disadvantage on attack rolls and ability checks.",
-            "Spellcasting. The vampire is a 9th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 15, +7 to hit with spell attacks). The vampire has the following wizard spells prepared:",
-            "• Cantrips (at will): mage hand, prestidigitation, ray of frost",
-            "• 1st level (4 slots): comprehend languages, fog cloud, sleep",
-            "• 2nd level (3 slots): detect thoughts, gust of wind, mirror image",
-            "• 3rd level (3 slots): animate dead, bestow curse, nondetection",
-            "• 4th level (3 slots): blight, greater invisibility",
-            "• 5th level (1 slot): dominate person"
+            "Spellcasting. The vampire is a 9th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 15, +7 to hit with spell attacks). The vampire has the following wizard spells prepared:\nCantrips (at will): mage hand, prestidigitation, ray of frost\n1st level (4 slots): comprehend languages, fog cloud, sleep\n2nd level (3 slots): detect thoughts, gust of wind, mirror image\n3rd level (3 slots): animate dead, bestow curse, nondetection\n4th level (3 slots): blight, greater invisibility\n5th level (1 slot): dominate person"
         ],
         "spells": "mage hand, prestidigitation, ray of frost, comprehend languages, fog cloud, sleep, detect thoughts, gust of wind, mirror image, animate dead, bestow curse, nondetection, blight, greater invisibility, dominate person",
         "actions": [

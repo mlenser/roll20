@@ -39,11 +39,7 @@
             "Insanity. The derro has advantage on saving throws against being charmed or frightened.",
             "Magic Resistance. The derro has advantage on saving throws against spells and other magical effects.",
             "Sunlight Sensitivity. While in sunlight, the derro has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.",
-            "Spellcasting. The derro is a 5th-level spellcaster. It's spellcasting ability is Charisma (save DC 12, +4 to hit with spell attacks). The derro knows the following sorcerer spells:",
-            "Cantrips (at will): acid splash, light, mage hand, message, ray of frost",
-            "1st level (4 slots): burning hands, chromatic orb, sleep",
-            "2nd level (3 slots): invisibility, spider climb",
-            "3rd level (2 slots): blink, lightning bolt"
+            "Spellcasting. The derro is a 5th-level spellcaster. It's spellcasting ability is Charisma (save DC 12, +4 to hit with spell attacks). The derro knows the following sorcerer spells:\nCantrips (at will): acid splash, light, mage hand, message, ray of frost\n1st level (4 slots): burning hands, chromatic orb, sleep\n2nd level (3 slots): invisibility, spider climb\n3rd level (2 slots): blink, lightning bolt"
         ],
         "spells": "acid splash, light, mage hand, message, ray of frost, burning hands, chromatic orb, sleep, invisibility, spider climb, blink, lightning bolt",
         "actions": [
@@ -80,11 +76,7 @@
         "languages": "Abyssal, Ixitxachitl",
         "challenge": "1/4",
         "traits": [
-            "Spellcasting. The ixtachitl is a 5th-level spellcaster that uses Wisdom as its spellcasting ability (Spell save DC 11, +3 to hit with spell attacks). The ixitxachil has the following cleric spells prepared:",
-            "Cantrips (at will): guidance, thaumaturgy",
-            "1st level (4 slots): charm person, create or destroy water",
-            "2nd level (3 slots): hold person, silence",
-            "3rd level (2 slots): dispel magic, tongues"
+            "Spellcasting. The ixtachitl is a 5th-level spellcaster that uses Wisdom as its spellcasting ability (Spell save DC 11, +3 to hit with spell attacks). The ixitxachil has the following cleric spells prepared:\nCantrips (at will): guidance, thaumaturgy\n1st level (4 slots): charm person, create or destroy water\n2nd level (3 slots): hold person, silence\n3rd level (2 slots): dispel magic, tongues"
         ],
         "spells": "guidance, thaumaturgy, charm person, create or destroy water, hold person, silence, dispel magic, tongues",
         "actions": [
@@ -120,11 +112,7 @@
         "languages": "Abyssal, Ixitxachitl",
         "challenge": "2",
         "traits": [
-            "Spellcasting. The ixtachitl is a 5th-level spellcaster that uses Wisdom as its spellcasting ability (Spell save DC 11, +3 to hit with spell attacks). The ixitxachil has the following cleric spells prepared:",
-            "Cantrips (at will): guidance, thaumaturgy",
-            "1st level (4 slots): charm person, create or destroy water",
-            "2nd level (3 slots): hold person, silence",
-            "3rd level (2 slots): dispel magic, tongues"
+            "Spellcasting. The ixtachitl is a 5th-level spellcaster that uses Wisdom as its spellcasting ability (Spell save DC 11, +3 to hit with spell attacks). The ixitxachil has the following cleric spells prepared:\nCantrips (at will): guidance, thaumaturgy\n1st level (4 slots): charm person, create or destroy water\n2nd level (3 slots): hold person, silence\n3rd level (2 slots): dispel magic, tongues"
         ],
         "spells": "guidance, thaumaturgy, charm person, create or destroy water, hold person, silence, dispel magic, tongues",
         "actions": [
@@ -203,10 +191,7 @@
             "Innate Spellcasting (Psionics). The Keeper of the Flame's innate spellcasting ability is Wisdom (spell save DC 12.) It can innately cast the following spells, requiring no components:",
             "At will: friends, message",
             "1/day: command",
-            "Spellcasting. The Keeper of the Flame is a 3rd-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). The Keeper of the Flame has the following cleric spells prepared:",
-            "Cantrips (at will): guidance, mending, sacred flame",
-            "1st level (4 slots): bane, inflict wounds, shield of faith",
-            "2nd level (2 slots): enhance ability, spiritual weapon",
+            "Spellcasting. The Keeper of the Flame is a 3rd-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). The Keeper of the Flame has the following cleric spells prepared:\nCantrips (at will): guidance, mending, sacred flame\n1st level (4 slots): bane, inflict wounds, shield of faith\n2nd level (2 slots): enhance ability, spiritual weapon",
             "Duergar Resilience. The duergar has advantage on saving throws against poison, spells, and illusions, as well as to resist being charmed or paralyzed.",
             "Sunlight Sensitivity. While in sunlight, the duergar has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight."
         ],
@@ -547,11 +532,7 @@
         "languages": "Common, Undercommon",
         "challenge": "2",
         "traits": [
-            "Spellcasting. Grisha is a 6th-level-spellcaster. His spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). He has the following cleric spells prepared:",
-            "Cantrips (at will): guidance, light, sacred flame, thaumaturgy",
-            "1st level (4 slots): cure wounds, divine favor, inflict wounds, protection from good, shield of faith",
-            "2nd level (3 slots): continual flame, hold person, magic weapon, spiritual weapon",
-            "3rd level (3 slots): bestow curse, dispel magic, spirit guardian"
+            "Spellcasting. Grisha is a 6th-level-spellcaster. His spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). He has the following cleric spells prepared:\nCantrips (at will): guidance, light, sacred flame, thaumaturgy\n1st level (4 slots): cure wounds, divine favor, inflict wounds, protection from good, shield of faith\n2nd level (3 slots): continual flame, hold person, magic weapon, spiritual weapon\n3rd level (3 slots): bestow curse, dispel magic, spirit guardian"
         ],
         "spells": "guidance, light, sacred flame, thaumaturgy, cure wounds, divine favor, inflict wounds, protection from evil and good, shield of faith, continual flame, hold person, magic weapon, spiritual weapon, bestow curse, dispel magic, spirit guardian",
         "actions": [
@@ -575,10 +556,7 @@
         "traits": [
             "Insanity. Droki has advantage on saving throws against being charmed or frightened.",
             "Magic Resistance. The derro has advantage on saving throws against spells and other magical effects.",
-            "Spellcasting. Narrak is a 5th-level spellcaster. His spellcasting ability is Charisma (Save DC 13, +5 to hit with spell attacks) Narrak has two 2nd-level spell slots, which he regains after finishing ashort or long rest, and knows the following Warlock spells:\t\t\t",
-            "Cantrips (at will): eldritch blast, friends, poison spray",
-            "1st level: armor of Agathys, charm person, hex",
-            "2nd level: hold person, ray of enfeeblement, spider climb",
+            "Spellcasting. Narrak is a 5th-level spellcaster. His spellcasting ability is Charisma (Save DC 13, +5 to hit with spell attacks) Narrak has two 2nd-level spell slots, which he regains after finishing ashort or long rest, and knows the following Warlock spells:\t\t\t\nCantrips (at will): eldritch blast, friends, poison spray\n1st level: armor of Agathys, charm person, hex\n2nd level: hold person, ray of enfeeblement, spider climb",
             "Sunlight Sensitivity. While in sunlight, the derro has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight."
         ],
         "spells": "eldritch blast, friends, poison spray, armor of agathys, charm person, hex, hold person, ray of enfeeblement, spider climb",
@@ -610,13 +588,7 @@
             "At will: nondetection (self only)",
             "1/day each: blindness/deafness, blur, disguise self",
             "Insanity. The Pudding King has advantage on saving throws against being charmed or frightened.",
-            "Spellcasting. The Pudding King is a 9th-level spellcaster. His spellcasting ability is Charisma (spell save DC 14, +6 to hit with spell attacks). The Pudding King knows the following sorcerer spells:",
-            "Cantrips (at will): acid splash, light, mage hand, poison spray, prestidigitation",
-            "1st level (4 slots): false life, mage armor, ray of sickness, shield",
-            "2nd level (3 slots): crown of madness, misty step",
-            "3rd level (3 slots): gaseous form, stinking cloud",
-            "4th level (3 slots): blight, confusion",
-            "5th level (1 slot): cloudkill"
+            "Spellcasting. The Pudding King is a 9th-level spellcaster. His spellcasting ability is Charisma (spell save DC 14, +6 to hit with spell attacks). The Pudding King knows the following sorcerer spells:\nCantrips (at will): acid splash, light, mage hand, poison spray, prestidigitation\n1st level (4 slots): false life, mage armor, ray of sickness, shield\n2nd level (3 slots): crown of madness, misty step\n3rd level (3 slots): gaseous form, stinking cloud\n4th level (3 slots): blight, confusion\n5th level (1 slot): cloudkill"
         ],
         "spells": "acid splash, light, mage hand, poison spray, prestidigitation, false life, mage armor, ray of sickness, shield, crown of madness, misty step, gaseous form, stinking cloud, blight, confusion, cloudkill",
         "actions": [

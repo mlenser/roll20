@@ -14,10 +14,9 @@
         "languages": "Common, Draconic, Dwarvish, Elvish",
         "challenge": "1",
         "traits": [
-            "Spellcasting. The mage is a 4th-level spellcaster that uses Intelligence as its spellcasting ability (spell save DC 13; +5 to hit with spell attacks). The mage knows the following spells from the wizard's spell list:",
-            "• Cantrips (at will): light, mage hand, shocking grasp",
-            "• 1st Level (4 slots): charm person, magic missile",
-            "• 2nd Level (3 slots): hold person, misty step"
+            "Spellcasting. The mage is a 4th-level spellcaster that uses Intelligence as its spellcasting ability (spell save DC 13; +5 to hit with spell attacks). The mage knows the following spells from the wizard's spell list:\nCantrips (at will): light, mage hand, shocking grasp",
+            "1st Level (4 slots): charm person, magic missile",
+            "2nd Level (3 slots): hold person, misty step"
         ],
         "spells": "light, mage hand, shocking grasp, charm person, magic missile, hold person, misty step",
         "actions": [
@@ -66,12 +65,11 @@
             "Fey Ancestry. Nezznar has advantage on saving throws against being charmed, and magic can't put him to sleep.",
             "Sunlight Sensitivity. Nezznar has disadvantage on attack rolls when he or his target is in sunlight.",
             "Innate Spellcasting. Nezznar can innately cast the following spells, requiring no material components:",
-            "• At will: dancing lights",
-            "• 1/day each: darkness, faerie fire (save DC 12)",
-            "Spellcasting. Nezznar is a 4th-level spellcaster that uses Intelligence as his spellcasting ability (spell save DC 13; +5 to hit with spell attacks). Nezznar has the following spells prepared from the wizard's spell list:",
-            "• Cantrips (at will): mage hand, ray of frost, shocking grasp",
-            "• 1st Level (4 slots): mage armor, magic missile, shield",
-            "• 2nd Level (3 slots): invisibility, suggestion"
+            "At will: dancing lights",
+            "1/day each: darkness, faerie fire (save DC 12)",
+            "Spellcasting. Nezznar is a 4th-level spellcaster that uses Intelligence as his spellcasting ability (spell save DC 13; +5 to hit with spell attacks). Nezznar has the following spells prepared from the wizard's spell list:\nCantrips (at will): mage hand, ray of frost, shocking grasp",
+            "1st Level (4 slots): mage armor, magic missile, shield",
+            "2nd Level (3 slots): invisibility, suggestion"
         ],
         "spells": "dancing lights, darkness, faerie fire, mage hand, ray of frost, shocking grasp, mage armor, magic missile, shield, invisibility, suggestion",
         "actions": [
