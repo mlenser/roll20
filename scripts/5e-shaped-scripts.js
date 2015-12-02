@@ -2153,14 +2153,15 @@
 	};
 
 	shaped.spellImport = function (token, args) {
-		var spells = args[0].split(', '),
-			id = token.get('represents'),
-			character = findObjs({
+		var spells = args[0].split(', ');
+		var id = token.get('represents');
+		var character = findObjs({
 				_type: 'character',
 				id: id
-			})[0],
-			characterName = getAttrByName(id, 'character_name', 'current'),
-			options = [];
+			})[0];
+		var options = [];
+
+		characterName = getAttrByName(id, 'character_name', 'current');
 
 		if (args[1] && args[1] === 'prepared') {
 			options.push('prepared');
@@ -2311,9 +2312,6 @@
 
 			processActions(monster.parsedLairActions, 'lair_');
 		}
-		if (monster.spells) {
-			shaped.spellImport(token, [monster.spells]);
-		}
 
 		if (characterId) {
 			token.set('represents', characterId);
@@ -2343,6 +2341,10 @@
 			}
 
 			setTokenVision(token);
+		}
+
+		if (monster.spells) {
+			shaped.spellImport(token, [monster.spells]);
 		}
 	};
 
