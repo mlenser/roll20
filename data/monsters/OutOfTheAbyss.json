@@ -579,7 +579,8 @@
       "• Cantrips (at will): eldritch blast, friends, poison spray",
       "• 1st level: armor of Agathys, charm person, hex",
       "• 2nd level: hold person, ray of enfeeblement, spider climb",
-      "Sunlight Sensitivity. While in sunlight, the derro has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight."
+      "Sunlight Sensitivity. While in sunlight, the derro has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.",
+      "TODO: FIX num spells"
     ],
     "spells": "eldritch blast, friends, poison spray, armor of agathys, charm person, hex, hold person, ray of enfeeblement, spider climb",
     "actions": [
