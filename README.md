@@ -7,9 +7,10 @@ Scripts for 5e roll20
 
 **Dec 3rd 2015**
 
-* Spells now pull from traits directly
+* Spells now pull from traits directly (no need to have a separate parameter)
 * Tons of parsing fixes
 * Added all lair actions
+* Added SCAG spells
 
 **Dec 2nd 2015**
 
