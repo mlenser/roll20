@@ -1106,6 +1106,12 @@
       "Second Roar. Each creature that fails a DC 18 Wisdom saving throw is deafened and frightened for 1 minute. A frightened creature is paralyzed and can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
       "Third Roar. Each creature makes a DC 18 Constitution saving throw. On a failed save, a creature takes 44 (8d10) thunder damage and is knocked prone. On a successful save, the creature takes half as much damage and isn 't knocked prone."
     ],
+    "lairActions": [
+      "The flow of time is altered such that every creature in the lair must reroll initiative. The sphinx can choose not to reroll.",
+      "The effects of time are altered such that every creature in the lair must succeed on a DC 15 Constitution saving throw or become 1d20 years older or younger (the sphinx's choice), but never any younger than 1 year old. A greater restoration spell can restore a creature's age to normal.",
+      "The flow of time within the lair is altered such that everything within moves up to 10 years forward or backward (sphinx's choice). Only the sphinx is immediately aware of the time change. A wish spell can return the caster and up to seven other creatures designated by the caster to their normal time.",
+      "The sphinx shifts itself and up to seven other creatures it can see within in its lair to another plane of existence. Once outside its lair, the sphinx can't use lair actions, but it can return to its lair as a bonus action on its turn, taking up to seven creatures with it."
+    ],
     "legendaryPoints": "3",
     "legendaryActions": [
       "Claw Attack. The sphinx makes one claw attack.",
@@ -5455,6 +5461,12 @@
       "Multiattack. The sphinx makes two claw attacks.",
       "Claw. Melee Weapon Attack: +9 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) slashing damage."
     ],
+    "lairActions": [
+      "The flow of time is altered such that every creature in the lair must reroll initiative. The sphinx can choose not to reroll.",
+      "The effects of time are altered such that every creature in the lair must succeed on a DC 15 Constitution saving throw or become 1d20 years older or younger (the sphinx's choice), but never any younger than 1 year old. A greater restoration spell can restore a creature's age to normal.",
+      "The flow of time within the lair is altered such that everything within moves up to 10 years forward or backward (sphinx's choice). Only the sphinx is immediately aware of the time change. A wish spell can return the caster and up to seven other creatures designated by the caster to their normal time.",
+      "The sphinx shifts itself and up to seven other creatures it can see within in its lair to another plane of existence. Once outside its lair, the sphinx can't use lair actions, but it can return to its lair as a bonus action on its turn, taking up to seven creatures with it."
+    ],
     "legendaryPoints": "3",
     "legendaryActions": [
       "Claw Attack. The sphinx makes one claw attack.",
@@ -6199,6 +6211,17 @@
       "Fling. One Large or smaller object held or creature grappled by the kraken is thrown up to 60 feet in a random direction and knocked prone. If a thrown target strikes a solid surface, the target takes 3 (1d6) bludgeoning damage for every 10 feet it was thrown. If the target is thrown at another creature, that creature must succeed on a DC 18 Dexterity saving throw or take the same damage and be knocked prone.",
       "Lightning Storm. The kraken magically creates three bolts of lightning, each of which can strike a target the kraken can see within 120 feet of it. A target must make a DC 23 Dexterity saving throw, taking 22 (4d10) lightning damage on a failed save, or half as much damage on a successful one."
     ],
+    "lairActions": [
+      "A strong current moves through the kraken's lair. Each creature within 60 feet of the kraken must succeed on a DC 23 Strength saving throw or be pushed up to 60 feet away from the kraken. On a success, the creature is pushed 10 feet away from the kraken.",
+      "Creatures in the water within 60 feet of the kraken have vulnerability to lightning damage until initiative count 20 on the next round.",
+      "The water in the kraken's lair becomes electrically charged. All creatures within 120 feet of the kraken must succeed on a DC 23 Constitution saving throw, taking 10 (3d6) lightning damage on a failed save, or half as much damage on a successful one."
+    ],
+    "regionalEffects": [
+      "The kraken can alter the weather at will in a 6-mile radius centered on its lair. The effect is identical to the control weather spell.",
+      "Water elementals coalesce within 6 miles of the lair. These elementals can't leave the water and have Intelligence and Charisma scores of 1 (-5).",
+      "Aquatic creatures within 6 miles of the lair that have an Intelligence score of 2 or lower are charmed by the kraken and aggressive toward intruders in the area."
+    ],
+    "regionalEffectsFade": "When the kraken dies, all of these regional effects fade immediately.",
     "legendaryPoints": "3",
     "legendaryActions": [
       "Tentacle Attack or Fling. The kraken makes one tentacle attack or uses its Fling.",
@@ -6380,6 +6403,11 @@
     "spells": "mage hand, prestidigitation, ray of frost, detect magic, magic missile, shield, thunderwave, detect thoughts, invisibility, Melf's acid arrow, mirror image, animate dead, counterspell, dispel magic, fireball, blight, dimension door, cloudkill, scrying, disintegrate, globe of invulnerability, finger of death, plane shift, dominate monster, power word stun, power word kill",
     "actions": [
       "Paralyzing Touch. Melee Spell Attack: +12 to hit, reach 5 ft., one creature. Hit: 10 (3d6) cold damage. The target must succeed on a DC 18 Constitution saving throw or be paralyzed for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+    ],
+    "lairActions": [
+      "The lich rolls a d8 and regains a spell slot of that level or lower. If it has no spent spell slots of that level or lower, nothing happens.",
+      "The lich targets one creature it can see within 30 feet of it. A crackling cord of negative energy tethers the lich to the target. Whenever the lich takes damage, the target must make a DC 18 Constitution saving throw. On a failed save, the lich takes half the damage (rounded down), and the target takes the remaining damage. This tether lasts until initiative count 20 on the next round or until the lich or the target is no longer in the lich's lair.",
+      "The lich calls forth the spirits of creatures that died in its lair. These apparitions materialize and attack one creature that the lich can see within 60 feet of it. The target must succeed on a DC 18 Constitution saving throw, taking 52 (15d6) necrotic damage on a failed save, or half as much damage on a success. The apparitions then disappear."
     ],
     "legendaryPoints": "3",
     "legendaryActions": [
@@ -6844,7 +6872,8 @@
     "challenge": "7",
     "traits": [
       "Magic Resistance. The mind flayer has advantage on saving throws against spells and other magical effects.",
-      "Innate Spellcasting (Psionics). The mind flayer's innate spellcasting ability is Intelligence (spell save DC 15). It can innately cast the following spells, requiring no components:\nAt will: detect thoughts, levitate\n1/day each: dominate monster, plane shift (self only)"
+      "Innate Spellcasting (Psionics). The mind flayer's innate spellcasting ability is Intelligence (spell save DC 15). It can innately cast the following spells, requiring no components:\nAt will: detect thoughts, levitate\n1/day each: dominate monster, plane shift (self only)",
+      "Variant: Mind Flayer Arcanist\nA few mind flayers supplement their psionic power with arcane spells. However, they are regarded as deviants by their illithid peers and usually shunned. A mind flayer arcanist has a challenge rating of8 (3,900 XP) and the following trait. Spellcasting. The mind flayer is a lOth-level spellcaster. Its spellcasting ability is Intelligence (save DC 15, +7 to hit with spell attacks). The mind flayer has the following wizard spells prepared:\nCantrips (at will): blade ward, dancing lights, mage hand, shocking grasp\nlst level (4 slots): detect magic, disguise self, shield, sleep\n2nd level (3 slots): blur, invisibility, ray of enfeeblement\n3rd level (3 slots): clairvoyance, lightning bolt, sending \n4th level (3 slots): confusion, hallucinatory terrain\n5th level (2 slots): telekinesis, wall of force"
     ],
     "spells": "detect thoughts, levitate, dominate monster, plane shift",
     "actions": [
@@ -7040,6 +7069,17 @@
       "Rotting Fist. Melee Weapon Attack: +9 to hit, reach 5 ft., one target. Hit: 14 (3d6 + 4) bludgeoning damage plus 21 (6d6) necrotic damage. If the target is a creature, it must succeed on a DC 16 Constitution saving throw or be cursed with mummy rot. The cursed target can't regain hit points, and its hit point maximum decreases by 10 (3d6) for every 24 hours that elapse. If the curse reduces the target's hit point maximum to 0, the target dies, and its body turns to dust. The curse lasts until removed by the remove curse spell or other magic.",
       "Dreadful Glare. The mummy lord targets one creature it can see within 60 feet of it. If the target can see the mummy lord, it must succeed on a DC 16 Wisdom saving throw against this magic or become frightened until the end of the mummy's next turn. If the target fails the saving throw by 5 or more, it is also paralyzed for the same duration. A target that succeeds on the saving throw is immune to the Dreadful Glare of all mummies and mummy lords for the next 24 hours."
     ],
+    "lairActions": [
+      "Each undead creature in the lair can pinpoint the location of each living creature within 120 feet of it until initiative count 20 on the next round.",
+      "Each undead in the lair has advantage on saving throws against effects that turn undead until initiative count 20 on the next round.",
+      "Until initiative count 20 on the next round, any non-undead creature that tries to cast a spell of 4th level or lower in the mummy lord's lair is wracked with pain. The creature can choose another action, but if it tries to cast the spell, it must make a DC 16 Constitution saving throw. On a failed save, it takes ld6 necrotic damage per level of the spell, and the spell has no effect and is wasted."
+    ],
+    "regionalEffects": [
+      "Food instantly molders and water instantly evaporates when brought into the lair. Other non magical drinks are spoiled - wine turning to vinegar, for instance.",
+      "Divination spells cast within the lair by creatures other than the mummy lord have a 25 percent chance to provide misleading results, as determined by the DM. If a divination spell already has a chance to fail or become unreliable when cast multiple times,·t11at chance increases by 25 percent.",
+      "A creature that takes treasure from the lair is cursed until the treasure is returned. The cursed target has disadvantage on all saving throws. The curse lasts until removed by a remove curse spell or other magic."
+    ],
+    "regionalEffectsFade": "If the mummy lord is destroyed, these regional effects end immediately.",
     "legendaryPoints": "3",
     "legendaryActions": [
       "Attack. The mummy lord makes one attack with its rotting fist or uses its Dreadful Glare.",
@@ -9410,12 +9450,12 @@
     "traits": [
       "Chameleon Carapace. The thri-kreen can change the color of its carapace to match the color and texture of its surroundings. As a result, it has advantage on Dexterity (Stealth) checks made to hide.",
       "Standing Leap. The thri-kreen's long jump is up to 30 feet and its high jump is up to 15 feet, with or without a running start."
+      "Variant: Innate Spellcasting (Psionics). The thri-kreen's innate spellcasting ability is Wisdom. The thri-kreen can innately cast the following spells, requiring no components:\nAt will: mage hand (the hand is invisible)\n2/day each: blur, magic weapon\n1/day: invisibility (self only)"
     ],
     "actions": [
-      "Multiattack. The thri-kreen makes two attacks: one with its bite and one with its claws.",
+      "Multiattack. The thri-kreen makes two attacks: one with its bite and one with its claws. Variant: Multiattack. The thri-kreen makes two gythka attacks or two chatkcha attacks",
       "Bite. Melee Weapon Attack: +3 to hit, reach 5 ft., one creature. Hit: 4 (1d6 + 1) piercing damage, and the target must succeed on a DC 11 Constitution saving throw or be poisoned for 1 minute. If the saving throw fails by 5 or more, the target is also paralyzed while poisoned in this way. The poisoned target can repeat the saving throw on each of its turns, ending the effect on itself on a success.",
       "Claws. Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 6 (2d4 + 1) slashing damage.",
-      "Variant: Weapons Multiattack. The thri-kreen makes two gythka attacks or two chatkcha attacks.",
       "Variant: Gythka. Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 5 (1d8 + 1) slashing damage.",
       "Variant: Chatkcha. Ranged Weapon Attack: +4 to hit, range 30/120 ft., one target. Hit: 5 (1d6 + 2) slashing damage."
     ]
@@ -9744,6 +9784,13 @@
       "Healing Touch (3/Day). The unicorn touches another creature with its horn. The target magically regains 11 (2d8 + 2) hit points. In addition, the touch removes all diseases and neutralizes all poisons afflicting the target.",
       "Teleport (1/Day). The unicorn magically teleports itself and up to three willing creatures it can see within 5 ft. of it, along with any equipment they are wearing or carrying, to a location the unicorn is familiar with, up to 1 mile away."
     ],
+    "regionalEffects": [
+      "Open flames of a non magical nature are extinguished within the unicorn's domain. Torches and campfires refuse to burn, but closed lanterns are unaffected.",
+      "Creatures native to the unicorn's domain have an easier time hiding; they have advantage on all Dexterity (Stealth) checks made to hide.",
+      "When a good-aligned creature casts a spell or uses a magical effect that causes another good-aligned creature to regain hit points, the target regains the maximum number of hit points possible for the spell or effect.",
+      "Curses affecting any good-aligned creature are suppressed."
+    ],
+    "regionalEffectsFade": "If the unicorn dies, these effects end immediately.",
     "legendaryPoints": "3",
     "legendaryActions": [
       "Hooves. The unicorn makes one attack with its hooves.",
@@ -9772,19 +9819,24 @@
       "Misty Escape. When it drops to 0 hit points outside its resting place, the vampire transforms into a cloud of mist (as in the Shapechanger trait) instead of falling unconscious, provided that it isn't in sunlight or running water. If it can't transform, it is destroyed.\nWhile it has 0 hit points in mist form, it can't revert to its vampire form, and it must reach its resting place within 2 hours or be destroyed. Once in its resting place, it reverts to its vampire form. It is then paralyzed until it regains at least 1 hit point. After spending 1 hour in its resting place with 0 hit points, it regains 1 hit point.",
       "Regeneration. The vampire regains 20 hit points at the start of its turn if it has at least 1 hit point and isn't in sunlight or running water. If the vampire takes radiant damage or damage from holy water, this trait doesn't function at the start of the vampire's next turn.",
       "Spider Climb. The vampire can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.",
-      "Vampire Weaknesses. The vampire has the following flaws:",
-      "Forbiddance. The vampire can't enter a residence without an invitation from one of the occupants.",
-      "Harmed by Running Water. The vampire takes 20 acid damage if it ends its turn in running water.",
-      "Stake to the Heart. If a piercing weapon made of wood is driven into the vampire's heart while the vampire is incapacitated in its resting place, the vampire is paralyzed until the stake is removed.",
-      "Sunlight Hypersensitivity. The vampire takes 20 radiant damage when it starts its turn in sunlight. While in sunlight, it has disadvantage on attack rolls and ability checks."
+      "Vampire Weaknesses. The vampire has the following flaws:\nForbiddance. The vampire can't enter a residence without an invitation from one of the occupants.\nHarmed by Running Water. The vampire takes 20 acid damage if it ends its turn in running water.\nStake to the Heart. If a piercing weapon made of wood is driven into the vampire's heart while the vampire is incapacitated in its resting place, the vampire is paralyzed until the stake is removed.\nSunlight Hypersensitivity. The vampire takes 20 radiant damage when it starts its turn in sunlight. While in sunlight, it has disadvantage on attack rolls and ability checks.",
+      "Variant: Some vampires are practitioners of the arcane arts. A spellcaster vampire spellcaster has a challenge rating of 15 (13,000 XP) and the following trait:\nSpellcasting. The vampire is a 9th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 15, +7 to hit with spell attacks). The vampire has the following wizard spells prepared:\nCantrips (at will): mage hand, prestidigitation, ray of frost\n1st level (4 slots): comprehend languages, fogcloud, sleep\n2nd level (3 slots): detect thoughts, gust of wind, mirror image 3rd level\n(3 slots): animate dead, bestow curse, nondetection\n4th level (3 slots): blight, greater invisibility\n5th level (1 slot): dominate person"
     ],
     "actions": [
-      "Multiattack (Vampire Form Only). The vampire makes two attacks, only one of which can be a bite attack.",
+      "Multiattack (Vampire Form Only). The vampire makes two attacks, only one of which can be a bite attack. Variant: The vampire makes two greatsword attacks.",
       "Unarmed Strike (Vampire Form Only). Melee Weapon Attack: +9 to hit, reach 5 ft., one creature. Hit: 8 (1d8 + 4) bludgeoning damage. Instead of dealing damage, the vampire can grapple the target (escape DC 18).",
       "Bite (Bat or Vampire Form Only). Melee Weapon Attack: +9 to hit, reach 5 ft., one willing creature, or a creature that is grappled by the vampire, incapacitated, or restrained. Hit: 7 (1d6 + 4) piercing damage plus 10 (3d6) necrotic damage. The target's hit point maximum is reduced by an amount equal to the necrotic damage taken, and the vampire regains hit points equal to that amount. The reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0. A humanoid slain in this way and then buried in the ground rises the following night as a vampire spawn under the vampire's control.",
       "Charm. The vampire targets one humanoid it can see within 30 ft. of it. If the target can see the vampire, the target must succeed on a DC 17 Wisdom saving throw against this magic or be charmed by the vampire. The charmed target regards the vampire as a trusted friend to be heeded and protected. Although the target isn't under the vampire's control, it takes the vampire's requests or actions in the most favorable way it can, and it is a willing target for the vampire's bit attack.\nEach time the vampire or the vampire's companions do anything harmful to the target, it can repeat the saving throw, ending the effect on itself on a success. Otherwise, the effect lasts 24 hours or until the vampire is destroyed, is on a different plane of existence than the target, or takes a bonus action to end the effect.",
-      "Children of the Night (1/Day). The vampire magically calls 2d4 swarms of bats or rats, provided that the sun isn't up. While outdoors, the vampire can call 3d6 wolves instead. The called creatures arrive in 1d4 rounds, acting as allies of the vampire and obeying its spoken commands. The beasts remain for 1 hour, until the vampire dies, or until the vampire dismisses them as a bonus action."
+      "Children of the Night (1/Day). The vampire magically calls 2d4 swarms of bats or rats, provided that the sun isn't up. While outdoors, the vampire can call 3d6 wolves instead. The called creatures arrive in 1d4 rounds, acting as allies of the vampire and obeying its spoken commands. The beasts remain for 1 hour, until the vampire dies, or until the vampire dismisses them as a bonus action.",
+      "Variant: Greatsword. Melee Weapon Attack: +9 to hit, reach 5 ft., one creature. Hit: 11 (2d6 + 4) slashing damage."
     ],
+    "regionalEffects": [
+      "There's a noticeable increase in the populations of bats, rats, and wolves in the region.",
+      "Plants within 500 feet of the lair wither, and their stems and branches become twisted and thorny.",
+      "Shadows cast within 500 feet of the lair seem abnormally gaunt and sometimes move as though alive.",
+      "A creeping fog clings to the ground within 500 feet of the vampire's la ir. The fog occasionally takes eerie forms, such as grasping claws and writhing serpents."
+    ],
+    "regionalEffectsFade": "If the vampire is destroyed, these effects end after 2d6 days.",
     "legendaryPoints": "3",
     "legendaryActions": [
       "Move. The vampire moves up to its speed without provoking opportunity attacks.",
