@@ -2347,7 +2347,7 @@
 		if (monster.traits) {
 			if (monster.traits) {
 				var spells = '';
-				var spellRegex = /(?:(?:\d+\/day(?:\s* each)?)|(?:At will)|(?:(?:Cantrips|level)\s*\(.*\))):\s* (.*)/gi;
+				var spellRegex = /(?:(?:\d+\/day(?:\s* each)?)|(?:At will)|(?:(?:Cantrips|level)(?:\s*\(.*\))?)):\s* (.*)/gi;
 				for(var i = 0; i < monster.traits.length; i++) {
 					var match;
 					while (match = spellRegex.exec(monster.traits[i])) {
