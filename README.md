@@ -8,6 +8,8 @@ Scripts for 5e roll20
 **Dec 3rd 2015**
 
 * Spells now pull from traits directly
+* Tons of parsing fixes
+* Added all lair actions
 
 **Dec 2nd 2015**
 
