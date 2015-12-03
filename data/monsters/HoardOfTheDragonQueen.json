@@ -62,8 +62,7 @@
         "challenge": "9",
         "traits": [
             "Keen Smell. Blagothkus has advantage on Wisdom (Perception) checks that rely on smell.",
-            "Innate Spellcasting. Blagothkus can innately cast the following spells (spell save DC 15), requiring no material components:",
-            "3/day each: fog cloud, levitate",
+            "Innate Spellcasting. Blagothkus can innately cast the following spells (spell save DC 15), requiring no material components:\n3/day each: fog cloud, levitate",
             "Spellcasting. Blagothkus is a 5th-level spellcaster that uses Intelligence as his spellcasting ability (spell save DC 15, +7 to hit with spell attacks). Blagothkus has the following spells prepared from the wizard spell list:\nCantrips (at will): light, mage hand, prestidigitation\n1st level (4 slots): detect magic, identify, magic missile, shield\n2nd level (3 slots): gust of wind, misty step, shatter\n3rd level (2 slots): fly, lightning bolt"
         ],
         "spells": "fog cloud, levitate, light, mage hand, prestidigitation, detect magic, identify, magic missile, shield, gust of wind, misty step, shatter, fly, lightning bolt",

@@ -133,9 +133,7 @@
         "languages": "Dwarvish, Undercommon",
         "challenge": "2",
         "traits": [
-            "Innate Spellcasting (Psionics). The darkhaft's innate spellcasting ability is Intelligence (spell save DC 10) it can innately cast the following spells, requiring no components:",
-            "At will: friends, mage hand",
-            "1/day each: disguise self, sleep",
+            "Innate Spellcasting (Psionics). The darkhaft's innate spellcasting ability is Intelligence (spell save DC 10) it can innately cast the following spells, requiring no components:\nAt will: friends, mage hand\n1/day each: disguise self, sleep",
             "Duergar Resilience. The duergar has advantage on saving throws against poison, spells, and illusions, as well as to resist being charmed or paralyzed.",
             "Sunlight Sensitivity. While in sunlight, the duergar has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight."
         ],
@@ -188,9 +186,7 @@
         "languages": "Dwarvish, Undercommon",
         "challenge": "2",
         "traits": [
-            "Innate Spellcasting (Psionics). The Keeper of the Flame's innate spellcasting ability is Wisdom (spell save DC 12.) It can innately cast the following spells, requiring no components:",
-            "At will: friends, message",
-            "1/day: command",
+            "Innate Spellcasting (Psionics). The Keeper of the Flame's innate spellcasting ability is Wisdom (spell save DC 12.) It can innately cast the following spells, requiring no components:\nAt will: friends, message\n1/day: command",
             "Spellcasting. The Keeper of the Flame is a 3rd-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). The Keeper of the Flame has the following cleric spells prepared:\nCantrips (at will): guidance, mending, sacred flame\n1st level (4 slots): bane, inflict wounds, shield of faith\n2nd level (2 slots): enhance ability, spiritual weapon",
             "Duergar Resilience. The duergar has advantage on saving throws against poison, spells, and illusions, as well as to resist being charmed or paralyzed.",
             "Sunlight Sensitivity. While in sunlight, the duergar has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight."
@@ -219,9 +215,7 @@
         "traits": [
             "Duergar Resilience. The duergar has advantage on saving throws against poison, spells, and illusions, as well as to resist being charmed or paralyzed.",
             "Sunlight Sensitivity. While in sunlight, the duergar has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.",
-            "Innate Spellcasting (Psionics). The duergar's innate spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). It can innately cast the following spells, requiring no components:",
-            "At will: blade ward, true strike",
-            "1/day each: jump, hunter's mark"
+            "Innate Spellcasting (Psionics). The duergar's innate spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). It can innately cast the following spells, requiring no components:\nAt will: blade ward, true strike\n1/day each: jump, hunter's mark"
         ],
         "spells": "blade ward, true strike, jump, hunter's mark",
         "actions": [
@@ -504,9 +498,7 @@
         "traits": [
             "Special Equipment. Droki wears boots of speed",
             "Insanity. Droki has advantage on saving throws against being charmed or frightened.",
-            "Innate Spellcasting. Droki's innate spellcasting ability is Charisma (spell save DC 13). He can innately cast the following spells, requiring no material components:",
-            "At will: minor illusion",
-            "1/day each: darkness, fear, shatter",
+            "Innate Spellcasting. Droki's innate spellcasting ability is Charisma (spell save DC 13). He can innately cast the following spells, requiring no material components:\nAt will: minor illusion\n1/day each: darkness, fear, shatter",
             "Sneak Attack (1/Turn). Droki deals an extra 7 (2d6) damage when he hits a target with a weapon attack and has advantage ont he attack roll, or when the target is within 5 feet of an ally of Droki that isn't incapacitated and Droki doesn't have disadvantage on the attack roll.",
             "Magic Resistance. The derro has advantage on saving throws against spells and other magical effects.",
             "Sunlight Sensitivity. While in sunlight, the derro has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight."
@@ -584,9 +576,7 @@
         "traits": [
             "Stone Camouflage. The Pudding King has advantage on Dexterity (Stealth) checks made to hide in rocky terrain.",
             "Gnome Cunning. The Pudding King has advantage on Intelligence, Wisdom, and Charisma saving throws against magic.",
-            "Innate Spellcasting. The Pudding King's innate spellcasting ability is Intelligence (spell save DC 12). He can innately cast the following spells, requiring no material components:",
-            "At will: nondetection (self only)",
-            "1/day each: blindness/deafness, blur, disguise self",
+            "Innate Spellcasting. The Pudding King's innate spellcasting ability is Intelligence (spell save DC 12). He can innately cast the following spells, requiring no material components:\nAt will: nondetection (self only)\n1/day each: blindness/deafness, blur, disguise self",
             "Insanity. The Pudding King has advantage on saving throws against being charmed or frightened.",
             "Spellcasting. The Pudding King is a 9th-level spellcaster. His spellcasting ability is Charisma (spell save DC 14, +6 to hit with spell attacks). The Pudding King knows the following sorcerer spells:\nCantrips (at will): acid splash, light, mage hand, poison spray, prestidigitation\n1st level (4 slots): false life, mage armor, ray of sickness, shield\n2nd level (3 slots): crown of madness, misty step\n3rd level (3 slots): gaseous form, stinking cloud\n4th level (3 slots): blight, confusion\n5th level (1 slot): cloudkill"
         ],
@@ -644,10 +634,7 @@
         "challenge": "23",
         "traits": [
             "Charge. If Baphomet moves at least 10 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 22 (4d10) piercing damage. If the target is a creature, it must succeed on a DC 25 Strength saving throw or be pushed up to 10 feet away and knocked prone.",
-            "Innate Spellcasting. Baphomet's spellcasting ability is Charisma (spell save DC 18). He can innately cast the following spells, requiring no material components:",
-            "At will: detect magic",
-            "3/day each: dispel magic, dominate beast, hunter's mark, maze, wall of stone",
-            "1/day each: teleport",
+            "Innate Spellcasting. Baphomet's spellcasting ability is Charisma (spell save DC 18). He can innately cast the following spells, requiring no material components:\nAt will: detect magic\n3/day each: dispel magic, dominate beast, hunter's mark, maze, wall of stone\n1/day each: teleport",
             "Labyrinthine Recall. Baphomet can perfectly recall any path he has traveled, and he is immune to the maze spell.",
             "Legendary Resistance (3/Day). If Baphomet fails a saving throw, he can choose to succeed instead.",
             "Magic Resistance. Baphomet has advantage on saving throws against spell and other magic effects.",
@@ -686,10 +673,7 @@
         "languages": "all, telepathy 120 ft.",
         "challenge": "26",
         "traits": [
-            "Innate Spellcasting. Demogorgon's spellcasting ability is Charisma (spell save DC 23). Demogorgon can innately cast the following spells, requiring no material components:",
-            "At will: detect magic, major image",
-            "3/day each: dispel magic, fear, telekinesis",
-            "1/day each: feeblemind, project image",
+            "Innate Spellcasting. Demogorgon's spellcasting ability is Charisma (spell save DC 23). Demogorgon can innately cast the following spells, requiring no material components:\nAt will: detect magic, major image\n3/day each: dispel magic, fear, telekinesis\n1/day each: feeblemind, project image",
             "Legendary Resistance (3/Day). If Demogorgon fails a saving throw, he can choose to succeed instead.",
             "Magic Resistance. Demogorgon has advantage on saving throws against spell and other magic effects.",
             "Magic Weapon. Demogorgon's weapon attacks are magical",
@@ -729,10 +713,7 @@
         "languages": "all, telepathy 120 ft.",
         "challenge": "23",
         "traits": [
-            "Innate Spellcasting. Fraz-Urb'luu's spellcasting ability is Charisma (spell save DC 23). Fraz-Urb'luu can innately cast the following spells, requiring no material components:",
-            "At will: alter self (can become Medium-sized when changing his appearance), detect magic, dispel magic, phantasamal force",
-            "3/day each: confusion, dream, mislead, programmed illusion, seeming",
-            "1/day each: mirage arcane, modify memory, project image",
+            "Innate Spellcasting. Fraz-Urb'luu's spellcasting ability is Charisma (spell save DC 23). Fraz-Urb'luu can innately cast the following spells, requiring no material components:\nAt will: alter self (can become Medium-sized when changing his appearance), detect magic, dispel magic, phantasamal force\n3/day each: confusion, dream, mislead, programmed illusion, seeming\n1/day each: mirage arcane, modify memory, project image",
             "Legendary Resistance (3/Day). If Fraz-Urb'luu fails a saving throw, he can choose to succeed instead.",
             "Magic Resistance. Fraz-Urb'luu has advantage on saving throws against spell and other magic effects.",
             "Magic Weapon. Fraz-Urb'luu's weapon attacks are magical.",
@@ -769,10 +750,7 @@
         "challenge": "24",
         "traits": [
             "Shapechanger. Graz'zt can use his action to polymorph into a form that resembles a Medium humanoid, or back into his true form. Aside from his size, his statistics are the same in each form, Any equipment he is wearing or carrying isn't transformed.",
-            "Innate Spellcasting. Graz'zt's spellcasting ability is Charisma (spell save DC 23). Graz'zt can innately cast the following spells, requiring no material components:",
-            "At will: charm person, crown of madness, detect magic, dispel magic, dissonant whispers",
-            "3/day each: counterspell, darkness, dominate person, sanctuary, telekinesis, teleport",
-            "1/day each: dominate monster, greater invisibility",
+            "Innate Spellcasting. Graz'zt's spellcasting ability is Charisma (spell save DC 23). Graz'zt can innately cast the following spells, requiring no material components:\nAt will: charm person, crown of madness, detect magic, dispel magic, dissonant whispers\n3/day each: counterspell, darkness, dominate person, sanctuary, telekinesis, teleport\n1/day each: dominate monster, greater invisibility",
             "Legendary Resistance (3/Day). If Graz'zt fails a saving throw, he can choose to succeed instead.",
             "Magic Resistance. Graz'zt has advantage on saving throws against spell and other magic effects.",
             "Magic Weapon. Graz'zt's weapon attacks are magical."
@@ -810,9 +788,7 @@
         "challenge": "23",
         "traits": [
             "Foul. Any creature, other than an ooze, that starts its turn within 10 feet of Juiblex must succeed on a DC 21 Constitution saving throw or be poisoned until the start of the creature's next turn.",
-            "Innate Spellcasting. Juiblex's spellcasting ability is Charisma (spell save DC 18, +10 to hit with spell attacks). Juiblex can innately cast the following spells, requiring no material components:",
-            "At will: acid splash (17th level), detect magic",
-            "3/day each: blight, contagion, gaseous form",
+            "Innate Spellcasting. Juiblex's spellcasting ability is Charisma (spell save DC 18, +10 to hit with spell attacks). Juiblex can innately cast the following spells, requiring no material components:\nAt will: acid splash (17th level), detect magic\n3/day each: blight, contagion, gaseous form",
             "Legendary Resistance (3/Day). If Juiblex fails a saving throw, it can choose to succeed instead.",
             "Magic Resistance. Juiblex has advantage on saving throws against spell and other magic effects.",
             "Magic Weapon. Juiblex's weapon attacks are magical.",
@@ -852,10 +828,7 @@
         "traits": [
             "Wand of Orcus. The wand has 7 charges, and any of its properties that require a saving throw have a save DC of 18. While holding it, Orcus can use an action to cast animate dead, blight, or speak with dead. Alternatively, he can expend or 1 or more of the wand's charges to cast one of the following spells from it: circle of death (1 charge), finger of death (1 charge), or power word kill (2 charges). The wand regains 1d4 + 3 charges daily at dawn.",
             "While holding the wand, Orcus gains +3 AC and can use an action to conjure undead creatures whose combined average hit points don't exceed 500, These undead magically rise up from the ground or otherwise form in unoccupied spaces within 300 feet of Orcus and obey his commands until they are destroyed or until he dismisses them as an action. Once this property of the wand is used, the property can't be used again until the next dawn.",
-            "Innate Spellcasting. Orcus's spellcasting ability is Charisma (spell save DC 23, +15 to hit with spell attacks). He can innately cast the following spells, requiring no material components:",
-            "At will: chill touch (17th level), detect magic",
-            "3/day each: create undead, dispel magic",
-            "1/day: time stop",
+            "Innate Spellcasting. Orcus's spellcasting ability is Charisma (spell save DC 23, +15 to hit with spell attacks). He can innately cast the following spells, requiring no material components:\nAt will: chill touch (17th level), detect magic\n3/day each: create undead, dispel magic\n1/day: time stop",
             "Legendary Resistance (3/Day). If Orcus fails a saving throw, he can choose to succeed instead.",
             "Magic Resistance. Orcus has advantage on saving throws against spells and other magical effects.",
             "Magic Weapon. Orcus's weapon attacks are magical.",
@@ -892,10 +865,7 @@
         "languages": "all, telepathy 120 ft.",
         "challenge": "24",
         "traits": [
-            "Innate Spellcasting. Yeenoghu's spellcasting ability is Charisma (spell save DC 17, +9 to hit with spell attacks). He can innately cast the following spells, requiring no material components:",
-            "At will: detect magic, spiritual weapon (8th-level spell, 4d8 + 2 force damage on a hit, appears as a flail)",
-            "3/day each: dispel magic, fear, invisibility",
-            "1/day: teleport",
+            "Innate Spellcasting. Yeenoghu's spellcasting ability is Charisma (spell save DC 17, +9 to hit with spell attacks). He can innately cast the following spells, requiring no material components:\nAt will: detect magic, spiritual weapon (8th-level spell, 4d8 + 2 force damage on a hit, appears as a flail)\n3/day each: dispel magic, fear, invisibility\n1/day: teleport",
             "Legendary Resistance (3/Day). If Yeenoghu fails a saving throw, he can choose to succeed instead.",
             "Magic Resistance. Yeenoghu has advantage on saving throws against spells and other magical effects.",
             "Magic Weapon. Yeenoghu's weapon attacks are magical.",
@@ -935,10 +905,7 @@
         "languages": "all, telepathy 120 ft.",
         "challenge": "23",
         "traits": [
-            "Innate Spellcasting. Zuggtmoy's spellcasting ability is Charisma (spell save DC 22). She can innately cast the following spells, requiring no material components:",
-            "At will: detect magic, locate animals or plants, ray of sickness",
-            "3/day each: dispel magic, ensnaring strike, entangle, plant growth",
-            "1/day: etherealness, teleport",
+            "Innate Spellcasting. Zuggtmoy's spellcasting ability is Charisma (spell save DC 22). She can innately cast the following spells, requiring no material components:\nAt will: detect magic, locate animals or plants, ray of sickness\n3/day each: dispel magic, ensnaring strike, entangle, plant growth\n1/day: etherealness, teleport",
             "Legendary Resistance (3/Day). If Zuggtmoy fails a saving throw, she can choose to succeed instead.",
             "Magic Resistance. Zuggtmoy has advantage on saving throws against spells and other magical effects.",
             "Magic Weapon. Zuggtmoy's weapon attacks are magical."
