@@ -26,7 +26,6 @@
       "• 5th level (2 slots): cloudkill, seeming (cast each day)",
       "• 6th level (1 slot): chain lightning"
     ],
-    "spells": "gust, mage hand, message, prestidigitation, ray of frost, shocking grasp, charm person, feather fall, mage armor, thunderwave, dust devil, gust of wind, invisibility, fly, gaseous form, lightning bolt, ice storm, storm sphere, cloudkill, seeming, chain lightning",
     "actions": [
       "Windvane. Melee or Ranged Weapon Attack: +9 to hit, reach 5 ft. or range 20 ft./60 ft., one target. Hit: 9 (1d6 + 6) piercing damage, or 10 (1d8 + 6) piercing damage if used with two hands to make a melee attack, plus 3 (1d6) lightning damage."
     ]
@@ -81,7 +80,6 @@
       "• 4th level (3 slots): dimension door, wall of fire",
       "• 5th level (1 slot): hold monster"
     ],
-    "spells": "produce flame, burning hands, fire bolt, mage hand, message, prestidigitation, shocking grasp, mage armor, magic missile, shield, misty step, scorching ray, counterspell, fireball, dimension door, wall of fire, hold monster",
     "actions": [
       "Dagger. Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage."
     ]
@@ -124,7 +122,6 @@
       "• 2nd level (3 slots): shatter, spider climb",
       "• 3rd level (2 slots): slow"
     ],
-    "spells": "acid splash, blade ward, light, mending, mold earth, earth tremor, expeditious retreat, shield, shatter, spider climb, slow",
     "actions": [
       "Multiattack. The priest makes two melee attacks.",
       "Glaive. Melee Weapon Attack: +4 to hit, reach 10 ft., one target. Hit: 7 (1d10 + 2) slashing damage."
@@ -171,7 +168,6 @@
       "• 2nd level (3 slots): blur, hold person",
       "• 3rd level (2 slots): sleet storm"
     ],
-    "spells": "chill touch, mage hand, minor illusion, prestidigitation, ray of frost, expeditious retreat, ice knife, magic missile, shield, blur, hold person, sleet storm",
     "actions": [
       "Quarterstaff. Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 6 (1d8 + 2) bludgeoning damage."
     ]
@@ -290,7 +286,6 @@
       "• 4th level (2 slots): blight, wall of fire",
       "Summon Mephits (Recharges after a Long Rest). By puffing on his pipe, Elizar can use an action to cast conjure minor elementals. If he does so, he summons four smoke mephits."
     ],
-    "spells": "druidcraft, guidance, poison spray, produce flame, animal friendship, faerie fire, healing word, jump, thunderwave, flame blade, spike growth, dispel magic, stinking cloud, blight, wall of fire",
     "actions": [
       "Dagger +1. Melee or Ranged Weapon Attack: +6 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 5 (1d4 + 3) piercing damage."
     ]
@@ -339,7 +334,6 @@
       "• 2nd level (3 slots): blur, scorching ray",
       "• 3rd level (2 slots): fireball"
     ],
-    "spells": "control flames, create bonfire, fire bolt, light, minor illusion, burning hands, expeditious retreat, mage armor, blur, scorching ray, fireball",
     "actions": [
       "Dagger. Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage."
     ]
@@ -367,7 +361,6 @@
       "• 3rd level: Vampiric touch",
       "TODO: FIX num spells"
     ],
-    "spells": "chill touch, eldritch blast, mage hand, armor of agathys, expeditious retreat, hex, invisibility, vampiric touch",
     "actions": [
       "Constrict (Serpent Form Only). Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 9 (2d6 + 2) bludgeoning damage. If the target is Medium or smaller, it is grappled (escape DC 12). Until the grapple ends, the target is restrained, and the fathomer can't constrict another target.",
       "Dagger (Human Form Only). Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage."
@@ -391,7 +384,6 @@
       "• Cantrips (at will): gust, light, message, ray of frost",
       "• 1st level (2 slots): expeditious retreat, feather fall"
     ],
-    "spells": "gust, light, message, ray of frost, expeditious retreat, feather fall",
     "actions": [
       "Multiattack. The knight makes two melee attacks.",
       "Longsword. Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 6 (1d8 + 2) slashing damage, or 7 (1d10 + 2) slashing damage if used with two hands.",
@@ -447,7 +439,6 @@
       "• 4th level (1 slot): fire shield (see Wreathed in Flame)",
       "Wreathed in Flame. For the flamewrath, the warm version of the fire shield spell has a duration of \"until dispelled.\" The fire shield burns for 10 minutes after the flamewrath dies, consuming its body."
     ],
-    "spells": "control flames, fire bolt, friends, light, minor illusion, burning hands, color spray, mage armor, scorching ray, suggestion, fireball, hypnotic pattern, fire shield",
     "actions": [
       "Dagger. Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage."
     ]
@@ -479,7 +470,6 @@
       "Water Walk. Gar can stand and move on liquid surfaces as if they were solid ground.",
       "Watery Fall. When Gar drops to 0 hit points, his body collapses into a pool of inky water that rapidly disperses. Anything he was wearing or carrying is left behind."
     ],
-    "spells": "mending, resistance, shape water, create or destroy water, cure wounds, fog cloud, thunderwave, darkvision, hold person, protection from poison, call lightning, sleet storm, tidal wave, control water, ice storm, scrying",
     "actions": [
       "Multiattack. Gar makes two melee attacks, one with his claw and one with Drown.",
       "Claw. Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 9 (2d6 + 2) bludgeoning damage, and the target is grappled (escape DC 13). Until the grapple ends, Gar can't attack other creatures with his claw.",
@@ -581,7 +571,6 @@
       "• 2nd level (3 slots): dust devil, gust of wind",
       "• 3rd level (2 slots): gaseous form"
     ],
-    "spells": "blade ward, gust, light, prestidigitation, shocking grasp, feather fall, shield, witch bolt, dust devil, gust of wind, gaseous form",
     "actions": [
       "Multiattack. The priest makes two melee attacks or two ranged attacks.",
       "Scimitar. Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) slashing damage.",
@@ -609,7 +598,6 @@
       "Unarmored Defense. While the hurricane is wearing no armor and wielding no shield, its AC includes its Wisdom modifier.",
       "Unarmored Movement. While the hurricane is wearing no armor and wielding no shield, its walking speed increases by 15 feet (included in its speed)."
     ],
-    "spells": "blade ward, gust, light, prestidigitation, feather fall, jump, thunderwave, gust of wind",
     "actions": [
       "Multiattack. The hurricane makes two melee attacks.",
       "Unarmed Strike. Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) bludgeoning damage."
@@ -642,7 +630,6 @@
       "• 3/day each: fire storm, haste, teleport",
       "Magic Resistance. Imix has advantage on saving throws against spells and other magical effects."
     ],
-    "spells": "fireball, wall of fire, fire storm, haste, teleport",
     "actions": [
       "Multiattack. Imix makes two slam attacks or two flame blast attacks.",
       "Slam. Melee Weapon Attack: +12 to hit, reach 10 ft., one target. Hit: 18 (2d10 + 7) bludgeoning damage plus 18 (5d6) fire damage.",
@@ -710,7 +697,6 @@
       "• 5th level (2 slots): wall of stone",
       "• 6th level (1 slot): move earth"
     ],
-    "spells": "pass without trace, acid splash, blade ward, friends, light, message, mold earth, chromatic orb, mage armor, magic missile, Maximilian's earthen grasp, shatter, suggestion, counterspell, erupting earth, polymorph, stoneskin, wall of stone, move earth",
     "actions": [
       "Staff. Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 1) bludgeoning damage, or 5 (1d8 + 1) bludgeoning damage when used with two hands."
     ]
@@ -739,7 +725,6 @@
       "Magic Resistance. Ogremoch has advantage on saving throws against spells and other magical effects.",
       "Siege Monster. Ogremoch deals double damage to objects and structures with his melee and ranged weapon attacks."
     ],
-    "spells": "meld into stone, move earth, wall of stone",
     "actions": [
       "Multiattack. Ogremoch makes two slam attacks.",
       "Slam. Melee Weapon Attack: +14 to hit, reach 15 ft., one target. Hit: 30 (4d10 + 8) bludgeoning damage.",
@@ -779,7 +764,6 @@
       "Magic Resistance. Olhydra has advantage on saving throws against spells and other magical effects.",
       "Water Form. Olhydra can enter a hostile creature's space and stop there. She can move through a space as narrow as 1 inch wide without squeezing."
     ],
-    "spells": "wall of ice, ice storm, storm of vengeance",
     "actions": [
       "Multiattack. Olhydra makes two slam attacks or two water jet attacks.",
       "Slam. Melee Weapon Attack: +11 to hit, reach 10 ft., one target. Hit: 21 (3d10 + 5) bludgeoning damage, and the target is grappled (escape DC 19). Olhydra can grapple up to four targets. When Olhydra moves, all creatures she is grappling move with her.",
@@ -815,7 +799,6 @@
       "• 2nd level (3 slots): mirror image, misty step",
       "• 3rd level (2 slots): fear"
     ],
-    "spells": "chill touch, mage hand, fog cloud, mage armor, thunderwave, mirror image, misty step, fear",
     "actions": [
       "Dagger. Melee Weapon Attack: +4 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage.",
       "Eye of Frost. The one-eyed shiver casts ray of frost from its missing eye. If it hits, the target is also restrained. A target restrained in this way can end the condition by using an action, succeeding on a DC 13 Strength check."
@@ -844,7 +827,6 @@
       "• 3rd level (3 slots): animate dead, vampiric touch",
       "Swift Animation (Recharges after a Long Rest). When a living Medium or Small humanoid within 30 feet of Oreioth dies, he can use an action on his next turn to cast animate dead on that humanoid's corpse, instead of using the spell's normal casting time."
     ],
-    "spells": "chill touch, minor illusion, prestidigitation, shocking grasp, false life, mage armor, magic missile, ray of sickness, crown of madness, misty step, animate dead, vampiric touch",
     "actions": [
       "Dagger. Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 3 (1d4 + 1) piercing damage."
     ]
@@ -919,7 +901,6 @@
       "• 2nd level (3 slots): hold person, misty step",
       "• 3rd level (2 slots): tidal wave"
     ],
-    "spells": "shape water, create or destroy water, acid splash, chill touch, friends, prestidigitation, ray of frost, disguise self, mage armor, magic missile, hold person, misty step, tidal wave",
     "actions": [
       "Dagger. Melee or Ranged Weapon Attack: +3 to hit, reach 5 ft. or ranged 20/60 ft., one target. Hit: 3 (1d4 + 1) piercing damage."
     ]
@@ -944,7 +925,6 @@
       "• 2nd level (3 slots): gust of wind, invisibility",
       "• 3rd level (3 slots): fly, lightning bolt"
     ],
-    "spells": "blade ward, light, message, ray of frost, shocking grasp, feather fall, mage armor, witch bolt, gust of wind, invisibility, fly, lightning bolt",
     "actions": [
       "Dagger. Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 3 (1d4 + 1) piercing damage."
     ]
@@ -971,7 +951,6 @@
       "• 3rd level (3 slots): erupting earth, meld into stone",
       "• 4th level (1 slot): stoneskin"
     ],
-    "spells": "acid splash, blade ward, light, mending, mold earth, expeditious retreat, false life, shield, Maximilian's earthen grasp, shatter, erupting earth, meld into stone, stoneskin",
     "actions": [
       "Black Earth Rod. Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) bludgeoning damage. The Stonemelder can also expend a spell slot to deal extra damage, dealing 2d8 bludgeoning damage for a • 1st level slot, plus an additional 1d8 for each level of the slot above 1st."
     ]
@@ -996,7 +975,6 @@
       "• 2nd level (3 slots): levitate, misty step",
       "• 3rd level (2 slots): haste"
     ],
-    "spells": "friends, gust, light, message, ray of frost, expeditious retreat, feather fall, jump, levitate, misty step, haste",
     "actions": [
       "Multiattack. Thurl makes two melee attacks.",
       "Greatsword. Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) slashing damage.",
@@ -1028,7 +1006,6 @@
       "• 4th level (3 slots): wall of fire",
       "• 5th level (2 slots): dominate person"
     ],
-    "spells": "chill touch, fire bolt, friends, mage hand, message, produce flame, thaumaturgy, burning hands, chromatic orb, hellish rebuke, shield, darkness, detect thoughts, misty step, scorching ray, counterspell, fireball, hypnotic pattern, wall of fire, dominate person",
     "actions": [
       "Multiattack. Vanifer makes two attacks.",
       "Tinderstrike. Melee or Ranged Weapon Attack: +9 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 7 (1d4 + 5) piercing damage plus 7 (2d6) fire damage."
@@ -1076,7 +1053,6 @@
       "Spellcasting. Wiggan is a 4th-level spellcaster. His spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). He has the following cleric spells prepared:",
       "• Cantrips (at will): guidance, light, mending, shillelagh, thaumaturgy\n1st Level (4 slots): animal friendship, cure wounds, healing word, inflict wounds, speak with animals\n2nd Level (3 slots): barkskin, spike growth, spiritual weapon"
     ],
-    "spells": "guidance, light, mending, shillelagh, thaumaturgy, animal friendship, cure wounds, healing word, inflict wounds, speak with animals, barkskin, spike growth, spiritual weapon",
     "actions": [
       "Multiattack. Wiggan makes two attacks with his wooden cane.",
       "Wooden Cane. Melee Weapon Attack: +0 to hit (+4 to hit with shillelagh), reach 5 ft., one target. Hit: 1 (1d4-1) bludgeoning damage, or 6 (1d8 + 2) bludgeoning damage with shillelagh."
@@ -1104,7 +1080,6 @@
       "• 3rd level (3 slots): nondetection, sending, tongues",
       "• 4th level (2 slots): confusion, dimension door"
     ],
-    "spells": "friends, prestidigitation, vicious mockery, disguise self, dissonant whispers, thunderwave, invisibility, shatter, silence, nondetection, sending, tongues, confusion, dimension door",
     "actions": [
       "Multiattack. Windharrow makes two melee attacks.",
       "Rapier. Melee Weapon Attack: +5 to hit, reach 5 ft., one creature. Hit: 7 (1d8 + 3) piercing damage."
@@ -1135,7 +1110,6 @@
       "Legendary Resistance (3/Day). If Yan-C-Bin fails a saving throw, he can choose to succeed instead.",
       "Magic Resistance. Yan-C-Bin has advantage on saving throws against spells and other magical effects."
     ],
-    "spells": "gust of wind, invisibility, lightning bolt, chain lightning, cloudkill, haste",
     "actions": [
       "Multiattack. Yan-C-Bin makes two slam attacks.",
       "Slam. Melee Weapon Attack: +14 to hit, reach 10 ft., one target. Hit: 20 (3d8 + 7) force damage plus 10 (3d6) lightning damage.",

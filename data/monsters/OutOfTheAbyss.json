@@ -45,7 +45,6 @@
       "• 2nd level (3 slots): invisibility, spider climb",
       "• 3rd level (2 slots): blink, lightning bolt"
     ],
-    "spells": "acid splash, light, mage hand, message, ray of frost, burning hands, chromatic orb, sleep, invisibility, spider climb, blink, lightning bolt",
     "actions": [
       "Hooked Shortspear. Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 1 (1d4-1) piercing damage. If the target is a creature, the derro can choose to deal no damage and try to trip the target instead, in which case the target must succeed on a DC 9 Strength saving throw or fall prone.",
       "Light Repeating Crossbow. Ranged Weapon Attack: +4 to hit, range 40/160 ft., one target. Hit: 6 (1d8+2) piercing damage."
@@ -86,7 +85,6 @@
       "• 2nd level (3 slots): hold person, silence",
       "• 3rd level (2 slots): dispel magic, tongues"
     ],
-    "spells": "guidance, thaumaturgy, charm person, create or destroy water, hold person, silence, dispel magic, tongues",
     "actions": [
       "Bite. Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 1) piercing damage."
     ]
@@ -126,7 +124,6 @@
       "• 2nd level (3 slots): hold person, silence",
       "• 3rd level (2 slots): dispel magic, tongues"
     ],
-    "spells": "guidance, thaumaturgy, charm person, create or destroy water, hold person, silence, dispel magic, tongues",
     "actions": [
       "Vampiric Bite. Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 6 (1d8 + 2) piercing damage. The target must succeed on a DC 11 Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken, and the ixitxachitl regains hit points equal to that amount. The reduction lasts until the target finishes a long rest. The target dies if its hit point maximum is reduced to 0."
     ]
@@ -151,7 +148,6 @@
       "Duergar Resilience. The duergar has advantage on saving throws against poison, spells, and illusions, as well as to resist being charmed or paralyzed.",
       "Sunlight Sensitivity. While in sunlight, the duergar has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight."
     ],
-    "spells": "friends, mage hand, disguise self, sleep",
     "actions": [
       "Enlarge (Recharges after a Short or Long Rest). For 1 minute, the duergar magically increases in size, along with anything it is wearing or carrying. While enlarged, the duergar is Large, doubles its damage dice on Strength-based weapon attacks (included in the attacks), and makes Strength checks and Strength saving throws with advantage. If the duergar lacks the room to become Large, it attains the maximum size possible in the space available.",
       "War Pick. Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 6 (1d8 + 2) piercing damage, or 11 (2d8 + 2) piercing damage while enlarged.",
@@ -210,7 +206,6 @@
       "Duergar Resilience. The duergar has advantage on saving throws against poison, spells, and illusions, as well as to resist being charmed or paralyzed.",
       "Sunlight Sensitivity. While in sunlight, the duergar has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight."
     ],
-    "spells": "friends, message, command, guidance, mending, sacred flame, bane, inflict wounds, shield of faith, enhance ability, spiritual weapon",
     "actions": [
       "Enlarge (Recharges after a Short or Long Rest). For 1 minute, the duergar magically increases in size, along with anything it is wearing or carrying. While enlarged, the duergar is Large, doubles its damage dice on Strength-based weapon attacks (included in the attacks), and makes Strength checks and Strength saving throws with advantage. If the duergar lacks the room to become Large, it attains the maximum size possible in the space available.",
       "War Pick. Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 6 (1d8 + 2) piercing damage, or 11 (2d8 + 2) piercing damage while enlarged.",
@@ -238,7 +233,6 @@
       "• At will: blade ward, true strike",
       "• 1/day each: jump, hunter's mark"
     ],
-    "spells": "blade ward, true strike, jump, hunter's mark",
     "actions": [
       "Enlarge (Recharges after a Short or Long Rest). For 1 minute, the duergar magically increases in size, along with anything it is wearing or carrying. While enlarged, the duergar is Large, doubles its damage dice on Strength-based weapon attacks (included in the attacks), and makes Strength checks and Strength saving throws with advantage. If the duergar lacks the room to become Large, it attains the maximum size possible in the space available.",
       "Create Soulblade. The duergar creates a visible, shortword-sized blade of psionic energy. The weapon appears int he duergar's hand and vanishes if it leaves the duergar's grip, or if the duergar dies or is incapacitated.",
@@ -526,7 +520,6 @@
       "Magic Resistance. The derro has advantage on saving throws against spells and other magical effects.",
       "Sunlight Sensitivity. While in sunlight, the derro has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight."
     ],
-    "spells": "minor illusion, darkness, fear, shatter",
     "actions": [
       "Multiattack. Droki makes two attacks with his shortsword",
       "Shortsword. Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit:6 (1d6 + 3) piercing damage. The sword is coated with serpent venom that wears off after the first hit. A target subjected to the venom must make a DC 11 Constitution saving throw, taking 10 (3d6) poison damage on a failed save, or half as much damage on a successful one."
@@ -553,7 +546,6 @@
       "• 2nd level (3 slots): continual flame, hold person, magic weapon, spiritual weapon",
       "• 3rd level (3 slots): bestow curse, dispel magic, spirit guardian"
     ],
-    "spells": "guidance, light, sacred flame, thaumaturgy, cure wounds, divine favor, inflict wounds, protection from evil and good, shield of faith, continual flame, hold person, magic weapon, spiritual weapon, bestow curse, dispel magic, spirit guardian",
     "actions": [
       "Multiattack. Grisha makes two attacks with his +1 flail.",
       "+1 Flail. Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit:7 (1d8 + 3) bludgeoning damage"
@@ -582,7 +574,6 @@
       "Sunlight Sensitivity. While in sunlight, the derro has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.",
       "TODO: FIX num spells"
     ],
-    "spells": "eldritch blast, friends, poison spray, armor of agathys, charm person, hex, hold person, ray of enfeeblement, spider climb",
     "actions": [
       "Armor of Shadows (Recharges after a Short or Long Rest). Narrak casts mage armor on himself",
       "Shortsword. Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit:5 (1d6 + 2) piercing damage."
@@ -619,7 +610,6 @@
       "• 4th level (3 slots): blight, confusion",
       "• 5th level (1 slot): cloudkill"
     ],
-    "spells": "acid splash, light, mage hand, poison spray, prestidigitation, false life, mage armor, ray of sickness, shield, crown of madness, misty step, gaseous form, stinking cloud, blight, confusion, cloudkill",
     "actions": [
       "War Pick. Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit 4 (1d8) piercing damage.",
       "Change Shape. The Pudding King magically transforms into an ooze, or back into his true form. He reverts to his true form if he dies. Any equipment he is wearing or carrying is absorbed by the new form. In ooze form, the Pudding King retains his alignment, hit points, Hit Dice, and Intelligence, Wisdom, and Charisma scores, as well as this action. His statistics and capabilities are otherwise replaced by those of the new form.",
@@ -724,7 +714,6 @@
       "Magic Weapon. Demogorgon's weapon attacks are magical",
       "Two Heads. Demogorgon has advantage on saving throws against being blinded, defened, stunned, and knocked unconscious."
     ],
-    "spells": "detect magic, major image, dispel magic, fear, telekinesis, feeblemind, project image",
     "actions": [
       "Multiattack. Demogorgon makes two tentacle attacks.",
       "Tentacle. Melee Weapon Attack: +17 to hit, reach 10 ft., one target. Hit: 35 (4d12 + 9) bludgeoning damage. If the target is a creature, it must succeed on a DC 23 Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if its hit point maximum is reduced to 0.",
@@ -767,7 +756,6 @@
       "Magic Weapon. Fraz-Urb'luu's weapon attacks are magical.",
       "Undetectable. Fraz-Urb'luu can't be targeted by divination magic, perceived through magical scrying sensors, or detected by abilities that sense demons or fiends."
     ],
-    "spells": "alter self, detect magic, dispel magic, phantasamal force, confusion, dream, mislead, programmed illusion, seeming, mirage arcane, modify memory, project image",
     "actions": [
       "Multiattack. Fraz-Urb'luu makes three attacks: one with his bite and two with his fists.",
       "Bite. Melee Weapon Attack: +16 to hit, reach 10 ft., one target. Hit: 23 (4d6 + 9) piercing damage.",
@@ -806,7 +794,6 @@
       "Magic Resistance. Graz'zt has advantage on saving throws against spell and other magic effects.",
       "Magic Weapon. Graz'zt's weapon attacks are magical."
     ],
-    "spells": "charm person, crown of madness, detect magic, dispel magic, dissonant whispers, counterspell, darkness, dominate person, sanctuary, telekinesis, teleport, dominate monster, greater invisibility",
     "actions": [
       "Multiattack. Graz'zt attacks twice with the Wave of Sorrow.",
       "Wave of Sorrow (Greatsword). Melee Weapon Attack: +13 to hit, reach 10 ft., one target, Hit; 20 (4d6 + 6) slashing damage plus 14 (4d6) acid damage.",
@@ -848,7 +835,6 @@
       "Regeneration. Juiblex regains 20 hit points at the start of its turn. If it takes fire or radiant damage, this trait doesn't function at the start of its next turn. Juiblex dies only if it starts its turn with 0 hit points and doesn't regenerate.",
       "Spider Climb. Juiblex can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check."
     ],
-    "spells": "acid splash, detect magic, blight, contagion, gaseous form",
     "actions": [
       "Multiattack. Juiblex makes three acid lash attacks.",
       "Acid Lash. Melee Weapon Attack: +14 to hit, reach 10 ft., one target. Hit: 21 (4d6 + 7) acid damage. Any creature killed by this attack is drawn into Juiblex's body, and the corpse is obliterated after 1 minute.",
@@ -889,7 +875,6 @@
       "Magic Weapon. Orcus's weapon attacks are magical.",
       "Master of Undeath. When Orcus casts animate dead or create undead, he chooses the level at which the spell is cast, and the creatures created by the spells remain under his control indefinitely. Additionally, he can cast create undead even when it isn't night."
     ],
-    "spells": "chill touch, detect magic, create undead, dispel magic, time stop",
     "actions": [
       "Multiattack. Orcus makes two Wand of Orcus attacks.",
       "Wand of Orcus. Melee Weapon Attack: +19 to hit, reach 10 ft., one target. Hit: 21 (3d8 + 8) bludgeoning damage plus 13 (2d12) necrotic damage.",
@@ -929,7 +914,6 @@
       "Magic Weapon. Yeenoghu's weapon attacks are magical.",
       "Rampage. When Yeenoghu reduces a creature to 0 hit points with a melee attack on his turn, Yeenoghu can take a bonus action to move up to half his speed and make a bite attack."
     ],
-    "spells": "detect magic, spiritual weapon, dispel magic, fear, invisibility, teleport",
     "actions": [
       "Multiattack. Yeenoghu makes three flail attacks. If an attack hits, he can cause it to create an additional effect of his choice or at random (each effect can be used only once per Multi attack):\nThe attack deals an extra 13 (2d12) bludgeoning damage.\nThe target must succeed on a DC 17 Constitution saving throw or be paralyzed until the start of Yeenoghu's next turn.\nThe target must succeed on a DC 17 Wisdom saving throw or be affected by the confusion spell until the start of Yeenoghu's next turn.",
       "Flail. Melee Weapon Attack: +16 to hit, reach 15 ft., one target. Hit: 22 (2d12 + 9) bludgeoning damage.",
@@ -968,7 +952,6 @@
       "Magic Resistance. Zuggtmoy has advantage on saving throws against spells and other magical effects.",
       "Magic Weapon. Zuggtmoy's weapon attacks are magical."
     ],
-    "spells": "detect magic, locate animals or plants, ray of sickness, dispel magic, ensnaring strike, entangle, plant growth, etherealness, teleport",
     "actions": [
       "Multiattack. Zuggtmoy makes four pseudopod attacks.",
       "Pseudopod. Melee Weapon Attack: +13 to hit, reach 10 ft., one target. Hit: 15 (2d8 + 6) bludgeoning damage plus 9 (2d8) poison damage.",

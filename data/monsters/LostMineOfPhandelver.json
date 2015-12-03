@@ -19,7 +19,6 @@
       "• 1st level (4 slots): charm person, magic missile",
       "• 2nd level (3 slots): hold person, misty step"
     ],
-    "spells": "light, mage hand, shocking grasp, charm person, magic missile, hold person, misty step",
     "actions": [
       "Quarterstaff. Melee Weapon Attack: +1 to hit, reach 5 ft., one target.  Hit: 3 (1d8-1) bludgeoning damage."
     ]
@@ -73,7 +72,6 @@
       "• 1st level (4 slots): mage armor, magic missile, shield",
       "• 2nd level (3 slots): invisibility, suggestion"
     ],
-    "spells": "dancing lights, darkness, faerie fire, mage hand, ray of frost, shocking grasp, mage armor, magic missile, shield, invisibility, suggestion",
     "actions": [
       "Spider Staff. Melee Weapon Attack: +1 to hit, reach 5 ft., one target. Hit: 2 (1d6-1) bludgeoning damage plus 3 (1d6) poison damage."
     ]

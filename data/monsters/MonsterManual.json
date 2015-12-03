@@ -108,7 +108,6 @@
       "• Cantrips (at will): light, sacred flame, thaumaturgy",
       "• 1st level (3 slots): bless, cure wounds, sanctuary"
     ],
-    "spells": "light, sacred flame, thaumaturgy, bless, cure wounds, sanctuary",
     "actions": [
       "Club. Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 2 (1d4) bludgeoning damage."
     ]
@@ -1106,7 +1105,6 @@
       "• 5th level (2 slots): flame strike, greater restoration",
       "• 6th level (1 slot): heroes' feast"
     ],
-    "spells": "sacred flame, spare the dying, thaumaturgy, command, detect evil and good, detect magic, lesser restoration, zone of truth, dispel magic, tongues, banishment, freedom of movement, flame strike, greater restoration, heroes' feast",
     "actions": [
       "Multiattack. The sphinx makes two claw attacks.",
       "Claw. Melee Weapon Attack: +12 to hit, reach 5 ft., one target. Hit: 17 (2d10 + 6) slashing damage.",
@@ -1232,7 +1230,6 @@
       "• 7th level (1 slot): finger of death",
       "• 8th level (1 slot): mind blank"
     ],
-    "spells": "alter self, darkness, heat metal, invisibility, magic missile, fire bolt, mage hand, minor illusion, prestidigitation, detect magic, identify, shield, Tenser's floating disk, detect thoughts, mirror image, phantasmal force, suggestion, counterspell, fear, fireball, banishment, dimension door, contact other plane, hold monster, chain lightning, finger of death, mind blank",
     "actions": [
       "Claws. Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 8 (2d4 + 3) slashing damage. The target must make a DC 14 Constitution saving throw, taking 10 (3d6) poison damage on a failed save, or half as much damage on a successful one.",
       "Teleport. The arcanaloth magically teleports, along with any equipment it is wearing or carrying, up to 60 feet to an unoccupied space it can see.",
@@ -1269,7 +1266,6 @@
       "• 9th level (1 slot): time stop",
       "* The archmage casts these spells on itself before combat."
     ],
-    "spells": "fire bolt, light, mage hand, prestidigitation, shocking grasp, detect magic, identify, mage armor, magic missile, detect thoughts, mirror image, misty step, counterspell, fly, lightning bolt, banishment, fire shield, stoneskin, cone of cold, scrying, wall of force, globe of invulnerability, teleport, mind blank, time stop",
     "actions": [
       "Dagger. Melee or Ranged Weapon Attack: +6 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage."
     ]
@@ -1583,7 +1579,6 @@
       "Reckless. At the start of its turn, the barlgura can gain advantage on all melee weapon attack rolls it makes during that turn, but attack rolls against it have advantage until the start of its next turn.",
       "Running Leap. The barlgura's long jump is up to 40 feet and its high jump is up to 20 feet when it has a running start."
     ],
-    "spells": "entangle, phantasmal force, disguise self, invisibility",
     "actions": [
       "Multiattack. The barlgura makes three attacks: one with its bite and two with its fists.",
       "Bite. Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) piercing damage.",
@@ -2008,7 +2003,6 @@
       "• 2nd level (3 slots): calm emotions, hold person",
       "• 3rd level (2 slots): bestow curse"
     ],
-    "spells": "mending, sacred flame, thaumaturgy, command, shield of faith, calm emotions, hold person, bestow curse",
     "actions": [
       "Bite. Melee Weapon Attack: +5 to hit, reach 10 ft., one creature. Hit: 10 (2d6 + 3) piercing damage plus 10 (3d6) poison damage."
     ]
@@ -2034,7 +2028,6 @@
       "• 2nd level (3 slots): detect thoughts, hold person",
       "• 3rd level (2 slots): lightning bolt"
     ],
-    "spells": "mage hand, minor illusion, ray of frost, charm person, sleep, detect thoughts, hold person, lightning bolt",
     "actions": [
       "Bite. Melee Weapon Attack: +5 to hit, reach 10 ft., one creature. Hit: 10 (2d6 + 3) piercing damage plus 10 (3d6) poison damage."
     ]
@@ -2219,7 +2212,6 @@
       "• 3/day each: alter self, command, detect magic",
       "• 1/day: plane shift (self only)"
     ],
-    "spells": "alter self, command, detect magic, plane shift",
     "actions": [
       "Multiattack. The cambion makes two melee attacks or uses its Fire Ray twice.",
       "Spear. Melee or Ranged Weapon Attack: +7 to hit, reach 5 ft. or range 20/60 ft ., one target. Hit: 7 (1d6 + 4) piercing damage, or 8 (1d8 + 4) piercing damage if used with two hands to make a melee attack, plus 3 (1d6) fire damage.",
@@ -2499,7 +2491,6 @@
       "• 3/day each: feather fall, fly, misty step, telekinesis",
       "• 1/day each: control weather, gaseous form"
     ],
-    "spells": "detect magic, fog cloud, light, feather fall, fly, misty step, telekinesis, control weather, gaseous form",
     "actions": [
       "Multiattack. The giant makes two morningstar attacks.",
       "Morningstar. Melee Weapon Attack: +12 to hit, reach 10 ft., one target. Hit: 21 (3d8 + 8) piercing damage.",
@@ -2597,7 +2588,6 @@
       "Magic Weapons. The couatl's weapon attacks are magical.",
       "Shielded Mind. The couatl is immune to scrying and to any effect that would sense its emotions, read its thoughts, or detect its location."
     ],
-    "spells": "detect evil and good, detect magic, detect thoughts, bless, create food and water, cure wounds, lesser restoration, protection from poison, sanctuary, shield, dream, greater restoration, scrying",
     "actions": [
       "Bite. Melee Weapon Attack: +8 to hit, reach 5 ft., one creature. Hit: 8 (1d6 + 5) piercing damage, and the target must succeed on a DC 13 Constitution saving throw or be poisoned for 24 hours. Until this poison ends, the target is unconscious. Another creature can use an action to shake the target awake.",
       "Constrict. Melee Weapon Attack: +6 to hit, reach 10 ft., one Medium or smaller creature. Hit: 10 (2d6 + 3) bludgeoning damage, and the target is grappled (escape DC 15). Until this grapple ends, the target is restrained, and the couatl can't constrict another target.",
@@ -2681,7 +2671,6 @@
       "• 1st level (4 slots): command, inflict wounds, shield of faith",
       "• 2nd level (3 slots): hold person, spiritual weapon"
     ],
-    "spells": "light, sacred flame, thaumaturgy, command, inflict wounds, shield of faith, hold person, spiritual weapon",
     "actions": [
       "Multiattack. The fanatic makes two melee attacks.",
       "Dagger. Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 20/60 ft., one creature. Hit: 4 (1d4 + 2) piercing damage."
@@ -2752,7 +2741,6 @@
       "Sure-Footed. The dao has advantage on Strength and Dexterity saving throws made against effects that would knock it prone.",
       "Variant: Genie Powers. Genies have a variety of magical capabilities, including spells. A few have even greater powers that allow them to alter their appearance or the nature of reality.\nDisguises. Some genies can veil themselves in illusion to pass as other similarly shaped creatures. Such genies can innately cast the disguise self spell at will, often with a longer duration than is normal for that spell. Mightier genies can cast the true polymorph spell one to three times per day, possibly with a longer duration than normal. Such genies can change only their own shape, but a rare few can use the spell on other creatures and objects as well.\nWishes. The genie power to grant wishes is legendary among mortals. Only the most potent genies, such as those among the nobility, can do so. A particular genie that has this power can grant one to three wishes to a creature that isn't a genie. Once a genie has granted its limit of wishes, it can't grant wishes again for some amount of time (usually 1 year). and cosmic law dictates that the same genie can expend its limit of wishes on a specific creature only once in that creature's existence.\nTo be granted a wish, a creature within 60 feet of the genie states a desired effect to it. The genie can then cast the wish spell on the creature's behalf to bring about the effect. Depending on the genie's nature, the genie might try to pervert the intent of the wish by exploiting the wish's poor wording. The perversion of the wording is usually crafted to be to the genie's benefit."
     ],
-    "spells": "detect evil and good, detect magic, stone shape, passwall, move earth, tongues, conjure elemental, gaseous form, invisibility, phantasmal killer, plane shift, wall of stone",
     "actions": [
       "Multiattack. The Dao makes two fist attacks or two maul attacks.",
       "Fist. Melee Weapon Attack: +10 to hit, reach 5 ft., one target. Hit: 15 (2d8 + 6) bludgeoning damage.",
@@ -2825,7 +2813,6 @@
       "• 4th level (3 slots): banishment, staggering smite",
       "• 5th level (2 slots): destructive wave (necrotic)"
     ],
-    "spells": "command, compelled duel, searing smite, hold person, magic weapon, dispel magic, elemental weapon, banishment, staggering smite, destructive wave",
     "actions": [
       "Multiattack. The death knight makes three longsword attacks.",
       "Longsword. Melee Weapon Attack: +11 to hit, reach 5 ft., one target. Hit: 9 (1d8 + 5) slashing damage, or 10 (1d10 + 5) slashing damage if used with two hands, plus 18 (4d8) necrotic damage.",
@@ -2857,7 +2844,6 @@
       "Regeneration. The slaad regains 10 hit points at the start of its turn if it has at least 1 hit point.",
       "Variant: Control Gem. Implanted in the slaad's brain is a magic control gem. The slaad must obey whoever possesses the gem and is immune to being charmed while so controlled.\nCertain spells can be used to acquire the gem. If the slaad fails its saving throw against imprisonment, the spell can transfer the gem to the spellcaster's open hand, instead of imprisoning the slaad. A wish spell, if cast in the slaad's presence, can be worded to acquire the gem.\nA greater restoration spell cast on the slaad destroys the gem without harming the slaad.\nSomeone who is proficient in Wisdom (Medicine) can remove the gem from an incapacitated slaad. Each try requires 1 minute of uninterrupted work and a successful DC 20 Wisdom (Medicine) check. Each failed attempt deals 22 (4d10) psychic damage to the slaad."
     ],
-    "spells": "detect magic, detect thoughts, invisibility, mage hand, major image, fear, fireball, fly, tongues, cloudkill, plane shift",
     "actions": [
       "Multiattack. The slaad makes three attacks: one with its bite and two with its claws or greatsword.",
       "Bite (Slaad Form Only). Melee Weapon Attack: +9 to hit, reach 5 ft., one target. Hit: 9 (1d8 + 5) piercing damage plus 7 (2d6) necrotic damage.",
@@ -2933,7 +2919,6 @@
       "• At will: nondetection (self only)",
       "• 1/day each: blindness/deafness, blur, disguise self"
     ],
-    "spells": "nondetection, blindness/deafness, blur, disguise self",
     "actions": [
       "War Pick. Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 6 (1d8 + 2) piercing damage.",
       "Poisoned Dart. Ranged Weapon Attack: +4 to hit, range 30/120 ft., one creature. Hit: 4 (1d4 + 2) piercing damage, and the target must succeed on a DC 12 Constitution saving throw or be poisoned for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success"
@@ -3019,7 +3004,6 @@
       "• 1/day each: commune, raise dead",
       "Magic Resistance. The deva has advantage on saving throws against spells and other magical effects."
     ],
-    "spells": "detect evil and good, commune, raise dead",
     "actions": [
       "Multiattack. The deva makes two melee attacks.",
       "Mace. Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 7 (1d6 + 4) bludgeoning damage plus 18 (4d8) radiant damage.",
@@ -3088,7 +3072,6 @@
       "• 1/day each: conjure elemental (air elemental only), creation, gaseous form, invisibility, major image, plane shift",
       "Variant: Genie Powers. Genies have a variety of magical capabilities, including spells. A few have even greater powers that allow them to alter their appearance or the nature of reality.\nDisguises. Some genies can veil themselves in illusion to pass as other similarly shaped creatures. Such genies can innately cast the disguise self spell at will, often with a longer duration than is normal for that spell. Mightier genies can cast the true polymorph spell one to three times per day, possibly with a longer duration than normal. Such genies can change only their own shape, but a rare few can use the spell on other creatures and objects as well.\nWishes. The genie power to grant wishes is legendary among mortals. Only the most potent genies, such as those among the nobility, can do so. A particular genie that has this power can grant one to three wishes to a creature that isn't a genie. Once a genie has granted its limit of wishes, it can't grant wishes again for some amount of time (usually 1 year). and cosmic law dictates that the same genie can expend its limit of wishes on a specific creature only once in that creature's existence.\nTo be granted a wish, a creature within 60 feet of the genie states a desired effect to it. The genie can then cast the wish spell on the creature's behalf to bring about the effect. Depending on the genie's nature, the genie might try to pervert the intent of the wish by exploiting the wish's poor wording. The perversion of the wording is usually crafted to be to the genie's benefit."
     ],
-    "spells": "detect evil and good, detect magic, thunderwave, create food and water, tongues, wind walk, conjure elemental, creation, gaseous form, invisibility, major image, plane shift",
     "actions": [
       "Multiattack. The djinni makes three scimitar attacks.",
       "Scimitar. Melee Weapon Attack: +9 to hit, reach 5 ft., one target. Hit: 12 (2d6 + 5) slashing damage plus 3 (1d6) lightning or thunder damage (djinni's choice).",
@@ -3204,7 +3187,6 @@
       "Sunlight Sensitivity. While in sunlight, the drider has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.",
       "Web Walker. The drider ignores movement restrictions caused by webbing."
     ],
-    "spells": "dancing lights, darkness, faerie fire",
     "actions": [
       "Multiattack. The drider makes three attacks, either with its longsword or its longbow. It can replace one of those attacks with a bite attack.",
       "Bite. Melee Weapon Attack: +6 to hit, reach 5 ft., one creature. Hit: 2 (1d4) piercing damage plus 9 (2d8) poison damage.",
@@ -3239,8 +3221,7 @@
       "• 2nd level (3 slots): hold person, silence",
       "• 3rd level (3 slots): clairvoyance, dispel magic",
       "• 4th level (2 slots): divination,freedom of movement"
-    ],
-    "spells": "dancing lights, darkness, faerie fire, poison spray, thaumaturgy, bane, detect magic, sanctuary, hold person, silence, clairvoyance, dispel magic, divination, freedom of movement"
+    ]
   },
   {
     "name": "Drow",
@@ -3262,7 +3243,6 @@
       "• 1/day each: darkness, faerie fire",
       "Sunlight Sensitivity. While in sunlight, the drow has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight."
     ],
-    "spells": "dancing lights, darkness, faerie fire",
     "actions": [
       "Shortsword. Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) piercing damage.",
       "Hand Crossbow. Ranged Weapon Attack: +4 to hit, range 30/120 ft., one target. Hit: 5 (1d6 + 2) piercing damage, and the target must succeed on a DC 13 Constitution saving throw or be poisoned for 1 hour. If the saving throw fails by 5 or more, the target is also unconscious while poisoned in this way. The target wakes up if it takes damage or if another creature takes an action to shake it awake."
@@ -3289,7 +3269,6 @@
       "• 1/day each: darkness, faerie fire, levitate (self only)",
       "Sunlight Sensitivity. While in sunlight, the drow has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight."
     ],
-    "spells": "dancing lights, darkness, faerie fire, levitate",
     "actions": [
       "Multiattack. The drow makes two shortsword attacks.",
       "Shortsword. Melee Weapon Attack: +7 to hit, reach 10 ft., one target. Hit: 7 (1d6 + 4) piercing damage plus 10 (3d6) poison damage.",
@@ -3323,7 +3302,6 @@
       "• 5th level (2 slots): cloudkill",
       "Sunlight Sensitivity. While in sunlight, the drow has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight."
     ],
-    "spells": "dancing lights, darkness, faerie fire, levitate, mage hand, minor illusion, poison spray, ray of frost, mage armor, magic missile, shield, witch bolt, alter self, misty step, web, fly, lightning bolt, Evard's black tentacles, greater invisibility, cloudkill",
     "actions": [
       "Staff. Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 2 (1d6-1) bludgeoning damage, or 3 (1d8-1) bludgeoning damage if used with two hands, plus 3 (1d6) poison damage.",
       "Summon Demon (1/Day). The drow magically summons a quasit, or attempts to summon a shadow demon with a 50 percent chance of success. The summoned demon appears in an unoccupied space within 60 feet of its summoner, acts as an ally of its summoner, and can't summon other demons. It remains for 10 minutes, until it or its summoner dies, or until its summoner dismisses it as an action."
@@ -3357,7 +3335,6 @@
       "• 5th level (2 slots): insect plague, mass cure wounds",
       "Sunlight Sensitivity. While in sunlight, the drow has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight."
     ],
-    "spells": "dancing lights, darkness, faerie fire, levitate, guidance, poison spray, resistance, spare the dying, thaumaturgy, animal friendship, cure wounds, detect poison and disease, ray of sickness, lesser restoration, protection from poison, web, conjure animals, dispel magic, divination, freedom of movement, insect plague, mass cure wounds",
     "actions": [
       "Multiattack. The drow makes two scourge attacks.",
       "Scourge. Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) piercing damage plus 17 (5d6) poison damage.",
@@ -3383,7 +3360,6 @@
       "• 1st level (4 slots): entangle, longstrider, speak with animals, thunderwave",
       "• 2nd level (3 slots): animal messenger, barkskin"
     ],
-    "spells": "druidcraft, produce flame, shillelagh, entangle, longstrider, speak with animals, thunderwave, animal messenger, barkskin",
     "actions": [
       "Quarterstaff. Melee Weapon Attack: +2 to hit (+4 to hit with shillelagh), reach 5 ft., one target. Hit: 3 (1d6) bludgeoning damage, or 4 (1d8) bludgeoning damage with shillelagh or if wielded with two hands."
     ]
@@ -3410,7 +3386,6 @@
       "Speak with Beasts and Plants. The dryad can communicate with beasts and plants as if they shared a language.",
       "Tree Stride. Once on her turn, the dryad can use 10 ft. of her movement to step magically into one living tree within her reach and emerge from a second living tree within 60 ft. of the first tree, appearing in an unoccupied space within 5 ft. of the second tree. Both trees must be large or bigger."
     ],
-    "spells": "druidcraft, entangle, goodberry, barkskin, pass without trace, shillelagh",
     "actions": [
       "Club. Melee Weapon Attack: +2 to hit (+6 to hit with shillelagh), reach 5 ft., one target. Hit: 2 (1 d4) bludgeoning damage, or 8 (1d8 + 4) bludgeoning damage with shillelagh.",
       "Fey Charm. The dryad targets one humanoid or beast that she can see within 30 feet of her. If the target can see the dryad, it must succeed on a DC 14 Wisdom saving throw or be magically charmed. The charmed creature regards the dryad as a trusted friend to be heeded and protected. Although the target isn't under the dryad's control, it takes the dryad's requests or actions in the most favorable way it can.\nEach time the dryad or its allies do anything harmful to the target, it can repeat the saving throw, ending the effect on itself on a success. Otherwise, the effect lasts 24 hours or until the dryad dies, is on a different plane of existence from the target, or ends the effect as a bonus action. If a target's saving throw is successful, the target is immune to the dryad's Fey Charm for the next 24 hours.\nThe dryad can have no more than one humanoid and up to three beasts charmed at a time."
@@ -3482,7 +3457,6 @@
       "Death Burst. When the mephit dies, it explodes in a burst of dust. Each creature within 5 ft. of it must then succeed on a DC 10 Constitution saving throw or be blinded for 1 minute. A blinded creature can repeat the saving throw on each of its turns, ending the effect on itself on a success.",
       "Innate Spellcasting (1/Day). The mephit can innately cast sleep, requiring no material components. Its innate spellcasting ability is Charisma."
     ],
-    "spells": "sleep",
     "actions": [
       "Claws. Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 4 (1d4 + 2) slashing damage.",
       "Blinding Breath (Recharge 6). The mephit exhales a 15-foot cone of blinding dust. Each creature in that area must succeed on a DC 10 Dexterity saving throw or be blinded for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
@@ -3554,7 +3528,6 @@
       "• 1/day each: conjure elemental (fire elemental only), gaseous form, invisibility, major image, plane shift, wall of fire",
       "Variant: Genie Powers. Genies have a variety of magical capabilities, including spells. A few have even greater powers that allow them to alter their appearance or the nature of reality.\nDisguises. Some genies can veil themselves in illusion to pass as other similarly shaped creatures. Such genies can innately cast the disguise self spell at will, often with a longer duration than is normal for that spell. Mightier genies can cast the true polymorph spell one to three times per day, possibly with a longer duration than normal. Such genies can change only their own shape, but a rare few can use the spell on other creatures and objects as well.\nWishes. The genie power to grant wishes is legendary among mortals. Only the most potent genies, such as those among the nobility, can do so. A particular genie that has this power can grant one to three wishes to a creature that isn't a genie. Once a genie has granted its limit of wishes, it can't grant wishes again for some amount of time (usually 1 year). and cosmic law dictates that the same genie can expend its limit of wishes on a specific creature only once in that creature's existence.\nTo be granted a wish, a creature within 60 feet of the genie states a desired effect to it. The genie can then cast the wish spell on the creature's behalf to bring about the effect. Depending on the genie's nature, the genie might try to pervert the intent of the wish by exploiting the wish's poor wording. The perversion of the wording is usually crafted to be to the genie's benefit."
     ],
-    "spells": "detect magic, enlarge/reduce, tongues, conjure elemental, gaseous form, invisibility, major image, plane shift, wall of fire",
     "actions": [
       "Multiattack. The efreeti makes two scimitar attacks or uses its Hurl Flame twice.",
       "Scimitar. Melee Weapon Attack: +10 to hit, reach 5 ft., one target. Hit: 13 (2d6 + 6) slashing damage plus 7 (2d6) fire damage.",
@@ -3622,7 +3595,6 @@
       "Magic Resistance. The empyrean has advantage on saving throws against spells and other magical effects.",
       "Magic Weapons. The empyrean's weapon attacks are magical."
     ],
-    "spells": "greater restoration, pass without trace, water breathing, water walk, commune, dispel evil and good, earthquake, fire storm, plane shift",
     "actions": [
       "Maul. Melee Weapon Attack: +17 to hit, reach 10 ft., one target. Hit: 31 (6d6 + 10) bludgeoning damage. If the target is a creature, it must succeed on a DC 15 Constitution saving throw or be stunned until the end of the empyrean's next turn.",
       "Bolt. Ranged Spell Attack: +15 to hit, range 600 ft., one target. Hit: 24 (7d6) damage of one of the following types (empyrean's choice): acid, cold, fire, force, lightning, radiant, or thunder."
@@ -3730,7 +3702,6 @@
       "Innate Spellcasting. The dragon's innate spellcasting ability is Charisma (spell save DC 13). It can innately cast a number of spells, requiring no material components. As the dragon ages and changes color, it gains additional spells as shown below.",
       "• 1/day each: color spray, dancing lights, mage hand, major image, minor illusion, mirror image, suggestion"
     ],
-    "spells": "color spray, dancing lights, mage hand, major image, minor illusion, mirror image, suggestion",
     "actions": [
       "Bite. Melee Weapon Attack: +7 to hit, reach 5 ft., one creature. Hit: 1 piercing damage.",
       "Euphoria Breath (Recharge 5-6). The dragon exhales a puff of euphoria gas at one creature within 5 feet of it. The target must succeed on a DC 11 Wisdom saving throw, or for 1 minute, the target can't take reactions and must roll a d6 at the start of each of its turns to determine its behavior during the turn:\n1-4. The target takes no action or bonus action and uses all of its movement to move in a random direction.\n5-6. The target doesn't move, and the only thing it can do on its turn is make a DC 11 Wisdom saving throw, ending the effect on itself on a success."
@@ -3757,7 +3728,6 @@
       "Innate Spellcasting. The dragon's innate spellcasting ability is Charisma (spell save DC 13). It can innately cast a number of spells, requiring no material components. As the dragon ages and changes color, it gains additional spells as shown below.",
       "• 1/day each: color spray, dancing lights, mage hand, minor illusion, mirror image, suggestion"
     ],
-    "spells": "color spray, dancing lights, mage hand, minor illusion, mirror image, suggestion",
     "actions": [
       "Bite. Melee Weapon Attack: +7 to hit, reach 5 ft., one creature. Hit: 1 piercing damage.",
       "Euphoria Breath (Recharge 5-6). The dragon exhales a puff of euphoria gas at one creature within 5 feet of it. The target must succeed on a DC 11 Wisdom saving throw, or for 1 minute, the target can't take reactions and must roll a d6 at the start of each of its turns to determine its behavior during the turn:\n1-4. The target takes no action or bonus action and uses all of its movement to move in a random direction.\n5-6. The target doesn't move, and the only thing it can do on its turn is make a DC 11 Wisdom saving throw, ending the effect on itself on a success."
@@ -3784,7 +3754,6 @@
       "Innate Spellcasting. The dragon's innate spellcasting ability is Charisma (spell save DC 13). It can innately cast a number of spells, requiring no material components. As the dragon ages and changes color, it gains additional spells as shown below.",
       "• 1/day each: color spray, dancing lights, hallucinatory terrain, mage hand, major image, minor illusion, mirror image, suggestion"
     ],
-    "spells": "color spray, dancing lights, hallucinatory terrain, mage hand, major image, minor illusion, mirror image, suggestion",
     "actions": [
       "Bite. Melee Weapon Attack: +7 to hit, reach 5 ft., one creature. Hit: 1 piercing damage.",
       "Euphoria Breath (Recharge 5-6). The dragon exhales a puff of euphoria gas at one creature within 5 feet of it. The target must succeed on a DC 11 Wisdom saving throw, or for 1 minute, the target can't take reactions and must roll a d6 at the start of each of its turns to determine its behavior during the turn:\n1-4. The target takes no action or bonus action and uses all of its movement to move in a random direction.\n5-6. The target doesn't move, and the only thing it can do on its turn is make a DC 11 Wisdom saving throw, ending the effect on itself on a success."
@@ -3811,7 +3780,6 @@
       "Innate Spellcasting. The dragon's innate spellcasting ability is Charisma (spell save DC 13). It can innately cast a number of spells, requiring no material components. As the dragon ages and changes color, it gains additional spells as shown below.",
       "• 1/day each:color spray, dancing lights, mage hand, minor illusion"
     ],
-    "spells": "color spray, dancing lights, mage hand, minor illusion",
     "actions": [
       "Bite. Melee Weapon Attack: +7 to hit, reach 5 ft., one creature. Hit: 1 piercing damage.",
       "Euphoria Breath (Recharge 5-6). The dragon exhales a puff of euphoria gas at one creature within 5 feet of it. The target must succeed on a DC 11 Wisdom saving throw, or for 1 minute, the target can't take reactions and must roll a d6 at the start of each of its turns to determine its behavior during the turn:\n1-4. The target takes no action or bonus action and uses all of its movement to move in a random direction.\n5-6. The target doesn't move, and the only thing it can do on its turn is make a DC 11 Wisdom saving throw, ending the effect on itself on a success."
@@ -3838,7 +3806,6 @@
       "Innate Spellcasting. The dragon's innate spellcasting ability is Charisma (spell save DC 13). It can innately cast a number of spells, requiring no material components. As the dragon ages and changes color, it gains additional spells as shown below.",
       "• 1/day each: dancing lights, mage hand, minor illusion"
     ],
-    "spells": "dancing lights, mage hand, minor illusion",
     "actions": [
       "Bite. Melee Weapon Attack: +7 to hit, reach 5 ft., one creature. Hit: 1 piercing damage.",
       "Euphoria Breath (Recharge 5-6). The dragon exhales a puff of euphoria gas at one creature within 5 feet of it. The target must succeed on a DC 11 Wisdom saving throw, or for 1 minute, the target can't take reactions and must roll a d6 at the start of each of its turns to determine its behavior during the turn:\n1-4. The target takes no action or bonus action and uses all of its movement to move in a random direction.\n5-6. The target doesn't move, and the only thing it can do on its turn is make a DC 11 Wisdom saving throw, ending the effect on itself on a success."
@@ -3865,7 +3832,6 @@
       "Innate Spellcasting. The dragon's innate spellcasting ability is Charisma (spell save DC 13). It can innately cast a number of spells, requiring no material components. As the dragon ages and changes color, it gains additional spells as shown below.",
       "• 1/day each: color spray, dancing lights, hallucinatory terrain, mage hand, major image, minor illusion, mirror image, polymorph, suggestion"
     ],
-    "spells": "color spray, dancing lights, hallucinatory terrain, mage hand, major image, minor illusion, mirror image, polymorph, suggestion",
     "actions": [
       "Bite. Melee Weapon Attack: +7 to hit, reach 5 ft., one creature. Hit: 1 piercing damage.",
       "Euphoria Breath (Recharge 5-6). The dragon exhales a puff of euphoria gas at one creature within 5 feet of it. The target must succeed on a DC 11 Wisdom saving throw, or for 1 minute, the target can't take reactions and must roll a d6 at the start of each of its turns to determine its behavior during the turn:\n1-4. The target takes no action or bonus action and uses all of its movement to move in a random direction.\n5-6. The target doesn't move, and the only thing it can do on its turn is make a DC 11 Wisdom saving throw, ending the effect on itself on a success."
@@ -3892,7 +3858,6 @@
       "Innate Spellcasting. The dragon's innate spellcasting ability is Charisma (spell save DC 13). It can innately cast a number of spells, requiring no material components. As the dragon ages and changes color, it gains additional spells as shown below.",
       "• 1/day each: color spray, dancing lights, mage hand, minor illusion, mirror image"
     ],
-    "spells": "color spray, dancing lights, mage hand, minor illusion, mirror image",
     "actions": [
       "Bite. Melee Weapon Attack: +7 to hit, reach 5 ft., one creature. Hit: 1 piercing damage.",
       "Euphoria Breath (Recharge 5-6). The dragon exhales a puff of euphoria gas at one creature within 5 feet of it. The target must succeed on a DC 11 Wisdom saving throw, or for 1 minute, the target can't take reactions and must roll a d6 at the start of each of its turns to determine its behavior during the turn:\n1-4. The target takes no action or bonus action and uses all of its movement to move in a random direction.\n5-6. The target doesn't move, and the only thing it can do on its turn is make a DC 11 Wisdom saving throw, ending the effect on itself on a success."
@@ -3994,7 +3959,6 @@
       "• 2nd level (2 slots): blur, flaming sphere",
       "• 3rd level (1 slot): fireball"
     ],
-    "spells": "mage hand, magic missile, shield, blur, flaming sphere, fireball",
     "actions": [
       "Multiattack. The flameskull uses Fire Ray twice.",
       "Fire Ray. Ranged Spell Attack: +5 to hit, range 30 ft., one target. Hit: 10 (3d6) fire damage."
@@ -4914,7 +4878,6 @@
       "• 3/day each: jump, misty step, nondetection (self only), tongues",
       "• 1/day each: plane shift, telekinesis"
     ],
-    "spells": "mage hand, jump, misty step, nondetection, tongues, plane shift, telekinesis",
     "actions": [
       "Multiattack. The githyanki makes two silver greatsword attacks.",
       "Silver Greatsword. Melee Weapon Attack: +9 to hit, reach 5 ft., one target. Hit: 13 (2d6 + 6) slashing damage plus 10 (3d6) psychic damage. This is a magic weapon attack. On a critical hit against a target in an astral body (as with the astral projection spell), the githyanki can cut the silvery cord that tethers the target to its material body, instead of dealing damage."
@@ -4938,7 +4901,6 @@
       "• At will: mage hand (the hand is invisible)",
       "• 3/day each: jump, misty step, nondetection (self only)"
     ],
-    "spells": "mage hand, jump, misty step, nondetection",
     "actions": [
       "Multiattack. The githyanki makes two greatsword attacks.",
       "Greatsword. Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 9 (2d6 + 2) slashing damage plus 7 (2d6) psychic damage."
@@ -4964,7 +4926,6 @@
       "• 3/day each: feather fall, jump, see invisibility, shield",
       "Psychic Defense. While the githzerai is wearing no armor and wielding no shield, its AC includes its Wisdom modifier."
     ],
-    "spells": "mage hand, feather fall, jump, see invisibility, shield",
     "actions": [
       "Multiattack. The githzerai makes two unarmed strikes.",
       "Unarmed Strike. Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 6 (1d8 + 2) bludgeoning damage plus 9 (2d8) psychic damage. This is a magic weapon attack."
@@ -4990,7 +4951,6 @@
       "• 3/day each: feather fall, jump, see invisibility, shield",
       "Psychic Defense. While the githzerai is wearing no armor and wielding no shield, its AC includes its Wisdom modifier."
     ],
-    "spells": "mage hand, feather fall, jump, see invisibility, shield",
     "actions": [
       "Multiattack. The githzerai makes two unarmed strikes.",
       "Unarmed Strike. Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) bludgeoning damage plus 13 (3d8) psychic damage. This is a magic weapon attack."
@@ -5018,7 +4978,6 @@
       "• 1/day each: confusion, fly, power word stun",
       "Magic Resistance. The glabrezu has advantage on saving throws against spells and other magical effects."
     ],
-    "spells": "darkness, detect magic, dispel magic, confusion, fly, power word stun",
     "actions": [
       "Multiattack. The glabrezu makes four attacks: two with its pincers and two with its fists. Alternatively, it makes two attacks with its pincers and casts one spell.",
       "Pincer. Melee Weapon Attack: +9 to hit, reach 10 ft., one target. Hit: 16 (2d10 + 5) bludgeoning damage. If the target is a Medium or smaller creature, it is grappled (escape DC 15). The glabrezu has two pincers, each of which can grapple only one target.",
@@ -5326,7 +5285,6 @@
       "Regeneration. The slaad regains 10 hit points at the start of its turn if it has at least 1 hit point.",
       "Variant: Control Gem. Implanted in the slaad's brain is a magic control gem. The slaad must obey whoever possesses the gem and is immune to being charmed while so controlled.\nCertain spells can be used to acquire the gem. If the slaad fails its saving throw against imprisonment, the spell can transfer the gem to the spellcaster's open hand, instead of imprisoning the slaad. A wish spell, if cast in the slaad's presence, can be worded to acquire the gem.\nA greater restoration spell cast on the slaad destroys the gem without harming the slaad.\nSomeone who is proficient in Wisdom (Medicine) can remove the gem from an incapacitated slaad. Each try requires 1 minute of uninterrupted work and a successful DC 20 Wisdom (Medicine) check. Each failed attempt deals 22 (4d10) psychic damage to the slaad."
     ],
-    "spells": "detect magic, detect thoughts, invisibility, mage hand, major image, fear, fly, fireball, tongues, plane shift",
     "actions": [
       "Multiattack. The slaad makes three attacks: one with its bite and two with its claws or greatsword.",
       "Bite (Slaad Form Only). Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) piercing damage.",
@@ -5386,7 +5344,6 @@
       "• 6th level (1 slot): eye bite\nFor casting these spells, each hag is a 12th-level spellcaster that uses Intelligence as her spellcasting ability. The spell save DC is 12 + the hag's Intelligence modifier, and the spell attack bonus is 4+the hag's Intelligence modifier.",
       "Hag Eye (Coven Only). A hag coven can craft a magic item called a hag eye, which is made from a real eye coated in varnish and often fitted to a pendant or other wearable item. The hag eye is usually entrusted to a minion for safekeeping and transport. A hag in the coven can take an action to see what the hag eye sees if the hag eye is on the same plane of existence. A hag eye has AC 10, 1 hit point, and darkvision with a radius of 60 feet. If it is destroyed, each coven member takes 3d10 psychic damage and is blinded for 24 hours.\nA hag coven can have only one hag eye at a time, and creating a new one requires all three members of the coven to perform a ritual. The ritual takes 1 hour, and the hags can't perform it while blinded. During the ritual, if the hags take any action other than performing the ritual, they must start over."
     ],
-    "spells": "dancing lights, minor illusion, vicious mockery, identify, ray of sickness, hold person, locate object, bestow curse, counterspell, lightning bolt, phantasmal killer, polymorph, contact other plane, scrying, eyebite",
     "actions": [
       "Claws. Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) slashing damage.",
       "Illusory Appearance. The hag covers herself and anything she is wearing or carrying with a magical illusion that makes her look like another creature of her general size and humanoid shape. The illusion ends if the hag takes a bonus action to end it or if she dies.\nThe changes wrought by this effect fail to hold up to physical inspection. For example, the hag could appear to have smooth skin, but someone touching her would feel her rough flesh. Otherwise, a creature must take an action to visually inspect the illusion and succeed on a DC 20 Intelligence (Investigation) check to discern that the hag is disguised.",
@@ -5417,7 +5374,6 @@
       "Regeneration. The slaad regains 10 hit points at the start of its turn if it has at least 1 hit point.",
       "Variant: Control Gem. Implanted in the slaad's brain is a magic control gem. The slaad must obey whoever possesses the gem and is immune to being charmed while so controlled.\nCertain spells can be used to acquire the gem. If the slaad fails its saving throw against imprisonment, the spell can transfer the gem to the spellcaster's open hand, instead of imprisoning the slaad. A wish spell, if cast in the slaad's presence, can be worded to acquire the gem.\nA greater restoration spell cast on the slaad destroys the gem without harming the slaad.\nSomeone who is proficient in Wisdom (Medicine) can remove the gem from an incapacitated slaad. Each try requires 1 minute of uninterrupted work and a successful DC 20 Wisdom (Medicine) check. Each failed attempt deals 22 (4d10) psychic damage to the slaad."
     ],
-    "spells": "detect magic, detect thoughts, mage hand, fear, invisibility, fireball",
     "actions": [
       "Multiattack. The slaad makes three attacks: one with its bite and two with its claws or staff. Alternatively, it uses its Hurl Flame twice.",
       "Bite (Slaad Form Only). Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) piercing damage.",
@@ -5577,7 +5533,6 @@
       "• 5th level (2 slots): flame strike, geas",
       "• 6th level (1 slot): true seeing"
     ],
-    "spells": "mending, sacred flame, thaumaturgy, command, cure wounds, shield of faith, calm emotions, hold person, bestow curse, clairvoyance, banishment, freedom of movement, flame strike, geas, true seeing",
     "actions": [
       "Bite. Melee Weapon Attack: +8 to hit, reach 10 ft., one creature. Hit: 8 (1d8 + 4) piercing damage, and the target must make a DC 15 Constitution saving throw, taking 45 (10d8) poison damage on a failed save, or half as much damage on a successful one.",
       "Spit Poison. Ranged Weapon Attack: +8 to hit, range 15/30 ft., one creature. Hit: The target must make a DC 15 Constitution saving throw, taking 45 (10d8) poison damage on a failed save, or half as much damage on a successful one."
@@ -5610,7 +5565,6 @@
       "• 4th level (3 slots): banishment, greater invisibility",
       "• 5th level (1 slot): legend lore"
     ],
-    "spells": "mage hand, minor illusion, prestidigitation, detect magic, identify, shield, darkness, locate object, suggestion, dispel magic, remove curse, tongues, banishment, greater invisibility, legend lore",
     "actions": [
       "Multiattack. The sphinx makes two claw attacks.",
       "Claw. Melee Weapon Attack: +9 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) slashing damage."
@@ -6096,7 +6050,6 @@
       "False Appearance. While the mephit remains motionless, it is indistinguishable from an ordinary shard of ice.",
       "Innate Spellcasting (1/Day). The mephit can innately cast fog cloud, requiring no material components. Its innate spellcasting ability is Charisma."
     ],
-    "spells": "fog cloud",
     "actions": [
       "Claws. Melee Weapon Attack: +3 to hit, reach 5 ft., one creature. Hit: 3 (1d4 + 1) slashing damage plus 2 (1d4) cold damage.",
       "Frost Breath (Recharge 6). The mephit exhales a 15-foot cone of cold air. Each creature in that area must succeed on a DC 10 Dexterity saving throw, taking 5 (2d4) cold damage on a failed save, or half as much damage on a successful one.",
@@ -6434,7 +6387,6 @@
       "• 4th level (3 slots): control water, divination",
       "• 5th level (2 slots): mass cure wounds, scrying"
     ],
-    "spells": "guidance, sacred flame, thaumaturgy, detect magic, sanctuary, shield of faith, hold person, spiritual weapon, spirit guardians, tongues, control water, divination, mass cure wounds, scrying",
     "actions": [
       "Multiattack. The kuo-toa makes two melee attacks.",
       "Scepter. Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) bludgeoning damage plus 14 (4d6) lightning damage.",
@@ -6489,7 +6441,6 @@
       "• Cantrips (at will): sacred flame, thaumaturgy",
       "• 1st level (3 slots): bane, shield of faith"
     ],
-    "spells": "sacred flame, thaumaturgy, bane, shield of faith",
     "actions": [
       "Multiattack. The kuo-toa makes two attacks: one with its bite and one with its pincer staff.",
       "Bite. Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 4 (1d4 + 2) piercing damage.",
@@ -6512,7 +6463,6 @@
     "traits": [
       "Innate Spellcasting. The lamia's innate spellcasting ability is Charisma (spell save DC 13). It can innately cast the following spells, requiring no material components.\n • At will: disguise self (any humanoid form), major image\n • 3/day each: charm person, mirror image, scrying, suggestion\n • 1/day: geas"
     ],
-    "spells": "disguise self, major image, charm person, mirror image, scrying, suggestion, geas",
     "actions": [
       "Multiattack. The lamia makes two attacks: one with its claws and one with its dagger or Intoxicating Touch.",
       "Claws. Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 14 (2d10 + 3) slashing damage.",
@@ -6572,7 +6522,6 @@
       "• 9th level (1 slot): power word kill",
       "Turn Resistance. The lich has advantage on saving throws against any effect that turns undead."
     ],
-    "spells": "mage hand, prestidigitation, ray of frost, detect magic, magic missile, shield, thunderwave, detect thoughts, invisibility, Melf's acid arrow, mirror image, animate dead, counterspell, dispel magic, fireball, blight, dimension door, cloudkill, scrying, disintegrate, globe of invulnerability, finger of death, plane shift, dominate monster, power word stun, power word kill",
     "actions": [
       "Paralyzing Touch. Melee Spell Attack: +12 to hit, reach 5 ft., one creature. Hit: 10 (3d6) cold damage. The target must succeed on a DC 18 Constitution saving throw or be paralyzed for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
     ],
@@ -6697,7 +6646,6 @@
       "• 2nd level (3 slots): heat metal, spike growth",
       "• 3rd level (2 slots): conjure animals (reptiles only), plant growth"
     ],
-    "spells": "druidcraft, produce flame, thorn whip, entangle, fog cloud, heat metal, spike growth, conjure animals, plant growth",
     "actions": [
       "Multiattack (Lizardfolk Form Only). The lizardfolk makes two attacks: one with its bite and one with its claws.",
       "Bite. Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) piercing damage, or 7 (1d10 + 2) piercing damage in crocodile form. If the lizardfolk is in crocodile form and the target is a Large or smaller creature, the target is grappled (escape DC 12). Until this grapple ends, the target is restrained, and the lizardfolk can't bite another target. If the lizardfolk reverts to its true form, the grapple ends.",
@@ -6729,7 +6677,6 @@
       "• 4th level (3 slots): greater invisibility, ice storm",
       "• 5th level (1 slot): cone of cold"
     ],
-    "spells": "fire bolt, light, mage hand, prestidigitation, detect magic, mage armor, magic missile, shield, misty step, suggestion, counterspell, fireball, fly, greater invisibility, ice storm, cone of cold",
     "actions": [
       "Dagger. Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage."
     ]
@@ -6755,7 +6702,6 @@
       "False Appearance. While the mephit remains motionless, it is indistinguishable from an ordinary mound of magma.",
       "Innate Spellcasting (1/Day). The mephit can innately cast heat metal (spell save DC 10), requiring no material components. Its innate spellcasting ability is Charisma."
     ],
-    "spells": "heat metal",
     "actions": [
       "Claws. Melee Weapon Attack: +3 to hit, reach 5 ft ., one creature. Hit: 3 (1d4 + 1) slashing damage plus 2 (1d4) fire damage.",
       "Fire Breath (Recharge 6). The mephit exhales a 15-foot cone of fire. Each creature in that area must make a DC 11 Dexterity saving throw, taking 7 (2d6) fire damage on a failed save, or half as much damage on a successful one.",
@@ -6866,7 +6812,6 @@
       "• 1/day each: conjure elemental (water elemental only), control water, gaseous form, invisibility, plane shift",
       "Variant: Genie Powers. Genies have a variety of magical capabilities, including spells. A few have even greater powers that allow them to alter their appearance or the nature of reality.\nDisguises. Some genies can veil themselves in illusion to pass as other similarly shaped creatures. Such genies can innately cast the disguise self spell at will, often with a longer duration than is normal for that spell. Mightier genies can cast the true polymorph spell one to three times per day, possibly with a longer duration than normal. Such genies can change only their own shape, but a rare few can use the spell on other creatures and objects as well.\nWishes. The genie power to grant wishes is legendary among mortals. Only the most potent genies, such as those among the nobility, can do so. A particular genie that has this power can grant one to three wishes to a creature that isn't a genie. Once a genie has granted its limit of wishes, it can't grant wishes again for some amount of time (usually 1 year). and cosmic law dictates that the same genie can expend its limit of wishes on a specific creature only once in that creature's existence.\nTo be granted a wish, a creature within 60 feet of the genie states a desired effect to it. The genie can then cast the wish spell on the creature's behalf to bring about the effect. Depending on the genie's nature, the genie might try to pervert the intent of the wish by exploiting the wish's poor wording. The perversion of the wording is usually crafted to be to the genie's benefit."
     ],
-    "spells": "create or destroy water, detect evil and good, detect magic, fog cloud, purify food and drink, tongues, water breathing, water walk, conjure elemental, control water, gaseous form, invisibility, plane shift",
     "actions": [
       "Multiattack. The marid makes two trident attacks.",
       "Trident. Melee or Ranged Weapon Attack: +10 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 13 (2d6 + 6) piercing damage, or 15 (2d8 + 6) piercing damage if used with two hands to make a melee attack.",
@@ -7009,7 +6954,6 @@
       "Magic Resistance. The mezzoloth has advantage on saving throws against spells and other magical effects.",
       "Magic Weapons. The mezzoloth's weapon attacks are magical."
     ],
-    "spells": "darkness, dispel magic, cloudkill",
     "actions": [
       "Multiattack. The mezzoloth makes two attacks: one with its claws and one with its trident.",
       "Claws. Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 9 (2d4 + 4) slashing damage.",
@@ -7063,7 +7007,6 @@
       "• At will: detect thoughts, levitate",
       "• 1/day each: dominate monster, plane shift (self only)"
     ],
-    "spells": "detect thoughts, levitate, dominate monster, plane shift",
     "actions": [
       "Tentacles. Melee Weapon Attack: +7 to hit, reach 5 ft., one creature. Hit: 15 (2dl0 + 4) psychic damage. If the target is Medium or smaller, it is grappled (escape DC 15) and must succeed on a DC 15 Intelligence saving throw or be stunned until this grapple ends.",
       "Extract Brain. Melee Weapon Attack: +7 to hit, reach 5 ft., one incapacitated humanoid grappled by the mind flayer. Hit: The target takes 55 (10d10) piercing damage. If this damage reduces the target to 0 hit points, the mind flayer kills the target by extracting and devouring its brain.",
@@ -7097,7 +7040,6 @@
       "• 4th level (3 slots): confusion, hallucinatory terrain",
       "• 5th level (2 slots): telekinesis, wall of force"
     ],
-    "spells": "detect thoughts, levitate, dominate monster, plane shift, blade ward, dancing lights, mage hand, shocking grasp, detect magic, disguise self, shield, sleep, blur, invisibility, ray of enfeeblement, clairvoyance, lightning bolt, sending, confusion, hallucinatory terrain, telekinesis, wall of force",
     "actions": [
       "Tentacles. Melee Weapon Attack: +7 to hit, reach 5 ft., one creature. Hit: 15 (2dl0 + 4) psychic damage. If the target is Medium or smaller, it is grappled (escape DC 15) and must succeed on a DC 15 Intelligence saving throw or be stunned until this grapple ends.",
       "Extract Brain. Melee Weapon Attack: +7 to hit, reach 5 ft., one incapacitated humanoid grappled by the mind flayer. Hit: The target takes 55 (10d10) piercing damage. If this damage reduces the target to 0 hit points, the mind flayer kills the target by extracting and devouring its brain.",
@@ -7266,7 +7208,6 @@
       "• 5th level (2 slots): contagion, insect plague",
       "• 6th level (1 slot): harm"
     ],
-    "spells": "sacred flame, thaumaturgy, command, guiding bolt, shield of faith, hold person, silence, spiritual weapon, animate dead, dispel magic, divination, guardian of faith, contagion, insect plague, harm",
     "actions": [
       "Multiattack. The mummy can use its Dreadful Glare and makes one attack with its rotting fist.",
       "Rotting Fist. Melee Weapon Attack: +9 to hit, reach 5 ft., one target. Hit: 14 (3d6 + 4) bludgeoning damage plus 21 (6d6) necrotic damage. If the target is a creature, it must succeed on a DC 16 Constitution saving throw or be cursed with mummy rot. The cursed target can't regain hit points, and its hit point maximum decreases by 10 (3d6) for every 24 hours that elapse. If the curse reduces the target's hit point maximum to 0, the target dies, and its body turns to dust. The curse lasts until removed by the remove curse spell or other magic.",
@@ -7435,7 +7376,6 @@
       "• 6th level (1 slot): eye bite\nFor casting these spells, each hag is a 12th-level spellcaster that uses Intelligence as her spellcasting ability. The spell save DC is 12+the hag's Intelligence modifier, and the spell attack bonus is 4+the hag's Intelligence modifier.",
       "Hag Eye (Coven Only). A hag coven can craft a magic item called a hag eye, which is made from a real eye coated in varnish and often fitted to a pendant or other wearable item. The hag eye is usually entrusted to a minion for safekeeping and transport. A hag in the coven can take an action to see what the hag eye sees if the hag eye is on the same plane of existence. A hag eye has AC 10, 1 hit point, and darkvision with a radius of 60 feet. If it is destroyed, each coven member takes 3d10 psychic damage and is blinded for 24 hours.\nA hag coven can have only one hag eye at a time, and creating a new one requires all three members of the coven to perform a ritual. The ritual takes 1 hour, and the hags can't perform it while blinded. During the ritual, if the hags take any action other than performing the ritual, they must start over."
     ],
-    "spells": "detect magic, magic missile, plane shift, ray of enfeeblement, sleep, identify, ray of sickness, hold person, locate object, bestow curse, counterspell, lightning bolt, phantasmal killer, polymorph, contact other plane, scrying, eyebite",
     "actions": [
       "Claws (Hag Form Only). Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) slashing damage.",
       "Change Shape. The hag magically polymorphs into a Small or Medium female humanoid, or back into her true form. Her statistics are the same in each form. Any equipment she is wearing or carrying isn't transformed. She reverts to her true form if she dies.",
@@ -7527,7 +7467,6 @@
       "Magic Resistance. The nycaloth has advantage on saving throws against spells and other magical effects.",
       "Magic Weapons. The nycaloth's weapon attacks are magical."
     ],
-    "spells": "darkness, detect magic, dispel magic, invisibility, mirror image",
     "actions": [
       "Multiattack. The nycaloth makes two melee attacks, or it makes one melee attack and teleports before or after the attack.",
       "Claw. Melee Weapon Attack: +9 to hit, reach 5 ft., one target. Hit: 12 (2d6 + 5) slashing damage. If the target is a creature, it must succeed on a DC 16 Constitution saving throw or take 5 (2d4) slashing damage at the start of each of its turns due to a fiendish wound. Each time the nycaloth hits the wounded target with this attack, the damage dealt by the wound increases by 5 (2d4). Any creature can take an action to stanch the wound with a successful DC 13 Wisdom (Medicine) check. The wound also closes if the target receives magical healing.",
@@ -7639,7 +7578,6 @@
       "Magic Weapons. The oni's weapon attacks are magical.",
       "Regeneration. The oni regains 10 hit points at the start of its turn if it has at least 1 hit point."
     ],
-    "spells": "darkness, invisibility, charm person, cone of cold, gaseous form, sleep",
     "actions": [
       "Multiattack. The oni makes two attacks, either with its claws or its glaive.",
       "Claw (Oni Form Only). Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 8 (1d8 + 4) slashing damage.",
@@ -7689,7 +7627,6 @@
       "• 1st level (4 slots): bless, command",
       "• 2nd level (2 slots): augury, spiritual weapon (spear)"
     ],
-    "spells": "guidance, resistance, thaumaturgy, bless, command, augury, spiritual weapon",
     "actions": [
       "Spear. Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 11 (1d6 + 3 plus 1d8) piercing damage, or 12 (2d8 + 3) piercing damage if used with two hands to make a melee attack."
     ]
@@ -7955,8 +7892,7 @@
       "Innate Spellcasting. The pit fiend's spellcasting ability is Charisma (spell save DC 21). The pit fiend can innately cast the following spells, requiring no material components:",
       "• At will: detect magic, fireball",
       "• 3/day each: hold monster, wall of fire"
-    ],
-    "spells": "detect magic, fireball, hold monster, wall of fire"
+    ]
   },
   {
     "name": "Pixie",
@@ -7977,7 +7913,6 @@
       "• At will: druidcraft",
       "• 1/day each: confusion, dancing lights, detect evil and good, detect thoughts, dispel magic, entangle, fly, phantasmal force, polymorph, sleep"
     ],
-    "spells": "druidcraft, confusion, dancing lights, detect evil and good, detect thoughts, dispel magic, entangle, fly, phantasmal force, polymorph, sleep",
     "actions": [
       "Superior Invisibility. The pixie magically turns invisible until its concentration ends (as if concentrating on a spell). Any equipment the pixie wears or carries is invisible with it."
     ]
@@ -8007,7 +7942,6 @@
       "• 1/day each: commune, control weather, insect plague",
       "Magic Resistance. The planetar has advantage on saving throws against spells and other magical effects."
     ],
-    "spells": "detect evil and good, invisibility, blade barrier, dispel evil and good, flame strike, raise dead, commune, control weather, insect plague",
     "actions": [
       "Multiattack. The planetar makes two melee attacks.",
       "Greatsword. Melee Weapon Attack: +12 to hit, reach 5 ft., one target. Hit: 21 (4d6 + 7) slashing damage plus 22 (5d8) radiant damage.",
@@ -8131,7 +8065,6 @@
       "• 2nd level (3 slots): lesser restoration, spiritual weapon",
       "• 3rd level (2 slots): dispel magic, spirit guardians"
     ],
-    "spells": "light, sacred flame, thaumaturgy, cure wounds, guiding bolt, sanctuary, lesser restoration, spiritual weapon, dispel magic, spirit guardians",
     "actions": [
       "Mace. Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 3 (1d6) bludgeoning damage."
     ]
@@ -8285,7 +8218,6 @@
       "• At will: feather fall, mage hand (the hand is invisible)",
       "• 1/day each: cure wounds, enlarge/reduce, heat metal, mirror image"
     ],
-    "spells": "feather fall, mage hand, cure wounds, enlarge/reduce, heat metal, mirror image",
     "actions": [
       "Multiattack. The quaggoth makes two claw attacks.",
       "Claw. Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) slashing damage."
@@ -8358,7 +8290,6 @@
       "• 3/day each: charm person, detect magic, invisibility, major image, suggestion",
       "• 1/day each: dominate person, fly, plane shift, true seeing"
     ],
-    "spells": "detect thoughts, disguise self, mage hand, minor illusion, charm person, detect magic, invisibility, major image, suggestion, dominate person, fly, plane shift, true seeing",
     "actions": [
       "Multiattack. The rakshasa makes two claw attacks",
       "Claw. Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 9 (2d6 + 2) slashing damage, and the target is cursed if it is a creature. The magical curse takes effect whenever the target takes a short or long rest, filling the target's thoughts with horrible images and dreams. The cursed target gains no benefit from finishing a short or long rest. The curse lasts until it is lifted by a remove curse spell or similar magic."
@@ -8728,7 +8659,6 @@
       "• 2nd level (3 slots): hold person, spiritual weapon (trident)",
       "• 3rd level (3 slots): mass healing word, tongues"
     ],
-    "spells": "guidance, thaumaturgy, bless, detect magic, guiding bolt, hold person, spiritual weapon, mass healing word, tongues",
     "actions": [
       "Multiattack. The sahuagin makes two melee attacks: one with her bite and one with her claws.",
       "Bite. Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 3 (1d4 + 1) piercing damage.",
@@ -8869,7 +8799,6 @@
       "• 6th level (1 slot): eye bite\nFor casting these spells, each hag is a 12th-level spellcaster that uses Intelligence as her spellcasting ability. The spell save DC is 12+the hag's Intelligence modifier, and the spell attack bonus is 4+the hag's Intelligence modifier.",
       "Hag Eye (Coven Only). A hag coven can craft a magic item called a hag eye, which is made from a real eye coated in varnish and often fitted to a pendant or other wearable item. The hag eye is usually entrusted to a minion for safekeeping and transport. A hag in the coven can take an action to see what the hag eye sees if the hag eye is on the same plane of existence. A hag eye has AC 10, 1 hit point, and darkvision with a radius of 60 feet. If it is destroyed, each coven member takes 3d10 psychic damage and is blinded for 24 hours.\nA hag coven can have only one hag eye at a time, and creating a new one requires all three members of the coven to perform a ritual. The ritual takes 1 hour, and the hags can't perform it while blinded. During the ritual, if the hags take any action other than performing the ritual, they must start over."
     ],
-    "spells": "identify, ray of sickness, hold person, locate object, bestow curse, counterspell, lightning bolt, phantasmal killer, polymorph, contact other plane, scrying, eyebite",
     "actions": [
       "Claws. Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) slashing damage.",
       "Death Glare. The hag targets one frightened creature she can see within 30 ft. of her. If the target can see the hag, it must succeed on a DC 11 Wisdom saving throw against this magic or drop to 0 hit points.",
@@ -9089,7 +9018,6 @@
       "Death Burst. When the mephit dies, it leaves behind a cloud of smoke that fills a 5-foot-radius sphere centered on its space. The sphere is heavily obscured. Wind disperses the cloud, which otherwise lasts for 1 minute.",
       "Innate Spellcasting (1/Day). The mephit can innately cast dancing lights, requiring no material components. Its innate spellcasting ability is Charisma."
     ],
-    "spells": "dancing lights",
     "actions": [
       "Claws. Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 4 (1d4 + 2) slashing damage.",
       "Cinder Breath (Recharge 6). The mephit exhales a 15-foot cone of smoldering ash. Each creature in that area must succeed on a DC 10 Dexterity saving throw or be blinded until the end of the mephit's next turn .",
@@ -9122,7 +9050,6 @@
       "• 1/day each: commune, control weather",
       "Magic Resistance. The solar has advantage on saving throws against spells and other magical effects."
     ],
-    "spells": "detect evil and good, invisibility, blade barrier, dispel evil and good, resurrection, commune, control weather",
     "actions": [
       "Multiattack. The solar makes two greatsword attacks.",
       "Greatsword. Melee Weapon Attack: +15 to hit, reach 5 ft., one target. Hit: 22 (4d6 + 8) slashing damage plus 27 (6d8) radiant damage.",
@@ -9251,7 +9178,6 @@
       "• 4th level (3 slots): blight, dimension door",
       "• 5th level (2 slots): dominate person"
     ],
-    "spells": "mage hand, minor illusion, ray of frost, charm person, detect magic, sleep, detect thoughts, hold person, lightning bolt, water breathing, blight, dimension door, dominate person",
     "actions": [
       "Bite. Melee Weapon Attack: +7 to hit, reach 10 ft., one creature. Hit: 7 (1d6 + 4) piercing damage, and the target must make a DC 13 Constitution saving throw, taking 31 (7d8) poison damage on a failed save, or half as much damage on a successful one."
     ]
@@ -9317,7 +9243,6 @@
       "Death Burst. When the mephit dies, it explodes in a cloud of steam. Each creature within 5 ft. of the mephit must succeed on a DC 10 Dexterity saving throw or take 4 (1d8) fire damage.",
       "Innate Spellcasting (1/Day). The mephit can innately cast blur, requiring no material components. Its innate spellcasting ability is Charisma."
     ],
-    "spells": "blur",
     "actions": [
       "Claws. Melee Weapon Attack: +2 to hit, reach 5 ft., one creature. Hit: 2 (1d4) slashing damage plus 2 (1d4) fire damage.",
       "Steam Breath (Recharge 6). The mephit exhales a 15-foot cone of scalding steam. Each creature in that area must succeed on a DC 10 Dexterity saving throw, taking 4 (1d8) fire damage on a failed save, or half as much damage on a successful one.",
@@ -9409,7 +9334,6 @@
       "• At will: detect magic, feather fall, levitate, light",
       "• 3/day each: control weather, water breathing"
     ],
-    "spells": "detect magic, feather fall, levitate, light, control weather, water breathing",
     "actions": [
       "Multiattack. The giant makes two greatsword attacks.",
       "Greatsword. Melee Weapon Attack: +14 to hit, reach 10 ft., one target. Hit: 30 (6d6 + 9) slashing damage.",
@@ -9736,7 +9660,6 @@
       "• 2/day each: blur, magic weapon",
       "• 1/day: invisibility (self only)"
     ],
-    "spells": "mage hand, blur, magic weapon, invisibility",
     "actions": [
       "Multiattack. The thri-kreen makes two attacks: one with its bite and one with its claws.",
       "Bite. Melee Weapon Attack: +3 to hit, reach 5 ft., one creature. Hit: 4 (1d6 + 1) piercing damage, and the target must succeed on a DC 11 Constitution saving throw or be poisoned for 1 minute. If the saving throw fails by 5 or more, the target is also paralyzed while poisoned in this way. The poisoned target can repeat the saving throw on each of its turns, ending the effect on itself on a success.",
@@ -9986,7 +9909,6 @@
       "Magic Resistance. The ultroloth has advantage on saving throws against spells and other magical effects.",
       "Magic Weapons. The ultroloth's weapon attacks are magical."
     ],
-    "spells": "alter self, clairvoyance, darkness, detect magic, detect thoughts, dispel magic, invisibility, suggestion, dimension door, fear, wall of fire, fire storm, mass suggestion",
     "actions": [
       "Multiattack. The ultroloth can use its Hypnotic Gaze and makes three melee attacks.",
       "Longsword. Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) slashing damage, or 8 (1d10 + 3) slashing damage if used with two hands.",
@@ -10039,7 +9961,6 @@
       "Magic Resistance. The unicorn has advantage on saving throws against spells and other magical effects.",
       "Magic Weapons. The unicorn's weapon attacks are magical."
     ],
-    "spells": "detect evil and good, druidcraft, pass without trace, calm emotions, dispel evil and good, entangle",
     "actions": [
       "Multiattack. The unicorn makes two attacks: one with its hooves and one with its horn.",
       "Hooves. Melee Weapon Attack: +7 to hit, reach 5 ft ., one target. Hit: 11 (2d6 + 4) bludgeoning damage.",
@@ -10161,7 +10082,6 @@
       "• 4th level (3 slots): blight, greater invisibility",
       "• 5th level (1 slot): dominate person"
     ],
-    "spells": "mage hand, prestidigitation, ray of frost, comprehend languages, fog cloud, sleep, detect thoughts, gust of wind, mirror image, animate dead, bestow curse, nondetection, blight, greater invisibility, dominate person",
     "actions": [
       "Multiattack (Vampire Form Only). The vampire makes two attacks, only one of which can be a bite attack.",
       "Unarmed Strike (Vampire Form Only). Melee Weapon Attack: +9 to hit, reach 5 ft., one creature. Hit: 8 (1d8 + 4) bludgeoning damage. Instead of dealing damage, the vampire can grapple the target (escape DC 18).",
@@ -10815,7 +10735,6 @@
       "• 1/day: dominate person",
       "Web Walker. The yochlol ignores movement restrictions caused by webbing."
     ],
-    "spells": "detect thoughts, web, dominate person",
     "actions": [
       "Multiattack. The yochlol makes two melee attacks.",
       "Slam (Bite in Spider Form). Melee Weapon Attack: +6 to hit, reach 5 ft. (10 ft. in demon form}, one target. Hit: 5 (1d6 + 2) bludgeoning (piercing in spider form) damage plus 21 (6d6) poison damage.",
@@ -11138,8 +11057,7 @@
       "• 3/day: suggestion",
       "• 1/day: fear",
       "Magic Resistance. The yuan-ti has advantage on saving throws against spells and other magical effects."
-    ],
-    "spells": "animal friendship, suggestion, fear"
+    ]
   },
   {
     "name": "Yuan-ti Malison Type 1",
@@ -11164,7 +11082,6 @@
       "Magic Resistance. The yuan-ti has advantage on saving throws against spells and other magical effects.",
       "Malison Type. The Yuan-ti has one of the following types:\nType 1: Human body with snake head\nType 2: Human head and body with snakes for arms\nType 3: Human head and upper body with a serpentine lower body instead of legs"
     ],
-    "spells": "animal friendship, suggestion",
     "actions": [
       "Multiattack (Yuan-ti Form Only). The Yuan-ti makes two ranged attacks or two melee attacks, but can use its bite only once.",
       "Bite. Melee Weapon Attack: +5 to hit, reach 5 ft., one creature. Hit: 5 (1d4 + 3) piercing damage plus 7 (2d6) poison damage.",
@@ -11195,7 +11112,6 @@
       "Magic Resistance. The yuan-ti has advantage on saving throws against spells and other magical effects.",
       "Malison Type. The Yuan-ti has one of the following types:\nType 1: Human body with snake head\nType 2: Human head and body with snakes for arms\nType 3: Human head and upper body with a serpentine lower body instead of legs"
     ],
-    "spells": "animal friendship, suggestion",
     "actions": [
       "Multiattack (Yuan-ti Form Only). The Yuan-ti makes two bite attacks using its snake arms.",
       "Bite. Melee Weapon Attack: +5 to hit, reach 5 ft., one creature. Hit: 5 (1d4 + 3) piercing damage plus 7 (2d6) poison damage."
@@ -11224,7 +11140,6 @@
       "Magic Resistance. The yuan-ti has advantage on saving throws against spells and other magical effects.",
       "Malison Type. The Yuan-ti has one of the following types:\nType 1: Human body with snake head\nType 2: Human head and body with snakes for arms\nType 3: Human head and upper body with a serpentine lower body instead of legs"
     ],
-    "spells": "animal friendship, suggestion",
     "actions": [
       "Multiattack (Yuan-ti Form Only). The Yuan-ti makes two ranged attacks or two melee attacks, but can constrict only once.",
       "Bite (Snake Form Only). Melee Weapon Attack: +5 to hit, reach 5 ft., one creature. Hit: 5 (1d4 + 3) piercing damage plus 7 (2d6) poison damage.",
@@ -11254,7 +11169,6 @@
       "• 3/day each: poison spray, suggestion",
       "Magic Resistance. The yuan-ti has advantage on saving throws against spells and other magical effects."
     ],
-    "spells": "animal friendship, poison spray, suggestion",
     "actions": [
       "Multiattack. The yuan-ti makes two melee attacks.",
       "Scimitar. Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 1) slashing damage.",

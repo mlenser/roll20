@@ -45,7 +45,6 @@
       "• 2nd level (3 slots): invisibility, misty step, scorching ray",
       "• 3rd level (3 slots): counterspell, dispel magic, fireball"
     ],
-    "spells": "mage hand, prestidigitation, ray of frost, shocking grasp, fog cloud, magic missile, shield, thunderwave, invisibility, misty step, scorching ray, counterspell, dispel magic, fireball",
     "actions": [
       "Dagger. Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or ranged 20 ft./60 ft., one target. Hit 5 (1d4 + 3) piercing damage."
     ]
@@ -74,7 +73,6 @@
       "• 2nd level (3 slots): gust of wind, misty step, shatter",
       "• 3rd level (2 slots): fly, lightning bolt"
     ],
-    "spells": "fog cloud, levitate, light, mage hand, prestidigitation, detect magic, identify, magic missile, shield, gust of wind, misty step, shatter, fly, lightning bolt",
     "actions": [
       "Multiattack. Blagothkus attacks twice with his morningstar.",
       "Morningstar. Melee Weapon Attack: +10 to hit, reach 10 ft., one target. Hit 21 (3d8 + 8) piercing damage."
@@ -177,7 +175,6 @@
       "War Magic. When Dralmorrer uses his action to cast a cantrip, he can also take a bonus action to make one weapon attack.",
       "Weapon Bond. Provided his longsword is on the same plane Dralmorrer can take a bonus action to teleport it to his hand."
     ],
-    "spells": "fire bolt, prestidigitation, shocking grasp, longstrider, magic missile, shield, thunderwave, magic weapon, misty step",
     "actions": [
       "Multiattack. Dralmorrer attacks twice, either with his longsword or dagger.",
       "Longsword. Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit 8 (1d8 + 4) slashing damage.",
@@ -205,7 +202,6 @@
       "• 2nd level (3 slots): calm emotions, hold person, spiritual weapon",
       "• 3rd level (2 slots): mass healing word, spirit guardians"
     ],
-    "spells": "light, sacred flame, thaumaturgy, command, cure wounds, healing word, sanctuary, calm emotions, hold person, spiritual weapon, mass healing word, spirit guardians",
     "actions": [
       "Multiattack. Frulam attacks twice with her halberd.",
       "Halberd. Melee Weapon Attack: +5 to hit, reach 10 ft., one target. Hit: 7 (1d10 + 2) bludgeoning damage."
@@ -252,7 +248,6 @@
       "• Cantrips (at will): mage hand, minor illusion, prestidigitation, ray of frost",
       "• 1st level (3 slots): charm person, color spray, disguise self, longstrider"
     ],
-    "spells": "mage hand, minor illusion, prestidigitation, ray of frost, charm person, color spray, disguise self, longstrider",
     "actions": [
       "Multiattack. Jamna attacks twice with her shortswords.",
       "Shortsword. Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit 6 (1d6 + 3) piercing damage, or 9 (1d6 + 3 plus 1d6) piercing damage if the target is Medium or larger."
@@ -309,7 +304,6 @@
       "Standing Leap. As part of his movement and without a running start, Pharblex can long jump up to 20 feet and high jump up to 10 feet.",
       "Swamp Camouflage. Pharblex has advantage on Dexterity (Stealth) checks made to hide in swampy terrain."
     ],
-    "spells": "druidcraft, guidance, poison spray, cure wounds, entangle, healing word, thunderwave, barkskin, beast sense, spike growth, plant growth, water walk",
     "actions": [
       "Multiattack. Pharblex attacks twice. Once with his bite and once with his spear.",
       "Bite. Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit 4 (1d4 + 2) piercing damage.",
@@ -341,7 +335,6 @@
       "• 5th level (2 slots): mislead, seeming",
       "• 6th level (1 slot): globe of invulnerability"
     ],
-    "spells": "fire bolt, minor illusion, prestidigitation, shocking grasp, chromatic orb, color spray, mage armor, magic missile, detect thoughts, mirror image, phantasmal force, counterspell, fireball, major image, confusion, greater invisibility, mislead, seeming, globe of invulnerability",
     "actions": [
       "Quarterstaff. Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 4 (1d8) bludgeoning damage."
     ]
@@ -408,7 +401,6 @@
       "• 5th level (1 slot): insect plague",
       "Winter Strike (3/Day). Once per turn, when Talis hits with a melee attack, she can expend a use of this trait to deal an extra 9 (2d8) cold damage."
     ],
-    "spells": "guidance, resistance, thaumaturgy, command, cure wounds, healing word, inflict wounds, blindness/deafness, lesser restoration, spiritual weapon, dispel magic, mass healing word, sending, death ward, freedom of movement, insect plague",
     "actions": [
       "Spear. Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or ranged 20 ft./60 ft., one target. Hit: 6 (1d6 + 2) piercing damage."
     ]

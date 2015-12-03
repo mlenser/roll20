@@ -5,6 +5,10 @@ Scripts for 5e roll20
 
 ### Changelog
 
+**Dec 3rd 2015**
+
+* Spells now pull from traits directly
+
 **Dec 2nd 2015**
 
 * Removed the scripting to convert from the D&D 5e Legacy sheet
