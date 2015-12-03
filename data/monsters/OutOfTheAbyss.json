@@ -570,9 +570,8 @@
       "Spellcasting. Narrak is a 5th-level spellcaster. His spellcasting ability is Charisma (Save DC 13, +5 to hit with spell attacks) Narrak has two 2nd-level spell slots, which he regains after finishing ashort or long rest, and knows the following Warlock spells:",
       "• Cantrips (at will): eldritch blast, friends, poison spray",
       "• 1st level: armor of Agathys, charm person, hex",
-      "• 2nd level: hold person, ray of enfeeblement, spider climb",
-      "Sunlight Sensitivity. While in sunlight, the derro has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.",
-      "TODO: FIX num spells"
+      "• 2nd level (2 slots): hold person, ray of enfeeblement, spider climb",
+      "Sunlight Sensitivity. While in sunlight, the derro has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight."
     ],
     "actions": [
       "Armor of Shadows (Recharges after a Short or Long Rest). Narrak casts mage armor on himself",

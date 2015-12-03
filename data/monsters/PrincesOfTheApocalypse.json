@@ -358,8 +358,7 @@
       "• Cantrips (at will): chill touch, eldritch blast, mage hand",
       "• 1st level: armor of Agathys, expeditious retreat, hex",
       "• 2nd level: invisibility",
-      "• 3rd level: Vampiric touch",
-      "TODO: FIX num spells"
+      "• 3rd level (3 slots): Vampiric touch"
     ],
     "actions": [
       "Constrict (Serpent Form Only). Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 9 (2d6 + 2) bludgeoning damage. If the target is Medium or smaller, it is grappled (escape DC 12). Until the grapple ends, the target is restrained, and the fathomer can't constrict another target.",

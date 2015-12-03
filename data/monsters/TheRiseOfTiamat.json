@@ -159,7 +159,7 @@
     ],
     "legendaryPoints": "3",
     "legendaryActions": [
-      "Attack. TODO: FIX",
+      "Attack. Severin makes one attack.",
       "Fiery Teleport (Costs 2 Actions). Severin, along with any objects he is wearing or carrying, teleports up to 60 feet to an unoccupied space he can see. Each creature within 5 feet of Severin before he teleports takes 5 (1dlO) fire damage.",
       "Hellish Chains (Costs 3 Actions). Severin targets one creature he can see within 30 feet of him. The target is wrapped in magical chains of fire and restrained. The restrained target takes 21 (6d6) fire damage at the start of each of its turns. At the end of its turns, the target can make a DC 17 Strength saving throw, ending the effect on itself on a success."
     ]
@@ -198,7 +198,7 @@
     ],
     "legendaryPoints": "5",
     "legendaryActions": [
-      "Bite. TODO: FIX",
+      "Bite. Melee Weapon Attack: +19 to hit, reach 20 ft., one target. Hit: 32 (4dl0 + 10) slashing damage plus 14 (4d6) acid damage (black dragon head), lightning damage (blue dragon head), poison damage (green dragon head), fire damage (red dragon head), or cold damage (white dragon head).",
       "Black Dragon Head: Acid Breath (Costs 2 Actions). Tiamat breathes acid in a 120-foot line that is 10 feet wide. Each creature in that line must make a DC 27 Dexterity saving throw, taking 67 (15d8) acid damage on a failed save, or half as much damage on a successful one.",
       "Blue Dragon Head: Lightning Breath (Costs 2 Actions). Tiamat breathes lightning in a 120-foot line that is 10 feet wide. Each creature in that line must make a DC 27 Dexterity saving throw, taking 88 (16d10) lightning damage on a failed save, or half as much damage on a successful one.",
       "Green Dragon Head: Poison Breath (Costs 2 Actions). Tiamat breathes poisonous gas in a 90-foot cone. Each creature in that area must make a DC 27 Constitution saving throw, taking 77 (22d6) poison damage on a failed save, or half as much damage on a successful one.",
