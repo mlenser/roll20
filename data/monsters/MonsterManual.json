@@ -1467,10 +1467,10 @@
         "actions": [
             "Bite. Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 14 (4d6) piercing damage.",
             "Eye Ray. The zombie uses a random magical eye ray, choosing a target that it can see within 60 feet of it.",
-            "1. Paralyzing Ray. The targeted creature must succeed on a DC 14 Constitution saving throw or be paralyzed for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
-            "2. Fear Ray. The targeted creature must succeed on a DC 14 Wisdom saving throw or be frightened for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
-            "3. Enervation Ray. The targeted creature must make a DC 14 Constitution saving throw, taking 36 (8d8) necrotic damage on a failed save, or half as much damage on a successful one.",
-            "4. Disintegration Ray. If the target is a creature, it must succeed on a DC 14 Dexterity saving throw or take 45 (10d8) force damage. If this damage reduces the creature to 0 hit points, its body becomes a pile of fine gray dust.\nIf the target is a Large or smaller nonmagical object or creation of magical force, it is disintegrated without a saving throw. If the target is a Huge or larger nonmagical object or creation of magical force, this ray disintegrates a 10-foot cube of it."
+            "Paralyzing Ray. The targeted creature must succeed on a DC 14 Constitution saving throw or be paralyzed for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+            "Fear Ray. The targeted creature must succeed on a DC 14 Wisdom saving throw or be frightened for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+            "Enervation Ray. The targeted creature must make a DC 14 Constitution saving throw, taking 36 (8d8) necrotic damage on a failed save, or half as much damage on a successful one.",
+            "Disintegration Ray. If the target is a creature, it must succeed on a DC 14 Dexterity saving throw or take 45 (10d8) force damage. If this damage reduces the creature to 0 hit points, its body becomes a pile of fine gray dust.\nIf the target is a Large or smaller nonmagical object or creation of magical force, it is disintegrated without a saving throw. If the target is a Huge or larger nonmagical object or creation of magical force, this ray disintegrates a 10-foot cube of it."
         ]
     },
     {
@@ -3400,14 +3400,7 @@
         "languages": "Draconic, Sylvan",
         "challenge": "2",
         "traits": [
-            "The Colors of Age. A faerie dragon's scales change hue as it ages, moving through all the colors of the rainbow. All faerie dragons have innate spellcasting ability, gaining new spells as they mature.",
-            "Red — 5 years or less",
-            "Orange — 6-10 years",
-            "Yellow — 11-20 years",
-            "Green — 21-30 years",
-            "Blue — 31-40 years",
-            "Indigo — 41-50 years",
-            "Violet — 51 years or more\nA green or older faerie dragon's CR increases to 2.",
+            "The Colors of Age. A faerie dragon's scales change hue as it ages, moving through all the colors of the rainbow. All faerie dragons have innate spellcasting ability, gaining new spells as they mature.\nRed — 5 years or less\nOrange — 6-10 years\nYellow — 11-20 years\nGreen — 21-30 years\nBlue — 31-40 years\nIndigo — 41-50 years\nViolet — 51 years or more\nA green or older faerie dragon's CR increases to 2.",
             "Superior Invisibility. As a bonus action, the dragon can magically turn invisible until its concentration ends (as if concentrating on a spell). Any equipment the dragon wears or carries is invisible with it.",
             "Limited Telepathy. Using telepathy, the dragon can magically communicate with any other faerie dragon within 60 feet of it.",
             "Magic Resistance. The faerie dragon has advantage on saving throws against spells and other magical effects.",
@@ -3416,8 +3409,7 @@
         "spells": "color spray, dancing lights, hallucinatory terrain, mage hand, major image, minor illusion, mirror image, suggestion",
         "actions": [
             "Bite. Melee Weapon Attack: +7 to hit, reach 5 ft., one creature. Hit: 1 piercing damage.",
-            "Euphoria Breath (Recharge 5-6). The dragon exhales a puff of euphoria gas at one creature within 5 feet of it. The target must succeed on a DC 11 Wisdom saving throw, or for 1 minute, the target can't take reactions and must roll a d6 at the start of each of its turns to determine its behavior during the turn:\n1-4. The target takes no action or bonus action and uses all of its movement to move in a random direction.",
-            "5-6. The target doesn't move, and the only thing it can do on its turn is make a DC 11 Wisdom saving throw, ending the effect on itself on a success."
+            "Euphoria Breath (Recharge 5-6). The dragon exhales a puff of euphoria gas at one creature within 5 feet of it. The target must succeed on a DC 11 Wisdom saving throw, or for 1 minute, the target can't take reactions and must roll a d6 at the start of each of its turns to determine its behavior during the turn:\n1-4. The target takes no action or bonus action and uses all of its movement to move in a random direction.\n5-6. The target doesn't move, and the only thing it can do on its turn is make a DC 11 Wisdom saving throw, ending the effect on itself on a success."
         ]
     },
     {
@@ -3434,14 +3426,7 @@
         "languages": "Draconic, Sylvan",
         "challenge": "1",
         "traits": [
-            "The Colors of Age. A faerie dragon's scales change hue as it ages, moving through all the colors of the rainbow. All faerie dragons have innate spellcasting ability, gaining new spells as they mature.",
-            "Red — 5 years or less",
-            "Orange — 6-10 years",
-            "Yellow — 11-20 years",
-            "Green — 21-30 years",
-            "Blue — 31-40 years",
-            "Indigo — 41-50 years",
-            "Violet — 51 years or more\nA green or older faerie dragon's CR increases to 2.",
+            "The Colors of Age. A faerie dragon's scales change hue as it ages, moving through all the colors of the rainbow. All faerie dragons have innate spellcasting ability, gaining new spells as they mature.\nRed — 5 years or less\nOrange — 6-10 years\nYellow — 11-20 years\nGreen — 21-30 years\nBlue — 31-40 years\nIndigo — 41-50 years\nViolet — 51 years or more\nA green or older faerie dragon's CR increases to 2.",
             "Superior Invisibility. As a bonus action, the dragon can magically turn invisible until its concentration ends (as if concentrating on a spell). Any equipment the dragon wears or carries is invisible with it.",
             "Limited Telepathy. Using telepathy, the dragon can magically communicate with any other faerie dragon within 60 feet of it.",
             "Magic Resistance. The faerie dragon has advantage on saving throws against spells and other magical effects.",
@@ -3450,8 +3435,7 @@
         "spells": "color spray, dancing lights, mage hand, minor illusion",
         "actions": [
             "Bite. Melee Weapon Attack: +7 to hit, reach 5 ft., one creature. Hit: 1 piercing damage.",
-            "Euphoria Breath (Recharge 5-6). The dragon exhales a puff of euphoria gas at one creature within 5 feet of it. The target must succeed on a DC 11 Wisdom saving throw, or for 1 minute, the target can't take reactions and must roll a d6 at the start of each of its turns to determine its behavior during the turn:\n1-4. The target takes no action or bonus action and uses all of its movement to move in a random direction.",
-            "5-6. The target doesn't move, and the only thing it can do on its turn is make a DC 11 Wisdom saving throw, ending the effect on itself on a success."
+            "Euphoria Breath (Recharge 5-6). The dragon exhales a puff of euphoria gas at one creature within 5 feet of it. The target must succeed on a DC 11 Wisdom saving throw, or for 1 minute, the target can't take reactions and must roll a d6 at the start of each of its turns to determine its behavior during the turn:\n1-4. The target takes no action or bonus action and uses all of its movement to move in a random direction.\n5-6. The target doesn't move, and the only thing it can do on its turn is make a DC 11 Wisdom saving throw, ending the effect on itself on a success."
         ]
     },
     {
@@ -3468,14 +3452,7 @@
         "languages": "Draconic, Sylvan",
         "challenge": "1",
         "traits": [
-            "The Colors of Age. A faerie dragon's scales change hue as it ages, moving through all the colors of the rainbow. All faerie dragons have innate spellcasting ability, gaining new spells as they mature.",
-            "Red — 5 years or less",
-            "Orange — 6-10 years",
-            "Yellow — 11-20 years",
-            "Green — 21-30 years",
-            "Blue — 31-40 years",
-            "Indigo — 41-50 years",
-            "Violet — 51 years or more\nA green or older faerie dragon's CR increases to 2.",
+            "The Colors of Age. A faerie dragon's scales change hue as it ages, moving through all the colors of the rainbow. All faerie dragons have innate spellcasting ability, gaining new spells as they mature.\nRed — 5 years or less\nOrange — 6-10 years\nYellow — 11-20 years\nGreen — 21-30 years\nBlue — 31-40 years\nIndigo — 41-50 years\nViolet — 51 years or more\nA green or older faerie dragon's CR increases to 2.",
             "Superior Invisibility. As a bonus action, the dragon can magically turn invisible until its concentration ends (as if concentrating on a spell). Any equipment the dragon wears or carries is invisible with it.",
             "Limited Telepathy. Using telepathy, the dragon can magically communicate with any other faerie dragon within 60 feet of it.",
             "Magic Resistance. The faerie dragon has advantage on saving throws against spells and other magical effects.",
@@ -3484,8 +3461,7 @@
         "spells": "dancing lights, mage hand, minor illusion",
         "actions": [
             "Bite. Melee Weapon Attack: +7 to hit, reach 5 ft., one creature. Hit: 1 piercing damage.",
-            "Euphoria Breath (Recharge 5-6). The dragon exhales a puff of euphoria gas at one creature within 5 feet of it. The target must succeed on a DC 11 Wisdom saving throw, or for 1 minute, the target can't take reactions and must roll a d6 at the start of each of its turns to determine its behavior during the turn:\n1-4. The target takes no action or bonus action and uses all of its movement to move in a random direction.",
-            "5-6. The target doesn't move, and the only thing it can do on its turn is make a DC 11 Wisdom saving throw, ending the effect on itself on a success."
+            "Euphoria Breath (Recharge 5-6). The dragon exhales a puff of euphoria gas at one creature within 5 feet of it. The target must succeed on a DC 11 Wisdom saving throw, or for 1 minute, the target can't take reactions and must roll a d6 at the start of each of its turns to determine its behavior during the turn:\n1-4. The target takes no action or bonus action and uses all of its movement to move in a random direction.\n5-6. The target doesn't move, and the only thing it can do on its turn is make a DC 11 Wisdom saving throw, ending the effect on itself on a success."
         ]
     },
     {
@@ -3502,14 +3478,7 @@
         "languages": "Draconic, Sylvan",
         "challenge": "2",
         "traits": [
-            "The Colors of Age. A faerie dragon's scales change hue as it ages, moving through all the colors of the rainbow. All faerie dragons have innate spellcasting ability, gaining new spells as they mature.",
-            "Red — 5 years or less",
-            "Orange — 6-10 years",
-            "Yellow — 11-20 years",
-            "Green — 21-30 years",
-            "Blue — 31-40 years",
-            "Indigo — 41-50 years",
-            "Violet — 51 years or more\nA green or older faerie dragon's CR increases to 2.",
+            "The Colors of Age. A faerie dragon's scales change hue as it ages, moving through all the colors of the rainbow. All faerie dragons have innate spellcasting ability, gaining new spells as they mature.\nRed — 5 years or less\nOrange — 6-10 years\nYellow — 11-20 years\nGreen — 21-30 years\nBlue — 31-40 years\nIndigo — 41-50 years\nViolet — 51 years or more\nA green or older faerie dragon's CR increases to 2.",
             "Superior Invisibility. As a bonus action, the dragon can magically turn invisible until its concentration ends (as if concentrating on a spell). Any equipment the dragon wears or carries is invisible with it.",
             "Limited Telepathy. Using telepathy, the dragon can magically communicate with any other faerie dragon within 60 feet of it.",
             "Magic Resistance. The faerie dragon has advantage on saving throws against spells and other magical effects.",
@@ -3518,8 +3487,7 @@
         "spells": "color spray, dancing lights, hallucinatory terrain, mage hand, major image, minor illusion, mirror image, polymorph, suggestion",
         "actions": [
             "Bite. Melee Weapon Attack: +7 to hit, reach 5 ft., one creature. Hit: 1 piercing damage.",
-            "Euphoria Breath (Recharge 5-6). The dragon exhales a puff of euphoria gas at one creature within 5 feet of it. The target must succeed on a DC 11 Wisdom saving throw, or for 1 minute, the target can't take reactions and must roll a d6 at the start of each of its turns to determine its behavior during the turn:\n1-4. The target takes no action or bonus action and uses all of its movement to move in a random direction.",
-            "5-6. The target doesn't move, and the only thing it can do on its turn is make a DC 11 Wisdom saving throw, ending the effect on itself on a success."
+            "Euphoria Breath (Recharge 5-6). The dragon exhales a puff of euphoria gas at one creature within 5 feet of it. The target must succeed on a DC 11 Wisdom saving throw, or for 1 minute, the target can't take reactions and must roll a d6 at the start of each of its turns to determine its behavior during the turn:\n1-4. The target takes no action or bonus action and uses all of its movement to move in a random direction.\n5-6. The target doesn't move, and the only thing it can do on its turn is make a DC 11 Wisdom saving throw, ending the effect on itself on a success."
         ]
     },
     {
@@ -3536,14 +3504,7 @@
         "languages": "Draconic, Sylvan",
         "challenge": "1",
         "traits": [
-            "The Colors of Age. A faerie dragon's scales change hue as it ages, moving through all the colors of the rainbow. All faerie dragons have innate spellcasting ability, gaining new spells as they mature.",
-            "Red — 5 years or less",
-            "Orange — 6-10 years",
-            "Yellow — 11-20 years",
-            "Green — 21-30 years",
-            "Blue — 31-40 years",
-            "Indigo — 41-50 years",
-            "Violet — 51 years or more\nA green or older faerie dragon's CR increases to 2.",
+            "The Colors of Age. A faerie dragon's scales change hue as it ages, moving through all the colors of the rainbow. All faerie dragons have innate spellcasting ability, gaining new spells as they mature.\nRed — 5 years or less\nOrange — 6-10 years\nYellow — 11-20 years\nGreen — 21-30 years\nBlue — 31-40 years\nIndigo — 41-50 years\nViolet — 51 years or more\nA green or older faerie dragon's CR increases to 2.",
             "Superior Invisibility. As a bonus action, the dragon can magically turn invisible until its concentration ends (as if concentrating on a spell). Any equipment the dragon wears or carries is invisible with it.",
             "Limited Telepathy. Using telepathy, the dragon can magically communicate with any other faerie dragon within 60 feet of it.",
             "Magic Resistance. The faerie dragon has advantage on saving throws against spells and other magical effects.",
@@ -3552,8 +3513,7 @@
         "spells": "color spray, dancing lights, mage hand, minor illusion, mirror image",
         "actions": [
             "Bite. Melee Weapon Attack: +7 to hit, reach 5 ft., one creature. Hit: 1 piercing damage.",
-            "Euphoria Breath (Recharge 5-6). The dragon exhales a puff of euphoria gas at one creature within 5 feet of it. The target must succeed on a DC 11 Wisdom saving throw, or for 1 minute, the target can't take reactions and must roll a d6 at the start of each of its turns to determine its behavior during the turn:\n1-4. The target takes no action or bonus action and uses all of its movement to move in a random direction.",
-            "5-6. The target doesn't move, and the only thing it can do on its turn is make a DC 11 Wisdom saving throw, ending the effect on itself on a success."
+            "Euphoria Breath (Recharge 5-6). The dragon exhales a puff of euphoria gas at one creature within 5 feet of it. The target must succeed on a DC 11 Wisdom saving throw, or for 1 minute, the target can't take reactions and must roll a d6 at the start of each of its turns to determine its behavior during the turn:\n1-4. The target takes no action or bonus action and uses all of its movement to move in a random direction.\n5-6. The target doesn't move, and the only thing it can do on its turn is make a DC 11 Wisdom saving throw, ending the effect on itself on a success."
         ]
     },
     {
@@ -8643,10 +8603,10 @@
         "actions": [
             "Bite. Melee Weapon Attack: +1 to hit, reach 5 ft., one target. Hit: 2 (1d6 — 1) piercing damage.",
             "Eye Rays. The spectator shoots up to two of the following magical eye rays at one or two creatures it can see within 90 ft. of it. It can use each ray only once on a turn.",
-            "1. Confusion Ray. The target must succeed on a DC 13 Wisdom saving throw, or it can't take reactions until the end of its next turn. On its turn, the target can't move, and it uses its action to make a melee or ranged attack against a randomly determined creature within range. If the target can't attack, it does nothing on its turn.",
+            "Confusion Ray. The target must succeed on a DC 13 Wisdom saving throw, or it can't take reactions until the end of its next turn. On its turn, the target can't move, and it uses its action to make a melee or ranged attack against a randomly determined creature within range. If the target can't attack, it does nothing on its turn.",
             "Paralyzing Ray. The target must succeed on a DC 13 Constitution saving throw or be paralyzed for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
             "Fear Ray. The target must succeed on a DC 13 Wisdom saving throw or be frightened for 1 minute. The target can repeat the saving throw at the end of each of its turns, with disadvantage if the spectator is visible to the target, ending the effect on itself on a success.",
-            "4. Wounding Ray. The target must make a DC 13 Constitution saving throw, taking 16 (3d10) necrotic damage on a failed save, or half as much damage on a successful one.",
+            "Wounding Ray. The target must make a DC 13 Constitution saving throw, taking 16 (3d10) necrotic damage on a failed save, or half as much damage on a successful one.",
             "Create Food and Water. The spectator magically creates enough food and water to sustain itself for 24 hours."
         ]
     },
