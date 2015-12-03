@@ -120,7 +120,7 @@
     "duration": "Up to 10 minutes"
   },
   {
-    "name": "Cloud of Daggers",
+    "name": "Cloud of Acid",
     "description": "You fill the air with an acidic cloud in a 5-foot-radius, centered on a point you choose within range. A creature takes 4d4 acid damage when it enters the spell's area for the first time on a turn or starts its turn there.",
     "higherLevel": "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 2d4 for each slot level above 2nd.",
     "emote": "fills the the air with an acidic cloud",
@@ -456,7 +456,7 @@
     "level": 5,
     "school": "Evocation",
     "save": {
-      "ability": "constitution",
+      "ability": "dexterity",
       "damage": "8d8",
       "damageType": "lightning",
       "saveSuccess": "half damage",
