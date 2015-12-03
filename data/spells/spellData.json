@@ -1134,6 +1134,30 @@
     ]
   },
   {
+    "name": "Booming Blade",
+    "description": "As part of the action used to cast this spell, you must make a melee attack with a weapon against one creature within the spell's range, otherwise the spell fails. On a hit, the target suffers the attack's normal effects, and it becomes sheathed in booming energy until the start of your next turn. If the target willingly moves before then, it immediately takes 1d8 thunder damage, and the spell ends.",
+    "higherLevel": "This spell's damage increases when you reach higher levels. At 5th level, the melee attack deals an extra 1d8 thunder damage to the target, and the damage the target takes for moving increases to 2d8. Both damage rolls increase by 1d8 at 11th level and 17th level.",
+    "emote": "'s target becomes sheathed in booming energy",
+    "source": "SCAG 142",
+    "range": "5 ft",
+    "target": "one creature",
+    "components": {
+      "verbal": true,
+      "material": true,
+      "materialMatieral": "a weapon"
+    },
+    "duration": "1 round",
+    "castingTime": "action",
+    "level": 0,
+    "school": "Evocation",
+    "effect": "As part of the action used to cast this spell, you must make a melee attack with a weapon against one creature within the spell's range, otherwise the spell fails. On a hit, the target suffers the attack's normal effects, and it becomes sheathed in booming energy until the start of your next turn. If the target willingly moves before then, it immediately takes [[((@{level} + 1) / 6 + 0.5)d8]] thunder damage, and the spell ends.",
+    "classes": [
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
+    ]
+  },
+  {
     "name": "Branding Smite",
     "description": "The next time you hit a creature with a weapon attack before this spell ends, the weapon gleams with astral radiance as you strike. The attack deals an extra 2d6 radiant damage to the target, which becomes visible if it's invisible, and the target sheds dim light in a 5-foot radius and can't become invisible until the spell ends.",
     "higherLevel": "When you cast this spell using a spell slot of 3rd level or higher, the extra damage increases by 1d6 for each slot level above 2nd.",
@@ -4846,6 +4870,37 @@
     ]
   },
   {
+    "name": "Green-Flame Blade",
+    "description": "As part of the action used to cast this spell, you must make a melee attack with a weapon against one creature within the spell's range, otherwise the spell fails. On a hit, the target suffers the attack's normal effects, and green fire leaps from the target to a different creature of your choice that you can see within 5 feet of it. The second creature takes fire damage equal to your spellcasting ability modifier.",
+    "higherLevel": "This spell's damage increases when you reach higher levels. At 5th level, the melee attack deals an extra 1d8 fire damage to the target, and the fire damage to the second creature increases to 1d8 + your spellcasting ability modifier. Both damage rolls increase by 1d8 at 11th level and 17th level.",
+    "emote": "causes green fire to leap from creature to creature",
+    "source": "SCAG 143",
+    "range": "5 ft",
+    "target": "one creature",
+    "components": {
+      "verbal": true,
+      "material": true,
+      "materialMatieral": "a weapon"
+    },
+    "duration": "Instantaneous",
+    "castingTime": "action",
+    "level": 0,
+    "school": "Evocation",
+    "damage": {
+      "damage": "(((@{level} + 1) / 6 + 0.5)-1)d8",
+      "castingStat": true,
+      "damageType": "fire",
+      "secondaryDamage": "(((@{level} + 1) / 6 + 0.5)-1)d8",
+      "secondaryDamageType": "fire"
+    },
+    "effect": "As part of the action used to cast this spell, you must make a melee attack with a weapon against one creature within the spell's range, otherwise the spell fails. On a hit, the target suffers the attack's normal effects, and green fire leaps from the target to a different creature of your choice that you can see within 5 feet of it. The second creature takes fire damage equal to your spellcasting ability modifier.",
+    "classes": [
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
+    ]
+  },
+  {
     "name": "Guardian of Faith",
     "description": "A Large spectral guardian appears and hovers for the duration in an unoccupied space of your choice that you can see within range. The guardian occupies that space and is indistinct except for a gleaming sword and shield emblazoned with the symbol of your deity.\nAny creature hostile to you that moves to a space within 10 feet of the guardian for the first time on a turn must succeed on a Dexterity saving throw. The creature takes 20 radiant damage on a failed save, or half as much damage on a successful one. The guardian vanishes when it has dealt a total of 60 damage.",
     "emote": "conjures a Large spectral guardian that hovers",
@@ -6208,6 +6263,34 @@
     ],
     "circles": [
       "Mountain"
+    ]
+  },
+  {
+    "name": "Lightning Lure",
+    "description": "You create a lash of lightning energy that strikes at one creature of your choice that you can see within range. The target must succeed on a Strength saving throw or be pulled up to 10 feet in a straight line toward you and then take 1d8 lightning damage if it is within 5 feet of you.",
+    "higherLevel": "This spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).",
+    "emote": "creates a lash of lightning energy that strikes at one creature",
+    "source": "SCAG 143",
+    "range": "15 ft",
+    "target": "one creature that you can see within range",
+    "components": {
+      "verbal": true
+    },
+    "duration": "Instantaneous",
+    "castingTime": "action",
+    "level": 0,
+    "school": "Evocation",
+    "save": {
+      "ability": "strength",
+      "damage": "((@{level} + 1) / 6 + 0.5)d8",
+      "damageType": "lightning",
+      "saveCondition": "if it is within 5 feet of you after being pulled",
+      "saveFailure": "pulled up to 10 feet in a straight line toward you"
+    },
+    "classes": [
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ]
   },
   {
@@ -9635,6 +9718,32 @@
     "effects": "On each of your turns until the spell ends, you can use a bonus action to make two attacks with a weapon that uses ammunition from the quiver. Each time you make such a ranged attack, your quiver magically replaces the piece of ammunition you used with a similar piece of nonmagical ammunition. Any pieces of ammunition created by this spell disintegrate when the spell ends. If the quiver leaves your possession, the spell ends.",
     "classes": [
       "Ranger"
+    ]
+  },
+  {
+    "name": "Sword Burst",
+    "description": "You create a momentary circle of spectral blades that sweep around you. Each creature within range, other than you, must succeed on a Dexterity saving throw or take 1d6 force damage.",
+    "higherLevel": "This spell's damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6).",
+    "emote": "creates a momentary circle of spectral blades that sweep around {{GENDER_PRONOUN_HIM_HER}}",
+    "source": "SCAG 143",
+    "range": "5 ft",
+    "target": "Each creature within range",
+    "components": {
+      "verbal": true
+    },
+    "duration": "Instantaneous",
+    "castingTime": "action",
+    "level": 0,
+    "school": "Conjuration",
+    "save": {
+      "ability": "dexterity",
+      "damage": "((@{level} + 1) / 6 + 0.5)d6",
+      "damageType": "force"
+    },
+    "classes": [
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ]
   },
   {
