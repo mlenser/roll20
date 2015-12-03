@@ -10862,7 +10862,7 @@
     "challenge": "7",
     "traits": [
       "Shapechanger. The yuan-ti can use its action to polymorph into a Large snake, or back into its true form. Its statistics are the same in each form. Any equipment it is wearing or carrying isn't transformed. It doesn't change form if it dies.",
-      "Innate Spellcasting (Abomination Form Only). The yuan_ti's innate spellcasting ability is Charisma (spell save DC 15). The yuan_ti can innately cast the following spells, requiring no material components:\nAt will: animal friendship (snakes only)\n3/day: suggestion\n1/day: fear",
+      "Innate Spellcasting (Abomination Form Only). The Yuan-ti's innate spellcasting ability is Charisma (spell save DC 15). The Yuan-ti can innately cast the following spells, requiring no material components:\nAt will: animal friendship (snakes only)\n3/day: suggestion\n1/day: fear",
       "Magic Resistance. The yuan-ti has advantage on saving throws against spells and other magical effects."
     ],
     "spells": "animal friendship, suggestion, fear"
@@ -10884,19 +10884,16 @@
     "challenge": "3",
     "traits": [
       "Shapechanger. The yuan-ti can use its action to polymorph into a Medium snake, or back into its true form. Its statistics are the same in each form. Any equipment it is wearing or carrying isn't transformed. It doesn't change form if it dies.",
-      "Innate Spellcasting (Yuan_ti Form Only). The yuan_ti's innate spellcasting ability is Charisma (spell save DC 13). The yuan_ti can innately cast the following spells, requiring no material components:\nAt will: animal friendship (snakes only)\n3/day: suggestion",
+      "Innate Spellcasting (Yuan-ti Form Only). The Yuan-ti's innate spellcasting ability is Charisma (spell save DC 13). The Yuan-ti can innately cast the following spells, requiring no material components:\nAt will: animal friendship (snakes only)\n3/day: suggestion",
       "Magic Resistance. The yuan-ti has advantage on saving throws against spells and other magical effects.",
-      "Malison Type. The yuan_ti has one of the following types:",
-      "Type 1: Human body with snake head",
-      "Type 2: Human head and body with snakes for arms",
-      "Type 3: Human head and upper body with a serpentine lower body instead of legs"
+      "Malison Type. The Yuan-ti has one of the following types:\nType 1: Human body with snake head\nType 2: Human head and body with snakes for arms\nType 3: Human head and upper body with a serpentine lower body instead of legs"
     ],
     "spells": "animal friendship, suggestion",
     "actions": [
-      "Multiattack (Yuan_ti Form Only). The yuan_ti makes two ranged attacks or two melee attacks, but can use its bite only once.",
+      "Multiattack (Yuan-ti Form Only). The Yuan-ti makes two ranged attacks or two melee attacks, but can use its bite only once.",
       "Bite. Melee Weapon Attack: +5 to hit, reach 5 ft., one creature. Hit: 5 (1d4 + 3) piercing damage plus 7 (2d6) poison damage.",
-      "Scimitar (Yuan_ti Form Only). Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) slashing damage.",
-      "Longbow (Yuan_ti Form Only). Ranged Weapon Attack: +4 to hit, range 150/600 ft., one target. Hit: 6 (1d8 + 2) piercing damage plus 7 (2d6) poison damage."
+      "Scimitar (Yuan-ti Form Only). Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) slashing damage.",
+      "Longbow (Yuan-ti Form Only). Ranged Weapon Attack: +4 to hit, range 150/600 ft., one target. Hit: 6 (1d8 + 2) piercing damage plus 7 (2d6) poison damage."
     ]
   },
   {
@@ -10916,16 +10913,13 @@
     "challenge": "3",
     "traits": [
       "Shapechanger. The yuan-ti can use its action to polymorph into a Medium snake, or back into its true form. Its statistics are the same in each form. Any equipment it is wearing or carrying isn't transformed. It doesn't change form if it dies.",
-      "Innate Spellcasting (Yuan_ti Form Only). The yuan_ti's innate spellcasting ability is Charisma (spell save DC 13). The yuan_ti can innately cast the following spells, requiring no material components:\nAt will: animal friendship (snakes only)\n3/day: suggestion",
+      "Innate Spellcasting (Yuan-ti Form Only). The Yuan-ti's innate spellcasting ability is Charisma (spell save DC 13). The Yuan-ti can innately cast the following spells, requiring no material components:\nAt will: animal friendship (snakes only)\n3/day: suggestion",
       "Magic Resistance. The yuan-ti has advantage on saving throws against spells and other magical effects.",
-      "Malison Type. The yuan_ti has one of the following types:",
-      "Type 1: Human body with snake head",
-      "Type 2: Human head and body with snakes for arms",
-      "Type 3: Human head and upper body with a serpentine lower body instead of legs"
+      "Malison Type. The Yuan-ti has one of the following types:\nType 1: Human body with snake head\nType 2: Human head and body with snakes for arms\nType 3: Human head and upper body with a serpentine lower body instead of legs"
     ],
     "spells": "animal friendship, suggestion",
     "actions": [
-      "Multiattack (Yuan_ti Form Only). The yuan_ti makes two bite attacks using its snake arms.",
+      "Multiattack (Yuan-ti Form Only). The Yuan-ti makes two bite attacks using its snake arms.",
       "Bite. Melee Weapon Attack: +5 to hit, reach 5 ft., one creature. Hit: 5 (1d4 + 3) piercing damage plus 7 (2d6) poison damage."
     ]
   },
@@ -10946,20 +10940,17 @@
     "challenge": "3",
     "traits": [
       "Shapechanger. The yuan-ti can use its action to polymorph into a Medium snake, or back into its true form. Its statistics are the same in each form. Any equipment it is wearing or carrying isn't transformed. It doesn't change form if it dies.",
-      "Innate Spellcasting (Yuan_ti Form Only). The yuan_ti's innate spellcasting ability is Charisma (spell save DC 13). The yuan_ti can innately cast the following spells, requiring no material components:\nAt will: animal friendship (snakes only)\n3/day: suggestion",
+      "Innate Spellcasting (Yuan-ti Form Only). The Yuan-ti's innate spellcasting ability is Charisma (spell save DC 13). The Yuan-ti can innately cast the following spells, requiring no material components:\nAt will: animal friendship (snakes only)\n3/day: suggestion",
       "Magic Resistance. The yuan-ti has advantage on saving throws against spells and other magical effects.",
-      "Malison Type. The yuan_ti has one of the following types:",
-      "Type 1: Human body with snake head",
-      "Type 2: Human head and body with snakes for arms",
-      "Type 3: Human head and upper body with a serpentine lower body instead of legs"
+      "Malison Type. The Yuan-ti has one of the following types:\nType 1: Human body with snake head\nType 2: Human head and body with snakes for arms\nType 3: Human head and upper body with a serpentine lower body instead of legs"
     ],
     "spells": "animal friendship, suggestion",
     "actions": [
-      "Multiattack (Yuan_ti Form Only). The yuan_ti makes two ranged attacks or two melee attacks, but can constrict only once.",
+      "Multiattack (Yuan-ti Form Only). The Yuan-ti makes two ranged attacks or two melee attacks, but can constrict only once.",
       "Bite (Snake Form Only). Melee Weapon Attack: +5 to hit, reach 5 ft., one creature. Hit: 5 (1d4 + 3) piercing damage plus 7 (2d6) poison damage.",
-      "Constrict. Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) bludgeoning damage, and the target is grappled (escape DC 13). Until this grapple ends, the target is restrained, and the yuan_ti can't constrict another target.",
-      "Scimitar (Yuan_ti Form Only). Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) slashing damage.",
-      "Longbow (Yuan_ti Form Only). Ranged Weapon Attack: +4 to hit, range 150/600 ft., one target. Hit: 6 (1d8 + 2) piercing damage."
+      "Constrict. Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) bludgeoning damage, and the target is grappled (escape DC 13). Until this grapple ends, the target is restrained, and the Yuan-ti can't constrict another target.",
+      "Scimitar (Yuan-ti Form Only). Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) slashing damage.",
+      "Longbow (Yuan-ti Form Only). Ranged Weapon Attack: +4 to hit, range 150/600 ft., one target. Hit: 6 (1d8 + 2) piercing damage."
     ]
   },
   {
