@@ -126,7 +126,7 @@
       "Multiattack. Neronvain makes two attacks, either with his shortsword or Eldritch Arrow.",
       "Shortsword. Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) piercing damage plus 13 (3d8) poison damage.",
       "Eldritch Arrow. Ranged Spell Attack: +7 to hit, range 120 ft., one target. Hit: 11 (2d10) force damage plus 9 (2d8) poison damage.",
-      "Poisonous Cloud (2/Day). Poison gas fills a 20-foot-radius sphere centered on a point Neronvain can see within 50 feet of him. The gas spreads around corners and remains until the start of Neronvain's next turn. Each creature that starts its turn in the gas must succeed on a DC 16 Constitution saving throw or be poisoned for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. \t\t\t"
+      "Poisonous Cloud (2/Day). Poison gas fills a 20-foot-radius sphere centered on a point Neronvain can see within 50 feet of him. The gas spreads around corners and remains until the start of Neronvain's next turn. Each creature that starts its turn in the gas must succeed on a DC 16 Constitution saving throw or be poisoned for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
     ]
   },
   {
@@ -184,7 +184,7 @@
       "Discorporation. When Tiamat drops to 0 hit points or dies, her body is destroyed but her essence travels back to her domain in the Nine Hells, and she is unable to take physical form for a time.",
       "Innate Spellcasting (3/Day). Tiamat can innately cast divine word (spell save DC 26). Her spellcasting ability is Charisma.",
       "Legendary Resistance (5/Day). If Tiamat fails a saving throw, she can choose to succeed instead.",
-      "Limited Magic Immunity. Unless she wishes to be affected, Tiamat is immune to spells of 6th level or lower. She has advantage on saving throws against all other spells and magical effects.",
+      "Limited Magic Immunity. Unless she wishes to be affected, Tiamat is immune to spells of • 6th level or lower. She has advantage on saving throws against all other spells and magical effects.",
       "Magic Weapons. Tiamat's weapon attacks are magical.",
       "Multiple Heads. Tiamat can take one reaction per turn, rather than only one per round. She also has advantage on saving throws against being knocked unconscious. If she fails a saving throw against an effect that would stun a creature, one of her unspent legendary actions is spent.",
       "Regeneration. Tiamat regains 30 hit points at the start of her turn."
