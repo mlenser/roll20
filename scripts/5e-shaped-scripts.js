@@ -2149,7 +2149,7 @@
 			setAttribute(spellBase + 'spell_toggle_effects', '@{spell_var_effects}');
 		}
 
-		messageToChat(spell.name + ' imported for ' + characterName + ' on spell level ' + spell.level + ' at index ' + spellIndex);
+		//messageToChat(spell.name + ' imported for ' + characterName + ' on spell level ' + spell.level + ' at index ' + spellIndex);
 	};
 
 	shaped.spellImport = function (token, args) {
@@ -2170,6 +2170,7 @@
 		for (var i = 0; i < spells.length; i++) {
 			shaped.importSpell(character, characterName, spells[i], options);
 		}
+		messageToChat('finished importing spells');
 	};
 
 	shaped.importMonster = function (token, monsterName) {
@@ -2229,10 +2230,33 @@
 			createCheckQueryTokenAction(monster.name);
 		}
 
+		log('traits');
+		log(monster.traits);
 		if (monster.traits) {
 			setAttribute('toggle_traits', 'on');
 			setAttribute('npc_traits', monster.traits.join('\n'));
+			var spells = '';
+			var regex = /(?:(?:\d+\/day(?:\s* each)?)|(?:At will)|(?:(?:Cantrips|level)\s*\(.*\))):\s* (.*)/gi;
+			for(var i = 0; i < monster.traits.length; i++) {
+				var match = regex.exec(monster.traits[i]);
+				if(match) {
+					log('match');
+					log(match);
+					if(spells === '') {
+						spells += match[1];
+					} else {
+						spells += ', ' + match[1];
+					}
+				}
+			}
+			log('spells');
+			log(spells);
+			spells = spells.split(', ');
+			log('spells2');
+			log(spells);
+
 		}
+
 		if (monster.actions) {
 			monster.parsedActions = {};
 			setAttribute('toggle_actions', 'on');
@@ -2342,7 +2366,6 @@
 
 			setTokenVision(token);
 		}
-
 		if (monster.spells) {
 			shaped.spellImport(token, [monster.spells]);
 		}
