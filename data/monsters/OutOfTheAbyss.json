@@ -609,8 +609,8 @@
             "Caustic Spores (1/Day). Yestabrod releases spores in a 30-foot cone. Each creature in that area must succeed on a DC 12 Dexterity saving throw ortake 1d6 acid damage at the start of each of Yestbrod's turns. A creature can repeat the saving throw at the end of each of its turn, ending the effect on itself on a success.",
             "Infestation Spores (1/Day). Yestabrod releases spores that burst out in a cloud that fills a 10-foot-radius sphere centered on it, and the cloud lingers for 1 minute. Any flesh-and-blood creature in the cloud when it appears, or that enters it later, must make a DC 12 Constitution saving throw. On a successful save, the creature can't be infected by these spores for 24 hours. On a failed save, the creature is infected with a disease called the spores of Zuggtmoy and also gains a random form of indefinite madness (determined by rolling on the Madness of Zuggtmoy table in appendix D) that lasts until the creature is cured of the disease or dies. While infected in this way, the creature can't be reinfecte, and it must be repeat the saving throw at the end of every 24 hours, ending the infection on a success. On a failure, the infected creature's body is slowly taken over by fungal growth, and after three such failed saves, the creature dies and is reanimated as a spore servant if it's a type of creature that can be (see the \"Myconids\" entry in the Monster Manual)."
         ],
+        "legendaryPoints": "2",
         "legendaryActions": [
-            ". Yestabrod can take 2 legendary actions, choosing from the options below. Only one legendary action option can be used at a time and only at the end of another creature's turn. Yestabrod regains spent legendary actions at the start of its turn.",
             "Corpse Burst. Gore, offal, and acid erupt from a corpse within 20 feet of Yestabrod. Creatures within 10 feet of the corpse must succeed on a DC 12 Dexterity saving throw or take 7 (2d6) acid damage.",
             "Foul Absorption. Yestabrod absorbs pullrescence from a corpse within 5 feet of it, regainign 1d8 + 2 hit points"
         ]
@@ -649,8 +649,8 @@
             "Frightful Presence. Each creature of Baphomet's choice within 120 feet of him and aware of him must succeed on a DC 18 Wisdom saving throw or become frightened for 1 minute. A frightened creature can repeat the saving throw at the end of each of its turns, ending the effect on tiself on a success. These later saves have disadvantage if Baphomet is within line of sight of the creature.",
             "If a creature succeeds on any of these saves or the effect ends on it, the creature is immune is Baphomet's Frightful Presence for the next 24 hours."
         ],
+        "legendaryPoints": "3",
         "legendaryActions": [
-            ". Baphomet can take 3 legendary actions, choosing from the options below. Only one legendary action can be used at a time and only at the end of another creautre's turn. Baphomet regains spent legendary actions at the start of his turn.",
             "Heartcleaver attack. Baphomet makes a melee attack with Heartcleaver.",
             "Charge (Costs 2 actions). Baphomet moves up to his speed, then makes a gore attack."
         ]
@@ -685,12 +685,12 @@
             "Tentacle. Melee Weapon Attack: +17 to hit, reach 10 ft., one target. Hit: 35 (4d12 + 9) bludgeoning damage. If the target is a creature, it must succeed on a DC 23 Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if its hit point maximum is reduced to 0.",
             "Gaze. Demogorgon turns his magical gaze toward one creature that he can see within 120 feet of him. That target must make a DC 23 Wisdom saving throw. Unless the target is incapacitated, it can avert its eyes to avoid the gaze and to automatically succeed on the save. If the target does so, it can't see Demogorgon until the start of his next turn. If the target looks at him in the meantime, it must immediately make the save.",
             "If the target fails the save, the target suffers one of the following effects of Demogorgon's choice or at random:",
-            "1. Beguiling Gaze. The target is stunned until the start of Demogorgon's next turn or until Demogorgon is no longer within line of sight.",
-            "2. Hypnotic Gaze. The target is charmed by Demogorgon until the start of Demogorgon's next turn. Demogorgon chooses how the charmed target uses its actions, reactions, and movement. Because this gaze requires Demogorgon to focus both heads on the target, he can't use his Maddening Gaze legendary action until the start of his next turn.",
-            "3. Insanity Gaze. The target suffers the effect of the confusion spell without making a saving throw. The effect lasts until the start of Demogorgon's next turn. Demogorgon doesn't need to concentrate on the spell."
+            "Beguiling Gaze. The target is stunned until the start of Demogorgon's next turn or until Demogorgon is no longer within line of sight.",
+            "Hypnotic Gaze. The target is charmed by Demogorgon until the start of Demogorgon's next turn. Demogorgon chooses how the charmed target uses its actions, reactions, and movement. Because this gaze requires Demogorgon to focus both heads on the target, he can't use his Maddening Gaze legendary action until the start of his next turn.",
+            "Insanity Gaze. The target suffers the effect of the confusion spell without making a saving throw. The effect lasts until the start of Demogorgon's next turn. Demogorgon doesn't need to concentrate on the spell."
         ],
+        "legendaryPoints": "3",
         "legendaryActions": [
-            ". Demogorgon can take 3 legendary actions, choosing from the options below. Only one legendary action can be used at a time and only at the end of another creautre's turn. Demogorgon regains spent legendary actions at the start of his turn.",
             "Tail. Melee Weapon Attack: +17 to hit, reach 15 ft., one target. Hit: 31 (4d10 + 9) bludgeoning damage plus 22 (4d10) necrotic damage.",
             "Maddening Gaze. Demogorgon uses his Gaze action, and must choose either the Beguiling Gaze or the Insanity Gaze effect."
         ]
@@ -725,8 +725,8 @@
             "Bite. Melee Weapon Attack: +16 to hit, reach 10 ft., one target. Hit: 23 (4d6 + 9) piercing damage.",
             "Fist. Melee Weapon Attack: +16 to hit, reach 10 ft., one target. Hit: 27 (4d8 + 9) bludgeoning damage."
         ],
+        "legendaryPoints": "3",
         "legendaryActions": [
-            ". Fraz-Urb'luu can take 3 legendary actions, choosing from the options below. Only one legendary action can be used at a time and only at the end of another creautre's turn. Fraz-Urb'luu regains spent legendary actions at the start of his turn.",
             "Tail. Melee Weapon Attack: +16 to hit, reach 15 ft., one target. Hit: 31 (4d10 + 9) bludgeoning damage. If the target is a Large or smaller creature, it is also grappled (escape DC 24). The grappled target is also restrained. Fraz-Urb'luu can grapple only one creature with his tail at a time.",
             "Phantasmal Killer (Costs 2 Actions). Fraz-Urb'luu casts phantasmal killer, no concentration required."
         ]
@@ -761,8 +761,8 @@
             "Wave of Sorrow (Greatsword). Melee Weapon Attack: +13 to hit, reach 10 ft., one target, Hit; 20 (4d6 + 6) slashing damage plus 14 (4d6) acid damage.",
             "Teleport. Graz'zt magically teleports, along with any equipment he is wearing or carrying, up to 120 feet to an unoccupied space he can see."
         ],
+        "legendaryPoints": "3",
         "legendaryActions": [
-            ". Graz'zt can take 3 legendary actions, choosing from the options below. Only one legendary action can be used at a time and only at the end of another creautre's turn. Graz'zt regains spent legendary actions at the start of his turn.",
             "Attack. Graz'zt attacks once with the Wave of Sorrow.",
             "Dance, My Puppet!. One creature charmed by Graz'zt that Graz'zt can see must use its reaction to move up to its speed as Graz'zt directs.",
             "Sow Discord. Graz'zt casts crown of madness or dissonant whispers.",
@@ -801,8 +801,8 @@
             "Acid Lash. Melee Weapon Attack: +14 to hit, reach 10 ft., one target. Hit: 21 (4d6 + 7) acid damage. Any creature killed by this attack is drawn into Juiblex's body, and the corpse is obliterated after 1 minute.",
             "Eject Slime (Recharge 5—6). Juiblex spews out a corrosive slime, targeting one creature that it can see within 60 feet of it. The target must make a DC 21 Dexterity saving throw. On a failure, the target takes 55 (10d10) acid damage. Unless the target avoids taking any of this damage, any metal armor worn by the target takes a permanent -1 penalty to the AC it offers, and any metal weapon it is carrying or wearing takes a permanent -1 penalty to damage rolls. The penalty worsens each time a target is subjected to this effect. If the penalty on an object drops to -5, the object is destroyed."
         ],
+        "legendaryPoints": "3",
         "legendaryActions": [
-            ". Juiblex can take 3 legendary actions, choosing from the options below, Only one legendary action option can be used at a time and only at the end of another creature's turn. Juiblex regains spent legendary actions at the start of its turn.",
             "Acid Splash. Juiblex casts acid splash.",
             "Attack. Juiblex makes one acid lash attack.",
             "Corrupting Touch (Costs 2 Actions). Melee Weapon Attack: +14 to hit, reach 10 ft., one creature. Hit: 21 (4d6+ 7) poison damage, and the target is slimed. Until the slime is scraped off with an action, the target is poisoned, and any creature, other than an ooze, is poisoned while Within 10 of the target."
@@ -826,8 +826,7 @@
         "languages": "all, telepathy 120 ft.",
         "challenge": "26",
         "traits": [
-            "Wand of Orcus. The wand has 7 charges, and any of its properties that require a saving throw have a save DC of 18. While holding it, Orcus can use an action to cast animate dead, blight, or speak with dead. Alternatively, he can expend or 1 or more of the wand's charges to cast one of the following spells from it: circle of death (1 charge), finger of death (1 charge), or power word kill (2 charges). The wand regains 1d4 + 3 charges daily at dawn.",
-            "While holding the wand, Orcus gains +3 AC and can use an action to conjure undead creatures whose combined average hit points don't exceed 500, These undead magically rise up from the ground or otherwise form in unoccupied spaces within 300 feet of Orcus and obey his commands until they are destroyed or until he dismisses them as an action. Once this property of the wand is used, the property can't be used again until the next dawn.",
+            "Wand of Orcus. The wand has 7 charges, and any of its properties that require a saving throw have a save DC of 18. While holding it, Orcus can use an action to cast animate dead, blight, or speak with dead. Alternatively, he can expend or 1 or more of the wand's charges to cast one of the following spells from it: circle of death (1 charge), finger of death (1 charge), or power word kill (2 charges). The wand regains 1d4 + 3 charges daily at dawn.\nWhile holding the wand, Orcus gains +3 AC and can use an action to conjure undead creatures whose combined average hit points don't exceed 500, These undead magically rise up from the ground or otherwise form in unoccupied spaces within 300 feet of Orcus and obey his commands until they are destroyed or until he dismisses them as an action. Once this property of the wand is used, the property can't be used again until the next dawn.",
             "Innate Spellcasting. Orcus's spellcasting ability is Charisma (spell save DC 23, +15 to hit with spell attacks). He can innately cast the following spells, requiring no material components:\nAt will: chill touch (17th level), detect magic\n3/day each: create undead, dispel magic\n1/day: time stop",
             "Legendary Resistance (3/Day). If Orcus fails a saving throw, he can choose to succeed instead.",
             "Magic Resistance. Orcus has advantage on saving throws against spells and other magical effects.",
@@ -840,8 +839,8 @@
             "Wand of Orcus. Melee Weapon Attack: +19 to hit, reach 10 ft., one target. Hit: 21 (3d8 + 8) bludgeoning damage plus 13 (2d12) necrotic damage.",
             "Tail. Melee Weapon Attack: +17 to hit, reach 10 ft., one target. Hit: 21 (3d8 + 8) piercing damage plus 18 (4d8) poison damage."
         ],
+        "legendaryPoints": "3",
         "legendaryActions": [
-            ". Orcus can take 3 legendary actions, choosing from the options below. Only one legendary action option can be used at a time and only at the end of another creature's turn. Orcus regains spent legendary actions at the start of his turn.",
             "Tail. Orcus makes one tail attack.",
             "A Taste of Undeath. Orcus casts chill touch (17th level).",
             "Creeping Death (Costs 2 Actions). Orcus chooses a point on the ground that he can see within 100 feet of him. A cylinder of swirling necrotic energy 60 feet tall and with a 10-foot radius rises from that point and lasts until the end of Orcus's next turn. Creatures in that area are vulnerable to necrotic damage."
@@ -873,15 +872,12 @@
         ],
         "spells": "detect magic, spiritual weapon, dispel magic, fear, invisibility, teleport",
         "actions": [
-            "Multiattack. Yeenoghu makes three flail attacks. If an attack hits, he can cause it to create an additional effect of his choice or at random (each effect can be used only once per Multi attack):",
-            "1. The attack deals an extra 13 (2d12) bludgeoning damage.",
-            "2. The target must succeed on a DC 17 Constitution saving throw or be paralyzed until the start of Yeenoghu's next turn.",
-            "3. The target must succeed on a DC 17 Wisdom saving throw or be affected by the confusion spell until the start of Yeenoghu's next turn.",
+            "Multiattack. Yeenoghu makes three flail attacks. If an attack hits, he can cause it to create an additional effect of his choice or at random (each effect can be used only once per Multi attack):\nThe attack deals an extra 13 (2d12) bludgeoning damage.\nThe target must succeed on a DC 17 Constitution saving throw or be paralyzed until the start of Yeenoghu's next turn.\nThe target must succeed on a DC 17 Wisdom saving throw or be affected by the confusion spell until the start of Yeenoghu's next turn.",
             "Flail. Melee Weapon Attack: +16 to hit, reach 15 ft., one target. Hit: 22 (2d12 + 9) bludgeoning damage.",
             "Bite. Melee Weapon Attack: +16 to hit, reach 10 ft., one target. Hit: 31 (4d10 + 9) piercing damage."
         ],
+        "legendaryPoints": "3",
         "legendaryActions": [
-            ". Yeenoghu can take 3 legendary actions, choosing from the options below. Only one legendary action option can be used at a time and only at the end of another creature's turn. Yeenoghu regains spent legendary actions at the start of his turn.",
             "Charge. Yeenoghu moves up to his speed.",
             "Swat Away. Yeenoghu makes a flail attack. If the attack hits, the target must succeed on a DC 24 Strength saving throw or be pushed 15 feet in a straight line away from Yeenoghu. If the saving throw fails by 5 or more, the target falls prone.",
             "Savage (Costs 2 Actions). Yeenoghu makes a bite attack against each creature within 10 feet of him."
@@ -917,8 +913,8 @@
             "Infestation Spores (3/Day). Zuggtmoy releases spores that burst out in cloud fills a 20-foof-radius sphere centered on her, and it lingers for 1 minute. Any flesh-and-blood creature in the cloud when it appears, or that enters it later, must make a DC 19 Constitution saving throw. On a successful save, the creature can't be infected by these spores for 24 hours. On a failed save, the creature is infected with a disease called the spores of Zuggtmoy and also gains a random form of madness (determined by rolling on the Madness of Zuggtmoy table) that lasts until the creature is cured of the disease or dies. While infected in this way, the creature can't be reinfected, and it must repeat the saving throw at the end of every 24 hours, ending the infection on a success. On a failure, the infected creature's body is slowly taken over by fungal growth, and after three such failed saves, the creature dies and is reanimated as a spore servant if it's a type of creature that can be (see the \"Myconids\" entry in the Monster Manual).",
             "Mind Control Spores (Recharge 5—6). Zuggtmoy releases spores that burst out in a cloud that fills a 20-foot-radius sphere centered on her, and it lingers for 1 minute. Humanoids and beasts in the cloud when it appears, or that enter it later, must make a DC 19 Wisdom saving throw. On a successful save, the creature can't be infected by these spores for 24 hours. On a failed save, the creature is infected with a disease called the influence of Zuggtmoy for 24 hours. While infected, the creature is charmed by her and can't be reinfected by these spores."
         ],
+        "legendaryPoints": "3",
         "legendaryActions": [
-            ". Zuggtmoy can take 3 legendary actions, choosing from the options below. Only one legendary action option can be used at a time and only at the end of another creature's turn. Zuggtmoy regains spent legendary actions at the start of her turn.",
             "Attack. Zuggtmoy makes one pseudopod attack.",
             "Exert Will. One creature charmed by Zuggtmoy that she can see must use its reaction to move up to its speed as she directs or to make a weapon attack against a target that she designates."
         ]

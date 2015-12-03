@@ -590,6 +590,7 @@
             "Flame Blast. Ranged Spell Attack: +12 to hit, range 250 ft., one target. Hit: 35 (10d6) fire damage.",
             "Summon Elementals (1/Day). Imix summons up to three fire elementals and loses 30 hit points for each elemental he summons. Summoned elementals have maximum hit points, appear within 100 feet of Imix, and disappear if Imix is reduced to 0 hit points."
         ],
+        "legendaryPoints": "3",
         "legendaryActions": [
             "Heat Wave. Imix creates a blast of heat within 300 feet of himself. Each creature in the area in physical contact with metal objects (for example, carrying metal weapons or wearing metal armor) takes 9 (2d8) fire damage. Each creature in the area that isn't resistant or immune to fire damage must make a DC 21 Constitution saving throw or gain one level of exhaustion.",
             "Teleport (Costs 2 Actions). Imix magically teleports up to 120 feet to an unoccupied space he can see. Anything Imix is wearing or carrying isn't teleported with him.",
@@ -677,6 +678,7 @@
             "Boulder. Ranged Weapon Attack: +6 to hit, range 500 ft., one target. Hit: 46 (7d10 + 8) bludgeoning damage. If the target is a creature, it must succeed on a DC 23 Strength saving throw or be knocked prone.",
             "Summon Elementals (1/Day). Ogremoch summons up to three earth elementals and loses 30 hit points for each elemental he summons. Summoned elementals have maximum hit points, appear within 100 feet of Ogremoch, and disappear if Ogremoch is reduced to 0 hit points."
         ],
+        "legendaryPoints": "3",
         "legendaryActions": [
             "Illuminating Crystals. Ogremoch's crystalline protrusions flare. Each creature within 30 feet of Ogremoch becomes outlined in orange light, shedding dim light in a 10-foot radius. Any attack roll against an affected creature has advantage if the attacker can see it, and the affected creature can't benefit from being invisible.",
             "Stomp (Costs 2 Actions). Ogremoch stomps the ground, creating an earth tremor that extends in a 30-foot radius. Other creatures standing on the ground in that radius must succeed on a DC 23 Dexterity saving throw or fall prone.",
@@ -713,6 +715,7 @@
             "Water Jet. Ranged Weapon Attack: +12 to hit, range 120 ft., one target. Hit: 21 (6d6) bludgeoning damage, and the target is knocked prone if it fails a DC 19 Strength saving throw.",
             "Summon Elementals (1/Day). Olhydra summons up to three water elementals and loses 30 hit points for each elemental she summons. Summoned elementals have maximum hit points, appear within 100 feet of Olhydra, and disappear if Olhydra is reduced to 0 hit points."
         ],
+        "legendaryPoints": "3",
         "legendaryActions": [
             "Crush. One creature that Olhydra is grappling is crushed for 21 (3d10 + 5) bludgeoning damage.",
             "Fling (Costs 2 Actions). Olhydra releases one creature she is grappling by flinging the creature up to 60 feet away from her, in a direction of her choice. If the flung creature comes into contact with a solid surface, such as a wall or floor, the creature takes 1d6 bludgeoning damage for every 10 feet it was flung.",
@@ -1028,6 +1031,7 @@
             "Change Shape. Yan-C-Bin polymorphs into a Medium humanoid. While in polymorphed form, a swirling breeze surrounds him, his eyes are pale and cloudy, and he loses the Air Form trait. He can remain in polymorphed form for up to 1 hour. Reverting to his true form requires an action.",
             "Summon Elementals (1/Day). Yan-C-Bin summons up to three air elementals and loses 30 hit points for each elemental he summons. Summoned elementals have maximum hit points, appear within 100 feet of Yan-C-Bin, and disappear if Yan-C-Bin is reduced to 0 hit points."
         ],
+        "legendaryPoints": "3",
         "legendaryActions": [
             "Peal of Thunder. Yan-C-Bin unleashes a peal of thunder that can be heard out to a range of 300 feet. Each creature within 30 feet of Yan-C-Bin takes 5 (1d10) thunder damage.",
             "Teleport (Costs 2 Actions). Yan-C-Bin magically teleports up to 120 feet to an unoccupied space he can see. Anything Yan-C-Bin is wearing or carrying is teleported with him.",
