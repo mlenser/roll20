@@ -2170,7 +2170,7 @@
 		for (var i = 0; i < spells.length; i++) {
 			shaped.importSpell(character, characterName, spells[i], options);
 		}
-		messageToChat('finished importing spells');
+		messageToChat('Finished importing spells');
 	};
 
 	shaped.importMonster = function (token, monsterName) {
@@ -2230,24 +2230,32 @@
 			createCheckQueryTokenAction(monster.name);
 		}
 
-		log('traits');
-		log(monster.traits);
 		if (monster.traits) {
 			setAttribute('toggle_traits', 'on');
 			setAttribute('npc_traits', monster.traits.join('\n'));
 			var spells = '';
-			var regex = /(?:(?:\d+\/day(?:\s* each)?)|(?:At will)|(?:(?:Cantrips|level)\s*\(.*\))):\s* (.*)/gi;
+			var spellRegex = /(?:(?:\d+\/day(?:\s* each)?)|(?:At will)|(?:(?:Cantrips|level)\s*\(.*\))):\s* (.*)/gi;
 			for(var i = 0; i < monster.traits.length; i++) {
-				var match = regex.exec(monster.traits[i]);
-				if(match) {
-					log('match');
-					log(match);
-					if(spells === '') {
-						spells += match[1];
-					} else {
-						spells += ', ' + match[1];
+				var match;
+				var spellsFromTraits;
+				while (match = spellRegex.exec(monster.traits[i])) {
+					if(match) {
+						spellsFromTraits = match[1];
+
+						spellsFromTraits = spellsFromTraits
+							.replace(/\s*\(self only\)/gi, '')
+							.replace(/\s*\(self\)/gi, '')
+							.replace(/\s*\(\d+(?:st|nd|rd|th)\s*level\)/gi, '');
+						log('match');
+						log(match);
+						if(spells !== '') {
+							spells += ', ';
+						}
+						spells += spellsFromTraits;
 					}
 				}
+				log('monster.traits[i]');
+				log(monster.traits[i]);
 			}
 			log('spells');
 			log(spells);
