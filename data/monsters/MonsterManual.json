@@ -7061,14 +7061,7 @@
       "Magic Resistance. The mind flayer has advantage on saving throws against spells and other magical effects.",
       "Innate Spellcasting (Psionics). The mind flayer's innate spellcasting ability is Intelligence (spell save DC 15). It can innately cast the following spells, requiring no components:",
       "• At will: detect thoughts, levitate",
-      "• 1/day each: dominate monster, plane shift (self only)",
-      "Variant: Mind Flayer Arcanist\nA few mind flayers supplement their psionic power with arcane spells. However, they are regarded as deviants by their illithid peers and usually shunned. A mind flayer arcanist has a challenge rating of8 (3,900 XP) and the following trait. Spellcasting. The mind flayer is a lOth-level spellcaster. Its spellcasting ability is Intelligence (save DC 15, +7 to hit with spell attacks). The mind flayer has the following wizard spells prepared:",
-      "• Cantrips (at will): blade ward, dancing lights, mage hand, shocking grasp",
-      "• lst level (4 slots): detect magic, disguise self, shield, sleep",
-      "• 2nd level (3 slots): blur, invisibility, ray of enfeeblement",
-      "• 3rd level (3 slots): clairvoyance, lightning bolt, sending ",
-      "• 4th level (3 slots): confusion, hallucinatory terrain",
-      "• 5th level (2 slots): telekinesis, wall of force"
+      "• 1/day each: dominate monster, plane shift (self only)"
     ],
     "spells": "detect thoughts, levitate, dominate monster, plane shift",
     "actions": [
