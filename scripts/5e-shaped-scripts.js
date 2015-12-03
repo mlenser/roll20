@@ -1633,7 +1633,7 @@
 			multiattackScript += '\n';
 		}
 		multiattackScript += '%{' + characterName + '|repeating_actions_' + actionNumber + '_action}';
-		return multiattackScript
+		return multiattackScript;
 	}
 
 	function parseActions(actions, actionType) {
@@ -2233,36 +2233,6 @@
 		if (monster.traits) {
 			setAttribute('toggle_traits', 'on');
 			setAttribute('npc_traits', monster.traits.join('\n'));
-			var spells = '';
-			var spellRegex = /(?:(?:\d+\/day(?:\s* each)?)|(?:At will)|(?:(?:Cantrips|level)\s*\(.*\))):\s* (.*)/gi;
-			for(var i = 0; i < monster.traits.length; i++) {
-				var match;
-				var spellsFromTraits;
-				while (match = spellRegex.exec(monster.traits[i])) {
-					if(match) {
-						spellsFromTraits = match[1];
-
-						spellsFromTraits = spellsFromTraits
-							.replace(/\s*\(self only\)/gi, '')
-							.replace(/\s*\(self\)/gi, '')
-							.replace(/\s*\(\d+(?:st|nd|rd|th)\s*level\)/gi, '');
-						log('match');
-						log(match);
-						if(spells !== '') {
-							spells += ', ';
-						}
-						spells += spellsFromTraits;
-					}
-				}
-				log('monster.traits[i]');
-				log(monster.traits[i]);
-			}
-			log('spells');
-			log(spells);
-			spells = spells.split(', ');
-			log('spells2');
-			log(spells);
-
 		}
 
 		if (monster.actions) {
@@ -2275,12 +2245,12 @@
 				split = split.join();
 				monster.parsedActions[actionName] = split.trim();
 			}
-			if (monster.parsedActions['Multiattack']) {
-				var multiAttackText = monster.parsedActions['Multiattack'];
+			if (monster.parsedActions.Multiattack) {
+				var multiAttackText = monster.parsedActions.Multiattack;
 				setAttribute('toggle_multiattack', 'on');
 				setAttribute('multiattack', multiAttackText);
 				setAbility('MultiAtk', '', '%{' + characterName + '|multiattack}', shaped.settings.createAbilityAsToken);
-				delete monster.parsedActions['Multiattack'];
+				delete monster.parsedActions.Multiattack;
 			}
 
 			var actionPosition = processActions(monster.parsedActions);
@@ -2374,7 +2344,27 @@
 
 			setTokenVision(token);
 		}
-		if (monster.spells) {
+		if (monster.traits) {
+			if (monster.traits) {
+				var spells = '';
+				var spellRegex = /(?:(?:\d+\/day(?:\s* each)?)|(?:At will)|(?:(?:Cantrips|level)\s*\(.*\))):\s* (.*)/gi;
+				for(var i = 0; i < monster.traits.length; i++) {
+					var match;
+					while (match = spellRegex.exec(monster.traits[i])) {
+						if(match) {
+							if(spells !== '') {
+								spells += ', ';
+							}
+							spells += match[1].replace(/\s*\(self only\)/gi, '')
+								.replace(/\s*\(self\)/gi, '')
+								.replace(/\s*\(\d+(?:st|nd|rd|th)\s*level\)/gi, '');
+						}
+					}
+				}
+
+				shaped.spellImport(token, [spells]);
+			}
+		} else if (monster.spells) {
 			shaped.spellImport(token, [monster.spells]);
 		}
 	};
