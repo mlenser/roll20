@@ -1297,29 +1297,6 @@
     ]
   },
   {
-    "name": "Avatar of Death",
-    "size": "Medium",
-    "type": "undead",
-    "alignment": "neutral evil",
-    "AC": "20",
-    "HP": "0",
-    "speed": "60 ft., fly 60 ft. (hover)",
-    "abilities": "STR 16 DEX 16 CON 16 INT 16 WIS 16 CHA 16",
-    "damageImmunities": "necrotic, poison",
-    "conditionImmunities": "charmed, frightened, paralyzed, petrified, poisoned , unconscious",
-    "senses": "darkvision 60 ft., truesight 60 ft., passive Perception 13",
-    "languages": "all languages known to its summoner",
-    "challenge": "00",
-    "traits": [
-      "Incorporeal Movement. The avatar can move through other creatures and objects as if they were difficult terrain. It takes 5 (1d10) force damage if it ends its turn inside an object.",
-      "Turning Immunity. The avatar is immune to features that turn undead.",
-      "Hit Points. The Avatar of Death appears with hit points equal to half its summoner's maximum hit points."
-    ],
-    "actions": [
-      "Reaping Scythe. The avatar sweeps its spectral scythe through a creature within 5 feet of it, dealing 7 (1d8 + 3) slashing damage plus 4 (1d8) necrotic damage."
-    ]
-  },
-  {
     "name": "Awakened Shrub",
     "size": "Small",
     "type": "plant",
@@ -1332,6 +1309,7 @@
     "damageVulnerabilities": "fire",
     "senses": "passive Perception 10",
     "languages": "one language known by its creator",
+    "challenge": "0",
     "traits": [
       "False Appearance. While the shrub remains motionless, it is indistinguishable from a normal shrub."
     ],
@@ -1409,6 +1387,7 @@
     "speed": "30 ft., climb 30 ft.",
     "abilities": "STR 8 DEX 14 CON 11 INT 4 WIS 12 CHA 6",
     "senses": "passive Perception 11",
+    "challenge": "0",
     "traits": [
       "Pack Tactics. The baboon has advantage on an attack roll against a creature if at least one of the baboon's allies is within 5 ft. of the creature and the ally isn't incapacitated."
     ],
@@ -1426,6 +1405,7 @@
     "speed": "20 ft., burrow 5 ft.",
     "abilities": "STR 4 DEX 11 CON 12 INT 2 WIS 12 CHA 5",
     "senses": "darkvision 30 ft., passive Perception 11",
+    "challenge": "0",
     "traits": [
       "Keen Smell. The badger has advantage on Wisdom (Perception) checks that rely on smell."
     ],
@@ -1614,6 +1594,7 @@
     "speed": "5 ft., fly 30 ft.",
     "abilities": "STR 2 DEX 15 CON 8 INT 2 WIS 12 CHA 4",
     "senses": "blindsight 60 ft., passive Perception 11",
+    "challenge": "0",
     "traits": [
       "Echolocation. The bat can't use its blindsight while deafened.",
       "Keen Hearing. The bat has advantage on Wisdom (Perception) checks that rely on hearing."
@@ -2267,6 +2248,7 @@
     "abilities": "STR 3 DEX 15 CON 10 INT 3 WIS 12 CHA 7",
     "skills": "Perception +3, Stealth +4",
     "senses": "passive Perception 13",
+    "challenge": "0",
     "traits": [
       "Keen Smell. The cat has advantage on Wisdom (Perception) checks that rely on smell."
     ],
@@ -2523,6 +2505,7 @@
     "abilities": "STR 10 DEX 10 CON 10 INT 10 WIS 10 CHA 10",
     "senses": "passive Perception 10",
     "languages": "any one language (usually Common)",
+    "challenge": "0",
     "actions": [
       "Club. Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 2 (1d4) bludgeoning damage."
     ]
@@ -2605,6 +2588,7 @@
     "abilities": "STR 2 DEX 11 CON 10 INT 1 WIS 8 CHA 2",
     "skills": "Stealth +2",
     "senses": "blindsight 30 ft., passive Perception 9",
+    "challenge": "0",
     "traits": [
       "Amphibious. The crab can breathe air and water."
     ],
@@ -2625,6 +2609,7 @@
     "conditionImmunities": "poisoned",
     "senses": "blindsight 30 ft. (blind beyond this radius), passive Perception 10",
     "languages": "understands Common but can't speak",
+    "challenge": "0",
     "traits": [
       "Turn Immunity. The claw is immune to effects that turn undead."
     ],
@@ -2934,6 +2919,7 @@
     "speed": "50 ft.",
     "abilities": "STR 11 DEX 16 CON 11 INT 2 WIS 14 CHA 5",
     "senses": "passive Perception 12",
+    "challenge": "0",
     "actions": [
       "Bite. Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 2 (1d4) piercing damage."
     ]
@@ -3474,6 +3460,7 @@
     "abilities": "STR 6 DEX 15 CON 10 INT 2 WIS 14 CHA 7",
     "skills": "Perception +4",
     "senses": "passive Perception 14",
+    "challenge": "0",
     "traits": [
       "Keen Sight. The eagle has advantage on Wisdom (Perception) checks that rely on sight."
     ],
@@ -4086,6 +4073,7 @@
     "abilities": "STR 1 DEX 13 CON 8 INT 1 WIS 8 CHA 3",
     "skills": "Perception +1, Stealth +3",
     "senses": "darkvision 30 ft., passive Perception 11",
+    "challenge": "0",
     "traits": [
       "Amphibious. The frog can breathe air and water",
       "Standing Leap. The frog's long jump is up to 10 ft. and its high jump is up to 5 ft., with or without a running start."
@@ -4472,23 +4460,13 @@
     "speed": "30 ft.",
     "abilities": "STR 8 DEX 10 CON 12 INT 1 WIS 7 CHA 3",
     "senses": "blindsight 30 ft., passive Perception 8",
+    "challenge": "0",
     "traits": [
       "Illumination. The beetle sheds bright light in a 10-foot radius and dim light for an additional 10 ft.."
     ],
     "actions": [
       "Bite. Melee Weapon Attack: +1 to hit, reach 5 ft., one target. Hit: 2 (1d6 - 1) slashing damage."
     ]
-  },
-  {
-    "name": "Giant Fly",
-    "size": "Large",
-    "type": "beast",
-    "alignment": "unaligned",
-    "AC": "11",
-    "HP": "19 (3d10+3)",
-    "speed": "30 ft., fly 60 ft.",
-    "abilities": "STR 14 DEX 13 CON 13 INT 2 WIS 10 CHA 3",
-    "senses": "darkvision 60 ft., passive Perception 10"
   },
   {
     "name": "Giant Frog",
@@ -5085,6 +5063,7 @@
     "speed": "40 ft.",
     "abilities": "STR 12 DEX 10 CON 11 INT 2 WIS 10 CHA 5",
     "senses": "passive Perception 10",
+    "challenge": "0",
     "traits": [
       "Charge. If the goat moves at least 20 ft. straight toward a target and then hits it with a ram attack on the same turn, the target takes an extra 2 (1d4) bludgeoning damage. If the target is a creature, it must succeed on a DC 10 Strength saving throw or be knocked prone.",
       "Sure-Footed. The goat has advantage on Strength and Dexterity saving throws made against effects that would knock it prone."
@@ -5654,6 +5633,7 @@
     "abilities": "STR 5 DEX 16 CON 8 INT 2 WIS 14 CHA 6",
     "skills": "Perception +4",
     "senses": "passive Perception 14",
+    "challenge": "0",
     "traits": [
       "Keen Sight. The hawk has advantage on Wisdom (Perception) checks that rely on sight."
     ],
@@ -5855,6 +5835,7 @@
     "conditionImmunities": "charmed, poisoned",
     "senses": "darkvision 60 ft., passive Perception 10",
     "languages": "understands the languages of its creator but can't speak",
+    "challenge": "0",
     "traits": [
       "Telepathic Bond. While the homunculus is on the same plane of existence as its master, it can magically convey what it senses to its master, and the two can communicate telepathically."
     ],
@@ -5965,6 +5946,7 @@
     "abilities": "STR 11 DEX 13 CON 12 INT 2 WIS 12 CHA 5",
     "skills": "Perception +3",
     "senses": "passive Perception 13",
+    "challenge": "0",
     "traits": [
       "Pack Tactics. The hyena has advantage on an attack roll against a creature if at least one of the hyena's allies is within 5 ft. of the creature and the ally isn't incapacitated."
     ],
@@ -6171,6 +6153,7 @@
     "abilities": "STR 8 DEX 15 CON 11 INT 3 WIS 12 CHA 6",
     "skills": "Perception +3",
     "senses": "passive Perception 13",
+    "challenge": "0",
     "traits": [
       "Keen Hearing and Smell. The jackal has advantage on Wisdom (Perception) checks that rely on hearing or smell.",
       "Pack Tactics. The jackal has advantage on an attack roll against a creature if at least one of the jackal's allies is within 5 ft. of the creature and the ally isn't incapacitated."
@@ -6484,6 +6467,7 @@
     "conditionImmunities": "charmed, frightened, poisoned",
     "senses": "darkvision 120 ft., passive Perception 10",
     "languages": "understands infernal but can't speak",
+    "challenge": "0",
     "traits": [
       "Devil's Sight. Magical darkness doesn't impede the lemure's darkvision.",
       "Hellish Rejuvenation. A lemure that dies in the Nine Hells comes back to life with all its hit points in 1d10 days unless it is killed by a good-aligned creature with a bless spell cast on that creature or its remains are sprinkled with holy water."
@@ -6571,6 +6555,7 @@
     "speed": "20 ft., climb 20 ft.",
     "abilities": "STR 2 DEX 11 CON 10 INT 1 WIS 8 CHA 3",
     "senses": "darkvision 30 ft., passive Perception 9",
+    "challenge": "0",
     "actions": [
       "Bite. Melee Weapon Attack: +0 to hit, reach 5 ft., one target. Hit: 1 piercing damage."
     ]
@@ -7288,6 +7273,7 @@
     "speed": "10 ft.",
     "abilities": "STR 8 DEX 10 CON 10 INT 8 WIS 11 CHA 5",
     "senses": "darkvision 120 ft., passive Perception 10",
+    "challenge": "0",
     "traits": [
       "Distress Spores. When the myconid takes damage, all other myconids within 240 feet of it can sense its pain.",
       "Sun Sickness. While in sunlight, the myconid has disadvantage on ability checks, attack rolls, and saving throws. The myconid dies if it spends more than 1 hour in direct sunlight."
@@ -7508,6 +7494,7 @@
     "abilities": "STR 4 DEX 15 CON 11 INT 3 WIS 10 CHA 4",
     "skills": "Perception +2, Stealth +4",
     "senses": "darkvision 30 ft., passive Perception 12",
+    "challenge": "0",
     "traits": [
       "Hold Breath. While out of water, the octopus can hold its breath for 30 minutes.",
       "Underwater Camouflage. The octopus has advantage on Dexterity (Stealth) checks made while underwater.",
@@ -7712,6 +7699,7 @@
     "abilities": "STR 3 DEX 13 CON 8 INT 2 WIS 12 CHA 7",
     "skills": "Perception +3, Stealth +3",
     "senses": "darkvision 120 ft., passive Perception 13",
+    "challenge": "0",
     "traits": [
       "Flyby. The owl doesn't provoke opportunity attacks when it flies out of an enemy's reach.",
       "Keen Hearing and Sight. The owl has advantage on Wisdom (Perception) checks that rely on hearing or sight."
@@ -8305,6 +8293,7 @@
     "speed": "20 ft.",
     "abilities": "STR 2 DEX 11 CON 9 INT 2 WIS 10 CHA 4",
     "senses": "darkvision 30 ft., passive Perception 10",
+    "challenge": "0",
     "traits": [
       "Keen Smell. The rat has advantage on Wisdom (Perception) checks that rely on smell."
     ],
@@ -8323,6 +8312,7 @@
     "abilities": "STR 2 DEX 14 CON 8 INT 2 WIS 12 CHA 6",
     "skills": "Perception +3",
     "senses": "passive Perception 13",
+    "challenge": "0",
     "traits": [
       "Mimicry. The raven can mimic simple sounds it has heard, such as a person whispering, a baby crying, or an animal chittering. A creature that hears the sounds can tell they are imitations with a successful DC 10 Wisdom (Insight) check."
     ],
@@ -8748,6 +8738,7 @@
     "speed": "10 ft.",
     "abilities": "STR 2 DEX 11 CON 8 INT 1 WIS 8 CHA 2",
     "senses": "blindsight 10 ft., passive Perception 9",
+    "challenge": "0",
     "actions": [
       "Sting. Melee Weapon Attack: +2 to hit, reach 5 ft., one creature. Hit: 1 piercing damage, and the target must make a DC 9 Constitution saving throw, taking 4 (1d8) poison damage on a failed save, or half as much damage on a successful one."
     ]
@@ -8815,6 +8806,7 @@
     "speed": "swim 20 ft.",
     "abilities": "STR 1 DEX 12 CON 8 INT 1 WIS 10 CHA 2",
     "senses": "passive Perception 10",
+    "challenge": "0",
     "traits": [
       "Water Breathing. The sea horse can breathe only underwater."
     ]
@@ -8930,6 +8922,7 @@
     "abilities": "STR 1 DEX 1 CON 10 INT 1 WIS 3 CHA 1",
     "conditionImmunities": "blinded, deafened, frightened",
     "senses": "blindsight 30 ft. (blind beyond this radius), passive Perception 6",
+    "challenge": "0",
     "traits": [
       "False Appearance. While the shrieker remains motionless, it is indistinguishable from an ordinary fungus."
     ],
@@ -9122,6 +9115,7 @@
     "abilities": "STR 2 DEX 14 CON 8 INT 1 WIS 10 CHA 2",
     "skills": "Stealth +4",
     "senses": "darkvision 30 ft., passive Perception 12",
+    "challenge": "0",
     "traits": [
       "Spider Climb. The spider can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.",
       "Web Sense. While in contact with a web, the spider knows the exact location of any other creature in contact with the same web.",
@@ -10223,6 +10217,7 @@
     "abilities": "STR 7 DEX 10 CON 13 INT 2 WIS 12 CHA 4",
     "skills": "Perception +3",
     "senses": "passive Perception 13",
+    "challenge": "0",
     "traits": [
       "Keen Sight and Smell. The vulture has advantage on Wisdom (Perception) checks that rely on sight or smell.",
       "Pack Tactics. The vulture has advantage on an attack roll against a creature if at least one of the vulture's allies is within 5 ft. of the creature and the ally isn't incapacitated."
@@ -10326,6 +10321,7 @@
     "abilities": "STR 3 DEX 16 CON 8 INT 2 WIS 12 CHA 3",
     "skills": "Perception +3, Stealth +5",
     "senses": "passive Perception 13",
+    "challenge": "0",
     "traits": [
       "Keen Hearing and Smell. The weasel has advantage on Wisdom (Perception) checks that rely on hearing or smell."
     ],
@@ -10334,6 +10330,7 @@
     ]
   },
   {
+    "challenge": "0",
     "name": "Werebear",
     "size": "Medium",
     "type": "humanoid (human, shapechanger)",
