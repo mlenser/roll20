@@ -2362,7 +2362,9 @@
 					}
 				}
 
-				shaped.spellImport(token, [spells]);
+				if(spells !== '') {
+					shaped.spellImport(token, [spells]);
+				}
 			}
 		} else if (monster.spells) {
 			shaped.spellImport(token, [monster.spells]);
