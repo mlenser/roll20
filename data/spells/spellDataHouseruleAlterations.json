@@ -388,7 +388,7 @@
     "school": "Evocation",
     "save": {
       "ability": "dexterity",
-      "damage": "2d6",
+      "damage": "3d6",
       "damageType": "cold",
       "saveSuccess": "half damage",
       "saveFailure": "fall prone",
@@ -404,18 +404,39 @@
     ]
   },
   {
-    "name": "Ice Storm",
-    "description": "A hail of rock-hard ice pounds to the ground in a 20-foot-radius, 40-foot-high cylinder centered on a point within range. Each creature in the cylinder must make a Constitution saving throw. A creature takes 2d8 bludgeoning damage and 4d6 cold damage on a failed save, or half as much damage on a successful one.\nHailstones turn the storm's area of effect into difficult terrain until the end of your next turn.",
+    "name": "Ice Spears",
+    "description": "Upon casting this spell, three giant spears of ice lance up out of the ground. Each stalagmite-like icicle affects a 5-foot square and tapers to a height of 10 feet. Each creature that occupies a square from which a spear extends must make a Dexterity saving throw or take 3d6 piercing damage and 3d6 cold damage and be knocked prone. A creature that succeeds on its saving throw takes half damage and isn't knocked prone.\nIce spears created by this spell persist. They melt as normal depending on the surrounding environment. They can provide cover. An ice spear has 12 AC and 30 hit points.",
+    "higherLevel": "When you cast this spell using a spell slot of 4th level or higher, the number of spears increases by 1 for each slot level above 2nd",
+    "emote": "evokes giant spears of ice that lance up out of the ground.",
+    "source": "houserules",
+    "range": "60 ft",
+    "target": "each creature occupying a square with a stalagmite spear",
+    "aoe": "3 spears",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": true,
+      "materialMaterial": "A small stalagmite shaped crystal"
+    },
+    "duration": "instantaneous",
+    "castingTime": "action",
+    "level": 3,
+    "school": "Evocation",
     "save": {
-      "ability": "constitution",
-      "damage": "2d8",
-      "damageType": "bludgeoning",
-      "secondaryDamage": "4d6",
+      "ability": "dexterity",
+      "damage": "3d6",
+      "damageType": "piercing",
+      "secondaryDamage": "3d6",
       "secondaryDamageType": "cold",
       "saveSuccess": "half damage",
-      "higherLevelDice": "1",
-      "higherLevelDie": "d8"
-    }
+      "saveFailure": "fall prone"
+    },
+    "effects": "Each stalagmite-like icicle affects a 5-foot square and tapers to a height of 10 feet.\nIce spears created by this spell persist. They melt as normal depending on the surrounding environment. They can provide cover. An ice spear has 12 AC and 30 hit points.",
+    "classes": [
+      "Druid",
+      "Sorcerer",
+      "Wizard"
+    ]
   },
   {
     "name": "Investiture of Wind",
