@@ -5,6 +5,10 @@ Scripts for 5e roll20
 
 ### Changelog
 
+**Dec 8th 2015**
+
+* don't import spells unless the monster has spells;
+
 **Dec 3rd 2015**
 
 * Spells now pull from traits directly (no need to have a separate parameter)
