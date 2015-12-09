@@ -2170,7 +2170,7 @@
 		for (var i = 0; i < spells.length; i++) {
 			shaped.importSpell(character, characterName, spells[i], options);
 		}
-		messageToChat('Finished importing spells');
+		messageToChat('Finished importing spells: ' + spells);
 	};
 
 	shaped.importMonster = function (token, monsterName) {
