@@ -51,7 +51,7 @@
 	};
 
 	shaped.statblock = {
-		version: 'Dec 2nd, 2015',
+		version: 'Dec 9th, 2015',
 		addTokenCache: [],
 		RegisterHandlers: function () {
 			on('chat:message', HandleInput);
