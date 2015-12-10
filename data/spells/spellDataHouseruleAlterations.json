@@ -100,6 +100,10 @@
     ]
   },
   {
+    "name": "Aura of Vitality",
+    "school": "Necromancy"
+  },
+  {
     "name": "Beacon of Hope",
     "duration": "1 minute",
     "concentration": false
@@ -179,6 +183,10 @@
       "ability": "wisdom",
       "saveFailure": "become charmed by you for the duration. While the target is charmed in this way, a twisted crown of jagged iron appears on its head, and a madness glows in its eyes.\nThe charmed target must use its action to make melee attacks against a creature other than itself that you mentally choose. The charmed target can move up to half its speed before making the attacks.\nThe target can act normally on its turn if you choose no creature or if none are within its reach.\nOn your subsequent turns, you must use your action to maintain control over the target, or the spell ends. Also, the target can make a Wisdom saving throw at the end of each of its turns. On a success, the spell ends."
     }
+  },
+  {
+    "name": "Cure Wounds",
+    "school": "Necromancy"
   },
   {
     "name": "Disintegrating Poison",
@@ -339,6 +347,14 @@
     "domains": [
       "Nature"
     ]
+  },
+  {
+    "name": "Heal",
+    "school": "Necromancy"
+  },
+  {
+    "name": "Healing Word",
+    "school": "Necromancy"
   },
   {
     "name": "Hydraulic Push",
@@ -546,6 +562,18 @@
     ]
   },
   {
+    "name": "Mass Cure Wounds",
+    "school": "Necromancy"
+  },
+  {
+    "name": "Mass Heal",
+    "school": "Necromancy"
+  },
+  {
+    "name": "Mass Healing Word",
+    "school": "Necromancy"
+  },
+  {
     "name": "Meld into Stone",
     "ritual": false
   },
@@ -617,6 +645,14 @@
     "ritual": false
   },
   {
+    "name": "Power Word Heal",
+    "school": "Necromancy"
+  },
+  {
+    "name": "Prayer of Healing",
+    "school": "Necromancy"
+  },
+  {
     "name": "Produce Flame",
     "description": "A flickering flame appears in your hand. The flame remains there for the duration and harms neither you nor your equipment. The flame sheds bright light in a 10-foot radius and dim light for an additional 10 feet. The spell ends if you dismiss it as an action or if you cast it again.\nYWhen you cast this spell, or as an action on a later turn, you can change the flame into a flaming blade and make a melee spell attack or you can hurl the flame at a creature within 30 feet of you and make a ranged spell attack. On a hit of either, the target takes 1d8 fire damage. Making a ranged spell attack ends the spell.",
     "effects": "The flame remains there for the duration and harms neither you nor your equipment. The flame sheds bright light in a 10 ft radius and dim light for an additional 10 ft. The spell ends if you dismiss it as an action or if you cast it again.\nWhen you cast this spell, or as an action on a later turn, you can change the flame into a flaming blade and make a melee spell attack or you can hurl the flame at a creature within 30 feet of you and make a ranged spell attack. On a hit of either, the target takes 1d8 fire damage. Making a ranged spell attack ends the spell."
@@ -642,6 +678,10 @@
       "Warlock",
       "Wizard"
     ]
+  },
+  {
+    "name": "Regenerate",
+    "school": "Necromancy"
   },
   {
     "name": "Sending",
