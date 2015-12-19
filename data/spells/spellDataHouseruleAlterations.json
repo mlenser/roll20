@@ -124,6 +124,10 @@
     "duration": "Up to 10 minutes"
   },
   {
+    "name": "Bones of the Earth",
+    "level": 5
+  },
+  {
     "name": "Cloud of Acid",
     "description": "You fill the air with an acidic cloud in a 5-foot-radius, centered on a point you choose within range. A creature takes 4d4 acid damage when it enters the spell's area for the first time on a turn or starts its turn there.",
     "higherLevel": "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 2d4 for each slot level above 2nd.",
@@ -171,6 +175,15 @@
     "ritual": true
   },
   {
+    "name": "Cordon of Arrows",
+    "description": "You plant four pieces of nonmagical ammunition—arrows or crossbow bolts—in the ground within range and lay magic upon them to protect an area. Until the spell ends, whenever a creature other than you comes within 30 feet of the ammunition for the first time on a turn or ends its turn there, one piece of ammunition flies up to strike it. The creature must succeed on a Dexterity saving throw or take 3d6 piercing damage. The piece of ammunition is then destroyed. The spell ends when no ammunition remains.\nWhen you cast this spell, you can designate any creatures you choose, and the spell ignores them.",
+    "save": {
+      "ability": "dexterity",
+      "damage": "3d6",
+      "damageType": "piercing"
+    }
+  },
+  {
     "name": "Creation",
     "description": "You create a non-magical, nonliving object of vegetable matter within range: soft goods, rope, wood, or something similar. You can also use this spell to create mineral objects such as stone, crystal, or metal. The object created must be no larger than a 5-foot cube, and the object must be of a form and material that you have seen before.\nThe duration depends on the object's material. If the object is composed of multiple materials, use the shortest duration.\nVegetable matter 1 day\nStone or crystal 12 hours\nPrecious metals 1 hour\nGems 10 minutes\nAdamantine or mithral 1 minute\nUsing any material created by this spell as another spell's material component causes that spell to fail.",
     "emote": "creates a non-magical, nonliving object of vegetable matter",
@@ -189,8 +202,21 @@
     "school": "Necromancy"
   },
   {
+    "name": "Disintegrate",
+    "description": "A thin green ray springs from your pointing finger to a target that you can see within range. The target can be a creature, an object, or a creation of magical force, such as the wall created by wall of force.\nA creature targeted by this spell must make a Dexterity saving throw. On a failed save, the target takes 12d6 + 40 force damage. If this damage reduces the target to 0 hit points, it is disintegrated.\nA disintegrated creature and everything it is wearing and carrying, except magic items, are reduced to a pile of fine gray dust. The creature can be restored to life only by means of a true resurrection or a wish spell.\nThis spell automatically disintegrates a Large or smaller nonmagical object or a creation of magical force. If the target is a Huge or larger object or creation of force, this spell disintegrates a 10-foot-cube portion of it. A magic item is unaffected by this spell.",
+    "save": {
+      "ability": "dexterity",
+      "damage": "12d6",
+      "damageBonus": "40",
+      "damageType": "force",
+      "saveSuccess": "half damage",
+      "higherLevelDice": "3",
+      "higherLevelDie": "d6"
+    }
+  },
+  {
     "name": "Disintegrating Poison",
-    "description": "A thin green ray springs from your pointing finger to a target that you can see within range. The target can be a creature, an object, or a creation of magical force, such as the wall created by wall of force.\nA creature targeted by this spell must make a Dexterity saving throw. On a failed save, the target takes 10d6 + 40 poison damage. If this damage reduces the target to 0 hit points, it is disintegrated.\nA disintegrated creature and everything it is wearing and carrying, except magic items, are reduced to a pile of fine green dust. The creature can be restored to life only by means of a true resurrection or a wish spell.\nThis spell automatically disintegrates a Large or smaller nonmagical object or a creation of magical force. If the target is a Huge or larger object or creation of force, this spell disintegrates a 10-foot-cube portion of it. A magic item is unaffected by this spell.",
+    "description": "A thin green ray springs from your pointing finger to a target that you can see within range. The target can be a creature, an object, or a creation of magical force, such as the wall created by wall of force.\nA creature targeted by this spell must make a Dexterity saving throw. On a failed save, the target takes 12d6 + 40 poison damage. If this damage reduces the target to 0 hit points, it is disintegrated.\nA disintegrated creature and everything it is wearing and carrying, except magic items, are reduced to a pile of fine green dust. The creature can be restored to life only by means of a true resurrection or a wish spell.\nThis spell automatically disintegrates a Large or smaller nonmagical object or a creation of magical force. If the target is a Huge or larger object or creation of force, this spell disintegrates a 10-foot-cube portion of it. A magic item is unaffected by this spell.",
     "higherLevel": "When you cast this spell using a spell slot of 7th level or higher, the damage increases by 3d6 for each slot level above 6th.",
     "emote": "shoots a thin green ray from {{GENDER_PRONOUN_HIS_HER}} pointing finger",
     "source": "phb 233",
@@ -208,7 +234,7 @@
     "school": "Transmutation",
     "save": {
       "ability": "dexterity",
-      "damage": "10d6",
+      "damage": "12d6",
       "damageBonus": "40",
       "damageType": "poison",
       "saveSuccess": "half damage",
@@ -227,6 +253,19 @@
     "save": {
       "ability": "constitution",
       "saveFailure": "each target suffers an effect based on its current hit points:\n&#8226; 50 hit points or fewer: deafened for 1 minute\n&#8226; 40 hit points or fewer: deafened and blinded for 10 minutes\n&#8226; 30 hit points or fewer: blinded, deafened, and stunned for 1 hour\n&#8226; 20 hit points or fewer: killed instantly.\nRegardless of its current hit points, a celestial, an elemental, a fey, or a fiend that fails its save is forced back to its plane of origin (if it isn't there already) and can't return to your current plane for 24 hours by any means short of a wish spell."
+    }
+  },
+  {
+    "name": "Earth Tremor",
+    "description": "You cause a tremor in the ground in a 10-foot radius. Each creature other than you in that area must make a Dexterity saving throw. On a failed save, a creature takes 2d6 bludgeoning damage and is knocked prone. A creature that succeeds on its saving throw takes half as much damage and isn't knocked prone. If the ground in that area is loose earth or stone, it becomes difficult terrain until cleared.",
+    "save": {
+      "ability": "dexterity",
+      "damage": "2d6",
+      "damageType": "bludgeoning",
+      "saveFailure": "knocked prone",
+      "saveSuccess": "half damage",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d6"
     }
   },
   {
@@ -301,6 +340,34 @@
     "level": 2
   },
   {
+    "name": "Finger of Death",
+    "description": "You send negative energy coursing through a creature that you can see within range, causing it searing pain. The target must make a Constitution saving throw. It takes 16d8 + 30 necrotic damage on a failed save, or half as much damage on a successful one.\nA humanoid killed by this spell rises at the start of your next turn as a zombie that is permanently under your command, following your verbal orders to the best of its ability.",
+    "save": {
+      "ability": "constitution",
+      "damage": "16d8",
+      "damageBonus": "30",
+      "damageType": "necrotic",
+      "saveSuccess": "half damage"
+    }
+  },
+  {
+    "name": "Fire Storm",
+    "description": "A storm made up of sheets of roaring flame appears in a location you choose within range. The area of the storm consists of up to eight 10-foot cubes, which you can arrange as you wish. Each cube must have at least one face adjacent to the face of another cube. Each creature in the area must make a Dexterity saving throw. It takes 7d10 fire damage on a failed save, or half as much damage on a successful one.\nThe fire damages objects in the area and ignites flammable objects that aren't being worn or carried. If you choose, plant life in the area is unaffected by this spell.",
+    "aoe": "up to 8 10 ft cubes, which you can arrange as you wish at a location you choose within range. Each cube must have at least one face adjacent to the face of another cube"
+  },
+  {
+    "name": "Fireball",
+    "description": "A bright streak flashes from your pointing finger to a point you choose within range and then blossoms with a low roar into an explosion of flame. Each creature in a 20-foot-radius sphere centered on that point must make a Dexterity saving throw. A target takes 7d6 fire damage on a failed save, or half as much damage on a successful one.\nThe fire spreads around corners. It ignites flammable objects in the area that aren't being worn or carried.",
+    "save": {
+      "ability": "dexterity",
+      "damage": "7d6",
+      "damageType": "fire",
+      "saveSuccess": "half damage",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d6"
+    }
+  },
+  {
     "name": "Flame Arrows",
     "description": "You touch a quiver containing arrows or bolts. When a target is hit by a ranged weapon attack using a piece of ammunition drawn from the quiver, the target takes an extra 1d6 fire damage. The spell's magic ends on the piece of ammunition when it hits or misses. When the quiver runs out of ammunition is takes an action to fill it from another quiver.",
     "higherLevel": "When you cast this spell using a spell slot of 4th or 5th level, you can maintain your concentration on the spell for up to 8 hours. When you use a spell slot of 6th level or higher, you can maintain your concentration on the spell for up to 24 hours.",
@@ -347,6 +414,17 @@
     "domains": [
       "Nature"
     ]
+  },
+  {
+    "name": "Harm",
+    "description": "You unleash a virulent disease on a creature that you can see within range. The target must make a Constitution saving throw. On a failed save, it takes 18d6 necrotic damage, or half as much damage on a successful save. The damage can't reduce the target's hit points below 1. If the target fails the saving throw, its hit point maximum is reduced for 1 hour by an amount equal to the necrotic damage it took. Any effect that removes a disease allows a creature's hit point maximum to return to normal before that time passes.",
+    "level": 5,
+    "save": {
+      "ability": "constitution",
+      "damage": "18d6",
+      "damageType": "necrotic",
+      "saveSuccess": "half damage"
+    }
   },
   {
     "name": "Heal",
@@ -455,6 +533,17 @@
     ]
   },
   {
+    "name": "Immolation",
+    "description": "Flames wreathe one creature you can see within range. The target must make a Dexterity saving throw. It takes 11d6 fire damage on a failed save, or half as much damage on a successful one. On a failed save, the target also burns for the spell's duration. The burning target sheds bright light in a 30-foot radius and dim light for an additional 30 feet. At the end of each of its turns, the target repeats the saving throw. It takes 11d6 fire damage on a failed save, and the spell ends on a successful one. These magical flames can't be extinguished through nonmagical means.\nIf damage from this spell reduces a target to 0 hit points, the target is turned to ash.",
+    "save": {
+      "ability": "dexterity",
+      "damage": "11d6",
+      "damageType": "fire",
+      "saveFailure": "the target also burns for the spell's duration. The burning target sheds bright light in a 30 ft radius and dim light for an additional 30 ft. At the end of each of its turns, the target repeats the saving throw. It takes 11d6 fire damage on a failed save, and the spell ends on a successful one. These magical flames can't be extinguished through nonmagical means.",
+      "saveSuccess": "half damage"
+    }
+  },
+  {
     "name": "Investiture of Wind",
     "description": "Until the spell ends, wind whirls around you, and you gain the following benefits:\n- Ranged weapon attacks made against you have disadvantage on the attack roll.\n- You gain a flying speed of 60 feet. If you are still flying when the spell ends, you fall, unless you can somehow prevent it.\n- You can use your action to create a 15-foot cube of swirling wind centered on a point you can see within 60 feet of you. Each creature in that area must make a Strength saving throw. A creature takes 2d10 bludgeoning damage on a failed save, or half as much damage on a successful one. If a Large or smaller creature fails the save, that creature is also pushed up to 10 feet away from the center of the cube.",
     "effects": "You gain the following benefits:\n- Ranged weapon attacks made against you have disadvantage on the attack roll.\n- You gain a flying speed of 60 ft. If you are still flying when the spell ends, you fall, unless you can somehow prevent it.\n- You can use your action to create a 15 ft cube of swirling wind centered on a point you can see within 60 ft of you. Each creature in that area must make a Strength saving throw. A creature takes 2d10 bludgeoning damage on a failed save, or half as much damage on a successful one. If a Large or smaller creature fails the save, that creature is also pushed up to 10 ft away from the center of the cube."
@@ -505,6 +594,18 @@
       "Sorcerer",
       "Wizard"
     ]
+  },
+  {
+    "name": "Lightning Bolt",
+    "description": "A stroke of lightning forming a line 100 feet long and 5 feet wide blasts out from you in a direction you choose. Each creature in the line must make a Dexterity saving throw. A creature takes 7d6 lightning damage on a failed save, or half as much damage on a successful one.\nThe lightning ignites flammable objects in the area that aren't being worn or carried.",
+    "save": {
+      "ability": "dexterity",
+      "damage": "7d6",
+      "damageType": "lightning",
+      "saveSuccess": "half damage",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d6"
+    }
   },
   {
     "name": "Locate Creature",
@@ -581,9 +682,9 @@
     "name": "Melf's Acid Arrow",
     "description": "A shimmering green arrow streaks toward a target within range and bursts in a spray of acid. Make a ranged spell attack against the target. On a hit, the target takes 4d4 acid damage immediately and 4d4 acid damage at the end of its next turn. On a miss, the arrow splashes the target with acid for half as much of the initial damage and no damage at the end of its next turn.",
     "attack": {
-      "damage": "4d4",
+      "damage": "5d4",
       "damageType": "acid",
-      "secondaryDamage": "4d4",
+      "secondaryDamage": "5d4",
       "secondaryDamageType": "acid",
       "higherLevelDice": "1",
       "higherLevelDie": "d4",
@@ -595,6 +696,18 @@
       "Sorcerer",
       "Wizard"
     ]
+  },
+  {
+    "name": "Meteor Swarm",
+    "description": "Blazing orbs of fire plummet to the ground at four different points you can see within range. Each creature in a 40-foot-radius sphere centered on each point you choose must make a Dexterity saving throw. The sphere spreads around corners. A creature takes 15d6 fire damage and 15d6 bludgeoning damage on a failed save, or half as much damage on a successful one. A creature in the area of more than one fiery burst is affected only once.\nThe spell damages objects in the area and ignites flammable objects that aren't being worn or carried.",
+    "save": {
+      "ability": "dexterity",
+      "damage": "15d6",
+      "damageType": "fire",
+      "secondaryDamage": "15d6",
+      "secondaryDamageType": "bludgeoning",
+      "saveSuccess": "half damage"
+    }
   },
   {
     "name": "Miasmatic Form",
@@ -623,6 +736,19 @@
       "Sorcerer",
       "Wizard"
     ]
+  },
+  {
+    "name": "Mordenkainen's Faithful Hound",
+    "description": "You conjure a phantom watchdog in an unoccupied space that you can see within range, where it remains for the duration, until you dismiss it as an action, or until you move more than 100 feet away from it.\nThe hound is invisible to all creatures except you and can't be harmed. When a Small or larger creature comes within 30 feet of it without first speaking the password that you specify when you cast this spell, the hound starts barking loudly. The hound sees invisible creatures and can see into the Ethereal Plane. It ignores illusions.\nAt the start of each of your turns, the hound attempts to bite one creature within 5 feet of it that is hostile to you. The hound's attack bonus is equal to your spellcasting ability modifier + your proficiency bonus. On a hit, it deals 6d8 piercing damage.",
+    "attack": {
+      "damage": "6d8",
+      "damageType": "piercing"
+    }
+  },
+  {
+    "name": "Mordenkainen's Sword",
+    "description": "You create a sword-shaped plane of force that hovers within range. It lasts for the duration.\nWhen the sword appears, you make a melee spell attack against a target of your choice within 5 feet of the sword. On a hit, the target takes 3d10 force damage. Until the spell ends, you can use a bonus action on each of your turns to move the sword up to 20 feet to a spot you can see and repeat this attack against the same target or a different one.",
+    "castingTime": "bonus"
   },
   {
     "name": "Nondetection",
@@ -722,15 +848,13 @@
     "effects": "On your next turn, you gain advantage on your attack rolls, provided that this spell hasn't ended"
   },
   {
-    "name": "Vitriolic Sphere",
-    "save": {
-      "ability": "dexterity",
-      "damage": "10d4",
-      "damageType": "acid",
-      "saveSuccess": "half damage and no additional damage",
-      "saveFailure": "and 7d4 acid damage at the end of its next turn",
-      "higherLevelDice": "2",
-      "higherLevelDie": "d4"
+    "name": "Vampiric Touch",
+    "description": "The touch of your shadow-wreathed hand can siphon life force from others to heal your wounds. Make a melee spell attack against a creature within your reach. On a hit, the target takes 5d6 necrotic damage, and you regain hit points equal to half the amount of necrotic damage dealt. Until the spell ends, you can make the attack again on each of your turns as an action.",
+    "attack": {
+      "damage": "5d6",
+      "damageType": "necrotic",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d6"
     }
   },
   {
@@ -790,10 +914,9 @@
   },
   {
     "name": "Witch Bolt",
-    "description": "A beam of crackling, blue energy lances out toward a creature within range, forming a sustained arc of lightning between you and the target. Make a ranged spell attack against that creature. On a hit, the target takes 1d12 lightning damage, and on each of your turns for the duration, you can use your bonus action to deal 1d12 lightning damage to the target automatically. The spell ends if the target is outside the spell's range or if it has total cover from you at the end of your turn.",
-    "duration": "1 minute",
-    "concentration": false,
-    "effect": "on each of your turns for the duration, you can use your bonus action to deal 1d12 lightning damage to the target automatically. The spell ends if the target is outside the spell's range or if it has total cover from you at the end of your turn."
+    "description": "A beam of crackling, blue energy lances out toward a creature within range, forming a sustained arc of lightning between you and the target. Make a ranged spell attack against that creature. On a hit, the target takes 1d12 lightning damage and is grappled, and on each of your turns for the duration, you can use your action to deal 1d12 lightning damage to the target automatically. If you do so the target must make a Strength saving throw or be grappled. The spell ends if you use your action to do anything else. The spell also ends if the target is ever outside the spell's range or if it has total cover from you at the end of your turn.",
+
+    "effect": "and the target is grappled. On each of your turns for the duration, you can use your action to deal 1d12 lightning damage to the target automatically. If you do so the target must make a Strength saving throw or be grappled. The spell ends if you use your action to do anything else. The spell also ends if the target is ever outside the spell's range or if it has total cover from you at the end of your turn."
   },
   {
     "name": "Web",
@@ -801,14 +924,6 @@
     "save": {
       "ability": "strength",
       "saveFailure": "the creature is restrained as long as it remains in the webs or until it breaks free.\nA creature restrained by the webs can use its action to make a Strength check against your spell save DC. If it succeeds, it is no longer restrained.\nThe webs are flammable. Any 5 ft cube of webs exposed to fire burns away in 1 round, dealing 2d4 fire damage to any creature that starts its turn in the fire."
-    }
-  },
-  {
-    "name": "Weird",
-    "description": "Drawing on the deepest fears of a group of creatures, you create illusory creatures in their minds, visible only to them. Each creature in a 30-foot-radius sphere centered on a point of your choice within range must make a Wisdom saving throw. On a failed save, a creature becomes frightened for the duration. The illusion calls on the creature's deepest fears, manifesting its worst nightmares as an implacable threat. At the end of each of the frightened creature's turns, it must succeed on a Intelligence saving throw or take 4d10 psychic damage. On a successful save, the spell ends for that creature.",
-    "save": {
-      "ability": "wisdom",
-      "saveFailure": "become frightened for the duration. The illusion calls on the creature's deepest fears, manifesting its worst nightmares as an implacable threat. At the end of each of the frightened creature's turns, it must succeed on a Intelligence saving throw or take 4d10 psychic damage. On a successful save, the spell ends for that creature."
     }
   }
 ]
