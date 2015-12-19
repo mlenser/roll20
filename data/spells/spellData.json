@@ -4129,7 +4129,7 @@
     "source": "phb 242",
     "range": "150 ft",
     "target": "each creature in the aoe",
-    "aoe": "up to 10  10 ft cubes, which you can arrange as you wish at a location you choose within range. Each cube must have at least one face adjacent to the face of another cube",
+    "aoe": "up to 10 10 ft cubes, which you can arrange as you wish at a location you choose within range. Each cube must have at least one face adjacent to the face of another cube",
     "components": {
       "verbal": true,
       "somatic": true
