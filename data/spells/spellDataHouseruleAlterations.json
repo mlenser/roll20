@@ -66,12 +66,12 @@
   },
   {
     "name": "Aggressive Thundercloud",
-    "description": "A 5-foot-diameter sphere of crackling storm clouds appears in an unoccupied space of your choice within range and lasts for the duration. Any creature that ends its turn within 5 feet of the sphere must make a Dexterity saving throw. The creature takes 2d6 lightning damage on a failed save, or half as much damage on a successful one.\nAs a bonus action, you can move the sphere up to 30 feet. If you ram the sphere into a creature, that creature must make the saving throw against the sphere's damage, and the sphere stops moving this turn.\nWhen you move the sphere, you can direct it over barriers up to 5 feet tall and jump it across pits up to 10 feet wide. The sphere ignites flammable objects not being worn or carried.",
+    "description": "A 5-foot-diameter sphere of crackling storm clouds appears in an unoccupied space of your choice within range and lasts for the duration. Any creature that ends its turn within the cloud must make a Dexterity saving throw. The creature takes 2d6 lightning damage on a failed save, or half as much damage on a successful one. As a bonus action, you can make the sphere fly up to 30 feet. If the sphere enters space that contains a creature, that creature must make the saving throw against the sphere’s damage, and the sphere stops moving this turn.",
     "higherLevel": "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d6 for each slot level above 2nd.",
     "emote": "conjures a sphere of crackling storm clouds",
     "source": "houserules",
     "range": "60 ft",
-    "target": "Any creature that ends its turn within 5 feet of the sphere",
+    "target": "Any creature that ends its turn within the cloud",
     "aoe": "5 ft diameter sphere in an unoccupied space within range",
     "components": {
       "verbal": true,
@@ -92,7 +92,7 @@
       "higherLevelDice": "1",
       "higherLevelDie": "d6"
     },
-    "effects": "As a bonus action, you can move the sphere up to 30 ft. If you ram the sphere into a creature, that creature must make the saving throw against the sphere's damage, and the sphere stops moving this turn.\nWhen you move the sphere, you can direct it over barriers up to 5 ft tall and jump it across pits up to 10 ft wide. The sphere ignites flammable objects not being worn or carried.",
+    "effects": "As a bonus action, you can move the sphere up to 30 ft. If you ram the sphere into a creature, that creature must make the saving throw against the sphere's damage, and the sphere stops moving this turn.",
     "classes": [
       "Druid",
       "Sorcerer",
