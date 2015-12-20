@@ -148,7 +148,7 @@
     "level": 2,
     "school": "Conjuration",
     "damage": {
-      "damage": "4d4",
+      "damage": "5d4",
       "damageType": "acid",
       "higherLevelDice": "2",
       "higherLevelDie": "d4"
@@ -162,7 +162,13 @@
   {
     "name": "Cloud of Daggers",
     "description": "You fill the air with spinning daggers in a 5-foot-radius, centered on a point you choose within range. A creature takes 4d4 slashing damage when it enters the spell's area for the first time on a turn or starts its turn there.",
-    "aoe": "5 ft radius centered on a point within range"
+    "aoe": "5 ft radius centered on a point within range",
+    "damage": {
+      "damage": "5d4",
+      "damageType": "slashing",
+      "higherLevelDice": "2",
+      "higherLevelDie": "d4"
+    }
   },
   {
     "name": "Color Spray",
