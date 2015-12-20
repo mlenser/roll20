@@ -1,7 +1,7 @@
 [
   {
     "name": "Acid Fog",
-    "description": "You create a 20-foot-radius sphere of acidic, green fog centered on a point you choose within range. The fog spreads around corners. It lasts for the duration or until strong wind disperses the fog, ending the spell. Its area is heavily obscured.\nWhen a creature enters the spell's area for the first time on a turn or starts its turn there, that creature must make a Constitution saving throw. The creature takes 5d8 acid  damage on a failed save, or half as much damage on a successful one. Creatures are affected even if they hold their breath or don't need to breathe.\nThe fog moves 10 feet away from you at the start of each of your turns, rolling along the surface of the ground. The vapors, being heavier than air, sink to the lowest level of the land, even pouring down openings.",
+    "description": "You create a 20-foot-radius sphere of acidic, green fog centered on a point you choose within range. The fog spreads around corners. It lasts for the duration or until strong wind disperses the fog, ending the spell. Its area is heavily obscured.\nWhen a creature enters the spell's area for the first time on a turn or starts its turn there, that creature must make a Constitution saving throw. The creature takes 5d8 acid damage on a failed save, or half as much damage on a successful one. Creatures are affected even if they hold their breath or don't need to breathe.\nThe fog moves 10 feet away from you at the start of each of your turns, rolling along the surface of the ground. The vapors, being heavier than air, sink to the lowest level of the land, even pouring down openings.",
     "higherLevel": "When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d8 for each slot level above 5th.",
     "emote": "creates a sphere of acidic, green fog",
     "source": "houserules",
@@ -15,11 +15,11 @@
     "duration": "Up to 10 minutes",
     "concentration": true,
     "castingTime": "action",
-    "level": 5,
+    "level": 6,
     "school": "Conjuration",
     "save": {
       "ability": "constitution",
-      "damage": "5d8",
+      "damage": "7d8",
       "damageType": "acid",
       "saveSuccess": "half damage",
       "higherLevelDice": "1",
@@ -125,7 +125,7 @@
   },
   {
     "name": "Bones of the Earth",
-    "level": 5
+    "level": 4
   },
   {
     "name": "Cloud of Acid",
@@ -206,46 +206,11 @@
     "description": "A thin green ray springs from your pointing finger to a target that you can see within range. The target can be a creature, an object, or a creation of magical force, such as the wall created by wall of force.\nA creature targeted by this spell must make a Dexterity saving throw. On a failed save, the target takes 12d6 + 40 force damage. If this damage reduces the target to 0 hit points, it is disintegrated.\nA disintegrated creature and everything it is wearing and carrying, except magic items, are reduced to a pile of fine gray dust. The creature can be restored to life only by means of a true resurrection or a wish spell.\nThis spell automatically disintegrates a Large or smaller nonmagical object or a creation of magical force. If the target is a Huge or larger object or creation of force, this spell disintegrates a 10-foot-cube portion of it. A magic item is unaffected by this spell.",
     "save": {
       "ability": "dexterity",
-      "damage": "12d6",
-      "damageBonus": "40",
+      "damage": "24d6",
       "damageType": "force",
-      "saveSuccess": "half damage",
       "higherLevelDice": "3",
       "higherLevelDie": "d6"
     }
-  },
-  {
-    "name": "Disintegrating Poison",
-    "description": "A thin green ray springs from your pointing finger to a target that you can see within range. The target can be a creature, an object, or a creation of magical force, such as the wall created by wall of force.\nA creature targeted by this spell must make a Dexterity saving throw. On a failed save, the target takes 12d6 + 40 poison damage. If this damage reduces the target to 0 hit points, it is disintegrated.\nA disintegrated creature and everything it is wearing and carrying, except magic items, are reduced to a pile of fine green dust. The creature can be restored to life only by means of a true resurrection or a wish spell.\nThis spell automatically disintegrates a Large or smaller nonmagical object or a creation of magical force. If the target is a Huge or larger object or creation of force, this spell disintegrates a 10-foot-cube portion of it. A magic item is unaffected by this spell.",
-    "higherLevel": "When you cast this spell using a spell slot of 7th level or higher, the damage increases by 3d6 for each slot level above 6th.",
-    "emote": "shoots a thin green ray from {{GENDER_PRONOUN_HIS_HER}} pointing finger",
-    "source": "phb 233",
-    "range": "60 ft",
-    "target": "a creature, an object, or a creation of magical force that you can see within range. A creation of magical force, such as the wall created by wall of force.",
-    "components": {
-      "verbal": true,
-      "somatic": true,
-      "material": true,
-      "materialMaterial": "A lodestone and a pinch of mummy wrappings"
-    },
-    "duration": "Instantaneous",
-    "castingTime": "action",
-    "level": 6,
-    "school": "Transmutation",
-    "save": {
-      "ability": "dexterity",
-      "damage": "12d6",
-      "damageBonus": "40",
-      "damageType": "poison",
-      "saveSuccess": "half damage",
-      "higherLevelDice": "3",
-      "higherLevelDie": "d6"
-    },
-    "effects": "If this damage reduces the target to 0 hit points, it is disintegrated. A disintegrated creature and everything it is wearing and carrying, except magic items, are reduced to a pile of fine green dust. The creature can be restored to life only by means of a true resurrection or a wish spell.\nThis spell automatically disintegrates a Large or smaller nonmagical object or a creation of magical force. If the target is a Huge or larger object or creation of force, this spell disintegrates a 10 ft cube portion of it. A magic item is unaffected by this spell.",
-    "classes": [
-      "Sorcerer",
-      "Wizard"
-    ]
   },
   {
     "name": "Divine Word",
@@ -257,13 +222,12 @@
   },
   {
     "name": "Earth Tremor",
-    "description": "You cause a tremor in the ground in a 10-foot radius. Each creature other than you in that area must make a Dexterity saving throw. On a failed save, a creature takes 2d6 bludgeoning damage and is knocked prone. A creature that succeeds on its saving throw takes half as much damage and isn't knocked prone. If the ground in that area is loose earth or stone, it becomes difficult terrain until cleared.",
+    "description": "You cause a tremor in the ground in a 10-foot radius. Each creature other than you in that area must make a Dexterity saving throw. On a failed save, a creature takes 2d6 bludgeoning damage and is knocked prone. If the ground in that area is loose earth or stone, it becomes difficult terrain until cleared.",
     "save": {
       "ability": "dexterity",
       "damage": "2d6",
       "damageType": "bludgeoning",
       "saveFailure": "knocked prone",
-      "saveSuccess": "half damage",
       "higherLevelDice": "1",
       "higherLevelDie": "d6"
     }
@@ -344,8 +308,7 @@
     "description": "You send negative energy coursing through a creature that you can see within range, causing it searing pain. The target must make a Constitution saving throw. It takes 16d8 + 30 necrotic damage on a failed save, or half as much damage on a successful one.\nA humanoid killed by this spell rises at the start of your next turn as a zombie that is permanently under your command, following your verbal orders to the best of its ability.",
     "save": {
       "ability": "constitution",
-      "damage": "16d8",
-      "damageBonus": "30",
+      "damage": "22d8",
       "damageType": "necrotic",
       "saveSuccess": "half damage"
     }
@@ -433,6 +396,16 @@
   {
     "name": "Healing Word",
     "school": "Necromancy"
+  },
+  {
+    "name": "Heat Metal",
+    "description": "Choose a manufactured metal object, such as a metal weapon or a suit of heavy or medium metal armor, that you can see within range. You cause the object to glow red-hot. Any creature in physical contact with the object takes 1d8 fire damage when you cast the spell. Until the spell ends, you can use a bonus action on each of your subsequent turns to cause this damage again.\nIf a creature is holding or wearing the object and takes the damage from it, the creature must succeed on a Constitution saving throw or drop the object if it can. If it doesn't drop the object, it has disadvantage on attack rolls and ability checks until the start of your next turn.",
+    "damage": {
+      "damage": "1d8",
+      "damageType": "fire",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d8"
+    }
   },
   {
     "name": "Hydraulic Push",
@@ -542,6 +515,16 @@
       "saveFailure": "the target also burns for the spell's duration. The burning target sheds bright light in a 30 ft radius and dim light for an additional 30 ft. At the end of each of its turns, the target repeats the saving throw. It takes 11d6 fire damage on a failed save, and the spell ends on a successful one. These magical flames can't be extinguished through nonmagical means.",
       "saveSuccess": "half damage"
     }
+  },
+  {
+    "name": "Investiture of Flame",
+    "description": "Flames race across your body, shedding bright light in a 30-foot radius and dim light for an additional 30 feet for the spell's duration. The flames don't harm you. Until the spell ends, you gain the following benefits:\n- You are immune to fire damage and have resistance to cold damage.\n- Any creature that moves within 5 feet of you for the first time on a turn or ends its turn there takes 1d10 fire damage.\n- You can use your action to create a line of fire 30 feet long and 5 feet wide extending from you in a direction you choose. Each creature in the line must make a Dexterity saving throw. A creature takes 4d8 fire damage on a failed save, or half as much damage on a successful one.",
+    "effects": "the light sheds bright light in a 30 ft radius and dim light for an additional 30 ft for the spell's duration. The flames don't harm you. Until the spell ends, you gain the following benefits:\n- You are immune to fire damage and have resistance to cold damage.\n- Any creature that moves within 5 ft of you for the first time on a turn or ends its turn there takes 1d10 fire damage.\n- You can use your action to create a line of fire 30 ft long and 5 feet wide extending from you in a direction you choose. Each creature in the line must make a Dexterity saving throw. A creature takes 4d8 fire damage on a failed save, or half as much damage on a successful one."
+  },
+  {
+    "name": "Investiture of Ice",
+    "description": "Until the spell ends, ice rimes your body, and you gain the following benefits:\n- You are immune to cold damage and have resistance to fire damage.\n- You can move across difficult terrain created by ice or snow without spending extra movement.\n- The ground in a 10-foot radius around you is icy and is difficult terrain for creatures other than you. The radius moves with you.\n- You can use your action to create a 30-foot cone of freezing wind extending from your outstretched hand in a direction you choose. Each creature in the cone must make a Constitution saving throw. A creature takes 5d6 cold damage on a failed save, or half as much damage on a successful one. A creature that fails its save against this effect has its speed halved until the start of your next turn.",
+    "effects": "You gain the following benefits:\n- You are immune to cold damage and have resistance to fire damage.\n- You can move across difficult terrain created by ice or snow without spending extra movement.\n- The ground in a 10 ft radius around you is icy and is difficult terrain for creatures other than you. The radius moves with you.\n- You can use your action to create a 30 ft cone of freezing wind extending from your outstretched hand in a direction you choose. Each creature in the cone must make a Constitution saving throw. A creature takes 5d6 cold damage on a failed save, or half as much damage on a successful one. A creature that fails its save against this effect has its speed halved until the start of your next turn."
   },
   {
     "name": "Investiture of Wind",
@@ -747,7 +730,11 @@
   },
   {
     "name": "Mordenkainen's Sword",
-    "description": "You create a sword-shaped plane of force that hovers within range. It lasts for the duration.\nWhen the sword appears, you make a melee spell attack against a target of your choice within 5 feet of the sword. On a hit, the target takes 3d10 force damage. Until the spell ends, you can use a bonus action on each of your turns to move the sword up to 20 feet to a spot you can see and repeat this attack against the same target or a different one.",
+    "description": "You create a sword-shaped plane of force that hovers within range. It lasts for the duration.\nWhen the sword appears, you make a melee spell attack against a target of your choice within 5 feet of the sword. On a hit, the target takes 4d10 force damage. Until the spell ends, you can use a bonus action on each of your turns to move the sword up to 20 feet to a spot you can see and repeat this attack against the same target or a different one.",
+    "attack": {
+      "damage": "4d10",
+      "damageType": "force"
+    },
     "castingTime": "bonus"
   },
   {
@@ -806,6 +793,22 @@
     ]
   },
   {
+    "name": "Ray of Sickness",
+    "description": "A ray of sickening greenish energy lashes out toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 3d6 poison damage and must make a Constitution saving throw or be poisoned. At the start of each of its turns until the spell ends, the target must make a Constitution saving throw. On a successful save, the spell ends.",
+    "duration": "Up to 1 minute",
+    "attack": {
+      "damage": "3d6",
+      "damageType": "poison",
+      "higherLevelDice": "1",
+      "higherLevelDie": "d6"
+    },
+    "save": {
+      "ability": "constitution",
+      "saveFailure": "be poisoned. At the start of each of its turns until the spell ends, the target must make a Constitution saving throw. On a successful save, the spell ends.."
+    },
+    "effects": "On a hit, the target must make a Constitution saving throw as outlined above."
+  },
+  {
     "name": "Regenerate",
     "school": "Necromancy"
   },
@@ -834,6 +837,17 @@
     "name": "Spider Climb",
     "higherLevel": "When you cast this spell using a spell slot of 2nd level or higher, you can affect one additional beast for each slot level above 1st.",
     "level": 1
+  },
+  {
+    "name": "Spiritual Weapon",
+    "description": "You create a floating, spectral weapon within range that lasts for the duration or until you cast this spell again. When you cast the spell, you can make a melee spell attack against a creature within 5 feet of the weapon. On a hit, the target takes 1d8 force damage.\nAs a bonus action on your turn, you can move the weapon up to 20 feet and repeat the attack against a creature within 5 feet of it.\nThe weapon can take whatever form you choose. Clerics of deities who are associated with a particular weapon (as St. Cuthbert is known for his mace and Thor for his hammer) make this spell's effect resemble that weapon.",
+    "attack": {
+      "damage": "1d8",
+      "castingStat": false,
+      "damageType": "force",
+      "higherLevelDice": "0.49",
+      "higherLevelDie": "d8"
+    }
   },
   {
     "name": "Transmute Rock",
@@ -911,6 +925,36 @@
   {
     "name": "Water Walk",
     "ritual": false
+  },
+  {
+    "name": "Whip of Ants",
+    "description": "You summon hundreds of army ants which cling together in the form of a whip that hovers within range. It lasts for the duration.\nWhen the whip appears, you make a melee spell attack against a target of your choice within 5 feet of the whip. On a hit, the target takes 4d8 poison damage and is poisoned until the start of your next turn. Until the spell ends, you can use a bonus action on each of your turns to move the whip up to 20 feet to a spot you can see and repeat this attack against the same target or a different one.",
+    "emote": "summons hundreds of army ants which cling together in the form of a whip that hovers within range",
+    "source": "houserules",
+    "range": "60 ft",
+    "target": "a creature within 5 ft of the whip",
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": true,
+      "materialMaterial": "A square of red cloth"
+    },
+    "duration": "Up to 1 minute",
+    "concentration": true,
+    "castingTime": "bonus",
+    "level": 6,
+    "school": "Conjuration",
+    "attack": {
+      "damage": "4d8",
+      "damageType": "poison"
+    },
+    "effects": "and the target is poisoned until the start of your next turn. As a bonus action on your turn, you can move the whip up to 20 ft and repeat the attack against a creature within 5 ft of it.",
+    "classes": [
+      "Bard",
+      "Druid",
+      "Sorcerer",
+      "Wizard"
+    ]
   },
   {
     "name": "Witch Bolt",
