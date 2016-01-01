@@ -164,7 +164,7 @@
   },
   {
     "name": "Alter Self",
-    "description": "You assume a different form. When you cast the spell, choose one of the following options, the effects of which last for the duration of the spell. While the spell lasts, you can end one option as an action to gain the benefits of a different one.\n<i>Aquatic Adaptation.</i> You adapt your body to an aquatic environment, sprouting gills and growing webbing between your fingers. You can breathe underwater and gain a swimming speed equal to your walking speed.\n<i>AChange Appearance.</i> You transform your appearance. You decide what you look like, including your height, weight, facial features, sound of your voice, hair length, coloration, and distinguishing characteristics, if any. You can make yourself appear as a member of another race, though none of your statistics change. You also can't appear as a creature of a different size than you, and your basic shape stays the same; if you're bipedal, you can't use this spell to become quadrupedal, for instance. At any time for the duration of the spell, you can use your action to change your appearance in this way again.\n<i>Natural Weapons.</i> You grow claws, fangs, spines, horns, or a different natural weapon of your choice. Your unarmed strikes deal 1d6 bludgeoning, piercing, or slashing damage, as appropriate to the natural weapon you chose, and you are proficient with your unarmed strikes. Finally, the natural weapon is magic and you have a +1 bonus to the attack and damage rolls you make using it.",
+    "description": "You assume a different form. When you cast the spell, choose one of the following options, the effects of which last for the duration of the spell. While the spell lasts, you can end one option as an action to gain the benefits of a different one.\nAquatic Adaptation. You adapt your body to an aquatic environment, sprouting gills and growing webbing between your fingers. You can breathe underwater and gain a swimming speed equal to your walking speed.\nChange Appearance. You transform your appearance. You decide what you look like, including your height, weight, facial features, sound of your voice, hair length, coloration, and distinguishing characteristics, if any. You can make yourself appear as a member of another race, though none of your statistics change. You also can't appear as a creature of a different size than you, and your basic shape stays the same; if you're bipedal, you can't use this spell to become quadrupedal, for instance. At any time for the duration of the spell, you can use your action to change your appearance in this way again.\nNatural Weapons. You grow claws, fangs, spines, horns, or a different natural weapon of your choice. Your unarmed strikes deal 1d6 bludgeoning, piercing, or slashing damage, as appropriate to the natural weapon you chose, and you are proficient with your unarmed strikes. Finally, the natural weapon is magic and you have a +1 bonus to the attack and damage rolls you make using it.",
     "emote": "assumes a different form",
     "source": "phb 211",
     "range": "Self",
@@ -172,7 +172,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 1 hour",
+    "duration": "up to 1 hour",
     "concentration": true,
     "castingTime": "action",
     "level": 2,
@@ -253,7 +253,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 24 hours",
+    "duration": "up to 24 hours",
     "concentration": true,
     "castingTime": "action",
     "level": 8,
@@ -299,7 +299,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 5,
@@ -322,7 +322,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 1 hour",
+    "duration": "up to 1 hour",
     "concentration": true,
     "castingTime": "action",
     "level": 5,
@@ -334,7 +334,7 @@
   },
   {
     "name": "Antimagic Field",
-    "description": "A 10-foot-radius invisible sphere of antimagic surrounds you. This area is divorced from the magical energy that suffuses the multiverse. Within the sphere, spells can't be cast, summoned creatures disappear, and even magic items become mundane. Until the spell ends, the sphere moves with you, centered on you.\nSpells and other magical effects, except those created by an artifact or a deity, are suppressed in the sphere and can't protrude into it. A slot expended to cast a suppressed spell is consumed. While an effect is suppressed, it doesn't function, but the time it spends suppressed counts against its duration.\n<i>Targeted Effects.</i> Spells and other magical effects, such as magic missile and charm person, that target a creature or an object in the sphere have no effect on that target.\n<i>Areas of Magic.</i> The area of another spell or magical effect, such as fireball, can't extend into the sphere. If the sphere overlaps an area of magic, the part of the area that is covered by the sphere is suppressed. For example, the flames created by a wall of fire are suppressed within the sphere, creating a gap in the wall if the overlap is large enough.\n<i>Spells.</i> Any active spell or other magical effect on a creature or an object in the sphere is suppressed while the creature or object is in it.\n<i>Magic Items.</i> The properties and powers of magic items are suppressed in the sphere. For example, a +1 longsword in the sphere functions as a nonmagical longsword.\nA magic weapon's properties and powers are suppressed if it is used against a target in the sphere or wielded by an attacker in the sphere. If a magic weapon or a piece of magic ammunition fully leaves the sphere (for example, if you fire a magic arrow or throw a magic spear at a target outside the sphere), the magic of the item ceases to be suppressed as soon as it exits.\n<i>Magical Travel.</i> Teleportation and planar travel fail to work in the sphere, whether the sphere is the destination or the departure point for such magical travel. A portal to another location, world, or plane of existence, as well as an opening to an extradimensional space such as that created by the rope trick spell, temporarily closes while in the sphere.\n<i>Creatures and Objects.</i> A creature or object summoned or created by magic temporarily winks out of existence in the sphere. Such a creature instantly reappears once the space the creature occupied is no longer within the sphere.\n<i>Dispel Magic.</i> Spells and magical effects such as dispel magic have no effect on the sphere. Likewise, the spheres created by different antimagic field spells don't nullify each other.",
+    "description": "A 10-foot-radius invisible sphere of antimagic surrounds you. This area is divorced from the magical energy that suffuses the multiverse. Within the sphere, spells can't be cast, summoned creatures disappear, and even magic items become mundane. Until the spell ends, the sphere moves with you, centered on you.\nSpells and other magical effects, except those created by an artifact or a deity, are suppressed in the sphere and can't protrude into it. A slot expended to cast a suppressed spell is consumed. While an effect is suppressed, it doesn't function, but the time it spends suppressed counts against its duration.\nTargeted Effects. Spells and other magical effects, such as magic missile and charm person, that target a creature or an object in the sphere have no effect on that target.\nAreas of Magic. The area of another spell or magical effect, such as fireball, can't extend into the sphere. If the sphere overlaps an area of magic, the part of the area that is covered by the sphere is suppressed. For example, the flames created by a wall of fire are suppressed within the sphere, creating a gap in the wall if the overlap is large enough.\nSpells. Any active spell or other magical effect on a creature or an object in the sphere is suppressed while the creature or object is in it.\nMagic Items. The properties and powers of magic items are suppressed in the sphere. For example, a +1 longsword in the sphere functions as a nonmagical longsword.\nA magic weapon's properties and powers are suppressed if it is used against a target in the sphere or wielded by an attacker in the sphere. If a magic weapon or a piece of magic ammunition fully leaves the sphere (for example, if you fire a magic arrow or throw a magic spear at a target outside the sphere), the magic of the item ceases to be suppressed as soon as it exits.\nMagical Travel. Teleportation and planar travel fail to work in the sphere, whether the sphere is the destination or the departure point for such magical travel. A portal to another location, world, or plane of existence, as well as an opening to an extradimensional space such as that created by the rope trick spell, temporarily closes while in the sphere.\nCreatures and Objects. A creature or object summoned or created by magic temporarily winks out of existence in the sphere. Such a creature instantly reappears once the space the creature occupied is no longer within the sphere.\nDispel Magic. Spells and magical effects such as dispel magic have no effect on the sphere. Likewise, the spheres created by different antimagic field spells don't nullify each other.",
     "emote": "creates an invisible sphere of antimagic that that surrounds {{GENDER_PRONOUN_HIM_HER}}",
     "source": "phb 213",
     "range": "Self",
@@ -345,12 +345,12 @@
       "material": true,
       "materialMaterial": "A pinch of powdered iron or iron filings"
     },
-    "duration": "Up to 1 hour",
+    "duration": "up to 1 hour",
     "concentration": true,
     "castingTime": "action",
     "level": 8,
     "school": "Abjuration",
-    "effects": "The area is divorced from the magical energy that suffuses the multiverse. Within the sphere, spells can't be cast, summoned creatures disappear, and even magic items become mundane.\nSpells and other magical effects, except those created by an artifact or a deity, are suppressed in the sphere and can't protrude into it. A slot expended to cast a suppressed spell is consumed. While an effect is suppressed, it doesn't function, but the time it spends suppressed counts against its duration.\n<i>Targeted Effects.</i> Spells and other magical effects, such as magic missile and charm person, that target a creature or an object in the sphere have no effect on that target.\n<i>Areas of Magic.</i> The area of another spell or magical effect, such as fireball, can't extend into the sphere. If the sphere overlaps an area of magic, the part of the area that is covered by the sphere is suppressed. For example, the flames created by a wall of fire are suppressed within the sphere, creating a gap in the wall if the overlap is large enough.\n<i>Spells.</i> Any active spell or other magical effect on a creature or an object in the sphere is suppressed while the creature or object is in it.\n<i>Magic Items.</i> The properties and powers of magic items are suppressed in the sphere. For example, a +1 longsword in the sphere functions as a nonmagical longsword.\nA magic weapon's properties and powers are suppressed if it is used against a target in the sphere or wielded by an attacker in the sphere. If a magic weapon or a piece of magic ammunition fully leaves the sphere (for example, if you fire a magic arrow or throw a magic spear at a target outside the sphere), the magic of the item ceases to be suppressed as soon as it exits.\n<i>Magical Travel.</i> Teleportation and planar travel fail to work in the sphere, whether the sphere is the destination or the departure point for such magical travel. A portal to another location, world, or plane of existence, as well as an opening to an extradimensional space such as that created by the rope trick spell, temporarily closes while in the sphere.\n<i>Creatures and Objects.</i> A creature or object summoned or created by magic temporarily winks out of existence in the sphere. Such a creature instantly reappears once the space the creature occupied is no longer within the sphere.\n<i>Dispel Magic.</i> Spells and magical effects such as dispel magic have no effect on the sphere. Likewise, the spheres created by different antimagic field spells don't nullify each other.",
+    "effects": "The area is divorced from the magical energy that suffuses the multiverse. Within the sphere, spells can't be cast, summoned creatures disappear, and even magic items become mundane.\nSpells and other magical effects, except those created by an artifact or a deity, are suppressed in the sphere and can't protrude into it. A slot expended to cast a suppressed spell is consumed. While an effect is suppressed, it doesn't function, but the time it spends suppressed counts against its duration.\nTargeted Effects. Spells and other magical effects, such as magic missile and charm person, that target a creature or an object in the sphere have no effect on that target.\nAreas of Magic. The area of another spell or magical effect, such as fireball, can't extend into the sphere. If the sphere overlaps an area of magic, the part of the area that is covered by the sphere is suppressed. For example, the flames created by a wall of fire are suppressed within the sphere, creating a gap in the wall if the overlap is large enough.\nSpells. Any active spell or other magical effect on a creature or an object in the sphere is suppressed while the creature or object is in it.\nMagic Items. The properties and powers of magic items are suppressed in the sphere. For example, a +1 longsword in the sphere functions as a nonmagical longsword.\nA magic weapon's properties and powers are suppressed if it is used against a target in the sphere or wielded by an attacker in the sphere. If a magic weapon or a piece of magic ammunition fully leaves the sphere (for example, if you fire a magic arrow or throw a magic spear at a target outside the sphere), the magic of the item ceases to be suppressed as soon as it exits.\nMagical Travel. Teleportation and planar travel fail to work in the sphere, whether the sphere is the destination or the departure point for such magical travel. A portal to another location, world, or plane of existence, as well as an opening to an extradimensional space such as that created by the rope trick spell, temporarily closes while in the sphere.\nCreatures and Objects. A creature or object summoned or created by magic temporarily winks out of existence in the sphere. Such a creature instantly reappears once the space the creature occupied is no longer within the sphere.\nDispel Magic. Spells and magical effects such as dispel magic have no effect on the sphere. Likewise, the spheres created by different antimagic field spells don't nullify each other.",
     "classes": [
       "Cleric",
       "Wizard"
@@ -358,7 +358,7 @@
   },
   {
     "name": "Antipathy/Sympathy",
-    "description": "This spell attracts or repels creatures of your choice. You target something within range, either a Huge or smaller object or creature or an area that is no larger than a 200-foot cube. Then specify a kind of intelligent creature, such as red dragons, goblins, or vampires. You invest the target with an aura that either attracts or repels the specified creatures for the duration. Choose antipathy or sympathy as the aura's effect.\n<i>Antipathy.</i> The enchantment causes creatures of the kind you designated to feel an intense urge to leave the area and avoid the target. When such a creature can see the target or comes within 60 feet of it, the creature must succeed on a Wisdom saving throw or become frightened. The creature remains frightened while it can see the target or is within 60 feet of it. While frightened by the target, the creature must use its movement to move to the nearest safe spot from which it can't see the target. If the creature moves more than 60 feet from the target and can't see it, the creature is no longer frightened, but the creature becomes frightened again if it regains sight of the target or moves within 60 feet of it.\n<i>Sympathy.</i> The enchantment causes the specified creatures to feel an intense urge to approach the target while within 60 feet of it or able to see it. When such a creature can see the target or comes within 60 feet of it, the creature must succeed on a Wisdom saving throw or use its movement on each of its turns to enter the area or move within reach of the target. When the creature has done so, it can't willingly move away from the target. If the target damages or otherwise harms an affected creature, the affected creature can make a Wisdom saving throw to end the effect, as described below.\n<i>Ending the Effect.</i> If an affected creature ends its turn while not within 60 feet of the target or able to see it, the creature makes a Wisdom saving throw. On a successful save, the creature is no longer affected by the target and recognizes the feeling of repugnance or attraction as magical. In addition, a creature affected by the spell is allowed another Wisdom saving throw every 24 hours while the spell persists.\nA creature that successfully saves against this effect is immune to it for 1 minute, after which time it can be affected again.",
+    "description": "This spell attracts or repels creatures of your choice. You target something within range, either a Huge or smaller object or creature or an area that is no larger than a 200-foot cube. Then specify a kind of intelligent creature, such as red dragons, goblins, or vampires. You invest the target with an aura that either attracts or repels the specified creatures for the duration. Choose antipathy or sympathy as the aura's effect.\nAntipathy. The enchantment causes creatures of the kind you designated to feel an intense urge to leave the area and avoid the target. When such a creature can see the target or comes within 60 feet of it, the creature must succeed on a Wisdom saving throw or become frightened. The creature remains frightened while it can see the target or is within 60 feet of it. While frightened by the target, the creature must use its movement to move to the nearest safe spot from which it can't see the target. If the creature moves more than 60 feet from the target and can't see it, the creature is no longer frightened, but the creature becomes frightened again if it regains sight of the target or moves within 60 feet of it.\nSympathy. The enchantment causes the specified creatures to feel an intense urge to approach the target while within 60 feet of it or able to see it. When such a creature can see the target or comes within 60 feet of it, the creature must succeed on a Wisdom saving throw or use its movement on each of its turns to enter the area or move within reach of the target. When the creature has done so, it can't willingly move away from the target. If the target damages or otherwise harms an affected creature, the affected creature can make a Wisdom saving throw to end the effect, as described below.\nEnding the Effect. If an affected creature ends its turn while not within 60 feet of the target or able to see it, the creature makes a Wisdom saving throw. On a successful save, the creature is no longer affected by the target and recognizes the feeling of repugnance or attraction as magical. In addition, a creature affected by the spell is allowed another Wisdom saving throw every 24 hours while the spell persists.\nA creature that successfully saves against this effect is immune to it for 1 minute, after which time it can be affected again.",
     "emote": "attracts or repels creatures of {{GENDER_PRONOUN_HIS_HER}} choice",
     "source": "phb 214",
     "range": "60 ft",
@@ -376,7 +376,7 @@
     "save": {
       "ability": "wisdom"
     },
-    "effects": "specify a kind of intelligent creature, such as red dragons, goblins, or vampires. You invest the target with an aura that either attracts or repels the specified creatures for the duration. Choose antipathy or sympathy as the aura's effect.\n<i>Antipathy.</i> The enchantment causes creatures of the kind you designated to feel an intense urge to leave the area and avoid the target. When such a creature can see the target or comes within 60 feet of it, the creature must succeed on a Wisdom saving throw or become frightened. The creature remains frightened while it can see the target or is within 60 feet of it. While frightened by the target, the creature must use its movement to move to the nearest safe spot from which it can't see the target. If the creature moves more than 60 feet from the target and can't see it, the creature is no longer frightened, but the creature becomes frightened again if it regains sight of the target or moves within 60 feet of it.\n<i>Sympathy.</i> The enchantment causes the specified creatures to feel an intense urge to approach the target while within 60 feet of it or able to see it. When such a creature can see the target or comes within 60 feet of it, the creature must succeed on a Wisdom saving throw or use its movement on each of its turns to enter the area or move within reach of the target. When the creature has done so, it can't willingly move away from the target. If the target damages or otherwise harms an affected creature, the affected creature can make a Wisdom saving throw to end the effect, as described below.\n<i>Ending the Effect.</i> If an affected creature ends its turn while not within 60 feet of the target or able to see it, the creature makes a Wisdom saving throw. On a successful save, the creature is no longer affected by the target and recognizes the feeling of repugnance or attraction as magical. In addition, a creature affected by the spell is allowed another Wisdom saving throw every 24 hours while the spell persists.\nA creature that successfully saves against this effect is immune to it for 1 minute, after which time it can be affected again.",
+    "effects": "specify a kind of intelligent creature, such as red dragons, goblins, or vampires. You invest the target with an aura that either attracts or repels the specified creatures for the duration. Choose antipathy or sympathy as the aura's effect.\nAntipathy. The enchantment causes creatures of the kind you designated to feel an intense urge to leave the area and avoid the target. When such a creature can see the target or comes within 60 feet of it, the creature must succeed on a Wisdom saving throw or become frightened. The creature remains frightened while it can see the target or is within 60 feet of it. While frightened by the target, the creature must use its movement to move to the nearest safe spot from which it can't see the target. If the creature moves more than 60 feet from the target and can't see it, the creature is no longer frightened, but the creature becomes frightened again if it regains sight of the target or moves within 60 feet of it.\nSympathy. The enchantment causes the specified creatures to feel an intense urge to approach the target while within 60 feet of it or able to see it. When such a creature can see the target or comes within 60 feet of it, the creature must succeed on a Wisdom saving throw or use its movement on each of its turns to enter the area or move within reach of the target. When the creature has done so, it can't willingly move away from the target. If the target damages or otherwise harms an affected creature, the affected creature can make a Wisdom saving throw to end the effect, as described below.\nEnding the Effect. If an affected creature ends its turn while not within 60 feet of the target or able to see it, the creature makes a Wisdom saving throw. On a successful save, the creature is no longer affected by the target and recognizes the feeling of repugnance or attraction as magical. In addition, a creature affected by the spell is allowed another Wisdom saving throw every 24 hours while the spell persists.\nA creature that successfully saves against this effect is immune to it for 1 minute, after which time it can be affected again.",
     "classes": [
       "Druid",
       "Wizard"
@@ -394,7 +394,7 @@
       "material": true,
       "materialMaterial": "A bit of bat fur"
     },
-    "duration": "Up to 1 hour",
+    "duration": "up to 1 hour",
     "concentration": true,
     "castingTime": "action",
     "level": 4,
@@ -419,7 +419,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 10 minutes",
+    "duration": "up to 10 minutes",
     "concentration": true,
     "castingTime": "action",
     "level": 6,
@@ -441,7 +441,8 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "Gold dust worth at least 25gp, which the spell consumes"
+      "materialMaterial": "Gold dust worth at least 25gp, which the spell consumes",
+      "materialCost": 25
     },
     "duration": "Until dispelled",
     "castingTime": "action",
@@ -514,7 +515,8 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "For each creature you affect with this spell, you must provide one jacinth worth at least 1,000gp and one ornately carved bar of silver worth at least 100gp, all of which the spell consumes"
+      "materialMaterial": "For each creature you affect with this spell, you must provide one jacinth worth at least 1,000gp and one ornately carved bar of silver worth at least 100gp, all of which the spell consumes",
+      "materialCost": 100
     },
     "duration": "Special",
     "castingTime": "1 hour",
@@ -537,7 +539,8 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "Specially marked sticks, bones, or similar tokens worth at least 25gp"
+      "materialMaterial": "Specially marked sticks, bones, or similar tokens worth at least 25gp",
+      "materialCost": 25
     },
     "ritual": true,
     "duration": "Instantaneous",
@@ -563,7 +566,7 @@
     "components": {
       "verbal": true
     },
-    "duration": "Up to 10 minutes",
+    "duration": "up to 10 minutes",
     "concentration": true,
     "castingTime": "action",
     "level": 4,
@@ -584,7 +587,7 @@
     "components": {
       "verbal": true
     },
-    "duration": "Up to 10 minutes",
+    "duration": "up to 10 minutes",
     "concentration": true,
     "castingTime": "action",
     "level": 4,
@@ -605,7 +608,7 @@
     "components": {
       "verbal": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 3,
@@ -626,7 +629,8 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "An agate worth at least 1,000 gp, which the spell consumes"
+      "materialMaterial": "An agate worth at least 1,000 gp, which the spell consumes",
+      "materialCost": 1000
     },
     "duration": "Instantaneous",
     "castingTime": "8 hours",
@@ -652,7 +656,7 @@
       "material": true,
       "materialMaterial": "A drop of blood"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 1,
@@ -679,7 +683,7 @@
     "components": {
       "verbal": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "bonus",
     "level": 5,
@@ -707,7 +711,7 @@
       "material": true,
       "materialMaterial": "An item distasteful to the target"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 4,
@@ -740,7 +744,7 @@
       "material": true,
       "materialMaterial": "A handful of oak bark"
     },
-    "duration": "Up to 1 hour",
+    "duration": "up to 1 hour",
     "concentration": true,
     "castingTime": "action",
     "level": 2,
@@ -769,7 +773,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 3,
@@ -799,7 +803,7 @@
       "material": true,
       "materialMaterial": "A bit of fur wrapped in a cloth"
     },
-    "duration": "Up to 10 minutes",
+    "duration": "up to 10 minutes",
     "concentration": true,
     "castingTime": "action",
     "level": 1,
@@ -822,7 +826,7 @@
       "somatic": true
     },
     "ritual": true,
-    "duration": "Up to 1 hour",
+    "duration": "up to 1 hour",
     "concentration": true,
     "castingTime": "action",
     "level": 2,
@@ -845,7 +849,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 3,
@@ -874,7 +878,7 @@
       "material": true,
       "materialMaterial": "An eggshell and a snakeskin glove"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 5,
@@ -895,7 +899,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 10 minutes",
+    "duration": "up to 10 minutes",
     "concentration": true,
     "castingTime": "action",
     "level": 6,
@@ -947,7 +951,7 @@
       "material": true,
       "materialMaterial": "A sprinkling of holy water"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 1,
@@ -1005,7 +1009,7 @@
     "components": {
       "verbal": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "bonus",
     "level": 3,
@@ -1090,7 +1094,7 @@
     "components": {
       "verbal": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 2,
@@ -1167,7 +1171,7 @@
     "components": {
       "verbal": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "bonus",
     "level": 2,
@@ -1235,7 +1239,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 10 minutes",
+    "duration": "up to 10 minutes",
     "concentration": true,
     "castingTime": "action",
     "level": 3,
@@ -1272,7 +1276,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 2,
@@ -1420,7 +1424,8 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "A diamond worth at least 50gp"
+      "materialMaterial": "A diamond worth at least 50gp",
+      "materialCost": 50
     },
     "duration": "Instantaneous",
     "castingTime": "action",
@@ -1451,7 +1456,8 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "The powder of a crushed black pearl worth at least 500 gp"
+      "materialMaterial": "The powder of a crushed black pearl worth at least 500 gp",
+      "materialCost": 500
     },
     "duration": "Instantaneous",
     "castingTime": "action",
@@ -1482,7 +1488,7 @@
     "components": {
       "verbal": true
     },
-    "duration": "Up to 10 minutes",
+    "duration": "up to 10 minutes",
     "concentration": true,
     "castingTime": "action",
     "level": 5,
@@ -1503,9 +1509,10 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "A focus worth at least 100gp, either a jeweled horn for hearing or a glass eye for seeing"
+      "materialMaterial": "A focus worth at least 100gp, either a jeweled horn for hearing or a glass eye for seeing",
+      "materialCost": 100
     },
-    "duration": "Up to 10 minutes",
+    "duration": "up to 10 minutes",
     "concentration": true,
     "castingTime": "10 minutes",
     "level": 3,
@@ -1532,7 +1539,8 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "A diamond worth at least 1,000 gp and at least 1 cubic inch of flesh of the creature that is to be cloned, which the spell consumes, and a vessel worth at least 2,000 gp that has a sealable lid and is large enough to hold a Medium creature, such as a huge urn, coffin, mud-filled cyst in the ground, or crystal container filled with salt water"
+      "materialMaterial": "A diamond worth at least 1,000 gp and at least 1 cubic inch of flesh of the creature that is to be cloned, which the spell consumes, and a vessel worth at least 2,000 gp that has a sealable lid and is large enough to hold a Medium creature, such as a huge urn, coffin, mud-filled cyst in the ground, or crystal container filled with salt water",
+      "materialCost": 3000
     },
     "duration": "Instantaneous",
     "castingTime": "1 hour",
@@ -1558,7 +1566,7 @@
       "material": true,
       "materialMaterial": "A sliver of glass"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 2,
@@ -1589,7 +1597,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 10 minutes",
+    "duration": "up to 10 minutes",
     "concentration": true,
     "castingTime": "action",
     "level": 5,
@@ -1733,7 +1741,7 @@
     "components": {
       "verbal": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "bonus",
     "level": 1,
@@ -1783,7 +1791,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 4,
@@ -1849,7 +1857,7 @@
       "material": true,
       "materialMaterial": "Three walnut shells"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 4,
@@ -1882,7 +1890,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 1 hour",
+    "duration": "up to 1 hour",
     "concentration": true,
     "castingTime": "action",
     "level": 3,
@@ -1933,7 +1941,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 1 hour",
+    "duration": "up to 1 hour",
     "concentration": true,
     "castingTime": "minute",
     "level": 7,
@@ -1957,7 +1965,7 @@
       "material": true,
       "materialMaterial": "Burning incense for air, soft clay for earth, sulfur and phosphorus for fire, or water and sand for water"
     },
-    "duration": "Up to 1 hour",
+    "duration": "up to 1 hour",
     "concentration": true,
     "castingTime": "minute",
     "level": 5,
@@ -1983,7 +1991,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 1 hour",
+    "duration": "up to 1 hour",
     "concentration": true,
     "castingTime": "minute",
     "level": 6,
@@ -2006,7 +2014,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 1 hour",
+    "duration": "up to 1 hour",
     "concentration": true,
     "castingTime": "minute",
     "level": 4,
@@ -2059,7 +2067,7 @@
       "material": true,
       "materialMaterial": "One holly berry per creature summoned"
     },
-    "duration": "Up to 1 hour",
+    "duration": "up to 1 hour",
     "concentration": true,
     "castingTime": "action",
     "level": 4,
@@ -2125,7 +2133,8 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "A statuette of yourself carved from ivory and decorated with gems worth at least 1,500 gp"
+      "materialMaterial": "A statuette of yourself carved from ivory and decorated with gems worth at least 1,500 gp",
+      "materialCost": 1500
     },
     "duration": "10 days",
     "castingTime": "10 minutes",
@@ -2146,7 +2155,8 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "Ruby dust worth 50 gp, which the spell consumes"
+      "materialMaterial": "Ruby dust worth 50 gp, which the spell consumes",
+      "materialCost": 50
     },
     "duration": "Until dispelled",
     "castingTime": "action",
@@ -2168,7 +2178,7 @@
     "components": {
       "somatic": true
     },
-    "duration": "Instantaneous/1 hour",
+    "duration": "Instantaneous or 1 hour",
     "castingTime": "action",
     "level": 0,
     "school": "Transmutation",
@@ -2192,7 +2202,7 @@
       "material": true,
       "materialMaterial": "A drop of water and a pinch of dust"
     },
-    "duration": "Up to 10 minutes",
+    "duration": "up to 10 minutes",
     "concentration": true,
     "castingTime": "action",
     "level": 4,
@@ -2217,7 +2227,7 @@
       "material": true,
       "materialMaterial": "Burning incense and bits of earth and wood mixed in water"
     },
-    "duration": "Up to 8 hours",
+    "duration": "up to 8 hours",
     "concentration": true,
     "castingTime": "10 minutes",
     "level": 8,
@@ -2246,12 +2256,12 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 1 hour",
+    "duration": "up to 1 hour",
     "concentration": true,
     "castingTime": "action",
     "level": 5,
     "school": "Transmutation",
-    "effects": "Choose one of the following effects when you cast the spell. The effect lasts for the spell's duration, unless you use your action on a later turn to switch to a different effect. You can also use your action to temporarily halt the effect or to restart one you've halted.\n<i>Gusts.</i> A wind picks up within the cube, continually blowing in a horizontal direction that you choose. You choose the intensity of the wind: calm, moderate, or strong. If the wind is moderate or strong, ranged weapon attacks that pass through it or that are made against targets within the cube have disadvantage on their attack rolls. If the wind is strong, any creature moving against the wind must spend 1 extra foot of movement for each foot moved.\n<i>Downdraft.</i> You cause a sustained blast of strong wind to blow downward from the top of the cube. Ranged weapon attacks that pass through the cube or that are made against targets within it have disadvantage on their attack rolls. A creature must make a Strength saving throw if it flies into the cube for the first time on a turn or starts its turn there flying. On a failed save, the creature is knocked prone.\n<i>Updraft.</i> You cause a sustained updraft within the cube, rising upward from the cube's bottom edge. Creatures that end a fall within the cube take only half damage from the fall. When a creature in the cube makes a vertical jump, the creature can jump up to 10 feet higher than normal.",
+    "effects": "Choose one of the following effects when you cast the spell. The effect lasts for the spell's duration, unless you use your action on a later turn to switch to a different effect. You can also use your action to temporarily halt the effect or to restart one you've halted.\nGusts. A wind picks up within the cube, continually blowing in a horizontal direction that you choose. You choose the intensity of the wind: calm, moderate, or strong. If the wind is moderate or strong, ranged weapon attacks that pass through it or that are made against targets within the cube have disadvantage on their attack rolls. If the wind is strong, any creature moving against the wind must spend 1 extra foot of movement for each foot moved.\nDowndraft. You cause a sustained blast of strong wind to blow downward from the top of the cube. Ranged weapon attacks that pass through the cube or that are made against targets within it have disadvantage on their attack rolls. A creature must make a Strength saving throw if it flies into the cube for the first time on a turn or starts its turn there flying. On a failed save, the creature is knocked prone.\nUpdraft. You cause a sustained updraft within the cube, rising upward from the cube's bottom edge. Creatures that end a fall within the cube take only half damage from the fall. When a creature in the cube makes a vertical jump, the creature can jump up to 10 feet higher than normal.",
     "classes": [
       "Druid",
       "Sorcerer",
@@ -2321,7 +2331,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 0,
@@ -2397,7 +2407,8 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "One clay pot filled with grave dirt, one clay pot filled with brackish water, and one 150 gp black onyx stone for each corpse"
+      "materialMaterial": "One clay pot filled with grave dirt, one clay pot filled with brackish water, and one 150 gp black onyx stone for each corpse",
+      "materialCost": 150
     },
     "duration": "Instantaneous",
     "castingTime": "minute",
@@ -2444,7 +2455,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 2,
@@ -2471,7 +2482,7 @@
     "components": {
       "verbal": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 3,
@@ -2531,7 +2542,7 @@
       "material": true,
       "materialMaterial": "A bit of phosphorus or wychwood, or a glowworm"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 0,
@@ -2555,7 +2566,7 @@
       "material": true,
       "materialMaterial": "Bat fur and a drop of pitch or piece of coal"
     },
-    "duration": "Up to 10 minutes",
+    "duration": "up to 10 minutes",
     "concentration": true,
     "castingTime": "action",
     "level": 2,
@@ -2665,7 +2676,7 @@
       "material": true,
       "materialMaterial": "A tiny ball of bat guano and sulfur"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 7,
@@ -2744,7 +2755,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 10 minutes",
+    "duration": "up to 10 minutes",
     "concentration": true,
     "castingTime": "action",
     "level": 1,
@@ -2766,7 +2777,7 @@
       "somatic": true
     },
     "ritual": true,
-    "duration": "Up to 10 minutes",
+    "duration": "up to 10 minutes",
     "concentration": true,
     "castingTime": "action",
     "level": 1,
@@ -2795,7 +2806,7 @@
       "materialMaterial": "A yew leaf"
     },
     "ritual": true,
-    "duration": "Up to 10 minutes",
+    "duration": "up to 10 minutes",
     "concentration": true,
     "castingTime": "action",
     "level": 1,
@@ -2821,7 +2832,7 @@
       "material": true,
       "materialMaterial": "A copper coin"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 2,
@@ -2941,7 +2952,7 @@
       "material": true,
       "materialMaterial": "Holy water or powdered silver and iron"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 5,
@@ -3028,7 +3039,8 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "Incense and a sacrificial offering appropriate to your religion, together worth at least 25 gp, which the spell consumes"
+      "materialMaterial": "Incense and a sacrificial offering appropriate to your religion, together worth at least 25 gp, which the spell consumes",
+      "materialCost": 25
     },
     "ritual": true,
     "duration": "Instantaneous",
@@ -3055,7 +3067,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "bonus",
     "level": 1,
@@ -3103,7 +3115,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 4,
@@ -3137,7 +3149,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 1 hour",
+    "duration": "up to 1 hour",
     "concentration": true,
     "castingTime": "action",
     "level": 8,
@@ -3166,7 +3178,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 5,
@@ -3200,7 +3212,8 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "A sapphire worth 1,000 gp"
+      "materialMaterial": "A sapphire worth 1,000 gp",
+      "materialCost": 1000
     },
     "ritual": true,
     "duration": "Until dispelled",
@@ -3274,7 +3287,7 @@
       "material": true,
       "materialMaterial": "A pinch of dust"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 2,
@@ -3338,7 +3351,7 @@
     "components": {
       "verbal": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 2,
@@ -3367,7 +3380,7 @@
       "material": true,
       "materialMaterial": "A pinch of dirt, a piece of rock, and a lump of clay"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 8,
@@ -3415,7 +3428,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 4,
@@ -3443,7 +3456,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 1 hour",
+    "duration": "up to 1 hour",
     "concentration": true,
     "castingTime": "action",
     "level": 3,
@@ -3467,7 +3480,7 @@
       "material": true,
       "materialMaterial": "Fur or a feather from a beast"
     },
-    "duration": "Up to 1 hour",
+    "duration": "up to 1 hour",
     "concentration": true,
     "castingTime": "action",
     "level": 2,
@@ -3493,7 +3506,7 @@
       "material": true,
       "materialMaterial": "A pinch iron powder"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 2,
@@ -3518,7 +3531,7 @@
     "components": {
       "verbal": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "bonus",
     "level": 1,
@@ -3548,7 +3561,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 1,
@@ -3657,7 +3670,7 @@
       "material": true,
       "materialMaterial": "A piece of tentacle of an octopus or a giant squid"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 4,
@@ -3687,7 +3700,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 10 minutes",
+    "duration": "up to 10 minutes",
     "concentration": true,
     "castingTime": "bonus",
     "level": 1,
@@ -3710,7 +3723,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 6,
@@ -3757,7 +3770,7 @@
     "components": {
       "verbal": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 1,
@@ -3817,7 +3830,7 @@
       "material": true,
       "materialMaterial": "A white feather or the heart of a hen"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 3,
@@ -3924,7 +3937,8 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "10gp worth of charcoal, incense, and herbs that must be consumed by fire in a brass brazier.\nYou gain the service of a familiar, a spirit that takes an animal form you choose: bat, cat, crab, frog (toad), hawk, lizard, octopus, owl, poisonous snake, fish (quipper), rat, raven, sea horse, spider, or weasel. Appearing in an unoccupied space within range, the familiar has the statistics of the chosen form, though it is a celestial, fey, or fiend (your choice) instead of a beast"
+      "materialMaterial": "10gp worth of charcoal, incense, and herbs that must be consumed by fire in a brass brazier.\nYou gain the service of a familiar, a spirit that takes an animal form you choose: bat, cat, crab, frog (toad), hawk, lizard, octopus, owl, poisonous snake, fish (quipper), rat, raven, sea horse, spider, or weasel. Appearing in an unoccupied space within range, the familiar has the statistics of the chosen form, though it is a celestial, fey, or fiend (your choice) instead of a beast",
+      "materialCost": 10
     },
     "ritual": true,
     "duration": "Instantaneous",
@@ -3965,9 +3979,10 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "A set of divinatory tools—such as bones, ivory sticks, cards, teeth, or carved runes—worth 100gp and an object from the location you wish to find"
+      "materialMaterial": "A set of divinatory tools—such as bones, ivory sticks, cards, teeth, or carved runes—worth 100gp and an object from the location you wish to find",
+      "materialCost": 100
     },
-    "duration": "Up to 24 hours",
+    "duration": "up to 24 hours",
     "concentration": true,
     "castingTime": "minute",
     "level": 6,
@@ -4162,7 +4177,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 1 hour",
+    "duration": "up to 1 hour",
     "concentration": true,
     "castingTime": "action",
     "level": 3,
@@ -4188,7 +4203,7 @@
       "material": true,
       "materialMaterial": "Leaf of sumac"
     },
-    "duration": "Up to 10 minutes",
+    "duration": "up to 10 minutes",
     "concentration": true,
     "castingTime": "bonus",
     "level": 2,
@@ -4264,7 +4279,7 @@
       "material": true,
       "materialMaterial": "A bit of tallow, a pinch of brimstone, and a dusting of powdered iron"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 2,
@@ -4300,7 +4315,7 @@
       "material": true,
       "materialMaterial": "A pinch of lime, water, and earth"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 6,
@@ -4330,7 +4345,7 @@
       "material": true,
       "materialMaterial": "A wing feather from any bird"
     },
-    "duration": "Up to 10 minutes",
+    "duration": "up to 10 minutes",
     "concentration": true,
     "castingTime": "action",
     "level": 3,
@@ -4354,7 +4369,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 1 hour",
+    "duration": "up to 1 hour",
     "concentration": true,
     "castingTime": "action",
     "level": 1,
@@ -4382,7 +4397,8 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "A sprinkling of holy water, rare incense, and powdered ruby worth at least 1,000 gp"
+      "materialMaterial": "A sprinkling of holy water, rare incense, and powdered ruby worth at least 1,000 gp",
+      "materialCost": 1000
     },
     "ritual": true,
     "duration": "24 hours",
@@ -4406,7 +4422,8 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "Ruby dust worth 1,500 gp"
+      "materialMaterial": "Ruby dust worth 1,500 gp",
+      "materialCost": 1500
     },
     "duration": "1 hour",
     "castingTime": "action",
@@ -4498,7 +4515,7 @@
       "material": true,
       "materialMaterial": "A small amount of makeup applied to the face as this spell is cast"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 0,
@@ -4552,7 +4569,7 @@
       "material": true,
       "materialMaterial": "A bit of gauze and a wisp of smoke"
     },
-    "duration": "Up to 1 hour",
+    "duration": "up to 1 hour",
     "concentration": true,
     "castingTime": "action",
     "level": 3,
@@ -4579,9 +4596,10 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "A diamond worth at least 5,000gp"
+      "materialMaterial": "A diamond worth at least 5,000gp",
+      "materialCost": 5000
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 9,
@@ -4656,7 +4674,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 10 minutes",
+    "duration": "up to 10 minutes",
     "concentration": true,
     "castingTime": "action",
     "level": 4,
@@ -4699,7 +4717,7 @@
       "material": true,
       "materialMaterial": "A glass or crystal bead that shatters when the spell ends"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 6,
@@ -4722,7 +4740,8 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "Incense and powdered diamond worth at least 200 gp, the spell consumes"
+      "materialMaterial": "Incense and powdered diamond worth at least 200 gp, the spell consumes",
+      "materialCost": 200
     },
     "duration": "Until dispelled or triggered",
     "castingTime": "1 hour",
@@ -4769,7 +4788,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "bonus",
     "level": 4,
@@ -4825,7 +4844,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 4,
@@ -4856,7 +4875,8 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "Diamond dust worth at least 100gp, which the spell consumes"
+      "materialMaterial": "Diamond dust worth at least 100gp, which the spell consumes",
+      "materialCost": 100
     },
     "duration": "Instantaneous",
     "castingTime": "action",
@@ -4945,7 +4965,8 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "Burning incense, a small measure of brimstone and oil, a knotted string, a small amount of umber hulk blood, and a small silver rod worth at least 10 gp"
+      "materialMaterial": "Burning incense, a small measure of brimstone and oil, a knotted string, a small amount of umber hulk blood, and a small silver rod worth at least 10 gp",
+      "materialCost": 10
     },
     "duration": "24 hours",
     "castingTime": "10 minutes",
@@ -4968,7 +4989,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 0,
@@ -5046,7 +5067,7 @@
       "material": true,
       "materialMaterial": "A legume seed"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 2,
@@ -5077,7 +5098,7 @@
     "components": {
       "verbal": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "bonus",
     "level": 1,
@@ -5106,7 +5127,8 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "Herbs, oils, and incense worth at least 1,000 gp, which the spell consumes"
+      "materialMaterial": "Herbs, oils, and incense worth at least 1,000 gp, which the spell consumes",
+      "materialCost": 1000
     },
     "duration": "Until dispelled",
     "castingTime": "24 hours",
@@ -5188,7 +5210,7 @@
       "material": true,
       "materialMaterial": "A shaving of licorice root"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 3,
@@ -5275,7 +5297,7 @@
       "material": true,
       "materialMaterial": "A piece of iron and a flame"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 2,
@@ -5335,7 +5357,8 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "A gem-encrusted bowl worth at least 1,000 gp, which the spell consumes"
+      "materialMaterial": "A gem-encrusted bowl worth at least 1,000 gp, which the spell consumes",
+      "materialCost": 1000
     },
     "duration": "Instantaneous",
     "castingTime": "10 minutes",
@@ -5358,7 +5381,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 1,
@@ -5383,7 +5406,7 @@
       "material": true,
       "materialMaterial": "The petrified eye of a newt"
     },
-    "duration": "Up to 1 hour",
+    "duration": "up to 1 hour",
     "concentration": true,
     "castingTime": "bonus",
     "level": 1,
@@ -5407,7 +5430,7 @@
       "material": true,
       "materialMaterial": "A small piece of iron"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 5,
@@ -5446,7 +5469,7 @@
       "material": true,
       "materialMaterial": "A small, straight piece of iron"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 2,
@@ -5483,9 +5506,10 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "A tiny reliquary worth at least 1,000 gp containing a sacred relic, such as a scrap of cloth from a saint's robe or a piece of parchment from a religious text"
+      "materialMaterial": "A tiny reliquary worth at least 1,000 gp containing a sacred relic, such as a scrap of cloth from a saint's robe or a piece of parchment from a religious text",
+      "materialCost": 1000
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 8,
@@ -5512,7 +5536,7 @@
       "material": true,
       "materialMaterial": "A pickled octopus tentacle"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 3,
@@ -5538,7 +5562,7 @@
     "components": {
       "verbal": true
     },
-    "duration": "Up to 1 hour",
+    "duration": "up to 1 hour",
     "concentration": true,
     "castingTime": "bonus",
     "level": 1,
@@ -5565,7 +5589,7 @@
       "material": true,
       "materialMaterial": "A glowing stick of incense or a crystal vial filled with phosphorescent material"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 3,
@@ -5674,7 +5698,8 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "A pearl worth at least 100 gp and an owl feather"
+      "materialMaterial": "A pearl worth at least 100 gp and an owl feather",
+      "materialCost": 100
     },
     "ritual": true,
     "duration": "Instantaneous",
@@ -5700,7 +5725,8 @@
     "components": {
       "somatic": true,
       "material": true,
-      "materialMaterial": "A lead-based ink worth at least 10gp, which this spell consumes"
+      "materialMaterial": "A lead-based ink worth at least 10gp, which this spell consumes",
+      "materialCost": 10
     },
     "ritual": true,
     "duration": "10 days",
@@ -5724,7 +5750,7 @@
     "components": {
       "verbal": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 5,
@@ -5753,7 +5779,8 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "A vellum depiction or a carved statuette in the likeness of the target, and a special component that varies according to the version of the spell you choose, worth at least 500gp per Hit Die of the target"
+      "materialMaterial": "A vellum depiction or a carved statuette in the likeness of the target, and a special component that varies according to the version of the spell you choose, worth at least 500gp per Hit Die of the target",
+      "materialCost": 500
     },
     "duration": "Until dispelled",
     "castingTime": "minute",
@@ -5782,7 +5809,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 8,
@@ -5840,7 +5867,7 @@
       "material": true,
       "materialMaterial": "A few grains of sugar, some kernels of grain, and a smear of fat"
     },
-    "duration": "Up to 10 minutes",
+    "duration": "up to 10 minutes",
     "concentration": true,
     "castingTime": "action",
     "level": 5,
@@ -5880,7 +5907,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 10 minutes",
+    "duration": "up to 10 minutes",
     "concentration": true,
     "castingTime": "action",
     "level": 6,
@@ -5903,7 +5930,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 10 minutes",
+    "duration": "up to 10 minutes",
     "concentration": true,
     "castingTime": "action",
     "level": 6,
@@ -5926,7 +5953,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 10 minutes",
+    "duration": "up to 10 minutes",
     "concentration": true,
     "castingTime": "action",
     "level": 6,
@@ -5949,7 +5976,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 10 minutes",
+    "duration": "up to 10 minutes",
     "concentration": true,
     "castingTime": "action",
     "level": 6,
@@ -5975,7 +6002,7 @@
       "material": true,
       "materialMaterial": "An eyelash encased in gum arabic"
     },
-    "duration": "Up to 1 hour",
+    "duration": "up to 1 hour",
     "concentration": true,
     "castingTime": "action",
     "level": 2,
@@ -6048,7 +6075,8 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "Incense worth 250 inches that fate consumes and four sticks of ivory worth 50 gp each"
+      "materialMaterial": "Incense worth at least 250 gp, which the spell consumes, and four ivory strips worth 50 gp each",
+      "materialCost": 25
     },
     "duration": "Instantaneous",
     "castingTime": "10 minutes",
@@ -6074,7 +6102,8 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "An exquisite chest, 3 feet by 2 feet by 2 feet, constructed from rare materials worth at least 5,000 gp, and a Tiny replica made from the same materials worth at least 50 gp"
+      "materialMaterial": "An exquisite chest, 3 feet by 2 feet by 2 feet, constructed from rare materials worth at least 5,000 gp, and a Tiny replica made from the same materials worth at least 50 gp",
+      "materialCost": 50
     },
     "duration": "Instantaneous",
     "castingTime": "action",
@@ -6152,7 +6181,7 @@
       "material": true,
       "materialMaterial": "Either a small leather loop or a piece of golden wire bent into a cup shape with a long shank on one end"
     },
-    "duration": "Up to 10 minutes",
+    "duration": "up to 10 minutes",
     "concentration": true,
     "castingTime": "action",
     "level": 2,
@@ -6204,7 +6233,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "bonus",
     "level": 3,
@@ -6329,7 +6358,7 @@
       "material": true,
       "materialMaterial": "A bit of fur from a bloodhound"
     },
-    "duration": "Up to 1 hour",
+    "duration": "up to 1 hour",
     "concentration": true,
     "castingTime": "action",
     "level": 4,
@@ -6359,7 +6388,7 @@
       "material": true,
       "materialMaterial": "A forked twig"
     },
-    "duration": "Up to 10 minutes",
+    "duration": "up to 10 minutes",
     "concentration": true,
     "castingTime": "action",
     "level": 2,
@@ -6414,7 +6443,7 @@
       "material": true,
       "materialMaterial": "Paper or leaf in the shape of a funnel"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 5,
@@ -6487,7 +6516,8 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "Holy water or powdered silver and iron worth at least 100 gp, which the spell consumes"
+      "materialMaterial": "Holy water or powdered silver and iron worth at least 100 gp, which the spell consumes",
+      "materialCost": 100
     },
     "duration": "1 hour",
     "castingTime": "minute",
@@ -6511,7 +6541,8 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "A gem, crystal, reliquary, or some other ornamental container worth at least 500 gp"
+      "materialMaterial": "A gem, crystal, reliquary, or some other ornamental container worth at least 500 gp",
+      "materialCost": 500
     },
     "duration": "Until dispelled",
     "castingTime": "minute",
@@ -6611,7 +6642,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 1 hour",
+    "duration": "up to 1 hour",
     "concentration": true,
     "castingTime": "bonus",
     "level": 2,
@@ -6640,7 +6671,7 @@
       "material": true,
       "materialMaterial": "A bit of fleece"
     },
-    "duration": "Up to 10 minutes",
+    "duration": "up to 10 minutes",
     "concentration": true,
     "castingTime": "action",
     "level": 3,
@@ -6775,7 +6806,7 @@
       "material": true,
       "materialMaterial": "A miniature hand sculpted from clay"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 2,
@@ -6804,7 +6835,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 10 minutes",
+    "duration": "up to 10 minutes",
     "concentration": true,
     "castingTime": "action",
     "level": 8,
@@ -6890,7 +6921,7 @@
       "material": true,
       "materialMaterial": "Niter, sulfur, and pine tar formed into a bead"
     },
-    "duration": "Up to 10 minutes",
+    "duration": "up to 10 minutes",
     "concentration": true,
     "castingTime": "action",
     "level": 3,
@@ -7092,7 +7123,7 @@
     "components": {
       "somatic": true
     },
-    "duration": "Up to 1 hour",
+    "duration": "up to 1 hour",
     "concentration": true,
     "castingTime": "action",
     "level": 5,
@@ -7144,7 +7175,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 5,
@@ -7173,7 +7204,7 @@
     "components": {
       "somatic": true
     },
-    "duration": "Instantaneous/1 hour",
+    "duration": "Instantaneous or 1 hour",
     "castingTime": "action",
     "level": 0,
     "school": "Transmutation",
@@ -7199,7 +7230,7 @@
       "material": true,
       "materialMaterial": "Several seeds of any moonseed plant and a piece of opalescent feldspar"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 2,
@@ -7232,7 +7263,8 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "A miniature platinum sword with a grip and pommel of copper and zinc, worth 250gp"
+      "materialMaterial": "A miniature platinum sword with a grip and pommel of copper and zinc, worth 250gp",
+      "materialCost": 250
     },
     "duration": "8 hours",
     "castingTime": "action",
@@ -7257,7 +7289,8 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "A miniature portal carved from ivory, a small piece of polished marble, and a tiny silver spoon, each item worth at least 5 gp"
+      "materialMaterial": "A miniature portal carved from ivory, a small piece of polished marble, and a tiny silver spoon, each item worth at least 5 gp",
+      "materialCost": 15
     },
     "duration": "24 hours",
     "castingTime": "minute",
@@ -7303,9 +7336,10 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "A miniature platinum sword with a grip and pommel of copper and zinc, worth 250 gp"
+      "materialMaterial": "A miniature platinum sword with a grip and pommel of copper and zinc, worth 250 gp",
+      "materialCost": 250
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 7,
@@ -7334,7 +7368,7 @@
       "material": true,
       "materialMaterial": "An iron blade and a small bag containing a mixture of soils—clay, loam, and sand"
     },
-    "duration": "Up to 2 hours",
+    "duration": "up to 2 hours",
     "concentration": true,
     "castingTime": "action",
     "level": 6,
@@ -7357,7 +7391,8 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "A pinch of diamond dust worth 25 gp sprinkled over the target, which the spell consumes"
+      "materialMaterial": "A pinch of diamond dust worth 25 gp sprinkled over the target, which the spell consumes",
+      "materialCost": 25
     },
     "duration": "8 hours",
     "castingTime": "action",
@@ -7441,7 +7476,7 @@
       "material": true,
       "materialMaterial": "A hemispherical piece of clear crystal and a matching hemispherical piece of gum arabic"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 4,
@@ -7465,7 +7500,7 @@
     "components": {
       "verbal": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 6,
@@ -7489,7 +7524,7 @@
       "material": true,
       "materialMaterial": "Ashes from a burned leaf of mistletoe and a sprig of spruce"
     },
-    "duration": "Up to 1 hour",
+    "duration": "up to 1 hour",
     "concentration": true,
     "castingTime": "action",
     "level": 2,
@@ -7547,7 +7582,7 @@
       "material": true,
       "materialMaterial": "A bit of fleece"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 2,
@@ -7580,7 +7615,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 4,
@@ -7644,7 +7679,8 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "A jewel worth at least 1,000 gp, which the spell consumes"
+      "materialMaterial": "A jewel worth at least 1,000 gp, which the spell consumes",
+      "materialCost": 1000
     },
     "duration": "24 hours",
     "castingTime": "1 hour",
@@ -7669,7 +7705,8 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "A forked, metal rod worth at least 250 gp, attuned to a particular plane of existence"
+      "materialMaterial": "A forked, metal rod worth at least 250 gp, attuned to a particular plane of existence",
+      "materialCost": 250
     },
     "duration": "Instantaneous",
     "castingTime": "action",
@@ -7761,7 +7798,7 @@
       "material": true,
       "materialMaterial": "A caterpillar cocoon"
     },
-    "duration": "Up to 1 hour",
+    "duration": "up to 1 hour",
     "concentration": true,
     "castingTime": "action",
     "level": 4,
@@ -7905,7 +7942,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 6,
@@ -8004,7 +8041,8 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "A bit of fleece and jade dust worth at least 25 gp"
+      "materialMaterial": "A bit of fleece and jade dust worth at least 25 gp",
+      "materialCost": 25
     },
     "duration": "Until dispelled",
     "castingTime": "action",
@@ -8026,9 +8064,10 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "A small replica of you made from materials worth at least 5 gp"
+      "materialMaterial": "A small replica of you made from materials worth at least 5 gp",
+      "materialCost": 5
     },
-    "duration": "Up to 24 hours",
+    "duration": "up to 24 hours",
     "concentration": true,
     "castingTime": "action",
     "level": 7,
@@ -8050,7 +8089,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 1 hour",
+    "duration": "up to 1 hour",
     "concentration": true,
     "castingTime": "action",
     "level": 3,
@@ -8085,7 +8124,7 @@
       "material": true,
       "materialMaterial": "Holy water or powdered silver and iron, which the spell consumes"
     },
-    "duration": "Up to 10 minutes",
+    "duration": "up to 10 minutes",
     "concentration": true,
     "castingTime": "action",
     "level": 1,
@@ -8185,7 +8224,8 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "A diamond worth at least 500gp, which the spell consumes"
+      "materialMaterial": "A diamond worth at least 500gp, which the spell consumes",
+      "materialCost": 500
     },
     "duration": "Instantaneous",
     "castingTime": "1 hour",
@@ -8235,7 +8275,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 2,
@@ -8347,7 +8387,8 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "Rare oils and unguents worth at least 1,000 gp, which the spell consumes"
+      "materialMaterial": "Rare oils and unguents worth at least 1,000 gp, which the spell consumes",
+      "materialCost": 1000
     },
     "duration": "Instantaneous",
     "castingTime": "1 hour",
@@ -8394,7 +8435,7 @@
       "material": true,
       "materialMaterial": "A miniature cloak"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 0,
@@ -8416,7 +8457,8 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "A diamond worth at least 1,000gp, which the spell consumes"
+      "materialMaterial": "A diamond worth at least 1,000gp, which the spell consumes",
+      "materialCost": 1000
     },
     "duration": "Instantaneous",
     "castingTime": "1 hour",
@@ -8442,7 +8484,7 @@
       "material": true,
       "materialMaterial": "A lodestone and iron filings"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 7,
@@ -8469,7 +8511,8 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "Diamonds worth 300gp, which the spell consumes"
+      "materialMaterial": "Diamonds worth 300gp, which the spell consumes",
+      "materialCost": 300
     },
     "duration": "Instantaneous",
     "castingTime": "action",
@@ -8605,9 +8648,10 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "A focus worth at least 1,000 gp, such as a crystal ball, a silver mirror, or a font filled with holy water"
+      "materialMaterial": "A focus worth at least 1,000 gp, such as a crystal ball, a silver mirror, or a font filled with holy water",
+      "materialCost": 1000
     },
-    "duration": "Up to 10 minutes",
+    "duration": "up to 10 minutes",
     "concentration": true,
     "castingTime": "10 minutes",
     "level": 5,
@@ -8648,7 +8692,7 @@
     "components": {
       "verbal": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "bonus",
     "level": 1,
@@ -8760,7 +8804,8 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "A powder composed of diamond, emerald, ruby, and sapphire dust worth at least 5,000 gp, which the spell consumes"
+      "materialMaterial": "A powder composed of diamond, emerald, ruby, and sapphire dust worth at least 5,000 gp, which the spell consumes",
+      "materialCost": 5000
     },
     "duration": "Until dispelled",
     "castingTime": "action",
@@ -8781,7 +8826,7 @@
     "components": {
       "somatic": true
     },
-    "duration": "Instantaneous/1 hour",
+    "duration": "Instantaneous or 1 hour",
     "castingTime": "action",
     "level": 0,
     "school": "Transmutation",
@@ -8802,9 +8847,10 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "A jade circlet worth at least 1,500 gp, which you must place on your head before you cast the spell"
+      "materialMaterial": "A jade circlet worth at least 1,500 gp, which you must place on your head before you cast the spell",
+      "materialCost": 1500
     },
-    "duration": "Up to 1 hour",
+    "duration": "up to 1 hour",
     "concentration": true,
     "castingTime": "action",
     "level": 9,
@@ -8887,7 +8933,7 @@
       "material": true,
       "materialMaterial": "A small parchment with a bit of holy text written on it"
     },
-    "duration": "Up to 10 minutes",
+    "duration": "up to 10 minutes",
     "concentration": true,
     "castingTime": "bonus",
     "level": 1,
@@ -8961,7 +9007,7 @@
       "somatic": true
     },
     "ritual": true,
-    "duration": "Up to 10 minutes",
+    "duration": "up to 10 minutes",
     "concentration": true,
     "castingTime": "action",
     "level": 2,
@@ -8990,7 +9036,7 @@
       "material": true,
       "materialMaterial": "A bit of fleece"
     },
-    "duration": "Up to 10 minutes",
+    "duration": "up to 10 minutes",
     "concentration": true,
     "castingTime": "action",
     "level": 1,
@@ -9013,7 +9059,8 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "Snow or ice in quantities sufficient to made a life-size copy of the duplicated creature; some hair, fingernail clippings, or other piece of that creature's body placed inside the snow or ice; and powdered ruby worth 1,500 gp, sprinkled over the duplicate and consumed by the spell"
+      "materialMaterial": "Snow or ice in quantities sufficient to made a life-size copy of the duplicated creature; some hair, fingernail clippings, or other piece of that creature's body placed inside the snow or ice; and powdered ruby worth 1,500 gp, sprinkled over the duplicate and consumed by the spell",
+      "materialCost": 1500
     },
     "duration": "Until dispelled",
     "castingTime": "12 hours",
@@ -9035,7 +9082,7 @@
       "somatic": true
     },
     "ritual": true,
-    "duration": "Up to 1 hour",
+    "duration": "up to 1 hour",
     "concentration": true,
     "castingTime": "action",
     "level": 2,
@@ -9091,7 +9138,7 @@
       "material": true,
       "materialMaterial": "A pinch of dust and a few drops of water"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 3,
@@ -9128,7 +9175,7 @@
       "material": true,
       "materialMaterial": "A drop of molasses"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 3,
@@ -9162,7 +9209,7 @@
       "material": true,
       "materialMaterial": "A piece of ice or a small white rock chip"
     },
-    "duration": "Up to 1 hour",
+    "duration": "up to 1 hour",
     "concentration": true,
     "castingTime": "action",
     "level": 2,
@@ -9290,7 +9337,7 @@
       "material": true,
       "materialMaterial": "A drop of bitumen and a spider"
     },
-    "duration": "Up to 1 hour",
+    "duration": "up to 1 hour",
     "concentration": true,
     "castingTime": "action",
     "level": 2,
@@ -9321,7 +9368,7 @@
       "material": true,
       "materialMaterial": "Seven sharp spines or seven twigs cut peak"
     },
-    "duration": "Up to 10 minutes",
+    "duration": "up to 10 minutes",
     "concentration": true,
     "castingTime": "action",
     "level": 2,
@@ -9355,7 +9402,7 @@
       "material": true,
       "materialMaterial": "A holy symbol"
     },
-    "duration": "Up to 10 minutes",
+    "duration": "up to 10 minutes",
     "concentration": true,
     "castingTime": "action",
     "level": 3,
@@ -9417,7 +9464,7 @@
     "components": {
       "verbal": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "bonus",
     "level": 4,
@@ -9449,7 +9496,7 @@
       "material": true,
       "materialMaterial": "A rotten egg or several skunk cabbage leaves"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 3,
@@ -9515,9 +9562,10 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "Diamond dust worth 100 gp, which the spell consumes"
+      "materialMaterial": "Diamond dust worth 100 gp, which the spell consumes",
+      "materialCost": 100
     },
-    "duration": "Up to 1 hour",
+    "duration": "up to 1 hour",
     "concentration": true,
     "castingTime": "action",
     "level": 4,
@@ -9553,7 +9601,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 9,
@@ -9582,7 +9630,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 4,
@@ -9612,7 +9660,7 @@
       "material": true,
       "materialMaterial": "A snake's tongue and either a bit of honeycomb or a drop of sweet oil"
     },
-    "duration": "Up to 8 hours",
+    "duration": "up to 8 hours",
     "concentration": true,
     "castingTime": "action",
     "level": 2,
@@ -9647,7 +9695,7 @@
       "material": true,
       "materialMaterial": "A magnifying glass"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 6,
@@ -9710,7 +9758,7 @@
       "material": true,
       "materialMaterial": "A quiver containing at least one piece of ammunition"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "bonus",
     "level": 5,
@@ -9757,7 +9805,8 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "Mercury, phosphorus, and powdered diamond and opal with a total value of at least 1,000 gp, which the spell consumes"
+      "materialMaterial": "Mercury, phosphorus, and powdered diamond and opal with a total value of at least 1,000 gp, which the spell consumes",
+      "materialCost": 1000
     },
     "duration": "Until dispelled",
     "castingTime": "minute",
@@ -9783,7 +9832,7 @@
       "material": true,
       "materialMaterial": "Tiny tarts and a feather that is waved in the air"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 1,
@@ -9813,7 +9862,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 10 minutes",
+    "duration": "up to 10 minutes",
     "concentration": true,
     "castingTime": "action",
     "level": 5,
@@ -9880,7 +9929,8 @@
     "components": {
       "verbal": true,
       "material": true,
-      "materialMaterial": "Rare chalks and inks infused with precious gems with 50 gp, which the spell consumes"
+      "materialMaterial": "Rare chalks and inks infused with precious gems with 50 gp, which the spell consumes",
+      "materialCost": 50
     },
     "duration": "1 round",
     "castingTime": "minute",
@@ -9971,7 +10021,7 @@
     "components": {
       "verbal": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "bonus",
     "level": 1,
@@ -10188,7 +10238,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 5,
@@ -10223,7 +10273,7 @@
       "material": true,
       "materialMaterial": "A drop of mercury, a dollop of gum arabic, and a wisp of smoke"
     },
-    "duration": "Up to 1 hour",
+    "duration": "up to 1 hour",
     "concentration": true,
     "castingTime": "action",
     "level": 9,
@@ -10250,7 +10300,8 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "A sprinkle of holy water and diamonds worth at least 25,000gp, which the spell consumes"
+      "materialMaterial": "A sprinkle of holy water and diamonds worth at least 25,000gp, which the spell consumes",
+      "materialCost": 25000
     },
     "duration": "Instantaneous",
     "castingTime": "1 hour",
@@ -10273,7 +10324,8 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "An ointment for the eyes that costs 25gp; is made from mushroom powder, saffron, and fat; and is consumed by the spell"
+      "materialMaterial": "An ointment for the eyes that costs 25gp; is made from mushroom powder, saffron, and fat; and is consumed by the spell",
+      "materialCost": 25
     },
     "duration": "1 hour",
     "castingTime": "action",
@@ -10298,7 +10350,7 @@
     "components": {
       "somatic": true
     },
-    "duration": "Up to 1 round",
+    "duration": "up to 1 round",
     "concentration": true,
     "castingTime": "action",
     "level": 0,
@@ -10323,7 +10375,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 6 rounds",
+    "duration": "up to 6 rounds",
     "concentration": true,
     "castingTime": "minute",
     "level": 8,
@@ -10375,7 +10427,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 3,
@@ -10466,7 +10518,7 @@
       "material": true,
       "materialMaterial": "A small piece of phosphorus"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 4,
@@ -10507,7 +10559,7 @@
       "material": true,
       "materialMaterial": "A pinch of powder made by crushing a clear gemstone"
     },
-    "duration": "Up to 10 minutes",
+    "duration": "up to 10 minutes",
     "concentration": true,
     "castingTime": "action",
     "level": 5,
@@ -10532,7 +10584,7 @@
       "material": true,
       "materialMaterial": "A small piece of quartz"
     },
-    "duration": "Up to 10 minutes",
+    "duration": "up to 10 minutes",
     "concentration": true,
     "castingTime": "action",
     "level": 6,
@@ -10563,7 +10615,7 @@
       "material": true,
       "materialMaterial": "A handful of sand"
     },
-    "duration": "Up to 10 minutes",
+    "duration": "up to 10 minutes",
     "concentration": true,
     "castingTime": "action",
     "level": 3,
@@ -10587,7 +10639,7 @@
       "material": true,
       "materialMaterial": "A small block of granite"
     },
-    "duration": "Up to 10 minutes",
+    "duration": "up to 10 minutes",
     "concentration": true,
     "castingTime": "action",
     "level": 5,
@@ -10622,7 +10674,7 @@
       "material": true,
       "materialMaterial": "A handful of thorns"
     },
-    "duration": "Up to 10 minutes",
+    "duration": "up to 10 minutes",
     "concentration": true,
     "castingTime": "action",
     "level": 6,
@@ -10653,7 +10705,7 @@
       "material": true,
       "materialMaterial": "A drop of water"
     },
-    "duration": "Up to 10 minutes",
+    "duration": "up to 10 minutes",
     "concentration": true,
     "castingTime": "action",
     "level": 3,
@@ -10676,7 +10728,8 @@
       "verbal": true,
       "somatic": true,
       "material": true,
-      "materialMaterial": "A pair of platinum rings worth at least 50gp each, which you and the target must wear for the duration"
+      "materialMaterial": "A pair of platinum rings worth at least 50gp each, which you and the target must wear for the duration",
+      "materialCost": 50
     },
     "duration": "1 hour",
     "castingTime": "action",
@@ -10697,7 +10750,7 @@
     "components": {
       "verbal": true
     },
-    "duration": "Up to 10 minutes",
+    "duration": "up to 10 minutes",
     "concentration": true,
     "castingTime": "action",
     "level": 2,
@@ -10781,7 +10834,7 @@
       "material": true,
       "materialMaterial": "A droplet of water"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 4,
@@ -10812,7 +10865,7 @@
       "material": true,
       "materialMaterial": "A bit of spiderweb"
     },
-    "duration": "Up to 1 hour",
+    "duration": "up to 1 hour",
     "concentration": true,
     "castingTime": "action",
     "level": 2,
@@ -10843,7 +10896,7 @@
       "verbal": true,
       "somatic": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 9,
@@ -10868,7 +10921,7 @@
       "material": true,
       "materialMaterial": "A piece of straw"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 7,
@@ -10921,7 +10974,7 @@
       "material": true,
       "materialMaterial": "A tiny fan and a feather of exotic origin"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 3,
@@ -10975,7 +11028,7 @@
       "material": true,
       "materialMaterial": "A twig from a tree that has been struck by lightning"
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "action",
     "level": 1,
@@ -11021,7 +11074,7 @@
     "components": {
       "verbal": true
     },
-    "duration": "Up to 1 minute",
+    "duration": "up to 1 minute",
     "concentration": true,
     "castingTime": "bonus",
     "level": 1,
