@@ -415,8 +415,8 @@
   },
   {
     "name": "Hydraulic Push",
-    "description": "You summon a blast of water that soaks one creature or square. Make a ranged spell attack against a creature, if it hits the creature takes 2d8 bludgeoning damage and is pushed back 10 feet. This spells also extinguishes any normal fire on a creature or object, or in a 5-foot square. Magical fire is unaffected.",
-    "higherLevel": "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st.",
+    "description": "You summon a blast of water that soaks one creature or square. Make a ranged spell attack against a creature, if it hits the creature takes 1d8 bludgeoning damage and is pushed back 10 feet. This spells also extinguishes any normal fire on a creature or object, or in a 5-foot square. Magical fire is unaffected.",
+    "higherLevel": "This spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).",
     "emote": "summons a blast of water that soaks a creature",
     "source": "houserules",
     "range": "30 ft",
@@ -427,13 +427,11 @@
     },
     "castingTime": "action",
     "duration": "Instantaneous",
-    "level": 1,
+    "level": 0,
     "school": "Evocation",
     "attack": {
-      "damage": "2d8",
-      "damageType": "bludgeoning",
-      "higherLevelDice": "1",
-      "higherLevelDie": "d8"
+      "damage": "((@{level} + 1) / 6 + 0.5)d8",
+      "damageType": "bludgeoning"
     },
     "effects": "target is pushed back 10 ft. This spells also extinguishes any normal fire on a creature or object, or in a 5 ft square. Magical fire is unaffected.",
     "classes": [
