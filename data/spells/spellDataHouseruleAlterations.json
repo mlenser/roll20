@@ -66,7 +66,7 @@
   },
   {
     "name": "Aggressive Thundercloud",
-    "description": "A 5-foot-diameter sphere of crackling storm clouds appears in an unoccupied space of your choice within range and lasts for the duration. Any creature that ends its turn within the cloud must make a Dexterity saving throw. The creature takes 2d6 lightning damage on a failed save, or half as much damage on a successful one. As a bonus action, you can make the sphere fly up to 30 feet. If the sphere enters space that contains a creature, that creature must make the saving throw against the sphere’s damage, and the sphere stops moving this turn.",
+    "description": "A 5-foot-diameter sphere of crackling storm clouds appears in an unoccupied space of your choice within range and lasts for the duration. Any creature that ends its turn within the cloud must make a Dexterity saving throw. The creature takes 2d6 lightning damage on a failed save, or half as much damage on a successful one. As a bonus action, you can make the sphere fly up to 30 feet. If the sphere enters space that contains a creature, that creature must make the saving throw against the sphere's damage, and the sphere stops moving this turn.",
     "higherLevel": "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d6 for each slot level above 2nd.",
     "emote": "conjures a sphere of crackling storm clouds",
     "source": "houserules",
