@@ -667,11 +667,11 @@
   },
   {
     "name": "Melf's Acid Arrow",
-    "description": "A shimmering green arrow streaks toward a target within range and bursts in a spray of acid. Make a ranged spell attack against the target. On a hit, the target takes 4d4 acid damage immediately and 4d4 acid damage at the end of its next turn. On a miss, the arrow splashes the target with acid for half as much of the initial damage and no damage at the end of its next turn.",
+    "description": "A shimmering green arrow streaks toward a target within range and bursts in a spray of acid. Make a ranged spell attack against the target. On a hit, the target takes 6d4 acid damage immediately and 6d4 acid damage at the end of its next turn. On a miss, the arrow splashes the target with acid for half as much of the initial damage and no damage at the end of its next turn.",
     "attack": {
-      "damage": "5d4",
+      "damage": "6d4",
       "damageType": "acid",
-      "secondaryDamage": "5d4",
+      "secondaryDamage": "6d4",
       "secondaryDamageType": "acid",
       "higherLevelDice": "1",
       "higherLevelDie": "d4",
