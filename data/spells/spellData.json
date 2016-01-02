@@ -1148,7 +1148,7 @@
     "components": {
       "verbal": true,
       "material": true,
-      "materialMatieral": "a weapon"
+      "materialMaterial": "a weapon"
     },
     "duration": "1 round",
     "castingTime": "action",
@@ -4900,7 +4900,7 @@
     "components": {
       "verbal": true,
       "material": true,
-      "materialMatieral": "a weapon"
+      "materialMaterial": "a weapon"
     },
     "duration": "Instantaneous",
     "castingTime": "action",
