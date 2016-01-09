@@ -3409,7 +3409,7 @@
     "level": 0,
     "school": "Evocation",
     "attack": {
-      "damage": "((@{level} + 1) / 6 + 0.5)d10",
+      "damage": "d10",
       "damageType": "force"
     },
     "classes": [
