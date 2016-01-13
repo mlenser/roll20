@@ -25,6 +25,8 @@
 
 		useAmmoAutomatically: true,
 
+		updateSpells: false, // change to true if you want !shaped-spell to update existing spells if ones are found with the same name. Will overwrite all attributes of character spells!
+
 		//hideGMInfo: true, //hide some roll template info from your players. This requires that the gm uses a browser extension
 
 		bar: [
@@ -1939,19 +1941,42 @@
 			spellBase += 'level' + spell.level + '_';
 		}
 
-		for (var i = 0; i < 100; i++) {
+		var spellIndex = 0;
+		if (shaped.settings.updateSpells) {
 			var attr = findObjs({
 				_type: 'attribute',
-				_characterid: characterId,
-				name: spellBase + i + '_' + 'spellname'
-			})[0];
+				_characterid: characterId
+			});
 
-			if (!attr) {
-				spellIndex = i;
-				spellBase += spellIndex + '_';
-				break;
+			for (var i = 0; i < attr.length; i++) {
+				var name = attr[i].get("name");
+				if (name && name.indexOf(spellBase) === 0) {
+					var suffix = '_spellname';
+					var endIndex = name.length - suffix.length;
+					if (name.indexOf(suffix, endIndex) !== -1) {
+						if (attr[i].get("current") === spell.name) {
+							spellIndex = name.substr(spellBase.length, endIndex - spellBase.length)
+							break;
+						}
+					}
+				}
 			}
 		}
+		if (!spellIndex) {
+			for (var i = 0; i < 100; i++) {
+				var attr = findObjs({
+					_type: 'attribute',
+					_characterid: characterId,
+					name: spellBase + i + '_' + 'spellname'
+				})[0];
+
+				if (!attr) {
+					spellIndex = i;
+					break;
+				}
+			}
+		}
+		spellBase += spellIndex + '_';
 
 		setAttribute(spellBase + 'spellname', spell.name);
 		if (options[0] && options[0] === 'prepared') {
