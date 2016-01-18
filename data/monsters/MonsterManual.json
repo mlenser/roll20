@@ -2315,7 +2315,7 @@
     "conditionImmunities": "poisoned",
     "senses": "darkvision 120 ft., passive Perception 8",
     "languages": "Infernal, telepathy 120 ft.",
-    "challenge": "11",
+    "challenge": "8",
     "traits": [
       "Devil's Sight. Magical darkness doesn't impede the devil's darkvision.",
       "Magic Resistance. The devil has advantage on saving throws against spells and other magical effects."
