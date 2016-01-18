@@ -1918,11 +1918,8 @@
 
 	shaped.importSpell = function (character, characterName, spellName, options) {
 		var spell = fifthSpells.spells.filter(function (obj) {
-				return obj.name.toLowerCase() === spellName.toLowerCase();
-			})[0],
-			spellBase = 'repeating_spellbook',
-			spellIndex;
-
+			return obj.name.toLowerCase() === spellName.toLowerCase();
+		})[0];
 		if (!spell) {
 			messageToChat('Error: cannot find a spell by the name of "' + spellName + '".');
 			return;
@@ -1931,6 +1928,10 @@
 			messageToChat('Error: cannot find a character by the name of "' + characterName + '".');
 			return;
 		}
+
+		var spellBase = 'repeating_spellbook';
+		var spellIndex;
+
 		characterId = character.id;
 
 		if (spell.level === 0) {
@@ -2090,7 +2091,6 @@
 			}
 		}
 
-
 		if (spell.attack) {
 			setAttribute(spellBase + 'attackstat', '@{casting_stat}');
 			setAttribute(spellBase + 'spell_toggle_attack', '@{spell_var_attack}');
@@ -2156,9 +2156,9 @@
 		var spells = args[0].split(', ');
 		var id = token.get('represents');
 		var character = findObjs({
-				_type: 'character',
-				id: id
-			})[0];
+			_type: 'character',
+			id: id
+		})[0];
 		var options = [];
 
 		characterName = getAttrByName(id, 'character_name', 'current');
@@ -2348,11 +2348,11 @@
 			if (monster.traits) {
 				var spells = '';
 				var spellRegex = /(?:(?:\d+\/day(?:\s* each)?)|(?:At will)|(?:(?:Cantrips|level)(?:\s*\(.*\))?)):\s* (.*)/gi;
-				for(var i = 0; i < monster.traits.length; i++) {
+				for (var i = 0; i < monster.traits.length; i++) {
 					var match;
 					while (match = spellRegex.exec(monster.traits[i])) {
-						if(match) {
-							if(spells !== '') {
+						if (match) {
+							if (spells !== '') {
 								spells += ', ';
 							}
 							spells += match[1].replace(/\s*\(self only\)/gi, '')
@@ -2362,7 +2362,7 @@
 					}
 				}
 
-				if(spells !== '') {
+				if (spells !== '') {
 					shaped.spellImport(token, [spells]);
 				}
 			}
