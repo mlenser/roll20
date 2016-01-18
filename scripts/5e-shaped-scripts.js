@@ -170,11 +170,11 @@
 		};
 
 	shaped.deleteOldSheet = function (token) {
-		var id = token.get('represents'),
-			obj = findObjs({
-				_type: 'character',
-				id: id
-			})[0];
+		var id = token.get('represents');
+		var obj = findObjs({
+			_type: 'character',
+			id: id
+		})[0];
 		if (obj) {
 			obj.remove();
 			log('old sheet removed before importing');
@@ -193,12 +193,12 @@
 	};
 
 	shaped.tokenMacros = function (token, args) {
-		var id = token.get('represents'),
+		var id = token.get('represents');
 			character = findObjs({
 				_type: 'character',
 				id: id
-			})[0],
-			characterName = getAttrByName(id, 'character_name', 'current');
+			})[0];
+		var characterName = getAttrByName(id, 'character_name', 'current');
 
 		if (typeof(character) === 'undefined') {
 			messageToChat('Error: cannot find a character by the name of "' + characterName + '".');
@@ -270,8 +270,8 @@
 			return;
 		}
 
-		var barTokenName = 'bar' + (barOfHP),
-			represent = token.get('represents');
+		var barTokenName = 'bar' + (barOfHP);
+		var represent = token.get('represents');
 
 		if (represent === '') {
 			messageToChat('Token does not represent a character');
@@ -281,13 +281,13 @@
 			var isNPC = getAttrByName(represent, 'is_npc', 'current');
 			if (isNPC === 1 || isNPC === '1') {
 
-				var hdArray = [4, 6, 8, 10, 12, 20],
-					hdFormula = '',
-					hdFormulaChat = '',
-					hdAverage = 0,
-					totalLevels = 0,
-					conScore = parseInt(getAttrByName(represent, 'constitution', 'current'), 10),
-					conMod = Math.floor((conScore - 10) / 2);
+				var hdArray = [4, 6, 8, 10, 12, 20];
+				var hdFormula = '';
+				var hdFormulaChat = '';
+				var hdAverage = 0;
+				var totalLevels = 0;
+				var conScore = parseInt(getAttrByName(represent, 'constitution', 'current'), 10);
+				var conMod = Math.floor((conScore - 10) / 2);
 
 				for (var i = 0; i < hdArray.length; i++) {
 					var numOfHDRow = parseInt(getAttrByName(represent, 'hd_d' + hdArray[i], 'current'), 10);
@@ -675,10 +675,10 @@
 			reactions: {}
 		};
 
-		var indexAction = 0,
-			indexLair = statblock.length,
-			indexLegendary = statblock.length,
-			indexReactions = statblock.length;
+		var indexAction = 0;
+		var indexLair = statblock.length;
+		var indexLegendary = statblock.length;
+		var indexReactions = statblock.length;
 
 		// Standard keyword
 		var regex = /#\s*(tiny|small|medium|large|huge|gargantuan|armor class|hit points|speed|str|dex|con|int|wis|cha|saving throws|skills|damage resistances|damage immunities|condition immunities|damage vulnerabilities|senses|languages|challenge|traits|actions|lair actions|legendary actions|reactions)(?=\s|#)/gi;
@@ -721,10 +721,10 @@
 			}
 		}
 
-		var splitStatblock = statblock.split('#'),
-			lastItem = '',
-			actionsPosArray = [],
-			i = 1;
+		var splitStatblock = statblock.split('#');
+		var	lastItem = '';
+		var	actionsPosArray = [];
+		var	i = 1;
 
 		for (var actionsKey in keyword.actions) {
 			if (keyword.actions.hasOwnProperty(actionsKey)) {
@@ -743,8 +743,8 @@
 		}
 		actionsPosArray.sort(sortNumber);
 
-		var lastActionIndex = actionsPosArray[actionsPosArray.length - 1] + 1,
-			lastItemIndex;
+		var lastActionIndex = actionsPosArray[actionsPosArray.length - 1] + 1;
+		var	lastItemIndex;
 
 		while (i < 6) {
 			lastItem = splitStatblock[splitStatblock.length - i];
@@ -784,9 +784,9 @@
 				obj = keyword[section];
 				for (key in obj) {
 					if (obj.hasOwnProperty(key)) {
-						var start = obj[key],
-							nextPos = indexArray.indexOf(start) + 1,
-							end = indexArray[nextPos] || statblock.length;
+						var start = obj[key];
+						var nextPos = indexArray.indexOf(start) + 1;
+						var end = indexArray[nextPos] || statblock.length;
 
 						keyword[section][key] = extractSection(statblock.substring(start, end), key);
 					}
@@ -908,16 +908,16 @@
 	}
 
 	function parseHD(hd) {
-		var regex = (/(\d+)d(\d+)/gi),
-			splitHD;
+		var regex = (/(\d+)d(\d+)/gi);
+		var splitHD;
 
 		while (splitHD = regex.exec(hd)) {
 			if (!splitHD || !splitHD[1] || !splitHD[2]) {
 				throw 'Character doesn\'t have valid hd format';
 			}
 
-			var numHD = splitHD[1],
-				HDsize = 'd' + splitHD[2];
+			var numHD = splitHD[1];
+			var HDsize = 'd' + splitHD[2];
 
 			setAttribute('hd_' + HDsize, numHD, numHD);
 			setAttribute('hd_' + HDsize + '_toggle', 'on');
@@ -936,16 +936,16 @@
 	}
 
 	function parseSpeed(speed) {
-		var baseAttr = 'speed',
-			regex = /(|burrow|climb|fly|swim|)\s*(\d+)\s*?(?:ft)?\s*(\(.*\))?/gi;
+		var baseAttr = 'speed';
+		var regex = /(|burrow|climb|fly|swim|)\s*(\d+)\s*?(?:ft)?\s*(\(.*\))?/gi;
 
 		var match;
 		while (match = regex.exec(speed)) {
 			if (!match[2]) {
 				throw 'Character doesn\'t have valid speed format';
 			}
-			var attrName = baseAttr + (match[1] !== '' ? '_' + match[1].toLowerCase() : ''),
-				value = match[2];
+			var attrName = baseAttr + (match[1] !== '' ? '_' + match[1].toLowerCase() : '');
+			var value = match[2];
 
 			if (match[3]) {
 				if (match[3].indexOf('hover')) {
@@ -966,8 +966,8 @@
 				throw 'Character doesn\'t have valid senses format';
 			}
 
-			var attrName = match[1].toLowerCase(),
-				value = match[2];
+			var attrName = match[1].toLowerCase();
+			var value = match[2];
 
 			if (match[3]) {
 				if (match[3].indexOf('blind beyond')) {
@@ -979,14 +979,14 @@
 	}
 
 	function setTokenVision(token) {
-		var blindsight = parseInt(getAttrByName(characterId, 'blindsight'), 10) || 0,
-			darkvision = parseInt(getAttrByName(characterId, 'darkvision'), 10) || 0,
-			tremorsense = parseInt(getAttrByName(characterId, 'tremorsense'), 10) || 0,
-			truesight = parseInt(getAttrByName(characterId, 'truesight'), 10) || 0,
-			longestVisionRange = Math.max(blindsight, darkvision, tremorsense, truesight),
-			longestVisionRangeForSecondaryDarkvision = Math.max(blindsight, tremorsense, truesight),
-			lightRadius,
-			dimRadius;
+		var blindsight = parseInt(getAttrByName(characterId, 'blindsight'), 10) || 0;
+		var	darkvision = parseInt(getAttrByName(characterId, 'darkvision'), 10) || 0;
+		var	tremorsense = parseInt(getAttrByName(characterId, 'tremorsense'), 10) || 0;
+		var	truesight = parseInt(getAttrByName(characterId, 'truesight'), 10) || 0;
+		var	longestVisionRange = Math.max(blindsight, darkvision, tremorsense, truesight);
+		var	longestVisionRangeForSecondaryDarkvision = Math.max(blindsight, tremorsense, truesight);
+		var	lightRadius;
+		var	dimRadius;
 
 		if (longestVisionRange === blindsight) {
 			lightRadius = blindsight;
@@ -1029,8 +1029,8 @@
 	}
 
 	function parseSavingThrow(save) {
-		var regex = /(STR|DEX|CON|INT|WIS|CHA).*?(\d+)/gi,
-			attr;
+		var regex = /(STR|DEX|CON|INT|WIS|CHA).*?(\d+)/gi;
+		var	attr;
 		var match;
 		while (match = regex.exec(save)) {
 			// Substract ability modifier from this field since sheet computes it
@@ -1056,8 +1056,8 @@
 			}
 			setAttribute(attr + '_save_prof', '@{PB}');
 
-			var proficiencyBonus = (2 + Math.floor(Math.abs((eval(getAttrByName(characterId, 'challenge')) - 1) / 4))),
-				totalSaveBonus = match[2] - proficiencyBonus - Math.floor((getAttrByName(characterId, attr) - 10) / 2);
+			var proficiencyBonus = (2 + Math.floor(Math.abs((eval(getAttrByName(characterId, 'challenge')) - 1) / 4)));
+			var totalSaveBonus = match[2] - proficiencyBonus - Math.floor((getAttrByName(characterId, attr) - 10) / 2);
 
 			if (totalSaveBonus !== 0) {
 				setAttribute(attr + '_save_bonus', totalSaveBonus);
@@ -1292,32 +1292,32 @@
 			setEffect(saveEffect);
 		}
 
-		var commaPeriodSpace = /\,?\.?\s*?/,
-			commaPeriodDefinitiveSpace = /\,?\.?\s*/,
-			commaPeriodOneSpace = /\,?\.?\s?/,
-			hit = /Hit:.*?/,
-			damageType = /((?:[\w]+|[\w]+\s(?:or|and)\s[\w]+)(?:\s*?\([\w\s]+\))?)\s*?damage\s?(\([\w\'\s]+\))?/,
-			damageSyntax = /(?:(\d+)|.*?\(([\dd\s\+\-]*)\).*?)\s*?/,
-			altDamageSyntax = /(?:\,\s*?or\s*?)/,
-			altDamageReasonSyntax = /((?:if|in)[\w\s]+)/,
-			altDamageExtraSyntax = /(The.*|If the.*)?/,
-			plus = /\s*?plus\s*?/,
-			savingThrow = /(?:DC)\s*?(\d+)\s*?([a-zA-Z]*)\s*?(?:saving throw)/,
-			takeOrTaking = /\,?\s*?(?:taking|or take)/,
-			againstDisease = /(?: against disease)?/,
-			saveSuccess = /(?:.*or\s(.*)?\son a successful one.)?/,
-			saveSuccessTwo = /(?:On a successful save,)?(.*)?/,
-			saveFailure = /(?:On a (?:failure|failed save))\,\s(?:(.*). On a success,\s(.*)?)?(.*)?/,
-			andAnythingElse = /(\s?and.*)?/,
-			orAnythingElseNoTake = /(or\s(?!take).*)/,
-			anythingElse = /(.*)?/,
-			damageRegex = new RegExp(hit.source + damageSyntax.source + damageType.source + commaPeriodSpace.source + andAnythingElse.source, 'i'),
-			damagePlusRegex = new RegExp(plus.source + damageSyntax.source + damageType.source + commaPeriodSpace.source + anythingElse.source, 'i'),
-			altDamageRegex = new RegExp(altDamageSyntax.source + damageSyntax.source + damageType.source + commaPeriodSpace.source + altDamageReasonSyntax.source + commaPeriodOneSpace.source + altDamageExtraSyntax.source, 'i'),
-			hitEffectRegex = new RegExp(hit.source + anythingElse.source, 'i'),
-			saveDamageRegex = new RegExp(savingThrow.source + takeOrTaking.source + damageSyntax.source + damageType.source + saveSuccess.source + commaPeriodSpace.source + anythingElse.source + saveSuccessTwo.source, 'i'),
-			saveOrRegex = new RegExp(savingThrow.source + againstDisease.source + commaPeriodDefinitiveSpace.source + orAnythingElseNoTake.source, 'i'),
-			saveFailedSaveRegex = new RegExp(savingThrow.source + commaPeriodSpace.source + saveFailure.source, 'i');
+		var commaPeriodSpace = /\,?\.?\s*?/;
+		var commaPeriodDefinitiveSpace = /\,?\.?\s*/;
+		var commaPeriodOneSpace = /\,?\.?\s?/;
+		var hit = /Hit:.*?/;
+		var damageType = /((?:[\w]+|[\w]+\s(?:or|and)\s[\w]+)(?:\s*?\([\w\s]+\))?)\s*?damage\s?(\([\w\'\s]+\))?/;
+		var damageSyntax = /(?:(\d+)|.*?\(([\dd\s\+\-]*)\).*?)\s*?/;
+		var altDamageSyntax = /(?:\,\s*?or\s*?)/;
+		var altDamageReasonSyntax = /((?:if|in)[\w\s]+)/;
+		var altDamageExtraSyntax = /(The.*|If the.*)?/;
+		var plus = /\s*?plus\s*?/;
+		var savingThrow = /(?:DC)\s*?(\d+)\s*?([a-zA-Z]*)\s*?(?:saving throw)/;
+		var takeOrTaking = /\,?\s*?(?:taking|or take)/;
+		var againstDisease = /(?: against disease)?/;
+		var saveSuccess = /(?:.*or\s(.*)?\son a successful one.)?/;
+		var saveSuccessTwo = /(?:On a successful save,)?(.*)?/;
+		var saveFailure = /(?:On a (?:failure|failed save))\,\s(?:(.*). On a success,\s(.*)?)?(.*)?/;
+		var andAnythingElse = /(\s?and.*)?/;
+		var orAnythingElseNoTake = /(or\s(?!take).*)/;
+		var anythingElse = /(.*)?/;
+		var damageRegex = new RegExp(hit.source + damageSyntax.source + damageType.source + commaPeriodSpace.source + andAnythingElse.source, 'i');
+		var damagePlusRegex = new RegExp(plus.source + damageSyntax.source + damageType.source + commaPeriodSpace.source + anythingElse.source, 'i');
+		var altDamageRegex = new RegExp(altDamageSyntax.source + damageSyntax.source + damageType.source + commaPeriodSpace.source + altDamageReasonSyntax.source + commaPeriodOneSpace.source + altDamageExtraSyntax.source, 'i');
+		var hitEffectRegex = new RegExp(hit.source + anythingElse.source, 'i');
+		var saveDamageRegex = new RegExp(savingThrow.source + takeOrTaking.source + damageSyntax.source + damageType.source + saveSuccess.source + commaPeriodSpace.source + anythingElse.source + saveSuccessTwo.source, 'i');
+		var saveOrRegex = new RegExp(savingThrow.source + againstDisease.source + commaPeriodDefinitiveSpace.source + orAnythingElseNoTake.source, 'i');
+		var	saveFailedSaveRegex = new RegExp(savingThrow.source + commaPeriodSpace.source + saveFailure.source, 'i');
 
 		function parseDamage(damage, altSecondary) {
 			//log('parseDamage: ' + damage);
@@ -1574,11 +1574,11 @@
 				}
 			}
 
-			var lineRangeFootRegex = /(\d+)\-foot line\s*?that is (\d+) feet wide/gi,
-				lineRangeFoot = lineRangeFootRegex.exec(value),
-				lineRangeFeetRegex = /line that is (\d+)\sfeet long\s*?and (\d+) feet wide/gi,
-				lineRangeFeet = lineRangeFeetRegex.exec(value),
-				lineRange = lineRangeFoot || lineRangeFeet;
+			var lineRangeFootRegex = /(\d+)\-foot line\s*?that is (\d+) feet wide/gi;
+		  var lineRangeFoot = lineRangeFootRegex.exec(value);
+		  var lineRangeFeetRegex = /line that is (\d+)\sfeet long\s*?and (\d+) feet wide/gi;
+		  var lineRangeFeet = lineRangeFeetRegex.exec(value);
+		  var lineRange = lineRangeFoot || lineRangeFeet;
 			if (lineRange) {
 				setType('Line');
 				if (lineRange[1] && lineRange[2]) {
@@ -1689,8 +1689,8 @@
 
 			var match;
 			while (match = multiattackRegex.exec(multiAttackText)) {
-				var action = match[2],
-					nb = match[1] || 'one';
+				var action = match[2];
+		    var nb = match[1] || 'one';
 
 				actionNumber = actionPosition.indexOf(action.toLowerCase());
 
@@ -1723,16 +1723,18 @@
 
 	function setBarValueAfterConvert(token) {
 		for (var i = 0; i < 3; i++) {
-			var barName = shaped.settings.bar[i].name,
-				barTokenName = 'bar' + (i + 1);
+			var barName = shaped.settings.bar[i].name;
+		  var barTokenName = 'bar' + (i + 1);
 
 			if (barName !== '') {
 				var objOfBar = findObjs({
 						name: barName,
 						_type: 'attribute',
 						_characterid: characterId
-					}, {caseInsensitive: true})[0],
-					barLink, barCurrent, barMax;
+					}, {caseInsensitive: true})[0];
+				var barLink;
+				var barCurrent;
+				var barMax;
 
 				if (objOfBar) {
 					barLink = objOfBar.id;
@@ -1786,10 +1788,10 @@
 
 	shaped.changeSettings = function (args) {
 		log(args);
-		var changeNPCs = false,
-			changePCs = false,
-			attributesToChange = {},
-			attributeName;
+		var changeNPCs = false;
+		var changePCs = false;
+		var attributesToChange = {};
+		var attributeName;
 
 		if (args[0] === 'npcs') {
 			changeNPCs = true;
@@ -2028,8 +2030,11 @@
 			}
 		}
 		if (spell.emote) {
-			var gender = getAttrByName(characterId, 'gender', 'current'),
-				heShe, himHer, hisHer, himselfHerself;
+			var gender = getAttrByName(characterId, 'gender', 'current');
+			var	heShe;
+			var himHer;
+			var hisHer;
+			var himselfHerself;
 
 			if (!gender || !gender.match(/f|female|girl|woman|feminine/gi)) {
 				heShe = 'he';
