@@ -46,7 +46,7 @@
 				max: true,
 				link: false,
 				show: false
-			},
+			}
 		]
 	};
 
@@ -69,11 +69,11 @@
 		}
 	};
 
-	var status = '',
-		errors = [],
-		characterId = null,
-		characterName = null,
-		commandExecuter = null;
+	var status = '';
+	var	errors = [];
+	var	characterId = null;
+	var	characterName = null;
+	var	commandExecuter = null;
 
 	function capitalizeFirstLetter(string) {
 		return string.charAt(0).toUpperCase() + string.slice(1);
@@ -82,10 +82,10 @@
 	function HandleInput(msg) {
 		commandExecuter = msg.who;
 		if (shaped.settings.useAmmoAutomatically && msg.rolltemplate === '5eDefault' && msg.content.indexOf('{{ammo_auto=1}}') !== -1) {
-			var character_name,
-				attribute,
-				match,
-				regex = /\{\{(.*?)\}\}/gi;
+			var character_name;
+			var attribute;
+			var	match;
+			var	regex = /\{\{(.*?)\}\}/gi;
 
 			while (match = regex.exec(msg.content)) {
 				if (match[1]) {
@@ -2187,6 +2187,7 @@
 			_type: 'character',
 			name: monster.name
 		});
+		var multiAttackText;
 
 		if (obj.length === 0) {
 			obj = createObj('character', {
@@ -2246,7 +2247,7 @@
 				monster.parsedActions[actionName] = split.trim();
 			}
 			if (monster.parsedActions.Multiattack) {
-				var multiAttackText = monster.parsedActions.Multiattack;
+				multiAttackText = monster.parsedActions.Multiattack;
 				setAttribute('toggle_multiattack', 'on');
 				setAttribute('multiattack', multiAttackText);
 				setAbility('MultiAtk', '', '%{' + characterName + '|multiattack}', shaped.settings.createAbilityAsToken);
