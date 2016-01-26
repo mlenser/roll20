@@ -975,7 +975,7 @@
 
 	function parseSenses(senses) {
 		senses = senses.replace(/[,\s]*passive.*/i, '');
-		var regex = /(|blindsight|darkvision|tremorsense|truesight|)\s*?(\d+)\s*?ft?\s*(\(.*\))?/gi;
+		var regex = /(blindsight|darkvision|tremorsense|truesight)\s*?(\d+)\s*?ft?\s*(\(.*\))?/gi;
 
 		var match;
 		while (match = regex.exec(senses)) {
@@ -986,10 +986,8 @@
 			var attrName = match[1].toLowerCase();
 			var value = match[2];
 
-			if (match[3]) {
-				if (match[3].indexOf('blind beyond')) {
-					setAttribute('blindsight_blind_beyond', 'on');
-				}
+			if (senses.indexOf('blind beyond')) {
+				setAttribute('blindsight_blind_beyond', 'on');
 			}
 			setAttribute(attrName, value);
 		}
