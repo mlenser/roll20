@@ -9,7 +9,6 @@
 		showCharacterNameOnRollTemplate: false, //show the character's name on their roll templates
 		//useAaronsNumberedScript: true, //add numbers at the end if using his script
 
-		//defaultTab: 'actions', //core is default. uncomment if you want the actions page. Change to 'spellbook' if you want the spellbook page. Change to 'all_npc' if you want to "Show All" for the NPC pages.
 		sheetOutput: '', //change to 'hidden' if you wish the sheet to whisper all commands to the GM
 		whisperDeathSaves: true, //change to false if you wish NPC death saves to be rolled openly
 		initiativeTieBreaker: true, //change to true if you want to add the initiative modifier as a tie breaker for initiatives. (I use it)
@@ -370,9 +369,6 @@
 	};
 
 	function setUserDefinedScriptSettings() {
-		if (shaped.settings.defaultTab) {
-			setAttribute('tab', shaped.settings.defaultTab);
-		}
 		if (shaped.settings.sheetOutput === 'hidden') {
 			setAttribute('output_option', '@{output_to_gm}');
 		}
@@ -835,8 +831,7 @@
 		if (section.attr['armor class']) parseArmorClass(section.attr['armor class']);
 		if (section.attr['hit points']) parseHp(section.attr['hit points']);
 		if (section.attr.speed) parseSpeed(section.attr.speed);
-		if (monster.challenge) parseChallenge(section.attr.challenge)
-		if (section.attr.challenge) ;
+		if (section.attr.challenge) parseChallenge(section.attr.challenge);
 		if (section.attr['saving throws']) parseSavingThrow(section.attr['saving throws']);
 		if (section.attr.skills) parseSkills(section.attr.skills);
 		if (section.attr.senses) parseSenses(section.attr.senses);
@@ -1036,14 +1031,18 @@
 		var input = cr.replace(/[, ]/g, '');
 		var match = input.match(/([\d/]+).*?(\d+)/);
 
-		attributesToSet.challenge = match[1];
-		storage.pb = 2 + Math.floor(Math.abs((attributesToSet.challenge - 1) / 4));
-		setAttribute('challenge', attributesToSet.challenge);
+		setChallenge(match[1]);
 
 		var xp = parseInt(match[2]);
 		if (getAttrByName(characterId, 'xp') !== xp) {
 			setAttribute('xp', xp);
 		}
+	}
+
+	function setChallenge (challenge) {
+		attributesToSet.challenge = challenge;
+		storage.pb = 2 + Math.floor(Math.abs((challenge - 1) / 4));
+		setAttribute('challenge', challenge);
 	}
 
 	function parseSavingThrow(save) {
@@ -2233,9 +2232,7 @@
 		if (monster.type) setAttribute('npc_type', monster.type);
 		if (monster.alignment) setAttribute('alignment', monster.alignment);
 		if (monster.challenge) {
-			attributesToSet.challenge = monster.challenge;
-			storage.pb = 2 + Math.floor(Math.abs((monster.challenge - 1) / 4));
-			setAttribute('challenge', monster.challenge);
+			setChallenge(monster.challenge);
 		}
 		if (monster.AC) parseArmorClass(monster.AC);
 		if (monster.HP) parseHp(monster.HP);
