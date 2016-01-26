@@ -74,6 +74,8 @@
 	var	characterId = null;
 	var	characterName = null;
 	var	commandExecuter = null;
+	var attributesToSet = {};
+	var storage = {};
 
 	function capitalizeFirstLetter(string) {
 		return string.charAt(0).toUpperCase() + string.slice(1);
@@ -833,7 +835,8 @@
 		if (section.attr['armor class']) parseArmorClass(section.attr['armor class']);
 		if (section.attr['hit points']) parseHp(section.attr['hit points']);
 		if (section.attr.speed) parseSpeed(section.attr.speed);
-		if (section.attr.challenge) parseChallenge(section.attr.challenge);
+		if (monster.challenge) parseChallenge(section.attr.challenge)
+		if (section.attr.challenge) ;
 		if (section.attr['saving throws']) parseSavingThrow(section.attr['saving throws']);
 		if (section.attr.skills) parseSkills(section.attr.skills);
 		if (section.attr.senses) parseSenses(section.attr.senses);
@@ -861,6 +864,13 @@
 			match.push(matches[1]);
 		}
 
+		attributesToSet.strength = match[0];
+		attributesToSet.dexterity = match[1];
+		attributesToSet.constitution = match[2];
+		attributesToSet.intelligence = match[3];
+		attributesToSet.wisdom = match[4];
+		attributesToSet.charisma = match[5];
+
 		setAttribute('strength', match[0]);
 		setAttribute('dexterity', match[1]);
 		setAttribute('constitution', match[2]);
@@ -877,6 +887,13 @@
 		while (matches = regex.exec(abilities)) {
 			match.push(matches[1]);
 		}
+
+		attributesToSet.strength = match[0];
+		attributesToSet.dexterity = match[1];
+		attributesToSet.constitution = match[2];
+		attributesToSet.intelligence = match[3];
+		attributesToSet.wisdom = match[4];
+		attributesToSet.charisma = match[5];
 
 		setAttribute('strength', match[0]);
 		setAttribute('dexterity', match[1]);
@@ -1020,7 +1037,10 @@
 	function parseChallenge(cr) {
 		var input = cr.replace(/[, ]/g, '');
 		var match = input.match(/([\d/]+).*?(\d+)/);
-		setAttribute('challenge', match[1]);
+
+		attributesToSet.challenge = match[1];
+		storage.pb = 2 + Math.floor(Math.abs((attributesToSet.challenge - 1) / 4));
+		setAttribute('challenge', attributesToSet.challenge);
 
 		var xp = parseInt(match[2]);
 		if (getAttrByName(characterId, 'xp') !== xp) {
@@ -1056,8 +1076,10 @@
 			}
 			setAttribute(attr + '_save_prof', '@{PB}');
 
-			var proficiencyBonus = (2 + Math.floor(Math.abs((eval(getAttrByName(characterId, 'challenge')) - 1) / 4)));
-			var totalSaveBonus = match[2] - proficiencyBonus - Math.floor((getAttrByName(characterId, attr) - 10) / 2);
+			var parsedSaveBonus = parseInt(match[2], 10) || 0;
+			var abilityScore = parseInt(attributesToSet[attr]) || 10;
+			var abilityBonus = Math.floor((abilityScore - 10) / 2);
+			var totalSaveBonus = parsedSaveBonus - storage.pb - abilityBonus;
 
 			if (totalSaveBonus !== 0) {
 				setAttribute(attr + '_save_bonus', totalSaveBonus);
@@ -1100,8 +1122,7 @@
 
 		while (match = regex.exec(skills.replace(/Skills\s+/i, ''))) {
 			var skill = match[1].trim().toLowerCase();
-			var proficiencyBonus = (2 + Math.floor(Math.abs((eval(getAttrByName(characterId, 'challenge')) - 1) / 4)));
-			var expertise = proficiencyBonus * 2;
+			var expertise = storage.pb * 2;
 			var abilitymod;
 			var attr;
 			var totalSkillBonus;
@@ -1116,10 +1137,10 @@
 					if (totalSkillBonus > expertise) {
 						setAttribute(attr + '_bonus', totalSkillBonus - expertise);
 					}
-				} else if (totalSkillBonus >= proficiencyBonus) {
+				} else if (totalSkillBonus >= storage.pb) {
 					setAttribute(attr + '_prof_exp', '@{PB}');
-					if (totalSkillBonus > proficiencyBonus) {
-						setAttribute(attr + '_bonus', totalSkillBonus - proficiencyBonus);
+					if (totalSkillBonus > storage.pb) {
+						setAttribute(attr + '_bonus', totalSkillBonus - storage.pb);
 					}
 				} else {
 					setAttribute(attr + '_prof_exp', '@{jack_of_all_trades}');
@@ -1141,10 +1162,10 @@
 					if (totalSkillBonus > expertise) {
 						setAttribute(attr + '_bonus', totalSkillBonus - expertise);
 					}
-				} else if (totalSkillBonus >= proficiencyBonus) {
+				} else if (totalSkillBonus >= storage.pb) {
 					setAttribute(attr + '_prof_exp', '@{PB}');
-					if (totalSkillBonus > proficiencyBonus) {
-						setAttribute(attr + '_bonus', totalSkillBonus - proficiencyBonus);
+					if (totalSkillBonus > storage.pb) {
+						setAttribute(attr + '_bonus', totalSkillBonus - storage.pb);
 					}
 				} else {
 					setAttribute(attr + '_prof_exp', '@{jack_of_all_trades}');
@@ -2213,6 +2234,11 @@
 		if (monster.size) setAttribute('size', monster.size);
 		if (monster.type) setAttribute('npc_type', monster.type);
 		if (monster.alignment) setAttribute('alignment', monster.alignment);
+		if (monster.challenge) {
+			attributesToSet.challenge = monster.challenge;
+			storage.pb = 2 + Math.floor(Math.abs((monster.challenge - 1) / 4));
+			setAttribute('challenge', monster.challenge);
+		}
 		if (monster.AC) parseArmorClass(monster.AC);
 		if (monster.HP) parseHp(monster.HP);
 		if (monster.speed) parseSpeed(monster.speed);
@@ -2221,7 +2247,6 @@
 		if (monster.skills) parseSkills(monster.skills);
 		if (monster.senses) parseSenses(monster.senses);
 		if (monster.languages) setAttribute('prolanguages', monster.languages);
-		if (monster.challenge) setAttribute('challenge', monster.challenge);
 		if (monster.damageResistances) setAttribute('damage_resistance', monster.damageResistances);
 		if (monster.damageVulnerabilities) setAttribute('damage_vulnerability', monster.damageVulnerabilities);
 		if (monster.damageImmunities) setAttribute('damage_immunity', monster.damageImmunities);
