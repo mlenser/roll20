@@ -49,7 +49,7 @@ gulp.task('compileSpells', function() {
 
 			sortArray(spells);
 
-			return new Buffer('fifthSpells = { spells:' + JSON.stringify(spells) + '};');
+			return new Buffer('fifthSpells = { version:1, spells:' + JSON.stringify(spells) + '};');
 		}))
 		.pipe(gulp.dest('./scripts/dist'));
 });
@@ -108,7 +108,7 @@ gulp.task('compileMonsters', function() {
 
 			sortArray(monsters);
 
-			return new Buffer('fifthMonsters = { monsters:' + JSON.stringify(monsters) + '};');
+			return new Buffer('fifthMonsters = { version:1, monsters:' + JSON.stringify(monsters) + '};');
 		}))
 		.pipe(gulp.dest('./scripts/dist'));
 });

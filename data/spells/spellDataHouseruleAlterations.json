@@ -14,7 +14,7 @@
     },
     "duration": "Up to 10 minutes",
     "concentration": true,
-    "castingTime": "action",
+    "castingTime": "1 action",
     "level": 6,
     "school": "Conjuration",
     "save": {
@@ -47,7 +47,7 @@
       "materialMaterial": "an Ankheg's mandible"
     },
     "duration": "Instantaneous",
-    "castingTime": "action",
+    "castingTime": "1 action",
     "level": 5,
     "school": "Evocation",
     "save": {
@@ -81,7 +81,7 @@
     },
     "duration": "Up to 1 minute",
     "concentration": true,
-    "castingTime": "action",
+    "castingTime": "1 action",
     "level": 2,
     "school": "Conjuration",
     "save": {
@@ -145,7 +145,7 @@
     },
     "duration": "Up to 1 minute",
     "concentration": true,
-    "castingTime": "action",
+    "castingTime": "1 action",
     "level": 2,
     "school": "Conjuration",
     "damage": {
@@ -257,7 +257,7 @@
       "somatic": true
     },
     "duration": "Instantaneous",
-    "castingTime": "action",
+    "castingTime": "1 action",
     "level": 1,
     "school": "Evocation",
     "save": {
@@ -288,7 +288,7 @@
       "materialMaterial": "a small amount of oil"
     },
     "duration": "10 minutes",
-    "castingTime": "action",
+    "castingTime": "1 action",
     "level": 3,
     "school": "Transmutation",
     "save": {
@@ -370,7 +370,7 @@
     },
     "duration": "Up to 1 minute",
     "concentration": true,
-    "castingTime": "action",
+    "castingTime": "1 action",
     "level": 4,
     "school": "Conjuration",
     "save": {
@@ -429,7 +429,7 @@
       "verbal": true,
       "somatic": true
     },
-    "castingTime": "action",
+    "castingTime": "1 action",
     "duration": "Instantaneous",
     "level": 0,
     "school": "Evocation",
@@ -458,7 +458,7 @@
       "somatic": true
     },
     "duration": "1 minute",
-    "castingTime": "action",
+    "castingTime": "1 action",
     "level": 2,
     "school": "Evocation",
     "save": {
@@ -494,7 +494,7 @@
       "materialMaterial": "A small stalagmite shaped crystal"
     },
     "duration": "instantaneous",
-    "castingTime": "action",
+    "castingTime": "1 action",
     "level": 3,
     "school": "Evocation",
     "save": {
@@ -569,7 +569,7 @@
       "somatic": true
     },
     "duration": "Instantaneous",
-    "castingTime": "action",
+    "castingTime": "1 action",
     "level": 5,
     "school": "Evocation",
     "save": {
@@ -650,7 +650,7 @@
       "materialMaterial": "a large lodestone"
     },
     "duration": "Instantaneous",
-    "castingTime": "action",
+    "castingTime": "1 action",
     "level": 2,
     "school": "Transmutation",
     "heal": {
@@ -726,7 +726,7 @@
     },
     "duration": "Up to 1 minute",
     "concentration": true,
-    "castingTime": "action",
+    "castingTime": "1 action",
     "level": 3,
     "school": "Transmutation",
     "save": {
@@ -755,7 +755,7 @@
       "damage": "4d10",
       "damageType": "force"
     },
-    "castingTime": "bonus"
+    "castingTime": "bonus action"
   },
   {
     "name": "Nondetection",
@@ -897,7 +897,7 @@
     },
     "duration": "Up to 10 minutes",
     "concentration": true,
-    "castingTime": "action",
+    "castingTime": "1 action",
     "level": 6,
     "school": "Evocation",
     "save": {
@@ -950,7 +950,7 @@
     },
     "duration": "Up to 1 minute",
     "concentration": true,
-    "castingTime": "bonus",
+    "castingTime": "bonus action",
     "level": 6,
     "school": "Conjuration",
     "attack": {
