@@ -16,7 +16,6 @@
     "savingThrows": "Wis +3",
     "skills": "Deception +4, Stealth +5",
     "damageResistances": "one of the following: acid, cold, fire, lightning or poison",
-    "senses": "",
     "languages": "Common, Draconic, Infernal",
     "challenge": "5",
     "traits": [
@@ -66,7 +65,6 @@
     "savingThrows": "Wis +4",
     "skills": "Deception +6, Stealth +7",
     "damageResistances": "one of the following: acid, cold, fire, lightning or poison",
-    "senses": "",
     "languages": "Common, Draconic, Infernal",
     "challenge": "7",
     "traits": [

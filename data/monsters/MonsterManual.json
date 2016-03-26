@@ -14,7 +14,6 @@
     "wisdom": "12",
     "charisma": "11",
     "skills": "Perception +5",
-    "senses": "",
     "languages": "Aarakocra, Auran",
     "challenge": "1/4",
     "traits": [
@@ -188,7 +187,6 @@
     "wisdom": "14",
     "charisma": "11",
     "skills": "Medicine +4, Religion +2",
-    "senses": "",
     "languages": "any one language (usually Common)",
     "challenge": "1/4",
     "traits": [
@@ -1236,7 +1234,6 @@
     "wisdom": "12",
     "charisma": "5",
     "skills": "Perception +5",
-    "senses": "",
     "challenge": "2",
     "traits": [
       {
@@ -2317,7 +2314,6 @@
     "intelligence": "2",
     "wisdom": "12",
     "charisma": "5",
-    "senses": "",
     "challenge": "3",
     "actions": [
       {
@@ -2341,7 +2337,6 @@
     "wisdom": "12",
     "charisma": "7",
     "skills": "Athletics +5, Perception +3",
-    "senses": "",
     "challenge": "1/2",
     "actions": [
       {
@@ -2431,7 +2426,6 @@
     "savingThrows": "Int +9, Wis +6",
     "skills": "Arcana +13, History +13",
     "damageResistances": "damage from spells; non magical bludgeoning, piercing, and slashing (from stoneskin)",
-    "senses": "",
     "languages": "any six languages",
     "challenge": "12",
     "traits": [
@@ -2472,7 +2466,6 @@
     "savingThrows": "Dex +6, Int +4",
     "skills": "Acrobatics +6, Deception +3, Perception +3, Stealth +9",
     "damageResistances": "poison",
-    "senses": "",
     "languages": "Thieves' cant plus any two languages",
     "challenge": "8",
     "traits": [
@@ -2521,7 +2514,6 @@
     "charisma": "6",
     "damageResistances": "piercing",
     "damageVulnerabilities": "fire",
-    "senses": "",
     "languages": "one language known by its creator",
     "challenge": "0",
     "traits": [
@@ -2553,7 +2545,6 @@
     "charisma": "7",
     "damageResistances": "bludgeoning, piercing",
     "damageVulnerabilities": "fire",
-    "senses": "",
     "languages": "one language known by its creator",
     "challenge": "2",
     "traits": [
@@ -2583,7 +2574,6 @@
     "intelligence": "2",
     "wisdom": "10",
     "charisma": "5",
-    "senses": "",
     "challenge": "1/4",
     "actions": [
       {
@@ -2609,7 +2599,6 @@
     "savingThrows": "Con +4",
     "damageImmunities": "fire, poison",
     "conditionImmunities": "poisoned",
-    "senses": "",
     "languages": "Ignan",
     "challenge": "2",
     "traits": [
@@ -2647,7 +2636,6 @@
     "intelligence": "4",
     "wisdom": "12",
     "charisma": "6",
-    "senses": "",
     "challenge": "0",
     "traits": [
       {
@@ -2768,7 +2756,6 @@
     "intelligence": "10",
     "wisdom": "10",
     "charisma": "10",
-    "senses": "",
     "languages": "any one language (usually Common)",
     "challenge": "1/8",
     "actions": [
@@ -2798,7 +2785,6 @@
     "charisma": "14",
     "savingThrows": "Str +4, Dex +5, Wis +2",
     "skills": "Athletics +4, Deception +4",
-    "senses": "",
     "languages": "any two languages",
     "challenge": "2",
     "actions": [
@@ -3291,7 +3277,6 @@
     "intelligence": "9",
     "wisdom": "11",
     "charisma": "9",
-    "senses": "",
     "languages": "any one language (usually Common)",
     "challenge": "2",
     "traits": [
@@ -3321,7 +3306,6 @@
     "intelligence": "2",
     "wisdom": "12",
     "charisma": "7",
-    "senses": "",
     "challenge": "1/2",
     "traits": [
       {
@@ -3436,7 +3420,6 @@
     "wisdom": "13",
     "charisma": "11",
     "skills": "Perception +3, Stealth +5",
-    "senses": "",
     "languages": "Blink Dog, understands Sylvan but can't speak it",
     "challenge": "1/4",
     "traits": [
@@ -3472,7 +3455,6 @@
     "wisdom": "14",
     "charisma": "5",
     "skills": "Perception +4",
-    "senses": "",
     "challenge": "1/8",
     "traits": [
       {
@@ -3585,7 +3567,6 @@
     "intelligence": "2",
     "wisdom": "9",
     "charisma": "5",
-    "senses": "",
     "challenge": "1/4",
     "traits": [
       {
@@ -3852,7 +3833,6 @@
     "wisdom": "13",
     "charisma": "7",
     "skills": "Perception +3",
-    "senses": "",
     "challenge": "1",
     "traits": [
       {
@@ -4010,7 +3990,6 @@
     "wisdom": "10",
     "charisma": "7",
     "skills": "Stealth +3",
-    "senses": "",
     "languages": "Bullywug",
     "challenge": "1/4",
     "traits": [
@@ -4109,7 +4088,6 @@
     "intelligence": "2",
     "wisdom": "8",
     "charisma": "5",
-    "senses": "",
     "challenge": "1/8",
     "actions": [
       {
@@ -4175,7 +4153,6 @@
     "wisdom": "12",
     "charisma": "7",
     "skills": "Perception +3, Stealth +4",
-    "senses": "",
     "challenge": "0",
     "traits": [
       {
@@ -4243,7 +4220,6 @@
     "wisdom": "13",
     "charisma": "11",
     "skills": "Athletics +6, Perception +3, Survival +3",
-    "senses": "",
     "languages": "Elvish, Sylvan",
     "challenge": "2",
     "traits": [
@@ -4582,7 +4558,6 @@
     "charisma": "16",
     "savingThrows": "Con +10, Wis +7, Cha +7",
     "skills": "Insight +7, Perception +7",
-    "senses": "",
     "languages": "Common, Giant",
     "challenge": "9",
     "traits": [
@@ -4647,7 +4622,6 @@
     "intelligence": "10",
     "wisdom": "10",
     "charisma": "10",
-    "senses": "",
     "languages": "any one language (usually Common)",
     "challenge": "0",
     "actions": [
@@ -4850,7 +4824,6 @@
     "wisdom": "10",
     "charisma": "5",
     "skills": "Stealth +2",
-    "senses": "",
     "challenge": "1/2",
     "traits": [
       {
@@ -4880,7 +4853,6 @@
     "wisdom": "13",
     "charisma": "14",
     "skills": "Deception +4, Persuasion +4, Religion +2",
-    "senses": "",
     "languages": "any one language (usually Common)",
     "challenge": "2",
     "traits": [
@@ -4919,7 +4891,6 @@
     "wisdom": "11",
     "charisma": "10",
     "skills": "Deception +2, Religion +2",
-    "senses": "",
     "languages": "any one language (usually Common)",
     "challenge": "1/8",
     "traits": [
@@ -4949,7 +4920,6 @@
     "intelligence": "8",
     "wisdom": "6",
     "charisma": "10",
-    "senses": "",
     "languages": "Giant",
     "challenge": "6",
     "traits": [
@@ -5375,7 +5345,6 @@
     "intelligence": "2",
     "wisdom": "14",
     "charisma": "5",
-    "senses": "",
     "challenge": "0",
     "actions": [
       {
@@ -5535,7 +5504,6 @@
     "wisdom": "12",
     "charisma": "7",
     "skills": "Perception +3, Stealth +4",
-    "senses": "",
     "challenge": "1",
     "traits": [
       {
@@ -5701,7 +5669,6 @@
     "intelligence": "2",
     "wisdom": "11",
     "charisma": "7",
-    "senses": "",
     "challenge": "1/4",
     "actions": [
       {
@@ -6110,7 +6077,6 @@
     "wisdom": "15",
     "charisma": "11",
     "skills": "Medicine +4, Nature +3, Perception +4",
-    "senses": "",
     "languages": "Druidic plus any two languages",
     "challenge": "2",
     "traits": [
@@ -6328,7 +6294,6 @@
     "wisdom": "14",
     "charisma": "7",
     "skills": "Perception +4",
-    "senses": "",
     "challenge": "0",
     "traits": [
       {
@@ -6447,7 +6412,6 @@
     "intelligence": "3",
     "wisdom": "11",
     "charisma": "6",
-    "senses": "",
     "challenge": "4",
     "traits": [
       {
@@ -6480,7 +6444,6 @@
     "intelligence": "2",
     "wisdom": "10",
     "charisma": "6",
-    "senses": "",
     "challenge": "1/4",
     "traits": [
       {
@@ -7141,7 +7104,6 @@
     "savingThrows": "Dex +3, Con +10, Cha +5",
     "skills": "Athletics +11, Perception +6",
     "damageImmunities": "fire",
-    "senses": "",
     "languages": "Giant",
     "challenge": "9",
     "actions": [
@@ -7499,7 +7461,6 @@
     "savingThrows": "Con +8, Wis +3, Cha +4",
     "skills": "Athletics +9, Perception +3",
     "damageImmunities": "cold",
-    "senses": "",
     "languages": "Giant",
     "challenge": "8",
     "actions": [
@@ -7811,7 +7772,6 @@
     "wisdom": "12",
     "charisma": "7",
     "skills": "Athletics +9, Perception +4",
-    "senses": "",
     "challenge": "7",
     "actions": [
       {
@@ -7912,7 +7872,6 @@
     "intelligence": "2",
     "wisdom": "7",
     "charisma": "5",
-    "senses": "",
     "challenge": "2",
     "traits": [
       {
@@ -8028,7 +7987,6 @@
     "wisdom": "10",
     "charisma": "7",
     "skills": "Stealth +5",
-    "senses": "",
     "challenge": "5",
     "traits": [
       {
@@ -8066,7 +8024,6 @@
     "wisdom": "14",
     "charisma": "10",
     "skills": "Perception +4",
-    "senses": "",
     "languages": "Giant Eagle, understands Common and Auran but can't speak",
     "challenge": "1",
     "traits": [
@@ -8105,7 +8062,6 @@
     "wisdom": "14",
     "charisma": "10",
     "skills": "Perception +4",
-    "senses": "",
     "languages": "Giant Elk, understands Common, Elvish, and Sylvan but can't speak",
     "challenge": "2",
     "traits": [
@@ -8206,7 +8162,6 @@
     "intelligence": "3",
     "wisdom": "12",
     "charisma": "6",
-    "senses": "",
     "challenge": "1/2",
     "traits": [
       {
@@ -8240,7 +8195,6 @@
     "wisdom": "12",
     "charisma": "7",
     "skills": "Perception +3",
-    "senses": "",
     "challenge": "1",
     "traits": [
       {
@@ -8491,7 +8445,6 @@
     "intelligence": "2",
     "wisdom": "12",
     "charisma": "5",
-    "senses": "",
     "challenge": "1/2",
     "traits": [
       {
@@ -8639,7 +8592,6 @@
     "wisdom": "12",
     "charisma": "7",
     "skills": "Perception +3",
-    "senses": "",
     "languages": "understands Common but can't speak",
     "challenge": "1",
     "traits": [
@@ -8681,7 +8633,6 @@
     "intelligence": "1",
     "wisdom": "10",
     "charisma": "3",
-    "senses": "",
     "challenge": "1/2",
     "actions": [
       {
@@ -8816,7 +8767,6 @@
     "wisdom": "14",
     "charisma": "15",
     "savingThrows": "Con +5, Int +5, Wis +5",
-    "senses": "",
     "languages": "Gith",
     "challenge": "8",
     "traits": [
@@ -8852,7 +8802,6 @@
     "wisdom": "13",
     "charisma": "10",
     "savingThrows": "Con +3, Int +3, Wis +3",
-    "senses": "",
     "languages": "Gith",
     "challenge": "3",
     "traits": [
@@ -8889,7 +8838,6 @@
     "charisma": "10",
     "savingThrows": "Str +3, Dex +4, Int +3, Wis +4",
     "skills": "Insight +4, Perception +4",
-    "senses": "",
     "languages": "Gith",
     "challenge": "2",
     "traits": [
@@ -8930,7 +8878,6 @@
     "charisma": "12",
     "savingThrows": "Str +4, Dex +7, Int +6, Wis +6",
     "skills": "Arcana +6, Insight +6, Perception +6",
-    "senses": "",
     "languages": "Gith",
     "challenge": "6",
     "traits": [
@@ -9022,7 +8969,6 @@
     "charisma": "15",
     "savingThrows": "Str +7, Dex +5, Con +6",
     "skills": "Athletics +10, Intimidation +5",
-    "senses": "",
     "languages": "any one language (usually Common)",
     "challenge": "5",
     "traits": [
@@ -9188,7 +9134,6 @@
     "intelligence": "2",
     "wisdom": "10",
     "charisma": "5",
-    "senses": "",
     "challenge": "0",
     "traits": [
       {
@@ -9951,7 +9896,6 @@
     "wisdom": "11",
     "charisma": "10",
     "skills": "Perception +2",
-    "senses": "",
     "languages": "any one language (usually Common)",
     "challenge": "1/8",
     "actions": [
@@ -10157,7 +10101,6 @@
     "intelligence": "7",
     "wisdom": "10",
     "charisma": "13",
-    "senses": "",
     "languages": "Common",
     "challenge": "1",
     "actions": [
@@ -10194,7 +10137,6 @@
     "wisdom": "14",
     "charisma": "6",
     "skills": "Perception +4",
-    "senses": "",
     "challenge": "0",
     "traits": [
       {
@@ -10358,7 +10300,6 @@
     "wisdom": "9",
     "charisma": "6",
     "skills": "Perception +2",
-    "senses": "",
     "languages": "Giant",
     "challenge": "5",
     "actions": [
@@ -10391,7 +10332,6 @@
     "wisdom": "12",
     "charisma": "8",
     "skills": "Perception +5",
-    "senses": "",
     "challenge": "1",
     "traits": [
       {
@@ -10755,7 +10695,6 @@
     "wisdom": "12",
     "charisma": "5",
     "skills": "Perception +3",
-    "senses": "",
     "challenge": "0",
     "traits": [
       {
@@ -11145,7 +11084,6 @@
     "wisdom": "12",
     "charisma": "6",
     "skills": "Perception +3",
-    "senses": "",
     "challenge": "0",
     "traits": [
       {
@@ -11180,7 +11118,6 @@
     "charisma": "10",
     "skills": "Deception +4, Perception +2, Stealth +4",
     "damageImmunities": "bludgeoning, piercing, and slashing damage from nonmagical attacks that aren't silvered",
-    "senses": "",
     "languages": "Common (can't speak in jackal form)",
     "challenge": "1/2",
     "traits": [
@@ -11229,7 +11166,6 @@
     "wisdom": "10",
     "charisma": "10",
     "skills": "Deception +4, Perception +2, Stealth +5",
-    "senses": "",
     "languages": "understands Auran and Common but speaks only through the use of its Mimicry trait",
     "challenge": "1/4",
     "traits": [
@@ -11306,7 +11242,6 @@
     "wisdom": "11",
     "charisma": "15",
     "savingThrows": "Con +4, Wis +2",
-    "senses": "",
     "languages": "any one language (usually Common)",
     "challenge": "3",
     "traits": [
@@ -11840,7 +11775,6 @@
     "wisdom": "12",
     "charisma": "8",
     "skills": "Perception +3, Stealth +6",
-    "senses": "",
     "challenge": "1",
     "traits": [
       {
@@ -11958,7 +11892,6 @@
     "wisdom": "12",
     "charisma": "7",
     "skills": "Perception +3, Stealth +4, Survival +5",
-    "senses": "",
     "languages": "Draconic",
     "challenge": "1/2",
     "traits": [
@@ -12005,7 +11938,6 @@
     "wisdom": "15",
     "charisma": "8",
     "skills": "Perception +4, Stealth +4, Survival +6",
-    "senses": "",
     "languages": "Draconic",
     "challenge": "2",
     "traits": [
@@ -12061,7 +11993,6 @@
     "charisma": "11",
     "savingThrows": "Int +6, Wis +4",
     "skills": "Arcana +6, History +6",
-    "senses": "",
     "languages": "any four languages",
     "challenge": "6",
     "traits": [
@@ -12180,7 +12111,6 @@
     "intelligence": "3",
     "wisdom": "11",
     "charisma": "6",
-    "senses": "",
     "challenge": "6",
     "traits": [
       {
@@ -12393,7 +12323,6 @@
     "wisdom": "12",
     "charisma": "7",
     "skills": "Perception +3",
-    "senses": "",
     "challenge": "1/8",
     "traits": [
       {
@@ -12466,7 +12395,6 @@
     "wisdom": "11",
     "charisma": "12",
     "skills": "Perception +2",
-    "senses": "",
     "languages": "Aquan, Common",
     "challenge": "1/8",
     "traits": [
@@ -12908,7 +12836,6 @@
     "intelligence": "2",
     "wisdom": "10",
     "charisma": "5",
-    "senses": "",
     "challenge": "1/8",
     "traits": [
       {
@@ -13363,7 +13290,6 @@
     "wisdom": "13",
     "charisma": "15",
     "damageImmunities": "fire",
-    "senses": "",
     "languages": "understands Abyssal, Common, and Infernal but can't speak",
     "challenge": "3",
     "traits": [
@@ -13402,7 +13328,6 @@
     "wisdom": "14",
     "charisma": "16",
     "skills": "Deception +5, Insight +4, Persuasion +5",
-    "senses": "",
     "languages": "any two languages",
     "challenge": "1/8",
     "actions": [
@@ -13999,7 +13924,6 @@
     "wisdom": "14",
     "charisma": "7",
     "skills": "Perception +4, Stealth +6",
-    "senses": "",
     "challenge": "1/4",
     "traits": [
       {
@@ -14038,7 +13962,6 @@
     "charisma": "13",
     "savingThrows": "Dex +4, Wis +4, Cha +3",
     "skills": "Perception +6",
-    "senses": "",
     "languages": "understands Celestial, Common, Elvish, and Sylvan but can't speak",
     "challenge": "2",
     "actions": [
@@ -14108,7 +14031,6 @@
     "charisma": "10",
     "skills": "Perception +5",
     "damageResistances": "bludgeoning, piercing, and slashing from nonmagical attacks",
-    "senses": "",
     "languages": "understands Common and Elvish but can't speak",
     "challenge": "2",
     "traits": [
@@ -14267,7 +14189,6 @@
     "wisdom": "14",
     "charisma": "15",
     "skills": "Perception +4, Stealth +7",
-    "senses": "",
     "languages": "Sylvan",
     "challenge": "1/4",
     "traits": [
@@ -14357,7 +14278,6 @@
     "wisdom": "12",
     "charisma": "5",
     "skills": "Perception +3, Stealth +4",
-    "senses": "",
     "challenge": "2",
     "traits": [
       {
@@ -14410,7 +14330,6 @@
     "wisdom": "13",
     "charisma": "7",
     "skills": "Perception +3",
-    "senses": "",
     "challenge": "2",
     "traits": [
       {
@@ -14496,7 +14415,6 @@
     "intelligence": "2",
     "wisdom": "11",
     "charisma": "7",
-    "senses": "",
     "challenge": "1/8",
     "actions": [
       {
@@ -14520,7 +14438,6 @@
     "wisdom": "16",
     "charisma": "13",
     "skills": "Medicine +7, Persuasion +3, Religion +4",
-    "senses": "",
     "languages": "any two languages",
     "challenge": "2",
     "traits": [
@@ -14602,7 +14519,6 @@
     "wisdom": "9",
     "charisma": "5",
     "skills": "Perception +1",
-    "senses": "",
     "challenge": "1/4",
     "traits": [
       {
@@ -14975,7 +14891,6 @@
     "wisdom": "12",
     "charisma": "6",
     "skills": "Perception +3",
-    "senses": "",
     "challenge": "0",
     "traits": [
       {
@@ -15206,7 +15121,6 @@
     "intelligence": "2",
     "wisdom": "12",
     "charisma": "6",
-    "senses": "",
     "challenge": "2",
     "traits": [
       {
@@ -15235,7 +15149,6 @@
     "intelligence": "2",
     "wisdom": "11",
     "charisma": "7",
-    "senses": "",
     "challenge": "1/4",
     "actions": [
       {
@@ -15260,7 +15173,6 @@
     "charisma": "9",
     "savingThrows": "Dex +4, Con +9, Wis +4, Cha +3",
     "skills": "Perception +4",
-    "senses": "",
     "challenge": "11",
     "traits": [
       {
@@ -15424,7 +15336,6 @@
     "wisdom": "12",
     "charisma": "8",
     "skills": "Perception +3, Stealth +6",
-    "senses": "",
     "challenge": "2",
     "traits": [
       {
@@ -15661,7 +15572,6 @@
     "wisdom": "10",
     "charisma": "14",
     "skills": "Perception +2, Performance +6, Stealth +5",
-    "senses": "",
     "languages": "Common, Elvish, Sylvan",
     "challenge": "1/2",
     "traits": [
@@ -15769,7 +15679,6 @@
     "wisdom": "13",
     "charisma": "11",
     "skills": "Nature +4, Perception +5, Stealth +6, Survival +5",
-    "senses": "",
     "languages": "any one language (usually Common)",
     "challenge": "1/2",
     "traits": [
@@ -15863,7 +15772,6 @@
     "intelligence": "1",
     "wisdom": "10",
     "charisma": "2",
-    "senses": "",
     "challenge": "0",
     "traits": [
       {
@@ -16521,7 +16429,6 @@
     "wisdom": "13",
     "charisma": "11",
     "skills": "Perception +3, Stealth +8",
-    "senses": "",
     "languages": "Common, Elvish, Sylvan",
     "challenge": "1/4",
     "actions": [
@@ -16558,7 +16465,6 @@
     "wisdom": "14",
     "charisma": "16",
     "skills": "Deception +5, Insight +4, Investigation +5, Perception +6, Persuasion +5, Sleight of Hand +4, Stealth +4",
-    "senses": "",
     "languages": "any two languages",
     "challenge": "1",
     "traits": [
@@ -16764,7 +16670,6 @@
     "skills": "Arcana +8, Athletics +14, History +8, Perception +9",
     "damageResistances": "cold",
     "damageImmunities": "lightning, thunder",
-    "senses": "",
     "languages": "Common, Giant",
     "challenge": "13",
     "traits": [
@@ -17099,7 +17004,6 @@
     "charisma": "6",
     "damageResistances": "bludgeoning, piercing, slashing",
     "conditionImmunities": "charmed, frightened, grappled, paralyzed, petrified, prone, restrained, stunned",
-    "senses": "",
     "challenge": "1/4",
     "traits": [
       {
@@ -17406,7 +17310,6 @@
     "wisdom": "10",
     "charisma": "11",
     "skills": "Intimidation +2",
-    "senses": "",
     "languages": "any one language (usually Common)",
     "challenge": "1/2",
     "traits": [
@@ -17484,7 +17387,6 @@
     "charisma": "12",
     "damageResistances": "bludgeoning, piercing",
     "damageVulnerabilities": "fire",
-    "senses": "",
     "languages": "Common, Druidic, Elvish, Sylvan",
     "challenge": "9",
     "traits": [
@@ -17531,7 +17433,6 @@
     "intelligence": "8",
     "wisdom": "11",
     "charisma": "8",
-    "senses": "",
     "languages": "any one language",
     "challenge": "1/8",
     "traits": [
@@ -17561,7 +17462,6 @@
     "intelligence": "2",
     "wisdom": "11",
     "charisma": "5",
-    "senses": "",
     "challenge": "5",
     "traits": [
       {
@@ -17764,7 +17664,6 @@
     "wisdom": "12",
     "charisma": "9",
     "skills": "Perception +4",
-    "senses": "",
     "challenge": "8",
     "actions": [
       {
@@ -18288,7 +18187,6 @@
     "wisdom": "11",
     "charisma": "10",
     "skills": "Athletics +5, Perception +2",
-    "senses": "",
     "languages": "any one language (usually Common)",
     "challenge": "3",
     "actions": [
@@ -18453,7 +18351,6 @@
     "wisdom": "12",
     "charisma": "4",
     "skills": "Perception +3",
-    "senses": "",
     "challenge": "0",
     "traits": [
       {
@@ -18486,7 +18383,6 @@
     "intelligence": "2",
     "wisdom": "12",
     "charisma": "7",
-    "senses": "",
     "challenge": "1/2",
     "traits": [
       {
@@ -18625,7 +18521,6 @@
     "wisdom": "12",
     "charisma": "3",
     "skills": "Perception +3, Stealth +5",
-    "senses": "",
     "challenge": "0",
     "traits": [
       {
@@ -18657,7 +18552,6 @@
     "charisma": "12",
     "skills": "Perception +7",
     "damageImmunities": "bludgeoning, piercing, and slashing damage from nonmagical attacks that aren't silvered",
-    "senses": "",
     "languages": "Common (can't speak in bear form)",
     "traits": [
       {
@@ -18707,7 +18601,6 @@
     "charisma": "8",
     "skills": "Perception +2",
     "damageImmunities": "bludgeoning, piercing, and slashing damage from nonmagical attacks that aren't silvered",
-    "senses": "",
     "languages": "Common (can't speak in boar form)",
     "challenge": "4",
     "traits": [
@@ -18874,7 +18767,6 @@
     "charisma": "10",
     "skills": "Perception +4",
     "damageImmunities": "bludgeoning, piercing, and slashing damage from nonmagical attacks that aren't silvered",
-    "senses": "",
     "languages": "Common (can't speak in wolf form)",
     "challenge": "3",
     "traits": [
@@ -19090,7 +18982,6 @@
     "charisma": "8",
     "skills": "Perception +5, Stealth +3",
     "damageImmunities": "cold",
-    "senses": "",
     "languages": "Common, Giant, Winter Wolf",
     "challenge": "3",
     "traits": [
@@ -19134,7 +19025,6 @@
     "wisdom": "12",
     "charisma": "6",
     "skills": "Perception +3, Stealth +4",
-    "senses": "",
     "challenge": "1/4",
     "traits": [
       {

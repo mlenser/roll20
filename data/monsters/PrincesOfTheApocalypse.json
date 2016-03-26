@@ -137,7 +137,6 @@
     "wisdom": "10",
     "charisma": "9",
     "skills": "Intimidation +1, Perception +2",
-    "senses": "",
     "languages": "Common",
     "challenge": "2",
     "actions": [
@@ -166,7 +165,6 @@
     "wisdom": "10",
     "charisma": "16",
     "skills": "Intimidation +5, Religion +3, Persuasion +5",
-    "senses": "",
     "languages": "Common, Terran",
     "challenge": "3",
     "traits": [
@@ -201,7 +199,6 @@
     "wisdom": "11",
     "charisma": "13",
     "skills": "Animal Handling +2, Athletics +6, Intimidation +3, Perception +2",
-    "senses": "",
     "languages": "Common",
     "challenge": "4",
     "traits": [
@@ -236,7 +233,6 @@
     "wisdom": "11",
     "charisma": "16",
     "skills": "Deception +5, Religion +2, Stealth +2",
-    "senses": "",
     "languages": "Aquan, Common",
     "challenge": "2",
     "traits": [
@@ -267,7 +263,6 @@
     "wisdom": "11",
     "charisma": "8",
     "skills": "Athletics +4, Stealth +4",
-    "senses": "",
     "languages": "Common",
     "challenge": "1/2",
     "actions": [
@@ -296,7 +291,6 @@
     "wisdom": "11",
     "charisma": "11",
     "skills": "Athletics +7, Stealth +7",
-    "senses": "",
     "languages": "Common",
     "challenge": "3",
     "traits": [
@@ -440,7 +434,6 @@
     "wisdom": "18",
     "charisma": "10",
     "skills": "Arcana +3, Deception +3",
-    "senses": "",
     "languages": "Common, Druidic",
     "challenge": "5",
     "traits": [
@@ -477,7 +470,6 @@
     "charisma": "13",
     "skills": "Intimidation +3, Perception +2",
     "damageResistances": "fire",
-    "senses": "",
     "languages": "Common",
     "challenge": "2",
     "traits": [
@@ -518,7 +510,6 @@
     "charisma": "16",
     "skills": "Deception +5, Intimidation +5, Religion +2",
     "damageResistances": "fire",
-    "senses": "",
     "languages": "Common, Ignan",
     "challenge": "3",
     "traits": [
@@ -549,7 +540,6 @@
     "wisdom": "11",
     "charisma": "15",
     "skills": "Arcana +2, Perception +4, Stealth +4",
-    "senses": "",
     "languages": "Aquan, Common",
     "challenge": "2",
     "traits": [
@@ -597,7 +587,6 @@
     "wisdom": "10",
     "charisma": "14",
     "skills": "Animal Handling +2, History +2",
-    "senses": "",
     "languages": "Auran, Common",
     "challenge": "1",
     "traits": [
@@ -687,7 +676,6 @@
     "charisma": "16",
     "skills": "Arcana +3, Religion +3",
     "damageImmunities": "fire",
-    "senses": "",
     "languages": "Common, Ignan",
     "challenge": "6",
     "traits": [
@@ -723,7 +711,6 @@
     "charisma": "13",
     "skills": "Nature +8, Survival +8",
     "damageResistances": "cold",
-    "senses": "",
     "languages": "Aquan, Common",
     "challenge": "9",
     "traits": [
@@ -885,7 +872,6 @@
     "wisdom": "9",
     "charisma": "11",
     "skills": "Deception +2, Religion +2, Stealth +4",
-    "senses": "",
     "languages": "Common",
     "challenge": "1/8",
     "traits": [
@@ -921,7 +907,6 @@
     "wisdom": "10",
     "charisma": "14",
     "skills": "Acrobatics +5, Intimidation +4, Religion +4",
-    "senses": "",
     "languages": "Auran, Common",
     "challenge": "2",
     "traits": [
@@ -964,7 +949,6 @@
     "wisdom": "12",
     "charisma": "10",
     "skills": "Acrobatics +5",
-    "senses": "",
     "languages": "Auran, Common",
     "challenge": "2",
     "traits": [
@@ -1158,7 +1142,6 @@
     "wisdom": "11",
     "charisma": "18",
     "skills": "Arcana +4, Deception +7",
-    "senses": "",
     "languages": "Common, Primordial",
     "challenge": "6",
     "traits": [
@@ -1362,7 +1345,6 @@
     "charisma": "17",
     "skills": "Arcana +3, Perception +3, Intimidation +5",
     "damageImmunities": "cold",
-    "senses": "",
     "languages": "Common",
     "challenge": "3",
     "traits": [
@@ -1402,7 +1384,6 @@
     "charisma": "11",
     "savingThrows": "Wis +1",
     "skills": "Arcana +5, Investigation +5, Medicine +1",
-    "senses": "",
     "languages": "Abyssal, Common",
     "challenge": "2",
     "traits": [
@@ -1443,7 +1424,6 @@
     "charisma": "13",
     "skills": "Intimidation +4, Perception +3",
     "damageImmunities": "fire",
-    "senses": "",
     "languages": "Common, Ignan",
     "challenge": "5",
     "traits": [
@@ -1522,7 +1502,6 @@
     "charisma": "17",
     "skills": "Arcana +4, Deception +5, Insight +2, Persuasion +5",
     "damageResistances": "acid",
-    "senses": "",
     "languages": "Aquan, Common",
     "challenge": "4",
     "traits": [
@@ -1561,7 +1540,6 @@
     "wisdom": "10",
     "charisma": "16",
     "skills": "Deception +5, Persuasion +5",
-    "senses": "",
     "languages": "Auran, Common",
     "challenge": "3",
     "traits": [
@@ -1627,7 +1605,6 @@
     "wisdom": "10",
     "charisma": "15",
     "skills": "Animal Handling +2, Athletics +5, Deception +4, Persuasion +4",
-    "senses": "",
     "languages": "Auran, Common",
     "challenge": "3",
     "traits": [
@@ -1753,7 +1730,6 @@
     "wisdom": "15",
     "charisma": "13",
     "skills": "Deception +3, Insight +4",
-    "senses": "",
     "languages": "Common, Halfling",
     "challenge": "2",
     "traits": [

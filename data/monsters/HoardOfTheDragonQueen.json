@@ -51,7 +51,6 @@
     "charisma": "11",
     "savingThrows": "Int +5, Wis +3",
     "skills": "Arcana +5, Deception +2, Insight +3, Stealth +5",
-    "senses": "",
     "languages": "Common, Draconic, Infernal, Primordial, Thayan",
     "challenge": "4",
     "traits": [
@@ -95,7 +94,6 @@
     "charisma": "15",
     "savingThrows": "Con +9, Wis +6, Cha +6",
     "skills": "Arcana +7, Insight +6, Intimidation +6, Perception +6",
-    "senses": "",
     "languages": "Common, Draconic, Giant",
     "challenge": "9",
     "traits": [
@@ -139,7 +137,6 @@
     "charisma": "12",
     "savingThrows": "Str +7, Con +6",
     "skills": "Athletics +7, Intimidation +7, Perception +5, Religion +4",
-    "senses": "",
     "languages": "Common, Draconic, Giant",
     "challenge": "5",
     "traits": [
@@ -184,7 +181,6 @@
     "charisma": "12",
     "savingThrows": "Wis +2",
     "skills": "Deception +3, Stealth +5",
-    "senses": "",
     "languages": "Common, Draconic",
     "challenge": "1",
     "traits": [
@@ -229,7 +225,6 @@
     "savingThrows": "Wis +2",
     "skills": "Deception +3, Stealth +5",
     "damageResistances": "one of the following: acid, cold, fire, lightning, or poison",
-    "senses": "",
     "languages": "Common, Draconic",
     "challenge": "2",
     "traits": [
@@ -329,7 +324,6 @@
     "charisma": "15",
     "savingThrows": "Wis +6, Cha +4",
     "skills": "Deception +4, History +2, Religion +2",
-    "senses": "",
     "languages": "Common, Draconic, Infernal",
     "challenge": "2",
     "traits": [
@@ -494,7 +488,6 @@
     "charisma": "7",
     "savingThrows": "Str +4, Con +6",
     "skills": "Perception +5, Religion +2, Stealth +3",
-    "senses": "",
     "languages": "Common, Bullywug",
     "challenge": "3",
     "traits": [
@@ -551,7 +544,6 @@
     "charisma": "10",
     "savingThrows": "Int +7, Wis +5",
     "skills": "Arcana +7, Deception +3, Insight +5, Stealth +6",
-    "senses": "",
     "languages": "Common, Draconic, Infernal, Primordial, Thayan",
     "challenge": "6",
     "traits": [
