@@ -21,26 +21,26 @@
     "traits": [
       {
         "name": "Fey Ancestry",
-        "text": " Aerisi has advantage on saving throws against being charmed, and magic can't put her to sleep."
+        "text": "Aerisi has advantage on saving throws against being charmed, and magic can't put her to sleep."
       },
       {
         "name": "Howling Defeat",
-        "text": " When Aerisi drops to 0 hit points, her body disappears in a howling whirlwind that disperses quickly and harmlessly. Anything she is wearing or carrying is left behind."
+        "text": "When Aerisi drops to 0 hit points, her body disappears in a howling whirlwind that disperses quickly and harmlessly. Anything she is wearing or carrying is left behind."
       },
       {
-        "name": "Legendary Resistance ",
-        "text": " If Aerisi fails a saving throw, she can choose to succeed instead.",
+        "name": "Legendary Resistance",
+        "text": "If Aerisi fails a saving throw, she can choose to succeed instead.",
         "recharge": "2/Day"
       },
       {
         "name": "Spellcasting",
-        "text": " Aerisi is a 12th-level spellcaster. Her spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks). Aerisi has the following wizard spells prepared:\nCantrips (at will): gust, mage hand, message, prestidigitation, ray of frost, shocking grasp\n1st level (4 slots): charm person, feather fall, mage armor, thunderwave\n2nd level (3 slots): dust devil, gust of wind, invisibility\n3rd level (3 slots): fly, gaseous form, lightning bolt\n4th level (3 slots): ice storm, storm sphere\n5th level (2 slots): cloudkill, seeming (cast each day)\n6th level (1 slot): chain lightning"
+        "text": "Aerisi is a 12th-level spellcaster. Her spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks). Aerisi has the following wizard spells prepared:\nCantrips (at will): gust, mage hand, message, prestidigitation, ray of frost, shocking grasp\n1st level (4 slots): charm person, feather fall, mage armor, thunderwave\n2nd level (3 slots): dust devil, gust of wind, invisibility\n3rd level (3 slots): fly, gaseous form, lightning bolt\n4th level (3 slots): ice storm, storm sphere\n5th level (2 slots): cloudkill, seeming (cast each day)\n6th level (1 slot): chain lightning"
       }
     ],
     "actions": [
       {
         "name": "Windvane",
-        "text": " Melee or Ranged Weapon Attack: +9 to hit, reach 5 ft. or range 20 ft./60 ft., one target. Hit: 9 (1d6 + 6) piercing damage, or 10 (1d8 + 6) piercing damage if used with two hands to make a melee attack, plus 3 (1d6) lightning damage."
+        "text": "Melee or Ranged Weapon Attack: +9 to hit, reach 5 ft. or range 20 ft./60 ft., one target. Hit: 9 (1d6 + 6) piercing damage, or 10 (1d8 + 6) piercing damage if used with two hands to make a melee attack, plus 3 (1d6) lightning damage."
       }
     ]
   },
@@ -67,21 +67,21 @@
     "traits": [
       {
         "name": "Magic Weapons",
-        "text": " The myrmidon's weapon attacks are magical."
+        "text": "The myrmidon's weapon attacks are magical."
       }
     ],
     "actions": [
       {
         "name": "Multiattack",
-        "text": " The myrmidon makes three flail attacks."
+        "text": "The myrmidon makes three flail attacks."
       },
       {
         "name": "Flail",
-        "text": " Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 8 (1d8 + 4) bludgeoning damage."
+        "text": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 8 (1d8 + 4) bludgeoning damage."
       },
       {
-        "name": "Lightning Strike ",
-        "text": " The myrmidon makes one flail attack. If the attack hits, it deals an extra 18 (4d8) lightning damage, and the target must succeed on a DC 14 Constitution saving throw or be stunned until the end of the myrmidon's next turn.",
+        "name": "Lightning Strike",
+        "text": "The myrmidon makes one flail attack. If the attack hits, it deals an extra 18 (4d8) lightning damage, and the target must succeed on a DC 14 Constitution saving throw or be stunned until the end of the myrmidon's next turn.",
         "recharge": "Recharge 6"
       }
     ]
@@ -108,17 +108,17 @@
     "traits": [
       {
         "name": "Innate Spellcasting",
-        "text": " Bastian's innate spellcasting ability is Constitution (spell save DC 13, +5 to hit with spell attacks). He can innately cast the following spells:\nAt will: produce flame\n1/day: burning hands"
+        "text": "Bastian's innate spellcasting ability is Constitution (spell save DC 13, +5 to hit with spell attacks). He can innately cast the following spells:\nAt will: produce flame\n1/day: burning hands"
       },
       {
         "name": "Spellcasting",
-        "text": " Bastian is a 9th-level spellcaster. His spellcasting ability is Charisma (spell save DC 15, +7 to hit with spell attacks). Bastian knows the following sorcerer spells:\nCantrips (at will): fire bolt, mage hand, message, prestidigitation, shocking grasp\n1st level (4 slots): mage armor, magic missile, shield\n2nd level (3 slots): misty step, scorching ray\n3rd level (3 slots): counterspell, fireball\n4th level (3 slots): dimension door, wall of fire\n5th level (1 slot): hold monster"
+        "text": "Bastian is a 9th-level spellcaster. His spellcasting ability is Charisma (spell save DC 15, +7 to hit with spell attacks). Bastian knows the following sorcerer spells:\nCantrips (at will): fire bolt, mage hand, message, prestidigitation, shocking grasp\n1st level (4 slots): mage armor, magic missile, shield\n2nd level (3 slots): misty step, scorching ray\n3rd level (3 slots): counterspell, fireball\n4th level (3 slots): dimension door, wall of fire\n5th level (1 slot): hold monster"
       }
     ],
     "actions": [
       {
         "name": "Dagger",
-        "text": " Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage."
+        "text": "Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage."
       }
     ]
   },
@@ -143,11 +143,11 @@
     "actions": [
       {
         "name": "Multiattack",
-        "text": " The guard makes two melee attacks."
+        "text": "The guard makes two melee attacks."
       },
       {
         "name": "Morningstar",
-        "text": " Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) piercing damage."
+        "text": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) piercing damage."
       }
     ]
   },
@@ -172,17 +172,17 @@
     "traits": [
       {
         "name": "Spellcasting",
-        "text": " The priest is a 5th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). It knows the following sorcerer spells:\nCantrips (at will): acid splash, blade ward, light, mending, mold earth\n1st level (4 slots): earth tremor, expeditious retreat, shield\n2nd level (3 slots): shatter, spider climb\n3rd level (2 slots): slow"
+        "text": "The priest is a 5th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). It knows the following sorcerer spells:\nCantrips (at will): acid splash, blade ward, light, mending, mold earth\n1st level (4 slots): earth tremor, expeditious retreat, shield\n2nd level (3 slots): shatter, spider climb\n3rd level (2 slots): slow"
       }
     ],
     "actions": [
       {
         "name": "Multiattack",
-        "text": " The priest makes two melee attacks."
+        "text": "The priest makes two melee attacks."
       },
       {
         "name": "Glaive",
-        "text": " Melee Weapon Attack: +4 to hit, reach 10 ft., one target. Hit: 7 (1d10 + 2) slashing damage."
+        "text": "Melee Weapon Attack: +4 to hit, reach 10 ft., one target. Hit: 7 (1d10 + 2) slashing damage."
       }
     ]
   },
@@ -207,17 +207,17 @@
     "traits": [
       {
         "name": "Bond of the Black Earth",
-        "text": " The burrowshark is magically bound to a bulette trained to serve as its mount. While mounted on its bulette, the burrowshark shares the bulette's senses and can ride the bulette while it burrows. The bonded bulette obeys the burrowshark's commands. If its mount dies, the burrowshark can train a new bulette to serve as its bonded mount, a process requiring a month."
+        "text": "The burrowshark is magically bound to a bulette trained to serve as its mount. While mounted on its bulette, the burrowshark shares the bulette's senses and can ride the bulette while it burrows. The bonded bulette obeys the burrowshark's commands. If its mount dies, the burrowshark can train a new bulette to serve as its bonded mount, a process requiring a month."
       }
     ],
     "actions": [
       {
         "name": "Multiattack",
-        "text": " The burrowshark makes three melee attacks."
+        "text": "The burrowshark makes three melee attacks."
       },
       {
         "name": "Spear",
-        "text": " Melee or Ranged Weapon Attack: +6 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 7 (1d6 + 4) piercing damage, or 8 (1d8 + 4) piercing damage if used with two hands to make a melee attack."
+        "text": "Melee or Ranged Weapon Attack: +6 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 7 (1d6 + 4) piercing damage, or 8 (1d8 + 4) piercing damage if used with two hands to make a melee attack."
       }
     ]
   },
@@ -242,13 +242,13 @@
     "traits": [
       {
         "name": "Spellcasting",
-        "text": " The priest is a 5th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). It knows the following sorcerer spells:\nCantrips (at will): chill touch, mage hand, minor illusion, prestidigitation, ray of frost\n1st level (4 slots): expeditious retreat, ice knife, magic missile, shield\n2nd level (3 slots): blur, hold person\n3rd level (2 slots): sleet storm"
+        "text": "The priest is a 5th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). It knows the following sorcerer spells:\nCantrips (at will): chill touch, mage hand, minor illusion, prestidigitation, ray of frost\n1st level (4 slots): expeditious retreat, ice knife, magic missile, shield\n2nd level (3 slots): blur, hold person\n3rd level (2 slots): sleet storm"
       }
     ],
     "actions": [
       {
         "name": "Quarterstaff",
-        "text": " Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 6 (1d8 + 2) bludgeoning damage."
+        "text": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 6 (1d8 + 2) bludgeoning damage."
       }
     ]
   },
@@ -273,11 +273,11 @@
     "actions": [
       {
         "name": "Sharktoothed Longsword",
-        "text": " Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 6 (1d8 + 2) slashing damage, or 7 (1d10 + 2) slashing damage if used with two hands. Against a target is wearing no armor, the reaver deals an extra die of damage with this sword."
+        "text": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 6 (1d8 + 2) slashing damage, or 7 (1d10 + 2) slashing damage if used with two hands. Against a target is wearing no armor, the reaver deals an extra die of damage with this sword."
       },
       {
         "name": "Javelin",
-        "text": " Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 30/120 ft., one target. Hit: 5 (1d6 + 2) piercing damage."
+        "text": "Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 30/120 ft., one target. Hit: 5 (1d6 + 2) piercing damage."
       }
     ]
   },
@@ -302,25 +302,25 @@
     "traits": [
       {
         "name": "Bonded Mount",
-        "text": " The knight is magically bound to a beast with an innate swimming speed trained to serve as its mount. While mounted on this beast, the knight gains the beast's senses and ability to breathe underwater. The bonded mount obeys the knight's commands. If its mount dies, the knight can train a new beast to serve as its bonded mount, a process requiring a month."
+        "text": "The knight is magically bound to a beast with an innate swimming speed trained to serve as its mount. While mounted on this beast, the knight gains the beast's senses and ability to breathe underwater. The bonded mount obeys the knight's commands. If its mount dies, the knight can train a new beast to serve as its bonded mount, a process requiring a month."
       },
       {
         "name": "Sneak Attack",
-        "text": " The knight deals an extra 7 (2d6) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of the knight that isn't incapacitated and the knight doesn't have disadvantage on the attack roll."
+        "text": "The knight deals an extra 7 (2d6) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of the knight that isn't incapacitated and the knight doesn't have disadvantage on the attack roll."
       }
     ],
     "actions": [
       {
         "name": "Multiattack",
-        "text": " The knight makes two shortsword attacks."
+        "text": "The knight makes two shortsword attacks."
       },
       {
         "name": "Shortsword",
-        "text": " Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) piercing damage."
+        "text": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) piercing damage."
       },
       {
         "name": "Lance",
-        "text": " Melee Weapon Attack: +5 to hit, reach 10 ft., one target. Hit: 9 (1d12 + 3) piercing damage."
+        "text": "Melee Weapon Attack: +5 to hit, reach 10 ft., one target. Hit: 9 (1d12 + 3) piercing damage."
       }
     ]
   },
@@ -345,41 +345,41 @@
     "challenge": "7",
     "traits": [
       {
-        "name": "Action Surge ",
-        "text": " Drannin takes an additional action on his turn.",
+        "name": "Action Surge",
+        "text": "Drannin takes an additional action on his turn.",
         "recharge": "Recharges after a Short or Long Rest"
       },
       {
         "name": "Brute",
-        "text": " A melee weapon deals one extra die of its damage when Drannin hits with it (included in the attack)."
+        "text": "A melee weapon deals one extra die of its damage when Drannin hits with it (included in the attack)."
       },
       {
         "name": "Dwarven Resilience",
-        "text": " Drannin has advantage on saving throws against poison."
+        "text": "Drannin has advantage on saving throws against poison."
       },
       {
-        "name": "Indomitable ",
-        "text": " Drannin can reroll a saving throw that he fails. He must use the new roll.",
+        "name": "Indomitable",
+        "text": "Drannin can reroll a saving throw that he fails. He must use the new roll.",
         "recharge": "Recharges after a Short or Long Rest"
       },
       {
-        "name": "Second  Wind ",
-        "text": " Drannin can use a bonus action to regain 16 (1d10 + 11) hit points.",
+        "name": "Second  Wind",
+        "text": "Drannin can use a bonus action to regain 16 (1d10 + 11) hit points.",
         "recharge": "Recharges after a Short or Long Rest"
       },
       {
         "name": "Special Equipment",
-        "text": " Drannin wears a control amulet for his shield guardian (see the Monster Manual) and a ring of cold resistance. He also carries a potion of frost giant strength."
+        "text": "Drannin wears a control amulet for his shield guardian (see the Monster Manual) and a ring of cold resistance. He also carries a potion of frost giant strength."
       }
     ],
     "actions": [
       {
         "name": "Multiattack",
-        "text": " Drannin makes three attacks with his greataxe."
+        "text": "Drannin makes three attacks with his greataxe."
       },
       {
         "name": "Greataxe",
-        "text": " Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 17 (2d12 + 4) slashing damage."
+        "text": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 17 (2d12 + 4) slashing damage."
       }
     ]
   },
@@ -406,21 +406,21 @@
     "traits": [
       {
         "name": "Magic Weapons",
-        "text": " The myrmidon's weapon attacks are magical."
+        "text": "The myrmidon's weapon attacks are magical."
       }
     ],
     "actions": [
       {
         "name": "Multiattack",
-        "text": " The myrmidon makes two maul attacks."
+        "text": "The myrmidon makes two maul attacks."
       },
       {
         "name": "Maul",
-        "text": " Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) bludgeoning damage."
+        "text": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) bludgeoning damage."
       },
       {
-        "name": "Thunderous Strike ",
-        "text": " The myrmidon makes one maul attack. If the attack hits, it deals an extra 16 (3d10) thunder damage, and the target must succeed on a DC 14 Strength saving throw or be knocked prone.",
+        "name": "Thunderous Strike",
+        "text": "The myrmidon makes one maul attack. If the attack hits, it deals an extra 16 (3d10) thunder damage, and the target must succeed on a DC 14 Strength saving throw or be knocked prone.",
         "recharge": "Recharge 6"
       }
     ]
@@ -446,18 +446,18 @@
     "traits": [
       {
         "name": "Spellcasting",
-        "text": " Elizar is a 7th-level spellcaster. His spellcasting ability is Wisdom (spell save DC 15, +7 to hit with spell attacks). Elizar has the following druid spells prepared:\nCantrips (at will): druidcraft, guidance, poison spray, produce flame\n1st level (4 slots): animal friendship, faerie fire, healing word, jump, thunderwave\n2nd level (3 slots): flame blade, spike growth\n3rd level (3 slots): dispel magic, stinking cloud\n4th level (2 slots): blight, wall of fire"
+        "text": "Elizar is a 7th-level spellcaster. His spellcasting ability is Wisdom (spell save DC 15, +7 to hit with spell attacks). Elizar has the following druid spells prepared:\nCantrips (at will): druidcraft, guidance, poison spray, produce flame\n1st level (4 slots): animal friendship, faerie fire, healing word, jump, thunderwave\n2nd level (3 slots): flame blade, spike growth\n3rd level (3 slots): dispel magic, stinking cloud\n4th level (2 slots): blight, wall of fire"
       },
       {
-        "name": "Summon Mephits ",
-        "text": " By puffing on his pipe, Elizar can use an action to cast conjure minor elementals. If he does so, he summons four smoke mephits.",
+        "name": "Summon Mephits",
+        "text": "By puffing on his pipe, Elizar can use an action to cast conjure minor elementals. If he does so, he summons four smoke mephits.",
         "recharge": "Recharges after a Long Rest"
       }
     ],
     "actions": [
       {
         "name": "Dagger +1",
-        "text": " Melee or Ranged Weapon Attack: +6 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 5 (1d4 + 3) piercing damage."
+        "text": "Melee or Ranged Weapon Attack: +6 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 5 (1d4 + 3) piercing damage."
       }
     ]
   },
@@ -482,23 +482,23 @@
     "challenge": "2",
     "traits": [
       {
-        "name": "Flaming Weapon ",
-        "text": " As a bonus action, the guard can wreath one melee weapon it is wielding in flame. The guard is unharmed by this fire, which lasts until the end of the guard's next turn. While wreathed in flame, the weapon deals an extra 3 (1d6) fire damage on a hit.",
+        "name": "Flaming Weapon",
+        "text": "As a bonus action, the guard can wreath one melee weapon it is wielding in flame. The guard is unharmed by this fire, which lasts until the end of the guard's next turn. While wreathed in flame, the weapon deals an extra 3 (1d6) fire damage on a hit.",
         "recharge": "Recharges after a Short or Long Rest"
       }
     ],
     "actions": [
       {
         "name": "Multiattack",
-        "text": " The guard makes two melee attacks."
+        "text": "The guard makes two melee attacks."
       },
       {
         "name": "Longsword",
-        "text": " Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 6 (1d8 + 2) slashing damage."
+        "text": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 6 (1d8 + 2) slashing damage."
       },
       {
         "name": "Heavy Crossbow",
-        "text": " Ranged Weapon Attack: +3 to hit, range 100/400 ft., one target. Hit: 6 (1d10 + 1) piercing damage."
+        "text": "Ranged Weapon Attack: +3 to hit, range 100/400 ft., one target. Hit: 6 (1d10 + 1) piercing damage."
       }
     ]
   },
@@ -524,13 +524,13 @@
     "traits": [
       {
         "name": "Spellcasting",
-        "text": " The priest is a 5th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). It knows the following sorcerer spells:\nCantrips (at will): control flames, create bonfire, fire bolt, light, minor illusion\n1st level (4 slots): burning hands, expeditious retreat, mage armor\n2nd level (3 slots): blur, scorching ray\n3rd level (2 slots): fireball"
+        "text": "The priest is a 5th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). It knows the following sorcerer spells:\nCantrips (at will): control flames, create bonfire, fire bolt, light, minor illusion\n1st level (4 slots): burning hands, expeditious retreat, mage armor\n2nd level (3 slots): blur, scorching ray\n3rd level (2 slots): fireball"
       }
     ],
     "actions": [
       {
         "name": "Dagger",
-        "text": " Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage."
+        "text": "Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage."
       }
     ]
   },
@@ -554,30 +554,30 @@
     "challenge": "2",
     "traits": [
       {
-        "name": "Shapechanger ",
-        "text": " The fathomer can use its action to polymorph into a Medium serpent composed of water, or back into its true form. Anything the fathomer is wearing or carrying is subsumed into the serpent form during the change, inaccessible until the fathomer returns to its true form. The fathomer reverts to its true form after 4 hours, unless it can expend another use of this trait. If the fathomer is knocked unconscious or dies, it also reverts to its true form.\nWhile in serpent form, the fathomer gains a swimming speed of 40 feet, the ability to breathe underwater, immunity to poison damage, as well as resistance to fire damage and bludgeoning, piercing, and slashing damage from nonmagical weapons. It also has immunity to the following conditions: exhaustion, grappled, paralyzed, poisoned, restrained, prone, unconscious. The serpent form can enter a hostile creature's space and stop there. In addition, if water can pass through a space, the serpent can do so without squeezing.",
+        "name": "Shapechanger",
+        "text": "The fathomer can use its action to polymorph into a Medium serpent composed of water, or back into its true form. Anything the fathomer is wearing or carrying is subsumed into the serpent form during the change, inaccessible until the fathomer returns to its true form. The fathomer reverts to its true form after 4 hours, unless it can expend another use of this trait. If the fathomer is knocked unconscious or dies, it also reverts to its true form.\nWhile in serpent form, the fathomer gains a swimming speed of 40 feet, the ability to breathe underwater, immunity to poison damage, as well as resistance to fire damage and bludgeoning, piercing, and slashing damage from nonmagical weapons. It also has immunity to the following conditions: exhaustion, grappled, paralyzed, poisoned, restrained, prone, unconscious. The serpent form can enter a hostile creature's space and stop there. In addition, if water can pass through a space, the serpent can do so without squeezing.",
         "recharge": "2/day"
       },
       {
-        "name": "Olhydra's Armor ",
-        "text": " The fathomer can cast mage armor at will, without expending material components.",
+        "name": "Olhydra's Armor",
+        "text": "The fathomer can cast mage armor at will, without expending material components.",
         "recharge": "Human Form Only"
       },
       {
-        "name": "Spellcasting ",
-        "text": " The fathomer is a 5th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 12, +4 to hit with spell attacks). It has two 3rd-level spell slots, which it regains after finishing a short or long rest, and knows the following warlock spells:\nCantrips (at will): chill touch, eldritch blast, mage hand\n1st level: armor of Agathys, expeditious retreat, hex\n2nd level: invisibility\n3rd level (3 slots): Vampiric touch",
+        "name": "Spellcasting",
+        "text": "The fathomer is a 5th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 12, +4 to hit with spell attacks). It has two 3rd-level spell slots, which it regains after finishing a short or long rest, and knows the following warlock spells:\nCantrips (at will): chill touch, eldritch blast, mage hand\n1st level: armor of Agathys, expeditious retreat, hex\n2nd level: invisibility\n3rd level (3 slots): Vampiric touch",
         "recharge": "Human Form Only"
       }
     ],
     "actions": [
       {
-        "name": "Constrict ",
-        "text": " Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 9 (2d6 + 2) bludgeoning damage. If the target is Medium or smaller, it is grappled (escape DC 12). Until the grapple ends, the target is restrained, and the fathomer can't constrict another target.",
+        "name": "Constrict",
+        "text": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 9 (2d6 + 2) bludgeoning damage. If the target is Medium or smaller, it is grappled (escape DC 12). Until the grapple ends, the target is restrained, and the fathomer can't constrict another target.",
         "recharge": "Serpent Form Only"
       },
       {
-        "name": "Dagger ",
-        "text": " Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage.",
+        "name": "Dagger",
+        "text": "Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage.",
         "recharge": "Human Form Only"
       }
     ]
@@ -603,21 +603,21 @@
     "traits": [
       {
         "name": "Spellcasting",
-        "text": " The knight is a 1st-level spellcaster. Its spellcasting ability is Charisma (spell save DC 12, +4 to hit with spell attacks). It knows the following sorcerer spell:\nCantrips (at will): gust, light, message, ray of frost\n1st level (2 slots): expeditious retreat, feather fall"
+        "text": "The knight is a 1st-level spellcaster. Its spellcasting ability is Charisma (spell save DC 12, +4 to hit with spell attacks). It knows the following sorcerer spell:\nCantrips (at will): gust, light, message, ray of frost\n1st level (2 slots): expeditious retreat, feather fall"
       }
     ],
     "actions": [
       {
         "name": "Multiattack",
-        "text": " The knight makes two melee attacks."
+        "text": "The knight makes two melee attacks."
       },
       {
         "name": "Longsword",
-        "text": " Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 6 (1d8 + 2) slashing damage, or 7 (1d10 + 2) slashing damage if used with two hands."
+        "text": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 6 (1d8 + 2) slashing damage, or 7 (1d10 + 2) slashing damage if used with two hands."
       },
       {
         "name": "Spear",
-        "text": " Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 5 (1d6 + 2) piercing damage, or 6 (1d8 + 2) piercing damage if used with two hands to make a melee attack."
+        "text": "Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 5 (1d6 + 2) piercing damage, or 6 (1d8 + 2) piercing damage if used with two hands to make a melee attack."
       }
     ]
   },
@@ -644,29 +644,29 @@
     "traits": [
       {
         "name": "Illumination",
-        "text": " The myrmidon sheds bright light in a 20-foot radius and dim light in a 40-foot radius."
+        "text": "The myrmidon sheds bright light in a 20-foot radius and dim light in a 40-foot radius."
       },
       {
         "name": "Magic Weapons",
-        "text": " The myrmidon's weapon attacks are magical."
+        "text": "The myrmidon's weapon attacks are magical."
       },
       {
         "name": "Water Susceptibility",
-        "text": " For every 5 feet the myrmidon moves in water, it takes 2 (1d4) cold damage."
+        "text": "For every 5 feet the myrmidon moves in water, it takes 2 (1d4) cold damage."
       }
     ],
     "actions": [
       {
         "name": "Multiattack",
-        "text": " The myrmidon makes three scimitar attacks."
+        "text": "The myrmidon makes three scimitar attacks."
       },
       {
         "name": "Scimitar",
-        "text": " Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 7 (1d6 + 4) slashing damage."
+        "text": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 7 (1d6 + 4) slashing damage."
       },
       {
-        "name": "Fiery Strikes ",
-        "text": " The myrmidon uses Multiattack. Each attack that hits deals an extra 5 (1d10) fire damage.",
+        "name": "Fiery Strikes",
+        "text": "The myrmidon uses Multiattack. Each attack that hits deals an extra 5 (1d10) fire damage.",
         "recharge": "Recharge 6"
       }
     ]
@@ -693,17 +693,17 @@
     "traits": [
       {
         "name": "Spellcasting",
-        "text": " The flamewrath is a 7th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 14, +6 to hit with spell attacks). It knows the following sorcerer spells:\nCantrips (at will): control flames, fire bolt, friends, light, minor illusion\n1st level (4 slots): burning hands, color spray, mage armor\n2nd level (3 slots): scorching ray, suggestion\n3rd level (3 slots): fireball, hypnotic pattern\n4th level (1 slot): fire shield (see Wreathed in Flame)"
+        "text": "The flamewrath is a 7th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 14, +6 to hit with spell attacks). It knows the following sorcerer spells:\nCantrips (at will): control flames, fire bolt, friends, light, minor illusion\n1st level (4 slots): burning hands, color spray, mage armor\n2nd level (3 slots): scorching ray, suggestion\n3rd level (3 slots): fireball, hypnotic pattern\n4th level (1 slot): fire shield (see Wreathed in Flame)"
       },
       {
         "name": "Wreathed in Flame",
-        "text": " For the flamewrath, the warm version of the fire shield spell has a duration of \"until dispelled.\" The fire shield burns for 10 minutes after the flamewrath dies, consuming its body."
+        "text": "For the flamewrath, the warm version of the fire shield spell has a duration of \"until dispelled.\" The fire shield burns for 10 minutes after the flamewrath dies, consuming its body."
       }
     ],
     "actions": [
       {
         "name": "Dagger",
-        "text": " Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage."
+        "text": "Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage."
       }
     ]
   },
@@ -729,38 +729,38 @@
     "traits": [
       {
         "name": "Amphibious",
-        "text": " Gar can breathe air and water."
+        "text": "Gar can breathe air and water."
       },
       {
-        "name": "Legendary Resistance ",
-        "text": " If Gar fails a saving throw, he can choose to succeed instead.",
+        "name": "Legendary Resistance",
+        "text": "If Gar fails a saving throw, he can choose to succeed instead.",
         "recharge": "2/Day"
       },
       {
         "name": "Spellcasting",
-        "text": " Gar is a 9th-level spellcaster. His spellcasting ability is Wisdom (spell save DC 16, +8 to hit with spell attacks). He has the following druid spells prepared:\nCantrips (at will): mending, resistance, shape water\n1st level (4 slots): create or destroy water, cure wounds, fog cloud, thunderwave\n2nd level (3 slots): darkvision, hold person, protection from poison\n3rd level (3 slots): call lightning, sleet storm, tidal wave\n4th level (3 slots): control water, ice storm\n5th level (1 slot): scrying"
+        "text": "Gar is a 9th-level spellcaster. His spellcasting ability is Wisdom (spell save DC 16, +8 to hit with spell attacks). He has the following druid spells prepared:\nCantrips (at will): mending, resistance, shape water\n1st level (4 slots): create or destroy water, cure wounds, fog cloud, thunderwave\n2nd level (3 slots): darkvision, hold person, protection from poison\n3rd level (3 slots): call lightning, sleet storm, tidal wave\n4th level (3 slots): control water, ice storm\n5th level (1 slot): scrying"
       },
       {
         "name": "Water Walk",
-        "text": " Gar can stand and move on liquid surfaces as if they were solid ground."
+        "text": "Gar can stand and move on liquid surfaces as if they were solid ground."
       },
       {
         "name": "Watery Fall",
-        "text": " When Gar drops to 0 hit points, his body collapses into a pool of inky water that rapidly disperses. Anything he was wearing or carrying is left behind."
+        "text": "When Gar drops to 0 hit points, his body collapses into a pool of inky water that rapidly disperses. Anything he was wearing or carrying is left behind."
       }
     ],
     "actions": [
       {
         "name": "Multiattack",
-        "text": " Gar makes two melee attacks, one with his claw and one with Drown."
+        "text": "Gar makes two melee attacks, one with his claw and one with Drown."
       },
       {
         "name": "Claw",
-        "text": " Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 9 (2d6 + 2) bludgeoning damage, and the target is grappled (escape DC 13). Until the grapple ends, Gar can't attack other creatures with his claw."
+        "text": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 9 (2d6 + 2) bludgeoning damage, and the target is grappled (escape DC 13). Until the grapple ends, Gar can't attack other creatures with his claw."
       },
       {
         "name": "Drown",
-        "text": " Melee or Ranged Weapon Attack: +7 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 6 (1d6 + 3) piercing damage plus 4 (1d8) cold damage."
+        "text": "Melee or Ranged Weapon Attack: +7 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 6 (1d6 + 3) piercing damage plus 4 (1d8) cold damage."
       }
     ]
   },
@@ -786,37 +786,37 @@
     "traits": [
       {
         "name": "Assassinate",
-        "text": " During its first turn, Ghald has advantage on attack rolls against any creature that hasn't taken a turn. Any hit Ghald scores against a surprised creature is a critical hit."
+        "text": "During its first turn, Ghald has advantage on attack rolls against any creature that hasn't taken a turn. Any hit Ghald scores against a surprised creature is a critical hit."
       },
       {
         "name": "Limited Amphibiousness",
-        "text": " Ghald can breathe air and water, but he needs to be submerged at least once every 4 hours to avoid suffocating."
+        "text": "Ghald can breathe air and water, but he needs to be submerged at least once every 4 hours to avoid suffocating."
       },
       {
         "name": "Shark Telepathy",
-        "text": " Ghald can magically command any shark within 120 feet of him, using a limited telepathy."
+        "text": "Ghald can magically command any shark within 120 feet of him, using a limited telepathy."
       },
       {
         "name": "Sneak Attack",
-        "text": " Ghald deals an extra 14 (4d6) damage when he hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of Ghald's that isn't incapacitated and Ghald doesn't have disadvantage on the attack roll."
+        "text": "Ghald deals an extra 14 (4d6) damage when he hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of Ghald's that isn't incapacitated and Ghald doesn't have disadvantage on the attack roll."
       }
     ],
     "actions": [
       {
         "name": "Multiattack",
-        "text": " Ghald makes three attacks, one with his bite and two with his shortswords."
+        "text": "Ghald makes three attacks, one with his bite and two with his shortswords."
       },
       {
         "name": "Bite",
-        "text": " Melee Weapon Attack: +7 to hit, reach 5 ft., one creature. Hit: 9 (2d4 + 4) piercing damage."
+        "text": "Melee Weapon Attack: +7 to hit, reach 5 ft., one creature. Hit: 9 (2d4 + 4) piercing damage."
       },
       {
         "name": "Shortsword",
-        "text": " Melee Weapon Attack: +7 to hit, reach 5 ft., one creature. Hit: 11 (2d6 + 4) piercing damage."
+        "text": "Melee Weapon Attack: +7 to hit, reach 5 ft., one creature. Hit: 11 (2d6 + 4) piercing damage."
       },
       {
         "name": "Garrote",
-        "text": " Melee Weapon Attack: +7 to hit, reach 5 ft., one Medium or Small creature against which Ghald has advantage on the attack roll. Hit: 9 (2d4 + 4) bludgeoning damage, and the target is grappled (escape DC 15). Until the grapple ends, the target can't breathe, and Ghald has advantage on attack rolls against it."
+        "text": "Melee Weapon Attack: +7 to hit, reach 5 ft., one Medium or Small creature against which Ghald has advantage on the attack roll. Hit: 9 (2d4 + 4) bludgeoning damage, and the target is grappled (escape DC 15). Until the grapple ends, the target can't breathe, and Ghald has advantage on attack rolls against it."
       }
     ]
   },
@@ -843,30 +843,30 @@
     "traits": [
       {
         "name": "Evasion",
-        "text": " If Hellenrae is subjected to an effect that allows her to make a Dexterity saving throw to take only half damage, she instead takes no damage if she succeeds on the saving throw, and only half damage if she fails."
+        "text": "If Hellenrae is subjected to an effect that allows her to make a Dexterity saving throw to take only half damage, she instead takes no damage if she succeeds on the saving throw, and only half damage if she fails."
       },
       {
-        "name": "Stunning Strike ",
-        "text": " When Hellenrae hits a target with a melee weapon attack, the target must succeed on a DC 13 Constitution saving throw or be stunned until the end of Hellenrae's next turn.",
+        "name": "Stunning Strike",
+        "text": "When Hellenrae hits a target with a melee weapon attack, the target must succeed on a DC 13 Constitution saving throw or be stunned until the end of Hellenrae's next turn.",
         "recharge": "Recharge 5-6"
       },
       {
         "name": "Unarmored Defense",
-        "text": " While Hellenrae is wearing no armor and wielding no shield, her AC includes her Wisdom modifier."
+        "text": "While Hellenrae is wearing no armor and wielding no shield, her AC includes her Wisdom modifier."
       },
       {
         "name": "Unarmored Movement",
-        "text": " While Hellenrae is wearing no armor and wielding no shield, her speed increases by 20 feet (included in her speed)."
+        "text": "While Hellenrae is wearing no armor and wielding no shield, her speed increases by 20 feet (included in her speed)."
       }
     ],
     "actions": [
       {
         "name": "Multiattack",
-        "text": " Hellenrae makes three melee attacks."
+        "text": "Hellenrae makes three melee attacks."
       },
       {
         "name": "Unarmed Strike",
-        "text": " Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 9 (1d10 + 4) bludgeoning damage."
+        "text": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 9 (1d10 + 4) bludgeoning damage."
       }
     ]
   },
@@ -890,19 +890,19 @@
     "challenge": "1/8",
     "traits": [
       {
-        "name": "Guiding Wind ",
-        "text": " As a bonus action, the initiate gains advantage on the next ranged attack roll it makes before the end of its next turn.",
+        "name": "Guiding Wind",
+        "text": "As a bonus action, the initiate gains advantage on the next ranged attack roll it makes before the end of its next turn.",
         "recharge": "Recharges after a Short or Long Rest"
       },
       {
         "name": "Hold Breath",
-        "text": " The initiate can hold its breath for 30 minutes."
+        "text": "The initiate can hold its breath for 30 minutes."
       }
     ],
     "actions": [
       {
         "name": "Dagger",
-        "text": " Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage."
+        "text": "Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage."
       }
     ]
   },
@@ -927,25 +927,25 @@
     "traits": [
       {
         "name": "Hold Breath",
-        "text": " The priest can hold its breath for 30 minutes."
+        "text": "The priest can hold its breath for 30 minutes."
       },
       {
         "name": "Spellcasting",
-        "text": " The priest is a 5th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 12, +4 to hit with spell attacks). It knows the following sorcerer spells:\nCantrips (at will): blade ward, gust, light, prestidigitation, shocking grasp\n1st level (4 slots): featherfall, shield, witch bolt\n2nd level (3 slots): dust devil, gust of wind\n3rd level (2 slots): gaseous form"
+        "text": "The priest is a 5th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 12, +4 to hit with spell attacks). It knows the following sorcerer spells:\nCantrips (at will): blade ward, gust, light, prestidigitation, shocking grasp\n1st level (4 slots): featherfall, shield, witch bolt\n2nd level (3 slots): dust devil, gust of wind\n3rd level (2 slots): gaseous form"
       }
     ],
     "actions": [
       {
         "name": "Multiattack",
-        "text": " The priest makes two melee attacks or two ranged attacks."
+        "text": "The priest makes two melee attacks or two ranged attacks."
       },
       {
         "name": "Scimitar",
-        "text": " Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) slashing damage."
+        "text": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) slashing damage."
       },
       {
         "name": "Dagger",
-        "text": " Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 5 (1d4 + 3) piercing damage."
+        "text": "Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 5 (1d4 + 3) piercing damage."
       }
     ]
   },
@@ -970,25 +970,25 @@
     "traits": [
       {
         "name": "Spellcasting",
-        "text": " The hurricane is a 3rd-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 11, +3 to hit with spell attacks). It knows the following sorcerer spells:\nCantrips (at will): blade ward, gust, light, prestidigitation\n1st level (4 slots): feather fall, jump, thunderwave\n2nd level (2 slots): gust of wind"
+        "text": "The hurricane is a 3rd-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 11, +3 to hit with spell attacks). It knows the following sorcerer spells:\nCantrips (at will): blade ward, gust, light, prestidigitation\n1st level (4 slots): feather fall, jump, thunderwave\n2nd level (2 slots): gust of wind"
       },
       {
         "name": "Unarmored Defense",
-        "text": " While the hurricane is wearing no armor and wielding no shield, its AC includes its Wisdom modifier."
+        "text": "While the hurricane is wearing no armor and wielding no shield, its AC includes its Wisdom modifier."
       },
       {
         "name": "Unarmored Movement",
-        "text": " While the hurricane is wearing no armor and wielding no shield, its walking speed increases by 15 feet (included in its speed)."
+        "text": "While the hurricane is wearing no armor and wielding no shield, its walking speed increases by 15 feet (included in its speed)."
       }
     ],
     "actions": [
       {
         "name": "Multiattack",
-        "text": " The hurricane makes two melee attacks."
+        "text": "The hurricane makes two melee attacks."
       },
       {
         "name": "Unarmed Strike",
-        "text": " Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) bludgeoning damage."
+        "text": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) bludgeoning damage."
       }
     ]
   },
@@ -1016,50 +1016,50 @@
     "traits": [
       {
         "name": "Empowered Attacks",
-        "text": " Imix's slam attacks are treated as magical for the purpose of bypassing resistance and immunity to nonmagical weapons."
+        "text": "Imix's slam attacks are treated as magical for the purpose of bypassing resistance and immunity to nonmagical weapons."
       },
       {
         "name": "Fire Aura",
-        "text": " At the start of each of Imix's turns, each creature within 10 feet of him takes 17 (5d6) fire damage, and flammable objects in the aura that aren't being worn or carried ignite. A creature also takes 17 (5d6) fire damage if it touches Imix or hits him with a melee attack while within 10 feet of him, and a creature takes that damage the first time on a turn that Imix moves into its space. Nonmagical weapons that hit Imix are destroyed by fire immediately after dealing damage to him"
+        "text": "At the start of each of Imix's turns, each creature within 10 feet of him takes 17 (5d6) fire damage, and flammable objects in the aura that aren't being worn or carried ignite. A creature also takes 17 (5d6) fire damage if it touches Imix or hits him with a melee attack while within 10 feet of him, and a creature takes that damage the first time on a turn that Imix moves into its space. Nonmagical weapons that hit Imix are destroyed by fire immediately after dealing damage to him"
       },
       {
         "name": "Fire Form",
-        "text": " Imix can enter a hostile creature's space and stop there. He can move through a space as narrow as 1 inch without squeezing if fire could pass through that space."
+        "text": "Imix can enter a hostile creature's space and stop there. He can move through a space as narrow as 1 inch without squeezing if fire could pass through that space."
       },
       {
         "name": "Illumination",
-        "text": " Imix sheds bright light in a 60-foot radius and dim light for an additional 60 feet."
+        "text": "Imix sheds bright light in a 60-foot radius and dim light for an additional 60 feet."
       },
       {
-        "name": "Legendary Resistance ",
-        "text": " If Imix fails a saving throw, he can choose to succeed instead.",
+        "name": "Legendary Resistance",
+        "text": "If Imix fails a saving throw, he can choose to succeed instead.",
         "recharge": "3/Day"
       },
       {
         "name": "Innate Spellcasting",
-        "text": " Imix's innate spellcasting ability is Charisma (spell save DC 20, +12 to hit with spell attacks). He can innately cast the following spells, requiring no material components:\nAt will: fireball, wall of fire\n3/day each: fire storm, haste, teleport"
+        "text": "Imix's innate spellcasting ability is Charisma (spell save DC 20, +12 to hit with spell attacks). He can innately cast the following spells, requiring no material components:\nAt will: fireball, wall of fire\n3/day each: fire storm, haste, teleport"
       },
       {
         "name": "Magic Resistance",
-        "text": " Imix has advantage on saving throws against spells and other magical effects."
+        "text": "Imix has advantage on saving throws against spells and other magical effects."
       }
     ],
     "actions": [
       {
         "name": "Multiattack",
-        "text": " Imix makes two slam attacks or two flame blast attacks."
+        "text": "Imix makes two slam attacks or two flame blast attacks."
       },
       {
         "name": "Slam",
-        "text": " Melee Weapon Attack: +12 to hit, reach 10 ft., one target. Hit: 18 (2d10 + 7) bludgeoning damage plus 18 (5d6) fire damage."
+        "text": "Melee Weapon Attack: +12 to hit, reach 10 ft., one target. Hit: 18 (2d10 + 7) bludgeoning damage plus 18 (5d6) fire damage."
       },
       {
         "name": "Flame Blast",
-        "text": " Ranged Spell Attack: +12 to hit, range 250 ft., one target. Hit: 35 (10d6) fire damage."
+        "text": "Ranged Spell Attack: +12 to hit, range 250 ft., one target. Hit: 35 (10d6) fire damage."
       },
       {
-        "name": "Summon Elementals ",
-        "text": " Imix summons up to three fire elementals and loses 30 hit points for each elemental he summons. Summoned elementals have maximum hit points, appear within 100 feet of Imix, and disappear if Imix is reduced to 0 hit points.",
+        "name": "Summon Elementals",
+        "text": "Imix summons up to three fire elementals and loses 30 hit points for each elemental he summons. Summoned elementals have maximum hit points, appear within 100 feet of Imix, and disappear if Imix is reduced to 0 hit points.",
         "recharge": "1/Day"
       }
     ],
@@ -1067,17 +1067,17 @@
     "legendaryActions": [
       {
         "name": "Heat Wave",
-        "text": " Imix creates a blast of heat within 300 feet of himself. Each creature in the area in physical contact with metal objects (for example, carrying metal weapons or wearing metal armor) takes 9 (2d8) fire damage. Each creature in the area that isn't resistant or immune to fire damage must make a DC 21 Constitution saving throw or gain one level of exhaustion.",
+        "text": "Imix creates a blast of heat within 300 feet of himself. Each creature in the area in physical contact with metal objects (for example, carrying metal weapons or wearing metal armor) takes 9 (2d8) fire damage. Each creature in the area that isn't resistant or immune to fire damage must make a DC 21 Constitution saving throw or gain one level of exhaustion.",
         "cost": 1
       },
       {
-        "name": "Teleport ",
-        "text": " Imix magically teleports up to 120 feet to an unoccupied space he can see. Anything Imix is wearing or carrying isn't teleported with him.",
+        "name": "Teleport",
+        "text": "Imix magically teleports up to 120 feet to an unoccupied space he can see. Anything Imix is wearing or carrying isn't teleported with him.",
         "cost": 2
       },
       {
-        "name": "Combustion ",
-        "text": " Imix causes one creature he can see within 30 feet of him to burst into flames. The target must make a DC 21 Constitution saving throw. On a failed save, the target takes 70 (20d6) fire damage and catches fire. A target on fire takes 10 (3d6) fire damage when it starts its turn, and remains on fire until it or another creature takes an action to douse the flames. On a successful save, the target takes half as much damage and doesn't catch fire.",
+        "name": "Combustion",
+        "text": "Imix causes one creature he can see within 30 feet of him to burst into flames. The target must make a DC 21 Constitution saving throw. On a failed save, the target takes 70 (20d6) fire damage and catches fire. A target on fire takes 10 (3d6) fire damage when it starts its turn, and remains on fire until it or another creature takes an action to douse the flames. On a successful save, the target takes half as much damage and doesn't catch fire.",
         "cost": 3
       }
     ]
@@ -1104,24 +1104,24 @@
     "traits": [
       {
         "name": "Earthen Defeat",
-        "text": " When Marlos drops to 0 hit points, his body transforms into mud and collapses into a pool. Anything he is wearing or carrying is left behind."
+        "text": "When Marlos drops to 0 hit points, his body transforms into mud and collapses into a pool. Anything he is wearing or carrying is left behind."
       },
       {
         "name": "Earth Passage",
-        "text": " Marlos can move in difficult terrain composed of anything made from earth or stone as if it were normal terrain. He can move through solid earth and rock as if it were difficult terrain. If he ends his turn there, he is shunted into the nearest space he last occupied."
+        "text": "Marlos can move in difficult terrain composed of anything made from earth or stone as if it were normal terrain. He can move through solid earth and rock as if it were difficult terrain. If he ends his turn there, he is shunted into the nearest space he last occupied."
       },
       {
-        "name": "Legendary Resistance ",
-        "text": " If Marlos fails a saving throw, he can choose to succeed instead.",
+        "name": "Legendary Resistance",
+        "text": "If Marlos fails a saving throw, he can choose to succeed instead.",
         "recharge": "2/Day"
       },
       {
         "name": "Petrifying Gaze",
-        "text": " When a creature that can see Marlos's eyes starts its turn within 30 feet of him, Marlos can force it to make a DC 14 Constitution saving throw if Marlos isn't incapacitated and can see the creature. If the saving throw fails by 5 or more, the creature is instantly petrified. Otherwise, a creature that fails the save begins to turn to stone and is restrained. The restrained creature must repeat the saving throw at the end of its next turn, becoming petrified on a failure or ending the effect on a success. The petrification lasts until the creature is freed by the greater restoration spell or other magic."
+        "text": "When a creature that can see Marlos's eyes starts its turn within 30 feet of him, Marlos can force it to make a DC 14 Constitution saving throw if Marlos isn't incapacitated and can see the creature. If the saving throw fails by 5 or more, the creature is instantly petrified. Otherwise, a creature that fails the save begins to turn to stone and is restrained. The restrained creature must repeat the saving throw at the end of its next turn, becoming petrified on a failure or ending the effect on a success. The petrification lasts until the creature is freed by the greater restoration spell or other magic."
       },
       {
         "name": "Unless surprised, a creature can avert its eyes to avoid the saving throw at the start of its turn",
-        "text": " If the creature does so, it can't see Marlos until the start of its next turn, when it can decide to avert its eyes again. If the creature looks at Marlos in the meantime, it must immediately make the save."
+        "text": "If the creature does so, it can't see Marlos until the start of its next turn, when it can decide to avert its eyes again. If the creature looks at Marlos in the meantime, it must immediately make the save."
       },
       {
         "name": "If Marlos sees himself reflected on a polished surface within 30 feet of him and in an area of bright light, Marlos is, due to his curse, affected by his own gaze",
@@ -1131,15 +1131,15 @@
     "actions": [
       {
         "name": "Multiattack",
-        "text": " Marlos makes three melee attacks, one with his snake hair and two with Ironfang."
+        "text": "Marlos makes three melee attacks, one with his snake hair and two with Ironfang."
       },
       {
         "name": "Snake Hair",
-        "text": " Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) piercing damage plus 14 (4d6) poison damage."
+        "text": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) piercing damage plus 14 (4d6) poison damage."
       },
       {
         "name": "Ironfang",
-        "text": " Melee Weapon Attack: +9 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) piercing damage plus 4 (1d8) thunder damage."
+        "text": "Melee Weapon Attack: +9 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) piercing damage plus 4 (1d8) thunder damage."
       }
     ]
   },
@@ -1164,21 +1164,21 @@
     "traits": [
       {
         "name": "Earth Walk",
-        "text": " Moving through difficult terrain made of earth or stone costs Miraj no extra movement."
+        "text": "Moving through difficult terrain made of earth or stone costs Miraj no extra movement."
       },
       {
         "name": "Innate Spellcasting",
-        "text": " Miraj's innate spellcasting ability is Constitution (spell save DC 14). He can innately cast the following spell, requiring no material components:\n1/day: pass without trace"
+        "text": "Miraj's innate spellcasting ability is Constitution (spell save DC 14). He can innately cast the following spell, requiring no material components:\n1/day: pass without trace"
       },
       {
         "name": "Spellcasting",
-        "text": " Miraj is an 11th-level spellcaster. His spellcasting ability is Charisma (spell save DC 15, +7 to hit with spell attacks). He knows the following sorcerer spells:\nCantrips (at will): acid splash, blade ward, friends, light, message, mold earth\n1st level (4 slots): chromatic orb, mage armor, magic missile\n2nd level (3 slots): Maximilian's earthen grasp, shatter, suggestion\n3rd level (3 slots): counterspell, erupting earth\n4th level (3 slots): polymorph, stoneskin\n5th level (2 slots): wall of stone\n6th level (1 slot): move earth"
+        "text": "Miraj is an 11th-level spellcaster. His spellcasting ability is Charisma (spell save DC 15, +7 to hit with spell attacks). He knows the following sorcerer spells:\nCantrips (at will): acid splash, blade ward, friends, light, message, mold earth\n1st level (4 slots): chromatic orb, mage armor, magic missile\n2nd level (3 slots): Maximilian's earthen grasp, shatter, suggestion\n3rd level (3 slots): counterspell, erupting earth\n4th level (3 slots): polymorph, stoneskin\n5th level (2 slots): wall of stone\n6th level (1 slot): move earth"
       }
     ],
     "actions": [
       {
         "name": "Staff",
-        "text": " Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 1) bludgeoning damage, or 5 (1d8 + 1) bludgeoning damage when used with two hands."
+        "text": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 1) bludgeoning damage, or 5 (1d8 + 1) bludgeoning damage when used with two hands."
       }
     ]
   },
@@ -1206,42 +1206,42 @@
     "traits": [
       {
         "name": "Empowered Attacks",
-        "text": " Ogremoch's slam attacks are treated as magical and adamantine for the purpose of bypassing resistance and immunity to nonmagical weapons."
+        "text": "Ogremoch's slam attacks are treated as magical and adamantine for the purpose of bypassing resistance and immunity to nonmagical weapons."
       },
       {
         "name": "Innate Spellcasting",
-        "text": " Ogremoch's innate spellcasting ability is Charisma (spell save DC 20, +12 to hit with spell attacks). He can innately cast the following spells, requiring no material components:\nAt will: meld into stone, move earth, wall of stone"
+        "text": "Ogremoch's innate spellcasting ability is Charisma (spell save DC 20, +12 to hit with spell attacks). He can innately cast the following spells, requiring no material components:\nAt will: meld into stone, move earth, wall of stone"
       },
       {
-        "name": "Legendary Resistance ",
-        "text": " If Ogremoch fails a saving throw, he can choose to succeed instead.",
+        "name": "Legendary Resistance",
+        "text": "If Ogremoch fails a saving throw, he can choose to succeed instead.",
         "recharge": "3/Day"
       },
       {
         "name": "Magic Resistance",
-        "text": " Ogremoch has advantage on saving throws against spells and other magical effects."
+        "text": "Ogremoch has advantage on saving throws against spells and other magical effects."
       },
       {
         "name": "Siege Monster",
-        "text": " Ogremoch deals double damage to objects and structures with his melee and ranged weapon attacks."
+        "text": "Ogremoch deals double damage to objects and structures with his melee and ranged weapon attacks."
       }
     ],
     "actions": [
       {
         "name": "Multiattack",
-        "text": " Ogremoch makes two slam attacks."
+        "text": "Ogremoch makes two slam attacks."
       },
       {
         "name": "Slam",
-        "text": " Melee Weapon Attack: +14 to hit, reach 15 ft., one target. Hit: 30 (4d10 + 8) bludgeoning damage."
+        "text": "Melee Weapon Attack: +14 to hit, reach 15 ft., one target. Hit: 30 (4d10 + 8) bludgeoning damage."
       },
       {
         "name": "Boulder",
-        "text": " Ranged Weapon Attack: +6 to hit, range 500 ft., one target. Hit: 46 (7d10 + 8) bludgeoning damage. If the target is a creature, it must succeed on a DC 23 Strength saving throw or be knocked prone."
+        "text": "Ranged Weapon Attack: +6 to hit, range 500 ft., one target. Hit: 46 (7d10 + 8) bludgeoning damage. If the target is a creature, it must succeed on a DC 23 Strength saving throw or be knocked prone."
       },
       {
-        "name": "Summon Elementals ",
-        "text": " Ogremoch summons up to three earth elementals and loses 30 hit points for each elemental he summons. Summoned elementals have maximum hit points, appear within 100 feet of Ogremoch, and disappear if Ogremoch is reduced to 0 hit points.",
+        "name": "Summon Elementals",
+        "text": "Ogremoch summons up to three earth elementals and loses 30 hit points for each elemental he summons. Summoned elementals have maximum hit points, appear within 100 feet of Ogremoch, and disappear if Ogremoch is reduced to 0 hit points.",
         "recharge": "1/Day"
       }
     ],
@@ -1249,17 +1249,17 @@
     "legendaryActions": [
       {
         "name": "Illuminating Crystals",
-        "text": " Ogremoch's crystalline protrusions flare. Each creature within 30 feet of Ogremoch becomes outlined in orange light, shedding dim light in a 10-foot radius. Any attack roll against an affected creature has advantage if the attacker can see it, and the affected creature can't benefit from being invisible.",
+        "text": "Ogremoch's crystalline protrusions flare. Each creature within 30 feet of Ogremoch becomes outlined in orange light, shedding dim light in a 10-foot radius. Any attack roll against an affected creature has advantage if the attacker can see it, and the affected creature can't benefit from being invisible.",
         "cost": 1
       },
       {
-        "name": "Stomp ",
-        "text": " Ogremoch stomps the ground, creating an earth tremor that extends in a 30-foot radius. Other creatures standing on the ground in that radius must succeed on a DC 23 Dexterity saving throw or fall prone.",
+        "name": "Stomp",
+        "text": "Ogremoch stomps the ground, creating an earth tremor that extends in a 30-foot radius. Other creatures standing on the ground in that radius must succeed on a DC 23 Dexterity saving throw or fall prone.",
         "cost": 2
       },
       {
-        "name": "Create Gargoyle ",
-        "text": " Ogremoch's hit points are reduced by 50 as he breaks off a chunk of his body and places it on the ground in an unoccupied space within 15 feet of him. The chunk of rock instantly transforms into a gargoyle and acts on the same initiative count as Ogremoch. Ogremoch can't use this action if he has 50 hit points or fewer. The gargoyle obeys Ogremoch's commands and fights until destroyed.",
+        "name": "Create Gargoyle",
+        "text": "Ogremoch's hit points are reduced by 50 as he breaks off a chunk of his body and places it on the ground in an unoccupied space within 15 feet of him. The chunk of rock instantly transforms into a gargoyle and acts on the same initiative count as Ogremoch. Ogremoch can't use this action if he has 50 hit points or fewer. The gargoyle obeys Ogremoch's commands and fights until destroyed.",
         "cost": 3
       }
     ]
@@ -1288,42 +1288,42 @@
     "traits": [
       {
         "name": "Empowered Attacks",
-        "text": " Olhydra's slam attacks are treated as magical for the purpose of bypassing resistance and immunity to nonmagical weapons."
+        "text": "Olhydra's slam attacks are treated as magical for the purpose of bypassing resistance and immunity to nonmagical weapons."
       },
       {
         "name": "Innate Spellcasting",
-        "text": " Olhydra's innate spellcasting ability is Charisma (spell save DC 20, +12 to hit with spell attacks). She can innately cast the following spells, requiring no material components:\nAt will: wall of ice\n3/day: ice storm\n1/day: storm of vengeance"
+        "text": "Olhydra's innate spellcasting ability is Charisma (spell save DC 20, +12 to hit with spell attacks). She can innately cast the following spells, requiring no material components:\nAt will: wall of ice\n3/day: ice storm\n1/day: storm of vengeance"
       },
       {
-        "name": "Legendary Resistance ",
-        "text": " If Olhydra fails a saving throw, she can choose to succeed instead.",
+        "name": "Legendary Resistance",
+        "text": "If Olhydra fails a saving throw, she can choose to succeed instead.",
         "recharge": "3/Day"
       },
       {
         "name": "Magic Resistance",
-        "text": " Olhydra has advantage on saving throws against spells and other magical effects."
+        "text": "Olhydra has advantage on saving throws against spells and other magical effects."
       },
       {
         "name": "Water Form",
-        "text": " Olhydra can enter a hostile creature's space and stop there. She can move through a space as narrow as 1 inch wide without squeezing."
+        "text": "Olhydra can enter a hostile creature's space and stop there. She can move through a space as narrow as 1 inch wide without squeezing."
       }
     ],
     "actions": [
       {
         "name": "Multiattack",
-        "text": " Olhydra makes two slam attacks or two water jet attacks."
+        "text": "Olhydra makes two slam attacks or two water jet attacks."
       },
       {
         "name": "Slam",
-        "text": " Melee Weapon Attack: +11 to hit, reach 10 ft., one target. Hit: 21 (3d10 + 5) bludgeoning damage, and the target is grappled (escape DC 19). Olhydra can grapple up to four targets. When Olhydra moves, all creatures she is grappling move with her."
+        "text": "Melee Weapon Attack: +11 to hit, reach 10 ft., one target. Hit: 21 (3d10 + 5) bludgeoning damage, and the target is grappled (escape DC 19). Olhydra can grapple up to four targets. When Olhydra moves, all creatures she is grappling move with her."
       },
       {
         "name": "Water Jet",
-        "text": " Ranged Weapon Attack: +12 to hit, range 120 ft., one target. Hit: 21 (6d6) bludgeoning damage, and the target is knocked prone if it fails a DC 19 Strength saving throw."
+        "text": "Ranged Weapon Attack: +12 to hit, range 120 ft., one target. Hit: 21 (6d6) bludgeoning damage, and the target is knocked prone if it fails a DC 19 Strength saving throw."
       },
       {
-        "name": "Summon Elementals ",
-        "text": " Olhydra summons up to three water elementals and loses 30 hit points for each elemental she summons. Summoned elementals have maximum hit points, appear within 100 feet of Olhydra, and disappear if Olhydra is reduced to 0 hit points.",
+        "name": "Summon Elementals",
+        "text": "Olhydra summons up to three water elementals and loses 30 hit points for each elemental she summons. Summoned elementals have maximum hit points, appear within 100 feet of Olhydra, and disappear if Olhydra is reduced to 0 hit points.",
         "recharge": "1/Day"
       }
     ],
@@ -1331,17 +1331,17 @@
     "legendaryActions": [
       {
         "name": "Crush",
-        "text": " One creature that Olhydra is grappling is crushed for 21 (3d10 + 5) bludgeoning damage.",
+        "text": "One creature that Olhydra is grappling is crushed for 21 (3d10 + 5) bludgeoning damage.",
         "cost": 1
       },
       {
-        "name": "Fling ",
-        "text": " Olhydra releases one creature she is grappling by flinging the creature up to 60 feet away from her, in a direction of her choice. If the flung creature comes into contact with a solid surface, such as a wall or floor, the creature takes 1d6 bludgeoning damage for every 10 feet it was flung.",
+        "name": "Fling",
+        "text": "Olhydra releases one creature she is grappling by flinging the creature up to 60 feet away from her, in a direction of her choice. If the flung creature comes into contact with a solid surface, such as a wall or floor, the creature takes 1d6 bludgeoning damage for every 10 feet it was flung.",
         "cost": 2
       },
       {
-        "name": "Water to Acid ",
-        "text": " Olhydra transforms her watery body into acid. This effect lasts until Olhydra's next turn. Any creature that comes into contact with Olhydra or hits her with a melee attack while standing within 5 feet of her takes 11 (2d10) acid damage. Any creature grappled by Olhydra takes 22 (4d10) acid damage at the start of its turn.",
+        "name": "Water to Acid",
+        "text": "Olhydra transforms her watery body into acid. This effect lasts until Olhydra's next turn. Any creature that comes into contact with Olhydra or hits her with a melee attack while standing within 5 feet of her takes 11 (2d10) acid damage. Any creature grappled by Olhydra takes 22 (4d10) acid damage at the start of its turn.",
         "cost": 3
       }
     ]
@@ -1368,21 +1368,21 @@
     "traits": [
       {
         "name": "Chilling Mist",
-        "text": " While it is alive, the one-eyed shiver projects an aura of cold mist within 10 feet of itself. If the one-eyed shiver deals damage to a creature in this area, the creature also takes 5 (1d10) cold damage."
+        "text": "While it is alive, the one-eyed shiver projects an aura of cold mist within 10 feet of itself. If the one-eyed shiver deals damage to a creature in this area, the creature also takes 5 (1d10) cold damage."
       },
       {
         "name": "Spellcasting",
-        "text": " The one-eyed shiver is a 5th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). It knows the following sorcerer spells:\nCantrips (at will): chill touch, mage hand\n1st level (4 slots): fog cloud, mage armor, thunderwave\n2nd level (3 slots): mirror image, misty step\n3rd level (2 slots): fear"
+        "text": "The one-eyed shiver is a 5th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). It knows the following sorcerer spells:\nCantrips (at will): chill touch, mage hand\n1st level (4 slots): fog cloud, mage armor, thunderwave\n2nd level (3 slots): mirror image, misty step\n3rd level (2 slots): fear"
       }
     ],
     "actions": [
       {
         "name": "Dagger",
-        "text": " Melee Weapon Attack: +4 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage."
+        "text": "Melee Weapon Attack: +4 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage."
       },
       {
         "name": "Eye of Frost",
-        "text": " The one-eyed shiver casts ray of frost from its missing eye. If it hits, the target is also restrained. A target restrained in this way can end the condition by using an action, succeeding on a DC 13 Strength check."
+        "text": "The one-eyed shiver casts ray of frost from its missing eye. If it hits, the target is also restrained. A target restrained in this way can end the condition by using an action, succeeding on a DC 13 Strength check."
       }
     ]
   },
@@ -1408,22 +1408,22 @@
     "traits": [
       {
         "name": "Grim Harvest",
-        "text": " Once per turn when Oreioth kills one or more creatures with a spell of 1st level or higher, he regains hit points equal to twice the spell's level."
+        "text": "Once per turn when Oreioth kills one or more creatures with a spell of 1st level or higher, he regains hit points equal to twice the spell's level."
       },
       {
         "name": "Spellcasting",
-        "text": " Oreioth is a 6th-level spellcaster. His spellcasting ability is Intelligence (spell save DC 13, +5 to hit with spell attacks). He has the following wizard spells prepared:\nCantrips (at will): chill touch, minor illusion, prestidigitation, shocking grasp\n1st level (4 slots): false life, mage armor, magic missile, ray of sickness\n2nd level (3 slots): crown of madness, misty step\n3rd level (3 slots): animate dead, vampiric touch"
+        "text": "Oreioth is a 6th-level spellcaster. His spellcasting ability is Intelligence (spell save DC 13, +5 to hit with spell attacks). He has the following wizard spells prepared:\nCantrips (at will): chill touch, minor illusion, prestidigitation, shocking grasp\n1st level (4 slots): false life, mage armor, magic missile, ray of sickness\n2nd level (3 slots): crown of madness, misty step\n3rd level (3 slots): animate dead, vampiric touch"
       },
       {
-        "name": "Swift Animation ",
-        "text": " When a living Medium or Small humanoid within 30 feet of Oreioth dies, he can use an action on his next turn to cast animate dead on that humanoid's corpse, instead of using the spell's normal casting time.",
+        "name": "Swift Animation",
+        "text": "When a living Medium or Small humanoid within 30 feet of Oreioth dies, he can use an action on his next turn to cast animate dead on that humanoid's corpse, instead of using the spell's normal casting time.",
         "recharge": "Recharges after a Long Rest"
       }
     ],
     "actions": [
       {
         "name": "Dagger",
-        "text": " Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 3 (1d4 + 1) piercing damage."
+        "text": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 3 (1d4 + 1) piercing damage."
       }
     ]
   },
@@ -1449,21 +1449,21 @@
     "traits": [
       {
         "name": "Searing Armor",
-        "text": " The razerblast's armor is hot. Any creature grappling the razerblast or grappled by it takes 5 (1d10) fire damage at the end of that creature's turn."
+        "text": "The razerblast's armor is hot. Any creature grappling the razerblast or grappled by it takes 5 (1d10) fire damage at the end of that creature's turn."
       },
       {
         "name": "Shrapnel Explosion",
-        "text": " When the razerblast drops to 0 hit points, a flaming orb in its chest explodes, destroying the razerblast's body and scattering its armor as shrapnel. Creatures within 10 feet of the razerblast when it explodes must succeed on a DC 12 Dexterity saving throw, taking 21 (6d6) piercing damage on a failed save, or half as much damage on a successful one."
+        "text": "When the razerblast drops to 0 hit points, a flaming orb in its chest explodes, destroying the razerblast's body and scattering its armor as shrapnel. Creatures within 10 feet of the razerblast when it explodes must succeed on a DC 12 Dexterity saving throw, taking 21 (6d6) piercing damage on a failed save, or half as much damage on a successful one."
       }
     ],
     "actions": [
       {
         "name": "Multiattack",
-        "text": " The razerblast makes three melee attacks."
+        "text": "The razerblast makes three melee attacks."
       },
       {
         "name": "Spear",
-        "text": " Melee or Ranged Weapon Attack: +6 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 6 (1d6 + 3) piercing damage, or 7 (1d8 + 3) piercing damage if used with two hands to make a melee attack, plus 3 (1d6) fire damage."
+        "text": "Melee or Ranged Weapon Attack: +6 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 6 (1d6 + 3) piercing damage, or 7 (1d8 + 3) piercing damage if used with two hands to make a melee attack, plus 3 (1d6) fire damage."
       }
     ]
   },
@@ -1488,21 +1488,21 @@
     "traits": [
       {
         "name": "Unarmored Defense",
-        "text": " While the monk is wearing no armor and wielding no shield, its AC includes its Wisdom modifier."
+        "text": "While the monk is wearing no armor and wielding no shield, its AC includes its Wisdom modifier."
       },
       {
         "name": "Unarmored Movement",
-        "text": " While the monk is wearing no armor and wielding no shield, its walking speed increases by 10 feet (included in its speed)."
+        "text": "While the monk is wearing no armor and wielding no shield, its walking speed increases by 10 feet (included in its speed)."
       }
     ],
     "actions": [
       {
         "name": "Multiattack",
-        "text": " The monk makes two melee attacks."
+        "text": "The monk makes two melee attacks."
       },
       {
         "name": "Unarmed Strike",
-        "text": " Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) bludgeoning damage."
+        "text": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) bludgeoning damage."
       }
     ]
   },
@@ -1528,21 +1528,21 @@
     "traits": [
       {
         "name": "Amphibious",
-        "text": " Shoalar can breathe air and water."
+        "text": "Shoalar can breathe air and water."
       },
       {
         "name": "Innate Spellcasting",
-        "text": " Shoalar's innate spellcasting ability is Constitution (spell save DC 13, +5 to hit with spell attacks). He can innately cast the following spells:\nAt will: shape water\n1/day: create or destroy water"
+        "text": "Shoalar's innate spellcasting ability is Constitution (spell save DC 13, +5 to hit with spell attacks). He can innately cast the following spells:\nAt will: shape water\n1/day: create or destroy water"
       },
       {
         "name": "Spellcasting",
-        "text": " Shoalar is a 5th-level spellcaster. His spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). He knows the following sorcerer spells:\nCantrips (at will): acid splash, chill touch, friends, prestidigitation, ray of frost\n1st level (4 slots): disguise self, mage armor, magic missile\n2nd level (3 slots): hold person, misty step\n3rd level (2 slots): tidal wave"
+        "text": "Shoalar is a 5th-level spellcaster. His spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). He knows the following sorcerer spells:\nCantrips (at will): acid splash, chill touch, friends, prestidigitation, ray of frost\n1st level (4 slots): disguise self, mage armor, magic missile\n2nd level (3 slots): hold person, misty step\n3rd level (2 slots): tidal wave"
       }
     ],
     "actions": [
       {
         "name": "Dagger",
-        "text": " Melee or Ranged Weapon Attack: +3 to hit, reach 5 ft. or ranged 20/60 ft., one target. Hit: 3 (1d4 + 1) piercing damage."
+        "text": "Melee or Ranged Weapon Attack: +3 to hit, reach 5 ft. or ranged 20/60 ft., one target. Hit: 3 (1d4 + 1) piercing damage."
       }
     ]
   },
@@ -1567,13 +1567,13 @@
     "traits": [
       {
         "name": "Spellcasting",
-        "text": " The Skyweaver is a 6th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). It knows the following sorcerer spells:\nCantrips (at will): blade ward, light, message, ray of frost, shocking grasp\n1st level (4 slots): feather fall, mage armor, witch bolt\n2nd level (3 slots): gust of wind, invisibility\n3rd level (3 slots): fly, lightning bolt"
+        "text": "The Skyweaver is a 6th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). It knows the following sorcerer spells:\nCantrips (at will): blade ward, light, message, ray of frost, shocking grasp\n1st level (4 slots): feather fall, mage armor, witch bolt\n2nd level (3 slots): gust of wind, invisibility\n3rd level (3 slots): fly, lightning bolt"
       }
     ],
     "actions": [
       {
         "name": "Dagger",
-        "text": " Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 3 (1d4 + 1) piercing damage."
+        "text": "Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 3 (1d4 + 1) piercing damage."
       }
     ]
   },
@@ -1598,17 +1598,17 @@
     "traits": [
       {
         "name": "Death Burst",
-        "text": " When the Stonemelder dies, it turns to stone and explodes in a burst of rock shards, becoming a smoking pile of rubble. Each creature within 10 feet of the exploding Stonemelder must make a DC 14 Dexterity saving throw, taking 11 (2d10) bludgeoning damage on a failed save, or half as much damage on a successful one."
+        "text": "When the Stonemelder dies, it turns to stone and explodes in a burst of rock shards, becoming a smoking pile of rubble. Each creature within 10 feet of the exploding Stonemelder must make a DC 14 Dexterity saving throw, taking 11 (2d10) bludgeoning damage on a failed save, or half as much damage on a successful one."
       },
       {
         "name": "Spellcasting",
-        "text": " The Stonemelder is a 7th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). It knows the following sorcerer spells:\nCantrips (at will): acid splash, blade ward, light, mending, mold earth\n1st level (4 slots): expeditious retreat, false life, shield\n2nd level (3 slots): Maximilian's earthen grasp, shatter\n3rd level (3 slots): erupting earth, meld into stone\n4th level (1 slot): stoneskin"
+        "text": "The Stonemelder is a 7th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). It knows the following sorcerer spells:\nCantrips (at will): acid splash, blade ward, light, mending, mold earth\n1st level (4 slots): expeditious retreat, false life, shield\n2nd level (3 slots): Maximilian's earthen grasp, shatter\n3rd level (3 slots): erupting earth, meld into stone\n4th level (1 slot): stoneskin"
       }
     ],
     "actions": [
       {
         "name": "Black Earth Rod",
-        "text": " Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) bludgeoning damage. The Stonemelder can also expend a spell slot to deal extra damage, dealing 2d8 bludgeoning damage for a • 1st level slot, plus an additional 1d8 for each level of the slot above 1st."
+        "text": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) bludgeoning damage. The Stonemelder can also expend a spell slot to deal extra damage, dealing 2d8 bludgeoning damage for a • 1st level slot, plus an additional 1d8 for each level of the slot above 1st."
       }
     ]
   },
@@ -1633,21 +1633,21 @@
     "traits": [
       {
         "name": "Spellcasting",
-        "text": " Thurl is a 5th-level spellcaster. His spellcasting ability is Charisma (spell save DC 12, +4 to hit with spell attacks). Thurl knows the following sorcerer spells:\nCantrips (at will): friends, gust, light, message, ray of frost\n1st level (4 slots): expeditious retreat, feather fall, jump\n2nd level (3 slots): levitate, misty step\n3rd level (2 slots): haste"
+        "text": "Thurl is a 5th-level spellcaster. His spellcasting ability is Charisma (spell save DC 12, +4 to hit with spell attacks). Thurl knows the following sorcerer spells:\nCantrips (at will): friends, gust, light, message, ray of frost\n1st level (4 slots): expeditious retreat, feather fall, jump\n2nd level (3 slots): levitate, misty step\n3rd level (2 slots): haste"
       }
     ],
     "actions": [
       {
         "name": "Multiattack",
-        "text": " Thurl makes two melee attacks."
+        "text": "Thurl makes two melee attacks."
       },
       {
         "name": "Greatsword",
-        "text": " Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) slashing damage."
+        "text": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) slashing damage."
       },
       {
         "name": "Lance",
-        "text": " Melee Weapon Attack: +5 to hit, reach 10 ft., one target. Hit: 9 (1d12 + 3) piercing damage."
+        "text": "Melee Weapon Attack: +5 to hit, reach 10 ft., one target. Hit: 9 (1d12 + 3) piercing damage."
       }
     ]
   },
@@ -1673,26 +1673,26 @@
     "traits": [
       {
         "name": "Funeral Pyre",
-        "text": " When Vanifer drops to 0 hit points, her body is consumed in a flash of fire and smoke. Anything she was wearing or carrying is left behind among ashes."
+        "text": "When Vanifer drops to 0 hit points, her body is consumed in a flash of fire and smoke. Anything she was wearing or carrying is left behind among ashes."
       },
       {
-        "name": "Legendary Resistance ",
-        "text": " If Vanifer fails a saving throw, she can choose to succeed instead.",
+        "name": "Legendary Resistance",
+        "text": "If Vanifer fails a saving throw, she can choose to succeed instead.",
         "recharge": "2/Day"
       },
       {
         "name": "Spellcasting",
-        "text": " Vanifer is a 10th-level spellcaster. Her spellcasting ability is Charisma (spell save DC 16, +8 to hit with spell attacks). Vanifer knows the following sorcerer spells:\nCantrips (at will): chill touch, fire bolt, friends, mage hand, message, produce flame, thaumaturgy\n1st level (4 slots): burning hands, chromatic orb, hellish rebuke, shield\n2nd level (3 slots): darkness, detect thoughts, misty step, scorching ray\n3rd level (3 slots): counterspell, fireball, hypnotic pattern\n4th level (3 slots): wall of fire\n5th level (2 slots): dominate person"
+        "text": "Vanifer is a 10th-level spellcaster. Her spellcasting ability is Charisma (spell save DC 16, +8 to hit with spell attacks). Vanifer knows the following sorcerer spells:\nCantrips (at will): chill touch, fire bolt, friends, mage hand, message, produce flame, thaumaturgy\n1st level (4 slots): burning hands, chromatic orb, hellish rebuke, shield\n2nd level (3 slots): darkness, detect thoughts, misty step, scorching ray\n3rd level (3 slots): counterspell, fireball, hypnotic pattern\n4th level (3 slots): wall of fire\n5th level (2 slots): dominate person"
       }
     ],
     "actions": [
       {
         "name": "Multiattack",
-        "text": " Vanifer makes two attacks."
+        "text": "Vanifer makes two attacks."
       },
       {
         "name": "Tinderstrike",
-        "text": " Melee or Ranged Weapon Attack: +9 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 7 (1d4 + 5) piercing damage plus 7 (2d6) fire damage."
+        "text": "Melee or Ranged Weapon Attack: +9 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 7 (1d4 + 5) piercing damage plus 7 (2d6) fire damage."
       }
     ]
   },
@@ -1719,21 +1719,21 @@
     "traits": [
       {
         "name": "Magic Weapons",
-        "text": " The myrmidon's weapon attacks are magical."
+        "text": "The myrmidon's weapon attacks are magical."
       }
     ],
     "actions": [
       {
         "name": "Multiattack",
-        "text": " The myrmidon makes three trident attacks."
+        "text": "The myrmidon makes three trident attacks."
       },
       {
         "name": "Trident",
-        "text": " Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 7 (1d6 + 4) piercing damage."
+        "text": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 7 (1d6 + 4) piercing damage."
       },
       {
-        "name": "Freezing Strikes ",
-        "text": " The myrmidon uses Multiattack. Each attack that hits deals an extra 5 (1d10) cold damage, and the target's speed is reduced by 10 feet until the end of the myrmidon's next turn.",
+        "name": "Freezing Strikes",
+        "text": "The myrmidon uses Multiattack. Each attack that hits deals an extra 5 (1d10) cold damage, and the target's speed is reduced by 10 feet until the end of the myrmidon's next turn.",
         "recharge": "Recharge 6"
       }
     ]
@@ -1759,21 +1759,21 @@
     "traits": [
       {
         "name": "Brave Devotion",
-        "text": " Wiggan has advantage on saving throws against being charmed or frightened."
+        "text": "Wiggan has advantage on saving throws against being charmed or frightened."
       },
       {
         "name": "Spellcasting",
-        "text": " Wiggan is a 4th-level spellcaster. His spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). He has the following cleric spells prepared:\nCantrips (at will): guidance, light, mending, shillelagh, thaumaturgy\n1st Level (4 slots): animal friendship, cure wounds, healing word, inflict wounds, speak with animals\n2nd Level (3 slots): barkskin, spike growth, spiritual weapon"
+        "text": "Wiggan is a 4th-level spellcaster. His spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). He has the following cleric spells prepared:\nCantrips (at will): guidance, light, mending, shillelagh, thaumaturgy\n1st Level (4 slots): animal friendship, cure wounds, healing word, inflict wounds, speak with animals\n2nd Level (3 slots): barkskin, spike growth, spiritual weapon"
       }
     ],
     "actions": [
       {
         "name": "Multiattack",
-        "text": " Wiggan makes two attacks with his wooden cane."
+        "text": "Wiggan makes two attacks with his wooden cane."
       },
       {
         "name": "Wooden Cane",
-        "text": " Melee Weapon Attack: +0 to hit (+4 to hit with shillelagh), reach 5 ft., one target. Hit: 1 (1d4-1) bludgeoning damage, or 6 (1d8 + 2) bludgeoning damage with shillelagh."
+        "text": "Melee Weapon Attack: +0 to hit (+4 to hit with shillelagh), reach 5 ft., one target. Hit: 1 (1d4-1) bludgeoning damage, or 6 (1d8 + 2) bludgeoning damage with shillelagh."
       }
     ]
   },
@@ -1798,21 +1798,21 @@
     "traits": [
       {
         "name": "Fey Ancestry",
-        "text": " Windharrow has advantage on saving throws against being charmed, and magic can't put him to sleep."
+        "text": "Windharrow has advantage on saving throws against being charmed, and magic can't put him to sleep."
       },
       {
         "name": "Spellcasting",
-        "text": " Windharrow is an 8th-level spellcaster. His spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). Windharrow knows the following bard spells:\nCantrips (at will): friends, prestidigitation, vicious mockery\n1st level (4 slots): disguise self, dissonant whispers, thunderwave\n2nd level (3 slots): invisibility, shatter, silence\n3rd level (3 slots): nondetection, sending, tongues\n4th level (2 slots): confusion, dimension door"
+        "text": "Windharrow is an 8th-level spellcaster. His spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). Windharrow knows the following bard spells:\nCantrips (at will): friends, prestidigitation, vicious mockery\n1st level (4 slots): disguise self, dissonant whispers, thunderwave\n2nd level (3 slots): invisibility, shatter, silence\n3rd level (3 slots): nondetection, sending, tongues\n4th level (2 slots): confusion, dimension door"
       }
     ],
     "actions": [
       {
         "name": "Multiattack",
-        "text": " Windharrow makes two melee attacks."
+        "text": "Windharrow makes two melee attacks."
       },
       {
         "name": "Rapier",
-        "text": " Melee Weapon Attack: +5 to hit, reach 5 ft., one creature. Hit: 7 (1d8 + 3) piercing damage."
+        "text": "Melee Weapon Attack: +5 to hit, reach 5 ft., one creature. Hit: 7 (1d8 + 3) piercing damage."
       }
     ]
   },
@@ -1840,47 +1840,47 @@
     "traits": [
       {
         "name": "Air Form",
-        "text": " Yan-C-Bin can enter a hostile creature's space and stop there. He can move through a space as narrow as 1 inch wide without squeezing if air could pass through that space."
+        "text": "Yan-C-Bin can enter a hostile creature's space and stop there. He can move through a space as narrow as 1 inch wide without squeezing if air could pass through that space."
       },
       {
         "name": "Empowered Attacks",
-        "text": " Yan-C-Bin's slam attacks are treated as magical for the purpose of bypassing resistance and immunity to nonmagical weapons."
+        "text": "Yan-C-Bin's slam attacks are treated as magical for the purpose of bypassing resistance and immunity to nonmagical weapons."
       },
       {
         "name": "Innate Spellcasting",
-        "text": " Yan-C-Bin's innate spellcasting ability is Charisma (spell save DC 20, +12 to hit with spell attacks). He can innately cast the following spells, requiring no material components:\nAt will: gust of wind, invisibility, lightning bolt\n2/day each: chain lightning, cloudkill, haste"
+        "text": "Yan-C-Bin's innate spellcasting ability is Charisma (spell save DC 20, +12 to hit with spell attacks). He can innately cast the following spells, requiring no material components:\nAt will: gust of wind, invisibility, lightning bolt\n2/day each: chain lightning, cloudkill, haste"
       },
       {
-        "name": "Legendary Resistance ",
-        "text": " If Yan-C-Bin fails a saving throw, he can choose to succeed instead.",
+        "name": "Legendary Resistance",
+        "text": "If Yan-C-Bin fails a saving throw, he can choose to succeed instead.",
         "recharge": "3/Day"
       },
       {
         "name": "Magic Resistance",
-        "text": " Yan-C-Bin has advantage on saving throws against spells and other magical effects."
+        "text": "Yan-C-Bin has advantage on saving throws against spells and other magical effects."
       }
     ],
     "actions": [
       {
         "name": "Multiattack",
-        "text": " Yan-C-Bin makes two slam attacks."
+        "text": "Yan-C-Bin makes two slam attacks."
       },
       {
         "name": "Slam",
-        "text": " Melee Weapon Attack: +14 to hit, reach 10 ft., one target. Hit: 20 (3d8 + 7) force damage plus 10 (3d6) lightning damage."
+        "text": "Melee Weapon Attack: +14 to hit, reach 10 ft., one target. Hit: 20 (3d8 + 7) force damage plus 10 (3d6) lightning damage."
       },
       {
-        "name": "Thundercrack ",
-        "text": " Yan-C-Bin unleashes a terrible thundercrack in a 100-foot- radius sphere centered on himself. All other creatures in the area must succeed on a DC 24 Constitution saving throw or take 31 (9d6) thunder damage and be deafened for 1 minute. On a successful save, a creature takes half as much damage and is deafened until the start of Yan-C-Bin's next turn.",
+        "name": "Thundercrack",
+        "text": "Yan-C-Bin unleashes a terrible thundercrack in a 100-foot- radius sphere centered on himself. All other creatures in the area must succeed on a DC 24 Constitution saving throw or take 31 (9d6) thunder damage and be deafened for 1 minute. On a successful save, a creature takes half as much damage and is deafened until the start of Yan-C-Bin's next turn.",
         "recharge": "Recharges after a Short or Long Rest"
       },
       {
         "name": "Change Shape",
-        "text": " Yan-C-Bin polymorphs into a Medium humanoid. While in polymorphed form, a swirling breeze surrounds him, his eyes are pale and cloudy, and he loses the Air Form trait. He can remain in polymorphed form for up to 1 hour. Reverting to his true form requires an action."
+        "text": "Yan-C-Bin polymorphs into a Medium humanoid. While in polymorphed form, a swirling breeze surrounds him, his eyes are pale and cloudy, and he loses the Air Form trait. He can remain in polymorphed form for up to 1 hour. Reverting to his true form requires an action."
       },
       {
-        "name": "Summon Elementals ",
-        "text": " Yan-C-Bin summons up to three air elementals and loses 30 hit points for each elemental he summons. Summoned elementals have maximum hit points, appear within 100 feet of Yan-C-Bin, and disappear if Yan-C-Bin is reduced to 0 hit points.",
+        "name": "Summon Elementals",
+        "text": "Yan-C-Bin summons up to three air elementals and loses 30 hit points for each elemental he summons. Summoned elementals have maximum hit points, appear within 100 feet of Yan-C-Bin, and disappear if Yan-C-Bin is reduced to 0 hit points.",
         "recharge": "1/Day"
       }
     ],
@@ -1888,17 +1888,17 @@
     "legendaryActions": [
       {
         "name": "Peal of Thunder",
-        "text": " Yan-C-Bin unleashes a peal of thunder that can be heard out to a range of 300 feet. Each creature within 30 feet of Yan-C-Bin takes 5 (1d10) thunder damage.",
+        "text": "Yan-C-Bin unleashes a peal of thunder that can be heard out to a range of 300 feet. Each creature within 30 feet of Yan-C-Bin takes 5 (1d10) thunder damage.",
         "cost": 1
       },
       {
-        "name": "Teleport ",
-        "text": " Yan-C-Bin magically teleports up to 120 feet to an unoccupied space he can see. Anything Yan-C-Bin is wearing or carrying is teleported with him.",
+        "name": "Teleport",
+        "text": "Yan-C-Bin magically teleports up to 120 feet to an unoccupied space he can see. Anything Yan-C-Bin is wearing or carrying is teleported with him.",
         "cost": 2
       },
       {
-        "name": "Suffocate ",
-        "text": " Yan-C-Bin steals the air of one breathing creature he can see within 60 feet of him. The target must make a DC 21 Constitution saving throw. On a failed save, the target drops to 0 hit points and is dying. On a successful save, the target can't breathe or speak until the start of its next turn.",
+        "name": "Suffocate",
+        "text": "Yan-C-Bin steals the air of one breathing creature he can see within 60 feet of him. The target must make a DC 21 Constitution saving throw. On a failed save, the target drops to 0 hit points and is dying. On a successful save, the target can't breathe or speak until the start of its next turn.",
         "cost": 3
       }
     ]

@@ -21,13 +21,13 @@
     "traits": [
       {
         "name": "Spellcasting",
-        "text": " The mage is a 4th-level spellcaster that uses Intelligence as its spellcasting ability (spell save DC 13; +5 to hit with spell attacks). The mage knows the following spells from the wizard's spell list:\nCantrips (at will): light, mage hand, shocking grasp\n1st level (4 slots): charm person, magic missile\n2nd level (3 slots): hold person, misty step"
+        "text": "The mage is a 4th-level spellcaster that uses Intelligence as its spellcasting ability (spell save DC 13; +5 to hit with spell attacks). The mage knows the following spells from the wizard's spell list:\nCantrips (at will): light, mage hand, shocking grasp\n1st level (4 slots): charm person, magic missile\n2nd level (3 slots): hold person, misty step"
       }
     ],
     "actions": [
       {
         "name": "Quarterstaff",
-        "text": " Melee Weapon Attack: +1 to hit, reach 5 ft., one target.  Hit: 3 (1d8-1) bludgeoning damage."
+        "text": "Melee Weapon Attack: +1 to hit, reach 5 ft., one target.  Hit: 3 (1d8-1) bludgeoning damage."
       }
     ]
   },
@@ -54,17 +54,17 @@
     "traits": [
       {
         "name": "Incorporeal Movement",
-        "text": " The wraith can move through an object or another creature, but can't stop there."
+        "text": "The wraith can move through an object or another creature, but can't stop there."
       },
       {
         "name": "Sunlight Sensitivity",
-        "text": " While in sunlight, the wraith has disadvantage on attack rolls and on Wisdom (Perception) checks that rely on sight."
+        "text": "While in sunlight, the wraith has disadvantage on attack rolls and on Wisdom (Perception) checks that rely on sight."
       }
     ],
     "actions": [
       {
         "name": "Life Drain",
-        "text": " Melee Weapon Attack: +5 to hit, reach 5 ft., one creature. Hit: 16 (3d8 + 3) necrotic damage, and the target must succeed on a DC 13 Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken. If this attack reduces the target's hit point maximum to 0, the target dies. This reduction to the target's hit point maximum lasts until the target finishes a long rest."
+        "text": "Melee Weapon Attack: +5 to hit, reach 5 ft., one creature. Hit: 16 (3d8 + 3) necrotic damage, and the target must succeed on a DC 13 Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken. If this attack reduces the target's hit point maximum to 0, the target dies. This reduction to the target's hit point maximum lasts until the target finishes a long rest."
       }
     ]
   },
@@ -90,29 +90,29 @@
     "traits": [
       {
         "name": "Special Equipment",
-        "text": " Nezznar has a spider staff."
+        "text": "Nezznar has a spider staff."
       },
       {
         "name": "Fey Ancestry",
-        "text": " Nezznar has advantage on saving throws against being charmed, and magic can't put him to sleep."
+        "text": "Nezznar has advantage on saving throws against being charmed, and magic can't put him to sleep."
       },
       {
         "name": "Sunlight Sensitivity",
-        "text": " Nezznar has disadvantage on attack rolls when he or his target is in sunlight."
+        "text": "Nezznar has disadvantage on attack rolls when he or his target is in sunlight."
       },
       {
         "name": "Innate Spellcasting",
-        "text": " Nezznar can innately cast the following spells, requiring no material components:\nAt will: dancing lights\n1/day each: darkness, faerie fire (save DC 12)"
+        "text": "Nezznar can innately cast the following spells, requiring no material components:\nAt will: dancing lights\n1/day each: darkness, faerie fire (save DC 12)"
       },
       {
         "name": "Spellcasting",
-        "text": " Nezznar is a 4th-level spellcaster that uses Intelligence as his spellcasting ability (spell save DC 13; +5 to hit with spell attacks). Nezznar has the following spells prepared from the wizard's spell list:\nCantrips (at will): mage hand, ray of frost, shocking grasp\n1st level (4 slots): mage armor, magic missile, shield\n2nd level (3 slots): invisibility, suggestion"
+        "text": "Nezznar is a 4th-level spellcaster that uses Intelligence as his spellcasting ability (spell save DC 13; +5 to hit with spell attacks). Nezznar has the following spells prepared from the wizard's spell list:\nCantrips (at will): mage hand, ray of frost, shocking grasp\n1st level (4 slots): mage armor, magic missile, shield\n2nd level (3 slots): invisibility, suggestion"
       }
     ],
     "actions": [
       {
         "name": "Spider Staff",
-        "text": " Melee Weapon Attack: +1 to hit, reach 5 ft., one target. Hit: 2 (1d6-1) bludgeoning damage plus 3 (1d6) poison damage."
+        "text": "Melee Weapon Attack: +1 to hit, reach 5 ft., one target. Hit: 2 (1d6-1) bludgeoning damage plus 3 (1d6) poison damage."
       }
     ]
   },
@@ -137,11 +137,11 @@
     "actions": [
       {
         "name": "Multiattack",
-        "text": " The ruffian makes two melee attacks."
+        "text": "The ruffian makes two melee attacks."
       },
       {
         "name": "Shortsword",
-        "text": " Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) piercing damage."
+        "text": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) piercing damage."
       }
     ]
   },
@@ -167,15 +167,15 @@
     "actions": [
       {
         "name": "Multiattack",
-        "text": " Sildar makes two melee attacks."
+        "text": "Sildar makes two melee attacks."
       },
       {
         "name": "Longsword",
-        "text": " Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 5 (1d8 + 1) slashing damage."
+        "text": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 5 (1d8 + 1) slashing damage."
       },
       {
         "name": "Heavy Crossbow",
-        "text": " Ranged Weapon Attack: +2 to hit, range 100 ft./400 ft., one target. Hit: 5 (1d10) piercing damage."
+        "text": "Ranged Weapon Attack: +2 to hit, range 100 ft./400 ft., one target. Hit: 5 (1d10) piercing damage."
       }
     ]
   }

@@ -4,6 +4,7 @@ var uglify = require('gulp-uglify');
 var fs = require('fs');
 var rename = require('gulp-rename');
 var jsoncombine = require('gulp-jsoncombine');
+var formatVersion = '0.1.0';
 
 function search(nameKey, myArray){
 	for (var i=0; i < myArray.length; i++) {
@@ -49,7 +50,7 @@ gulp.task('compileSpells', function() {
 
 			sortArray(spells);
 
-			return new Buffer('fifthSpells = { version:1, spells:' + JSON.stringify(spells) + '};');
+			return new Buffer('fifthSpells = { version: "' + formatVersion + '", spells:' + JSON.stringify(spells) + '};');
 		}))
 		.pipe(gulp.dest('./scripts/dist'));
 });
@@ -93,7 +94,7 @@ gulp.task('compileHouseruledSpells', function() {
 
 			sortArray(spells);
 
-			return new Buffer('fifthSpells = { spells:' + JSON.stringify(spells) + '};');
+			return new Buffer('fifthSpells = { version: "' + formatVersion + '", spells:' + JSON.stringify(spells) + '};');
 		}))
 		.pipe(gulp.dest('./scripts/dist'));
 });
@@ -108,7 +109,7 @@ gulp.task('compileMonsters', function() {
 
 			sortArray(monsters);
 
-			return new Buffer('fifthMonsters = { version:1, monsters:' + JSON.stringify(monsters) + '};');
+			return new Buffer('fifthMonsters = { version: "' + formatVersion + '", monsters:' + JSON.stringify(monsters) + '};');
 		}))
 		.pipe(gulp.dest('./scripts/dist'));
 });
