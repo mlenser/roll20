@@ -7,18 +7,32 @@
     "AC": "13 (natural armor)",
     "HP": "22 (4d6+8)",
     "speed": "30 ft.",
-    "abilities": "STR 13 DEX 15 CON 14 INT 4 WIS 11 CHA 6",
+    "strength": "13",
+    "dexterity": "15",
+    "constitution": "14",
+    "intelligence": "4",
+    "wisdom": "11",
+    "charisma": "6",
     "skills": "Perception +4, Stealth +4",
     "damageResistances": "poison",
-    "senses": "darkvision 60 ft., passive Perception 14",
+    "senses": "darkvision 60 ft.",
     "languages": "understands Draconic but can't speak it",
     "challenge": "1/2",
     "traits": [
-      "Pack Tactics. The drake has advantage on an attack roll against a creature if at least one of the drake's allies is within 5 feet of the creature and the ally isn't incapacitated.",
-      "Surprise Attack. If the drake surprises a creature and hits it with an attack during the first round of combat, the target takes an extra 7 (2d6) damage from the attack."
+      {
+        "name": "Pack Tactics",
+        "text": "The drake has advantage on an attack roll against a creature if at least one of the drake's allies is within 5 feet of the creature and the ally isn't incapacitated."
+      },
+      {
+        "name": "Surprise Attack",
+        "text": "If the drake surprises a creature and hits it with an attack during the first round of combat, the target takes an extra 7 (2d6) damage from the attack."
+      }
     ],
     "actions": [
-      "Bite. Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit 4 (1d6 + 1) piercing damage."
+      {
+        "name": "Bite",
+        "text": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit 4 (1d6 + 1) piercing damage."
+      }
     ]
   },
   {
@@ -29,24 +43,39 @@
     "AC": "13 (16 with mage armor)",
     "HP": "39 (6d8+12)",
     "speed": "30 ft.",
-    "abilities": "STR 9 DEX 16 CON 14 INT 16 WIS 13 CHA 11",
+    "strength": "9",
+    "dexterity": "16",
+    "constitution": "14",
+    "intelligence": "16",
+    "wisdom": "13",
+    "charisma": "11",
     "savingThrows": "Int +5, Wis +3",
     "skills": "Arcana +5, Deception +2, Insight +3, Stealth +5",
-    "senses": "passive Perception 11",
     "languages": "Common, Draconic, Infernal, Primordial, Thayan",
     "challenge": "4",
     "traits": [
-      "Special Equipment. Azbara has two scrolls of mage armor.",
-      "Potent Cantrips. When Azbara casts an evocation Cantrips and misses, or the target succeeds on its saving throw, the target still takes half the cantrip's damage but suffers no other effect.",
-      "Sculpt Spells. When Azbara casts an evocation spell that affects other creatures that he can see, he can choose a number of them equal to 1+the spell's level to succeed on their saving throws against the spell. Those creatures take no damage if they would normally take half damage from the spell.",
-      "Spellcasting. Azbara is a 6th-level spellcaster that uses Intelligence as his spellcasting ability (spell save DC 13, +5 to hit with spell attacks). Azbara has the following spells prepared from the wizard spell list:",
-      "• Cantrips (at will): mage hand, prestidigitation, ray of frost, shocking grasp",
-      "• 1st level (4 slots): fog cloud, magic missile, shield, thunderwave",
-      "• 2nd level (3 slots): invisibility, misty step, scorching ray",
-      "• 3rd level (3 slots): counterspell, dispel magic, fireball"
+      {
+        "name": "Special Equipment",
+        "text": "Azbara has two scrolls of mage armor."
+      },
+      {
+        "name": "Potent Cantrips",
+        "text": "When Azbara casts an evocation Cantrips and misses, or the target succeeds on its saving throw, the target still takes half the cantrip's damage but suffers no other effect."
+      },
+      {
+        "name": "Sculpt Spells",
+        "text": "When Azbara casts an evocation spell that affects other creatures that he can see, he can choose a number of them equal to 1+the spell's level to succeed on their saving throws against the spell. Those creatures take no damage if they would normally take half damage from the spell."
+      },
+      {
+        "name": "Spellcasting",
+        "text": "Azbara is a 6th-level spellcaster that uses Intelligence as his spellcasting ability (spell save DC 13, +5 to hit with spell attacks). Azbara has the following spells prepared from the wizard spell list:\nCantrips (at will): mage hand, prestidigitation, ray of frost, shocking grasp\n1st level (4 slots): fog cloud, magic missile, shield, thunderwave\n2nd level (3 slots): invisibility, misty step, scorching ray\n3rd level (3 slots): counterspell, dispel magic, fireball"
+      }
     ],
     "actions": [
-      "Dagger. Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or ranged 20 ft./60 ft., one target. Hit 5 (1d4 + 3) piercing damage."
+      {
+        "name": "Dagger",
+        "text": "Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or ranged 20 ft./60 ft., one target. Hit 5 (1d4 + 3) piercing damage."
+      }
     ]
   },
   {
@@ -57,25 +86,39 @@
     "AC": "17 (splint)",
     "HP": "138 (12d12+60)",
     "speed": "40 ft.",
-    "abilities": "STR 26 DEX 13 CON 20 INT 16 WIS 15 CHA 15",
+    "strength": "26",
+    "dexterity": "13",
+    "constitution": "20",
+    "intelligence": "16",
+    "wisdom": "15",
+    "charisma": "15",
     "savingThrows": "Con +9, Wis +6, Cha +6",
     "skills": "Arcana +7, Insight +6, Intimidation +6, Perception +6",
-    "senses": "passive Perception 16",
     "languages": "Common, Draconic, Giant",
     "challenge": "9",
     "traits": [
-      "Keen Smell. Blagothkus has advantage on Wisdom (Perception) checks that rely on smell.",
-      "Innate Spellcasting. Blagothkus can innately cast the following spells (spell save DC 15), requiring no material components:",
-      "• 3/day each: fog cloud, levitate",
-      "Spellcasting. Blagothkus is a 5th-level spellcaster that uses Intelligence as his spellcasting ability (spell save DC 15, +7 to hit with spell attacks). Blagothkus has the following spells prepared from the wizard spell list:",
-      "• Cantrips (at will): light, mage hand, prestidigitation",
-      "• 1st level (4 slots): detect magic, identify, magic missile, shield",
-      "• 2nd level (3 slots): gust of wind, misty step, shatter",
-      "• 3rd level (2 slots): fly, lightning bolt"
+      {
+        "name": "Keen Smell",
+        "text": "Blagothkus has advantage on Wisdom (Perception) checks that rely on smell."
+      },
+      {
+        "name": "Innate Spellcasting",
+        "text": "Blagothkus can innately cast the following spells (spell save DC 15), requiring no material components:\n3/day each: fog cloud, levitate"
+      },
+      {
+        "name": "Spellcasting",
+        "text": "Blagothkus is a 5th-level spellcaster that uses Intelligence as his spellcasting ability (spell save DC 15, +7 to hit with spell attacks). Blagothkus has the following spells prepared from the wizard spell list:\nCantrips (at will): light, mage hand, prestidigitation\n1st level (4 slots): detect magic, identify, magic missile, shield\n2nd level (3 slots): gust of wind, misty step, shatter\n3rd level (2 slots): fly, lightning bolt"
+      }
     ],
     "actions": [
-      "Multiattack. Blagothkus attacks twice with his morningstar.",
-      "Morningstar. Melee Weapon Attack: +10 to hit, reach 10 ft., one target. Hit 21 (3d8 + 8) piercing damage."
+      {
+        "name": "Multiattack",
+        "text": "Blagothkus attacks twice with his morningstar."
+      },
+      {
+        "name": "Morningstar",
+        "text": "Melee Weapon Attack: +10 to hit, reach 10 ft., one target. Hit 21 (3d8 + 8) piercing damage."
+      }
     ]
   },
   {
@@ -86,20 +129,40 @@
     "AC": "19 (splint, shield)",
     "HP": "93 (11d10+33)",
     "speed": "30 ft.",
-    "abilities": "STR 19 DEX 10 CON 16 INT 13 WIS 14 CHA 12",
+    "strength": "19",
+    "dexterity": "10",
+    "constitution": "16",
+    "intelligence": "13",
+    "wisdom": "14",
+    "charisma": "12",
     "savingThrows": "Str +7, Con +6",
     "skills": "Athletics +7, Intimidation +7, Perception +5, Religion +4",
-    "senses": "passive Perception 15",
     "languages": "Common, Draconic, Giant",
     "challenge": "5",
     "traits": [
-      "Action Surge (Recharges on a Short or Long Rest). On his turn, Othelstan can take one additional action.",
-      "Tiamat's Blessing of Retribution. When Othelstan takes damage that reduces him to 0 hit points, he immediately regains 20 hit points. If he has 20 hit points or fewer at the end of his next turn, he dies."
+      {
+        "name": "Action Surge",
+        "text": "On his turn, Othelstan can take one additional action.",
+        "recharge": "Recharges on a Short or Long Rest"
+      },
+      {
+        "name": "Tiamat's Blessing of Retribution",
+        "text": "When Othelstan takes damage that reduces him to 0 hit points, he immediately regains 20 hit points. If he has 20 hit points or fewer at the end of his next turn, he dies."
+      }
     ],
     "actions": [
-      "Multiattack. Othelstan attacks twice with his flail or spear, or makes two ranged attacks with his spears.",
-      "Flail. Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 8 (1d8 + 4) bludgeoning damage.",
-      "Spear. Melee or Ranged Weapon Attack: +7 to hit, reach 5 ft. or ranged 20 ft./60 ft., one target. Hit: 7 (1d6 + 4) piercing damage."
+      {
+        "name": "Multiattack",
+        "text": "Othelstan attacks twice with his flail or spear, or makes two ranged attacks with his spears."
+      },
+      {
+        "name": "Flail",
+        "text": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 8 (1d8 + 4) bludgeoning damage."
+      },
+      {
+        "name": "Spear",
+        "text": "Melee or Ranged Weapon Attack: +7 to hit, reach 5 ft. or ranged 20 ft./60 ft., one target. Hit: 7 (1d6 + 4) piercing damage."
+      }
     ]
   },
   {
@@ -110,20 +173,39 @@
     "AC": "14 (leather armor)",
     "HP": "16 (3d8+3)",
     "speed": "30 ft.",
-    "abilities": "STR 9 DEX 16 CON 13 INT 11 WIS 10 CHA 12",
+    "strength": "9",
+    "dexterity": "16",
+    "constitution": "13",
+    "intelligence": "11",
+    "wisdom": "10",
+    "charisma": "12",
     "savingThrows": "Wis +2",
     "skills": "Deception +3, Stealth +5",
-    "senses": "passive Perception 10",
     "languages": "Common, Draconic",
     "challenge": "1",
     "traits": [
-      "Dragon Fanatic. The dragonclaw has advantage on saving throws against being charmed or frightened. While the dragonclaw can see a dragon or higher-ranking Cult of the Dragon cultist friendly to it, the dragonclaw ignores the effects of being charmed or frightened.",
-      "Fanatic Advantage. Once per turn, if the dragonclaw makes a weapon attack with advantage on the attack roll and hits, it deals an extra 7 (2d6) damage.",
-      "Pack Tactics. The dragonclaw has advantage on an attack roll against a creature if at least one of the dragonclaw's allies is within 5 feet of the creature and the ally isn't incapacitated."
+      {
+        "name": "Dragon Fanatic",
+        "text": "The dragonclaw has advantage on saving throws against being charmed or frightened. While the dragonclaw can see a dragon or higher-ranking Cult of the Dragon cultist friendly to it, the dragonclaw ignores the effects of being charmed or frightened."
+      },
+      {
+        "name": "Fanatic Advantage",
+        "text": "Once per turn, if the dragonclaw makes a weapon attack with advantage on the attack roll and hits, it deals an extra 7 (2d6) damage."
+      },
+      {
+        "name": "Pack Tactics",
+        "text": "The dragonclaw has advantage on an attack roll against a creature if at least one of the dragonclaw's allies is within 5 feet of the creature and the ally isn't incapacitated."
+      }
     ],
     "actions": [
-      "Multiattack. The dragonclaw attacks twice with its scimitar.",
-      "Scimitar. Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) slashing damage."
+      {
+        "name": "Multiattack",
+        "text": "The dragonclaw attacks twice with its scimitar."
+      },
+      {
+        "name": "Scimitar",
+        "text": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) slashing damage."
+      }
     ]
   },
   {
@@ -134,22 +216,44 @@
     "AC": "14 (leather armor)",
     "HP": "33 (6d8+6)",
     "speed": "30 ft.",
-    "abilities": "STR 11 DEX 16 CON 13 INT 11 WIS 11 CHA 13",
+    "strength": "11",
+    "dexterity": "16",
+    "constitution": "13",
+    "intelligence": "11",
+    "wisdom": "11",
+    "charisma": "13",
     "savingThrows": "Wis +2",
     "skills": "Deception +3, Stealth +5",
     "damageResistances": "one of the following: acid, cold, fire, lightning, or poison",
-    "senses": "passive Perception 10",
     "languages": "Common, Draconic",
     "challenge": "2",
     "traits": [
-      "Dragon Fanatic. The dragonwing has advantage on saving throws against being charmed or frightened. While the dragonwing can see a dragon or higher-ranking Cult of the Dragon cultist friendly to it, the dragonwing ignores the effects of being charmed or frightened.",
-      "Fanatic Advantage. Once per turn, if the dragonwing makes a weapon attack with advantage on the attack roll and hits, the target takes an extra 7 (2d6) damage.",
-      "Limited Flight. The dragonwing can use a bonus action to gain a flying speed of 30 feet until the end of its turn.",
-      "Pack Tactics. The dragonwing has advantage on an attack roll against a creature if at least one of the dragonwing's allies is within 5 feet of the creature and the ally isn't incapacitated."
+      {
+        "name": "Dragon Fanatic",
+        "text": "The dragonwing has advantage on saving throws against being charmed or frightened. While the dragonwing can see a dragon or higher-ranking Cult of the Dragon cultist friendly to it, the dragonwing ignores the effects of being charmed or frightened."
+      },
+      {
+        "name": "Fanatic Advantage",
+        "text": "Once per turn, if the dragonwing makes a weapon attack with advantage on the attack roll and hits, the target takes an extra 7 (2d6) damage."
+      },
+      {
+        "name": "Limited Flight",
+        "text": "The dragonwing can use a bonus action to gain a flying speed of 30 feet until the end of its turn."
+      },
+      {
+        "name": "Pack Tactics",
+        "text": "The dragonwing has advantage on an attack roll against a creature if at least one of the dragonwing's allies is within 5 feet of the creature and the ally isn't incapacitated."
+      }
     ],
     "actions": [
-      "Multiattack. The dragonwing attacks twice with its scimitar.",
-      "Scimitar. Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) slashing damage plus 3 (1d6) damage of the type to which the cultist has resistance."
+      {
+        "name": "Multiattack",
+        "text": "The dragonwing attacks twice with its scimitar."
+      },
+      {
+        "name": "Scimitar",
+        "text": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) slashing damage plus 3 (1d6) damage of the type to which the cultist has resistance."
+      }
     ]
   },
   {
@@ -160,25 +264,48 @@
     "AC": "16 (studded leather, shield)",
     "HP": "52 (7d10+14)",
     "speed": "30 ft.",
-    "abilities": "STR 18 DEX 14 CON 14 INT 16 WIS 10 CHA 8",
+    "strength": "18",
+    "dexterity": "14",
+    "constitution": "14",
+    "intelligence": "16",
+    "wisdom": "10",
+    "charisma": "8",
     "savingThrows": "Str +6, Con +4",
     "skills": "Arcana +5, Deception +1, Insight +2, Perception +2, Religion +5",
-    "senses": "darkvision 60 ft., passive Perception 12",
+    "senses": "darkvision 60 ft.",
     "languages": "Common, Bullywug, Draconic, Elvish, Goblin, Sylvan",
     "challenge": "3",
     "traits": [
-      "Fey Ancestry. Dralmorrer has advantage on saving throws against being charmed, and magic can't put him to sleep.",
-      "Spellcasting. Dralmorrer is a 7th-level spellcaster that uses Intelligence as his spellcasting ability (spell save DC 13, +5 to hit with spell attacks). Dralmorrer has the following spells prepared from the wizard spell list:",
-      "• Cantrips (at will): fire bolt, prestidigitation, shocking grasp",
-      "• 1st level (4 slots): longstrider, magic missile, shield, thunderwave",
-      "• 2nd level (2 slots): magic weapon, misty step",
-      "War Magic. When Dralmorrer uses his action to cast a cantrip, he can also take a bonus action to make one weapon attack.",
-      "Weapon Bond. Provided his longsword is on the same plane Dralmorrer can take a bonus action to teleport it to his hand."
+      {
+        "name": "Fey Ancestry",
+        "text": "Dralmorrer has advantage on saving throws against being charmed, and magic can't put him to sleep."
+      },
+      {
+        "name": "Spellcasting",
+        "text": "Dralmorrer is a 7th-level spellcaster that uses Intelligence as his spellcasting ability (spell save DC 13, +5 to hit with spell attacks). Dralmorrer has the following spells prepared from the wizard spell list:\nCantrips (at will): fire bolt, prestidigitation, shocking grasp\n1st level (4 slots): longstrider, magic missile, shield, thunderwave\n2nd level (2 slots): magic weapon, misty step"
+      },
+      {
+        "name": "War Magic",
+        "text": "When Dralmorrer uses his action to cast a cantrip, he can also take a bonus action to make one weapon attack."
+      },
+      {
+        "name": "Weapon Bond",
+        "text": "Provided his longsword is on the same plane Dralmorrer can take a bonus action to teleport it to his hand."
+      }
     ],
     "actions": [
-      "Multiattack. Dralmorrer attacks twice, either with his longsword or dagger.",
-      "Longsword. Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit 8 (1d8 + 4) slashing damage.",
-      "Dagger. Melee or Ranged Weapon Attack: +6 to hit, reach 5 ft. or ranged 20 ft./60 ft., one target. Hit 6 (1d4 + 4) piercing damage."
+      {
+        "name": "Multiattack",
+        "text": "Dralmorrer attacks twice, either with his longsword or dagger."
+      },
+      {
+        "name": "Longsword",
+        "text": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit 8 (1d8 + 4) slashing damage."
+      },
+      {
+        "name": "Dagger",
+        "text": "Melee or Ranged Weapon Attack: +6 to hit, reach 5 ft. or ranged 20 ft./60 ft., one target. Hit 6 (1d4 + 4) piercing damage."
+      }
     ]
   },
   {
@@ -189,22 +316,31 @@
     "AC": "16 (chain mail)",
     "HP": "44 (8d8+8)",
     "speed": "30 ft.",
-    "abilities": "STR 14 DEX 10 CON 13 INT 11 WIS 18 CHA 15",
+    "strength": "14",
+    "dexterity": "10",
+    "constitution": "13",
+    "intelligence": "11",
+    "wisdom": "18",
+    "charisma": "15",
     "savingThrows": "Wis +6, Cha +4",
     "skills": "Deception +4, History +2, Religion +2",
-    "senses": "passive Perception 14",
     "languages": "Common, Draconic, Infernal",
     "challenge": "2",
     "traits": [
-      "Spellcasting. Frulam is a 5th-level spellcaster that uses Wisdom as her spellcasting ability (spell save DC 14, +6 to hit with spell attacks). Frulam has the following spells prepared from the cleric spell list:",
-      "• Cantrips (at will): light, sacred flame, thaumaturgy",
-      "• 1st level (4 slots): command, cure wounds, healing word, sanctuary",
-      "• 2nd level (3 slots): calm emotions, hold person, spiritual weapon",
-      "• 3rd level (2 slots): mass healing word, spirit guardians"
+      {
+        "name": "Spellcasting",
+        "text": "Frulam is a 5th-level spellcaster that uses Wisdom as her spellcasting ability (spell save DC 14, +6 to hit with spell attacks). Frulam has the following spells prepared from the cleric spell list:\nCantrips (at will): light, sacred flame, thaumaturgy\n1st level (4 slots): command, cure wounds, healing word, sanctuary\n2nd level (3 slots): calm emotions, hold person, spiritual weapon\n3rd level (2 slots): mass healing word, spirit guardians"
+      }
     ],
     "actions": [
-      "Multiattack. Frulam attacks twice with her halberd.",
-      "Halberd. Melee Weapon Attack: +5 to hit, reach 10 ft., one target. Hit: 7 (1d10 + 2) bludgeoning damage."
+      {
+        "name": "Multiattack",
+        "text": "Frulam attacks twice with her halberd."
+      },
+      {
+        "name": "Halberd",
+        "text": "Melee Weapon Attack: +5 to hit, reach 10 ft., one target. Hit: 7 (1d10 + 2) bludgeoning damage."
+      }
     ]
   },
   {
@@ -215,16 +351,30 @@
     "AC": "14 (natural armor)",
     "HP": "52 (7d8+21)",
     "speed": "30 ft.",
-    "abilities": "STR 16 DEX 11 CON 16 INT 4 WIS 10 CHA 7",
+    "strength": "16",
+    "dexterity": "11",
+    "constitution": "16",
+    "intelligence": "4",
+    "wisdom": "10",
+    "charisma": "7",
     "skills": "Perception +2",
     "damageResistances": "lightning",
-    "senses": "darkvision 60 ft., passive Perception 12",
+    "senses": "darkvision 60 ft.",
     "languages": "understands Draconic but can't speak it",
     "challenge": "2",
     "actions": [
-      "Multiattack. The drake attacks twice, once with its bite and once with its tail.",
-      "Bite. Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) piercing damage.",
-      "Tail. Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) bludgeoning damage."
+      {
+        "name": "Multiattack",
+        "text": "The drake attacks twice, once with its bite and once with its tail."
+      },
+      {
+        "name": "Bite",
+        "text": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) piercing damage."
+      },
+      {
+        "name": "Tail",
+        "text": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) bludgeoning damage."
+      }
     ]
   },
   {
@@ -235,22 +385,40 @@
     "AC": "15 (leather armor)",
     "HP": "22 (4d6+8)",
     "speed": "25 ft.",
-    "abilities": "STR 8 DEX 17 CON 14 INT 15 WIS 10 CHA 12",
+    "strength": "8",
+    "dexterity": "17",
+    "constitution": "14",
+    "intelligence": "15",
+    "wisdom": "10",
+    "charisma": "12",
     "savingThrows": "Dex +5, Int +4",
     "skills": "Acrobatics +5, Deception +3, Insight +2, Perception +4, Persuasion +3, Stealth +7",
-    "senses": "darkvision 60 ft., passive Perception 14",
+    "senses": "darkvision 60 ft.",
     "languages": "Common, Gnomish, Goblin, Sylvan",
     "challenge": "1",
     "traits": [
-      "Cunning Action. Jamna can take a bonus action to take the Dash, Disengage, or Hide action.",
-      "Gnome Cunning. Jamna has advantage on Intelligence, Wisdom and Charisma saving throws against magic.",
-      "Spellcasting. Jamna is a 4th-level spellcaster that uses Intelligence as her spellcasting ability (spell save DC 12, +4 to hit with spell attacks). Jamna has the following spells prepared from the wizard spell list.",
-      "• Cantrips (at will): mage hand, minor illusion, prestidigitation, ray of frost",
-      "• 1st level (3 slots): charm person, color spray, disguise self, longstrider"
+      {
+        "name": "Cunning Action",
+        "text": "Jamna can take a bonus action to take the Dash, Disengage, or Hide action."
+      },
+      {
+        "name": "Gnome Cunning",
+        "text": "Jamna has advantage on Intelligence, Wisdom and Charisma saving throws against magic."
+      },
+      {
+        "name": "Spellcasting",
+        "text": "Jamna is a 4th-level spellcaster that uses Intelligence as her spellcasting ability (spell save DC 12, +4 to hit with spell attacks). Jamna has the following spells prepared from the wizard spell list.\nCantrips (at will): mage hand, minor illusion, prestidigitation, ray of frost\n1st level (3 slots): charm person, color spray, disguise self, longstrider"
+      }
     ],
     "actions": [
-      "Multiattack. Jamna attacks twice with her shortswords.",
-      "Shortsword. Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit 6 (1d6 + 3) piercing damage, or 9 (1d6 + 3 plus 1d6) piercing damage if the target is Medium or larger."
+      {
+        "name": "Multiattack",
+        "text": "Jamna attacks twice with her shortswords."
+      },
+      {
+        "name": "Shortsword",
+        "text": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit 6 (1d6 + 3) piercing damage, or 9 (1d6 + 3 plus 1d6) piercing damage if the target is Medium or larger."
+      }
     ]
   },
   {
@@ -261,22 +429,47 @@
     "AC": "17 (splint)",
     "HP": "57 (6d12+18)",
     "speed": "30 ft.",
-    "abilities": "STR 19 DEX 13 CON 16 INT 10 WIS 14 CHA 12",
+    "strength": "19",
+    "dexterity": "13",
+    "constitution": "16",
+    "intelligence": "10",
+    "wisdom": "14",
+    "charisma": "12",
     "savingThrows": "Str +6, Con +5",
     "skills": "Athletics +6, Intimidation +3, Perception +4",
     "damageResistances": "lightning",
-    "senses": "blindsight 10 ft., darkvision 60 ft., passive Perception 14",
+    "senses": "blindsight 10 ft., darkvision 60 ft.",
     "languages": "Common, Draconic",
     "challenge": "4",
     "traits": [
-      "Action Surge (Recharges on a Short or Long Rest). On his turn, Langdedrosa can take one additional action.",
-      "Improved Critical. Langdedrosa's weapon attacks score a critical hit on a roll of 19 or 20."
+      {
+        "name": "Action Surge",
+        "text": "On his turn, Langdedrosa can take one additional action.",
+        "recharge": "Recharges on a Short or Long Rest"
+      },
+      {
+        "name": "Improved Critical",
+        "text": "Langdedrosa's weapon attacks score a critical hit on a roll of 19 or 20."
+      }
     ],
     "actions": [
-      "Multiattack. Langdedrosa attacks twice, either with his greatsword or spear.",
-      "Greatsword. Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) slashing damage.",
-      "Spear. Melee or Ranged Weapon Attack: +6 to hit, reach 5 ft. or ranged 20 ft.,/60 ft., one target. Hit: 7 (1d6 + 4) piercing damage.",
-      "Lightning Breath (Recharge 5-6). Langdedrosa breathes lightning in a 30-foot line that is 5 feet wide. Each creature in the line must make a DC 13 Dexterity saving throw, taking 22 (4d10) lightning damage on a failed save, or half as much damage on a successful one."
+      {
+        "name": "Multiattack",
+        "text": "Langdedrosa attacks twice, either with his greatsword or spear."
+      },
+      {
+        "name": "Greatsword",
+        "text": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) slashing damage."
+      },
+      {
+        "name": "Spear",
+        "text": "Melee or Ranged Weapon Attack: +6 to hit, reach 5 ft. or ranged 20 ft.,/60 ft., one target. Hit: 7 (1d6 + 4) piercing damage."
+      },
+      {
+        "name": "Lightning Breath",
+        "text": "Langdedrosa breathes lightning in a 30-foot line that is 5 feet wide. Each creature in the line must make a DC 13 Dexterity saving throw, taking 22 (4d10) lightning damage on a failed save, or half as much damage on a successful one.",
+        "recharge": "Recharge 5-6"
+      }
     ]
   },
   {
@@ -287,27 +480,52 @@
     "AC": "15 (studded leather armor, shield)",
     "HP": "59 (7d8+28)",
     "speed": "20 ft., swim 40 ft.",
-    "abilities": "STR 15 DEX 12 CON 18 INT 11 WIS 16 CHA 7",
+    "strength": "15",
+    "dexterity": "12",
+    "constitution": "18",
+    "intelligence": "11",
+    "wisdom": "16",
+    "charisma": "7",
     "savingThrows": "Str +4, Con +6",
     "skills": "Perception +5, Religion +2, Stealth +3",
-    "senses": "passive Perception 15",
     "languages": "Common, Bullywug",
     "challenge": "3",
     "traits": [
-      "Amphibious. Pharblex can breathe air and water.",
-      "Poison Strike (3/Day). Once per turn, when Pharblex hits with a melee attack, he can expend a use of this trait to deal an extra 9 (2d8) poison damage.",
-      "Spellcasting. Pharblex is a 6th-level spellcaster that uses Wisdom as his spellcasting ability (spell save DC 13, +5 to hit with spell attacks). Pharblex has the following spells prepared from the druid spell list:",
-      "• Cantrips (at will): druidcraft, guidance, poison cloud",
-      "• 1st level (4 slots): cure wounds, entangle, healing word, thunderwave",
-      "• 2nd level (3 slots): barkskin, beast sense, spike growth",
-      "• 3rd level (3 slots): plant growth, water walk",
-      "Standing Leap. As part of his movement and without a running start, Pharblex can long jump up to 20 feet and high jump up to 10 feet.",
-      "Swamp Camouflage. Pharblex has advantage on Dexterity (Stealth) checks made to hide in swampy terrain."
+      {
+        "name": "Amphibious",
+        "text": "Pharblex can breathe air and water."
+      },
+      {
+        "name": "Poison Strike",
+        "text": "Once per turn, when Pharblex hits with a melee attack, he can expend a use of this trait to deal an extra 9 (2d8) poison damage.",
+        "recharge": "3/Day"
+      },
+      {
+        "name": "Spellcasting",
+        "text": "Pharblex is a 6th-level spellcaster that uses Wisdom as his spellcasting ability (spell save DC 13, +5 to hit with spell attacks). Pharblex has the following spells prepared from the druid spell list:\nCantrips (at will): druidcraft, guidance, poison cloud\n1st level (4 slots): cure wounds, entangle, healing word, thunderwave\n2nd level (3 slots): barkskin, beast sense, spike growth\n3rd level (3 slots): plant growth, water walk"
+      },
+      {
+        "name": "Standing Leap",
+        "text": "As part of his movement and without a running start, Pharblex can long jump up to 20 feet and high jump up to 10 feet."
+      },
+      {
+        "name": "Swamp Camouflage",
+        "text": "Pharblex has advantage on Dexterity (Stealth) checks made to hide in swampy terrain."
+      }
     ],
     "actions": [
-      "Multiattack. Pharblex attacks twice. Once with his bite and once with his spear.",
-      "Bite. Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit 4 (1d4 + 2) piercing damage.",
-      "Spear. Melee or Ranged Weapon Attack: +5 to hit. reach 5 ft. or ranged 20 ft./60 ft., one target. Hit: 5 (1d6 + 2) piercing damage."
+      {
+        "name": "Multiattack",
+        "text": "Pharblex attacks twice. Once with his bite and once with his spear."
+      },
+      {
+        "name": "Bite",
+        "text": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit 4 (1d4 + 2) piercing damage."
+      },
+      {
+        "name": "Spear",
+        "text": "Melee or Ranged Weapon Attack: +5 to hit. reach 5 ft. or ranged 20 ft./60 ft., one target. Hit: 5 (1d6 + 2) piercing damage."
+      }
     ]
   },
   {
@@ -318,25 +536,31 @@
     "AC": "13 (16 with mage armor)",
     "HP": "71 (11d8+22)",
     "speed": "30 ft.",
-    "abilities": "STR 11 DEX 16 CON 14 INT 18 WIS 14 CHA 10",
+    "strength": "11",
+    "dexterity": "16",
+    "constitution": "14",
+    "intelligence": "18",
+    "wisdom": "14",
+    "charisma": "10",
     "savingThrows": "Int +7, Wis +5",
     "skills": "Arcana +7, Deception +3, Insight +5, Stealth +6",
-    "senses": "passive Perception 12",
     "languages": "Common, Draconic, Infernal, Primordial, Thayan",
     "challenge": "6",
     "traits": [
-      "Special Equipment. Rath has a staff of fire, and scrolls of dimension door, feather fall, and fireball.",
-      "Spellcasting. Rath is an 11th-level spellcaster who uses Intelligence as his spellcasting ability (spell save DC 15, +7 to hit with spell attacks). Rath has the following spells prepared from the wizard spell list:",
-      "• Cantrips (at will): fire bolt, minor illusion, prestidigitation, shocking grasp",
-      "• 1st level (4 slots): chromatic orb, color spray, mage armor, magic missile",
-      "• 2nd level (3 slots): detect thoughts, mirror image, phantasmal force",
-      "• 3rd level (3 slots): counterspell, fireball, major image",
-      "• 4th level (3 slots): confusion, greater invisibility",
-      "• 5th level (2 slots): mislead, seeming",
-      "• 6th level (1 slot): globe of invulnerability"
+      {
+        "name": "Special Equipment",
+        "text": "Rath has a staff of fire, and scrolls of dimension door, feather fall, and fireball."
+      },
+      {
+        "name": "Spellcasting",
+        "text": "Rath is an 11th-level spellcaster who uses Intelligence as his spellcasting ability (spell save DC 15, +7 to hit with spell attacks). Rath has the following spells prepared from the wizard spell list:\nCantrips (at will): fire bolt, minor illusion, prestidigitation, shocking grasp\n1st level (4 slots): chromatic orb, color spray, mage armor, magic missile\n2nd level (3 slots): detect thoughts, mirror image, phantasmal force\n3rd level (3 slots): counterspell, fireball, major image\n4th level (3 slots): confusion, greater invisibility\n5th level (2 slots): mislead, seeming\n6th level (1 slot): globe of invulnerability"
+      }
     ],
     "actions": [
-      "Quarterstaff. Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 4 (1d8) bludgeoning damage."
+      {
+        "name": "Quarterstaff",
+        "text": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 4 (1d8) bludgeoning damage."
+      }
     ]
   },
   {
@@ -347,32 +571,79 @@
     "AC": "13 (15 with the Black Dragon Mask)",
     "HP": "90 (12d8+36)",
     "speed": "30 ft.",
-    "abilities": "STR 18 DEX 16 CON 16 INT 15 WIS 12 CHA 14",
+    "strength": "18",
+    "dexterity": "16",
+    "constitution": "16",
+    "intelligence": "15",
+    "wisdom": "12",
+    "charisma": "14",
     "savingThrows": "Dex +6, Wis +4",
     "skills": "Arcana +5, Stealth +9",
     "damageImmunities": "acid",
     "conditionImmunities": "charmed, frightened",
-    "senses": "blindsight 10 ft., darkvision 120 ft., passive Perception 11",
+    "senses": "blindsight 10 ft., darkvision 120 ft.",
     "languages": "Common, Draconic, Infernal, Giant, Netherese",
     "challenge": "7",
     "traits": [
-      "Special Equipment. Rezmir has the Black Dragon Mask, Hazirawn, and an insignia of claws.",
-      "Amphibious. Rezmir can breathe air and water.",
-      "Dark Advantage. Once per turn, Rezmir can deal an extra 10 (3d6) damage when she hits with a weapon attack, provided Rezmir has advantage on the attack roll.",
-      "Draconic Majesty. While wearing no armor and wearing the Black Dragon Mask, Rezmir adds her Charisma bonus to her AC (included).",
-      "Immolation. When Rezmir is reduced to 0 hit points, her body disintegrates into a pile of ash.",
-      "Legendary Resistance (1/Day). If Rezmir fails a saving throw while wearing the Black Dragon Mask, she can choose to succeed instead."
+      {
+        "name": "Special Equipment",
+        "text": "Rezmir has the Black Dragon Mask, Hazirawn, and an insignia of claws."
+      },
+      {
+        "name": "Amphibious",
+        "text": "Rezmir can breathe air and water."
+      },
+      {
+        "name": "Dark Advantage",
+        "text": "Once per turn, Rezmir can deal an extra 10 (3d6) damage when she hits with a weapon attack, provided Rezmir has advantage on the attack roll."
+      },
+      {
+        "name": "Draconic Majesty",
+        "text": "While wearing no armor and wearing the Black Dragon Mask, Rezmir adds her Charisma bonus to her AC (included)."
+      },
+      {
+        "name": "Immolation",
+        "text": "When Rezmir is reduced to 0 hit points, her body disintegrates into a pile of ash."
+      },
+      {
+        "name": "Legendary Resistance",
+        "text": "If Rezmir fails a saving throw while wearing the Black Dragon Mask, she can choose to succeed instead.",
+        "recharge": "1/Day"
+      }
     ],
     "actions": [
-      "Greatsword (Hazirawn). Melee Weapon Attack: +9 to hit, reach 5 ft., one target. Hit: 13 (2d6 + 6) slashing damage plus 7 (2d6) necrotic damage. If the target is a creature, it can't regain hit points for 1 minute. The target can make a DC 15 Constitution saving throw at the end of each of its turns, ending this effect early on a success.",
-      "Caustic Bolt. Ranged Spell Attack: +8 to hit, range 90 ft., one target. Hit: 18 (4d8) acid damage.",
-      "Acid Breath (Recharge 5-6). Rezmir breathes acid in a 30-foot line that is 5 feet wide. Each creature in the line must make a DC 14 Dexterity saving throw, taking 22 (5d8) acid damage on a failed save, or half as much damage on a successful one."
+      {
+        "name": "Greatsword",
+        "text": "Melee Weapon Attack: +9 to hit, reach 5 ft., one target. Hit: 13 (2d6 + 6) slashing damage plus 7 (2d6) necrotic damage. If the target is a creature, it can't regain hit points for 1 minute. The target can make a DC 15 Constitution saving throw at the end of each of its turns, ending this effect early on a success.",
+        "recharge": "Hazirawn"
+      },
+      {
+        "name": "Caustic Bolt",
+        "text": "Ranged Spell Attack: +8 to hit, range 90 ft., one target. Hit: 18 (4d8) acid damage."
+      },
+      {
+        "name": "Acid Breath",
+        "text": "Rezmir breathes acid in a 30-foot line that is 5 feet wide. Each creature in the line must make a DC 14 Dexterity saving throw, taking 22 (5d8) acid damage on a failed save, or half as much damage on a successful one.",
+        "recharge": "Recharge 5-6"
+      }
     ],
     "legendaryPoints": "3",
     "legendaryActions": [
-      "Darkness (Costs 2 Actions). If she is wearing the Black Dragon Mask, Rezmir can take up to two legendary actions between each of her turns, taking the actions all at once or spreading them over the round. A legendary action can be taken only at the start or end of a turn.",
-      "Attack. Rezmir makes one melee attack.",
-      "Hide. Rezmir takes the Hide action."
+      {
+        "name": "Darkness",
+        "text": "If she is wearing the Black Dragon Mask, Rezmir can take up to two legendary actions between each of her turns, taking the actions all at once or spreading them over the round. A legendary action can be taken only at the start or end of a turn.",
+        "cost": 2
+      },
+      {
+        "name": "Attack",
+        "text": "Rezmir makes one melee attack.",
+        "cost": 1
+      },
+      {
+        "name": "Hide",
+        "text": "Rezmir takes the Hide action.",
+        "cost": 1
+      }
     ]
   },
   {
@@ -383,26 +654,41 @@
     "AC": "18 (scale mail +1, shield)",
     "HP": "58 (9d8+18)",
     "speed": "30 ft.",
-    "abilities": "STR 14 DEX 12 CON 14 INT 10 WIS 16 CHA 16",
+    "strength": "14",
+    "dexterity": "12",
+    "constitution": "14",
+    "intelligence": "10",
+    "wisdom": "16",
+    "charisma": "16",
     "savingThrows": "Wis +6, Cha +6",
     "skills": "Deception +6, Insight +6, Perception +6, Persuasion +6",
-    "senses": "darkvision 60 ft., passive Perception 16",
+    "senses": "darkvision 60 ft.",
     "languages": "Common, Draconic, Elvish, Infernal",
     "challenge": "5",
     "traits": [
-      "Special Equipment. Talis has +1 scale mail and a wand of winter.",
-      "Fey Ancestry. Talis has advantage on saving throws against being charmed, and magic can't put her to sleep.",
-      "Spellcasting. Talis is a 9th-level spellcaster that uses Wisdom as her spellcasting ability (spell save DC 14, +6 to hit with spell attacks). Talis has the following spells prepared from the cleric spell list:",
-      "• Cantrips (at will): guidance, resistance, thaumaturgy",
-      "• 1st level (4 slots): command, cure wounds, healing word, inflict wounds",
-      "• 2nd level (3 slots): blindness/deafness, lesser restoration, spiritual weapon (spear)",
-      "• 3rd level (3 slots): dispel magic, mass healing word, sending",
-      "• 4th level (3 slots): death ward, freedom of movement",
-      "• 5th level (1 slot): insect plague",
-      "Winter Strike (3/Day). Once per turn, when Talis hits with a melee attack, she can expend a use of this trait to deal an extra 9 (2d8) cold damage."
+      {
+        "name": "Special Equipment",
+        "text": "Talis has +1 scale mail and a wand of winter."
+      },
+      {
+        "name": "Fey Ancestry",
+        "text": "Talis has advantage on saving throws against being charmed, and magic can't put her to sleep."
+      },
+      {
+        "name": "Spellcasting",
+        "text": "Talis is a 9th-level spellcaster that uses Wisdom as her spellcasting ability (spell save DC 14, +6 to hit with spell attacks). Talis has the following spells prepared from the cleric spell list:\nCantrips (at will): guidance, resistance, thaumaturgy\n1st level (4 slots): command, cure wounds, healing word, inflict wounds\n2nd level (3 slots): blindness/deafness, lesser restoration, spiritual weapon (spear)\n3rd level (3 slots): dispel magic, mass healing word, sending\n4th level (3 slots): death ward, freedom of movement\n5th level (1 slot): insect plague"
+      },
+      {
+        "name": "Winter Strike",
+        "text": "Once per turn, when Talis hits with a melee attack, she can expend a use of this trait to deal an extra 9 (2d8) cold damage.",
+        "recharge": "3/Day"
+      }
     ],
     "actions": [
-      "Spear. Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or ranged 20 ft./60 ft., one target. Hit: 6 (1d6 + 2) piercing damage."
+      {
+        "name": "Spear",
+        "text": "Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or ranged 20 ft./60 ft., one target. Hit: 6 (1d6 + 2) piercing damage."
+      }
     ]
   }
 ]

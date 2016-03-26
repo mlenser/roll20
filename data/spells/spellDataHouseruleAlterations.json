@@ -14,7 +14,7 @@
     },
     "duration": "Up to 10 minutes",
     "concentration": true,
-    "castingTime": "action",
+    "castingTime": "1 action",
     "level": 6,
     "school": "Conjuration",
     "save": {
@@ -47,7 +47,7 @@
       "materialMaterial": "an Ankheg's mandible"
     },
     "duration": "Instantaneous",
-    "castingTime": "action",
+    "castingTime": "1 action",
     "level": 5,
     "school": "Evocation",
     "save": {
@@ -81,7 +81,7 @@
     },
     "duration": "Up to 1 minute",
     "concentration": true,
-    "castingTime": "action",
+    "castingTime": "1 action",
     "level": 2,
     "school": "Conjuration",
     "save": {
@@ -145,7 +145,7 @@
     },
     "duration": "Up to 1 minute",
     "concentration": true,
-    "castingTime": "action",
+    "castingTime": "1 action",
     "level": 2,
     "school": "Conjuration",
     "damage": {
@@ -183,7 +183,7 @@
   },
   {
     "name": "Cordon of Arrows",
-    "description": "You plant four pieces of nonmagical ammunition—arrows or crossbow bolts—in the ground within range and lay magic upon them to protect an area. Until the spell ends, whenever a creature other than you comes within 30 feet of the ammunition for the first time on a turn or ends its turn there, one piece of ammunition flies up to strike it. The creature must succeed on a Dexterity saving throw or take 3d6 piercing damage. The piece of ammunition is then destroyed. The spell ends when no ammunition remains.\nWhen you cast this spell, you can designate any creatures you choose, and the spell ignores them.",
+    "description": "You plant four pieces of nonmagical ammunitionï¿½arrows or crossbow boltsï¿½in the ground within range and lay magic upon them to protect an area. Until the spell ends, whenever a creature other than you comes within 30 feet of the ammunition for the first time on a turn or ends its turn there, one piece of ammunition flies up to strike it. The creature must succeed on a Dexterity saving throw or take 3d6 piercing damage. The piece of ammunition is then destroyed. The spell ends when no ammunition remains.\nWhen you cast this spell, you can designate any creatures you choose, and the spell ignores them.",
     "save": {
       "ability": "dexterity",
       "damage": "3d6",
@@ -257,7 +257,7 @@
       "somatic": true
     },
     "duration": "Instantaneous",
-    "castingTime": "action",
+    "castingTime": "1 action",
     "level": 1,
     "school": "Evocation",
     "save": {
@@ -288,7 +288,7 @@
       "materialMaterial": "a small amount of oil"
     },
     "duration": "10 minutes",
-    "castingTime": "action",
+    "castingTime": "1 action",
     "level": 3,
     "school": "Transmutation",
     "save": {
@@ -370,7 +370,7 @@
     },
     "duration": "Up to 1 minute",
     "concentration": true,
-    "castingTime": "action",
+    "castingTime": "1 action",
     "level": 4,
     "school": "Conjuration",
     "save": {
@@ -429,7 +429,7 @@
       "verbal": true,
       "somatic": true
     },
-    "castingTime": "action",
+    "castingTime": "1 action",
     "duration": "Instantaneous",
     "level": 0,
     "school": "Evocation",
@@ -458,7 +458,7 @@
       "somatic": true
     },
     "duration": "1 minute",
-    "castingTime": "action",
+    "castingTime": "1 action",
     "level": 2,
     "school": "Evocation",
     "save": {
@@ -494,7 +494,7 @@
       "materialMaterial": "A small stalagmite shaped crystal"
     },
     "duration": "instantaneous",
-    "castingTime": "action",
+    "castingTime": "1 action",
     "level": 3,
     "school": "Evocation",
     "save": {
@@ -569,7 +569,7 @@
       "somatic": true
     },
     "duration": "Instantaneous",
-    "castingTime": "action",
+    "castingTime": "1 action",
     "level": 5,
     "school": "Evocation",
     "save": {
@@ -650,7 +650,7 @@
       "materialMaterial": "a large lodestone"
     },
     "duration": "Instantaneous",
-    "castingTime": "action",
+    "castingTime": "1 action",
     "level": 2,
     "school": "Transmutation",
     "heal": {
@@ -726,7 +726,7 @@
     },
     "duration": "Up to 1 minute",
     "concentration": true,
-    "castingTime": "action",
+    "castingTime": "1 action",
     "level": 3,
     "school": "Transmutation",
     "save": {
@@ -755,7 +755,7 @@
       "damage": "4d10",
       "damageType": "force"
     },
-    "castingTime": "bonus"
+    "castingTime": "bonus action"
   },
   {
     "name": "Nondetection",
@@ -897,7 +897,7 @@
     },
     "duration": "Up to 10 minutes",
     "concentration": true,
-    "castingTime": "action",
+    "castingTime": "1 action",
     "level": 6,
     "school": "Evocation",
     "save": {
@@ -950,7 +950,7 @@
     },
     "duration": "Up to 1 minute",
     "concentration": true,
-    "castingTime": "bonus",
+    "castingTime": "bonus action",
     "level": 6,
     "school": "Conjuration",
     "attack": {
@@ -969,7 +969,7 @@
     "name": "Witch Bolt",
     "description": "A beam of crackling, blue energy lances out toward a creature within range, forming a sustained arc of lightning between you and the target. Make a ranged spell attack against that creature. On a hit, the target takes 1d12 lightning damage and is grappled, and on each of your turns for the duration, you can use your action to deal 1d12 lightning damage to the target automatically. If you do so the target must make a Strength saving throw or be grappled. The spell ends if you use your action to do anything else. The spell also ends if the target is ever outside the spell's range or if it has total cover from you at the end of your turn.",
 
-    "effect": "and the target is grappled. On each of your turns for the duration, you can use your action to deal 1d12 lightning damage to the target automatically. If you do so the target must make a Strength saving throw or be grappled. The spell ends if you use your action to do anything else. The spell also ends if the target is ever outside the spell's range or if it has total cover from you at the end of your turn."
+    "effects": "and the target is grappled. On each of your turns for the duration, you can use your action to deal 1d12 lightning damage to the target automatically. If you do so the target must make a Strength saving throw or be grappled. The spell ends if you use your action to do anything else. The spell also ends if the target is ever outside the spell's range or if it has total cover from you at the end of your turn."
   },
   {
     "name": "Web",
