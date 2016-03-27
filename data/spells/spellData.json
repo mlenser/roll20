@@ -1402,6 +1402,7 @@
     "level": 0,
     "school": "Necromancy",
     "attack": {
+      "type": "ranged",
       "damage": "((@{level} + 1) / 6 + 0.5)d8",
       "damageType": "necrotic"
     },
@@ -1432,6 +1433,7 @@
     "level": 1,
     "school": "Evocation",
     "attack": {
+      "type": "ranged",
       "damage": "3d8",
       "damageType": "acid, cold, fire, lightning, poison, or thunder",
       "higherLevelDice": "1",
@@ -2113,7 +2115,9 @@
     "castingTime": "1 action",
     "level": 5,
     "school": "Necromancy",
-    "attack": {},
+    "attack": {
+      "type": "ranged"
+    },
     "save": {
       "ability": "constitution"
     },
@@ -3409,6 +3413,7 @@
     "level": 0,
     "school": "Evocation",
     "attack": {
+      "type": "ranged",
       "damage": "d10",
       "damageType": "force"
     },
@@ -4103,6 +4108,7 @@
     "level": 0,
     "school": "Evocation",
     "attack": {
+      "type": "ranged",
       "damage": "((@{level} + 1) / 6 + 0.5)d10",
       "damageType": "fire"
     },
@@ -4209,6 +4215,7 @@
     "level": 2,
     "school": "Evocation",
     "attack": {
+      "type": "melee",
       "damage": "3d6",
       "damageType": "fire",
       "higherLevelDice": "1",
@@ -5017,6 +5024,7 @@
     "level": 1,
     "school": "Evocation",
     "attack": {
+      "type": "ranged",
       "damage": "4d6",
       "damageType": "radiant",
       "higherLevelDice": "1",
@@ -5623,6 +5631,7 @@
     "level": 1,
     "school": "Conjuration",
     "attack": {
+      "type": "ranged",
       "damage": "1d10",
       "damageType": "piercing"
     },
@@ -5843,6 +5852,7 @@
     "level": 1,
     "school": "Necromancy",
     "attack": {
+      "type": "melee",
       "damage": "3d10",
       "damageType": "necrotic",
       "higherLevelDice": "1",
@@ -6889,6 +6899,7 @@
     "level": 2,
     "school": "Evocation",
     "attack": {
+      "type": "ranged",
       "damage": "4d4",
       "damageType": "acid",
       "secondaryDamage": "2d4",
@@ -7271,6 +7282,7 @@
     "level": 4,
     "school": "Conjuration",
     "attack": {
+      "type": "melee",
       "damage": "4d8",
       "damageType": "piercing"
     },
@@ -7345,6 +7357,7 @@
     "level": 7,
     "school": "Evocation",
     "attack": {
+      "type": "melee",
       "damage": "3d10",
       "damageType": "force"
     },
@@ -8023,6 +8036,7 @@
     "level": 0,
     "school": "Conjuration",
     "attack": {
+      "type": "ranged",
       "damage": "((@{level} + 1) / 6 + 0.5)d8",
       "damageType": "fire"
     },
@@ -8280,7 +8294,9 @@
     "castingTime": "1 action",
     "level": 2,
     "school": "Necromancy",
-    "attack": {},
+    "attack": {
+      "type": "ranged"
+    },
     "save": {
       "ability": "constitution",
       "saveSuccess": "spell ends"
@@ -8308,6 +8324,7 @@
     "level": 0,
     "school": "Evocation",
     "attack": {
+      "type": "ranged",
       "damage": "((@{level} + 1) / 6 + 0.5)d8",
       "damageType": "cold"
     },
@@ -8334,6 +8351,7 @@
     "level": 1,
     "school": "Necromancy",
     "attack": {
+      "type": "ranged",
       "damage": "2d8",
       "damageType": "poison",
       "higherLevelDice": "1",
@@ -8621,6 +8639,7 @@
     "level": 2,
     "school": "Evocation",
     "attack": {
+      "type": "ranged",
       "damage": "2d6",
       "damageType": "fire"
     },
@@ -8986,6 +9005,7 @@
     "level": 0,
     "school": "Evocation",
     "attack": {
+      "type": "melee",
       "damage": "((@{level} + 1) / 6 + 0.5)d8",
       "damageType": "lightning"
     },
@@ -9440,6 +9460,7 @@
     "level": 2,
     "school": "Evocation",
     "attack": {
+      "type": "melee",
       "damage": "1d8",
       "castingStat": true,
       "damageType": "force",
@@ -10004,6 +10025,7 @@
     "level": 0,
     "school": "Transmutation",
     "attack": {
+      "type": "melee",
       "damage": "((@{level} + 1) / 6 + 0.5)d6",
       "damageType": "piercing"
     },
@@ -10433,6 +10455,7 @@
     "level": 3,
     "school": "Necromancy",
     "attack": {
+      "type": "melee",
       "damage": "3d6",
       "damageType": "necrotic",
       "higherLevelDice": "1",
@@ -11034,6 +11057,7 @@
     "level": 1,
     "school": "Evocation",
     "attack": {
+      "type": "ranged",
       "damage": "1d12",
       "damageType": "lightning",
       "higherLevelDice": "1",
