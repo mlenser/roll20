@@ -434,6 +434,7 @@
     "level": 0,
     "school": "Evocation",
     "attack": {
+      "type": "ranged",
       "damage": "((@{level} + 1) / 6 + 0.5)d8",
       "damageType": "bludgeoning"
     },
@@ -954,6 +955,7 @@
     "level": 6,
     "school": "Conjuration",
     "attack": {
+      "type": "ranged",
       "damage": "4d8",
       "damageType": "poison"
     },
