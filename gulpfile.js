@@ -4,7 +4,7 @@ var uglify = require('gulp-uglify');
 var fs = require('fs');
 var rename = require('gulp-rename');
 var jsoncombine = require('gulp-jsoncombine');
-var formatVersion = '0.1.0';
+var formatVersion = '0.1.1';
 
 function search(nameKey, myArray){
 	for (var i=0; i < myArray.length; i++) {
