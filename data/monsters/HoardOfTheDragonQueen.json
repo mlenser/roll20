@@ -76,7 +76,8 @@
         "name": "Dagger",
         "text": "Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or ranged 20 ft./60 ft., one target. Hit 5 (1d4 + 3) piercing damage."
       }
-    ]
+    ],
+    "spells": "mage hand, prestidigitation, ray of frost, shocking grasp, fog cloud, magic missile, shield, thunderwave, invisibility, misty step, scorching ray, counterspell, dispel magic, fireball"
   },
   {
     "name": "Blagothkus",
@@ -119,7 +120,8 @@
         "name": "Morningstar",
         "text": "Melee Weapon Attack: +10 to hit, reach 10 ft., one target. Hit 21 (3d8 + 8) piercing damage."
       }
-    ]
+    ],
+    "spells": "light, mage hand, prestidigitation, detect magic, identify, magic missile, shield, gust of wind, misty step, shatter, fly, lightning bolt, fog cloud, levitate"
   },
   {
     "name": "Captain Othelstan",
@@ -306,7 +308,8 @@
         "name": "Dagger",
         "text": "Melee or Ranged Weapon Attack: +6 to hit, reach 5 ft. or ranged 20 ft./60 ft., one target. Hit 6 (1d4 + 4) piercing damage."
       }
-    ]
+    ],
+    "spells": "fire bolt, prestidigitation, shocking grasp, longstrider, magic missile, shield, thunderwave, magic weapon, misty step"
   },
   {
     "name": "Frulam Mondath",
@@ -341,7 +344,8 @@
         "name": "Halberd",
         "text": "Melee Weapon Attack: +5 to hit, reach 10 ft., one target. Hit: 7 (1d10 + 2) bludgeoning damage."
       }
-    ]
+    ],
+    "spells": "light, sacred flame, thaumaturgy, command, cure wounds, healing word, sanctuary, calm emotions, hold person, spiritual weapon, mass healing word, spirit guardians"
   },
   {
     "name": "Guard Drake",
@@ -419,7 +423,8 @@
         "name": "Shortsword",
         "text": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit 6 (1d6 + 3) piercing damage, or 9 (1d6 + 3 plus 1d6) piercing damage if the target is Medium or larger."
       }
-    ]
+    ],
+    "spells": "mage hand, minor illusion, prestidigitation, ray of frost, charm person, color spray, disguise self, longstrider"
   },
   {
     "name": "Langdedrosa Cyanwrath",
@@ -526,7 +531,8 @@
         "name": "Spear",
         "text": "Melee or Ranged Weapon Attack: +5 to hit. reach 5 ft. or ranged 20 ft./60 ft., one target. Hit: 5 (1d6 + 2) piercing damage."
       }
-    ]
+    ],
+    "spells": "druidcraft, guidance, poison cloud, cure wounds, entangle, healing word, thunderwave, barkskin, beast sense, spike growth, plant growth, water walk"
   },
   {
     "name": "Rath Modar",
@@ -561,7 +567,8 @@
         "name": "Quarterstaff",
         "text": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 4 (1d8) bludgeoning damage."
       }
-    ]
+    ],
+    "spells": "fire bolt, minor illusion, prestidigitation, shocking grasp, chromatic orb, color spray, mage armor, magic missile, detect thoughts, mirror image, phantasmal force, counterspell, fireball, major image, confusion, greater invisibility, mislead, seeming, globe of invulnerability"
   },
   {
     "name": "Rezmir",
@@ -689,6 +696,7 @@
         "name": "Spear",
         "text": "Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or ranged 20 ft./60 ft., one target. Hit: 6 (1d6 + 2) piercing damage."
       }
-    ]
+    ],
+    "spells": "guidance, resistance, thaumaturgy, command, cure wounds, healing word, inflict wounds, blindness/deafness, lesser restoration, spiritual weapon, dispel magic, mass healing word, sending, death ward, freedom of movement, insect plague"
   }
 ]
