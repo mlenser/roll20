@@ -42,7 +42,8 @@
         "name": "Windvane",
         "text": "Melee or Ranged Weapon Attack: +9 to hit, reach 5 ft. or range 20 ft./60 ft., one target. Hit: 9 (1d6 + 6) piercing damage, or 10 (1d8 + 6) piercing damage if used with two hands to make a melee attack, plus 3 (1d6) lightning damage."
       }
-    ]
+    ],
+    "spells": "gust, mage hand, message, prestidigitation, ray of frost, shocking grasp, charm person, feather fall, mage armor, thunderwave, dust devil, gust of wind, invisibility, fly, gaseous form, lightning bolt, ice storm, storm sphere, cloudkill, seeming (cast each day), chain lightning"
   },
   {
     "name": "Air Elemental Myrmidon",
@@ -120,7 +121,8 @@
         "name": "Dagger",
         "text": "Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage."
       }
-    ]
+    ],
+    "spells": "fire bolt, mage hand, message, prestidigitation, shocking grasp, mage armor, magic missile, shield, misty step, scorching ray, counterspell, fireball, dimension door, wall of fire, hold monster, produce flame, burning hands"
   },
   {
     "name": "Black Earth Guard",
@@ -182,7 +184,8 @@
         "name": "Glaive",
         "text": "Melee Weapon Attack: +4 to hit, reach 10 ft., one target. Hit: 7 (1d10 + 2) slashing damage."
       }
-    ]
+    ],
+    "spells": "acid splash, blade ward, light, mending, mold earth, earth tremor, expeditious retreat, shield, shatter, spider climb, slow"
   },
   {
     "name": "Burrowshark",
@@ -246,7 +249,8 @@
         "name": "Quarterstaff",
         "text": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 6 (1d8 + 2) bludgeoning damage."
       }
-    ]
+    ],
+    "spells": "chill touch, mage hand, minor illusion, prestidigitation, ray of frost, expeditious retreat, ice knife, magic missile, shield, blur, hold person, sleet storm"
   },
   {
     "name": "Crushing Wave Reaver",
@@ -452,7 +456,8 @@
         "name": "Dagger +1",
         "text": "Melee or Ranged Weapon Attack: +6 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 5 (1d4 + 3) piercing damage."
       }
-    ]
+    ],
+    "spells": "druidcraft, guidance, poison spray, produce flame, animal friendship, faerie fire, healing word, jump, thunderwave, flame blade, spike growth, dispel magic, stinking cloud, blight, wall of fire"
   },
   {
     "name": "Eternal Flame Guardian",
@@ -523,7 +528,8 @@
         "name": "Dagger",
         "text": "Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage."
       }
-    ]
+    ],
+    "spells": "control flames, create bonfire, fire bolt, light, minor illusion, burning hands, expeditious retreat, mage armor, blur, scorching ray, fireball"
   },
   {
     "name": "Fathomer",
@@ -570,7 +576,8 @@
         "text": "Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage.",
         "recharge": "Human Form Only"
       }
-    ]
+    ],
+    "spells": "chill touch, eldritch blast, mage hand, armor of Agathys, expeditious retreat, hex, invisibility, Vampiric touch"
   },
   {
     "name": "Feathergale Knight",
@@ -608,7 +615,8 @@
         "name": "Spear",
         "text": "Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 5 (1d6 + 2) piercing damage, or 6 (1d8 + 2) piercing damage if used with two hands to make a melee attack."
       }
-    ]
+    ],
+    "spells": "gust, light, message, ray of frost, expeditious retreat, feather fall"
   },
   {
     "name": "Fire Elemental Myrmidon",
@@ -693,7 +701,8 @@
         "name": "Dagger",
         "text": "Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage."
       }
-    ]
+    ],
+    "spells": "control flames, fire bolt, friends, light, minor illusion, burning hands, color spray, mage armor, scorching ray, suggestion, fireball, hypnotic pattern, fire shield (see Wreathed in Flame)"
   },
   {
     "name": "Gar Shatterkeel",
@@ -749,7 +758,8 @@
         "name": "Drown",
         "text": "Melee or Ranged Weapon Attack: +7 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 6 (1d6 + 3) piercing damage plus 4 (1d8) cold damage."
       }
-    ]
+    ],
+    "spells": "mending, resistance, shape water, create or destroy water, cure wounds, fog cloud, thunderwave, darkvision, hold person, protection from poison, call lightning, sleet storm, tidal wave, control water, ice storm, scrying"
   },
   {
     "name": "Ghald",
@@ -932,7 +942,8 @@
         "name": "Dagger",
         "text": "Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 5 (1d4 + 3) piercing damage."
       }
-    ]
+    ],
+    "spells": "blade ward, gust, light, prestidigitation, shocking grasp, featherfall, shield, witch bolt, dust devil, gust of wind, gaseous form"
   },
   {
     "name": "Hurricane",
@@ -974,7 +985,8 @@
         "name": "Unarmed Strike",
         "text": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) bludgeoning damage."
       }
-    ]
+    ],
+    "spells": "blade ward, gust, light, prestidigitation, feather fall, jump, thunderwave, gust of wind"
   },
   {
     "name": "Imix",
@@ -1064,7 +1076,8 @@
         "text": "Imix causes one creature he can see within 30 feet of him to burst into flames. The target must make a DC 21 Constitution saving throw. On a failed save, the target takes 70 (20d6) fire damage and catches fire. A target on fire takes 10 (3d6) fire damage when it starts its turn, and remains on fire until it or another creature takes an action to douse the flames. On a successful save, the target takes half as much damage and doesn't catch fire.",
         "cost": 3
       }
-    ]
+    ],
+    "spells": "fireball, wall of fire, fire storm, haste, teleport"
   },
   {
     "name": "Marlos Urnrayle",
@@ -1163,7 +1176,8 @@
         "name": "Staff",
         "text": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 1) bludgeoning damage, or 5 (1d8 + 1) bludgeoning damage when used with two hands."
       }
-    ]
+    ],
+    "spells": "acid splash, blade ward, friends, light, message, mold earth, chromatic orb, mage armor, magic missile, Maximilian's earthen grasp, shatter, suggestion, counterspell, erupting earth, polymorph, stoneskin, wall of stone, move earth, pass without trace"
   },
   {
     "name": "Ogremoch",
@@ -1245,7 +1259,8 @@
         "text": "Ogremoch's hit points are reduced by 50 as he breaks off a chunk of his body and places it on the ground in an unoccupied space within 15 feet of him. The chunk of rock instantly transforms into a gargoyle and acts on the same initiative count as Ogremoch. Ogremoch can't use this action if he has 50 hit points or fewer. The gargoyle obeys Ogremoch's commands and fights until destroyed.",
         "cost": 3
       }
-    ]
+    ],
+    "spells": "meld into stone, move earth, wall of stone"
   },
   {
     "name": "Olhydra",
@@ -1327,7 +1342,8 @@
         "text": "Olhydra transforms her watery body into acid. This effect lasts until Olhydra's next turn. Any creature that comes into contact with Olhydra or hits her with a melee attack while standing within 5 feet of her takes 11 (2d10) acid damage. Any creature grappled by Olhydra takes 22 (4d10) acid damage at the start of its turn.",
         "cost": 3
       }
-    ]
+    ],
+    "spells": "wall of ice, ice storm, storm of vengeance"
   },
   {
     "name": "One-Eyed Shiver",
@@ -1366,7 +1382,8 @@
         "name": "Eye of Frost",
         "text": "The one-eyed shiver casts ray of frost from its missing eye. If it hits, the target is also restrained. A target restrained in this way can end the condition by using an action, succeeding on a DC 13 Strength check."
       }
-    ]
+    ],
+    "spells": "chill touch, mage hand, fog cloud, mage armor, thunderwave, mirror image, misty step, fear"
   },
   {
     "name": "Oreioth",
@@ -1406,7 +1423,8 @@
         "name": "Dagger",
         "text": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 3 (1d4 + 1) piercing damage."
       }
-    ]
+    ],
+    "spells": "chill touch, minor illusion, prestidigitation, shocking grasp, false life, mage armor, magic missile, ray of sickness, crown of madness, misty step, animate dead, vampiric touch"
   },
   {
     "name": "Razerblast",
@@ -1523,7 +1541,8 @@
         "name": "Dagger",
         "text": "Melee or Ranged Weapon Attack: +3 to hit, reach 5 ft. or ranged 20/60 ft., one target. Hit: 3 (1d4 + 1) piercing damage."
       }
-    ]
+    ],
+    "spells": "acid splash, chill touch, friends, prestidigitation, ray of frost, disguise self, mage armor, magic missile, hold person, misty step, tidal wave, shape water, create or destroy water"
   },
   {
     "name": "Skyweaver",
@@ -1553,7 +1572,8 @@
         "name": "Dagger",
         "text": "Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 3 (1d4 + 1) piercing damage."
       }
-    ]
+    ],
+    "spells": "blade ward, light, message, ray of frost, shocking grasp, feather fall, mage armor, witch bolt, gust of wind, invisibility, fly, lightning bolt"
   },
   {
     "name": "Stonemelder",
@@ -1588,7 +1608,8 @@
         "name": "Black Earth Rod",
         "text": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) bludgeoning damage. The Stonemelder can also expend a spell slot to deal extra damage, dealing 2d8 bludgeoning damage for a • 1st level slot, plus an additional 1d8 for each level of the slot above 1st."
       }
-    ]
+    ],
+    "spells": "acid splash, blade ward, light, mending, mold earth, expeditious retreat, false life, shield, Maximilian's earthen grasp, shatter, erupting earth, meld into stone, stoneskin"
   },
   {
     "name": "Thurl Merosska",
@@ -1626,7 +1647,8 @@
         "name": "Lance",
         "text": "Melee Weapon Attack: +5 to hit, reach 10 ft., one target. Hit: 9 (1d12 + 3) piercing damage."
       }
-    ]
+    ],
+    "spells": "friends, gust, light, message, ray of frost, expeditious retreat, feather fall, jump, levitate, misty step, haste"
   },
   {
     "name": "Vanifer",
@@ -1671,7 +1693,8 @@
         "name": "Tinderstrike",
         "text": "Melee or Ranged Weapon Attack: +9 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 7 (1d4 + 5) piercing damage plus 7 (2d6) fire damage."
       }
-    ]
+    ],
+    "spells": "chill touch, fire bolt, friends, mage hand, message, produce flame, thaumaturgy, burning hands, chromatic orb, hellish rebuke, shield, darkness, detect thoughts, misty step, scorching ray, counterspell, fireball, hypnotic pattern, wall of fire, dominate person"
   },
   {
     "name": "Water Elemental Myrmidon",
@@ -1751,7 +1774,8 @@
         "name": "Wooden Cane",
         "text": "Melee Weapon Attack: +0 to hit (+4 to hit with shillelagh), reach 5 ft., one target. Hit: 1 (1d4-1) bludgeoning damage, or 6 (1d8 + 2) bludgeoning damage with shillelagh."
       }
-    ]
+    ],
+    "spells": "guidance, light, mending, shillelagh, thaumaturgy, animal friendship, cure wounds, healing word, inflict wounds, speak with animals, barkskin, spike growth, spiritual weapon"
   },
   {
     "name": "Windharrow",
@@ -1790,7 +1814,8 @@
         "name": "Rapier",
         "text": "Melee Weapon Attack: +5 to hit, reach 5 ft., one creature. Hit: 7 (1d8 + 3) piercing damage."
       }
-    ]
+    ],
+    "spells": "friends, prestidigitation, vicious mockery, disguise self, dissonant whispers, thunderwave, invisibility, shatter, silence, nondetection, sending, tongues, confusion, dimension door"
   },
   {
     "name": "Yan-C-Bin",
@@ -1877,6 +1902,7 @@
         "text": "Yan-C-Bin steals the air of one breathing creature he can see within 60 feet of him. The target must make a DC 21 Constitution saving throw. On a failed save, the target drops to 0 hit points and is dying. On a successful save, the target can't breathe or speak until the start of its next turn.",
         "cost": 3
       }
-    ]
+    ],
+    "spells": "gust of wind, invisibility, lightning bolt, chain lightning, cloudkill, haste"
   }
 ]

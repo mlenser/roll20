@@ -87,7 +87,8 @@
         "name": "Light Repeating Crossbow",
         "text": "Ranged Weapon Attack: +4 to hit, range 40/160 ft., one target. Hit: 6 (1d8+2) piercing damage."
       }
-    ]
+    ],
+    "spells": "acid splash, light, mage hand, message, ray of frost, burning hands, chromatic orb, sleep, invisibility, spider climb, blink, lightning bolt"
   },
   {
     "name": "Ixitxachitl",
@@ -141,7 +142,8 @@
         "name": "Bite",
         "text": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 1) piercing damage."
       }
-    ]
+    ],
+    "spells": "guidance, thaumaturgy, charm person, create or destroy water, hold person, silence, dispel magic, tongues"
   },
   {
     "name": "Vampiric Ixitxachitl",
@@ -195,7 +197,8 @@
         "name": "Vampiric Bite",
         "text": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 6 (1d8 + 2) piercing damage. The target must succeed on a DC 11 Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken, and the ixitxachitl regains hit points equal to that amount. The reduction lasts until the target finishes a long rest. The target dies if its hit point maximum is reduced to 0."
       }
-    ]
+    ],
+    "spells": "guidance, thaumaturgy, charm person, create or destroy water, hold person, silence, dispel magic, tongues"
   },
   {
     "name": "Duergar Darkhaft",
@@ -249,7 +252,8 @@
         "text": "The duergar magically turns invisible until it attacks, casts a spell, or uses its Enlarge, or until its concentration is broken, up to 1 hour (as if concentrating on a spell). Any equipment the duergar wears or carries is invisible with it .",
         "recharge": "Recharges after a Short or Long Rest"
       }
-    ]
+    ],
+    "spells": "friends, mage hand, disguise self, sleep"
   },
   {
     "name": "Duergar Kavalrachni",
@@ -368,7 +372,8 @@
         "text": "The duergar magically turns invisible until it attacks, casts a spell, or uses its Enlarge, or until its concentration is broken, up to 1 hour (as if concentrating on a spell). Any equipment the duergar wears or carries is invisible with it .",
         "recharge": "Recharges after a Short or Long Rest"
       }
-    ]
+    ],
+    "spells": "guidance, mending, sacred flame, bane, inflict wounds, shield of faith, enhance ability, spiritual weapon, friends, message, command"
   },
   {
     "name": "Duergar Soulblade",
@@ -422,7 +427,8 @@
         "text": "The duergar magically turns invisible until it attacks, casts a spell, or uses its Enlarge, or until its concentration is broken, up to 1 hour (as if concentrating on a spell). Any equipment the duergar wears or carries is invisible with it .",
         "recharge": "Recharges after a Short or Long Rest"
       }
-    ]
+    ],
+    "spells": "blade ward, true strike, jump, hunter's mark"
   },
   {
     "name": "Duergar Stone Guard",
@@ -941,7 +947,8 @@
         "name": "Shortsword",
         "text": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit:6 (1d6 + 3) piercing damage. The sword is coated with serpent venom that wears off after the first hit. A target subjected to the venom must make a DC 11 Constitution saving throw, taking 10 (3d6) poison damage on a failed save, or half as much damage on a successful one."
       }
-    ]
+    ],
+    "spells": "minor illusion, darkness, fear, shatter"
   },
   {
     "name": "Grisha",
@@ -976,7 +983,8 @@
         "name": "+1 Flail",
         "text": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit:7 (1d8 + 3) bludgeoning damage"
       }
-    ]
+    ],
+    "spells": "guidance, light, sacred flame, thaumaturgy, cure wounds, divine favor, inflict wounds, protection from good, shield of faith, continual flame, hold person, magic weapon, spiritual weapon, bestow curse, dispel magic, spirit guardian"
   },
   {
     "name": "Narrak",
@@ -1024,7 +1032,8 @@
         "name": "Shortsword",
         "text": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit:5 (1d6 + 2) piercing damage."
       }
-    ]
+    ],
+    "spells": "eldritch blast, friends, poison spray, armor of Agathys, charm person, hex, hold person, ray of enfeeblement, spider climb"
   },
   {
     "name": "The Pudding King",
@@ -1083,7 +1092,8 @@
         "text": "The Pudding King creates a patch of green slime (see \"Dungeon Hazards\" in chapter 5 of the Dungeon Master's Guide). The slime appears on a section of wall, ceiling, or floor within 30 feet of the Pudding King.",
         "recharge": "Recharges after a Long Rest"
       }
-    ]
+    ],
+    "spells": "acid splash, light, mage hand, poison spray, prestidigitation, false life, mage armor, ray of sickness, shield, crown of madness, misty step, gaseous form, stinking cloud, blight, confusion, cloudkill, nondetection (self only), blindness/deafness, blur, disguise self"
   },
   {
     "name": "Yestabrod",
@@ -1232,7 +1242,8 @@
         "text": "Baphomet moves up to his speed, then makes a gore attack.",
         "cost": 2
       }
-    ]
+    ],
+    "spells": "detect magic, dispel magic, dominate beast, hunter's mark, maze, wall of stone, teleport"
   },
   {
     "name": "Demogorgon",
@@ -1317,7 +1328,8 @@
         "text": "Demogorgon uses his Gaze action, and must choose either the Beguiling Gaze or the Insanity Gaze effect.",
         "cost": 1
       }
-    ]
+    ],
+    "spells": "detect magic, major image, dispel magic, fear, telekinesis, feeblemind, project image"
   },
   {
     "name": "Fraz-Urb'luu",
@@ -1390,7 +1402,8 @@
         "text": "Fraz-Urb'luu casts phantasmal killer, no concentration required.",
         "cost": 2
       }
-    ]
+    ],
+    "spells": "alter self (can become Medium-sized when changing his appearance), detect magic, dispel magic, phantasamal force, confusion, dream, mislead, programmed illusion, seeming, mirage arcane, modify memory, project image"
   },
   {
     "name": "Graz'zt",
@@ -1474,7 +1487,8 @@
         "text": "Graz'zt uses his Teleport action.",
         "cost": 1
       }
-    ]
+    ],
+    "spells": "charm person, crown of madness, detect magic, dispel magic, dissonant whispers, counterspell, darkness, dominate person, sanctuary, telekinesis, teleport, dominate monster, greater invisibility"
   },
   {
     "name": "Juiblex",
@@ -1561,7 +1575,8 @@
         "text": "Melee Weapon Attack: +14 to hit, reach 10 ft., one creature. Hit: 21 (4d6+ 7) poison damage, and the target is slimed. Until the slime is scraped off with an action, the target is poisoned, and any creature, other than an ooze, is poisoned while Within 10 of the target.",
         "cost": 2
       }
-    ]
+    ],
+    "spells": "acid splash (1 7th level), detect magic, blight, contagion, gaseous form"
   },
   {
     "name": "Orcus",
@@ -1643,7 +1658,8 @@
         "text": "Orcus chooses a point on the ground that he can see within 100 feet of him. A cylinder of swirling necrotic energy 60 feet tall and with a 10-foot radius rises from that point and lasts until the end of Orcus's next turn. Creatures in that area are vulnerable to necrotic damage.",
         "cost": 2
       }
-    ]
+    ],
+    "spells": "chill touch (17th level), detect magic, create undead, dispel magic, time stop"
   },
   {
     "name": "Yeenoghu",
@@ -1721,7 +1737,8 @@
         "text": "Yeenoghu makes a bite attack against each creature within 10 feet of him.",
         "cost": 2
       }
-    ]
+    ],
+    "spells": "detect magic, spiritual weapon (8th-level spell, 4d8 + 2 force damage on a hit, appears as a flail), dispel magic, fear, invisibility, teleport"
   },
   {
     "name": "Zuggtmoy",
@@ -1796,6 +1813,7 @@
         "text": "One creature charmed by Zuggtmoy that she can see must use its reaction to move up to its speed as she directs or to make a weapon attack against a target that she designates.",
         "cost": 1
       }
-    ]
+    ],
+    "spells": "detect magic, locate animals or plants, ray of sickness, dispel magic, ensnaring strike, entangle, plant growth, etherealness, teleport"
   }
 ]
