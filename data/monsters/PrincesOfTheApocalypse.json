@@ -43,7 +43,7 @@
         "text": "Melee or Ranged Weapon Attack: +9 to hit, reach 5 ft. or range 20 ft./60 ft., one target. Hit: 9 (1d6 + 6) piercing damage, or 10 (1d8 + 6) piercing damage if used with two hands to make a melee attack, plus 3 (1d6) lightning damage."
       }
     ],
-    "spells": "gust, mage hand, message, prestidigitation, ray of frost, shocking grasp, charm person, feather fall, mage armor, thunderwave, dust devil, gust of wind, invisibility, fly, gaseous form, lightning bolt, ice storm, storm sphere, cloudkill, seeming (cast each day), chain lightning"
+    "spells": "gust, mage hand, message, prestidigitation, ray of frost, shocking grasp, charm person, feather fall, mage armor, thunderwave, dust devil, gust of wind, invisibility, fly, gaseous form, lightning bolt, ice storm, storm sphere, cloudkill, seeming, chain lightning"
   },
   {
     "name": "Air Elemental Myrmidon",
@@ -702,7 +702,7 @@
         "text": "Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage."
       }
     ],
-    "spells": "control flames, fire bolt, friends, light, minor illusion, burning hands, color spray, mage armor, scorching ray, suggestion, fireball, hypnotic pattern, fire shield (see Wreathed in Flame)"
+    "spells": "control flames, fire bolt, friends, light, minor illusion, burning hands, color spray, mage armor, scorching ray, suggestion, fireball, hypnotic pattern, fire shield"
   },
   {
     "name": "Gar Shatterkeel",

@@ -1093,7 +1093,7 @@
         "recharge": "Recharges after a Long Rest"
       }
     ],
-    "spells": "acid splash, light, mage hand, poison spray, prestidigitation, false life, mage armor, ray of sickness, shield, crown of madness, misty step, gaseous form, stinking cloud, blight, confusion, cloudkill, nondetection (self only), blindness/deafness, blur, disguise self"
+    "spells": "acid splash, light, mage hand, poison spray, prestidigitation, false life, mage armor, ray of sickness, shield, crown of madness, misty step, gaseous form, stinking cloud, blight, confusion, cloudkill, nondetection, blindness/deafness, blur, disguise self"
   },
   {
     "name": "Yestabrod",
@@ -1403,7 +1403,7 @@
         "cost": 2
       }
     ],
-    "spells": "alter self (can become Medium-sized when changing his appearance), detect magic, dispel magic, phantasamal force, confusion, dream, mislead, programmed illusion, seeming, mirage arcane, modify memory, project image"
+    "spells": "alter self, detect magic, dispel magic, phantasamal force, confusion, dream, mislead, programmed illusion, seeming, mirage arcane, modify memory, project image"
   },
   {
     "name": "Graz'zt",
@@ -1576,7 +1576,7 @@
         "cost": 2
       }
     ],
-    "spells": "acid splash (1 7th level), detect magic, blight, contagion, gaseous form"
+    "spells": "acid splash, detect magic, blight, contagion, gaseous form"
   },
   {
     "name": "Orcus",
@@ -1659,7 +1659,7 @@
         "cost": 2
       }
     ],
-    "spells": "chill touch (17th level), detect magic, create undead, dispel magic, time stop"
+    "spells": "chill touch, detect magic, create undead, dispel magic, time stop"
   },
   {
     "name": "Yeenoghu",

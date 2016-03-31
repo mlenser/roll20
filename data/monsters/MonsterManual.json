@@ -2410,7 +2410,7 @@
         "recharge": "1/Day"
       }
     ],
-    "spells": "fire bolt, mage hand, minor illusion, prestidigitation, detect magic, identify, shield, Tenser's floating disk, detect thoughts, mirror image, phantasmal force, suggestion, counterspell, fear, fireball, banishment, dimension door, contact other plane, hold monster, chain lightning, finger of death, mind blank, alter self, darkness, heat metal, invisibility (self only), magic missile"
+    "spells": "fire bolt, mage hand, minor illusion, prestidigitation, detect magic, identify, shield, Tenser's floating disk, detect thoughts, mirror image, phantasmal force, suggestion, counterspell, fear, fireball, banishment, dimension door, contact other plane, hold monster, chain lightning, finger of death, mind blank, alter self, darkness, heat metal, invisibility, magic missile"
   },
   {
     "name": "Archmage",
@@ -2963,7 +2963,7 @@
         "recharge": "1/Day"
       }
     ],
-    "spells": "entangle, phantasmal force, disguise self, invisibility (self only)"
+    "spells": "entangle, phantasmal force, disguise self, invisibility"
   },
   {
     "name": "Basilisk",
@@ -4080,7 +4080,7 @@
         "text": "One humanoid the cambion can see within 30 ft. of it must succeed on a DC 14 Wisdom saving throw or be magically charmed for 1 day. The charmed target obeys the cambion's spoken commands. If the target suffers any harm from the cambion or another creature or receives a suicidal command from the cambion, the target can repeat the saving throw, ending the effect on itself on a success. If a target's saving throw is successful, or if the effect ends for it, the creature is immune to the cambion's Fiendish Charm for the next 24 hours."
       }
     ],
-    "spells": "alter self, command, detect magic, plane shift (self only)"
+    "spells": "alter self, command, detect magic, plane shift"
   },
   {
     "name": "Camel",
@@ -5009,7 +5009,7 @@
         "text": "Melee Weapon Attack: +10 to hit, reach 5 ft., one target. Hit: 20 (4d6 + 6) bludgeoning damage. If the target is a Huge or smaller creature, it must succeed on a DC 18 Strength check or be knocked prone."
       }
     ],
-    "spells": "detect evil and good, detect magic, stone shape, passwall, move earth, tongues, conjure elemental (earth elemental only), gaseous form, invisibility, phantasmal killer, plane shift, wall of stone"
+    "spells": "detect evil and good, detect magic, stone shape, passwall, move earth, tongues, conjure elemental, gaseous form, invisibility, phantasmal killer, plane shift, wall of stone"
   },
   {
     "name": "Darkmantle",
@@ -5137,7 +5137,7 @@
         "recharge": "1/day"
       }
     ],
-    "spells": "command, compelled duel, searing smite, hold person, magic weapon, dispel magic, elemental weapon, banishment, staggering smite, destructive wave (necrotic)"
+    "spells": "command, compelled duel, searing smite, hold person, magic weapon, dispel magic, elemental weapon, banishment, staggering smite, destructive wave"
   },
   {
     "name": "Death Slaad",
@@ -5204,7 +5204,7 @@
         "text": "Melee Weapon Attack: +9 to hit, reach 5 ft., one target. Hit: 12 (2d6 + 5) slashing damage plus 7 (2d6) necrotic damage."
       }
     ],
-    "spells": "detect magic, detect thoughts, invisibility (self only), mage hand, major image, fear, fireball, fly, tongues, cloudkill, plane shift"
+    "spells": "detect magic, detect thoughts, invisibility, mage hand, major image, fear, fireball, fly, tongues, cloudkill, plane shift"
   },
   {
     "name": "Death Tyrant",
@@ -5344,7 +5344,7 @@
         "text": "Ranged Weapon Attack: +4 to hit, range 30/120 ft., one creature. Hit: 4 (1d4 + 2) piercing damage, and the target must succeed on a DC 12 Constitution saving throw or be poisoned for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success"
       }
     ],
-    "spells": "nondetection (self only), blindness/deafness, blur, disguise self"
+    "spells": "nondetection, blindness/deafness, blur, disguise self"
   },
   {
     "name": "Deer",
@@ -5622,7 +5622,7 @@
         "text": "A 5-foot-radius, 30-foot-tall cylinder of swirling air magically forms on a point the djinni can see within 120 feet of it. The whirlwind lasts as long as the djinni maintains concentration (as if concentrating on a spell). Any creature but the djinni that enters the whirlwind must succeed on a DC 18 Strength saving throw or be restrained by it. The djinni can move the whirlwind up to 60 feet as an action, and creatures restrained by the whirlwind move with it. The whirlwind ends if the djinni loses sight of it.\nA creature can use its action to free a creature restrained by the whirlwind, including itself, by succeeding on a DC 18 Strength check. If the check succeeds, the creature is no longer restrained and moves to the nearest space outside the whirlwind."
       }
     ],
-    "spells": "detect evil and good, detect magic, thunderwave • 3/day each, conjure elemental (air elemental only), creation, gaseous form, invisibility, major image, plane shift"
+    "spells": "detect evil and good, detect magic, thunderwave, conjure elemental, creation, gaseous form, invisibility, major image, plane shift"
   },
   {
     "name": "Doppelganger",
@@ -5980,7 +5980,7 @@
         "text": "Ranged Weapon Attack: +7 to hit, range 30/120 ft., one target. Hit: 7 (1d6 + 4) piercing damage, and the target must succeed on a DC 13 Constitution saving throw or be poisoned for 1 hour. If the saving throw fails by 5 or more, the target is also unconscious while poisoned in this way. The target wakes up if it takes damage or if another creature takes an action to shake it awake."
       }
     ],
-    "spells": "dancing lights, darkness, faerie fire, levitate (self only)"
+    "spells": "dancing lights, darkness, faerie fire, levitate"
   },
   {
     "name": "Drow Mage",
@@ -6029,7 +6029,7 @@
         "recharge": "1/Day"
       }
     ],
-    "spells": "mage hand, minor illusion, poison spray, ray of frost, mage armor, magic missile, shield, witch bolt, alter self, misty step, web, fly, lightning bolt, Evard's black tentacles, greater invisibility, cloudkill, dancing lights, darkness, faerie fire, levitate (self only)"
+    "spells": "mage hand, minor illusion, poison spray, ray of frost, mage armor, magic missile, shield, witch bolt, alter self, misty step, web, fly, lightning bolt, Evard's black tentacles, greater invisibility, cloudkill, dancing lights, darkness, faerie fire, levitate"
   },
   {
     "name": "Drow Priestess of Lolth",
@@ -6083,7 +6083,7 @@
         "recharge": "1/Day"
       }
     ],
-    "spells": "guidance, poison spray, resistance, spare the dying, thaumaturgy, animal friendship, cure wounds, detect poison and disease, ray of sickness, lesser restoration, protection from poison, web, conjure animals (2 giant spiders), dispel magic, divination, freedom of movement, insect plague, mass cure wounds, dancing lights, darkness, faerie fire, levitate (self only)"
+    "spells": "guidance, poison spray, resistance, spare the dying, thaumaturgy, animal friendship, cure wounds, detect poison and disease, ray of sickness, lesser restoration, protection from poison, web, conjure animals, dispel magic, divination, freedom of movement, insect plague, mass cure wounds, dancing lights, darkness, faerie fire, levitate"
   },
   {
     "name": "Druid",
@@ -6422,7 +6422,7 @@
         "text": "Ranged Spell Attack: +7 to hit, range 120 ft., one target. Hit: 17 (5d6) fire damage."
       }
     ],
-    "spells": "detect magic, enlarge/reduce, tongues, conjure elemental (fire elemental only), gaseous form, invisibility, major image, plane shift, wall of fire"
+    "spells": "detect magic, enlarge/reduce, tongues, conjure elemental, gaseous form, invisibility, major image, plane shift, wall of fire"
   },
   {
     "name": "Elephant",
@@ -6555,7 +6555,7 @@
         "cost": 2
       }
     ],
-    "spells": "greater restoration, pass without trace, water breathing, water walk, commune, dispel evil and good, earthquake, fire storm, plane shift (self only)"
+    "spells": "greater restoration, pass without trace, water breathing, water walk, commune, dispel evil and good, earthquake, fire storm, plane shift"
   },
   {
     "name": "Erinyes",
@@ -8821,7 +8821,7 @@
         "text": "Melee Weapon Attack: +9 to hit, reach 5 ft., one target. Hit: 13 (2d6 + 6) slashing damage plus 10 (3d6) psychic damage. This is a magic weapon attack. On a critical hit against a target in an astral body (as with the astral projection spell), the githyanki can cut the silvery cord that tethers the target to its material body, instead of dealing damage."
       }
     ],
-    "spells": "mage hand (the hand is invisible), jump, misty step, nondetection (self only), tongues, plane shift, telekinesis"
+    "spells": "mage hand, jump, misty step, nondetection, tongues, plane shift, telekinesis"
   },
   {
     "name": "Githyanki Warrior",
@@ -8857,7 +8857,7 @@
         "text": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 9 (2d6 + 2) slashing damage plus 7 (2d6) psychic damage."
       }
     ],
-    "spells": "mage hand (the hand is invisible), jump, misty step, nondetection (self only)"
+    "spells": "mage hand, jump, misty step, nondetection"
   },
   {
     "name": "Githzerai Monk",
@@ -8898,7 +8898,7 @@
         "text": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 6 (1d8 + 2) bludgeoning damage plus 9 (2d8) psychic damage. This is a magic weapon attack."
       }
     ],
-    "spells": "mage hand (the hand is invisible), feather fall, jump, see invisibility, shield"
+    "spells": "mage hand, feather fall, jump, see invisibility, shield"
   },
   {
     "name": "Githzerai Zerth",
@@ -8939,7 +8939,7 @@
         "text": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) bludgeoning damage plus 13 (3d8) psychic damage. This is a magic weapon attack."
       }
     ],
-    "spells": "mage hand (the hand is invisible), feather fall, jump, see invisibility, shield"
+    "spells": "mage hand, feather fall, jump, see invisibility, shield"
   },
   {
     "name": "Glabrezu",
@@ -9561,7 +9561,7 @@
         "text": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) slashing damage."
       }
     ],
-    "spells": "detect magic, detect thoughts, invisibility (self only), mage hand, major image, fear, fly, fireball, tongues, plane shift (self only)"
+    "spells": "detect magic, detect thoughts, invisibility, mage hand, major image, fear, fly, fireball, tongues, plane shift"
   },
   {
     "name": "Green Dragon Wyrmling",
@@ -9729,7 +9729,7 @@
         "text": "Ranged Spell Attack: +4 to hit, range 60 ft., one target. Hit: 10 (3d6) fire damage. The fire ignites flammable objects that aren 't being worn or carried."
       }
     ],
-    "spells": "detect magic, detect thoughts, mage hand, fear, invisibility (self only), fireball"
+    "spells": "detect magic, detect thoughts, mage hand, fear, invisibility, fireball"
   },
   {
     "name": "Grell",
@@ -11699,7 +11699,7 @@
         "text": "Melee Spell Attack: +5 to hit, reach 5 ft., one creature. Hit: The target is magically cursed for 1 hour. Until the curse ends, the target has disadvantage on Wisdom saving throws and all ability checks."
       }
     ],
-    "spells": "disguise self (any humanoid form), major image, charm person, mirror image, scrying, suggestion, geas"
+    "spells": "disguise self, major image, charm person, mirror image, scrying, suggestion, geas"
   },
   {
     "name": "Lemure",
@@ -12025,7 +12025,7 @@
         "recharge": "Recharges after a Short or Long Rest"
       }
     ],
-    "spells": "druidcraft, produce flame, thorn whip, entangle, fog cloud, heat metal, spike growth, conjure animals (reptiles only), plant growth"
+    "spells": "druidcraft, produce flame, thorn whip, entangle, fog cloud, heat metal, spike growth, conjure animals, plant growth"
   },
   {
     "name": "Mage",
@@ -12299,7 +12299,7 @@
         "text": "The marid magically shoots water in a 60-foot line that is 5 feet wide. Each creature in that line must make a DC 16 Dexterity saving throw. On a failure, a target takes 21 (6d6) bludgeoning damage and, if it is Huge or smaller, is pushed up to 20 feet away from the marid and knocked prone. On a success, a target takes half the bludgeoning damage, but is neither pushed nor knocked prone."
       }
     ],
-    "spells": "create or destroy water, detect evil and good, detect magic, fog cloud, purify food and drink, tongues, water breathing, water walk, conjure elemental (water elemental only), control water, gaseous form, invisibility, plane shift"
+    "spells": "create or destroy water, detect evil and good, detect magic, fog cloud, purify food and drink, tongues, water breathing, water walk, conjure elemental, control water, gaseous form, invisibility, plane shift"
   },
   {
     "name": "Marilith",
@@ -12659,7 +12659,7 @@
         "recharge": "Recharge 5-6"
       }
     ],
-    "spells": "detect thoughts, levitate, dominate monster, plane shift (self only)"
+    "spells": "detect thoughts, levitate, dominate monster, plane shift"
   },
   {
     "name": "Mind Flayer Arcanist",
@@ -12710,7 +12710,7 @@
         "recharge": "Recharge 5-6"
       }
     ],
-    "spells": "blade ward, dancing lights, mage hand, shocking grasp, detect magic, disguise self, shield, sleep, blur, invisibility, ray of enfeeblement, clairvoyance, lightning bolt, sending, confusion, hallucinatory terrain, telekinesis, wall of force, detect thoughts, levitate, dominate monster, plane shift (self only)"
+    "spells": "blade ward, dancing lights, mage hand, shocking grasp, detect magic, disguise self, shield, sleep, blur, invisibility, ray of enfeeblement, clairvoyance, lightning bolt, sending, confusion, hallucinatory terrain, telekinesis, wall of force, detect thoughts, levitate, dominate monster, plane shift"
   },
   {
     "name": "Minotaur",
@@ -13330,7 +13330,7 @@
         "recharge": "1/Day"
       }
     ],
-    "spells": "detect magic, magic missile, plane shift (self only), ray of enfeeblement, sleep"
+    "spells": "detect magic, magic missile, plane shift, ray of enfeeblement, sleep"
   },
   {
     "name": "Nightmare",
@@ -13495,7 +13495,7 @@
         "recharge": "1/Day"
       }
     ],
-    "spells": "darkness, detect magic, dispel magic, invisibility (self only), mirror image"
+    "spells": "darkness, detect magic, dispel magic, invisibility, mirror image"
   },
   {
     "name": "Ochre Jelly",
@@ -13764,7 +13764,7 @@
         "text": "Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 11 (1d6 + 3 plus 1d8) piercing damage, or 12 (2d8 + 3) piercing damage if used with two hands to make a melee attack."
       }
     ],
-    "spells": "guidance, resistance, thaumaturgy, bless, command, augury, spiritual weapon (spear)"
+    "spells": "guidance, resistance, thaumaturgy, bless, command, augury, spiritual weapon"
   },
   {
     "name": "Orc War Chief",
@@ -14324,7 +14324,7 @@
         "recharge": "4/Day"
       }
     ],
-    "spells": "detect evil and good, invisibility (self only), blade barrier, dispel evil and good, flame strike, raise dead, commune, control weather, insect plague"
+    "spells": "detect evil and good, invisibility, blade barrier, dispel evil and good, flame strike, raise dead, commune, control weather, insect plague"
   },
   {
     "name": "Plesiosaurus",
@@ -14785,7 +14785,7 @@
         "text": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) slashing damage."
       }
     ],
-    "spells": "feather fall, mage hand (the hand is invisible), cure wounds, enlarge/reduce, heat metal, mirror image"
+    "spells": "feather fall, mage hand, cure wounds, enlarge/reduce, heat metal, mirror image"
   },
   {
     "name": "Quasit",
@@ -15577,7 +15577,7 @@
         "text": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 3 (1d4 + 1) slashing damage."
       }
     ],
-    "spells": "guidance, thaumaturgy, bless, detect magic, guiding bolt, hold person, spiritual weapon (trident), mass healing word, tongues"
+    "spells": "guidance, thaumaturgy, bless, detect magic, guiding bolt, hold person, spiritual weapon, mass healing word, tongues"
   },
   {
     "name": "Salamander",
@@ -16279,7 +16279,7 @@
         "cost": 3
       }
     ],
-    "spells": "detect evil and good, invisibility (self only), blade barrier, dispel evil and good, resurrection, commune, control weather"
+    "spells": "detect evil and good, invisibility, blade barrier, dispel evil and good, resurrection, commune, control weather"
   },
   {
     "name": "Spectator",
@@ -17364,7 +17364,7 @@
         "text": "Ranged Weapon Attack: +4 to hit, range 30/120 ft., one target. Hit: 5 (1d6 + 2) slashing damage."
       }
     ],
-    "spells": "mage hand (the hand is invisible), blur, magic weapon, invisibility (self only)"
+    "spells": "mage hand, blur, magic weapon, invisibility"
   },
   {
     "name": "Thug",
@@ -17809,7 +17809,7 @@
         "recharge": "1/Day"
       }
     ],
-    "spells": "alter self, clairvoyance, darkness, detect magic, detect thoughts, dispel magic, invisibility (self only), suggestion, dimension door, fear, wall of fire, fire storm, mass suggestion"
+    "spells": "alter self, clairvoyance, darkness, detect magic, detect thoughts, dispel magic, invisibility, suggestion, dimension door, fear, wall of fire, fire storm, mass suggestion"
   },
   {
     "name": "Umber Hulk",
@@ -19978,7 +19978,7 @@
         "text": "The yuan-ti has advantage on saving throws against spells and other magical effects."
       }
     ],
-    "spells": "animal friendship (snakes only), suggestion, fear"
+    "spells": "animal friendship, suggestion, fear"
   },
   {
     "name": "Yuan-ti Malison Type 1",
@@ -20040,7 +20040,7 @@
         "recharge": "Yuan-ti Form Only"
       }
     ],
-    "spells": "animal friendship (snakes only), suggestion"
+    "spells": "animal friendship, suggestion"
   },
   {
     "name": "Yuan-ti Malison Type 2",
@@ -20092,7 +20092,7 @@
         "text": "Melee Weapon Attack: +5 to hit, reach 5 ft., one creature. Hit: 5 (1d4 + 3) piercing damage plus 7 (2d6) poison damage."
       }
     ],
-    "spells": "animal friendship (snakes only), suggestion"
+    "spells": "animal friendship, suggestion"
   },
   {
     "name": "Yuan-ti Malison Type 3",
@@ -20159,7 +20159,7 @@
         "recharge": "Yuan-ti Form Only"
       }
     ],
-    "spells": "animal friendship (snakes only), suggestion"
+    "spells": "animal friendship, suggestion"
   },
   {
     "name": "Yuan-ti Pureblood",
@@ -20205,7 +20205,7 @@
         "text": "Ranged Weapon Attack: +3 to hit, range 80/320 ft., one target. Hit: 4 (1d6 + 1) piercing damage plus 7 (2d6) poison damage."
       }
     ],
-    "spells": "animal friendship (snakes only), poison spray, suggestion"
+    "spells": "animal friendship, poison spray, suggestion"
   },
   {
     "name": "Zombie",
