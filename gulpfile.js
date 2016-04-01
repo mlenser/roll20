@@ -4,7 +4,8 @@ var uglify = require('gulp-uglify');
 var fs = require('fs');
 var rename = require('gulp-rename');
 var jsoncombine = require('gulp-jsoncombine');
-var formatVersion = '0.1.1';
+var spellFormatVersion = '0.1.2';
+var monsterFormatVersion = '0.1.1'
 
 function search(nameKey, myArray){
 	for (var i=0; i < myArray.length; i++) {
@@ -50,7 +51,7 @@ gulp.task('compileSpells', function() {
 
 			sortArray(spells);
 
-			return new Buffer('fifthSpells = { version: "' + formatVersion + '", spells:' + JSON.stringify(spells) + '};');
+			return new Buffer('fifthSpells = { version: "' + spellFormatVersion + '", spells:' + JSON.stringify(spells) + '};');
 		}))
 		.pipe(gulp.dest('./scripts/dist'));
 });
@@ -94,7 +95,7 @@ gulp.task('compileHouseruledSpells', function() {
 
 			sortArray(spells);
 
-			return new Buffer('fifthSpells = { version: "' + formatVersion + '", spells:' + JSON.stringify(spells) + '};');
+			return new Buffer('fifthSpells = { version: "' + spellFormatVersion + '", spells:' + JSON.stringify(spells) + '};');
 		}))
 		.pipe(gulp.dest('./scripts/dist'));
 });
@@ -109,7 +110,7 @@ gulp.task('compileMonsters', function() {
 
 			sortArray(monsters);
 
-			return new Buffer('fifthMonsters = { version: "' + formatVersion + '", monsters:' + JSON.stringify(monsters) + '};');
+			return new Buffer('fifthMonsters = { version: "' + monsterFormatVersion + '", monsters:' + JSON.stringify(monsters) + '};');
 		}))
 		.pipe(gulp.dest('./scripts/dist'));
 });
