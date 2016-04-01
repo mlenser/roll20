@@ -389,7 +389,7 @@
     "legendaryActions": [
       {
         "name": "Bite",
-        "text": "Melee Weapon Attack: +19 to hit, reach 20 ft., one target. Hit: 32 (4dl0 + 10) slashing damage plus 14 (4d6) acid damage (black dragon head), lightning damage (blue dragon head), poison damage (green dragon head), fire damage (red dragon head), or cold damage (white dragon head).",
+        "text": "Melee Weapon Attack: +19 to hit, reach 20 ft., one target. Hit: 32 (4d10 + 10) slashing damage plus 14 (4d6) acid damage (black dragon head), lightning damage (blue dragon head), poison damage (green dragon head), fire damage (red dragon head), or cold damage (white dragon head).",
         "cost": 1
       },
       {
