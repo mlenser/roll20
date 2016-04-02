@@ -368,6 +368,53 @@
 		return obj;
 	};
 
+	shaped.setTokenVision = function (token) {
+                if (!characterId) {
+                    var id = token.get('represents');
+                    var character = findObjs({
+                                    _type: 'character',
+                                    id: id
+                            })[0];
+                    var characterId = character.id;
+                }
+		var blindsight = parseInt(getAttrByName(characterId, 'blindsight'), 10) || 0;
+		var	darkvision = parseInt(getAttrByName(characterId, 'darkvision'), 10) || 0;
+		var	tremorsense = parseInt(getAttrByName(characterId, 'tremorsense'), 10) || 0;
+		var	truesight = parseInt(getAttrByName(characterId, 'truesight'), 10) || 0;
+		var	longestVisionRange = Math.max(blindsight, darkvision, tremorsense, truesight);
+		var	longestVisionRangeForSecondaryDarkvision = Math.max(blindsight, tremorsense, truesight);
+		var	lightRadius;
+		var	dimRadius;
+
+		if (longestVisionRange === blindsight) {
+			lightRadius = blindsight;
+			dimRadius = blindsight;
+		} else if (longestVisionRange === tremorsense) {
+			lightRadius = tremorsense;
+			dimRadius = tremorsense;
+		} else if (longestVisionRange === truesight) {
+			lightRadius = truesight;
+			dimRadius = truesight;
+		} else if (longestVisionRange === darkvision) {
+			lightRadius = Math.ceil(darkvision * 1.1666666);
+			if (longestVisionRangeForSecondaryDarkvision > 0) {
+				dimRadius = longestVisionRangeForSecondaryDarkvision;
+			} else {
+				dimRadius = -5;
+			}
+		}
+
+		if (lightRadius > 0) {
+			token.set('light_radius', lightRadius);
+		}
+		if (dimRadius) {
+			token.set('light_dimradius', dimRadius);
+		}
+		token.set('light_hassight', true);
+		token.set('light_angle', 360);
+		token.set('light_losangle', 360);
+	}
+
 	function setUserDefinedScriptSettings() {
 		if (shaped.settings.sheetOutput === 'hidden') {
 			setAttribute('output_option', '@{output_to_gm}');
@@ -456,7 +503,7 @@
 				token.set('showplayers_bar3', 'true');
 			}
 
-			setTokenVision(token);
+			shaped.setTokenVision(token);
 		}
 		messageToChat(status);
 
@@ -986,45 +1033,6 @@
 			}
 			setAttribute(attrName, value);
 		}
-	}
-
-	function setTokenVision(token) {
-		var blindsight = parseInt(getAttrByName(characterId, 'blindsight'), 10) || 0;
-		var	darkvision = parseInt(getAttrByName(characterId, 'darkvision'), 10) || 0;
-		var	tremorsense = parseInt(getAttrByName(characterId, 'tremorsense'), 10) || 0;
-		var	truesight = parseInt(getAttrByName(characterId, 'truesight'), 10) || 0;
-		var	longestVisionRange = Math.max(blindsight, darkvision, tremorsense, truesight);
-		var	longestVisionRangeForSecondaryDarkvision = Math.max(blindsight, tremorsense, truesight);
-		var	lightRadius;
-		var	dimRadius;
-
-		if (longestVisionRange === blindsight) {
-			lightRadius = blindsight;
-			dimRadius = blindsight;
-		} else if (longestVisionRange === tremorsense) {
-			lightRadius = tremorsense;
-			dimRadius = tremorsense;
-		} else if (longestVisionRange === truesight) {
-			lightRadius = truesight;
-			dimRadius = truesight;
-		} else if (longestVisionRange === darkvision) {
-			lightRadius = Math.ceil(darkvision * 1.1666666);
-			if (longestVisionRangeForSecondaryDarkvision > 0) {
-				dimRadius = longestVisionRangeForSecondaryDarkvision;
-			} else {
-				dimRadius = -5;
-			}
-		}
-
-		if (lightRadius > 0) {
-			token.set('light_radius', lightRadius);
-		}
-		if (dimRadius) {
-			token.set('light_dimradius', dimRadius);
-		}
-		token.set('light_hassight', true);
-		token.set('light_angle', 360);
-		token.set('light_losangle', 360);
 	}
 
 	function parseChallenge(cr) {
@@ -2368,7 +2376,7 @@
 				token.set('showplayers_bar3', 'true');
 			}
 
-			setTokenVision(token);
+			shaped.setTokenVision(token);
 		}
 		if (monster.traits) {
 			if (monster.traits) {
