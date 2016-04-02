@@ -36,7 +36,7 @@ function sortArray (array) {
 }
 
 gulp.task('compileSpells', function() {
-	gulp.src('./data/spells/spellData.json')
+	gulp.src('./data/spellSourceFiles/spellData.json')
 		.pipe(jsoncombine('5e-spells.js', function(sources) {
 			var spells = [];
 			Object.keys(sources).forEach(function(source) {
@@ -47,11 +47,11 @@ gulp.task('compileSpells', function() {
 
 			return new Buffer('fifthSpells = { version: "' + spellFormatVersion + '", spells:' + JSON.stringify(spells) + '};');
 		}))
-		.pipe(gulp.dest('./data/spells'));
+		.pipe(gulp.dest('./data/'));
 });
 
 gulp.task('compileHouseruledSpells', function() {
-	gulp.src('./data/spells/*.json')
+	gulp.src('./data/spellSourceFiles/*.json')
 		.pipe(jsoncombine('5e-spells-houserules.js', function(sources) {
 			var spells = [];
 			Object.keys(sources).forEach(function(source) {
@@ -91,11 +91,11 @@ gulp.task('compileHouseruledSpells', function() {
 
 			return new Buffer('fifthSpells = { version: "' + spellFormatVersion + '", spells:' + JSON.stringify(spells) + '};');
 		}))
-		.pipe(gulp.dest('./data/spells'));
+		.pipe(gulp.dest('./data/'));
 });
 
 gulp.task('compileMonsters', function() {
-	gulp.src('./data/monsters/*.json')
+	gulp.src('./data/monsterSourceFiles/*.json')
 		.pipe(jsoncombine('5e-monsters.js', function(sources) {
 			var monsters = [];
 			Object.keys(sources).forEach(function(source) {
@@ -106,7 +106,7 @@ gulp.task('compileMonsters', function() {
 
 			return new Buffer('fifthMonsters = { version: "' + monsterFormatVersion + '", monsters:' + JSON.stringify(monsters) + '};');
 		}))
-		.pipe(gulp.dest('./data/monsters'));
+		.pipe(gulp.dest('./data/'));
 });
 
 gulp.task('compileAll', ['compileSpells', 'compileHouseruledSpells', 'compileMonsters']);
