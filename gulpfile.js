@@ -35,12 +35,6 @@ function sortArray (array) {
 	});
 }
 
-gulp.task('compile', function() {
-	return gulp.src('./scripts/5e-shaped-scripts.js')
-		.pipe(uglify())
-		.pipe(gulp.dest('./scripts/dist'));
-});
-
 gulp.task('compileSpells', function() {
 	gulp.src('./data/spells/spellData.json')
 		.pipe(jsoncombine('5e-spells.js', function(sources) {
@@ -53,7 +47,7 @@ gulp.task('compileSpells', function() {
 
 			return new Buffer('fifthSpells = { version: "' + spellFormatVersion + '", spells:' + JSON.stringify(spells) + '};');
 		}))
-		.pipe(gulp.dest('./scripts/dist'));
+		.pipe(gulp.dest('./data/spells'));
 });
 
 gulp.task('compileHouseruledSpells', function() {
@@ -97,7 +91,7 @@ gulp.task('compileHouseruledSpells', function() {
 
 			return new Buffer('fifthSpells = { version: "' + spellFormatVersion + '", spells:' + JSON.stringify(spells) + '};');
 		}))
-		.pipe(gulp.dest('./scripts/dist'));
+		.pipe(gulp.dest('./data/spells'));
 });
 
 gulp.task('compileMonsters', function() {
@@ -112,7 +106,7 @@ gulp.task('compileMonsters', function() {
 
 			return new Buffer('fifthMonsters = { version: "' + monsterFormatVersion + '", monsters:' + JSON.stringify(monsters) + '};');
 		}))
-		.pipe(gulp.dest('./scripts/dist'));
+		.pipe(gulp.dest('./data/monsters'));
 });
 
-gulp.task('compileAll', ['compile', 'compileSpells', 'compileHouseruledSpells', 'compileMonsters']);
+gulp.task('compileAll', ['compileSpells', 'compileHouseruledSpells', 'compileMonsters']);
