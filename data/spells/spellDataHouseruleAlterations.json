@@ -18,7 +18,7 @@
     "level": 6,
     "school": "Conjuration",
     "save": {
-      "ability": "constitution",
+      "ability": "Constitution",
       "damage": "7d8",
       "damageType": "acid",
       "saveSuccess": "half damage",
@@ -51,7 +51,7 @@
     "level": 5,
     "school": "Evocation",
     "save": {
-      "ability": "constitution",
+      "ability": "Constitution",
       "damage": "8d8",
       "damageType": "acid",
       "saveSuccess": "half damage",
@@ -85,7 +85,7 @@
     "level": 2,
     "school": "Conjuration",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "2d6",
       "damageType": "lightning",
       "saveSuccess": "half damage",
@@ -112,7 +112,7 @@
     "name": "Blight",
     "description": "Necromantic energy washes over a creature of your choice that you can see within range, draining moisture and vitality from it. The target must make a Constitution saving throw. The target takes 10d8 necrotic damage on a failed save, or half as much damage on a successful one. The spell has no effect on undead or constructs.\nIf you target a plant creature or a magical plant, it makes the saving throw with disadvantage, and the spell deals maximum damage to it.\nIf you target a nonmagical plant that isn't a creature, such as a tree or shrub, it doesn't make a saving throw; it simply withers and dies.",
     "save": {
-      "ability": "constitution",
+      "ability": "Constitution",
       "damage": "10d8",
       "damageType": "necrotic",
       "saveSuccess": "half damage",
@@ -185,7 +185,7 @@
     "name": "Cordon of Arrows",
     "description": "You plant four pieces of nonmagical ammunition�arrows or crossbow bolts�in the ground within range and lay magic upon them to protect an area. Until the spell ends, whenever a creature other than you comes within 30 feet of the ammunition for the first time on a turn or ends its turn there, one piece of ammunition flies up to strike it. The creature must succeed on a Dexterity saving throw or take 3d6 piercing damage. The piece of ammunition is then destroyed. The spell ends when no ammunition remains.\nWhen you cast this spell, you can designate any creatures you choose, and the spell ignores them.",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "3d6",
       "damageType": "piercing"
     }
@@ -200,7 +200,7 @@
     "name": "Crown of Madness",
     "description": "One humanoid of your choice that you can see within range must succeed on a Wisdom saving throw or become charmed by you for the duration. While the target is charmed in this way, a twisted crown of jagged iron appears on its head, and a madness glows in its eyes.\nThe charmed target must use its action to make melee attacks against a creature other than itself that you mentally choose. The charmed target can move up to half its speed before making the attacks.\nThe target can act normally on its turn if you choose no creature or if none are within its reach.\nOn your subsequent turns, you must use your action to maintain control over the target, or the spell ends. Also, the target can make a Wisdom saving throw at the end of each of its turns. On a success, the spell ends.",
     "save": {
-      "ability": "wisdom",
+      "ability": "Wisdom",
       "saveFailure": "become charmed by you for the duration. While the target is charmed in this way, a twisted crown of jagged iron appears on its head, and a madness glows in its eyes.\nThe charmed target must use its action to make melee attacks against a creature other than itself that you mentally choose. The charmed target can move up to half its speed before making the attacks.\nThe target can act normally on its turn if you choose no creature or if none are within its reach.\nOn your subsequent turns, you must use your action to maintain control over the target, or the spell ends. Also, the target can make a Wisdom saving throw at the end of each of its turns. On a success, the spell ends."
     }
   },
@@ -216,7 +216,7 @@
     "name": "Disintegrate",
     "description": "A thin green ray springs from your pointing finger to a target that you can see within range. The target can be a creature, an object, or a creation of magical force, such as the wall created by wall of force.\nA creature targeted by this spell must make a Dexterity saving throw. On a failed save, the target takes 24d6 force damage. If this damage reduces the target to 0 hit points, it is disintegrated.\nA disintegrated creature and everything it is wearing and carrying, except magic items, are reduced to a pile of fine gray dust. The creature can be restored to life only by means of a true resurrection or a wish spell.\nThis spell automatically disintegrates a Large or smaller nonmagical object or a creation of magical force. If the target is a Huge or larger object or creation of force, this spell disintegrates a 10-foot-cube portion of it. A magic item is unaffected by this spell.",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "24d6",
       "damageType": "force",
       "higherLevelDice": "3",
@@ -227,7 +227,7 @@
     "name": "Divine Word",
     "description": "You utter a divine word, imbued with the power that shaped the world at the dawn of creation. Choose any number of creatures you can see within range. Each creature that can hear you must make a Constitution saving throw. On a failed save, a creature suffers an effect based on its current hit points:\n&#8226; 50 hit points or fewer: deafened for 1 minute\n&#8226; 40 hit points or fewer: deafened and blinded for 10 minutes\n&#8226; 30 hit points or fewer: blinded, deafened, and stunned for 1 hour\n&#8226; 20 hit points or fewer: killed instantly.\nRegardless of its current hit points, a celestial, an elemental, a fey, or a fiend that fails its save is forced back to its plane of origin (if it isn't there already) and can't return to your current plane for 24 hours by any means short of a wish spell.",
     "save": {
-      "ability": "constitution",
+      "ability": "Constitution",
       "saveFailure": "each target suffers an effect based on its current hit points:\n&#8226; 50 hit points or fewer: deafened for 1 minute\n&#8226; 40 hit points or fewer: deafened and blinded for 10 minutes\n&#8226; 30 hit points or fewer: blinded, deafened, and stunned for 1 hour\n&#8226; 20 hit points or fewer: killed instantly.\nRegardless of its current hit points, a celestial, an elemental, a fey, or a fiend that fails its save is forced back to its plane of origin (if it isn't there already) and can't return to your current plane for 24 hours by any means short of a wish spell."
     }
   },
@@ -235,7 +235,7 @@
     "name": "Earth Tremor",
     "description": "You cause a tremor in the ground in a 10-foot radius. Each creature other than you in that area must make a Dexterity saving throw. On a failed save, a creature takes 2d6 bludgeoning damage and is knocked prone. If the ground in that area is loose earth or stone, it becomes difficult terrain until cleared.",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "2d6",
       "damageType": "bludgeoning",
       "saveFailure": "knocked prone",
@@ -261,7 +261,7 @@
     "level": 1,
     "school": "Evocation",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "3d6",
       "damageType": "acid",
       "saveSuccess": "half damage",
@@ -292,7 +292,7 @@
     "level": 3,
     "school": "Transmutation",
     "save": {
-      "ability": "constitution",
+      "ability": "Constitution",
       "saveFailure": "blinded until the end of it's next turn"
     },
     "effects": "Whenever a creature within 5 feet of you hits you with a melee attack, the pustules burst open. The attacker takes 1d8 points of acid damage and must make a Constitution saving throw as outlined above",
@@ -306,7 +306,7 @@
     "name": "Faerie Fire",
     "description": "Each object in a 20-foot cube within range is outlined in blue, green, or violet light (your choice). Any creature in the area when the spell is cast is also outlined in light if it fails a Constitution saving throw. For the duration, objects and affected creatures shed dim light in a 10-foot radius.\nAny attack roll against an affected creature or object has advantage if the attacker can see it, and the affected creature or object can't benefit from being invisible.",
     "save": {
-      "ability": "constitution",
+      "ability": "Constitution",
       "saveFailure": "Target creature creature is outlined in light."
     }
   },
@@ -318,7 +318,7 @@
     "name": "Finger of Death",
     "description": "You send negative energy coursing through a creature that you can see within range, causing it searing pain. The target must make a Constitution saving throw. It takes 22d8 necrotic damage on a failed save, or half as much damage on a successful one.\nA humanoid killed by this spell rises at the start of your next turn as a zombie that is permanently under your command, following your verbal orders to the best of its ability.",
     "save": {
-      "ability": "constitution",
+      "ability": "Constitution",
       "damage": "22d8",
       "damageType": "necrotic",
       "saveSuccess": "half damage"
@@ -333,7 +333,7 @@
     "name": "Fireball",
     "description": "A bright streak flashes from your pointing finger to a point you choose within range and then blossoms with a low roar into an explosion of flame. Each creature in a 20-foot-radius sphere centered on that point must make a Dexterity saving throw. A target takes 7d6 fire damage on a failed save, or half as much damage on a successful one.\nThe fire spreads around corners. It ignites flammable objects in the area that aren't being worn or carried.",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "7d6",
       "damageType": "fire",
       "saveSuccess": "half damage",
@@ -374,7 +374,7 @@
     "level": 4,
     "school": "Conjuration",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "3d6",
       "damageType": "bludgeoning",
       "saveFailure": "restrained for the spell's duration"
@@ -393,7 +393,7 @@
     "description": "You unleash a virulent disease on a creature that you can see within range. The target must make a Constitution saving throw. On a failed save, it takes 18d6 necrotic damage, or half as much damage on a successful save. The damage can't reduce the target's hit points below 1. If the target fails the saving throw, its hit point maximum is reduced for 1 hour by an amount equal to the necrotic damage it took. Any effect that removes a disease allows a creature's hit point maximum to return to normal before that time passes.",
     "level": 5,
     "save": {
-      "ability": "constitution",
+      "ability": "Constitution",
       "damage": "18d6",
       "damageType": "necrotic",
       "saveSuccess": "half damage"
@@ -463,7 +463,7 @@
     "level": 2,
     "school": "Evocation",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "3d6",
       "damageType": "cold",
       "saveSuccess": "half damage",
@@ -499,7 +499,7 @@
     "level": 3,
     "school": "Evocation",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "3d6",
       "damageType": "piercing",
       "secondaryDamage": "3d6",
@@ -518,7 +518,7 @@
     "name": "Immolation",
     "description": "Flames wreathe one creature you can see within range. The target must make a Dexterity saving throw. It takes 11d6 fire damage on a failed save, or half as much damage on a successful one. On a failed save, the target also burns for the spell's duration. The burning target sheds bright light in a 30-foot radius and dim light for an additional 30 feet. At the end of each of its turns, the target repeats the saving throw. It takes 11d6 fire damage on a failed save, and the spell ends on a successful one. These magical flames can't be extinguished through nonmagical means.\nIf damage from this spell reduces a target to 0 hit points, the target is turned to ash.",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "11d6",
       "damageType": "fire",
       "saveFailure": "the target also burns for the spell's duration. The burning target sheds bright light in a 30 ft radius and dim light for an additional 30 ft. At the end of each of its turns, the target repeats the saving throw. It takes 11d6 fire damage on a failed save, and the spell ends on a successful one. These magical flames can't be extinguished through nonmagical means.",
@@ -574,7 +574,7 @@
     "level": 5,
     "school": "Evocation",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "8d8",
       "damageType": "lightning",
       "saveSuccess": "half damage",
@@ -591,7 +591,7 @@
     "name": "Lightning Arrow",
     "description": "The next time you make a ranged weapon attack during the spell's duration, the weapon's ammunition, or the weapon itself if it's a thrown weapon, transforms into a bolt of lightning. Make the attack roll as normal. The target takes 4d8 lightning damage on a hit, or half as much damage on a miss, instead of the weapon's normal damage.\nWhether you hit or miss, each creature within 10 feet of the target must make a Dexterity saving throw. Each of these creatures takes 3d8 lightning damage on a failed save, or half as much damage on a successful one.\nThe piece of ammunition or weapon then returns to its normal form.",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "3d8",
       "damageType": "lightning",
       "saveSuccess": "half damage",
@@ -603,7 +603,7 @@
     "name": "Lightning Bolt",
     "description": "A stroke of lightning forming a line 100 feet long and 5 feet wide blasts out from you in a direction you choose. Each creature in the line must make a Dexterity saving throw. A creature takes 7d6 lightning damage on a failed save, or half as much damage on a successful one.\nThe lightning ignites flammable objects in the area that aren't being worn or carried.",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "7d6",
       "damageType": "lightning",
       "saveSuccess": "half damage",
@@ -705,7 +705,7 @@
     "name": "Meteor Swarm",
     "description": "Blazing orbs of fire plummet to the ground at four different points you can see within range. Each creature in a 40-foot-radius sphere centered on each point you choose must make a Dexterity saving throw. The sphere spreads around corners. A creature takes 15d6 fire damage and 15d6 bludgeoning damage on a failed save, or half as much damage on a successful one. A creature in the area of more than one fiery burst is affected only once.\nThe spell damages objects in the area and ignites flammable objects that aren't being worn or carried.",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "15d6",
       "damageType": "fire",
       "secondaryDamage": "15d6",
@@ -732,7 +732,7 @@
     "school": "Transmutation",
     "save": {
       "condition": "against poison",
-      "ability": "constitution",
+      "ability": "Constitution",
       "saveFailure": "the creature spends its action that turn retching and reeling. Creatures that don't need to breathe or are immune to poison automatically succeed on this saving throw"
     },
     "effects": "The spell ends if the creature drops to 0 hit points. An incorporeal creature isn't affected.\nWhile in this form, the target's only method of movement is a flying speed of 10 ft. The target can enter and occupy the space of another creature. The target's body nauseates creatures. Each creature that is completely within the cloud at the start of its turn must make a Constitution saving throw as outlined above. The target has resistance to nonmagical damage, and it has advantage on Strength, Dexterity, and Constitution saving throws. The target can pass through small holes, narrow openings, and even mere cracks, though it treats liquids as though they were solid surfaces. The target can't fall and remains hovering in the air even when stunned or otherwise incapacitated.\nWhile in the form of a misty cloud, the target can't talk or manipulate objects, and any objects it was carrying or holding can't be dropped, used, or otherwise interacted with. The target can't attack or cast spells.",
@@ -768,7 +768,7 @@
     "name": "Phantasmal Killer",
     "description": "You tap into the nightmares of a creature you can see within range and create an illusory manifestation of its deepest fears, visible only to that creature. The target must make a Wisdom saving throw. On a failed save, the target becomes frightened for the duration. At the end of each of the target's turns before the spell ends, the target must succeed on a Intelligence saving throw or take 4d10 psychic damage. On a successful save, the spell ends.",
     "save": {
-      "ability": "wisdom",
+      "ability": "Wisdom",
       "saveFailure": "becomes frightened for the duration. At the end of each of the target's turns before the spell ends, the target must succeed on an Intelligence saving throw or take 4d10 psychic damage. On a successful save, the spell ends."
     }
   },
@@ -824,7 +824,7 @@
       "higherLevelDie": "d6"
     },
     "save": {
-      "ability": "constitution",
+      "ability": "Constitution",
       "saveFailure": "be poisoned. At the start of each of its turns until the spell ends, the target must make a Constitution saving throw. On a successful save, the spell ends.."
     },
     "effects": "On a hit, the target must make a Constitution saving throw as outlined above."
@@ -840,7 +840,7 @@
   {
     "name": "Slow",
     "save": {
-      "ability": "strength",
+      "ability": "Strength",
       "saveFailure": "affected by this spell"
     }
   },
@@ -902,7 +902,7 @@
     "level": 6,
     "school": "Evocation",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "4d6",
       "damageType": "cold",
       "saveSuccess": "half damage",
@@ -919,7 +919,7 @@
     "description": "You conjure up a wall of swirling sand on the ground at a point you can see within range. You can make the wall up to 30 feet long, 10 feet high, and 10 feet thick, and it vanishes when the spell ends. It blocks line of sight but not movement. A creature must spend 3 feet of movement for every 1 foot it moves through the wall. Each creature within the wall when it appears, or that starts its turn in the wall, or that enters it during its turn must make a Constitution saving throw. On a failed save, the creature is blinded for 1 minute. At the end of each of its turns, a blinded target can repeat the saving throw.",
     "target": "Each creature within the wall when it appears, or that starts its turn in the wall, or that enters it during its turn",
     "save": {
-      "ability": "constitution",
+      "ability": "Constitution",
       "saveFailure": "blinded for 1 minute. At the end of each of its turns, a blinded target can repeat the saving throw."
     }
   },
@@ -977,7 +977,7 @@
     "name": "Web",
     "description": "You conjure a mass of thick, sticky webbing at a point of your choice within range. The webs fill a 20-foot cube from that point for the duration. The webs are difficult terrain and lightly obscure their area.\nIf the webs aren't anchored between two solid masses (such as walls or trees) or layered across a floor, wall, or ceiling, the conjured web collapses on itself, and the spell ends at the start of your next turn. Webs layered over a flat surface have a depth of 5 feet.\nEach creature that starts its turn in the webs or that enters them during its turn must make a Strength saving throw. On a failed save, the creature is restrained as long as it remains in the webs or until it breaks free.\nA creature restrained by the webs can use its action to make a Strength check against your spell save DC. If it succeeds, it is no longer restrained.\nThe webs are flammable. Any 5-foot cube of webs exposed to fire burns away in 1 round, dealing 2d4 fire damage to any creature that starts its turn in the fire.",
     "save": {
-      "ability": "strength",
+      "ability": "Strength",
       "saveFailure": "the creature is restrained as long as it remains in the webs or until it breaks free.\nA creature restrained by the webs can use its action to make a Strength check against your spell save DC. If it succeeds, it is no longer restrained.\nThe webs are flammable. Any 5 ft cube of webs exposed to fire burns away in 1 round, dealing 2d4 fire damage to any creature that starts its turn in the fire."
     }
   }

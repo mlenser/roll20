@@ -18,7 +18,7 @@
     "level": 8,
     "school": "Necromancy",
     "save": {
-      "ability": "constitution",
+      "ability": "Constitution",
       "damage": "10d8",
       "damageType": "necrotic",
       "saveSuccess": "half damage"
@@ -73,7 +73,7 @@
     "level": 0,
     "school": "Conjuration",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "((@{level} + 1) / 6 + 0.5)d6",
       "damageType": "acid"
     },
@@ -102,7 +102,7 @@
     "level": 2,
     "school": "Evocation",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "3d8",
       "damageType": "fire",
       "saveSuccess": "half damage",
@@ -202,7 +202,7 @@
     "level": 1,
     "school": "Enchantment",
     "save": {
-      "ability": "wisdom",
+      "ability": "Wisdom",
       "saveFailure": "the beast is charmed by you for the spell's duration. If you or one of your companions harms the target, the spells ends."
     },
     "effects": "If the beast's Intelligence is 4 or higher, the spell fails.",
@@ -374,7 +374,7 @@
     "level": 8,
     "school": "Enchantment",
     "save": {
-      "ability": "wisdom"
+      "ability": "Wisdom"
     },
     "effects": "specify a kind of intelligent creature, such as red dragons, goblins, or vampires. You invest the target with an aura that either attracts or repels the specified creatures for the duration. Choose antipathy or sympathy as the aura's effect.\nAntipathy. The enchantment causes creatures of the kind you designated to feel an intense urge to leave the area and avoid the target. When such a creature can see the target or comes within 60 feet of it, the creature must succeed on a Wisdom saving throw or become frightened. The creature remains frightened while it can see the target or is within 60 feet of it. While frightened by the target, the creature must use its movement to move to the nearest safe spot from which it can't see the target. If the creature moves more than 60 feet from the target and can't see it, the creature is no longer frightened, but the creature becomes frightened again if it regains sight of the target or moves within 60 feet of it.\nSympathy. The enchantment causes the specified creatures to feel an intense urge to approach the target while within 60 feet of it or able to see it. When such a creature can see the target or comes within 60 feet of it, the creature must succeed on a Wisdom saving throw or use its movement on each of its turns to enter the area or move within reach of the target. When the creature has done so, it can't willingly move away from the target. If the target damages or otherwise harms an affected creature, the affected creature can make a Wisdom saving throw to end the effect, as described below.\nEnding the Effect. If an affected creature ends its turn while not within 60 feet of the target or able to see it, the creature makes a Wisdom saving throw. On a successful save, the creature is no longer affected by the target and recognizes the feeling of repugnance or attraction as magical. In addition, a creature affected by the spell is allowed another Wisdom saving throw every 24 hours while the spell persists.\nA creature that successfully saves against this effect is immune to it for 1 minute, after which time it can be affected again.",
     "classes": [
@@ -492,7 +492,7 @@
     "level": 1,
     "school": "Conjuration",
     "save": {
-      "ability": "strength",
+      "ability": "Strength",
       "damage": "2d6",
       "damageType": "necrotic",
       "saveFailure": "target can't take reactions until its next turn",
@@ -662,7 +662,7 @@
     "level": 1,
     "school": "Enchantment",
     "save": {
-      "ability": "charisma",
+      "ability": "Charisma",
       "saveFailure": "Whenever a target makes an attack roll or a saving throw before the spell ends, the target must roll a d4 and subtract the number rolled from the attack roll or saving throw."
     },
     "classes": [
@@ -717,7 +717,7 @@
     "level": 4,
     "school": "Abjuration",
     "save": {
-      "ability": "charisma",
+      "ability": "Charisma",
       "saveFailure": "The target is banished.\nIf the target is native to the plane of existence you're on, you banish the target to a harmless demiplane. While there, the target is incapacitated. The target remains there until the spell ends, at which point the target reappears in the space it left or in the nearest unoccupied space if that space is occupied.\nIf the target is native to a different plane of existence than the one you're on, the target is banished with a faint popping noise, returning to its home plane. If the spell ends before 1 minute has passed, the target reappears in the space it left or in the nearest unoccupied space if that space is occupied. Otherwise, the target doesn't return."
     },
     "classes": [
@@ -855,7 +855,7 @@
     "level": 3,
     "school": "Necromancy",
     "save": {
-      "ability": "wisdom",
+      "ability": "Wisdom",
       "saveFailure": "or become cursed. When you cast this spell, choose the nature of the curse from the following options:\n- Choose one ability score. While cursed, the target has disadvantage on ability checks and saving throws made with that ability score.\n- While cursed, the target has disadvantage on attack rolls against you.\n- While cursed, the target must make a Wisdom saving throw at the start of each of its turns. If it fails, it wastes its action that turn doing nothing.\n- While the target is cursed, your attacks and spells deal an extra 1d8 necrotic damage to the target.\nA remove curse spell ends this effect. At the DM's option, you may choose an alternative curse effect, but it should be no more powerful than those described above. The DM has final say on such a curse's effect."
     },
     "classes": [
@@ -905,7 +905,7 @@
     "level": 6,
     "school": "Evocation",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "6d10",
       "damageType": "slashing",
       "saveSuccess": "half damage"
@@ -982,7 +982,7 @@
     "level": 4,
     "school": "Necromancy",
     "save": {
-      "ability": "constitution",
+      "ability": "Constitution",
       "damage": "8d8",
       "damageType": "necrotic",
       "saveSuccess": "half damage",
@@ -1019,7 +1019,7 @@
       "damageType": "radiant"
     },
     "save": {
-      "ability": "constitution",
+      "ability": "Constitution",
       "saveFailure": "or be blinded. A creature blinded by this spell makes another Constitution saving throw at the end of each of its rounds. On a successful save, it is no longer blinded."
     },
     "effects": "The next time you hit a creature with a weapon attack before this spell ends, your weapon deals extra damage and it must make a constitution save as outlined above.",
@@ -1043,7 +1043,7 @@
     "level": 2,
     "school": "Necromancy",
     "save": {
-      "ability": "constitution",
+      "ability": "Constitution",
       "saveFailure": "or be either blinded or deafened (your choice) for the duration. At the end of each of its turns, the target can make a Constitution saving throw. On a success, the spell ends."
     },
     "classes": [
@@ -1127,7 +1127,7 @@
     "level": 6,
     "school": "Transmutation",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "6d6",
       "damageType": "bludgeoning",
       "saveFailure": "and restrained. The restrained creature can use an action to make a Strength or Dexterity check (the creature's choice) against the spell's saving throw DC. On a success, the creature is no longer restrained and must either move off the pillar or fall off it."
@@ -1205,7 +1205,7 @@
     "level": 1,
     "school": "Evocation",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "3d6",
       "damageType": "fire",
       "saveSuccess": "half damage",
@@ -1245,7 +1245,7 @@
     "level": 3,
     "school": "Conjuration",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "3d10",
       "damageType": "lightning",
       "saveSuccess": "half damage",
@@ -1310,7 +1310,7 @@
     "level": 1,
     "school": "Transmutation",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "3d8",
       "damageType": "bludgeoning",
       "saveFailure": "the object strikes the target and stops moving",
@@ -1342,7 +1342,7 @@
     "level": 6,
     "school": "Evocation",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "10d8",
       "damageType": "lightning",
       "saveSuccess": "half damage"
@@ -1369,7 +1369,7 @@
     "level": 1,
     "school": "Enchantment",
     "save": {
-      "ability": "wisdom",
+      "ability": "Wisdom",
       "saveFailure": "charmed by you until the spell ends or until you or your companions do anything harmful to it. The charmed creature regards you as a friendly acquaintance. When the spell ends, the creature knows it was charmed by you."
     },
     "effects": "The target must make the save with advantage if you or your companions are fighting it.",
@@ -1466,7 +1466,7 @@
     "level": 6,
     "school": "Necromancy",
     "save": {
-      "ability": "constitution",
+      "ability": "Constitution",
       "damage": "8d6",
       "damageType": "necrotic",
       "saveSuccess": "half damage",
@@ -1605,7 +1605,7 @@
     "level": 5,
     "school": "Conjuration",
     "save": {
-      "ability": "constitution",
+      "ability": "Constitution",
       "damage": "5d8",
       "damageType": "poison",
       "saveSuccess": "half damage",
@@ -1662,7 +1662,7 @@
     "level": 1,
     "school": "Enchantment",
     "save": {
-      "ability": "wisdom",
+      "ability": "Wisdom",
       "saveFailure": "or follow the command on its next turn"
     },
     "effects": "The spell has no effect if the target is undead, if it doesn't understand your language, or if your command is directly harmful to it.\nSome typical commands and their effects follow. You might issue a command other than one described here. If you do so, the DM determines how the target behaves. If the target can't follow your command, the spell ends.\nApproach. The target moves toward you by the shortest and most direct route, ending its turn if it moves within 5 feet of you.\nDrop The target drops whatever it is holding and then ends its turn.\nFlee. The target spends its turn moving away from you by the fastest available means.\nGrovel. The target falls prone and then ends its turn.\nHalt. The target doesn't move and takes no actions. A flying creature stays aloft, provided that it is able to do so. If it must move to stay aloft, it flies the minimum distance needed to remain in the air.",
@@ -1749,7 +1749,7 @@
     "level": 1,
     "school": "Enchantment",
     "save": {
-      "ability": "wisdom",
+      "ability": "Wisdom",
       "saveFailure": "disadvantage on attack rolls against any other creature other than you."
     },
     "effects": "additionally, the target creature must make a Wisdom saving throw each time it attempts to move into a space that is more than 30 ft away from you; if it succeeds on this saving throw, the spell doesn't restrict the target's movement for that turn.\nThe spell ends if you attack any other creature, if you cast a spell that targets a hostile creature other than the target, if a creature friendly to you damages the target or casts a harmful spell on it, or if you end your turn more than 30 ft away from the target.",
@@ -1799,7 +1799,7 @@
     "level": 4,
     "school": "Enchantment",
     "save": {
-      "ability": "wisdom",
+      "ability": "Wisdom",
       "saveFailure": "affected by this spell"
     },
     "effects": "A target automatically succeeds on this saving throw if it can't be charmed.\nUntil the spell ends, you can use a bonus action on each of your turns to designate a direction that is horizontal to you. Each affected target must use as much of its movement as possible to move in that direction on its next turn. It can take any action before it moves. After moving in this way, it can make another Wisdom save to try to end the effect.\nA target isn't compelled to move into an obviously deadly hazard, such as a fire or a pit, but it will provoke opportunity attacks to move in the designated direction.",
@@ -1827,7 +1827,7 @@
     "level": 5,
     "school": "Evocation",
     "save": {
-      "ability": "constitution",
+      "ability": "Constitution",
       "damage": "8d8",
       "damageType": "cold",
       "saveSuccess": "half damage",
@@ -1865,7 +1865,7 @@
     "level": 4,
     "school": "Enchantment",
     "save": {
-      "ability": "wisdom",
+      "ability": "Wisdom",
       "saveFailure": "affected by this spell"
     },
     "effects": "An affected target can't take reactions and must roll a d10 at the start of each of its turns to determine its behavior for that turn.\non a 1 the creature uses all its movement to move in a random direction. To determine the direction, roll a d8 and assign a direction to each die face. The creature doesn't take an action this turn.\non a 2-6 The creature doesn't move or take actions this turn.\non a 7-8 The creature uses its action to make a melee attack against a randomly determined creature within its reach. If there is no creature within its reach, the creature does nothing this turn.\non a 9-10 The creature can act and move normally.\nAt the end of each of its turns, an affected target can make a Wisdom saving throw. If it succeeds. this effect ends for that target.",
@@ -1922,7 +1922,7 @@
     "level": 3,
     "school": "Conjuration",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "3d8",
       "damageType": "same as that of the weapon or ammunition used as a component",
       "saveSuccess": "half damage"
@@ -2046,7 +2046,7 @@
     "level": 5,
     "school": "Conjuration",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "8d8",
       "damageType": "same as that of the weapon or ammunition used as a component",
       "saveSuccess": "half damage"
@@ -2119,7 +2119,7 @@
       "type": "ranged"
     },
     "save": {
-      "ability": "constitution"
+      "ability": "Constitution"
     },
     "effects": "On a hit, you afflict the creature with a disease of your choice from any of the ones described below.\nAt the end of each of the target's turns, it must make a Constitution saving throw. After failing three of these saving throws, the disease's effects last for the duration, and the creature stops making these saves. After succeeding on three of these saving throws, the creature recovers from the disease, and the spell ends.\nSince this spell induces a natural disease in its target, any effect that removes a disease or otherwise ameliorates a disease's effects apply to it.\nBlinding Sickness. Pain grips the creature's mind, and its eyes turn milky white. The creature has disadvantage on wisdom checks and Wisdom saving throws and is blinded.\nFilth Fever. A raging fever sweeps through the creature's body. The creature has disadvantage on strength checks, Strength saving throws, and attack rolls that use Strength.\nFlesh Rot. The creature's flesh decays. The creature has disadvantage on Charisma checks and vulnerability to all damage.\nMindfire. The creature's mind becomes feverish. The creature has disadvantage on intelligence checks and Intelligence saving throws, and the creature behaves as if under the effects of the confusion spell during combat.\nSeizure. The creature is overcome with shaking. The creature has disadvantage on dexterity checks, Dexterity saving throws, and attack rolls that use Dexterity.\nSlimy Doom. The creature begins to bleed uncontrollably. The creature has disadvantage on constitution checks and Constitution saving throws. In addition, whenever the creature takes damage, it is stunned until the end of its next turn.",
     "classes": [
@@ -2291,7 +2291,7 @@
     "level": 2,
     "school": "Transmutation",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "1d6",
       "damageType": "piercing"
     },
@@ -2341,7 +2341,7 @@
     "level": 0,
     "school": "Conjuration",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "((@{level} + 1) / 6 + 0.5)d8",
       "damageType": "fire"
     },
@@ -2465,7 +2465,7 @@
     "level": 2,
     "school": "Enchantment",
     "save": {
-      "ability": "wisdom",
+      "ability": "Wisdom",
       "saveFailure": "become charmed by you for the duration. While the target is charmed in this way, a twisted crown of jagged iron appears on its head, and a madness glows in its eyes.\nThe charmed target must use its action before moving on each of its turns to make a melee attack against a creature other than itself that you mentally choose.\nThe target can act normally on its turn if you choose no creature or if none are within its reach.\nOn your subsequent turns, you must use your action to maintain control over the target, or the spell ends. Also, the target can make a Wisdom saving throw at the end of each of its turns. On a success, the spell ends."
     },
     "classes": [
@@ -2686,7 +2686,7 @@
     "level": 7,
     "school": "Evocation",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "12d6",
       "damageType": "fire",
       "saveSuccess": "half damage",
@@ -2733,7 +2733,7 @@
     "level": 5,
     "school": "Evocation",
     "save": {
-      "ability": "constitution",
+      "ability": "Constitution",
       "damage": "5d6",
       "damageType": "thunder",
       "secondaryDamage": "5d6",
@@ -2842,7 +2842,7 @@
     "level": 2,
     "school": "Divination",
     "save": {
-      "ability": "wisdom",
+      "ability": "Wisdom",
       "saveFailure": "you gain insight into its reasoning (if any), its emotional state, and something that looms large in its mind (such as something it worries over, loves, or hates)",
       "saveSuccess": "the spell ends"
     },
@@ -2930,7 +2930,7 @@
     "level": 6,
     "school": "Transmutation",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "10d6",
       "damageBonus": "40",
       "damageType": "force",
@@ -3016,7 +3016,7 @@
     "level": 1,
     "school": "Enchantment",
     "save": {
-      "ability": "wisdom",
+      "ability": "Wisdom",
       "damage": "3d6",
       "damageType": "psychic",
       "saveFailure": "must immediately use its reaction, if available, to move as far as its speed allows away from you. The creature doesn't move into obviously dangerous ground, such as a fire or a pit.",
@@ -3100,7 +3100,7 @@
     "level": 7,
     "school": "Evocation",
     "save": {
-      "ability": "charisma",
+      "ability": "Charisma",
       "saveFailure": "each target suffers an effect based on its current hit points:\n&#8226; 50 hit points or fewer: deafened for 1 minute\n&#8226; 40 hit points or fewer: deafened and blinded for 10 minutes\n&#8226; 30 hit points or fewer: blinded, deafened, and stunned for 1 hour\n&#8226; 20 hit points or fewer: killed instantly.\nRegardless of its current hit points, a celestial, an elemental, a fey, or a fiend that fails its save is forced back to its plane of origin (if it isn't there already) and can't return to your current plane for 24 hours by any means short of a wish spell."
     },
     "classes": [
@@ -3125,7 +3125,7 @@
     "level": 4,
     "school": "Enchantment",
     "save": {
-      "ability": "wisdom",
+      "ability": "Wisdom",
       "saveFailure": "become charmed by you for the duration"
     },
     "effects": "If you or creatures that are friendly to you are fighting it, it has advantage on the saving throw.\nWhile the creature is charmed, you have a telepathic link with it as long as the two of you are on the same plane of existence. You can use this telepathic link to issue commands to the creature while you are conscious (no action required), which it does its best to obey. You can specify a simple and general course of action, such as \"Attack that creature,\" \"Run over there,\" or \"Fetch that object.\" If the creature completes the order and doesn't receive further direction from you, it defends and preserves itself to the best of its ability.\nYou can use your action to take total and precise control of the target. Until the end of your next turn, the creature takes only the actions you choose, and doesn't do anything that you don't allow it to do. During this time, you can also cause the creature to use a reaction, but this requires you to use your own reaction as well. Each time the target takes damage, it makes a new Wisdom saving throw against the spell. If the saving throw succeeds, the spell ends.",
@@ -3160,7 +3160,7 @@
     "school": "Enchantment",
     "save": {
       "condition": "If you or creatures that are friendly to you are fighting it, it has advantage on the saving throw",
-      "ability": "wisdom",
+      "ability": "Wisdom",
       "saveFailure": "be charmed by you for the duration.\nWhile the creature is charmed, you have a telepathic link with it as long as the two of you are on the same plane of existence. You can use this telepathic link to issue commands to the creature while you are conscious (no action required), which it does its best to obey. You can specify a simple and general course of action, such as \"Attack that creature,\" \"Run over there,\" or \"Fetch that object.\" If the creature completes the order and doesn't receive further direction from you, it defends and preserves itself to the best of its ability.\nYou can use your action to take total and precise control of the target. Until the end of your next turn, the creature takes only the actions you choose, and doesn't do anything that you don't allow it to do. During this time, you can also cause the creature to use a reaction, but this requires you to use your own reaction as well.\nEach time the target takes damage, it makes a new Wisdom saving throw against the spell. If the saving throw succeeds, the spell ends."
     },
     "classes": [
@@ -3188,7 +3188,7 @@
     "level": 5,
     "school": "Enchantment",
     "save": {
-      "ability": "wisdom",
+      "ability": "Wisdom",
       "saveFailure": "become charmed by you for the duration.\nWhile the target is charmed, you have a telepathic link with it as long as the two of you are on the same plane of existence. You can use this telepathic link to issue commands to the creature while you are conscious (no action required), which it does its best to obey. You can specify a simple and general course of action, such as \"Attack that creature,\" \"Run over there,\" or \"Fetch that object.\" If the creature completes the order and doesn't receive further direction from you, it defends and preserves itself to the best of its ability.\nYou can use your action to take total and precise control of the target. Until the end of your next turn, the creature takes only the actions you choose, and doesn't do anything that you don't allow it to do. During this time, you can also cause the creature to use a reaction, but this requires you to use your own reaction as well. Each time the target takes damage, it makes a new Wisdom saving throw against the spell. If the saving throw succeeds, the spell ends."
     },
     "effects": "If you or creatures that are friendly to you are fighting it, it has advantage on the saving throw.",
@@ -3297,7 +3297,7 @@
     "level": 2,
     "school": "Conjuration",
     "save": {
-      "ability": "strength",
+      "ability": "Strength",
       "damage": "1d8",
       "damageType": "bludgeoning",
       "saveFailure": "pushed 10 feet away",
@@ -3330,7 +3330,7 @@
     "level": 1,
     "school": "Evocation",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "1d6",
       "damageType": "bludgeoning",
       "saveFailure": "knocked prone",
@@ -3361,7 +3361,7 @@
     "level": 2,
     "school": "Transmutation",
     "save": {
-      "ability": "strength",
+      "ability": "Strength",
       "saveFailure": "its flying speed (if any) is reduced to 0 feet for the spell's duration. An airborne creature affected by this spell descends at 60 feet per round until it reaches the ground or the spell ends."
     },
     "classes": [
@@ -3439,7 +3439,7 @@
     "level": 4,
     "school": "Transmutation",
     "save": {
-      "ability": "constitution",
+      "ability": "Constitution",
       "saveFailure": "The first time each turn the affected target takes damage of the chosen type, the target takes an extra 2d6 ([[2d6]]) damage of that type. Moreover, the target loses any resistance to that damage type until the spell ends."
     },
     "effects": "choose one of the following damage types: acid, cold, fire, lightning, or thunder. The target must succeed on a Constitution saving throw as outlined above.",
@@ -3517,7 +3517,7 @@
     "level": 2,
     "school": "Transmutation",
     "save": {
-      "ability": "constitution",
+      "ability": "Constitution",
       "saveSuccess": "the spell has no effect"
     },
     "effects": "If the target is unwilling, it can make a Constitution saving throw as outlined above\nIf the target is a creature, everything it is wearing and carrying changes size with it. Any item dropped by an affected creature returns to normal size at once.\nEnlarge. The target's size doubles in all dimensions, and its weight is multiplied by eight. This growth increases its size by one category—from Medium to Large, for example. If there isn't enough room for the target to double its size, the creature or object attains the maximum possible size in the space available. Until the spell ends, the target also has advantage on Strength checks and Strength saving throws. The target's weapons also grow to match its new size. While these weapons are enlarged, the target's attacks with them deal 1d4 extra damage.\nReduce.The target's size is halved in all dimensions, and its weight is reduced to one-eighth of normal. This reduction decreases its size by one category—from Medium to Small, for example. Until the spell ends, the target also has disadvantage on Strength checks and Strength saving throws. The target's weapons also shrink to match its new size. While these weapons are reduced, the target's attacks with them deal 1d4 less damage (this can't reduce the damage below 1).",
@@ -3542,7 +3542,7 @@
     "level": 1,
     "school": "Conjuration",
     "save": {
-      "ability": "strength",
+      "ability": "Strength",
       "saveFailure": "be restrained by the magical vines until the spell ends"
     },
     "effects": "The next time you hit a creature with a weapon attack before this spell ends, a writhing mass of thorny vines appears at the point of impact, and the target must succeed on a Strength saving throw as outlined above. A Large or larger creature has advantage on this saving throw. If the target succeeds on the save, the vines shrivel away.\nWhile restrained by this spell, the target takes 1d6 piercing damage at the start of each of its turns. A creature restrained by the vines or one that can touch a creature can use its action to make a Strength check against your spell save DC. On a success, the target is freed.",
@@ -3572,7 +3572,7 @@
     "level": 1,
     "school": "Conjuration",
     "save": {
-      "ability": "strength",
+      "ability": "Strength",
       "saveFailure": "be restrained until the spell ends"
     },
     "effects": "A creature restrained by the plants can use its action to make a Strength check against your spell save DC. On a success, it frees itself.\nWhen the spell ends, the conjured plants wilt away.",
@@ -3596,7 +3596,7 @@
     "level": 2,
     "school": "Enchantment",
     "save": {
-      "ability": "wisdom",
+      "ability": "Wisdom",
       "saveFailure": "the target has disadvantage on Wisdom (Perception) checks made to perceive any creature other than you until the spell ends or until the target can no longer hear you"
     },
     "effects": "Any creature that can't be charmed succeeds on this saving throw automatically, and if you or your companions are fighting a creature, it has advantage on the save. The spell ends if you are incapacitated or can no longer speak.",
@@ -3625,7 +3625,7 @@
     "level": 3,
     "school": "Transmutation",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "3d12",
       "damageType": "bludgeoning",
       "saveSuccess": "half damage"
@@ -3681,7 +3681,7 @@
     "level": 4,
     "school": "Conjuration",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "3d6",
       "damageType": "bludgeoning",
       "saveFailure": "restrained for the spell's duration"
@@ -3734,7 +3734,7 @@
     "level": 6,
     "school": "Necromancy",
     "save": {
-      "ability": "wisdom",
+      "ability": "Wisdom",
       "saveFailure": "be affected by one of the effects"
     },
     "effects": "target must succeed on a Wisdom saving throw as outlined above. On each of your turns until the spell ends, you can use your action to target another creature but can't target a creature again if it has succeeded on a saving throw against this casting of eyebite.\nAsleep. The target falls unconscious. It wakes up if it takes any damage or if another creature uses its action to shake the sleeper awake.\nPanicked. The target is frightened of you. On each of its turns, the frightened creature must take the Dash action and move away from you by the safest and shortest available route, unless there is nowhere to move. If the target moves to a place at least 60 ft away from you where it can no longer see you, this effect ends.\nSickened. The target has disadvantage on attack rolls and ability checks. At the end of each of its turns, it can make another Wisdom saving throw. If it succeeds, the effect ends.",
@@ -3781,7 +3781,7 @@
     "level": 1,
     "school": "Evocation",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "saveFailure": "Target creature creature is outlined in light."
     },
     "effects": "For the duration, objects and affected creatures shed dim light in a 10 ft radius.\nAny attack roll against an affected creature or object has advantage if the attacker can see it, and the affected creature or object can't benefit from being invisible.",
@@ -3841,7 +3841,7 @@
     "level": 3,
     "school": "Illusion",
     "save": {
-      "ability": "wisdom",
+      "ability": "Wisdom",
       "saveFailure": "drop whatever it is holding and become frightened for the duration.\nWhile frightened by this spell, a creature must take the Dash action and move away from you by the safest available route on each of its turns, unless there is nowhere to move. If the creature ends its turn in a location where it doesn't have line of sight to you, the creature can make a Wisdom saving throw. On a successful save, the spell ends for that creature."
     },
     "classes": [
@@ -3896,7 +3896,7 @@
       "damageType": "psychic"
     },
     "save": {
-      "ability": "intelligence",
+      "ability": "Intelligence",
       "saveFailure": "the creature's Intelligence and Charisma scores become 1. The creature can't cast spells, activate magic items, understand language, or communicate in any intelligible way. The creature can, however, identify its friends, follow them, and even protect them.\nAt the end of every 30 days, the creature can repeat its saving throw against this spell. If it succeeds on its saving throw, the spell ends.\nThe spell can also be ended by greater restoration, heal, or wish."
     },
     "classes": [
@@ -4037,7 +4037,7 @@
     "level": 7,
     "school": "Necromancy",
     "save": {
-      "ability": "constitution",
+      "ability": "Constitution",
       "damage": "7d8",
       "damageBonus": "30",
       "damageType": "necrotic",
@@ -4070,7 +4070,7 @@
     "level": 3,
     "school": "Evocation",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "8d6",
       "damageType": "fire",
       "saveSuccess": "half damage",
@@ -4160,7 +4160,7 @@
     "level": 7,
     "school": "Evocation",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "7d10",
       "damageType": "fire",
       "saveSuccess": "half damage"
@@ -4246,7 +4246,7 @@
     "level": 5,
     "school": "Evocation",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "4d6",
       "damageType": "fire",
       "secondaryDamage": "4d6",
@@ -4292,7 +4292,7 @@
     "level": 2,
     "school": "Conjuration",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "2d6",
       "damageType": "fire",
       "saveSuccess": "half damage",
@@ -4329,7 +4329,7 @@
     "school": "Transmutation",
     "save": {
       "condition": "if the target's body is made of flesh",
-      "ability": "constitution",
+      "ability": "Constitution",
       "saveFailure": "it is restrained as its flesh begins to harden"
     },
     "effects": "A creature restrained by this spell must make another Constitution saving throw at the end of each of its turns. If it successfully saves against this spell three times, the spell ends. If it fails its saves three times, it is turned to stone and subjected to the petrified condition for the duration. The successes and failures don't need to be consecutive; keep track of both until the target collects three of a kind.\nIf the creature is physically broken while petrified, it suffers from similar deformities if it reverts to its original state.\nIf you maintain your concentration on this spell for the entire possible duration, the creature is turned to stone until the effect is removed.",
@@ -4437,7 +4437,7 @@
     "level": 7,
     "school": "Evocation",
     "save": {
-      "ability": "charisma",
+      "ability": "Charisma",
       "saveFailure": "the creature can't exit the cage and wastes the use of the spell or effect",
       "saveSuccess": "the creature can use that magic to exit the cage"
     },
@@ -4552,7 +4552,7 @@
     "level": 0,
     "school": "Evocation",
     "save": {
-      "ability": "constitution",
+      "ability": "Constitution",
       "damage": "((@{level} + 1) / 6 + 0.5)d6",
       "damageType": "cold",
       "saveFailure": "it has disadvantage on the next weapon attack roll it makes before the end of its next turn"
@@ -4635,7 +4635,7 @@
     "school": "Enchantment",
     "save": {
       "condition": "If the creature can understand you",
-      "ability": "wisdom",
+      "ability": "Wisdom",
       "saveFailure": "become charmed by you for the duration. While the creature is charmed by you, it takes 5d10 psychic damage each time it acts in a manner directly counter to your instructions, but no more than once each day. A creature that can't understand you is unaffected by the spell.\nYou can issue any command you choose, short of an activity that would result in certain death. Should you issue a suicidal command, the spell ends.\nYou can end the spell early by using an action to dismiss it. A remove curse, greater restoration, or wish spell also ends it."
     },
     "classes": [
@@ -4801,7 +4801,7 @@
     "level": 4,
     "school": "Conjuration",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "saveFailure": "be pulled 20 ft directly toward the vine"
     },
     "effects": "When you cast this spell, you can direct the vine to lash out at a creature. That creature must succeed on a Dexterity saving throw as outlined above.\nUntil the spell ends, you can direct the vine to lash out at the same creature or another one as a bonus action on each of your turns.",
@@ -4833,7 +4833,7 @@
     "level": 1,
     "school": "Conjuration",
     "save": {
-      "ability": "dexterity"
+      "ability": "Dexterity"
     },
     "effects": "The greasy area turns into difficult terrain. When the grease appears, each creature standing in its area must succeed on a Dexterity saving throw or fall prone. A creature that enters the area or ends its turn there must also succeed on a Dexterity saving throw or fall prone.",
     "classes": [
@@ -4943,7 +4943,7 @@
     "level": 4,
     "school": "Conjuration",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "20",
       "damageType": "radiant",
       "saveSuccess": "half damage"
@@ -5051,7 +5051,7 @@
     "level": 0,
     "school": "Transmutation",
     "save": {
-      "ability": "strength",
+      "ability": "Strength",
       "saveFailure": "pushed 5 feet away from you"
     },
     "effects": "You create one of the following effects at a point you can see within range:\n- One Medium or smaller creature that you choose must succeed on a Strength saving throw as outlined above.\n- You create a small blast of air capable of moving one object that is neither held nor carried and that weighs no more than 5 pounds. The object is pushed up to 10 feet away from you. It isn't pushed with enough force to cause damage.\n- You create a harmless sensory affect using air, such as causing leaves to rustle, wind to slam shutters shut, or your clothing to ripple in a breeze.",
@@ -5081,7 +5081,7 @@
     "level": 2,
     "school": "Evocation",
     "save": {
-      "ability": "strength",
+      "ability": "Strength",
       "saveFailure": "pushed 15 feet away from you in a direction following the line"
     },
     "effects": "Any creature in the line must spend 2 ft of movement for every 1 ft it moves when moving closer to you.\nThe gust disperses gas or vapor, and it extinguishes candles, torches, and similar unprotected flames in the area. It causes protected flames, such as those of lanterns, to dance wildly and has a 50% chance to extinguish them.\nAs a bonus action on each of your turns before the spell ends, you can change the direction in which the line blasts from you.",
@@ -5112,7 +5112,7 @@
     "level": 1,
     "school": "Conjuration",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "1d10",
       "damageType": "piercing",
       "saveSuccess": "half damage",
@@ -5195,7 +5195,7 @@
     "level": 6,
     "school": "Necromancy",
     "save": {
-      "ability": "constitution",
+      "ability": "Constitution",
       "damage": "14d6",
       "damageType": "necrotic",
       "saveSuccess": "half damage"
@@ -5317,7 +5317,7 @@
       "higherLevelDie": "d8"
     },
     "save": {
-      "ability": "constitution",
+      "ability": "Constitution",
       "saveFailure": "or drop the object if it can. If it doesn't drop the object, it has disadvantage on attack rolls and ability checks until the start of your next turn."
     },
     "effects": "Until the spell ends, you can use a bonus action on each of your subsequent turns to cause this damage again.\nIf a creature is holding or wearing the object and takes the damage from it, the creature must succeed on a constitution saving as outlined above.",
@@ -5343,7 +5343,7 @@
     "level": 1,
     "school": "Evocation",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "2d10",
       "damageType": "fire",
       "saveSuccess": "half damage",
@@ -5444,7 +5444,7 @@
     "level": 5,
     "school": "Enchantment",
     "save": {
-      "ability": "wisdom",
+      "ability": "Wisdom",
       "saveFailure": "be paralyzed for the duration. At the end of each of its turns, the target can make another Wisdom saving throw. On a success, the spell ends on the target."
     },
     "effects": "This spell has no effect on undead",
@@ -5483,7 +5483,7 @@
     "level": 2,
     "school": "Enchantment",
     "save": {
-      "ability": "wisdom",
+      "ability": "Wisdom",
       "saveFailure": "or be paralyzed for the duration. At the end of each of its turns, the target can make another Wisdom saving throw. On a success, the spell ends on the target."
     },
     "classes": [
@@ -5523,7 +5523,7 @@
     "level": 8,
     "school": "Abjuration",
     "save": {
-      "ability": "constitution",
+      "ability": "Constitution",
       "saveFailure": "be blinded until the spell ends"
     },
     "effects": "targets shed dim light in a 5-foot radius and have advantage on all saving throws, and other creatures have disadvantage on attack rolls against them until the spell ends. In addition, when a fiend or an undead hits an affected creature with a melee attack, the aura flashes with brilliant light. The attacker must succeed on a Constitution saving throw as outlined above.",
@@ -5550,7 +5550,7 @@
     "level": 3,
     "school": "Conjuration",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "2d6",
       "damageType": "acid"
     },
@@ -5603,7 +5603,7 @@
     "level": 3,
     "school": "Illusion",
     "save": {
-      "ability": "wisdom",
+      "ability": "Wisdom",
       "saveFailure": "the creature becomes charmed for the duration. While charmed by this spell, the creature is incapacitated and has a speed of 0.\nThe spell ends for an affected creature if it takes any damage or if someone else uses an action to shake the creature out of its stupor."
     },
     "classes": [
@@ -5636,7 +5636,7 @@
       "damageType": "piercing"
     },
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "2d6",
       "damageType": "cold",
       "higherLevelDice": "1",
@@ -5669,7 +5669,7 @@
     "level": 4,
     "school": "Evocation",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "2d8",
       "damageType": "bludgeoning",
       "secondaryDamage": "4d6",
@@ -5765,7 +5765,7 @@
     "level": 5,
     "school": "Evocation",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "7d6",
       "damageType": "fire",
       "saveFailure": "the target also burns for the spell's duration. The burning target sheds bright light in a 30 ft radius and dim light for an additional 30 ft. At the end of each of its turns, the target repeats the saving throw. It takes 3d6 fire damage on a failed save, and the spell ends on a successful one. These magical flames can't be extinguished through nonmagical means.",
@@ -5796,7 +5796,7 @@
     "level": 9,
     "school": "Abjuration",
     "save": {
-      "ability": "wisdom",
+      "ability": "Wisdom",
       "saveFailure": "be bound by the spell. While affected by this spell, the creature doesn't need to breathe, eat, or drink, and it doesn't age. Divination spells can't locate or perceive the target",
       "saveSuccess": "it is immune to this spell if you cast it again"
     },
@@ -5824,7 +5824,7 @@
     "level": 8,
     "school": "Conjuration",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "10d8",
       "damageType": "fire",
       "saveSuccess": "half damage"
@@ -5883,7 +5883,7 @@
     "level": 5,
     "school": "Conjuration",
     "save": {
-      "ability": "constitution",
+      "ability": "Constitution",
       "damage": "4d10",
       "damageType": "piercing",
       "saveSuccess": "half damage",
@@ -6197,7 +6197,7 @@
     "level": 2,
     "school": "Transmutation",
     "save": {
-      "ability": "constitution"
+      "ability": "Constitution"
     },
     "effects": "the target rises vertically, up to 20 ft, and remains suspended there for the duration. The spell can levitate a target that weighs up to 500 lbs. An unwilling creature that succeeds on a Constitution saving throw is unaffected.\nThe target can move only by pushing or pulling against a fixed object or surface within reach (such as a wall or a ceiling), which allows it to move as if it were climbing. You can change the target's altitude by up to 20 feet in either direction on your turn. If you are the target, you can move up or down as part of your move. Otherwise, you can use your action to move the target, which must remain within the spell's range.\nWhen the spell ends, the target floats gently to the ground if it is still aloft.",
     "classes": [
@@ -6222,7 +6222,7 @@
     "level": 0,
     "school": "Evocation",
     "save": {
-      "ability": "dexterity"
+      "ability": "Dexterity"
     },
     "effects": "Until the spell ends, the object sheds bright light in a 20-foot radius and dim light for an additional 20 feet. The light can be colored as you like. Completely covering the object with something opaque blocks the light. The spell ends if you cast it again or dismiss it as an action.\nIf you target an object held or worn by a hostile creature, that creature must succeed on a Dexterity saving throw to avoid the spell.",
     "classes": [
@@ -6255,7 +6255,7 @@
       "higherLevelDie": "d8"
     },
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "2d8",
       "damageType": "lightning",
       "saveSuccess": "half damage",
@@ -6287,7 +6287,7 @@
     "level": 3,
     "school": "Evocation",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "8d6",
       "damageType": "lightning",
       "saveSuccess": "half damage",
@@ -6320,7 +6320,7 @@
     "level": 0,
     "school": "Evocation",
     "save": {
-      "ability": "strength",
+      "ability": "Strength",
       "damage": "((@{level} + 1) / 6 + 0.5)d8",
       "damageType": "lightning",
       "condition": "if it is within 5 feet of you after being pulled",
@@ -6459,7 +6459,7 @@
     "level": 5,
     "school": "Evocation",
     "save": {
-      "ability": "strength",
+      "ability": "Strength",
       "damage": "6d6",
       "damageType": "bludgeoning",
       "saveFailure": "be pulled 10 feet toward the center"
@@ -6559,7 +6559,7 @@
     "level": 6,
     "school": "Necromancy",
     "save": {
-      "ability": "charisma",
+      "ability": "Charisma",
       "saveFailure": "your soul moves into the target's body, and the target's soul becomes trapped in the container",
       "saveSuccess": "the target resists your efforts to possess it, and you can't attempt to possess it again for 24 hours"
     },
@@ -6791,7 +6791,7 @@
     "level": 6,
     "school": "Enchantment",
     "save": {
-      "ability": "wisdom",
+      "ability": "Wisdom",
       "saveFailure": "it pursues the course of action you described to the best of its ability"
     },
     "effects": "Creatures that can't be charmed are immune to this effect. The suggestion must be limited to a sentence or two and must be worded in such a manner as to make the course of action sound reasonable. Asking the creature to stab itself, throw itself onto a spear, immolate itself, or do some other obviously harmful act automatically negates the effect of the spell.\nThe suggested course of action can continue for the entire duration. If the suggested activity can be completed in a shorter time, the spell ends when the subject finishes what it was asked to do.\nYou can also specify conditions that will trigger a special activity during the duration. For example, you might suggest that a group of soldiers give all their money to the first beggar they meet. If the condition isn't met before the spell ends, the activity isn't performed.\nIf you or any of your companions damage a creature affected by this spell, the spell ends for that creature.",
@@ -6822,7 +6822,7 @@
     "level": 2,
     "school": "Transmutation",
     "save": {
-      "ability": "strength",
+      "ability": "Strength",
       "damage": "2d6",
       "damageType": "bludgeoning",
       "saveFailure": "restrained for the spell's duration",
@@ -6938,7 +6938,7 @@
     "level": 3,
     "school": "Transmutation",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "2d6",
       "damageType": "fire",
       "saveSuccess": "half damage"
@@ -7016,7 +7016,7 @@
     "level": 9,
     "school": "Evocation",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "20d6",
       "damageType": "fire",
       "secondaryDamage": "20d6",
@@ -7193,7 +7193,7 @@
     "school": "Enchantment",
     "save": {
       "condition": "if you are fighting the creature, it has advantage on the saving throw",
-      "ability": "wisdom",
+      "ability": "Wisdom",
       "saveFailure": "the target becomes charmed by you for the duration. The charmed target is incapacitated and unaware of its surroundings, though it can still hear you. If it takes any damage or is targeted by another spell, this spell ends, and none of the target's memories are modified.\nWhile this charm lasts, you can affect the target's memory of an event that it experienced within the last 24 hours and that lasted no more than 10 minutes. You can permanently eliminate all memory of the event, allow the target to recall the event with perfect clarity and exacting detail, change its memory of the details of the event, or create a memory of some other event.\nYou must speak to the target to describe how its memories are affected, and it must be able to understand your language for the modified memories to take root. Its mind fills in any gaps in the details of your description. If the spell ends before you have finished describing the modified memories, the creature's memory isn't altered. Otherwise, the modified memories take hold when the spell ends.\nA modified memory doesn't necessarily affect how a creature behaves, particularly if the memory contradicts the creature's natural inclinations, alignment, or beliefs. An illogical modified memory, such as implanting a memory of how much the creature enjoyed dousing itself in acid, is dismissed, perhaps as a bad dream. The DM might deem a modified memory too nonsensical to affect a creature in a significant manner.\nA remove curse or greater restoration spell cast on the target restores the creature's true memory."
     },
     "classes": [
@@ -7247,7 +7247,7 @@
     "level": 2,
     "school": "Evocation",
     "save": {
-      "ability": "constitution",
+      "ability": "Constitution",
       "damage": "2d10",
       "damageType": "radiant",
       "saveSuccess": "half damage",
@@ -7464,7 +7464,7 @@
     "level": 6,
     "school": "Evocation",
     "save": {
-      "ability": "constitution",
+      "ability": "Constitution",
       "damage": "10d6",
       "damageType": "cold",
       "saveSuccess": "half damage",
@@ -7495,7 +7495,7 @@
     "level": 4,
     "school": "Evocation",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "saveFailure": "the creature is enclosed for the duration."
     },
     "effects": "An unwilling creature must make a Dexterity saving throw as outlined above.\nNothing—not physical objects, energy, or other spell effects—can pass through the barrier, in or out, though a creature in the sphere can breathe there. The sphere is immune to all damage, and a creature or object inside can't be damaged by attacks or effects originating from outside, nor can a creature inside the sphere damage anything outside it.\nThe sphere is weightless and just large enough to contain the creature or object inside. An enclosed creature can use its action to push against the sphere's walls and thus roll the sphere at up to half the creature's speed. Similarly, the globe can be picked up and moved by other creatures.\nA disintegrate spell targeting the globe destroys it without harming anything inside it.",
@@ -7601,7 +7601,7 @@
     "level": 2,
     "school": "Illusion",
     "save": {
-      "ability": "intelligence",
+      "ability": "Intelligence",
       "saveFailure": "you create a phantasmal object, creature, or other visible phenomenon of your choice that is no larger than a 10-foot cube and that is perceivable only to the target for the duration. This spell has no effect on undead or constructs.\nThe phantasm includes sound, temperature, and other stimuli, also evident only to the creature.\nThe target can use its action to examine the phantasm with an Intelligence (Investigation) check against your spell save DC. If the check succeeds, the target realizes that the phantasm is an illusion, and the spell ends."
     },
     "effects": "While a target is affected by the spell, the target treats the phantasm as if it were real. The target rationalizes any illogical outcomes from interacting with the phantasm. For example, a target attempting to walk across a phantasmal bridge that spans a chasm falls once it steps onto the bridge. If the target survives the fall, it still believes that the bridge exists and comes up with some other explanation for its fall—it was pushed, it slipped, or a strong wind might have knocked it off.\nAn affected target is so convinced of the phantasm's reality that it can even take damage from the illusion. A phantasm created to appear as a creature can attack the target. Similarly, a phantasm created to appear as fire, a pool of acid, or lava can burn the target. Each round on your turn, the phantasm can deal 1d6 psychic damage to the target if it is in the phantasm's area or within 5 feet of the phantasm, provided that the illusion is of a creature or hazard that could logically deal damage, such as by attacking. The target perceives the damage as a type appropriate to the illusion.",
@@ -7634,7 +7634,7 @@
     "level": 4,
     "school": "Illusion",
     "save": {
-      "ability": "wisdom",
+      "ability": "Wisdom",
       "saveFailure": "becomes frightened for the duration. At the end of each of the target's turns before the spell ends, the target must succeed on a Wisdom saving throw or take 4d10 psychic damage. On a successful save, the spell ends."
     },
     "classes": [
@@ -7788,7 +7788,7 @@
     "level": 0,
     "school": "Conjuration",
     "save": {
-      "ability": "constitution",
+      "ability": "Constitution",
       "damage": "((@{level} + 1) / 6 + 0.5)d12",
       "damageType": "poison"
     },
@@ -7817,7 +7817,7 @@
     "level": 4,
     "school": "Transmutation",
     "save": {
-      "ability": "wisdom",
+      "ability": "Wisdom",
       "saveFailure": "affected by this spell"
     },
     "effects": "An unwilling creature must make a Wisdom saving throw to avoid the effect. A shapechanger automatically succeeds on this saving throw.\nThe transformation lasts for the duration, or until the target drops to 0 hit points or dies. The new form can be any beast whose challenge rating is equal to or less than the target's (or the target's level, if it doesn't have a challenge rating). The target's game statistics, including mental ability scores, are replaced by the statistics of the chosen beast. It retains its alignment and personality.\nThe target assumes the hit points of its new form. When it reverts to its normal form, the creature returns to the number of hit points it had before it transformed. If it reverts as a result of dropping to 0 hit points, any excess damage carries over to its normal form. As long as the excess damage doesn't reduce the creature's normal form to 0 hit points, it isn't knocked unconscious.\nThe creature is limited in the actions it can perform by the nature of its new form, and it can't speak, cast spells, or take any other action that requires hands or speech.\nThe target's gear melds into the new form. The creature can't activate, use, wield, or otherwise benefit from any of its equipment.",
@@ -7982,7 +7982,7 @@
     "level": 7,
     "school": "Evocation",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "10d6",
       "damageType": "fire, acid, lightning, poison, or cold",
       "saveSuccess": "half damage"
@@ -8010,7 +8010,7 @@
     "level": 9,
     "school": "Abjuration",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "10d6",
       "damageType": "fire, acid, lightning, poison, or cold",
       "saveSuccess": "half damage"
@@ -8217,7 +8217,7 @@
     "level": 2,
     "school": "Transmutation",
     "save": {
-      "ability": "constitution",
+      "ability": "Constitution",
       "saveFailure": "become blinded until the end of your next turn"
     },
     "effects": "You can extinguish the fire in that area, and you create either fireworks or smoke.\nFireworks. The target explodes with a dazzling display of colors. Each creature within 10 ft of the target must succeed on a Constitution saving throw as outlined above.\nSmoke. Thick black smoke spreads out from the target in a 20 ft radius, moving around corners. The area of the smoke is heavily obscured. The smoke persists for 1 minute or until a strong wind disperses it.",
@@ -8298,7 +8298,7 @@
       "type": "ranged"
     },
     "save": {
-      "ability": "constitution",
+      "ability": "Constitution",
       "saveSuccess": "spell ends"
     },
     "effects": "On a hit, the target deals only half damage with weapon attacks that use Strength until the spell ends.\nAt the end of each of the target's turns, it can make a Constitution saving throw against the spell as outlined above.",
@@ -8358,7 +8358,7 @@
       "higherLevelDie": "d8"
     },
     "save": {
-      "ability": "constitution",
+      "ability": "Constitution",
       "saveFailure": "be poisoned until the end of your next turn."
     },
     "effects": "On a hit, the target must make a Constitution saving throw as outlined above.",
@@ -8508,7 +8508,7 @@
     "level": 7,
     "school": "Transmutation",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "saveSuccess": "grab onto a fixed object it can reach, thus avoiding the fall"
     },
     "effects": "targets fall upward and reach the top of the area when you cast this spell. A creature can make a Dexterity saving throw to grab onto a fixed object as outlined above.\nIf some solid object (such as a ceiling) is encountered in this fall, falling objects and creatures strike it just as they would during a normal downward fall. If an object or creature reaches the top of the area without striking anything, it remains there, oscillating slightly, for the duration.\nAt the end of the duration, affected objects and creatures fall back down.",
@@ -8583,7 +8583,7 @@
     "level": 0,
     "school": "Evocation",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "((@{level} + 1) / 6 + 0.5)d8",
       "damageType": "radiant"
     },
@@ -8610,7 +8610,7 @@
     "level": 1,
     "school": "Abjuration",
     "save": {
-      "ability": "wisdom",
+      "ability": "Wisdom",
       "saveFailure": "target has to choose a new target or lose the attack or spell"
     },
     "effects": "Until the spell ends, any creature who targets the warded creature with an attack or a harmful spell must first make a Wisdom saving throw as outlined above. This spell doesn't protect the warded creature from area effects, such as the explosion of a fireball.\nIf the warded creature makes an attack or casts a spell that affects an enemy creature, this spell ends.",
@@ -8676,7 +8676,7 @@
     "level": 5,
     "school": "Divination",
     "save": {
-      "ability": "wisdom",
+      "ability": "Wisdom",
       "saveFailure": "the spell creates an invisible sensor within 10 ft of the target. You can see and hear through the sensor as if you were there. The sensor moves with the target, remaining within 10 ft of it for the duration. A creature that can see invisible objects sees the sensor as a luminous orb about the size of your fist",
       "saveSuccess": "the target isn't affected, and you can't use this spell against it again for 24 hours"
     },
@@ -8723,7 +8723,7 @@
       "higherLevelDie": "d6"
     },
     "save": {
-      "ability": "constitution",
+      "ability": "Constitution",
       "saveFailure": "take more fire damage."
     },
     "effects": "The next time you hit a creature with a melee weapon attack during the spell's duration the attack deals extra damage as outlined above. The target ignites in flames and at the start of each of its turns until the spell ends, the target must make a Constitution saving throw as outlined above. If the target or a creature within 5 feet of it uses an action to put out the flames, or if some other effect douses the flames (such as the target being submerged in water), the spell ends.",
@@ -8770,7 +8770,7 @@
     "level": 5,
     "school": "Illusion",
     "save": {
-      "ability": "charisma",
+      "ability": "Charisma",
       "saveFailure": "affected by this spell"
     },
     "effects": "You give each target you choose a new, illusory appearance. An unwilling target can make a Charisma saving throw as outlined above.\nThe spell disguises physical appearance as well as clothing, armor, weapons, and equipment. You can make each creature seem 1 foot shorter or taller and appear thin, fat, or in between. You can't change a target's body type, so you must choose a form that has the same basic arrangement of limbs. Otherwise, the extent of the illusion is up to you. The spell lasts for the duration, unless you use your action to dismiss it sooner.\nThe changes wrought by this spell fail to hold up to physical inspection. For example, if you use this spell to add a hat to a creature's outfit, objects pass through the hat, and anyone who touches it would feel nothing or would feel the creature's head and hair. If you use this spell to appear thinner than you are, the hand of someone who reaches out to touch you would bump into you while it was seemingly still in midair.\nA creature can use its action to inspect a target and make an Intelligence (Investigation) check against your spell save DC. If it succeeds, it becomes aware that the target is disguised.",
@@ -8900,7 +8900,7 @@
     "level": 2,
     "school": "Evocation",
     "save": {
-      "ability": "constitution",
+      "ability": "Constitution",
       "damage": "3d8",
       "damageType": "thunder",
       "saveSuccess": "half damage",
@@ -9164,7 +9164,7 @@
     "level": 3,
     "school": "Conjuration",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "saveFailure": "fall prone"
     },
     "effects": "The area is heavily obscured, and exposed flames in the area are doused.\nThe ground in the area is covered with slick ice, making it difficult terrain.\nIf a creature is concentrating in the spell's area, the creature must make a successful Constitution saving throw against your spell save DC or lose concentration.",
@@ -9201,7 +9201,7 @@
     "level": 3,
     "school": "Transmutation",
     "save": {
-      "ability": "wisdom",
+      "ability": "Wisdom",
       "saveFailure": "affected by this spell"
     },
     "effects": "An affected target's speed is halved, it takes a -2 penalty to AC and Dexterity saving throws, and it can't use reactions. On its turn, it can use either an action or a bonus action, not both. Regardless of the creature's abilities or magic items, it can't make more than one melee or ranged attack during its turn.\nIf the creature attempts to cast a spell with a casting time of 1 action, roll a d20. On an 11 or higher, the spell doesn't take effect until the creature's next turn, and the creature must use its action on that turn to complete the spell. If it can't, the spell is wasted.\nA creature affected by this spell makes another Wisdom saving throw at the end of its turn. On a successful save, the effect ends for it.",
@@ -9235,7 +9235,7 @@
     "level": 2,
     "school": "Evocation",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "3d6",
       "damageType": "cold",
       "saveSuccess": "half damage",
@@ -9428,7 +9428,7 @@
     "level": 3,
     "school": "Conjuration",
     "save": {
-      "ability": "wisdom",
+      "ability": "Wisdom",
       "damage": "3d8",
       "damageType": "radiant or necrotic",
       "saveSuccess": "half damage",
@@ -9495,7 +9495,7 @@
       "damageType": "psychic"
     },
     "save": {
-      "ability": "wisdom",
+      "ability": "Wisdom",
       "saveFailure": "it has disadvantage on attack rolls and ability checks, and can't take reactions, until the end of its next turn."
     },
     "effects": "The next time you hit a creature with a melee weapon attack during this spell's duration, your weapon pierces both body and mind, and the attack deals an extra damage and the target must make a Wisdom saving throw as outlined above.",
@@ -9524,7 +9524,7 @@
     "school": "Conjuration",
     "save": {
       "condition": "against poison",
-      "ability": "constitution",
+      "ability": "Constitution",
       "saveFailure": "the creature spends its action that turn retching and reeling",
       "saveSuccess": "half damage and not blinded"
     },
@@ -9628,7 +9628,7 @@
     "level": 9,
     "school": "Conjuration",
     "save": {
-      "ability": "constitution",
+      "ability": "Constitution",
       "damage": "2d6",
       "damageType": "thunder",
       "saveFailure": "deafened for 5 minute."
@@ -9657,7 +9657,7 @@
     "level": 4,
     "school": "Evocation",
     "save": {
-      "ability": "strength",
+      "ability": "Strength",
       "damage": "2d6",
       "damageType": "bludgeoning",
       "higherLevelDice": "1",
@@ -9687,7 +9687,7 @@
     "level": 2,
     "school": "Enchantment",
     "save": {
-      "ability": "wisdom",
+      "ability": "Wisdom",
       "saveFailure": "it pursues the course of action you described to the best of its ability"
     },
     "effects": "course of activity is limited to a sentence or two. Creatures that can't be charmed are immune to this effect. The suggestion must be worded in such a manner as to make the course of action sound reasonable. Asking the creature to stab itself, throw itself onto a spear, immolate itself, or do some other obviously harmful act ends the spell.\nThe target must make a Wisdom saving throw as outlined above. The suggested course of action can continue for the entire duration. If the suggested activity can be completed in a shorter time, the spell ends when the subject finishes what it was asked to do.\nYou can also specify conditions that will trigger a special activity during the duration. For example, you might suggest that a knight give her warhorse to the first beggar she meets. If the condition isn't met before the spell expires, the activity isn't performed.\nIf you or any of your companions damage the target, the spell ends.",
@@ -9722,7 +9722,7 @@
     "level": 6,
     "school": "Evocation",
     "save": {
-      "ability": "constitution",
+      "ability": "Constitution",
       "damage": "6d8",
       "damageType": "radiant",
       "saveFailure": "blinded until your next turn",
@@ -9754,7 +9754,7 @@
     "level": 8,
     "school": "Evocation",
     "save": {
-      "ability": "constitution",
+      "ability": "Constitution",
       "damage": "12d6",
       "damageType": "radiant",
       "saveFailure": "blinded for 1 minute. A creature blinded by this spell makes another Constitution saving throw at the end of each of its turns. On a successful save, it is no longer blinded.",
@@ -9805,7 +9805,7 @@
     "level": 0,
     "school": "Conjuration",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "((@{level} + 1) / 6 + 0.5)d6",
       "damageType": "force"
     },
@@ -9859,7 +9859,7 @@
     "level": 1,
     "school": "Enchantment",
     "save": {
-      "ability": "wisdom",
+      "ability": "Wisdom",
       "saveFailure": "or fall prone, becoming incapacitated and unable to stand up for the duration"
     },
     "effects": "A creature with an Intelligence score of 4 or less isn't affected.\nAt the end of each of its turns, and each time it takes damage, the target can make another Wisdom saving throw. The target had advantage on the saving throw if it's triggered by damage. On a success, the spell ends.",
@@ -10054,7 +10054,7 @@
     },
     "save": {
       "condition": "if the target is a creature",
-      "ability": "strength",
+      "ability": "Strength",
       "saveFailure": "pushed 10 feet away from you and knocked prone."
     },
     "effects": "The first time you hit with a melee weapon attack during this spell's duration, the attack deals extra damage and it must make a Strength saving throw as outlined above.",
@@ -10078,7 +10078,7 @@
     "level": 0,
     "school": "Evocation",
     "save": {
-      "ability": "constitution",
+      "ability": "Constitution",
       "damage": "((@{level} + 1) / 6 + 0.5)d6",
       "damageType": "thunder"
     },
@@ -10108,7 +10108,7 @@
     "level": 1,
     "school": "Evocation",
     "save": {
-      "ability": "constitution",
+      "ability": "Constitution",
       "damage": "2d8",
       "damageType": "thunder",
       "saveFailure": "pushed 10 ft away from you",
@@ -10147,7 +10147,7 @@
     "level": 3,
     "school": "Conjuration",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "4d8",
       "damageType": "bludgeoning",
       "saveFailure": "knocked prone",
@@ -10222,7 +10222,7 @@
     "level": 5,
     "school": "Transmutation",
     "save": {
-      "ability": "strength"
+      "ability": "Strength"
     },
     "effects": "choose one of the following effects.\nTransmute Rock to Mud. Nonmagical rock of any sort in the area becomes an equal volume of thick and flowing mud that remains for the spell's duration.\nIf you cast the spell on an area of ground, it becomes muddy enough that creatures can sink into it. Each foot that a creature moves through the mud costs 4 feet of movement, and any creature on the ground when you cast the spell must make a Strength saving throw. A creature must also make this save the first time it enters the area on a turn or ends its turn there. On a failed save, a creature sinks into the mud and is restrained, though it can use an action to end the restrained condition on itself by pulling itself free of the mud.\nIf you cast the spell on a ceiling, the mud falls. Any creature under the mud when it falls must make a Dexterity saving throw. A creature takes 4d8 bludgeoning damage on a failed save, or half as much damage on a successful one.\nTransmute Mud to Rock. Nonmagical mud or quicksand in the area no more than 10 feet deep transforms into soft stone for the spell's duration. Any creature in the mud when it transforms must make a Dexterity saving throw. On a failed save, a creature becomes restrained by the rock. The restrained creature can use an action to try to break free by succeeding on a Strength check (DC 20) or by dealing 25 damage to the rock around it. On a successful save, a creature is shunted safely to the surface to an unoccupied space.",
     "classes": [
@@ -10301,7 +10301,7 @@
     "level": 9,
     "school": "Transmutation",
     "save": {
-      "ability": "wisdom",
+      "ability": "Wisdom",
       "saveFailure": "affected by this spell"
     },
     "effects": "You transform the target into a different creature, the creature into an object, or the object into a creature (the object must be neither worn nor carried by another creature). The transformation lasts for the duration, or until the target drops to 0 hit points or dies. If you concentrate on this spell for the full duration, the transformation becomes permanent.\nShapechangers aren't affected by this spell. An unwilling creature can make a Wisdom saving throw as outlined above.\nCreature into Creature. If you turn a creature into another kind of creature, the new form can be any kind you choose whose challenge rating is equal to or less than the target's (or its level, if the target doesn't have a challenge rating). The target's game statistics, including mental ability scores, are replaced by the statistics of the new form. It retains its alignment and personality.\nThe target assumes the hit points of its new form, and when it reverts to its normal form, the creature returns to the number of hit points it had before it transformed. If it reverts as a result of dropping to 0 hit points, any excess damage carries over to its normal form. As long as the excess damage doesn't reduce the creature's normal form to 0 hit points, it isn't knocked unconscious.\nThe creature is limited in the actions it can perform by the nature of its new form, and it can't speak, cast spells, or take any other action that requires hands or speech unless its new form is capable of such actions.\nThe target's gear melds into the new form. The creature can't activate, use, wield, or otherwise benefit from any of its equipment.\nObject into Creature. You can turn an object into any kind of creature, as long as the creature's size is no larger than the object's size and the creature's challenge rating is 9 or lower. The creature is friendly to you and your companions. It acts on each of your turns. You decide what action it takes and how it moves. The DM has the creature's statistics and resolves all of its actions and movement.\nIf the spell becomes permanent, you no longer control the creature. It might remain friendly to you, depending on how you have treated it.\nCreature into Object. If you turn a creature into an object, it transforms along with whatever it is wearing and carrying into that form. The creature's statistics become those of the object, and the creature has no memory of time spent in this form, after the spell ends and it returns to its normal form.",
@@ -10403,7 +10403,7 @@
     "level": 8,
     "school": "Conjuration",
     "save": {
-      "ability": "strength",
+      "ability": "Strength",
       "damage": "6d10",
       "damageType": "bludgeoning",
       "saveSuccess": "half damage"
@@ -10484,7 +10484,7 @@
     "school": "Enchantment",
     "save": {
       "condition": "if the target can hear you (though it need not understand you)",
-      "ability": "wisdom",
+      "ability": "Wisdom",
       "damage": "((@{level} + 1) / 6 + 0.5)d4",
       "damageType": "psychic",
       "saveFailure": "disadvantage on the next attack roll it makes before the end of its next turn"
@@ -10513,7 +10513,7 @@
     "level": 4,
     "school": "Evocation",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "10d4",
       "damageType": "acid",
       "saveSuccess": "half damage and no additional damage",
@@ -10547,7 +10547,7 @@
     "level": 4,
     "school": "Evocation",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "5d8",
       "damageType": "fire",
       "saveSuccess": "half damage",
@@ -10613,7 +10613,7 @@
     "level": 6,
     "school": "Evocation",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "10d6",
       "damageType": "cold",
       "saveSuccess": "half damage",
@@ -10668,7 +10668,7 @@
     "level": 5,
     "school": "Evocation",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "saveSuccess": "it can use its reaction to move up to its speed so that it is no longer enclosed by the wall"
     },
     "effects": "If the wall cuts through a creature's space when it appears, the creature is pushed to one side of the wall (your choice). If a creature would be surrounded on all sides by the wall (or the wall and another solid surface), that creature can make a Dexterity saving throw as outlined above.\nThe wall can have any shape you desire, though it can't occupy the same space as a creature or object. The wall doesn't need to be vertical or rest on any firm foundation. It must, however, merge with and be solidly supported by existing stone. Thus, you can use this spell to bridge a chasm or create a ramp.\nIf you create a span greater than 20 ft in length, you must halve the size of each panel to create supports. You can crudely shape the wall to create crenellations, battlements, and so on.\nThe wall is an object made of stone that can be damaged and thus breached. Each panel has AC 15 and 30 hit points per inch of thickness. Reducing a panel to 0 hit points destroys it and might cause connected panels to collapse at the DM's discretion.\nIf you maintain your concentration on this spell for its whole duration, the wall becomes permanent and can't be dispelled. Otherwise, the wall disappears when the spell ends.",
@@ -10703,7 +10703,7 @@
     "level": 6,
     "school": "Conjuration",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "7d8",
       "damageType": "piercing",
       "saveSuccess": "half damage",
@@ -10863,7 +10863,7 @@
     "level": 4,
     "school": "Conjuration",
     "save": {
-      "ability": "strength",
+      "ability": "Strength",
       "saveSuccess": "the creature is ejected from that space to the nearest unoccupied space outside it. A Huge or larger creature succeeds on the saving throw automatically.",
       "saveFailure": "a creature is restrained by the sphere and is engulfed by the water. At the end of each of its turns, a restrained target can repeat the saving throw.\nThe sphere can restrain a maximum of four Medium or smaller creatures or one Large creature. If the sphere restrains a creature in excess of these numbers, a random creature that was already restrained by the sphere falls out of it and lands prone in a space within 5 feet of it."
     },
@@ -10894,7 +10894,7 @@
     "level": 2,
     "school": "Conjuration",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "saveFailure": "the creature is restrained as long as it remains in the webs or until it breaks free.\nA creature restrained by the webs can use its action to make a Strength check against your spell save DC. If it succeeds, it is no longer restrained.\nThe webs are flammable. Any 5 ft cube of webs exposed to fire burns away in 1 round, dealing 2d4 fire damage to any creature that starts its turn in the fire."
     },
     "effects": "The webs are difficult terrain and lightly obscure their area.\nIf the webs aren't anchored between two solid masses (such as walls or trees) or layered across a floor, wall, or ceiling, the conjured web collapses on itself, and the spell ends at the start of your next turn. Webs layered over a flat surface have a depth of 5 feet.",
@@ -10925,7 +10925,7 @@
     "level": 9,
     "school": "Illusion",
     "save": {
-      "ability": "wisdom",
+      "ability": "Wisdom",
       "saveFailure": "become frightened for the duration. The illusion calls on the creature's deepest fears, manifesting its worst nightmares as an implacable threat. At the end of each of the frightened creature's turns, it must succeed on a Wisdom saving throw or take 4d10 psychic damage. On a successful save, the spell ends for that creature."
     },
     "classes": [
@@ -10950,7 +10950,7 @@
     "level": 7,
     "school": "Evocation",
     "save": {
-      "ability": "dexterity",
+      "ability": "Dexterity",
       "damage": "10d6",
       "damageType": "bludgeoning",
       "saveSuccess": "half damage"
@@ -11003,7 +11003,7 @@
     "level": 3,
     "school": "Evocation",
     "save": {
-      "ability": "strength",
+      "ability": "Strength",
       "damage": "3d8",
       "damageType": "bludgeoning",
       "saveSuccess": "half damage"
@@ -11109,7 +11109,7 @@
     },
     "save": {
       "condition": "if the target is a creature",
-      "ability": "wisdom",
+      "ability": "Wisdom",
       "saveFailure": "or be frightened until the spell ends. As an action, the creature can make a Wisdom check against your spell save DC to steel its resolve and end this spell"
     },
     "effects": "The next time you hit with a melee weapon attack during this spell's duration, your attack deals extra damage and it must make a Wisdom saving throw as outlined above",
@@ -11133,7 +11133,7 @@
     "level": 2,
     "school": "Enchantment",
     "save": {
-      "ability": "charisma",
+      "ability": "Charisma",
       "saveFailure": "a creature can't speak a deliberate lie while in the radius"
     },
     "effects": "Until the spell ends, a creature that enters the spell's area for the first time on a turn or starts its turn there must make a Charisma saving throw as outlined above. You know whether each creature succeeds or fails on its saving throw.\nAn affected creature is aware of the fate and can avoid answering questions she would normally have responded with a lie. Such a creature can remain evasive in his answers as they remain within the limits of truth.",
