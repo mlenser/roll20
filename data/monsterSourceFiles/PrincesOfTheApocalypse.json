@@ -150,6 +150,12 @@
         "name": "Morningstar",
         "text": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) piercing damage."
       }
+    ],
+    "reactions": [
+      {
+        "name": "Unyielding",
+        "text": "When the guard is subjected to an effect that would move it, knock it prone, or both, it can use its reaction to be neither moved nor knocked prone."
+      }
     ]
   },
   {
@@ -185,6 +191,12 @@
         "text": "Melee Weapon Attack: +4 to hit, reach 10 ft., one target. Hit: 7 (1d10 + 2) slashing damage."
       }
     ],
+    "reactions": [
+      {
+        "name": "Unyielding",
+        "text": "When the priest is subjected to an effect that would move it, knock it prone, or both, it can use its reaction to be neither moved nor knocked prone."
+      }
+    ],
     "spells": "acid splash, blade ward, light, mending, mold earth, earth tremor, expeditious retreat, shield, shatter, spider climb, slow"
   },
   {
@@ -218,6 +230,12 @@
       {
         "name": "Spear",
         "text": "Melee or Ranged Weapon Attack: +6 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 7 (1d6 + 4) piercing damage, or 8 (1d8 + 4) piercing damage if used with two hands to make a melee attack."
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Unyielding",
+        "text": "When the burrowshark is subjected to an effect that would move it, knock it prone, or both, it can use its reaction to be neither moved nor knocked prone."
       }
     ]
   },
@@ -319,6 +337,12 @@
       {
         "name": "Lance",
         "text": "Melee Weapon Attack: +5 to hit, reach 10 ft., one target. Hit: 9 (1d12 + 3) piercing damage."
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Uncanny Dodge",
+        "text": "When an attacker the knight can see hits it with an attack, the knight can halve the damage against it."
       }
     ]
   },
@@ -865,6 +889,12 @@
         "name": "Unarmed Strike",
         "text": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 9 (1d10 + 4) bludgeoning damage."
       }
+    ],
+    "reactions": [
+      {
+        "name": "Parry and Counter",
+        "text": "Hellenrae adds 3 to her AC against one melee or ranged weapon attack that would hit her. To do so, she must be able to sense the attacker with her blindsight. If the attack misses, Hellenrae can make one melee attack against the attacker if it is within her reach."
+      }
     ]
   },
   {
@@ -984,6 +1014,12 @@
       {
         "name": "Unarmed Strike",
         "text": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) bludgeoning damage."
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Deflect Missiles",
+        "text": "When the hurricane is hit by a ranged weapon attack, it reduces the damage from the attack by 1d10 + 9. If the damage is reduced to 0, the hurricane can catch the missile if it is small enough to hold in one hand and the hurricane has at least one hand free."
       }
     ],
     "spells": "blade ward, gust, light, prestidigitation, feather fall, jump, thunderwave, gust of wind"
@@ -1502,6 +1538,12 @@
         "name": "Unarmed Strike",
         "text": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) bludgeoning damage."
       }
+    ],
+    "reactions": [
+      {
+        "name": "Parry",
+        "text": "The monk adds 2 to its AC against one melee or ranged weapon attack that would hit it. To do so, the monk must see the attacker."
+      }
     ]
   },
   {
@@ -1646,6 +1688,12 @@
       {
         "name": "Lance",
         "text": "Melee Weapon Attack: +5 to hit, reach 10 ft., one target. Hit: 9 (1d12 + 3) piercing damage."
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Parry",
+        "text": "Thurl adds 2 to his AC against one melee attack that would hit him. To do so, Thurl must see the attacker and be wielding a melee weapon."
       }
     ],
     "spells": "friends, gust, light, message, ray of frost, expeditious retreat, feather fall, jump, levitate, misty step, haste"
