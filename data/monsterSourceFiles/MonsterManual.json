@@ -2451,7 +2451,7 @@
         "text": "Melee or Ranged Weapon Attack: +6 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage."
       }
     ],
-    "spells": "fire bolt, light, mage hand, prestidigitation, shocking grasp, detect magic, identify, mage armor*, magic missile, detect thoughts, mirror image, misty step, counterspell, fly, lightning bolt, banishment, fire shield, stoneskin*, cone of cold, scrying, wall of force, globe of invulnerability, teleport, mind blank*, time stop"
+    "spells": "fire bolt, light, mage hand, prestidigitation, shocking grasp, detect magic, identify, mage armor, magic missile, detect thoughts, mirror image, misty step, counterspell, fly, lightning bolt, banishment, fire shield, stoneskin, cone of cold, scrying, wall of force, globe of invulnerability, teleport, mind blank, time stop"
   },
   {
     "name": "Assassin",
