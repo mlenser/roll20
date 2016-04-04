@@ -59,9 +59,9 @@ gulp.task('compileHouseruledSpells', function () {
   gulp.src(['./data/spellSourceFiles/*.json', '!**/spellData.json'])
     .pipe(jsoncombine('5e-spells-houserules.js', function (sources) {
       var houseRuled = Object.keys(sources)
-          .map(function(sourceKey) {
-            return sources[sourceKey];
-          });
+        .map(function (sourceKey) {
+          return sources[sourceKey];
+        });
       var output = makeJSOutput([compileSources(houseRuled, 'spells', true)]);
 
       return new Buffer(output);
