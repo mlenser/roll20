@@ -5,6 +5,7 @@
     "glob": "latest",
     "gulp": "latest",
     "gulp-inject": "latest",
+    "gulp-eol": "latest",
     "gulp-jsoncombine": "latest",
     "gulp-rename": "latest",
     "gulp-uglify": "latest"

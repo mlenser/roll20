@@ -2,8 +2,8 @@ var gulp = require('gulp');
 var inject = require('gulp-inject');
 var uglify = require('gulp-uglify');
 var fs = require('fs');
-var rename = require('gulp-rename');
 var jsoncombine = require('gulp-jsoncombine');
+var eol = require('gulp-eol');
 
 function entitySorter(a, b) {
   if (a.name < b.name) {
@@ -48,32 +48,35 @@ function makeJSOutput(entityLists) {
 
 gulp.task('compileSpells', function () {
   gulp.src('./data/spellSourceFiles/spellData.json')
-      .pipe(jsoncombine('5e-spells.js', function (sources) {
-        return new Buffer(makeJSOutput([compileSources(sources, 'spells')]));
-      }))
-      .pipe(gulp.dest('./data/'));
+    .pipe(jsoncombine('5e-spells.js', function (sources) {
+      return new Buffer(makeJSOutput([compileSources(sources, 'spells')]));
+    }))
+    .pipe(eol())
+    .pipe(gulp.dest('./data'));
 });
 
 gulp.task('compileHouseruledSpells', function () {
   gulp.src(['./data/spellSourceFiles/*.json', '!**/spellData.json'])
-      .pipe(jsoncombine('5e-spells-houserules.js', function (sources) {
-        var houseRuled = Object.keys(sources)
-            .map(function(sourceKey) {
-              return sources[sourceKey];
-            });
-        var output = makeJSOutput([compileSources(houseRuled, 'spells', true)]);
+    .pipe(jsoncombine('5e-spells-houserules.js', function (sources) {
+      var houseRuled = Object.keys(sources)
+          .map(function(sourceKey) {
+            return sources[sourceKey];
+          });
+      var output = makeJSOutput([compileSources(houseRuled, 'spells', true)]);
 
-        return new Buffer(output);
-      }))
-      .pipe(gulp.dest('./data/'));
+      return new Buffer(output);
+    }))
+    .pipe(eol())
+    .pipe(gulp.dest('./data'));
 });
 
 gulp.task('compileMonsters', function () {
   gulp.src('./data/monsterSourceFiles/*.json')
-      .pipe(jsoncombine('5e-monsters.js', function (sources) {
-        return new Buffer(makeJSOutput([compileSources(sources, 'monsters')]));
-      }))
-      .pipe(gulp.dest('./data/'));
+    .pipe(jsoncombine('5e-monsters.js', function (sources) {
+      return new Buffer(makeJSOutput([compileSources(sources, 'monsters')]));
+    }))
+    .pipe(eol())
+    .pipe(gulp.dest('./data'));
 });
 
 gulp.task('compileAll', ['compileSpells', 'compileHouseruledSpells', 'compileMonsters']);
