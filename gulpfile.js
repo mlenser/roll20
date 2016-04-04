@@ -55,19 +55,13 @@ gulp.task('compileSpells', function () {
 });
 
 gulp.task('compileHouseruledSpells', function () {
-  gulp.src('./data/spellSourceFiles/*.json')
+  gulp.src(['./data/spellSourceFiles/*.json', '!**/spellData.json'])
       .pipe(jsoncombine('5e-spells-houserules.js', function (sources) {
         var houseRuled = Object.keys(sources)
-            .filter(function (sourceKey) {
-              return sourceKey !== 'spellData';
-            })
             .map(function(sourceKey) {
               return sources[sourceKey];
             });
-        var output = makeJSOutput([
-          compileSources([sources.spellData], 'spells'),
-          compileSources(houseRuled, 'spells', true)
-        ]);
+        var output = makeJSOutput([compileSources(houseRuled, 'spells', true)]);
 
         return new Buffer(output);
       }))
