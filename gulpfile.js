@@ -40,7 +40,7 @@ function compileSources(sources, arrayProp, patch) {
 function makeJSOutput(entityLists) {
   var output = "on('ready', function() {\n";
   entityLists.forEach(function (entityList) {
-    output += 'ShapedScripts.addEntities(' + JSON.stringify(entityList) + ');\n';
+    output += '  ShapedScripts.addEntities(' + JSON.stringify(entityList) + ');\n';
   });
   output += '});\n';
   return output;
