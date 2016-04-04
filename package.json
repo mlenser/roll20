@@ -1,0 +1,12 @@
+{
+  "name": "roll20",
+  "version": "0.0.1",
+  "devDependencies": {
+    "glob": "latest",
+    "gulp": "latest",
+    "gulp-inject": "latest",
+    "gulp-jsoncombine": "latest",
+    "gulp-rename": "latest",
+    "gulp-uglify": "latest"
+  }
+}
