@@ -265,7 +265,7 @@ var BloodSpatter = {
   },
   timeout: 0,
   increaseTimeout: function () {
-    BloodSpatter.timeout += 8;
+    BloodSpatter.timeout += 4;
     BloodSpatter.watchTimeout();
   },
   interval: null,
@@ -295,12 +295,11 @@ var BloodSpatter = {
       return;
     }
     var percentOfHpLost = damageTaken / maxHealth;
-    var damageMultiplier = BloodSpatter.baseSize + (percentOfHpLost / 2);
+    var damageMultiplier = BloodSpatter.baseSize + percentOfHpLost;
 
-    if ((!BloodSpatter.hpCountUp && currentHealth <= maxHealth / 2) || (BloodSpatter.hpCountUp && currentHealth >= maxHealth / 2)
-    ) {
+    if ((!BloodSpatter.hpCountUp && currentHealth <= maxHealth / 2) || (BloodSpatter.hpCountUp && currentHealth >= maxHealth / 2)) {
       token.set({
-        status_redmarker: true
+        status_red: true
       });
       // Create spatter near token if "bloodied". Chance of spatter depends on severity of damage
       if (damageTaken > 0 && currentHealth > 0 && ( (!BloodSpatter.hpCountUp && currentHealth < randomInteger(maxHealth)) || (BloodSpatter.hpCountUp && currentHealth > randomInteger(maxHealth)) )) {
@@ -308,7 +307,7 @@ var BloodSpatter = {
       }
     } else {
       token.set({
-        status_redmarker: false
+        status_red: false
       });
     }
     if ((!BloodSpatter.hpCountUp && currentHealth <= 0) || (BloodSpatter.hpCountUp && currentHealth >= maxHealth)) {
@@ -354,7 +353,7 @@ on('ready', function () {
     var currentHealth = token.get('bar' + BloodSpatter.hpBar + '_value');
     var healthLost = maxHealth - currentHealth;
     var percentOfHpLost = healthLost / maxHealth;
-    var damageMultiplier = (BloodSpatter.baseSize / 2) + (percentOfHpLost / 2);
+    var damageMultiplier = (BloodSpatter.baseSize / 2) + percentOfHpLost;
 
     if ((!BloodSpatter.hpCountUp && currentHealth <= maxHealth / 2 && currentHealth < randomInteger(maxHealth)) || (BloodSpatter.hpCountUp && currentHealth >= maxHealth / 2 && currentHealth > randomInteger(maxHealth))) {
       BloodSpatter.createBlood(token, damageMultiplier, 'spatter');
@@ -363,7 +362,7 @@ on('ready', function () {
   });
 
   on('chat:message', function (msg) {
-    if (msg.type === 'api' && msg.content.indexOf('!clearblood') !== -1) {
+    if (msg.type === 'api' && (msg.content.indexOf('!clearblood') !== -1 || msg.content.indexOf('!clear blood') !== -1)) {
       if (BloodSpatter.onlyAllowGMtoRunCommands && !playerIsGM(msg.playerid)) {
         sendChat(msg.who, '/w ' + msg.who + ' You are not authorized to use that command!');
         return;
