@@ -1,11 +1,9 @@
-var BloodSpatterAndStatusMarkers = {
-	version: '0.04',
+var BloodSpatter = {
+	version: '0.1.0',
 	wiki: 'https://wiki.roll20.net/Script:Blood_And_Honor:_Automatic_blood_spatter,_pooling_and_trail_effects',
-
 	hpBar: 3, //1, 2, or 3
-
 	hpCountUp: false,
-
+	baseSize: 0.75,
 	// This will make it so only the GM can use the !clearblood command. Change to "true" if you want to check for authorization.
 	onlyAllowGMtoRunCommands: true,
 
@@ -177,10 +175,10 @@ var BloodSpatterAndStatusMarkers = {
 	],
 	chooseBlood: function (type) {
 		if (type === 'spatter') {
-			return BloodSpatterAndStatusMarkers.spatters[randomInteger(BloodSpatterAndStatusMarkers.spatters.length) - 1];
+			return BloodSpatter.spatters[randomInteger(BloodSpatter.spatters.length) - 1];
 		}
 		if (type === 'pool') {
-			return BloodSpatterAndStatusMarkers.pools[randomInteger(BloodSpatterAndStatusMarkers.pools.length) - 1];
+			return BloodSpatter.pools[randomInteger(BloodSpatter.pools.length) - 1];
 		}
 	},
 	getOffset: function () {
@@ -198,26 +196,26 @@ var BloodSpatterAndStatusMarkers = {
 		}
 	},
 	createBlood: function (token, multiplier, bloodType) {
-		var pages = _.union([Campaign().get('playerpageid')], _.values(Campaign().get('playerspecificpages'))),
-			dropBlood = _.contains(pages, token.get('pageid')),
-			gmNotes = token.get('gmnotes');
+		var pages = _.union([Campaign().get('playerpageid')], _.values(Campaign().get('playerspecificpages')));
+		var dropBlood = _.contains(pages, token.get('pageid'));
+		var gmNotes = token.get('gmnotes');
 
 		if(!dropBlood || token.get('layer') !== 'objects' || gmNotes.indexOf('noblood') !== -1) {
 			return;
 		}
 
-		var	size = Math.floor(BloodSpatterAndStatusMarkers.getTokenSize(token) * multiplier),
-			bloodImage = BloodSpatterAndStatusMarkers.chooseBlood(bloodType),
-			bloodTokenSource = bloodImage,
-			bloodTokenWidth = size * multiplier,
-			bloodTokenHeight = size * multiplier;
+		var	size = Math.floor(BloodSpatter.getTokenSize(token) * multiplier);
+		var bloodImage = BloodSpatter.chooseBlood(bloodType);
+		var bloodTokenSource = bloodImage;
+		var bloodTokenWidth = size * multiplier;
+		var bloodTokenHeight = size * multiplier;
 
 		if(bloodImage !== null && typeof(bloodImage) === 'object') {
 			bloodTokenSource = bloodImage.src;
 
-			var bloodImageAspectRatio = bloodImage.width / bloodImage.height,
-				widthRatioMultiplier = 1,
-				heightRatioMultiplier = 1;
+			var bloodImageAspectRatio = bloodImage.width / bloodImage.height;
+			var widthRatioMultiplier = 1;
+			var heightRatioMultiplier = 1;
 
 			if(bloodImageAspectRatio < 1) {
 				widthRatioMultiplier = bloodImageAspectRatio;
@@ -228,17 +226,17 @@ var BloodSpatterAndStatusMarkers = {
 			bloodTokenHeight = bloodTokenHeight * heightRatioMultiplier;
 		}
 
-		var widthIncrement = bloodTokenWidth * 0.1,
-			widthIncrementTotal = widthIncrement,
-			heightIncrement = bloodTokenHeight * 0.1,
-			heightIncrementTotal = heightIncrement,
-			spatterToken = BloodSpatterAndStatusMarkers.fixedCreateObj('graphic', {
+		var widthIncrement = bloodTokenWidth * 0.1;
+		var widthIncrementTotal = widthIncrement;
+		var heightIncrement = bloodTokenHeight * 0.1;
+		var heightIncrementTotal = heightIncrement;
+		var spatterToken = BloodSpatter.fixedCreateObj('graphic', {
 				pageid: token.get('_pageid'),
 				imgsrc: bloodTokenSource,
-				tint_color: BloodSpatterAndStatusMarkers.bloodColor(gmNotes),
+				tint_color: BloodSpatter.bloodColor(gmNotes),
 				gmnotes: 'blood',
-				top: token.get('top') + (randomInteger(Math.floor(size / 2)) * BloodSpatterAndStatusMarkers.getOffset()),
-				left: token.get('left') + (randomInteger(Math.floor(size / 2)) * BloodSpatterAndStatusMarkers.getOffset()),
+				top: token.get('top') + (randomInteger(Math.floor(size / 2)) * BloodSpatter.getOffset()),
+				left: token.get('left') + (randomInteger(Math.floor(size / 2)) * BloodSpatter.getOffset()),
 				width: widthIncrement,
 				height: heightIncrement,
 				rotation: randomInteger(360) - 1,
@@ -267,18 +265,18 @@ var BloodSpatterAndStatusMarkers = {
 	},
 	timeout: 0,
 	increaseTimeout: function () {
-		BloodSpatterAndStatusMarkers.timeout += 8;
-		BloodSpatterAndStatusMarkers.watchTimeout();
+		BloodSpatter.timeout += 8;
+		BloodSpatter.watchTimeout();
 	},
 	interval: null,
 	watchTimeout: function () {
-		if (BloodSpatterAndStatusMarkers.interval === null) {
-			BloodSpatterAndStatusMarkers.interval = setInterval(function () {
-				if (BloodSpatterAndStatusMarkers.timeout > 0) {
-					BloodSpatterAndStatusMarkers.timeout--;
+		if (BloodSpatter.interval === null) {
+			BloodSpatter.interval = setInterval(function () {
+				if (BloodSpatter.timeout > 0) {
+					BloodSpatter.timeout--;
 				} else {
-					clearInterval(BloodSpatterAndStatusMarkers.interval);
-					BloodSpatterAndStatusMarkers.interval = null;
+					clearInterval(BloodSpatter.interval);
+					BloodSpatter.interval = null;
 				}
 			}, 2000);
 		}
@@ -296,41 +294,30 @@ var BloodSpatterAndStatusMarkers = {
 		if (maxHealth === '') {
 			return;
 		}
-		var percentOfHpLost = damageTaken / maxHealth,
-			damageMultiplier = .75 + (percentOfHpLost / 2, 0.5);
+		var percentOfHpLost = damageTaken / maxHealth;
+		var damageMultiplier = BloodSpatter.baseSize + (percentOfHpLost / 2);
 
-		if (
-			(!BloodSpatterAndStatusMarkers.hpCountUp && currentHealth <= maxHealth / 2)
-			||
-			(BloodSpatterAndStatusMarkers.hpCountUp && currentHealth >= maxHealth / 2)
+		if ( (!BloodSpatter.hpCountUp && currentHealth <= maxHealth / 2) || (BloodSpatter.hpCountUp && currentHealth >= maxHealth / 2)
 		) {
 			token.set({
 				status_redmarker: true
 			});
 			// Create spatter near token if "bloodied". Chance of spatter depends on severity of damage
-			if (damageTaken > 0 && currentHealth > 0 && (
-				(!BloodSpatterAndStatusMarkers.hpCountUp &&  currentHealth < randomInteger(maxHealth))
-				||
-				(BloodSpatterAndStatusMarkers.hpCountUp &&  currentHealth > randomInteger(maxHealth))
-				)) {
-				BloodSpatterAndStatusMarkers.createBlood(token, damageMultiplier, 'spatter');
+			if (damageTaken > 0 && currentHealth > 0 && ( (!BloodSpatter.hpCountUp &&  currentHealth < randomInteger(maxHealth)) || (BloodSpatter.hpCountUp &&  currentHealth > randomInteger(maxHealth)) )) {
+				BloodSpatter.createBlood(token, damageMultiplier, 'spatter');
 			}
 		} else {
 			token.set({
 				status_redmarker: false
 			});
 		}
-		if (
-			(!BloodSpatterAndStatusMarkers.hpCountUp && currentHealth <= 0)
-			||
-			(BloodSpatterAndStatusMarkers.hpCountUp && currentHealth >= maxHealth)
-		) {
+		if ( (!BloodSpatter.hpCountUp && currentHealth <= 0) || (BloodSpatter.hpCountUp && currentHealth >= maxHealth) ) {
 			token.set({
 				status_dead: true
 			});
 			// Create pool near token if health drops below 1.
 			if(damageTaken > 0) {
-				BloodSpatterAndStatusMarkers.createBlood(token, damageMultiplier, 'pool');
+				BloodSpatter.createBlood(token, damageMultiplier, 'pool');
 			}
 		} else {
 			token.set({
@@ -341,47 +328,43 @@ var BloodSpatterAndStatusMarkers = {
 };
 
 on('ready', function () {
-	on('change:graphic:bar' + BloodSpatterAndStatusMarkers.hpBar + '_value', function (token, prev) {
-		var maxHealth = token.get('bar' + BloodSpatterAndStatusMarkers.hpBar + '_max'),
-			currentHealth = token.get('bar' + BloodSpatterAndStatusMarkers.hpBar + '_value'),
-			previousHealth = prev['bar' + BloodSpatterAndStatusMarkers.hpBar + '_value'],
-			damageTaken;
+	on('change:graphic:bar' + BloodSpatter.hpBar + '_value', function (token, prev) {
+		var maxHealth = token.get('bar' + BloodSpatter.hpBar + '_max');
+		var currentHealth = token.get('bar' + BloodSpatter.hpBar + '_value');
+		var previousHealth = prev['bar' + BloodSpatter.hpBar + '_value'];
+		var damageTaken;
 
-		if(!BloodSpatterAndStatusMarkers.hpCountUp) {
-			damageTaken = previousHealth - currentHealth
+		if(!BloodSpatter.hpCountUp) {
+			damageTaken = previousHealth - currentHealth;
 		} else {
 			damageTaken = currentHealth - previousHealth;
 		}
 
-		BloodSpatterAndStatusMarkers.tokenHPChanged(token, maxHealth, currentHealth, damageTaken);
+		BloodSpatter.tokenHPChanged(token, maxHealth, currentHealth, damageTaken);
 	});
 
 	//Make blood trails, chance goes up depending on how injured a token is
 	on('change:graphic:lastmove', function (token) {
-		var maxHealth = token.get('bar' + BloodSpatterAndStatusMarkers.hpBar + '_max');
+		var maxHealth = token.get('bar' + BloodSpatter.hpBar + '_max');
 
-		if (maxHealth === '' || BloodSpatterAndStatusMarkers.timeout !== 0) {
+		if (maxHealth === '' || BloodSpatter.timeout !== 0) {
 			return;
 		}
 
-		var currentHealth = token.get('bar' + BloodSpatterAndStatusMarkers.hpBar + '_value'),
-			healthLost = maxHealth - currentHealth,
-			percentOfHpLost = healthLost / maxHealth,
-			damageMultiplier = .33 + (percentOfHpLost / 2);
+		var currentHealth = token.get('bar' + BloodSpatter.hpBar + '_value');
+		var healthLost = maxHealth - currentHealth;
+		var percentOfHpLost = healthLost / maxHealth;
+		var damageMultiplier = (BloodSpatter.baseSize/2) + (percentOfHpLost / 2);
 
-		if (
-			(!BloodSpatterAndStatusMarkers.hpCountUp && currentHealth <= maxHealth / 2 && currentHealth < randomInteger(maxHealth))
-			||
-			(BloodSpatterAndStatusMarkers.hpCountUp && currentHealth >= maxHealth / 2 && currentHealth > randomInteger(maxHealth))
-		) {
-			BloodSpatterAndStatusMarkers.createBlood(token, damageMultiplier, 'spatter');
-			BloodSpatterAndStatusMarkers.increaseTimeout();
+		if ( (!BloodSpatter.hpCountUp && currentHealth <= maxHealth / 2 && currentHealth < randomInteger(maxHealth)) || (BloodSpatter.hpCountUp && currentHealth >= maxHealth / 2 && currentHealth > randomInteger(maxHealth)) ) {
+			BloodSpatter.createBlood(token, damageMultiplier, 'spatter');
+			BloodSpatter.increaseTimeout();
 		}
 	});
 
 	on('chat:message', function (msg) {
 		if (msg.type === 'api' && msg.content.indexOf('!clearblood') !== -1) {
-			if (BloodSpatterAndStatusMarkers.onlyAllowGMtoRunCommands && !playerIsGM(msg.playerid)) {
+			if (BloodSpatter.onlyAllowGMtoRunCommands && !playerIsGM(msg.playerid)) {
 				sendChat(msg.who, '/w ' + msg.who + ' You are not authorized to use that command!');
 				return;
 			} else {
