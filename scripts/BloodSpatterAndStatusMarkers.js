@@ -267,7 +267,7 @@ var BloodSpatterAndStatusMarkers = {
 	},
 	timeout: 0,
 	increaseTimeout: function () {
-		BloodSpatterAndStatusMarkers.timeout += 2;
+		BloodSpatterAndStatusMarkers.timeout += 8;
 		BloodSpatterAndStatusMarkers.watchTimeout();
 	},
 	interval: null,
@@ -297,7 +297,7 @@ var BloodSpatterAndStatusMarkers = {
 			return;
 		}
 		var percentOfHpLost = damageTaken / maxHealth,
-			damageMultiplier = 1 + Math.min(percentOfHpLost / 2, 0.5);
+			damageMultiplier = .75 + (percentOfHpLost / 2, 0.5);
 
 		if (
 			(!BloodSpatterAndStatusMarkers.hpCountUp && currentHealth <= maxHealth / 2)
@@ -367,7 +367,7 @@ on('ready', function () {
 		var currentHealth = token.get('bar' + BloodSpatterAndStatusMarkers.hpBar + '_value'),
 			healthLost = maxHealth - currentHealth,
 			percentOfHpLost = healthLost / maxHealth,
-			damageMultiplier = .5 + Math.min(percentOfHpLost / 2, 0.5);
+			damageMultiplier = .33 + (percentOfHpLost / 2);
 
 		if (
 			(!BloodSpatterAndStatusMarkers.hpCountUp && currentHealth <= maxHealth / 2 && currentHealth < randomInteger(maxHealth))
