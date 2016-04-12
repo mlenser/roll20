@@ -2802,6 +2802,12 @@
           "name": "Dagger",
           "text": "Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 5 (1d4 + 3) piercing damage."
         }
+      ],
+      "reactions": [
+        {
+          "name": "Parry",
+          "text": "The captain adds 2 to its AC against one melee attack that would hit it. To do so, the captain must see the attacker and be wielding a melee weapon."
+        }
       ]
     },
     {
@@ -4298,6 +4304,12 @@
           "text": "Up to four chains the devil can see within 60 feet of it magically sprout razor-edged barbs and animate under the devil's control, provided that the chains aren't being worn or carried.\nEach animated chain is an object with AC 20, 20 hit points, resistance to piercing damage, and immunity to psychic and thunder damage. When the devil uses Multiattack on its turn, it can use each animated chain to make one additional chain attack. An animated chain can grapple one creature of its own but can't make attacks while grappling. An animated chain reverts to its inanimate state if reduced to 0 hit points or if the devil is incapacitated or dies.",
           "recharge": "Recharges after a Short or Long Rest"
         }
+      ],
+      "reactions": [
+        {
+          "name": "Unnerving Mask",
+          "text": "When a creature the devil can see starts its turn within 30 feet of the devil, the devil can create the illusion that it looks like one of the creature's departed loved ones or bitter enemies. If the creature can see the devil, it must succeed on a DC 14 Wisdom saving throw or be frightened until the end of its turn."
+        }
       ]
     },
     {
@@ -5133,6 +5145,12 @@
           "name": "Hellfire Orb",
           "text": "The death knight hurls a magical ball of fire that explodes at a point it can see within 120 feet of it. Each creature in a 20-foot-radius sphere centered on that point must make a DC 18 Dexterity saving throw. The sphere spreads around corners. A creature takes 35 (10d6) fire damage and 35 (10d6) necrotic damage on a failed save, or half as much damage on a successful one.",
           "recharge": "1/day"
+        }
+      ],
+      "reactions": [
+        {
+          "name": "Parry",
+          "text": "The death knight adds 6 to its AC against one melee attack that would hit it. To do so, the death knight must see the attacker and be wielding a melee weapon."
         }
       ],
       "spells": "command, compelled duel, searing smite, hold person, magic weapon, dispel magic, elemental weapon, banishment, staggering smite, destructive wave"
@@ -5978,6 +5996,12 @@
           "text": "Ranged Weapon Attack: +7 to hit, range 30/120 ft., one target. Hit: 7 (1d6 + 4) piercing damage, and the target must succeed on a DC 13 Constitution saving throw or be poisoned for 1 hour. If the saving throw fails by 5 or more, the target is also unconscious while poisoned in this way. The target wakes up if it takes damage or if another creature takes an action to shake it awake."
         }
       ],
+      "reactions": [
+        {
+          "name": "Parry",
+          "text": "The drow adds 3 to its AC against one melee attack that would hit it. To do so, the drow must see the attacker and be wielding a melee weapon."
+        }
+      ],
       "spells": "dancing lights, darkness, faerie fire, levitate"
     },
     {
@@ -6602,6 +6626,12 @@
         {
           "name": "Variant: Rope of Entanglement",
           "text": "Some erinyes carry a rope of entanglement (detailed in the Dungeon Master's Guide). When such an erinyes uses its Multiattack, the erinyes can use the rope in place of two of the attacks."
+        }
+      ],
+      "reactions": [
+        {
+          "name": "Parry",
+          "text": "The erinyes adds 4 to its AC against one melee attack that would hit it. To do so, the erinyes must see the attacker and be wielding a melee weapon."
         }
       ]
     },
@@ -9028,6 +9058,12 @@
           "name": "Shield Bash",
           "text": "Melee Weapon Attack: +7 to hit, reach 5 ft., one creature. Hit: 9 (2d4 + 4) bludgeoning damage. If the target is a Medium or smaller creature, it must succeed on a DC 15 Strength saving throw or be knocked prone."
         }
+      ],
+      "reactions": [
+        {
+          "name": "Parry",
+          "text": "The gladiator adds 3 to its AC against one melee attack that would hit it. To do so, the gladiator must see the attacker and be wielding a melee weapon."
+        }
       ]
     },
     {
@@ -9257,6 +9293,12 @@
         {
           "name": "Javelin",
           "text": "Melee or Ranged Weapon Attack: +2 to hit, reach 5 ft. or range 30/120 ft., one target. Hit: 3 (1d6) piercing damage."
+        }
+      ],
+      "reactions": [
+        {
+          "name": "Redirect Attack",
+          "text": "When a creature the goblin can see targets it with an attack, the goblin chooses another goblin within 5 feet of it. The two goblins swap places, and the chosen goblin becomes the target instead."
         }
       ]
     },
@@ -10124,6 +10166,12 @@
           "text": "The veteran exhales fire in a 15-foot cone. Each creature in that area must make a DC 15 Dexterity saving throw, taking 24 (7d6) fire damage on a failed save, or half as much damage on a successful one.",
           "recharge": "Recharge 5-6"
         }
+      ],
+      "reactions": [
+        {
+          "name": "Parry",
+          "text": "The veteran adds 3 to its AC against one melee attack that would hit it. To do so, the veteran must see the attacker and be wielding a melee weapon."
+        }
       ]
     },
     {
@@ -10515,6 +10563,12 @@
           "name": "Leadership",
           "text": "For 1 minute, the hobgoblin can utter a special command or warning whenever a nonhostile creature that it can see within 30 feet of it makes an attack roll or a saving throw. The creature can add a d4 to its roll provided it can hear and understand the hobgoblin. A creature can benefit from only one Leadership die at a time. This effect ends if the hobgoblin is incapacitated.",
           "recharge": "Recharges after a Short or Long Rest"
+        }
+      ],
+      "reactions": [
+        {
+          "name": "Parry",
+          "text": "The hobgoblin adds 3 to its AC against one melee attack that would hit it. To do so, the hobgoblin must see the attacker and be wielding a melee weapon."
         }
       ]
     },
@@ -11307,6 +11361,12 @@
           "text": "For 1 minute, the knight can utter a special command or warning whenever a nonhostile creature that it can see within 30 ft. of it makes an attack roll or a saving throw. The creature can add a d4 to its roll provided it can hear and understand the knight. A creature can benefit from only one Leadership die at a time. This effect ends if the knight is incapacitated.",
           "recharge": "Recharges after a Short or Long Rest"
         }
+      ],
+      "reactions": [
+        {
+          "name": "Parry",
+          "text": "The knight adds 2 to its AC against one melee attack that would hit it. To do so, the knight must see the attacker and be wielding a melee weapon."
+        }
       ]
     },
     {
@@ -11481,6 +11541,12 @@
         {
           "name": "Net",
           "text": "Ranged Weapon Attack: +3 to hit, range 5/15 ft., one Large or smaller creature. Hit: The target is restrained. A creature can use its action to make a DC 10 Strength check to free itself or another creature in a net, ending the effect on a success. Dealing 5 slashing damage to the net (AC 10) frees the target without harming it and destroys the net."
+        }
+      ],
+      "reactions": [
+        {
+          "name": "Sticky Shield",
+          "text": "When a creature misses the kuo-toa with a melee weapon attack, the kuo-toa uses its sticky shield to catch the weapon. The attacker must succeed on a DC 11 Strength saving throw, or the weapon becomes stuck to the kuo-toa's shield. If the weapon's wielder can't or won't let go of the weapon, the wielder is grappled while the weapon is stuck. While stuck, the weapon can't be used. A creature can pull the weapon free by taking an action to make a DC 11 Strength check and succeeding."
         }
       ]
     },
@@ -12347,6 +12413,12 @@
           "name": "Variant: Summon Demon",
           "text": "The demon chooses what to summon and attempts a magical summoning.\nA marilith has a 50 percent chance of summoning 1d6 vrocks, 1d4 hezrous, 1d3 glabrezus, 1d2 nalfeshnees, or one marilith.\nA summoned demon appears in an unoccupied space within 60 feet of its summoner, acts as an ally of its summoner, and can't summon other demons. It remains for 1 minute, until it or its summoner dies, or until its summoner dismisses it as an action.",
           "recharge": "1/Day"
+        }
+      ],
+      "reactions": [
+        {
+          "name": "Parry",
+          "text": "The marilith adds 5 to its AC against one melee attack that would hit it. To do so, the marilith must see the attacker and be wielding a melee weapon."
         }
       ]
     },
@@ -13520,6 +13592,12 @@
         {
           "name": "Pseudopod",
           "text": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 9 (2d6 + 2) bludgeoning damage plus 3 (1d6) acid damage."
+        }
+      ],
+      "reactions": [
+        {
+          "name": "Split",
+          "text": "When a jelly that is Medium or larger is subjected to lightning or slashing damage, it splits into two new jellies if it has at least 10 hit points. Each new jelly has hit points equal to half the original jelly's, rounded down . New jellies are one size smaller than the original jelly."
         }
       ]
     },
@@ -16003,6 +16081,12 @@
           "name": "Fist",
           "text": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) bludgeoning damage."
         }
+      ],
+      "reactions": [
+        {
+          "name": "Shield",
+          "text": "When a creature makes an attack against the wearer of the guardian's amulet, the guardian grants a +2 bonus to the wearer's AC if the guardian is within 5 feet of the wearer."
+        }
       ]
     },
     {
@@ -16315,6 +16399,12 @@
         {
           "name": "Create Food and Water",
           "text": "The spectator magically creates enough food and water to sustain itself for 24 hours."
+        }
+      ],
+      "reactions": [
+        {
+          "name": "Spell Reflection",
+          "text": "If the spectator makes a successful saving throw against a spell, or a spell attack misses it, the spectator can choose another creature (including the spellcaster) it can see within 30 feet of it. The spell targets the chosen creature instead of the spectator. If the spell forced a saving throw, the chosen creature makes its own save. Ifthe spell was an attack, the attack roll is rerolled against the chosen creature."
         }
       ]
     },
@@ -16656,6 +16746,12 @@
         {
           "name": "Rock",
           "text": "Ranged Weapon Attack: +9 to hit, range 60/240 ft., one target. Hit: 28 (4d10 + 6) bludgeoning damage. If the target is a creature, it must succeed on a DC 17 Strength saving throw or be knocked prone."
+        }
+      ],
+      "reactions": [
+        {
+          "name": "Rock Catching",
+          "text": "If a rock or similar object is hurled at the giant, the giant can, with a successful DC 10 Dexterity saving throw, catch the missile and take no bludgeoning damage from it."
         }
       ]
     },
