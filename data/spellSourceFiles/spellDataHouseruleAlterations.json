@@ -701,6 +701,7 @@
       "name": "Melf's Acid Arrow",
       "description": "A shimmering green arrow streaks toward a target within range and bursts in a spray of acid. Make a ranged spell attack against the target. On a hit, the target takes 6d4 acid damage immediately and 6d4 acid damage at the end of its next turn. On a miss, the arrow splashes the target with acid for half as much of the initial damage and no damage at the end of its next turn.",
       "attack": {
+        "type": "ranged",
         "damage": "6d4",
         "damageType": "acid",
         "secondaryDamage": "6d4",
@@ -768,6 +769,7 @@
       "name": "Mordenkainen's Sword",
       "description": "You create a sword-shaped plane of force that hovers within range. It lasts for the duration.\nWhen the sword appears, you make a melee spell attack against a target of your choice within 5 feet of the sword. On a hit, the target takes 4d10 force damage. Until the spell ends, you can use a bonus action on each of your turns to move the sword up to 20 feet to a spot you can see and repeat this attack against the same target or a different one.",
       "attack": {
+        "type": "melee",
         "damage": "4d10",
         "damageType": "force"
       },
@@ -830,19 +832,14 @@
     },
     {
       "name": "Ray of Sickness",
-      "description": "A ray of sickening greenish energy lashes out toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 3d6 poison damage and must make a Constitution saving throw or be poisoned. At the start of each of its turns until the spell ends, the target must make a Constitution saving throw. On a successful save, the spell ends.",
-      "duration": "Up to 1 minute",
+      "description": "A ray of sickening greenish energy lashes out toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 3d8 poison damage and must make a Constitution saving throw. On a failed save, it is also poisoned until the end of your next turn.",
       "attack": {
-        "damage": "3d6",
+        "type": "ranged",
+        "damage": "3d8",
         "damageType": "poison",
         "higherLevelDice": "1",
-        "higherLevelDie": "d6"
-      },
-      "save": {
-        "ability": "Constitution",
-        "saveFailure": "be poisoned. At the start of each of its turns until the spell ends, the target must make a Constitution saving throw. On a successful save, the spell ends.."
-      },
-      "effects": "On a hit, the target must make a Constitution saving throw as outlined above."
+        "higherLevelDie": "d8"
+      }
     },
     {
       "name": "Regenerate",
@@ -890,6 +887,7 @@
       "name": "Vampiric Touch",
       "description": "The touch of your shadow-wreathed hand can siphon life force from others to heal your wounds. Make a melee spell attack against a creature within your reach. On a hit, the target takes 5d6 necrotic damage, and you regain hit points equal to half the amount of necrotic damage dealt. Until the spell ends, you can make the attack again on each of your turns as an action.",
       "attack": {
+        "type": "melee",
         "damage": "5d6",
         "damageType": "necrotic",
         "higherLevelDice": "1",
