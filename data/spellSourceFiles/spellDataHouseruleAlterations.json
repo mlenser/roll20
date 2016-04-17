@@ -805,6 +805,10 @@
       "school": "Necromancy"
     },
     {
+      "name": "Prismatic Spray",
+      "level": 6
+    },
+    {
       "name": "Produce Flame",
       "description": "A flickering flame appears in your hand. The flame remains there for the duration and harms neither you nor your equipment. The flame sheds bright light in a 10-foot radius and dim light for an additional 10 feet. The spell ends if you dismiss it as an action or if you cast it again.\nYWhen you cast this spell, or as an action on a later turn, you can change the flame into a flaming blade and make a melee spell attack or you can hurl the flame at a creature within 30 feet of you and make a ranged spell attack. On a hit of either, the target takes 1d8 fire damage. Making a ranged spell attack ends the spell.",
       "effects": "The flame remains there for the duration and harms neither you nor your equipment. The flame sheds bright light in a 10 ft radius and dim light for an additional 10 ft. The spell ends if you dismiss it as an action or if you cast it again.\nWhen you cast this spell, or as an action on a later turn, you can change the flame into a flaming blade and make a melee spell attack or you can hurl the flame at a creature within 30 feet of you and make a ranged spell attack. On a hit of either, the target takes 1d8 fire damage. Making a ranged spell attack ends the spell."
