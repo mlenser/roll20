@@ -34,6 +34,16 @@
       ]
     },
     {
+      "name": "Acid Splash",
+      "description": "You hurl a bubble of acid. Choose one creature within range, or choose two creatures within range that are within 5 feet of each other. A target must succeed on a Dexterity saving throw or take 1d8 acid damage.",
+      "higherLevel": "This spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).",
+      "save": {
+        "ability": "Dexterity",
+        "damage": "((@{level} + 1) / 6 + 0.5)d8",
+        "damageType": "acid"
+      }
+    },
+    {
       "name": "Acidic Spray",
       "description": "An acidic spray erupts from your hands. Each creature in a 60-foot cone must make a Constitution saving throw. A creature takes 8d8 acid damage on a failed save, or half as much damage on a successful one.\nA creature killed by this spell is affected by rigor mortis.",
       "higherLevel": "When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d8 for each slot level above 5th.",
@@ -145,6 +155,18 @@
       }
     },
     {
+      "name": "Chill Touch",
+      "description": "You create a ghostly, skeletal hand in the space of a creature within range. Make a ranged spell attack against the creature to assail it with the chill of the grave. On a hit, the target takes 1d10 necrotic damage, and it can't regain hit points until the start of your next turn. Until then, the hand clings to the target.\nIf you hit an undead target, it also has disadvantage on attack rolls against you until the end of your next turn.",
+      "higherLevel": "This spell's damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10).",
+      "range": "90 ft",
+      "attack": {
+        "type": "ranged",
+        "damage": "((@{level} + 1) / 6 + 0.5)d10",
+        "damageType": "necrotic"
+      },
+      "effects": "it can't regain hit points until the start of your next turn. Until then, the hand clings to the target."
+    },
+    {
       "name": "Cloud of Acid",
       "description": "You fill the air with an acidic cloud in a 5-foot-radius, centered on a point you choose within range. A creature takes 4d4 acid damage when it enters the spell's area for the first time on a turn or starts its turn there.",
       "higherLevel": "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 2d4 for each slot level above 2nd.",
@@ -204,6 +226,16 @@
         "ability": "Dexterity",
         "damage": "3d6",
         "damageType": "piercing"
+      }
+    },
+    {
+      "name": "Create Bonfire",
+      "description": "You create a bonfire on ground that you can see within range. Until the spells ends, the bonfire fills a 5-foot cube. Any creature in the bonfire's space when you cast the spell must make a Dexterity saving throw. A creature takes 1d8 fire damage on a failed save, or half as much damage on a successful one. A creature must also make the saving throw when it enters the bonfire's space for the first time on a turn or ends its turn there.",
+      "save": {
+        "ability": "Dexterity",
+        "damage": "((@{level} + 1) / 6 + 0.5)d8",
+        "damageType": "fire",
+        "saveSuccess": "half damage"
       }
     },
     {
@@ -362,6 +394,17 @@
       "description": "You touch a quiver containing arrows or bolts. When a target is hit by a ranged weapon attack using a piece of ammunition drawn from the quiver, the target takes an extra 1d6 fire damage. The spell's magic ends on the piece of ammunition when it hits or misses. When the quiver runs out of ammunition is takes an action to fill it from another quiver.",
       "higherLevel": "When you cast this spell using a spell slot of 4th or 5th level, you can maintain your concentration on the spell for up to 8 hours. When you use a spell slot of 6th level or higher, you can maintain your concentration on the spell for up to 24 hours.",
       "effects": "When a target is hit by a ranged weapon attack using a piece of ammunition drawn from the quiver, the target takes an extra 1d6 fire damage. The spell's magic ends on the piece of ammunition when it hits or misses. When the quiver runs out of ammunition it takes an action to fill it from another quiver."
+    },
+    {
+      "name": "Frostbite",
+      "description": "You cause numbing frost to form on one creature that you can see within range. The target must make a Constitution saving throw. The target takes 1d6 cold damage and it has disadvantage on the next weapon attack roll it makes before the end of its next turn on a failed save, or half as much damage on a successful one.",
+      "save": {
+        "ability": "Constitution",
+        "damage": "((@{level} + 1) / 6 + 0.5)d6",
+        "damageType": "cold",
+        "saveSuccess": "half damage",
+        "saveFailure": "it has disadvantage on the next weapon attack roll it makes before the end of its next turn"
+      }
     },
     {
       "name": "Glyph of Warding",
@@ -628,6 +671,18 @@
       }
     },
     {
+      "name": "Lightning Lure",
+      "description": "You create a lash of lightning energy that strikes at one creature of your choice that you can see within range. The target must succeed on a Strength saving throw or be pulled up to 10 feet in a straight line toward you and then take 1d10 lightning damage if it is within 5 feet of you.",
+      "higherLevel": "This spell's damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10).",
+      "save": {
+        "ability": "Strength",
+        "damage": "((@{level} + 1) / 6 + 0.5)d10",
+        "damageType": "lightning",
+        "condition": "if it is within 5 feet of you after being pulled",
+        "saveFailure": "pulled up to 10 feet in a straight line toward you"
+      }
+    },
+    {
       "name": "Locate Creature",
       "ritual": true
     },
@@ -797,6 +852,17 @@
       "ritual": false
     },
     {
+      "name": "Poison Spray",
+      "description": "You extend your hand toward a creature you can see within range and project a puff of noxious gas from your palm. The target must make a Constitution saving throw. The target takes 1d10 poison damage on a failed save, or half as much damage on a successful one.",
+      "higherLevel": "This spell's damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10).",
+      "save": {
+        "ability": "Constitution",
+        "damage": "((@{level} + 1) / 6 + 0.5)d10",
+        "damageType": "poison",
+        "saveSuccess": "half damage"
+      }
+    },
+    {
       "name": "Power Word Heal",
       "school": "Necromancy"
     },
@@ -810,8 +876,13 @@
     },
     {
       "name": "Produce Flame",
-      "description": "A flickering flame appears in your hand. The flame remains there for the duration and harms neither you nor your equipment. The flame sheds bright light in a 10-foot radius and dim light for an additional 10 feet. The spell ends if you dismiss it as an action or if you cast it again.\nYWhen you cast this spell, or as an action on a later turn, you can change the flame into a flaming blade and make a melee spell attack or you can hurl the flame at a creature within 30 feet of you and make a ranged spell attack. On a hit of either, the target takes 1d8 fire damage. Making a ranged spell attack ends the spell.",
-      "effects": "The flame remains there for the duration and harms neither you nor your equipment. The flame sheds bright light in a 10 ft radius and dim light for an additional 10 ft. The spell ends if you dismiss it as an action or if you cast it again.\nWhen you cast this spell, or as an action on a later turn, you can change the flame into a flaming blade and make a melee spell attack or you can hurl the flame at a creature within 30 feet of you and make a ranged spell attack. On a hit of either, the target takes 1d8 fire damage. Making a ranged spell attack ends the spell."
+      "description": "A flickering flame appears in your hand. The flame remains there for the duration and harms neither you nor your equipment. The flame sheds bright light in a 10-foot radius and dim light for an additional 10 feet. The spell ends if you dismiss it as an action or if you cast it again.\nYou can also attack with the flame, although doing so ends the spell. When you cast this spell, or as an action on a later turn, you can hurl the flame at a creature within 30 feet of you. Make a ranged spell attack. On a hit, the target takes 1d10 fire damage.",
+      "higherLevel": "This spell's damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10).",
+      "attack": {
+        "type": "ranged",
+        "damage": "((@{level} + 1) / 6 + 0.5)d10",
+        "damageType": "fire"
+      }
     },
     {
       "name": "Protection from Energy",
@@ -836,6 +907,10 @@
       ]
     },
     {
+      "name": "Ray of Frost",
+      "range": "90 ft"
+    },
+    {
       "name": "Ray of Sickness",
       "description": "A ray of sickening greenish energy lashes out toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 3d8 poison damage and must make a Constitution saving throw. On a failed save, it is also poisoned until the end of your next turn.",
       "attack": {
@@ -849,6 +924,16 @@
     {
       "name": "Regenerate",
       "school": "Necromancy"
+    },
+    {
+      "name": "Sacred Flame",
+      "description": "Flame-like radiance descends on a creature that you can see within range. The target must make a Dexterity saving throw. The target takes 1d8 radiant damage on a failed save, or half as much damage on a successful one. The target gains no benefit from cover for this saving throw.",
+      "save": {
+        "ability": "Dexterity",
+        "damage": "((@{level} + 1) / 6 + 0.5)d8",
+        "damageType": "radiant",
+        "saveSuccess": "half damage"
+      }
     },
     {
       "name": "Sending",
@@ -877,6 +962,26 @@
       "level": 1
     },
     {
+      "name": "Thorn Whip",
+      "description": "You create a long, vine-like whip covered in thorns that lashes out at your command toward a creature in range. Make a melee spell attack against the target. If the attack hits, the creature takes 1d8 piercing damage, and if the creature is Large or smaller, you pull the creature up to 10 feet closer to you.",
+      "higherLevel": "This spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).",
+      "attack": {
+        "type": "melee",
+        "damage": "((@{level} + 1) / 6 + 0.5)d8",
+        "damageType": "piercing"
+      }
+    },
+    {
+      "name": "Thunderclap",
+      "description": "You create a burst of thunderous sound, which can be heard 100 feet away. Each creature other than you within 5 feet of you must make a Constitution saving throw. On a failed save, the creature takes 1d10 thunder damage.",
+      "higherLevel": "The spell's damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10).",
+      "save": {
+        "ability": "Constitution",
+        "damage": "((@{level} + 1) / 6 + 0.5)d10",
+        "damageType": "thunder"
+      }
+    },
+    {
       "name": "Transmute Rock",
       "description": "You choose an area of stone or mud that you can see that fits within a 40-foot cube and that is within range, and choose one of the following effects.\nTransmute Rock to Mud. Nonmagical rock of any sort in the area becomes an equal volume of thick and flowing mud that remains for the spell's duration.\nIf you cast the spell on an area of ground, it becomes muddy enough that creatures can sink into it. Each foot that a creature moves through the mud costs 4 feet of movement, and any creature on the ground when you cast the spell must make a Strength saving throw. A creature must also make this save the first time it enters the area on a turn or ends its turn there. On a failed save, a creature sinks into the mud and is restrained, though it can use an action to end the restrained condition on itself by pulling itself free of the mud.\nIf you cast the spell on a ceiling, the mud falls. Any creature under the mud when it falls must make a Dexterity saving throw. A creature takes 4d8 bludgeoning damage on a failed save, or half as much damage on a successful one.\nTransmute Mud to Rock. Nonmagical mud or quicksand in the area no more than 10 feet deep transforms into soft stone for the spell's duration. Any creature in the mud when it transforms must make a Strength saving throw. On a failed save, a creature becomes restrained by the rock. The restrained creature can use an action to try to break free by succeeding on a Strength check (DC 20) or by dealing 25 damage to the rock around it. On a successful save, a creature is shunted safely to the surface to an unoccupied space.",
       "effects": "choose one of the following effects.\nTransmute Rock to Mud. Nonmagical rock of any sort in the area becomes an equal volume of thick and flowing mud that remains for the spell's duration.\nIf you cast the spell on an area of ground, it becomes muddy enough that creatures can sink into it. Each foot that a creature moves through the mud costs 4 feet of movement, and any creature on the ground when you cast the spell must make a Strength saving throw. A creature must also make this save the first time it enters the area on a turn or ends its turn there. On a failed save, a creature sinks into the mud and is restrained, though it can use an action to end the restrained condition on itself by pulling itself free of the mud.\nIf you cast the spell on a ceiling, the mud falls. Any creature under the mud when it falls must make a Dexterity saving throw. A creature takes 4d8 bludgeoning damage on a failed save, or half as much damage on a successful one.\nTransmute Mud to Rock. Nonmagical mud or quicksand in the area no more than 10 feet deep transforms into soft stone for the spell's duration. Any creature in the mud when it transforms must make a Strength saving throw. On a failed save, a creature becomes restrained by the rock. The restrained creature can use an action to try to break free by succeeding on a Strength check (DC 20) or by dealing 25 damage to the rock around it. On a successful save, a creature is shunted safely to the surface to an unoccupied space."
@@ -897,6 +1002,18 @@
         "damageType": "necrotic",
         "higherLevelDice": "1",
         "higherLevelDie": "d6"
+      }
+    },
+    {
+      "name": "Vicious Mockery",
+      "description": "You unleash a string of insults laced with subtle enchantments at a creature you can see within range. If the target can hear you (though it need not understand you), it must succeed on a Wisdom saving throw or take 1d10 psychic damage and have disadvantage on the next attack roll it makes before the end of its next turn.",
+      "higherLevel": "This spell's damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10).",
+      "save": {
+        "condition": "if the target can hear you (though it need not understand you)",
+        "ability": "Wisdom",
+        "damage": "((@{level} + 1) / 6 + 0.5)d10",
+        "damageType": "psychic",
+        "saveFailure": "disadvantage on the next attack roll it makes before the end of its next turn"
       }
     },
     {
