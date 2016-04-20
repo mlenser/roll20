@@ -1,5 +1,5 @@
 (function (shaped) {
-	/****Import Options***/
+    /****Import Options***/
 	shaped.settings = {
 		createAbilityAsToken: true,
 		rollMonsterHpOnDrop: true, // will roll HP when character are dropped on map
@@ -50,7 +50,7 @@
 	};
 
 	shaped.statblock = {
-		version: 'Jan 26th, 2016',
+		version: 'apr 21st, 2016',
 		addTokenCache: [],
 		RegisterHandlers: function () {
 			on('chat:message', HandleInput);
@@ -1923,7 +1923,7 @@
 				}
 			});
 			if (creaturesToChange.length > 0) {
-				messageToChat('changed ' + attribute + ' to ' + attributesToChange[attribute].replace('@', '&#64;') + ' for ' + creaturesToChange.length + ' creatures');
+				messageToChat('changed ' + attribute + ' to ' + attributesToChange[attribute].replace('@', '@') + ' for ' + creaturesToChange.length + ' creatures');
 			} else {
 				messageToChat('no creatures match those parameters');
 			}
@@ -2237,7 +2237,12 @@
 		if (monster.AC) parseArmorClass(monster.AC);
 		if (monster.HP) parseHp(monster.HP);
 		if (monster.speed) parseSpeed(monster.speed);
-		if (monster.abilities) parseCondensedAbilities(monster.abilities);
+		if (monster.strength) setAttribute('strength', monster.strength);
+        if (monster.strength) setAttribute('dexterity', monster.dexterity);
+        if (monster.strength) setAttribute('constitution', monster.constitution);
+        if (monster.strength) setAttribute('intelligence', monster.intelligence);
+        if (monster.strength) setAttribute('wisdom', monster.wisdom);
+        if (monster.strength) setAttribute('charisma', monster.charisma);
 		if (monster.savingThrows) parseSavingThrow(monster.savingThrows);
 		if (monster.skills) parseSkills(monster.skills);
 		if (monster.senses) parseSenses(monster.senses);
@@ -2257,19 +2262,20 @@
 		}
 
 		if (monster.traits) {
-			setAttribute('toggle_traits', 'on');
-			setAttribute('npc_traits', monster.traits.join('\n'));
+			var monstertraits = '';
+        for (var i = 0; i < monster.traits.length; i++) {
+                monstertraits = monstertraits + monster.traits[i].name + ' ' + monster.traits[i].text + '\n' ;
+			}
+        log(monstertraits)
+        setAttribute('npc_traits', monstertraits);
 		}
 
 		if (monster.actions) {
 			monster.parsedActions = {};
 			setAttribute('toggle_actions', 'on');
 			for (var i = 0; i < monster.actions.length; i++) {
-				var split = monster.actions[i].split('.');
-				var actionName = split[0];
-				split.splice(0, 1);
-				split = split.join();
-				monster.parsedActions[actionName] = split.trim();
+				var actionName = monster.actions[i].name;
+				monster.parsedActions[actionName] = monster.actions[i].text;
 			}
 			if (monster.parsedActions.Multiattack) {
 				multiAttackText = monster.parsedActions.Multiattack;
@@ -2318,11 +2324,9 @@
 			monster.parsedLegendaryActions = {};
 			setAttribute('toggle_legendary_actions', 'on');
 			for (var i = 0; i < monster.legendaryActions.length; i++) {
-				var split = monster.legendaryActions[i].split('.');
-				var actionName = split[0];
-				split.splice(0, 1);
-				split = split.join();
-				monster.parsedLegendaryActions[actionName] = split.trim();
+				var actionName = monster.legendaryActions[i].name;
+                var legendaryActionTextandCost = monster.legendaryActions[i].text + ' (Costs ' + monster.legendaryActions[i].cost + ' Actions )'
+				monster.parsedLegendaryActions[actionName] = legendaryActionTextandCost;
 			}
 
 			processActions(monster.parsedLegendaryActions, 'legendary_');
@@ -2331,11 +2335,8 @@
 			monster.parsedLairActions = {};
 			setAttribute('toggle_lair_actions', 'on');
 			for (var i = 0; i < monster.parsedLairActions.length; i++) {
-				var split = monster.parsedLairActions[i].split('.');
-				var actionName = split[0];
-				split.splice(0, 1);
-				split = split.join();
-				monster.parsedLairActions[actionName] = split.trim();
+				var actionName = monster.parsedLairActions[i].name;
+				monster.parsedLairActions[actionName] = monster.parsedLairActions[i].text;
 			}
 
 			processActions(monster.parsedLairActions, 'lair_');
@@ -2370,30 +2371,8 @@
 
 			setTokenVision(token);
 		}
-		if (monster.traits) {
-			if (monster.traits) {
-				var spells = '';
-				var spellRegex = /(?:(?:\d+\/day(?:\s* each)?)|(?:At will)|(?:(?:Cantrips|level)(?:\s*\(.*\))?)):\s* (.*)/gi;
-				for (var i = 0; i < monster.traits.length; i++) {
-					var match;
-					while (match = spellRegex.exec(monster.traits[i])) {
-						if (match) {
-							if (spells !== '') {
-								spells += ', ';
-							}
-							spells += match[1].replace(/\s*\(self only\)/gi, '')
-								.replace(/\s*\(self\)/gi, '')
-								.replace(/\s*\(\d+(?:st|nd|rd|th)\s*level\)/gi, '');
-						}
-					}
-				}
-
-				if (spells !== '') {
-					shaped.spellImport(token, [spells]);
-				}
-			}
-		} else if (monster.spells) {
-			shaped.spellImport(token, [monster.spells]);
+		if (monster.spells) {
+    		shaped.spellImport(token, [monster.spells]);
 		}
 	};
 
