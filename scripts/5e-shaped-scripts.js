@@ -1,7 +1,7 @@
 (function (shaped) {
-	/****Import Options***/
-	shaped.settings = {
-		createAbilityAsToken: true,
+    /****Import Options***/
+    shaped.settings = {
+    	createAbilityAsToken: true,
 		rollMonsterHpOnDrop: true, // will roll HP when character are dropped on map
 
 		showName: true, //show the name on the map (not to players)
@@ -9,6 +9,7 @@
 		showCharacterNameOnRollTemplate: false, //show the character's name on their roll templates
 		//useAaronsNumberedScript: true, //add numbers at the end if using his script
 
+		//defaultTab: 'actions', //core is default. uncomment if you want the actions page. Change to 'spellbook' if you want the spellbook page. Change to 'all_npc' if you want to "Show All" for the NPC pages.
 		sheetOutput: '', //change to 'hidden' if you wish the sheet to whisper all commands to the GM
 		whisperDeathSaves: true, //change to false if you wish NPC death saves to be rolled openly
 		initiativeTieBreaker: true, //change to true if you want to add the initiative modifier as a tie breaker for initiatives. (I use it)
@@ -45,12 +46,12 @@
 				max: true,
 				link: false,
 				show: false
-			}
+			},
 		]
 	};
 
 	shaped.statblock = {
-		version: 'Jan 26th, 2016',
+		version: 'Dec 9th, 2015',
 		addTokenCache: [],
 		RegisterHandlers: function () {
 			on('chat:message', HandleInput);
@@ -68,13 +69,11 @@
 		}
 	};
 
-	var status = '';
-	var	errors = [];
-	var	characterId = null;
-	var	characterName = null;
-	var	commandExecuter = null;
-	var attributesToSet = {};
-	var storage = {};
+	var status = '',
+		errors = [],
+		characterId = null,
+		characterName = null,
+		commandExecuter = null;
 
 	function capitalizeFirstLetter(string) {
 		return string.charAt(0).toUpperCase() + string.slice(1);
@@ -83,10 +82,10 @@
 	function HandleInput(msg) {
 		commandExecuter = msg.who;
 		if (shaped.settings.useAmmoAutomatically && msg.rolltemplate === '5eDefault' && msg.content.indexOf('{{ammo_auto=1}}') !== -1) {
-			var character_name;
-			var attribute;
-			var	match;
-			var	regex = /\{\{(.*?)\}\}/gi;
+			var character_name,
+				attribute,
+				match,
+				regex = /\{\{(.*?)\}\}/gi;
 
 			while (match = regex.exec(msg.content)) {
 				if (match[1]) {
@@ -171,11 +170,11 @@
 		};
 
 	shaped.deleteOldSheet = function (token) {
-		var id = token.get('represents');
-		var obj = findObjs({
-			_type: 'character',
-			id: id
-		})[0];
+		var id = token.get('represents'),
+			obj = findObjs({
+				_type: 'character',
+				id: id
+			})[0];
 		if (obj) {
 			obj.remove();
 			log('old sheet removed before importing');
@@ -194,12 +193,12 @@
 	};
 
 	shaped.tokenMacros = function (token, args) {
-		var id = token.get('represents');
+		var id = token.get('represents'),
 			character = findObjs({
 				_type: 'character',
 				id: id
-			})[0];
-		var characterName = getAttrByName(id, 'character_name', 'current');
+			})[0],
+			characterName = getAttrByName(id, 'character_name', 'current');
 
 		if (typeof(character) === 'undefined') {
 			messageToChat('Error: cannot find a character by the name of "' + characterName + '".');
@@ -271,8 +270,8 @@
 			return;
 		}
 
-		var barTokenName = 'bar' + (barOfHP);
-		var represent = token.get('represents');
+		var barTokenName = 'bar' + (barOfHP),
+			represent = token.get('represents');
 
 		if (represent === '') {
 			messageToChat('Token does not represent a character');
@@ -282,13 +281,13 @@
 			var isNPC = getAttrByName(represent, 'is_npc', 'current');
 			if (isNPC === 1 || isNPC === '1') {
 
-				var hdArray = [4, 6, 8, 10, 12, 20];
-				var hdFormula = '';
-				var hdFormulaChat = '';
-				var hdAverage = 0;
-				var totalLevels = 0;
-				var conScore = parseInt(getAttrByName(represent, 'constitution', 'current'), 10);
-				var conMod = Math.floor((conScore - 10) / 2);
+				var hdArray = [4, 6, 8, 10, 12, 20],
+					hdFormula = '',
+					hdFormulaChat = '',
+					hdAverage = 0,
+					totalLevels = 0,
+					conScore = parseInt(getAttrByName(represent, 'constitution', 'current'), 10),
+					conMod = Math.floor((conScore - 10) / 2);
 
 				for (var i = 0; i < hdArray.length; i++) {
 					var numOfHDRow = parseInt(getAttrByName(represent, 'hd_d' + hdArray[i], 'current'), 10);
@@ -369,6 +368,9 @@
 	};
 
 	function setUserDefinedScriptSettings() {
+		if (shaped.settings.defaultTab) {
+			setAttribute('tab', shaped.settings.defaultTab);
+		}
 		if (shaped.settings.sheetOutput === 'hidden') {
 			setAttribute('output_option', '@{output_to_gm}');
 		}
@@ -673,10 +675,10 @@
 			reactions: {}
 		};
 
-		var indexAction = 0;
-		var indexLair = statblock.length;
-		var indexLegendary = statblock.length;
-		var indexReactions = statblock.length;
+		var indexAction = 0,
+			indexLair = statblock.length,
+			indexLegendary = statblock.length,
+			indexReactions = statblock.length;
 
 		// Standard keyword
 		var regex = /#\s*(tiny|small|medium|large|huge|gargantuan|armor class|hit points|speed|str|dex|con|int|wis|cha|saving throws|skills|damage resistances|damage immunities|condition immunities|damage vulnerabilities|senses|languages|challenge|traits|actions|lair actions|legendary actions|reactions)(?=\s|#)/gi;
@@ -719,10 +721,10 @@
 			}
 		}
 
-		var splitStatblock = statblock.split('#');
-		var	lastItem = '';
-		var	actionsPosArray = [];
-		var	i = 1;
+		var splitStatblock = statblock.split('#'),
+			lastItem = '',
+			actionsPosArray = [],
+			i = 1;
 
 		for (var actionsKey in keyword.actions) {
 			if (keyword.actions.hasOwnProperty(actionsKey)) {
@@ -741,8 +743,8 @@
 		}
 		actionsPosArray.sort(sortNumber);
 
-		var lastActionIndex = actionsPosArray[actionsPosArray.length - 1] + 1;
-		var	lastItemIndex;
+		var lastActionIndex = actionsPosArray[actionsPosArray.length - 1] + 1,
+			lastItemIndex;
 
 		while (i < 6) {
 			lastItem = splitStatblock[splitStatblock.length - i];
@@ -782,9 +784,9 @@
 				obj = keyword[section];
 				for (key in obj) {
 					if (obj.hasOwnProperty(key)) {
-						var start = obj[key];
-						var nextPos = indexArray.indexOf(start) + 1;
-						var end = indexArray[nextPos] || statblock.length;
+						var start = obj[key],
+							nextPos = indexArray.indexOf(start) + 1,
+							end = indexArray[nextPos] || statblock.length;
 
 						keyword[section][key] = extractSection(statblock.substring(start, end), key);
 					}
@@ -859,13 +861,6 @@
 			match.push(matches[1]);
 		}
 
-		attributesToSet.strength = match[0];
-		attributesToSet.dexterity = match[1];
-		attributesToSet.constitution = match[2];
-		attributesToSet.intelligence = match[3];
-		attributesToSet.wisdom = match[4];
-		attributesToSet.charisma = match[5];
-
 		setAttribute('strength', match[0]);
 		setAttribute('dexterity', match[1]);
 		setAttribute('constitution', match[2]);
@@ -882,14 +877,7 @@
 		while (matches = regex.exec(abilities)) {
 			match.push(matches[1]);
 		}
-
-		attributesToSet.strength = match[0];
-		attributesToSet.dexterity = match[1];
-		attributesToSet.constitution = match[2];
-		attributesToSet.intelligence = match[3];
-		attributesToSet.wisdom = match[4];
-		attributesToSet.charisma = match[5];
-
+        log('parseCondensedAbilities')
 		setAttribute('strength', match[0]);
 		setAttribute('dexterity', match[1]);
 		setAttribute('constitution', match[2]);
@@ -920,16 +908,16 @@
 	}
 
 	function parseHD(hd) {
-		var regex = (/(\d+)d(\d+)/gi);
-		var splitHD;
+		var regex = (/(\d+)d(\d+)/gi),
+			splitHD;
 
 		while (splitHD = regex.exec(hd)) {
 			if (!splitHD || !splitHD[1] || !splitHD[2]) {
 				throw 'Character doesn\'t have valid hd format';
 			}
 
-			var numHD = splitHD[1];
-			var HDsize = 'd' + splitHD[2];
+			var numHD = splitHD[1],
+				HDsize = 'd' + splitHD[2];
 
 			setAttribute('hd_' + HDsize, numHD, numHD);
 			setAttribute('hd_' + HDsize + '_toggle', 'on');
@@ -948,16 +936,16 @@
 	}
 
 	function parseSpeed(speed) {
-		var baseAttr = 'speed';
-		var regex = /(|burrow|climb|fly|swim|)\s*(\d+)\s*?(?:ft)?\s*(\(.*\))?/gi;
+		var baseAttr = 'speed',
+			regex = /(|burrow|climb|fly|swim|)\s*(\d+)\s*?(?:ft)?\s*(\(.*\))?/gi;
 
 		var match;
 		while (match = regex.exec(speed)) {
 			if (!match[2]) {
 				throw 'Character doesn\'t have valid speed format';
 			}
-			var attrName = baseAttr + (match[1] !== '' ? '_' + match[1].toLowerCase() : '');
-			var value = match[2];
+			var attrName = baseAttr + (match[1] !== '' ? '_' + match[1].toLowerCase() : ''),
+				value = match[2];
 
 			if (match[3]) {
 				if (match[3].indexOf('hover')) {
@@ -970,7 +958,7 @@
 
 	function parseSenses(senses) {
 		senses = senses.replace(/[,\s]*passive.*/i, '');
-		var regex = /(blindsight|darkvision|tremorsense|truesight)\s*?(\d+)\s*?ft?\s*(\(.*\))?/gi;
+		var regex = /(|blindsight|darkvision|tremorsense|truesight|)\s*?(\d+)\s*?ft?\s*(\(.*\))?/gi;
 
 		var match;
 		while (match = regex.exec(senses)) {
@@ -978,25 +966,27 @@
 				throw 'Character doesn\'t have valid senses format';
 			}
 
-			var attrName = match[1].toLowerCase();
-			var value = match[2];
+			var attrName = match[1].toLowerCase(),
+				value = match[2];
 
-			if (senses.indexOf('blind beyond')) {
-				setAttribute('blindsight_blind_beyond', 'on');
+			if (match[3]) {
+				if (match[3].indexOf('blind beyond')) {
+					setAttribute('blindsight_blind_beyond', 'on');
+				}
 			}
 			setAttribute(attrName, value);
 		}
 	}
 
 	function setTokenVision(token) {
-		var blindsight = parseInt(getAttrByName(characterId, 'blindsight'), 10) || 0;
-		var	darkvision = parseInt(getAttrByName(characterId, 'darkvision'), 10) || 0;
-		var	tremorsense = parseInt(getAttrByName(characterId, 'tremorsense'), 10) || 0;
-		var	truesight = parseInt(getAttrByName(characterId, 'truesight'), 10) || 0;
-		var	longestVisionRange = Math.max(blindsight, darkvision, tremorsense, truesight);
-		var	longestVisionRangeForSecondaryDarkvision = Math.max(blindsight, tremorsense, truesight);
-		var	lightRadius;
-		var	dimRadius;
+		var blindsight = parseInt(getAttrByName(characterId, 'blindsight'), 10) || 0,
+			darkvision = parseInt(getAttrByName(characterId, 'darkvision'), 10) || 0,
+			tremorsense = parseInt(getAttrByName(characterId, 'tremorsense'), 10) || 0,
+			truesight = parseInt(getAttrByName(characterId, 'truesight'), 10) || 0,
+			longestVisionRange = Math.max(blindsight, darkvision, tremorsense, truesight),
+			longestVisionRangeForSecondaryDarkvision = Math.max(blindsight, tremorsense, truesight),
+			lightRadius,
+			dimRadius;
 
 		if (longestVisionRange === blindsight) {
 			lightRadius = blindsight;
@@ -1030,8 +1020,7 @@
 	function parseChallenge(cr) {
 		var input = cr.replace(/[, ]/g, '');
 		var match = input.match(/([\d/]+).*?(\d+)/);
-
-		setChallenge(match[1]);
+		setAttribute('challenge', match[1]);
 
 		var xp = parseInt(match[2]);
 		if (getAttrByName(characterId, 'xp') !== xp) {
@@ -1039,15 +1028,9 @@
 		}
 	}
 
-	function setChallenge (challenge) {
-		attributesToSet.challenge = challenge;
-		storage.pb = 2 + Math.floor(Math.abs((challenge - 1) / 4));
-		setAttribute('challenge', challenge);
-	}
-
 	function parseSavingThrow(save) {
-		var regex = /(STR|DEX|CON|INT|WIS|CHA).*?(\d+)/gi;
-		var	attr;
+		var regex = /(STR|DEX|CON|INT|WIS|CHA).*?(\d+)/gi,
+			attr;
 		var match;
 		while (match = regex.exec(save)) {
 			// Substract ability modifier from this field since sheet computes it
@@ -1073,10 +1056,8 @@
 			}
 			setAttribute(attr + '_save_prof', '@{PB}');
 
-			var parsedSaveBonus = parseInt(match[2], 10) || 0;
-			var abilityScore = parseInt(attributesToSet[attr]) || 10;
-			var abilityBonus = Math.floor((abilityScore - 10) / 2);
-			var totalSaveBonus = parsedSaveBonus - storage.pb - abilityBonus;
+			var proficiencyBonus = (2 + Math.floor(Math.abs((eval(getAttrByName(characterId, 'challenge')) - 1) / 4))),
+				totalSaveBonus = match[2] - proficiencyBonus - Math.floor((getAttrByName(characterId, attr) - 10) / 2);
 
 			if (totalSaveBonus !== 0) {
 				setAttribute(attr + '_save_bonus', totalSaveBonus);
@@ -1119,7 +1100,8 @@
 
 		while (match = regex.exec(skills.replace(/Skills\s+/i, ''))) {
 			var skill = match[1].trim().toLowerCase();
-			var expertise = storage.pb * 2;
+			var proficiencyBonus = (2 + Math.floor(Math.abs((eval(getAttrByName(characterId, 'challenge')) - 1) / 4)));
+			var expertise = proficiencyBonus * 2;
 			var abilitymod;
 			var attr;
 			var totalSkillBonus;
@@ -1134,10 +1116,10 @@
 					if (totalSkillBonus > expertise) {
 						setAttribute(attr + '_bonus', totalSkillBonus - expertise);
 					}
-				} else if (totalSkillBonus >= storage.pb) {
+				} else if (totalSkillBonus >= proficiencyBonus) {
 					setAttribute(attr + '_prof_exp', '@{PB}');
-					if (totalSkillBonus > storage.pb) {
-						setAttribute(attr + '_bonus', totalSkillBonus - storage.pb);
+					if (totalSkillBonus > proficiencyBonus) {
+						setAttribute(attr + '_bonus', totalSkillBonus - proficiencyBonus);
 					}
 				} else {
 					setAttribute(attr + '_prof_exp', '@{jack_of_all_trades}');
@@ -1159,10 +1141,10 @@
 					if (totalSkillBonus > expertise) {
 						setAttribute(attr + '_bonus', totalSkillBonus - expertise);
 					}
-				} else if (totalSkillBonus >= storage.pb) {
+				} else if (totalSkillBonus >= proficiencyBonus) {
 					setAttribute(attr + '_prof_exp', '@{PB}');
-					if (totalSkillBonus > storage.pb) {
-						setAttribute(attr + '_bonus', totalSkillBonus - storage.pb);
+					if (totalSkillBonus > proficiencyBonus) {
+						setAttribute(attr + '_bonus', totalSkillBonus - proficiencyBonus);
 					}
 				} else {
 					setAttribute(attr + '_prof_exp', '@{jack_of_all_trades}');
@@ -1310,32 +1292,32 @@
 			setEffect(saveEffect);
 		}
 
-		var commaPeriodSpace = /\,?\.?\s*?/;
-		var commaPeriodDefinitiveSpace = /\,?\.?\s*/;
-		var commaPeriodOneSpace = /\,?\.?\s?/;
-		var hit = /Hit:.*?/;
-		var damageType = /((?:[\w]+|[\w]+\s(?:or|and)\s[\w]+)(?:\s*?\([\w\s]+\))?)\s*?damage\s?(\([\w\'\s]+\))?/;
-		var damageSyntax = /(?:(\d+)|.*?\(([\dd\s\+\-]*)\).*?)\s*?/;
-		var altDamageSyntax = /(?:\,\s*?or\s*?)/;
-		var altDamageReasonSyntax = /((?:if|in)[\w\s]+)/;
-		var altDamageExtraSyntax = /(The.*|If the.*)?/;
-		var plus = /\s*?plus\s*?/;
-		var savingThrow = /(?:DC)\s*?(\d+)\s*?([a-zA-Z]*)\s*?(?:saving throw)/;
-		var takeOrTaking = /\,?\s*?(?:taking|or take)/;
-		var againstDisease = /(?: against disease)?/;
-		var saveSuccess = /(?:.*or\s(.*)?\son a successful one.)?/;
-		var saveSuccessTwo = /(?:On a successful save,)?(.*)?/;
-		var saveFailure = /(?:On a (?:failure|failed save))\,\s(?:(.*). On a success,\s(.*)?)?(.*)?/;
-		var andAnythingElse = /(\s?and.*)?/;
-		var orAnythingElseNoTake = /(or\s(?!take).*)/;
-		var anythingElse = /(.*)?/;
-		var damageRegex = new RegExp(hit.source + damageSyntax.source + damageType.source + commaPeriodSpace.source + andAnythingElse.source, 'i');
-		var damagePlusRegex = new RegExp(plus.source + damageSyntax.source + damageType.source + commaPeriodSpace.source + anythingElse.source, 'i');
-		var altDamageRegex = new RegExp(altDamageSyntax.source + damageSyntax.source + damageType.source + commaPeriodSpace.source + altDamageReasonSyntax.source + commaPeriodOneSpace.source + altDamageExtraSyntax.source, 'i');
-		var hitEffectRegex = new RegExp(hit.source + anythingElse.source, 'i');
-		var saveDamageRegex = new RegExp(savingThrow.source + takeOrTaking.source + damageSyntax.source + damageType.source + saveSuccess.source + commaPeriodSpace.source + anythingElse.source + saveSuccessTwo.source, 'i');
-		var saveOrRegex = new RegExp(savingThrow.source + againstDisease.source + commaPeriodDefinitiveSpace.source + orAnythingElseNoTake.source, 'i');
-		var	saveFailedSaveRegex = new RegExp(savingThrow.source + commaPeriodSpace.source + saveFailure.source, 'i');
+		var commaPeriodSpace = /\,?\.?\s*?/,
+			commaPeriodDefinitiveSpace = /\,?\.?\s*/,
+			commaPeriodOneSpace = /\,?\.?\s?/,
+			hit = /Hit:.*?/,
+			damageType = /((?:[\w]+|[\w]+\s(?:or|and)\s[\w]+)(?:\s*?\([\w\s]+\))?)\s*?damage\s?(\([\w\'\s]+\))?/,
+			damageSyntax = /(?:(\d+)|.*?\(([\dd\s\+\-]*)\).*?)\s*?/,
+			altDamageSyntax = /(?:\,\s*?or\s*?)/,
+			altDamageReasonSyntax = /((?:if|in)[\w\s]+)/,
+			altDamageExtraSyntax = /(The.*|If the.*)?/,
+			plus = /\s*?plus\s*?/,
+			savingThrow = /(?:DC)\s*?(\d+)\s*?([a-zA-Z]*)\s*?(?:saving throw)/,
+			takeOrTaking = /\,?\s*?(?:taking|or take)/,
+			againstDisease = /(?: against disease)?/,
+			saveSuccess = /(?:.*or\s(.*)?\son a successful one.)?/,
+			saveSuccessTwo = /(?:On a successful save,)?(.*)?/,
+			saveFailure = /(?:On a (?:failure|failed save))\,\s(?:(.*). On a success,\s(.*)?)?(.*)?/,
+			andAnythingElse = /(\s?and.*)?/,
+			orAnythingElseNoTake = /(or\s(?!take).*)/,
+			anythingElse = /(.*)?/,
+			damageRegex = new RegExp(hit.source + damageSyntax.source + damageType.source + commaPeriodSpace.source + andAnythingElse.source, 'i'),
+			damagePlusRegex = new RegExp(plus.source + damageSyntax.source + damageType.source + commaPeriodSpace.source + anythingElse.source, 'i'),
+			altDamageRegex = new RegExp(altDamageSyntax.source + damageSyntax.source + damageType.source + commaPeriodSpace.source + altDamageReasonSyntax.source + commaPeriodOneSpace.source + altDamageExtraSyntax.source, 'i'),
+			hitEffectRegex = new RegExp(hit.source + anythingElse.source, 'i'),
+			saveDamageRegex = new RegExp(savingThrow.source + takeOrTaking.source + damageSyntax.source + damageType.source + saveSuccess.source + commaPeriodSpace.source + anythingElse.source + saveSuccessTwo.source, 'i'),
+			saveOrRegex = new RegExp(savingThrow.source + againstDisease.source + commaPeriodDefinitiveSpace.source + orAnythingElseNoTake.source, 'i'),
+			saveFailedSaveRegex = new RegExp(savingThrow.source + commaPeriodSpace.source + saveFailure.source, 'i');
 
 		function parseDamage(damage, altSecondary) {
 			//log('parseDamage: ' + damage);
@@ -1592,11 +1574,11 @@
 				}
 			}
 
-			var lineRangeFootRegex = /(\d+)\-foot line\s*?that is (\d+) feet wide/gi;
-		  var lineRangeFoot = lineRangeFootRegex.exec(value);
-		  var lineRangeFeetRegex = /line that is (\d+)\sfeet long\s*?and (\d+) feet wide/gi;
-		  var lineRangeFeet = lineRangeFeetRegex.exec(value);
-		  var lineRange = lineRangeFoot || lineRangeFeet;
+			var lineRangeFootRegex = /(\d+)\-foot line\s*?that is (\d+) feet wide/gi,
+				lineRangeFoot = lineRangeFootRegex.exec(value),
+				lineRangeFeetRegex = /line that is (\d+)\sfeet long\s*?and (\d+) feet wide/gi,
+				lineRangeFeet = lineRangeFeetRegex.exec(value),
+				lineRange = lineRangeFoot || lineRangeFeet;
 			if (lineRange) {
 				setType('Line');
 				if (lineRange[1] && lineRange[2]) {
@@ -1707,8 +1689,8 @@
 
 			var match;
 			while (match = multiattackRegex.exec(multiAttackText)) {
-				var action = match[2];
-		    var nb = match[1] || 'one';
+				var action = match[2],
+					nb = match[1] || 'one';
 
 				actionNumber = actionPosition.indexOf(action.toLowerCase());
 
@@ -1741,18 +1723,16 @@
 
 	function setBarValueAfterConvert(token) {
 		for (var i = 0; i < 3; i++) {
-			var barName = shaped.settings.bar[i].name;
-		  var barTokenName = 'bar' + (i + 1);
+			var barName = shaped.settings.bar[i].name,
+				barTokenName = 'bar' + (i + 1);
 
 			if (barName !== '') {
 				var objOfBar = findObjs({
 						name: barName,
 						_type: 'attribute',
 						_characterid: characterId
-					}, {caseInsensitive: true})[0];
-				var barLink;
-				var barCurrent;
-				var barMax;
+					}, {caseInsensitive: true})[0],
+					barLink, barCurrent, barMax;
 
 				if (objOfBar) {
 					barLink = objOfBar.id;
@@ -1806,10 +1786,10 @@
 
 	shaped.changeSettings = function (args) {
 		log(args);
-		var changeNPCs = false;
-		var changePCs = false;
-		var attributesToChange = {};
-		var attributeName;
+		var changeNPCs = false,
+			changePCs = false,
+			attributesToChange = {},
+			attributeName;
 
 		if (args[0] === 'npcs') {
 			changeNPCs = true;
@@ -1923,7 +1903,7 @@
 				}
 			});
 			if (creaturesToChange.length > 0) {
-				messageToChat('changed ' + attribute + ' to ' + attributesToChange[attribute].replace('@', '&#64;') + ' for ' + creaturesToChange.length + ' creatures');
+				messageToChat('changed ' + attribute + ' to ' + attributesToChange[attribute].replace('@', '@') + ' for ' + creaturesToChange.length + ' creatures');
 			} else {
 				messageToChat('no creatures match those parameters');
 			}
@@ -1938,8 +1918,11 @@
 
 	shaped.importSpell = function (character, characterName, spellName, options) {
 		var spell = fifthSpells.spells.filter(function (obj) {
-			return obj.name.toLowerCase() === spellName.toLowerCase();
-		})[0];
+				return obj.name.toLowerCase() === spellName.toLowerCase();
+			})[0],
+			spellBase = 'repeating_spellbook',
+			spellIndex;
+
 		if (!spell) {
 			messageToChat('Error: cannot find a spell by the name of "' + spellName + '".');
 			return;
@@ -1948,10 +1931,6 @@
 			messageToChat('Error: cannot find a character by the name of "' + characterName + '".');
 			return;
 		}
-
-		var spellBase = 'repeating_spellbook';
-		var spellIndex;
-
 		characterId = character.id;
 
 		if (spell.level === 0) {
@@ -2048,11 +2027,8 @@
 			}
 		}
 		if (spell.emote) {
-			var gender = getAttrByName(characterId, 'gender', 'current');
-			var	heShe;
-			var himHer;
-			var hisHer;
-			var himselfHerself;
+			var gender = getAttrByName(characterId, 'gender', 'current'),
+				heShe, himHer, hisHer, himselfHerself;
 
 			if (!gender || !gender.match(/f|female|girl|woman|feminine/gi)) {
 				heShe = 'he';
@@ -2113,6 +2089,7 @@
 				setAttribute(spellBase + 'spell_' + type + '_second_higher_level_dmg_die', param.higherLevelSecondaryDie);
 			}
 		}
+
 
 		if (spell.attack) {
 			setAttribute(spellBase + 'attackstat', '@{casting_stat}');
@@ -2179,9 +2156,9 @@
 		var spells = args[0].split(', ');
 		var id = token.get('represents');
 		var character = findObjs({
-			_type: 'character',
-			id: id
-		})[0];
+				_type: 'character',
+				id: id
+			})[0];
 		var options = [];
 
 		characterName = getAttrByName(id, 'character_name', 'current');
@@ -2210,7 +2187,6 @@
 			_type: 'character',
 			name: monster.name
 		});
-		var multiAttackText;
 
 		if (obj.length === 0) {
 			obj = createObj('character', {
@@ -2231,17 +2207,23 @@
 		if (monster.size) setAttribute('size', monster.size);
 		if (monster.type) setAttribute('npc_type', monster.type);
 		if (monster.alignment) setAttribute('alignment', monster.alignment);
-		if (monster.challenge) {
-			setChallenge(monster.challenge);
-		}
 		if (monster.AC) parseArmorClass(monster.AC);
 		if (monster.HP) parseHp(monster.HP);
 		if (monster.speed) parseSpeed(monster.speed);
-		if (monster.abilities) parseCondensedAbilities(monster.abilities);
+	//	if (monster.abilities) parseCondensedAbilities(' strength' + monster.strength + ' dexterity' + monster.dexterity + ' constitution' + monster.constitution + ' intelligence' + monster.intelligence + ' wisdom' + monster.wisdom + ' charisma' + monster.charisma);
+        if (monster.strength) setAttribute('strength', monster.strength);
+        if (monster.strength) setAttribute('dexterity', monster.dexterity);
+        if (monster.strength) setAttribute('constitution', monster.constitution);
+        if (monster.strength) setAttribute('intelligence', monster.intelligence);
+        if (monster.strength) setAttribute('wisdom', monster.wisdom);
+        if (monster.strength) setAttribute('charisma', monster.charisma);
+        //log(' strength ' + monster.strength + ' dexterity ' + monster.dexterity + ' constitution ' + monster.constitution + ' intelligence ' + monster.intelligence + ' wisdom ' + monster.wisdom + ' charisma ' + monster.charisma)
 		if (monster.savingThrows) parseSavingThrow(monster.savingThrows);
+        //log(monster.savingThrows)
 		if (monster.skills) parseSkills(monster.skills);
 		if (monster.senses) parseSenses(monster.senses);
 		if (monster.languages) setAttribute('prolanguages', monster.languages);
+		if (monster.challenge) setAttribute('challenge', monster.challenge);
 		if (monster.damageResistances) setAttribute('damage_resistance', monster.damageResistances);
 		if (monster.damageVulnerabilities) setAttribute('damage_vulnerability', monster.damageVulnerabilities);
 		if (monster.damageImmunities) setAttribute('damage_immunity', monster.damageImmunities);
@@ -2255,24 +2237,34 @@
 		if (shaped.settings.addCheckQueryMacroTokenAbility) {
 			createCheckQueryTokenAction(monster.name);
 		}
-
+        log(monster.traits)
 		if (monster.traits) {
-			setAttribute('toggle_traits', 'on');
-			setAttribute('npc_traits', monster.traits.join('\n'));
+		//	setAttribute('toggle_traits', 'on');
+    	//	log(monster.traits.join('\n'));
+		//	setAttribute('npc_traits', monster.traits.join('\n'));
+        // log(monster.traits.length)
+        var monstertraits = '';
+        for (var i = 0; i < monster.traits.length; i++) {
+    		//	log(i.toString()+ ' ' + monster.traits[i].name + monster.traits[i].text);
+                monstertraits = monstertraits + monster.traits[i].name + ' ' + monster.traits[i].text + '\n' ;
+			}
+        log(monstertraits)
+        setAttribute('npc_traits', monstertraits);
 		}
 
 		if (monster.actions) {
 			monster.parsedActions = {};
 			setAttribute('toggle_actions', 'on');
 			for (var i = 0; i < monster.actions.length; i++) {
-				var split = monster.actions[i].split('.');
-				var actionName = split[0];
+				//log(i.toString()+ ' ' + monster.actions[i].name);
+                var split = monster.actions[i].toString().split('.');
+				var actionName = monster.actions[i].name;
 				split.splice(0, 1);
 				split = split.join();
-				monster.parsedActions[actionName] = split.trim();
+				monster.parsedActions[actionName] = monster.actions[i].text;
 			}
 			if (monster.parsedActions.Multiattack) {
-				multiAttackText = monster.parsedActions.Multiattack;
+				var multiAttackText = monster.parsedActions.Multiattack;
 				setAttribute('toggle_multiattack', 'on');
 				setAttribute('multiattack', multiAttackText);
 				setAbility('MultiAtk', '', '%{' + characterName + '|multiattack}', shaped.settings.createAbilityAsToken);
@@ -2318,11 +2310,12 @@
 			monster.parsedLegendaryActions = {};
 			setAttribute('toggle_legendary_actions', 'on');
 			for (var i = 0; i < monster.legendaryActions.length; i++) {
-				var split = monster.legendaryActions[i].split('.');
-				var actionName = split[0];
+				var split = monster.legendaryActions[i].toString().split('.');
+				var actionName = monster.legendaryActions[i].name;
 				split.splice(0, 1);
 				split = split.join();
-				monster.parsedLegendaryActions[actionName] = split.trim();
+                var legendaryActionTextandCost = monster.legendaryActions[i].text + ' (Costs ' + monster.legendaryActions[i].cost + ' Actions )'
+				monster.parsedLegendaryActions[actionName] = legendaryActionTextandCost;
 			}
 
 			processActions(monster.parsedLegendaryActions, 'legendary_');
@@ -2331,11 +2324,11 @@
 			monster.parsedLairActions = {};
 			setAttribute('toggle_lair_actions', 'on');
 			for (var i = 0; i < monster.parsedLairActions.length; i++) {
-				var split = monster.parsedLairActions[i].split('.');
-				var actionName = split[0];
+				var split = monster.parsedLairActions[i].toString().split('.');
+				var actionName = monster.parsedLairActions[i].name;
 				split.splice(0, 1);
 				split = split.join();
-				monster.parsedLairActions[actionName] = split.trim();
+				monster.parsedLairActions[actionName] = monster.parsedLairActions[i].text;
 			}
 
 			processActions(monster.parsedLairActions, 'lair_');
@@ -2370,31 +2363,37 @@
 
 			setTokenVision(token);
 		}
-		if (monster.traits) {
-			if (monster.traits) {
-				var spells = '';
-				var spellRegex = /(?:(?:\d+\/day(?:\s* each)?)|(?:At will)|(?:(?:Cantrips|level)(?:\s*\(.*\))?)):\s* (.*)/gi;
-				for (var i = 0; i < monster.traits.length; i++) {
-					var match;
-					while (match = spellRegex.exec(monster.traits[i])) {
-						if (match) {
-							if (spells !== '') {
-								spells += ', ';
-							}
-							spells += match[1].replace(/\s*\(self only\)/gi, '')
-								.replace(/\s*\(self\)/gi, '')
-								.replace(/\s*\(\d+(?:st|nd|rd|th)\s*level\)/gi, '');
-						}
-					}
-				}
-
-				if (spells !== '') {
-					shaped.spellImport(token, [spells]);
-				}
-			}
-		} else if (monster.spells) {
-			shaped.spellImport(token, [monster.spells]);
+        //log(monster.traits);
+        log('log spells ' + monster.spells);
+        if (monster.spells) {
+    		shaped.spellImport(token, [monster.spells]);
 		}
+	//	if (monster.traits) {
+	//		if (monster.traits) {
+	//			var spells = '';
+	//			var spellRegex = /(?:(?:\d+\/day(?:\s* each)?)|(?:At will)|(?:(?:Cantrips|level)(?:\s*\(.*\))?)):\s* (.*)/gi;
+	//			for(var i = 0; i < monster.traits.length; i++) {
+	//				var match;
+	//				while (match = spellRegex.exec(monster.traits[i])) {
+    //                    log(i + ' line 2375 ' + monster.traits[i]);
+	//					if(match) {
+	//						if(spells !== '') {
+	//							spells += ', ';
+	//						}
+	//						spells += match[1].replace(/\s*\(self only\)/gi, '')
+	//							.replace(/\s*\(self\)/gi, '')
+	//							.replace(/\s*\(\d+(?:st|nd|rd|th)\s*level\)/gi, '');
+	//					}
+	//				}
+	//			}
+
+	//			if(spells !== '') {
+	//				shaped.spellImport(token, [spells]);
+	//			}
+	//		}
+	//	} else if (monster.spells) {
+	//		shaped.spellImport(token, [monster.spells]);
+	//	}
 	};
 
 	shaped.monsterImport = function (token, args) {
