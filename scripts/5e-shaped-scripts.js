@@ -50,7 +50,7 @@
 	};
 
 	shaped.statblock = {
-		version: 'Jan 26th, 2016',
+		version: 'April 20th, 2016',
 		addTokenCache: [],
 		RegisterHandlers: function () {
 			on('chat:message', HandleInput);
@@ -2258,18 +2258,19 @@
 
 		if (monster.traits) {
 			setAttribute('toggle_traits', 'on');
-			setAttribute('npc_traits', monster.traits.join('\n'));
+
+			var fixedTraits = '';
+			for (var i = 0; i < monster.traits.length; i++) {
+				fixedTraits += monster.traits[i].name + '. ' + monster.traits[i].text + '\n';
+			}
+			setAttribute('npc_traits', fixedTraits);
 		}
 
 		if (monster.actions) {
 			monster.parsedActions = {};
 			setAttribute('toggle_actions', 'on');
 			for (var i = 0; i < monster.actions.length; i++) {
-				var split = monster.actions[i].split('.');
-				var actionName = split[0];
-				split.splice(0, 1);
-				split = split.join();
-				monster.parsedActions[actionName] = split.trim();
+				monster.parsedActions[monster.actions[i].name] = monster.actions[i].text;
 			}
 			if (monster.parsedActions.Multiattack) {
 				multiAttackText = monster.parsedActions.Multiattack;
@@ -2318,11 +2319,7 @@
 			monster.parsedLegendaryActions = {};
 			setAttribute('toggle_legendary_actions', 'on');
 			for (var i = 0; i < monster.legendaryActions.length; i++) {
-				var split = monster.legendaryActions[i].split('.');
-				var actionName = split[0];
-				split.splice(0, 1);
-				split = split.join();
-				monster.parsedLegendaryActions[actionName] = split.trim();
+				monster.parsedActions[monster.legendaryActions[i].name] = monster.legendaryActions[i].text;
 			}
 
 			processActions(monster.parsedLegendaryActions, 'legendary_');
@@ -2331,11 +2328,7 @@
 			monster.parsedLairActions = {};
 			setAttribute('toggle_lair_actions', 'on');
 			for (var i = 0; i < monster.parsedLairActions.length; i++) {
-				var split = monster.parsedLairActions[i].split('.');
-				var actionName = split[0];
-				split.splice(0, 1);
-				split = split.join();
-				monster.parsedLairActions[actionName] = split.trim();
+				monster.parsedActions[monster.parsedLairActions[i].name] = monster.parsedLairActions[i].text;
 			}
 
 			processActions(monster.parsedLairActions, 'lair_');
