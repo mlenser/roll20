@@ -1,5 +1,5 @@
 {
-  "version": "0.2",
+  "version": "0.2.1",
   "spells": [
     {
       "name": "Abi-Dalzim's Horrid Wilting",
@@ -42,7 +42,7 @@
         "somatic": true
       },
       "duration": "1 round",
-      "castingTime": "reaction",
+      "castingTime": "1 reaction",
       "level": 1,
       "school": "Abjuration",
       "damage": {
@@ -687,7 +687,7 @@
       },
       "duration": "up to 1 minute",
       "concentration": true,
-      "castingTime": "bonus action",
+      "castingTime": "1 bonus action",
       "level": 5,
       "school": "Abjuration",
       "damage": {
@@ -1013,7 +1013,7 @@
       },
       "duration": "up to 1 minute",
       "concentration": true,
-      "castingTime": "bonus action",
+      "castingTime": "1 bonus action",
       "level": 3,
       "school": "Evocation",
       "damage": {
@@ -1175,7 +1175,7 @@
       },
       "duration": "up to 1 minute",
       "concentration": true,
-      "castingTime": "bonus action",
+      "castingTime": "1 bonus action",
       "level": 2,
       "school": "Evocation",
       "damage": {
@@ -1747,7 +1747,7 @@
       },
       "duration": "up to 1 minute",
       "concentration": true,
-      "castingTime": "bonus action",
+      "castingTime": "1 bonus action",
       "level": 1,
       "school": "Enchantment",
       "save": {
@@ -2314,7 +2314,7 @@
         "somatic": true
       },
       "duration": "Instantaneous",
-      "castingTime": "reaction",
+      "castingTime": "1 reaction",
       "level": 3,
       "school": "Abjuration",
       "effects": "If the creature is casting a spell of 3rd level or lower, its spell fails and has no effect. If it is casting a spell of 4th level or higher, make an ability check using your spellcasting ability. The DC equals 10 + the spell's level. On a success, the creature's spell fails and has no effect.",
@@ -3075,7 +3075,7 @@
       },
       "duration": "up to 1 minute",
       "concentration": true,
-      "castingTime": "bonus action",
+      "castingTime": "1 bonus action",
       "level": 1,
       "school": "Evocation",
       "effects": "Until the spell ends, your weapon attacks deal an extra 1d4 radiant damage on a hit.",
@@ -3098,7 +3098,7 @@
         "verbal": true
       },
       "duration": "Instantaneous",
-      "castingTime": "bonus action",
+      "castingTime": "1 bonus action",
       "level": 7,
       "school": "Evocation",
       "save": {
@@ -3540,7 +3540,7 @@
       },
       "duration": "up to 1 minute",
       "concentration": true,
-      "castingTime": "bonus action",
+      "castingTime": "1 bonus action",
       "level": 1,
       "school": "Conjuration",
       "save": {
@@ -3709,7 +3709,7 @@
       },
       "duration": "up to 10 minutes",
       "concentration": true,
-      "castingTime": "bonus action",
+      "castingTime": "1 bonus action",
       "level": 1,
       "school": "Transmutation",
       "effects": "When you cast this spell, and then as a bonus action on each of your turns until the spell ends, you can take the Dash action.",
@@ -3866,7 +3866,7 @@
         "materialMaterial": "A small feather or a piece of down"
       },
       "duration": "1 minute",
-      "castingTime": "reaction",
+      "castingTime": "1 reaction",
       "level": 1,
       "school": "Transmutation",
       "effects": "target creatures' rate of descent slows to 60 ft per round until the spell ends. If the creature lands before the spell ends, it takes no falling damage and can land on its feet, and the spell ends for that creature.",
@@ -4213,7 +4213,7 @@
       },
       "duration": "up to 10 minutes",
       "concentration": true,
-      "castingTime": "bonus action",
+      "castingTime": "1 bonus action",
       "level": 2,
       "school": "Evocation",
       "attack": {
@@ -4799,7 +4799,7 @@
       },
       "duration": "up to 1 minute",
       "concentration": true,
-      "castingTime": "bonus action",
+      "castingTime": "1 bonus action",
       "level": 4,
       "school": "Conjuration",
       "save": {
@@ -5110,7 +5110,7 @@
       },
       "duration": "up to 1 minute",
       "concentration": true,
-      "castingTime": "bonus action",
+      "castingTime": "1 bonus action",
       "level": 1,
       "school": "Conjuration",
       "save": {
@@ -5277,7 +5277,7 @@
         "verbal": true
       },
       "duration": "Instantaneous",
-      "castingTime": "bonus action",
+      "castingTime": "1 bonus action",
       "level": 1,
       "school": "Evocation",
       "heal": {
@@ -5341,7 +5341,7 @@
         "somatic": true
       },
       "duration": "Instantaneous",
-      "castingTime": "reaction",
+      "castingTime": "1 reaction",
       "level": 1,
       "school": "Evocation",
       "save": {
@@ -5418,7 +5418,7 @@
       },
       "duration": "up to 1 hour",
       "concentration": true,
-      "castingTime": "bonus action",
+      "castingTime": "1 bonus action",
       "level": 1,
       "school": "Enchantment",
       "effects": "Until the spell ends, you deal an extra 1d6 necrotic damage to the target whenever you hit it with an attack. Also choose one ability when you cast the spell. The target has disadvantage on ability checks made with the chosen ability.\nIf the target drops to 0 hit points before this spell ends, you can use a bonus action on a subsequent turn of yours to curse a new creature.\nA remove curse cast on the target ends this spell early.",
@@ -5574,7 +5574,7 @@
       },
       "duration": "up to 1 hour",
       "concentration": true,
-      "castingTime": "bonus action",
+      "castingTime": "1 bonus action",
       "level": 1,
       "school": "Divination",
       "effects": "Until the spell ends, you deal an extra 1d6 damage to the target whenever you hit it with a weapon attack, and you have advantage on any Wisdom (Perception) or Wisdom (Survival) check you make to find it. If the target drops to 0 hit points before this spell ends, you can use a bonus action on a subsequent turn of yours to mark a new creature.",
@@ -6247,7 +6247,7 @@
       },
       "duration": "up to 1 minute",
       "concentration": true,
-      "castingTime": "bonus action",
+      "castingTime": "1 bonus action",
       "level": 3,
       "school": "Transmutation",
       "damage": {
@@ -6633,7 +6633,7 @@
         "somatic": true
       },
       "duration": "1 minute",
-      "castingTime": "bonus action",
+      "castingTime": "1 bonus action",
       "level": 0,
       "school": "Transmutation",
       "effects": "You or someone else can make a ranged spell attack with one of the pebbles by throwing it or hurling it with a sling. If thrown, it has a range of 60 feet. If someone else attacks with the pebble, that attacker adds your spellcasting ability modifier, not the attacker's, to the attack roll. On a hit, the target takes bludgeoning damage equal to 1d6 + your spellcasting ability modifier. Hit or miss, the spell then ends on the stone.\nIf you cast this spell again, the spell ends early on any pebbles still affected by it.",
@@ -6656,7 +6656,7 @@
       },
       "duration": "up to 1 hour",
       "concentration": true,
-      "castingTime": "bonus action",
+      "castingTime": "1 bonus action",
       "level": 2,
       "school": "Transmutation",
       "effects": "Until the spell ends, that weapon becomes a magic weapon with a +1 bonus to attack rolls and damage rolls.",
@@ -6761,7 +6761,7 @@
         "verbal": true
       },
       "duration": "Instantaneous",
-      "castingTime": "bonus action",
+      "castingTime": "1 bonus action",
       "level": 3,
       "school": "Evocation",
       "heal": {
@@ -7157,7 +7157,7 @@
         "verbal": true
       },
       "duration": "Instantaneous",
-      "castingTime": "bonus action",
+      "castingTime": "1 bonus action",
       "level": 2,
       "school": "Conjuration",
       "effects": "you teleport up to 30 ft to an unoccupied space that you can see.",
@@ -8608,7 +8608,7 @@
         "materialMaterial": "A small silver mirror"
       },
       "duration": "1 minute",
-      "castingTime": "bonus action",
+      "castingTime": "1 bonus action",
       "level": 1,
       "school": "Abjuration",
       "save": {
@@ -8715,7 +8715,7 @@
       },
       "duration": "up to 1 minute",
       "concentration": true,
-      "castingTime": "bonus action",
+      "castingTime": "1 bonus action",
       "level": 1,
       "school": "Evocation",
       "damage": {
@@ -8932,7 +8932,7 @@
         "somatic": true
       },
       "duration": "1 round",
-      "castingTime": "reaction",
+      "castingTime": "1 reaction",
       "level": 1,
       "school": "Abjuration",
       "effects": "Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack, and you take no damage from magic missile.",
@@ -8956,7 +8956,7 @@
       },
       "duration": "up to 10 minutes",
       "concentration": true,
-      "castingTime": "bonus action",
+      "castingTime": "1 bonus action",
       "level": 1,
       "school": "Abjuration",
       "effects": "For the duration of the spell, the target creature is granted a +2 bonus to AC",
@@ -8982,7 +8982,7 @@
         "materialMaterial": "Mistletoe, a shamrock leaf, and a club or quarterstaff"
       },
       "duration": "1 minute",
-      "castingTime": "bonus action",
+      "castingTime": "1 bonus action",
       "level": 0,
       "school": "Transmutation",
       "effects": "For the duration, you can use your spellcasting ability instead of Strength for the attack and damage rolls of melee attacks using that weapon, and the weapon's damage die becomes a d8. The weapon also becomes magical, if it isn't already. The spell ends if you cast it again or if you let go of the weapon.",
@@ -9458,7 +9458,7 @@
         "somatic": true
       },
       "duration": "1 minute",
-      "castingTime": "bonus action",
+      "castingTime": "1 bonus action",
       "level": 2,
       "school": "Evocation",
       "attack": {
@@ -9489,7 +9489,7 @@
       },
       "duration": "up to 1 minute",
       "concentration": true,
-      "castingTime": "bonus action",
+      "castingTime": "1 bonus action",
       "level": 4,
       "school": "Evocation",
       "damage": {
@@ -9783,7 +9783,7 @@
       },
       "duration": "up to 1 minute",
       "concentration": true,
-      "castingTime": "bonus action",
+      "castingTime": "1 bonus action",
       "level": 5,
       "school": "Transmutation",
       "effects": "On each of your turns until the spell ends, you can use a bonus action to make two attacks with a weapon that uses ammunition from the quiver. Each time you make such a ranged attack, your quiver magically replaces the piece of ammunition you used with a similar piece of nonmagical ammunition. Any pieces of ammunition created by this spell disintegrate when the spell ends. If the quiver leaves your possession, the spell ends.",
@@ -10047,7 +10047,7 @@
       },
       "duration": "up to 1 minute",
       "concentration": true,
-      "castingTime": "bonus action",
+      "castingTime": "1 bonus action",
       "level": 1,
       "school": "Evocation",
       "damage": {
@@ -11102,7 +11102,7 @@
       },
       "duration": "up to 1 minute",
       "concentration": true,
-      "castingTime": "bonus action",
+      "castingTime": "1 bonus action",
       "level": 1,
       "school": "Evocation",
       "damage": {
