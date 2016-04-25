@@ -229,6 +229,31 @@
       }
     },
     {
+      "name": "Corrosive Touch",
+      "description": "Corrosive acid engulfs your hand as you try to touch a creature. Make a melee spell attack against the target. On a hit, the target takes 1d12 acid damage.",
+      "higherLevel": "The spell's damage increases by 1d12 when you reach 5th level (2d12), 11th level (3d12), and 17th level (4d12).",
+      "emote": "'s hand is engulfed in acid",
+      "range": "Touch",
+      "target": "a creature",
+      "components": {
+        "verbal": true,
+        "somatic": true
+      },
+      "duration": "Instantaneous",
+      "castingTime": "1 action",
+      "level": 0,
+      "school": "Conjuration",
+      "attack": {
+        "type": "melee",
+        "damage": "((@{level} + 1) / 6 + 0.5)d12",
+        "damageType": "acid"
+      },
+      "classes": [
+        "Sorcerer",
+        "Wizard"
+      ]
+    },
+    {
       "name": "Create Bonfire",
       "description": "You create a bonfire on ground that you can see within range. Until the spells ends, the bonfire fills a 5-foot cube. Any creature in the bonfire's space when you cast the spell must make a Dexterity saving throw. A creature takes 1d8 fire damage on a failed save, or half as much damage on a successful one. A creature must also make the saving throw when it enters the bonfire's space for the first time on a turn or ends its turn there.",
       "save": {
@@ -672,11 +697,11 @@
     },
     {
       "name": "Lightning Lure",
-      "description": "You create a lash of lightning energy that strikes at one creature of your choice that you can see within range. The target must succeed on a Strength saving throw or be pulled up to 10 feet in a straight line toward you and then take 1d10 lightning damage if it is within 5 feet of you.",
-      "higherLevel": "This spell's damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10).",
+      "description": "You create a lash of lightning energy that strikes at one creature of your choice that you can see within range. The target must succeed on a Strength saving throw or be pulled up to 10 feet in a straight line toward you and then take 1d12 lightning damage if it is within 5 feet of you.",
+      "higherLevel": "This spell's damage increases by 1d12 when you reach 5th level (2d12), 11th level (3d12), and 17th level (4d12).",
       "save": {
         "ability": "Strength",
-        "damage": "((@{level} + 1) / 6 + 0.5)d10",
+        "damage": "((@{level} + 1) / 6 + 0.5)d12",
         "damageType": "lightning",
         "condition": "if it is within 5 feet of you after being pulled",
         "saveFailure": "pulled up to 10 feet in a straight line toward you"
@@ -938,6 +963,17 @@
     {
       "name": "Sending",
       "level": 2
+    },
+
+    {
+      "name": "Shocking Grasp",
+      "description": "Lightning springs from your hand to deliver a shock to a creature you try to touch. Make a melee spell attack against the target. You have advantage on the attack roll if the target is wearing armor made of metal. On a hit, the target takes 1d10 lightning damage, and it can't take reactions until the start of its next turn.",
+      "higherLevel": "The spell's damage increases by 1d8 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10).",
+      "attack": {
+        "type": "melee",
+        "damage": "((@{level} + 1) / 6 + 0.5)d10",
+        "damageType": "lightning"
+      }
     },
     {
       "name": "Slow",
