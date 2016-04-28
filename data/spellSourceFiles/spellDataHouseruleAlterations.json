@@ -1024,10 +1024,9 @@
     },
     {
       "name": "True Strike",
-      "description": "Your magic grants you strikes that land true. On your next turn, you gain advantage on your attack rolls, provided that this spell hasn't ended.",
-      "emote": "'s magic grants {{GENDER_PRONOUN_HIM_HER}} strikes that land true",
-      "range": "Self",
-      "effects": "On your next turn, you gain advantage on your attack rolls, provided that this spell hasn't ended"
+      "castingTime": "1 bonus action",
+      "level": 1,
+      "effects": "On your next turn, you gain advantage on your first attack roll against the target, provided that this spell hasn't ended."
     },
     {
       "name": "Vampiric Touch",
