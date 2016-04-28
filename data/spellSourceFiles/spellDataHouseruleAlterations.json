@@ -1025,8 +1025,7 @@
     {
       "name": "True Strike",
       "castingTime": "1 bonus action",
-      "level": 1,
-      "effects": "On your next turn, you gain advantage on your first attack roll against the target, provided that this spell hasn't ended."
+      "level": 1
     },
     {
       "name": "Vampiric Touch",
