@@ -984,12 +984,10 @@
     },
     {
       "name": "Speak with Dead",
-      "ritual": true,
       "level": 2
     },
     {
       "name": "Speak with Plants",
-      "ritual": true,
       "level": 2
     },
     {
@@ -1070,7 +1068,7 @@
       "duration": "Up to 10 minutes",
       "concentration": true,
       "castingTime": "1 action",
-      "level": 6,
+      "level": 3,
       "school": "Evocation",
       "save": {
         "ability": "Dexterity",
