@@ -18693,7 +18693,6 @@
       ]
     },
     {
-      "challenge": "5",
       "name": "Werebear",
       "size": "Medium",
       "type": "humanoid (human, shapechanger)",
@@ -18708,6 +18707,7 @@
       "wisdom": "12",
       "charisma": "12",
       "skills": "Perception +7",
+      "challenge": "5",
       "damageImmunities": "bludgeoning, piercing, and slashing damage from nonmagical attacks that aren't silvered",
       "languages": "Common (can't speak in bear form)",
       "traits": [
