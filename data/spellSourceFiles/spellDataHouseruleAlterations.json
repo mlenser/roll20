@@ -302,17 +302,6 @@
       "school": "Necromancy"
     },
     {
-      "name": "Disintegrate",
-      "description": "A thin green ray springs from your pointing finger to a target that you can see within range. The target can be a creature, an object, or a creation of magical force, such as the wall created by wall of force.\nA creature targeted by this spell must make a Dexterity saving throw. On a failed save, the target takes 24d6 force damage. If this damage reduces the target to 0 hit points, it is disintegrated.\nA disintegrated creature and everything it is wearing and carrying, except magic items, are reduced to a pile of fine gray dust. The creature can be restored to life only by means of a true resurrection or a wish spell.\nThis spell automatically disintegrates a Large or smaller nonmagical object or a creation of magical force. If the target is a Huge or larger object or creation of force, this spell disintegrates a 10-foot-cube portion of it. A magic item is unaffected by this spell.",
-      "save": {
-        "ability": "Dexterity",
-        "damage": "24d6",
-        "damageType": "force",
-        "higherLevelDice": "3",
-        "higherLevelDie": "d6"
-      }
-    },
-    {
       "name": "Divine Word",
       "description": "You utter a divine word, imbued with the power that shaped the world at the dawn of creation. Choose any number of creatures you can see within range. Each creature that can hear you must make a Constitution saving throw. On a failed save, a creature suffers an effect based on its current hit points:\n&#8226; 50 hit points or fewer: deafened for 1 minute\n&#8226; 40 hit points or fewer: deafened and blinded for 10 minutes\n&#8226; 30 hit points or fewer: blinded, deafened, and stunned for 1 hour\n&#8226; 20 hit points or fewer: killed instantly.\nRegardless of its current hit points, a celestial, an elemental, a fey, or a fiend that fails its save is forced back to its plane of origin (if it isn't there already) and can't return to your current plane for 24 hours by any means short of a wish spell.",
       "save": {
