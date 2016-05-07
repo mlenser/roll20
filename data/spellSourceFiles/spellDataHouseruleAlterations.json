@@ -479,11 +479,11 @@
     },
     {
       "name": "Harm",
-      "description": "You unleash a virulent disease on a creature that you can see within range. The target must make a Constitution saving throw. On a failed save, it takes 18d6 necrotic damage, or half as much damage on a successful save. The damage can't reduce the target's hit points below 1. If the target fails the saving throw, its hit point maximum is reduced for 1 hour by an amount equal to the necrotic damage it took. Any effect that removes a disease allows a creature's hit point maximum to return to normal before that time passes.",
+      "description": "You unleash a virulent disease on a creature that you can see within range. The target must make a Constitution saving throw. On a failed save, it takes 14d8 necrotic damage, or half as much damage on a successful save. The damage can't reduce the target's hit points below 1. If the target fails the saving throw, its hit point maximum is reduced for 1 hour by an amount equal to the necrotic damage it took. Any effect that removes a disease allows a creature's hit point maximum to return to normal before that time passes.",
       "level": 5,
       "save": {
         "ability": "Constitution",
-        "damage": "18d6",
+        "damage": "14d8",
         "damageType": "necrotic",
         "saveSuccess": "half damage"
       }
@@ -605,12 +605,12 @@
     },
     {
       "name": "Immolation",
-      "description": "Flames wreathe one creature you can see within range. The target must make a Dexterity saving throw. It takes 11d6 fire damage on a failed save, or half as much damage on a successful one. On a failed save, the target also burns for the spell's duration. The burning target sheds bright light in a 30-foot radius and dim light for an additional 30 feet. At the end of each of its turns, the target repeats the saving throw. It takes 11d6 fire damage on a failed save, and the spell ends on a successful one. These magical flames can't be extinguished through nonmagical means.\nIf damage from this spell reduces a target to 0 hit points, the target is turned to ash.",
+      "description": "Flames wreathe one creature you can see within range. The target must make a Dexterity saving throw. It takes 10d6 fire damage on a failed save, or half as much damage on a successful one. On a failed save, the target also burns for the spell's duration. The burning target sheds bright light in a 30-foot radius and dim light for an additional 30 feet. At the end of each of its turns, the target repeats the saving throw. It takes 11d6 fire damage on a failed save, and the spell ends on a successful one. These magical flames can't be extinguished through nonmagical means.\nIf damage from this spell reduces a target to 0 hit points, the target is turned to ash.",
       "save": {
         "ability": "Dexterity",
-        "damage": "11d6",
+        "damage": "10d6",
         "damageType": "fire",
-        "saveFailure": "the target also burns for the spell's duration. The burning target sheds bright light in a 30 ft radius and dim light for an additional 30 ft. At the end of each of its turns, the target repeats the saving throw. It takes 11d6 fire damage on a failed save, and the spell ends on a successful one. These magical flames can't be extinguished through nonmagical means.",
+        "saveFailure": "the target also burns for the spell's duration. The burning target sheds bright light in a 30 ft radius and dim light for an additional 30 ft. At the end of each of its turns, the target repeats the saving throw. It takes 10d6 fire damage on a failed save, and the spell ends on a successful one. These magical flames can't be extinguished through nonmagical means.",
         "saveSuccess": "half damage"
       }
     },
@@ -732,6 +732,17 @@
       },
       "duration": "1 hour",
       "effects": "The target's speed increases by 10 ft until the spell ends. In addition, the target can jump three times their normal distance, though they can't jump farther than your remaining movement would allow."
+    },
+    {
+      "name": "Maelstrom",
+      "description": "A mass of 5-foot-deep water appears and swirls in a 30-foot radius centered on a point you can see within range. The point must be on ground or in a body of water. Until the spell ends, that area is difficult terrain, and any creature that starts its turn there must succeed on a Strength saving throw or take 8d6 bludgeoning damage and be pulled 10 feet toward the center.",
+      "school": "Evocation",
+      "save": {
+        "ability": "Strength",
+        "damage": "8d6",
+        "damageType": "bludgeoning",
+        "saveFailure": "be pulled 10 feet toward the center"
+      }
     },
     {
       "name": "Magic Mouth",
