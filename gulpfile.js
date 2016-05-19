@@ -2,116 +2,83 @@ var gulp = require('gulp');
 var inject = require('gulp-inject');
 var uglify = require('gulp-uglify');
 var fs = require('fs');
-var rename = require('gulp-rename');
 var jsoncombine = require('gulp-jsoncombine');
-var formatVersion = '0.1.1';
+var eol = require('gulp-eol');
 
-function search(nameKey, myArray){
-	for (var i=0; i < myArray.length; i++) {
-		if (myArray[i].name === nameKey) {
-			return myArray[i];
-		}
-	}
+function entitySorter(a, b) {
+  if (a.name < b.name) {
+    return -1;
+  } else if (a.name > b.name) {
+    return 1;
+  }
+  return 0;
 }
 
-function arrayObjectIndexOf(myArray, searchTerm, property) {
-	for(var i = 0, len = myArray.length; i < len; i++) {
-		if (myArray[i][property] === searchTerm) {
-			return i;
-		}
-	}
-	return -1;
+function compileSources(sources, arrayProp, patch) {
+  var entities = {};
+  entities[arrayProp] = [];
+  Object.keys(sources).forEach(function (sourceName) {
+    var source = sources[sourceName];
+    if (!source.version) {
+      throw new Error('JSON file: ' + source + ' has no version number');
+    }
+    if (!entities.version) {
+      entities.version = source.version;
+    }
+    else if (entities.version !== source.version) {
+      throw new Error('JSON file: ' + source + ' has version number ' + source.version + ' that is incompatible with other files');
+    }
+
+    entities[arrayProp] = entities[arrayProp].concat(source[arrayProp]);
+    entities.patch = patch;
+  });
+
+  entities[arrayProp].sort(entitySorter);
+  return entities;
 }
 
-function sortArray (array) {
-	return array.sort(function(a, b) {
-		if(a.name < b.name) {
-			return -1;
-		} else if(a.name > b.name) {
-			return 1;
-		}
-		return 0;
-	});
+function makeJSOutput(entityLists) {
+  var output = "on('ready', function() {\n";
+  entityLists.forEach(function (entityList) {
+    output += '  ShapedScripts.addEntities(' + JSON.stringify(entityList) + ');\n';
+  });
+  output += '});\n';
+  return output;
 }
 
-gulp.task('compile', function() {
-	return gulp.src('./scripts/5e-shaped-scripts.js')
-		.pipe(uglify())
-		.pipe(gulp.dest('./scripts/dist'));
+gulp.task('compileSpells', function () {
+  gulp.src('./data/spellSourceFiles/spellData.json')
+    .pipe(jsoncombine('5e-spells.js', function (sources) {
+      return new Buffer(makeJSOutput([compileSources(sources, 'spells')]));
+    }))
+    .pipe(eol())
+    .pipe(gulp.dest('./data'));
 });
 
-gulp.task('compileSpells', function() {
-	gulp.src('./data/spells/spellData.json')
-		.pipe(jsoncombine('5e-spells.js', function(sources) {
-			var spells = [];
-			Object.keys(sources).forEach(function(source) {
-				spells = spells.concat(sources[source]);
-			});
+gulp.task('compileHouseruledSpells', function () {
+  gulp.src(['./data/spellSourceFiles/*.json', '!**/spellData.json'])
+    .pipe(jsoncombine('5e-spells-houserules.js', function (sources) {
+      var houseRuled = Object.keys(sources)
+        .map(function (sourceKey) {
+          return sources[sourceKey];
+        });
+      var output = makeJSOutput([compileSources(houseRuled, 'spells', true)]);
 
-			sortArray(spells);
-
-			return new Buffer('fifthSpells = { version: "' + formatVersion + '", spells:' + JSON.stringify(spells) + '};');
-		}))
-		.pipe(gulp.dest('./scripts/dist'));
+      return new Buffer(output);
+    }))
+    .pipe(eol())
+    .pipe(gulp.dest('./data'));
 });
 
-gulp.task('compileHouseruledSpells', function() {
-	gulp.src('./data/spells/*.json')
-		.pipe(jsoncombine('5e-spells-houserules.js', function(sources) {
-			var spells = [];
-			Object.keys(sources).forEach(function(source) {
-				if(source === 'spellData') {
-					spells = spells.concat(sources[source]);
-				} else {
-					for (var key = 0; key < sources[source].length; key++) {
-						var houseruleSpell = sources[source][key],
-							spellToAdjust = search(houseruleSpell.name, spells);
-
-						if(!spellToAdjust) {
-							spells.push(houseruleSpell);
-						} else {
-							if(houseruleSpell.remove) {
-								var indexOfSpell = arrayObjectIndexOf(spells, spellToAdjust.name, 'name');
-								spells.splice(indexOfSpell, 1);
-								console.log('removed', spellToAdjust.name, indexOfSpell);
-								continue;
-							}
-
-							for (var property in houseruleSpell) {
-								if (houseruleSpell.hasOwnProperty(property)) {
-									if (property === 'newName') {
-										spellToAdjust.name = houseruleSpell[property];
-									} else if (property !== 'name' && property !== 'newName') {
-										spellToAdjust[property] = houseruleSpell[property];
-									}
-								}
-							}
-						}
-					}
-				}
-
-			});
-
-			sortArray(spells);
-
-			return new Buffer('fifthSpells = { version: "' + formatVersion + '", spells:' + JSON.stringify(spells) + '};');
-		}))
-		.pipe(gulp.dest('./scripts/dist'));
+gulp.task('compileMonsters', function () {
+  gulp.src('./data/monsterSourceFiles/*.json')
+    .pipe(jsoncombine('5e-monsters.js', function (sources) {
+      return new Buffer(makeJSOutput([compileSources(sources, 'monsters')]));
+    }))
+    .pipe(eol())
+    .pipe(gulp.dest('./data'));
 });
 
-gulp.task('compileMonsters', function() {
-	gulp.src('./data/monsters/*.json')
-		.pipe(jsoncombine('5e-monsters.js', function(sources) {
-			var monsters = [];
-			Object.keys(sources).forEach(function(source) {
-				monsters = monsters.concat(sources[source]);
-			});
+gulp.task('compileAll', ['compileSpells', 'compileHouseruledSpells', 'compileMonsters']);
 
-			sortArray(monsters);
-
-			return new Buffer('fifthMonsters = { version: "' + formatVersion + '", monsters:' + JSON.stringify(monsters) + '};');
-		}))
-		.pipe(gulp.dest('./scripts/dist'));
-});
-
-gulp.task('compileAll', ['compile', 'compileSpells', 'compileHouseruledSpells', 'compileMonsters']);
+gulp.task('default', ['compileAll']);
