@@ -139,7 +139,7 @@
     },
     {
       "name": "Bones of the Earth",
-      "level": 4
+      "level": 5
     },
     {
       "name": "Blinding Smite",
@@ -483,7 +483,7 @@
       "level": 5,
       "save": {
         "ability": "Constitution",
-        "damage": "14d8",
+        "damage": "18d8",
         "damageType": "necrotic",
         "saveSuccess": "half damage"
       }
