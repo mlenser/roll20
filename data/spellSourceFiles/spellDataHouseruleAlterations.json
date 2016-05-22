@@ -116,6 +116,16 @@
       "school": "Necromancy"
     },
     {
+      "name": "Banishing Smite",
+      "description": "The next time you hit a creature with a weapon attack before this spell ends, your weapon crackles with force, and the attack deals an extra 8d6 force damage to the target. Additionally, if this attack reduces the target to 50 hit points or fewer, you banish it. If the target is native to a different plane of existence than the one you're on, the target disappears, returning to its home plane. If the target is native to the plane you're on, the creature vanishes into a harmless demiplane. While there, the target is incapacitated. It remains there until the spell ends, at which point the target reappears in the space it left or in the nearest unoccupied space if that space is occupied.",
+      "damage": {
+        "damage": "5d10",
+        "damageType": "force",
+        "higherLevelDice": "2",
+        "higherLevelDie": "d4"
+      }
+    },
+    {
       "name": "Beacon of Hope",
       "duration": "1 minute",
       "concentration": false
@@ -143,18 +153,22 @@
     },
     {
       "name": "Blinding Smite",
+      "description": "The next time you hit a creature with a melee weapon attack during this spell's duration, your weapon flares with bright light, and the attack deals an extra 5d8 radiant damage to the target. Additionally, the target must succeed on a Constitution saving throw or be blinded until the spell ends.\nA creature blinded by this spell makes another Constitution saving throw at the end of each of its turns. On a successful save, it is no longer blinded.",
       "damage": {
-        "damage": "4d6",
-        "damageType": "radiant"
+        "damage": "5d6",
+        "damageType": "radiant",
+        "higherLevelDice": "2",
+        "higherLevelDie": "d4"
       }
     },
     {
       "name": "Branding Smite",
+      "description": "The next time you hit a creature with a weapon attack before this spell ends, the weapon gleams with astral radiance as you strike. The attack deals an extra 4d6 radiant damage to the target, which becomes visible if it's invisible, and the target sheds dim light in a 5-foot radius and can't become invisible until the spell ends.",
       "damage": {
-        "damage": "3d6",
+        "damage": "4d6",
         "damageType": "radiant",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDice": "2",
+        "higherLevelDie": "d4"
       }
     },
     {
@@ -978,10 +992,23 @@
       }
     },
     {
+      "name": "Searing Smite",
+      "description": "The next time you hit a creature with a melee weapon attack during the spell's duration, your weapon flares with white-hot intensity, and the attack deals an extra 2d6 fire damage to the target and causes the target to ignite in flames. At the start of each of its turns until the spell ends, the target must make a Constitution saving throw. On a failed save, it takes 1d6 fire damage. On a successful save, the spell ends. If the target or a creature within 5 feet of it uses an action to put out the flames, or if some other effect douses the flames (such as the target being submerged in water), the spell ends.",
+      "damage": {
+        "damage": "2d4",
+        "damageType": "fire",
+        "secondaryDamage": "1d6",
+        "secondaryDamageType": "fire",
+        "higherLevelDice": "2",
+        "higherLevelDie": "d4",
+        "higherLevelSecondaryDice": "0.49",
+        "higherLevelSecondaryDie": "d6"
+      }
+    },
+    {
       "name": "Sending",
       "level": 2
     },
-
     {
       "name": "Shocking Grasp",
       "description": "Lightning springs from your hand to deliver a shock to a creature you try to touch. Make a melee spell attack against the target. You have advantage on the attack roll if the target is wearing armor made of metal. On a hit, the target takes 1d10 lightning damage, and it can't take reactions until the start of its next turn.",
@@ -1013,6 +1040,16 @@
       "level": 1
     },
     {
+      "name": "Staggering Smite",
+      "description": "The next time you hit a creature with a melee weapon attack during this spell's duration, your weapon pierces both body and mind, and the attack deals an extra 7d6 psychic damage to the target. The target must make a Wisdom saving throw. On a failed save, it has disadvantage on attack rolls and ability checks, and can't take reactions, until the end of its next turn.",
+      "damage": {
+        "damage": "7d6",
+        "damageType": "psychic",
+        "higherLevelDice": "2",
+        "higherLevelDie": "d4"
+      }
+    },
+    {
       "name": "Sword Burst",
       "description": "You create a momentary circle of spectral blades that sweep around you. Each creature within range, other than you, must succeed on a Dexterity saving throw or take 1d8 force damage.",
       "higherLevel": "This spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).",
@@ -1040,6 +1077,15 @@
         "ability": "Constitution",
         "damage": "((@{level} + 1) / 6 + 0.5)d10",
         "damageType": "thunder"
+      }
+    },
+    {
+      "name": "Thunderous Smite",
+      "damage": {
+        "damage": "2d6",
+        "damageType": "thunder",
+        "higherLevelDice": "2",
+        "higherLevelDie": "d4"
       }
     },
     {
@@ -1172,6 +1218,15 @@
       "save": {
         "ability": "Strength",
         "saveFailure": "the creature is restrained as long as it remains in the webs or until it breaks free.\nA creature restrained by the webs can use its action to make a Strength check against your spell save DC. If it succeeds, it is no longer restrained.\nThe webs are flammable. Any 5 ft cube of webs exposed to fire burns away in 1 round, dealing 2d4 fire damage to any creature that starts its turn in the fire."
+      }
+    },
+    {
+      "name": "Wrathful Smite",
+      "damage": {
+        "damage": "2d6",
+        "damageType": "psychic",
+        "higherLevelDice": "2",
+        "higherLevelDie": "d4"
       }
     }
   ]
