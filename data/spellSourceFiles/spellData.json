@@ -11106,8 +11106,8 @@
       "level": 1,
       "school": "Evocation",
       "damage": {
-        "damage": "2d6",
-        "damageType": "radiant"
+        "damage": "1d6",
+        "damageType": "psychic"
       },
       "save": {
         "condition": "if the target is a creature",
