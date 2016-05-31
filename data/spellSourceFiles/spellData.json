@@ -3630,7 +3630,9 @@
         "ability": "Dexterity",
         "damage": "3d12",
         "damageType": "bludgeoning",
-        "saveSuccess": "half damage"
+        "saveSuccess": "half damage",
+        "higherLevelDice": "1",
+        "higherLevelDie": "d12"
       },
       "effects": "The ground in that area becomes difficult terrain until cleared away. Each 5 ft square portion of the area requires at least 1 minute to clear by hand.",
       "classes": [
