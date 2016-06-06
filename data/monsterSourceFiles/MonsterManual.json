@@ -9698,7 +9698,7 @@
           "text": "The hag magically turns invisible until she attacks or casts a spell, or until her concentration ends (as if concentrating on a spell). While invisible, she leaves no physical evidence of her passage, so she can be tracked only by magic. Any equipment she wears or carries is invisible with her."
         }
       ],
-      "spells": "dancing lights, minor illusion, vicious mockery"
+      "spells": "dancing lights, minor illusion, vicious mockery, identify, ray of sickness, hold person, locate object, bestow curse, counterspell, lightning bolt, phantasmal killer, polymorph, contact other plane, scrying, eye bite"
     },
     {
       "name": "Green Slaad",
@@ -13392,7 +13392,7 @@
           "recharge": "1/Day"
         }
       ],
-      "spells": "detect magic, magic missile, plane shift, ray of enfeeblement, sleep"
+      "spells": "detect magic, magic missile, plane shift, ray of enfeeblement, sleep, identify, ray of sickness, hold person, locate object, bestow curse, counterspell, lightning bolt, phantasmal killer, polymorph, contact other plane, scrying, eye bite"
     },
     {
       "name": "Nightmare",
@@ -15910,7 +15910,8 @@
           "name": "Illusory Appearance",
           "text": "The hag covers herself and anything she is wearing or carrying with a magical illusion that makes her look like an ugly creature of her general size and humanoid shape. The effect ends if the hag takes a bonus action to end it or if she dies.\nThe changes wrought by this effect fail to hold up to physical inspection. For example, the hag could appear to have no claws, but someone touching her hand might feel the claws. Otherwise, a creature must take an action to visually inspect the illusion and succeed on a DC 16 Intelligence (Investigation) check to discern that the hag is disguised."
         }
-      ]
+      ],
+      "spells": "identify, ray of sickness, hold person, locate object, bestow curse, counterspell, lightning bolt, phantasmal killer, polymorph, contact other plane, scrying, eye bite"
     },
     {
       "name": "Sea Horse",
