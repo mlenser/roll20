@@ -3516,7 +3516,9 @@
         "ability": "Dexterity",
         "damage": "3d12",
         "damageType": "bludgeoning",
-        "saveSuccess": "half damage"
+        "saveSuccess": "half damage",
+        "higherLevelDice": "1",
+        "higherLevelDie": "d12"
       },
       "classes": [
         "Druid",
