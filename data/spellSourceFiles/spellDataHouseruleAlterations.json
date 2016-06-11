@@ -14,7 +14,7 @@
         "verbal": true,
         "somatic": true
       },
-      "duration": "Up to 10 minutes",
+      "duration": "up to 10 minutes",
       "concentration": true,
       "castingTime": "1 action",
       "level": 6,
@@ -89,7 +89,7 @@
         "material": true,
         "materialMaterial": "a piece of tree struck by lightning"
       },
-      "duration": "Up to 1 minute",
+      "duration": "up to 1 minute",
       "concentration": true,
       "castingTime": "1 action",
       "level": 2,
@@ -142,7 +142,7 @@
     },
     {
       "name": "Blur",
-      "duration": "Up to 10 minutes"
+      "duration": "up to 10 minutes"
     },
     {
       "name": "Bones of the Earth",
@@ -207,7 +207,7 @@
         "material": true,
         "materialMaterial": "a small poisonous beetle"
       },
-      "duration": "Up to 1 minute",
+      "duration": "up to 1 minute",
       "concentration": true,
       "castingTime": "1 action",
       "level": 2,
@@ -309,6 +309,10 @@
     {
       "name": "Death Ward",
       "school": "Necromancy"
+    },
+    {
+      "name": "Disguise Self",
+      "higherLevel": "When you cast this spell using a spell slot of 2nd level or higher, you can target one additional humanoid for each slot above 1st."
     },
     {
       "name": "Divine Word",
@@ -462,7 +466,7 @@
         "material": true,
         "materialMaterial": "A piece of vine"
       },
-      "duration": "Up to 1 minute",
+      "duration": "up to 1 minute",
       "concentration": true,
       "castingTime": "1 action",
       "level": 4,
@@ -601,6 +605,27 @@
       "classes": [
         "Druid",
         "Sorcerer",
+        "Wizard"
+      ]
+    },
+    {
+      "name": "Illusion of Calm",
+      "description": "You create an illusory double that takes the same space as you. That double makes it look like you are standing still, even when you are not. While under the effects of this spell, your movement doesn't provoke opportunity attacks.\nWhen a creature hits you with an attack of any type, it can make an Intelligence saving throw. On a successful saving throw, it successfully disbelieves and the spell's effect ends for that creature.",
+      "emote": "creates an illusory double",
+      "range": "Self",
+      "components": {
+        "verbal": true,
+        "somatic": true
+      },
+      "duration": "up to 1 minute",
+      "concentration": true,
+      "castingTime": "1 action",
+      "level": 1,
+      "school": "Illusion",
+      "classes": [
+        "Bard",
+        "Sorcerer",
+        "Warlock",
         "Wizard"
       ]
     },
@@ -836,7 +861,7 @@
         "material": true,
         "materialMaterial": "A bit of gauze and a wisp of smoke"
       },
-      "duration": "Up to 1 minute",
+      "duration": "up to 1 minute",
       "concentration": true,
       "castingTime": "1 action",
       "level": 3,
@@ -903,6 +928,33 @@
         "damageType": "poison",
         "saveSuccess": "half damage"
       }
+    },
+    {
+      "name": "Poisoning Touch",
+      "description": "You sicken a creature's body. The target must make a Constitution saving throw or be poisoned until the end of your next turn.",
+      "emote": "sickens a creature's body",
+      "range": "15 ft.",
+      "target": "a creature",
+      "components": {
+        "verbal": true,
+        "somatic": true,
+        "material": true,
+        "materialMaterial": "a drop of sweat"
+      },
+      "duration": "Instantaneous",
+      "castingTime": "1 action",
+      "level": 0,
+      "school": "Necromancy",
+      "save": {
+        "ability": "Constitution",
+        "saveFailure": "or be poisoned until the end of your next turn"
+      },
+      "classes": [
+        "Druid",
+        "Cleric",
+        "Sorcerer",
+        "Wizard"
+      ]
     },
     {
       "name": "Power Word Heal",
@@ -1128,7 +1180,7 @@
         "material": true,
         "materialMaterial": "A small piece of quartz"
       },
-      "duration": "Up to 10 minutes",
+      "duration": "up to 10 minutes",
       "concentration": true,
       "castingTime": "1 action",
       "level": 3,
@@ -1180,7 +1232,7 @@
         "material": true,
         "materialMaterial": "A square of red cloth"
       },
-      "duration": "Up to 1 minute",
+      "duration": "up to 1 minute",
       "concentration": true,
       "castingTime": "bonus action",
       "level": 6,
