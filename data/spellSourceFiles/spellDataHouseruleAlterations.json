@@ -27,7 +27,6 @@
         "higherLevelDice": "1",
         "higherLevelDie": "d8"
       },
-      "effects": "The fog spreads around corners. It lasts for the duration or until strong wind disperses the fog, ending the spell. Its area is heavily obscured.\nCreatures are affected even if they hold their breath or don't need to breathe.\nThe fog moves 10 ft away from you at the start of each of your turns, rolling along the surface of the ground. The vapors, being heavier than air, sink to the lowest level of the land, even pouring down openings.",
       "classes": [
         "Sorcerer",
         "Wizard"
@@ -70,7 +69,6 @@
         "higherLevelDice": "1",
         "higherLevelDie": "d8"
       },
-      "effects": "A creature killed by this spell is affected by rigor mortis.",
       "classes": [
         "Sorcerer",
         "Wizard"
@@ -104,7 +102,6 @@
         "higherLevelDice": "1",
         "higherLevelDie": "d6"
       },
-      "effects": "As a bonus action, you can move the sphere up to 30 ft. If you ram the sphere into a creature, that creature must make the saving throw against the sphere's damage, and the sphere stops moving this turn.",
       "classes": [
         "Druid",
         "Sorcerer",
@@ -193,8 +190,7 @@
         "type": "ranged",
         "damage": "((@{level} + 1) / 6 + 0.5)d10",
         "damageType": "necrotic"
-      },
-      "effects": "it can't regain hit points until the start of your next turn. Until then, the hand clings to the target."
+      }
     },
     {
       "name": "Cloud of Acid",
@@ -242,8 +238,7 @@
     {
       "name": "Color Spray",
       "description": "A dazzling array of flashing, colored light springs from your hand. Roll 6d10; the total is how many hit points of creatures this spell can effect. Creatures in a 15-foot cone originating from you are affected in ascending order of their current hit points (ignoring unconscious creatures and creatures that can't see).\nStarting with the creature that has the lowest current hit points, each creature affected by this spell is blinded until the spell ends. Subtract each creature's hit points from the total before moving on to the creature with the next lowest hit points. A creature's hit points must be equal to or less than the remaining total for that creature to be affected. At the end of each affected creature's turns, the creature can make an Intelligence saving throw. If it succeeds, this effect ends for that target.",
-      "duration": "1 minute",
-      "effects": "Roll 6d10 ([[6d10]]); the total is how many hit points of creatures this spell can effect. Targets are affected in ascending order of their current hit points (ignoring unconscious creatures and creatures that can't see).\nStarting with the creature that has the lowest current hit points, each creature affected by this spell is blinded until the spell ends. Subtract each creature's hit points from the total before moving on to the creature with the next lowest hit points. A creature's hit points must be equal to or less than the remaining total for that creature to be affected.At the end of each affected creature's turns, the creature can make an Intelligence saving throw. If it succeeds, this effect ends for that target. At the end of each affected creature's turns, the creature can make an Intelligence saving throw. If it succeeds, this effect ends for that target."
+      "duration": "1 minute"
     },
     {
       "name": "Continual Flame",
@@ -360,7 +355,6 @@
         "higherLevelDice": "1",
         "higherLevelDie": "d6"
       },
-      "effects": "The acid can eat through objects in the area that aren't being worn or carried.",
       "classes": [
         "Sorcerer",
         "Warlock",
@@ -387,7 +381,6 @@
         "ability": "Constitution",
         "saveFailure": "blinded until the end of it's next turn"
       },
-      "effects": "Whenever a creature within 5 feet of you hits you with a melee attack, the pustules burst open. The attacker takes 1d8 points of acid damage and must make a Constitution saving throw as outlined above",
       "classes": [
         "Sorcerer",
         "Warlock",
@@ -436,8 +429,7 @@
     {
       "name": "Flame Arrows",
       "description": "You touch a quiver containing arrows or bolts. When a target is hit by a ranged weapon attack using a piece of ammunition drawn from the quiver, the target takes an extra 1d6 fire damage. The spell's magic ends on the piece of ammunition when it hits or misses. When the quiver runs out of ammunition is takes an action to fill it from another quiver.",
-      "higherLevel": "When you cast this spell using a spell slot of 4th or 5th level, you can maintain your concentration on the spell for up to 8 hours. When you use a spell slot of 6th level or higher, you can maintain your concentration on the spell for up to 24 hours.",
-      "effects": "When a target is hit by a ranged weapon attack using a piece of ammunition drawn from the quiver, the target takes an extra 1d6 fire damage. The spell's magic ends on the piece of ammunition when it hits or misses. When the quiver runs out of ammunition it takes an action to fill it from another quiver."
+      "higherLevel": "When you cast this spell using a spell slot of 4th or 5th level, you can maintain your concentration on the spell for up to 8 hours. When you use a spell slot of 6th level or higher, you can maintain your concentration on the spell for up to 24 hours."
     },
     {
       "name": "Frostbite",
@@ -453,8 +445,7 @@
     {
       "name": "Glyph of Warding",
       "description": "When you cast this spell, you inscribe a glyph that harms other creatures, either upon a surface (such as a table or a section of floor or wall) or within an object that can be closed (such as a book, a scroll, or a treasure chest) to conceal the glyph. If you choose a surface, the glyph can cover an area of the surface no larger than 10 feet in diameter. If the spell is cast without consuming the powered diamond then the spell will only last an hour. If you choose an object, that object must remain in its place; if the object is moved more than 10 feet from where you cast this spell, the glyph is broken, and the spell ends without being triggered.\nThe glyph is nearly invisible and requires a successful Intelligence (Investigation) check against your spell save DC to be found.\nYou decide what triggers the glyph when you cast the spell. For glyphs inscribed on a surface, the most typical triggers include touching or standing on the glyph, removing another object covering the glyph, approaching within a certain distance of the glyph, or manipulating the object on which the glyph is inscribed. For glyphs inscribed within an object, the most commontriggers include opening that object, approaching within a certain distance of the object, or seeing or reading the glyph. Once a glyph is triggered, this spell ends.\nYou can further refine the trigger so the spell activates only under certain circumstances or according to physical characteristics (such as height or weight), creature kind (for example, the ward could be set to affect aberrations or drow), or alignment. You can also set conditions for creatures that don't trigger the glyph, such as those w ho say a certain password.\nWhen you inscribe the glyph, choose explosive runes or a spell glyph.\nExplosive Runes. When triggered, the glyph erupts with magical energy in a 20-foot-radius sphere centered on the glyph. The sphere spreads around corners. Each creature in the area must make a Dexterity saving throw. A creature takes 5d8 acid, cold, fire, lightning, or thunder damage on a failed saving throw (your choice when you create the glyph), or half as much damage on a successful one.\nSpell Glyph. You can store a prepared spell of 3rd level or lower in the glyph by casting it as part of creating the glyph. The spell must target a single creature or an area. The spell being stored has no immediate effect when cast in this way. When the glyph is triggered, the stored spell is cast. If the spell has a target, it targets the creature that triggered the glyph. If the spell affects an area, the area is centered on that creature. If the spell summons hostile creatures or creates harmful objects or traps, they appear as close as possible to the intruder and attack it. If the spell requires concentration, it lasts until the end of its full duration.",
-      "castingTime": "1 minute",
-      "effects": "If the spell is cast without consuming the powered diamond then the spell will only last an hour. If you choose an object, that object must remain in its place; if the object is moved more than 10 ft from where you cast this spell, the glyph is broken, and the spell ends without being triggered.\nThe glyph is nearly invisible and requires a successful Intelligence (Investigation) check against your spell save DC to be found.\nYou decide what triggers the glyph when you cast the spell. For glyphs inscribed on a surface, the most typical triggers include touching or standing on the glyph, removing another object covering the glyph, approaching within a certain distance of the glyph, or manipulating the object on which the glyph is inscribed. For glyphs inscribed within an object, the most commontriggers include opening that object, approaching within a certain distance of the object, or seeing or reading the glyph. Once a glyph is triggered, this spell ends.\nYou can further refine the trigger so the spell activates only under certain circumstances or according to physical characteristics (such as height or weight), creature kind (for example, the ward could be set to affect aberrations or drow), or alignment. You can also set conditions for creatures that don't trigger the glyph, such as those w ho say a certain password.\nWhen you inscribe the glyph, choose explosive runes or a spell glyph.\nExplosive Runes. When triggered, the glyph erupts with magical energy in a 20 ftradius sphere centered on the glyph. The sphere spreads around corners. Each creature in the area must make a Dexterity saving throw. A creature takes 5d8 acid, cold, fire, lightning, or thunder damage on a failed saving throw (your choice when you create the glyph), or half as much damage on a successful one.\nSpell Glyph. You can store a prepared spell of 3rd level or lower in the glyph by casting it as part of creating the glyph. The spell must target a single creature or an area. The spell being stored has no immediate effect when cast in this way. When the glyph is triggered, the stored spell is cast. If the spell has a target, it targets the creature that triggered the glyph. If the spell affects an area, the area is centered on that creature. If the spell summons hostile creatures or creates harmful objects or traps, they appear as close as possible to the intruder and attack it. If the spell requires concentration, it lasts until the end of its full duration."
+      "castingTime": "1 minute"
     },
     {
       "name": "Grasping Vine",
@@ -482,7 +473,6 @@
         "damageType": "bludgeoning",
         "saveFailure": "restrained for the spell's duration"
       },
-      "effects": "For the duration, these vines turn the ground in the area into difficult terrain. A creature that starts its turn in the area and is already restrained by the vines takes the damage again. A creature restrained by the vines can use its action to make a Strength or Dexterity check (its choice) against your spell save DC. On a success, it frees itself.",
       "classes": [
         "Druid",
         "Ranger"
@@ -541,7 +531,6 @@
         "damage": "((@{level} + 1) / 6 + 0.5)d8",
         "damageType": "bludgeoning"
       },
-      "effects": "target is pushed back 10 ft. This spells also extinguishes any normal fire on a creature or object, or in a 5 ft square. Magical fire is unaffected.",
       "classes": [
         "Druid",
         "Sorcerer",
@@ -574,7 +563,6 @@
         "higherLevelDice": "1",
         "higherLevelDie": "d6"
       },
-      "effects": "A creature that enters the area or ends its turn there must also succeed on a Dexterity saving throw or fall prone.\nA 5 ft square of ice has 3 hit points. The ice is an instantaneous effect, but persists as non-magical ice. Under temperate conditions, the ice lasts 1 minute. In tropical environments, it might last only half as long. In cold environments where ice and snow persist without melting, it could last indefinitely.",
       "classes": [
         "Druid",
         "Ranger",
@@ -610,7 +598,6 @@
         "saveSuccess": "half damage",
         "saveFailure": "fall prone"
       },
-      "effects": "Each stalagmite-like icicle affects a 5-foot square and tapers to a height of 10 feet.\nIce spears created by this spell persist. They melt as normal depending on the surrounding environment. They can provide cover. An ice spear has 12 AC and 30 hit points.",
       "classes": [
         "Druid",
         "Sorcerer",
@@ -630,18 +617,15 @@
     },
     {
       "name": "Investiture of Flame",
-      "description": "Flames race across your body, shedding bright light in a 30-foot radius and dim light for an additional 30 feet for the spell's duration. The flames don't harm you. Until the spell ends, you gain the following benefits:\n- You are immune to fire damage and have resistance to cold damage.\n- Any creature that moves within 5 feet of you for the first time on a turn or ends its turn there takes 1d10 fire damage.\n- You can use your action to create a line of fire 30 feet long and 5 feet wide extending from you in a direction you choose. Each creature in the line must make a Dexterity saving throw. A creature takes 4d8 fire damage on a failed save, or half as much damage on a successful one.",
-      "effects": "the light sheds bright light in a 30 ft radius and dim light for an additional 30 ft for the spell's duration. The flames don't harm you. Until the spell ends, you gain the following benefits:\n- You are immune to fire damage and have resistance to cold damage.\n- Any creature that moves within 5 ft of you for the first time on a turn or ends its turn there takes 1d10 fire damage.\n- You can use your action to create a line of fire 30 ft long and 5 feet wide extending from you in a direction you choose. Each creature in the line must make a Dexterity saving throw. A creature takes 4d8 fire damage on a failed save, or half as much damage on a successful one."
+      "description": "Flames race across your body, shedding bright light in a 30-foot radius and dim light for an additional 30 feet for the spell's duration. The flames don't harm you. Until the spell ends, you gain the following benefits:\n- You are immune to fire damage and have resistance to cold damage.\n- Any creature that moves within 5 feet of you for the first time on a turn or ends its turn there takes 1d10 fire damage.\n- You can use your action to create a line of fire 30 feet long and 5 feet wide extending from you in a direction you choose. Each creature in the line must make a Dexterity saving throw. A creature takes 4d8 fire damage on a failed save, or half as much damage on a successful one."
     },
     {
       "name": "Investiture of Ice",
-      "description": "Until the spell ends, ice rimes your body, and you gain the following benefits:\n- You are immune to cold damage and have resistance to fire damage.\n- You can move across difficult terrain created by ice or snow without spending extra movement.\n- The ground in a 10-foot radius around you is icy and is difficult terrain for creatures other than you. The radius moves with you.\n- You can use your action to create a 30-foot cone of freezing wind extending from your outstretched hand in a direction you choose. Each creature in the cone must make a Constitution saving throw. A creature takes 5d6 cold damage on a failed save, or half as much damage on a successful one. A creature that fails its save against this effect has its speed halved until the start of your next turn.",
-      "effects": "You gain the following benefits:\n- You are immune to cold damage and have resistance to fire damage.\n- You can move across difficult terrain created by ice or snow without spending extra movement.\n- The ground in a 10 ft radius around you is icy and is difficult terrain for creatures other than you. The radius moves with you.\n- You can use your action to create a 30 ft cone of freezing wind extending from your outstretched hand in a direction you choose. Each creature in the cone must make a Constitution saving throw. A creature takes 5d6 cold damage on a failed save, or half as much damage on a successful one. A creature that fails its save against this effect has its speed halved until the start of your next turn."
+      "description": "Until the spell ends, ice rimes your body, and you gain the following benefits:\n- You are immune to cold damage and have resistance to fire damage.\n- You can move across difficult terrain created by ice or snow without spending extra movement.\n- The ground in a 10-foot radius around you is icy and is difficult terrain for creatures other than you. The radius moves with you.\n- You can use your action to create a 30-foot cone of freezing wind extending from your outstretched hand in a direction you choose. Each creature in the cone must make a Constitution saving throw. A creature takes 5d6 cold damage on a failed save, or half as much damage on a successful one. A creature that fails its save against this effect has its speed halved until the start of your next turn."
     },
     {
       "name": "Investiture of Wind",
-      "description": "Until the spell ends, wind whirls around you, and you gain the following benefits:\n- Ranged weapon attacks made against you have disadvantage on the attack roll.\n- You gain a flying speed of 60 feet. If you are still flying when the spell ends, you fall, unless you can somehow prevent it.\n- You can use your action to create a 15-foot cube of swirling wind centered on a point you can see within 60 feet of you. Each creature in that area must make a Strength saving throw. A creature takes 2d10 bludgeoning damage on a failed save, or half as much damage on a successful one. If a Large or smaller creature fails the save, that creature is also pushed up to 10 feet away from the center of the cube.",
-      "effects": "You gain the following benefits:\n- Ranged weapon attacks made against you have disadvantage on the attack roll.\n- You gain a flying speed of 60 ft. If you are still flying when the spell ends, you fall, unless you can somehow prevent it.\n- You can use your action to create a 15 ft cube of swirling wind centered on a point you can see within 60 ft of you. Each creature in that area must make a Strength saving throw. A creature takes 2d10 bludgeoning damage on a failed save, or half as much damage on a successful one. If a Large or smaller creature fails the save, that creature is also pushed up to 10 ft away from the center of the cube."
+      "description": "Until the spell ends, wind whirls around you, and you gain the following benefits:\n- Ranged weapon attacks made against you have disadvantage on the attack roll.\n- You gain a flying speed of 60 feet. If you are still flying when the spell ends, you fall, unless you can somehow prevent it.\n- You can use your action to create a 15-foot cube of swirling wind centered on a point you can see within 60 feet of you. Each creature in that area must make a Strength saving throw. A creature takes 2d10 bludgeoning damage on a failed save, or half as much damage on a successful one. If a Large or smaller creature fails the save, that creature is also pushed up to 10 feet away from the center of the cube."
     },
     {
       "name": "Jump",
@@ -656,8 +640,7 @@
       "description": "One creature or object of your choice that you can see within range rises vertically, up to 20 feet, and remains suspended there for the duration. The spell can levitate a target that weighs up to 500 pounds. An unwilling creature that succeeds on a Strength saving throw is unaffected.\nThe target can move only by pushing or pulling against a fixed object or surface within reach (such as a wall or a ceiling), which allows it to move as if it were climbing. You can change the target's altitude by up to 20 feet in either direction on your turn. If you are the target, you can move up or down as part of your move. Otherwise, you can use your action to move the target, which must remain within the spell's range.\nWhen the spell ends, the target floats gently to the ground if it is still aloft.",
       "save": {
         "ability": "Strength"
-      },
-      "effects": "the target rises vertically, up to 20 ft, and remains suspended there for the duration. The spell can levitate a target that weighs up to 500 lbs. An unwilling creature that succeeds on a Strength saving throw is unaffected.\nThe target can move only by pushing or pulling against a fixed object or surface within reach (such as a wall or a ceiling), which allows it to move as if it were climbing. You can change the target's altitude by up to 20 feet in either direction on your turn. If you are the target, you can move up or down as part of your move. Otherwise, you can use your action to move the target, which must remain within the spell's range.\nWhen the spell ends, the target floats gently to the ground if it is still aloft."
+      }
     },
     {
       "name": "Lightning Arc",
@@ -684,7 +667,6 @@
         "higherLevelDice": "1",
         "higherLevelDie": "d8"
       },
-      "effects": "The spell fails if there is no line of effect between the targets. Lightning arc sets fire to combustibles and damages objects in its path. It can melt metals that have a low melting point, such as lead, gold, copper, silver, or bronze.",
       "classes": [
         "Sorcerer",
         "Wizard"
@@ -744,8 +726,7 @@
         "material": true,
         "materialMaterial": "A pinch of dirt and a grasshopper's hind leg"
       },
-      "duration": "1 hour",
-      "effects": "The target's speed increases by 10 ft until the spell ends. In addition, the target can jump three times their normal distance, though they can't jump farther than your remaining movement would allow."
+      "duration": "1 hour"
     },
     {
       "name": "Maelstrom",
@@ -785,7 +766,6 @@
         "higherLevelDice": "1",
         "higherLevelDie": "d6"
       },
-      "effects": "This can fix destroyed magic items (at 0 hit points or less), and restores the magic properties of the item if your caster level is at least twice that of the item. Items with charges (such as wands) and single-use items (such as potions and scrolls) cannot be repaired in this way. The spell does not repair items that have been warped, burned, disintegrated, ground to powder, melted, or vaporized, nor does it affect creatures (including constructs).",
       "classes": [
         "Cleric",
         "Sorcerer",
@@ -862,7 +842,6 @@
         "ability": "Constitution",
         "saveFailure": "the creature spends its action that turn retching and reeling. Creatures that don't need to breathe or are immune to poison automatically succeed on this saving throw"
       },
-      "effects": "The spell ends if the creature drops to 0 hit points. An incorporeal creature isn't affected.\nWhile in this form, the target's only method of movement is a flying speed of 10 ft. The target can enter and occupy the space of another creature. The target's body nauseates creatures. Each creature that is completely within the cloud at the start of its turn must make a Constitution saving throw as outlined above. The target has resistance to nonmagical damage, and it has advantage on Strength, Dexterity, and Constitution saving throws. The target can pass through small holes, narrow openings, and even mere cracks, though it treats liquids as though they were solid surfaces. The target can't fall and remains hovering in the air even when stunned or otherwise incapacitated.\nWhile in the form of a misty cloud, the target can't talk or manipulate objects, and any objects it was carrying or holding can't be dropped, used, or otherwise interacted with. The target can't attack or cast spells.",
       "classes": [
         "Sorcerer",
         "Wizard"
@@ -890,8 +869,11 @@
     {
       "name": "Nondetection",
       "higherLevel": "When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd.",
-      "level": 2,
-      "effects": "The target can't be targeted by any divination magic or perceived through magical scrying sensors."
+      "level": 2
+    },
+    {
+      "name": "Pass without Trace",
+      "description": "A veil of shadows and silence radiates from you, masking you and your companions from detection. For the duration, each creature you choose within 30 feet of you (including you) has advantage on Dexterity (Stealth) checks and can't be tracked except by magical means. A creature that receives this bonus leaves behind no tracks or other traces of its passage."
     },
     {
       "name": "Phantasmal Killer",
@@ -944,8 +926,7 @@
       "name": "Protection from Energy",
       "description": "For the duration, up to two willing creatures you touch have resistance to one damage type of your choice: acid, cold, fire, lightning, or thunder.",
       "higherLevel": "When you cast this spell using a spell slot of 4th level or higher, you can target one additional creature for each slot level above 3rd.",
-      "target": "up to 2 willing creatures",
-      "effects": "targets have resistance to one damage type of your choice: acid, cold, fire, lightning, or thunder."
+      "target": "up to 2 willing creatures"
     },
     {
       "name": "Rary's Telepathic Bond",
@@ -956,7 +937,6 @@
       "description": "A black beam of enervating energy springs from your finger toward a creature within range. Make a ranged spell attack against the target. On a hit, the target has disadvantage on ability checks, attack rolls, and saving throws that use Strength and deals only half damage with weapon attacks that use Strength until the spell ends.\nAt the end of each of the target's turns, it can make a Constitution saving throw against the spell. On a success, the spell ends.",
       "duration": "minute",
       "concentration": false,
-      "effects": "On a hit, the target has disadvantage on ability checks, attack rolls, and saving throws that use Strength and deals only half damage with weapon attacks that use Strength until the spell ends.\nAt the end of each of the target's turns, it can make a Constitution saving throw against the spell as outlined above.",
       "classes": [
         "Warlock",
         "Wizard"
@@ -1090,8 +1070,7 @@
     },
     {
       "name": "Transmute Rock",
-      "description": "You choose an area of stone or mud that you can see that fits within a 40-foot cube and that is within range, and choose one of the following effects.\nTransmute Rock to Mud. Nonmagical rock of any sort in the area becomes an equal volume of thick and flowing mud that remains for the spell's duration.\nIf you cast the spell on an area of ground, it becomes muddy enough that creatures can sink into it. Each foot that a creature moves through the mud costs 4 feet of movement, and any creature on the ground when you cast the spell must make a Strength saving throw. A creature must also make this save the first time it enters the area on a turn or ends its turn there. On a failed save, a creature sinks into the mud and is restrained, though it can use an action to end the restrained condition on itself by pulling itself free of the mud.\nIf you cast the spell on a ceiling, the mud falls. Any creature under the mud when it falls must make a Dexterity saving throw. A creature takes 4d8 bludgeoning damage on a failed save, or half as much damage on a successful one.\nTransmute Mud to Rock. Nonmagical mud or quicksand in the area no more than 10 feet deep transforms into soft stone for the spell's duration. Any creature in the mud when it transforms must make a Strength saving throw. On a failed save, a creature becomes restrained by the rock. The restrained creature can use an action to try to break free by succeeding on a Strength check (DC 20) or by dealing 25 damage to the rock around it. On a successful save, a creature is shunted safely to the surface to an unoccupied space.",
-      "effects": "choose one of the following effects.\nTransmute Rock to Mud. Nonmagical rock of any sort in the area becomes an equal volume of thick and flowing mud that remains for the spell's duration.\nIf you cast the spell on an area of ground, it becomes muddy enough that creatures can sink into it. Each foot that a creature moves through the mud costs 4 feet of movement, and any creature on the ground when you cast the spell must make a Strength saving throw. A creature must also make this save the first time it enters the area on a turn or ends its turn there. On a failed save, a creature sinks into the mud and is restrained, though it can use an action to end the restrained condition on itself by pulling itself free of the mud.\nIf you cast the spell on a ceiling, the mud falls. Any creature under the mud when it falls must make a Dexterity saving throw. A creature takes 4d8 bludgeoning damage on a failed save, or half as much damage on a successful one.\nTransmute Mud to Rock. Nonmagical mud or quicksand in the area no more than 10 feet deep transforms into soft stone for the spell's duration. Any creature in the mud when it transforms must make a Strength saving throw. On a failed save, a creature becomes restrained by the rock. The restrained creature can use an action to try to break free by succeeding on a Strength check (DC 20) or by dealing 25 damage to the rock around it. On a successful save, a creature is shunted safely to the surface to an unoccupied space."
+      "description": "You choose an area of stone or mud that you can see that fits within a 40-foot cube and that is within range, and choose one of the following effects.\nTransmute Rock to Mud. Nonmagical rock of any sort in the area becomes an equal volume of thick and flowing mud that remains for the spell's duration.\nIf you cast the spell on an area of ground, it becomes muddy enough that creatures can sink into it. Each foot that a creature moves through the mud costs 4 feet of movement, and any creature on the ground when you cast the spell must make a Strength saving throw. A creature must also make this save the first time it enters the area on a turn or ends its turn there. On a failed save, a creature sinks into the mud and is restrained, though it can use an action to end the restrained condition on itself by pulling itself free of the mud.\nIf you cast the spell on a ceiling, the mud falls. Any creature under the mud when it falls must make a Dexterity saving throw. A creature takes 4d8 bludgeoning damage on a failed save, or half as much damage on a successful one.\nTransmute Mud to Rock. Nonmagical mud or quicksand in the area no more than 10 feet deep transforms into soft stone for the spell's duration. Any creature in the mud when it transforms must make a Strength saving throw. On a failed save, a creature becomes restrained by the rock. The restrained creature can use an action to try to break free by succeeding on a Strength check (DC 20) or by dealing 25 damage to the rock around it. On a successful save, a creature is shunted safely to the surface to an unoccupied space."
     },
     {
       "name": "True Strike",
@@ -1149,7 +1128,6 @@
         "higherLevelDice": "1",
         "higherLevelDie": "d6"
       },
-      "effects": "In any form, the wall is 1 ft thick and lasts for the duration.\nIf the wall cuts through a creature's space when it appears, the creature within its area is pushed to one side of the wall and must make a Dexterity saving throw as outlined above.\nThe wall is an object that can be damaged and thus breached. It has AC 5 and 15 hit points per 5-foot section, and it is vulnerable to fire damage. Reducing a 5 ft section of wall to 0 hit points destroys it and leaves behind a sheet of frigid air in the space the wall occupied. A creature moving through the sheet of frigid air for the first time on a turn must make a Constitution saving throw. That creature takes 2d6 ([[2d6]]) cold damage on a failed save, or half as much damage on a successful one.",
       "classes": [
         "Wizard"
       ]
@@ -1199,7 +1177,6 @@
         "damage": "4d8",
         "damageType": "poison"
       },
-      "effects": "and the target is poisoned until the start of your next turn. As a bonus action on your turn, you can move the whip up to 20 ft and repeat the attack against a creature within 5 ft of it.",
       "classes": [
         "Bard",
         "Druid",
@@ -1209,8 +1186,7 @@
     },
     {
       "name": "Witch Bolt",
-      "description": "A beam of crackling, blue energy lances out toward a creature within range, forming a sustained arc of lightning between you and the target. Make a ranged spell attack against that creature. On a hit, the target takes 1d12 lightning damage and is grappled, and on each of your turns for the duration, you can use your action to deal 1d12 lightning damage to the target automatically. If you do so the target must make a Strength saving throw or be grappled. The spell ends if you use your action to do anything else. The spell also ends if the target is ever outside the spell's range or if it has total cover from you at the end of your turn.",
-      "effects": "and the target is grappled. On each of your turns for the duration, you can use your action to deal 1d12 lightning damage to the target automatically. If you do so the target must make a Strength saving throw or be grappled. The spell ends if you use your action to do anything else. The spell also ends if the target is ever outside the spell's range or if it has total cover from you at the end of your turn."
+      "description": "A beam of crackling, blue energy lances out toward a creature within range, forming a sustained arc of lightning between you and the target. Make a ranged spell attack against that creature. On a hit, the target takes 1d12 lightning damage and is grappled, and on each of your turns for the duration, you can use your action to deal 1d12 lightning damage to the target automatically. If you do so the target must make a Strength saving throw or be grappled. The spell ends if you use your action to do anything else. The spell also ends if the target is ever outside the spell's range or if it has total cover from you at the end of your turn."
     },
     {
       "name": "Web",
