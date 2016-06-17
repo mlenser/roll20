@@ -4763,9 +4763,9 @@
       "school": "Evocation",
       "damage": {
         "damage": "(((@{level} + 1) / 6 + 0.5)-1)d8",
-        "castingStat": true,
         "damageType": "fire",
         "secondaryDamage": "(((@{level} + 1) / 6 + 0.5)-1)d8",
+        "secondaryCastingStat": true,
         "secondaryDamageType": "fire"
       },
       "classes": [
