@@ -113,6 +113,10 @@
       "school": "Necromancy"
     },
     {
+      "name": "Banishment",
+      "description": "You attempt to send one creature that you can see within range to another plane of existence. The target must succeed on a Charisma saving throw or be banished.\nIf the target is native to the plane of existence you're on, you banish the target to a harmless demiplane. While there, the target is incapacitated. The target remains there until the spell ends, at which point the target reappears in the space it left or in the nearest unoccupied space if that space is occupied.\nIf the target is native to a different plane of existence than the one you're on, the target is banished with a faint popping noise, returning to its home plane. If the spell ends before 1 minute has passed, the target reappears in the space it left or in the nearest unoccupied space if that space is occupied. Otherwise, the target doesn't return. Any creature who is not native to another plane can make a saving throw at the end of each turn"
+    },
+    {
       "name": "Banishing Smite",
       "description": "The next time you hit a creature with a weapon attack before this spell ends, your weapon crackles with force, and the attack deals an extra 8d6 force damage to the target. Additionally, if this attack reduces the target to 50 hit points or fewer, you banish it. If the target is native to a different plane of existence than the one you're on, the target disappears, returning to its home plane. If the target is native to the plane you're on, the creature vanishes into a harmless demiplane. While there, the target is incapacitated. It remains there until the spell ends, at which point the target reappears in the space it left or in the nearest unoccupied space if that space is occupied.",
       "damage": {
@@ -296,7 +300,7 @@
     },
     {
       "name": "Crown of Madness",
-      "description": "One humanoid of your choice that you can see within range must succeed on a Wisdom saving throw or become charmed by you for the duration. While the target is charmed in this way, a twisted crown of jagged iron appears on its head, and a madness glows in its eyes.\nThe charmed target must use its action to make melee attacks against a creature other than itself that you mentally choose. The charmed target can move up to half its speed before making the attacks.\nThe target can act normally on its turn if you choose no creature or if none are within its reach.\nOn your subsequent turns, you must use your action to maintain control over the target, or the spell ends. Also, the target can make a Wisdom saving throw at the end of each of its turns. On a success, the spell ends.",
+      "description": "One creature of your choice that you can see within range must succeed on a Wisdom saving throw or become charmed by you for the duration. While the target is charmed in this way, a twisted crown of jagged iron appears on its head, and a madness glows in its eyes.\nThe charmed target must use its action to make melee attacks against a creature other than itself that you mentally choose. The charmed target can move up to half its speed before making the attacks.\nThe target can act normally on its turn if you choose no creature or if none are within its reach.\nOn your subsequent turns, you must use your action to maintain control over the target, or the spell ends. Also, the target can make a Wisdom saving throw at the end of each of its turns. On a success, the spell ends.",
       "save": {
         "ability": "Wisdom",
         "saveFailure": "become charmed by you for the duration. While the target is charmed in this way, a twisted crown of jagged iron appears on its head, and a madness glows in its eyes.\nThe charmed target must use its action to make melee attacks against a creature other than itself that you mentally choose. The charmed target can move up to half its speed before making the attacks.\nThe target can act normally on its turn if you choose no creature or if none are within its reach.\nOn your subsequent turns, you must use your action to maintain control over the target, or the spell ends. Also, the target can make a Wisdom saving throw at the end of each of its turns. On a success, the spell ends."
@@ -513,6 +517,14 @@
         "higherLevelDice": "1",
         "higherLevelDie": "d6"
       }
+    },
+    {
+      "name": "Hold Monster",
+      "newName": "Hold Creature"
+    },
+    {
+      "name": "Hold Person",
+      "remove": true
     },
     {
       "name": "Hydraulic Push",
@@ -956,6 +968,11 @@
         "Wizard"
       ]
     },
+
+    {
+      "name": "Polymorph",
+      "description": "This spell transforms a creature that you can see within range into a new form. An unwilling creature must make a Wisdom saving throw to avoid the effect. A shapechanger automatically succeeds on this saving throw.\nThe transformation lasts for the duration, or until the target drops to 0 hit points or dies. The new form can be any beast whose challenge rating is equal to or less than the target's (or the target's level, if it doesn't have a challenge rating). The target's game statistics, including mental ability scores, are replaced by the statistics of the chosen beast. It retains its alignment and personality.\nThe target assumes the hit points of its new form. When it reverts to its normal form, the creature returns to the number of hit points it had before it transformed. If it reverts as a result of dropping to 0 hit points, any excess damage carries over to its normal form. As long as the excess damage doesn't reduce the creature's normal form to 0 hit points, it isn't knocked unconscious.\nThe creature is limited in the actions it can perform by the nature of its new form, and it can't speak, cast spells, or take any other action that requires hands or speech.\nThe target's gear melds into the new form. The creature can't activate, use, wield, or otherwise benefit from any of its equipment. At the end of each of its turns, the target can make another Wisdom saving throw. On a success, the spell ends on the target."
+    },
     {
       "name": "Power Word Heal",
       "school": "Necromancy"
@@ -1059,6 +1076,11 @@
         "damage": "((@{level} + 1) / 6 + 0.5)d10",
         "damageType": "lightning"
       }
+    },
+    {
+      "name": "Shield",
+      "description": "An invisible barrier of magical force appears and protects you. Until the start of your next turn, you have a +3 bonus to AC, including against the triggering attack, and you take no damage from magic missile.",
+      "higherLevel": "When you cast this spell using a spell slot of 2nd level or higher, the spell's AC bonus increases by +1 for each slot level above 1st (up to a maximum of +5 AC total)."
     },
     {
       "name": "Slow",
