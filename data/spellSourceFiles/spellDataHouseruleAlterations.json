@@ -120,10 +120,10 @@
       "name": "Banishing Smite",
       "description": "The next time you hit a creature with a weapon attack before this spell ends, your weapon crackles with force, and the attack deals an extra 8d6 force damage to the target. Additionally, if this attack reduces the target to 50 hit points or fewer, you banish it. If the target is native to a different plane of existence than the one you're on, the target disappears, returning to its home plane. If the target is native to the plane you're on, the creature vanishes into a harmless demiplane. While there, the target is incapacitated. It remains there until the spell ends, at which point the target reappears in the space it left or in the nearest unoccupied space if that space is occupied.",
       "damage": {
-        "damage": "5d10",
+        "damage": "8d6",
         "damageType": "force",
-        "higherLevelDice": "2",
-        "higherLevelDie": "d4"
+        "higherLevelDice": "1",
+        "higherLevelDie": "d6"
       }
     },
     {
@@ -158,8 +158,8 @@
       "damage": {
         "damage": "5d6",
         "damageType": "radiant",
-        "higherLevelDice": "2",
-        "higherLevelDie": "d4"
+        "higherLevelDice": "1",
+        "higherLevelDie": "d6"
       }
     },
     {
@@ -308,15 +308,7 @@
     },
     {
       "name": "Cure Wounds",
-      "description": "A creature you touch regains a number of hit points equal to 1d10 + your spellcasting ability modifier. This spell has no effect on undead or constructs.",
-      "higherLevel": "When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 1d10 for each slot level above 1st.",
-      "school": "Necromancy",
-      "heal": {
-        "amount": "1d10",
-        "castingStat": true,
-        "higherLevelDice": "1",
-        "higherLevelDie": "d10"
-      }
+      "school": "Necromancy"
     },
     {
       "name": "Death Ward",
@@ -514,13 +506,7 @@
     },
     {
       "name": "Healing Word",
-      "school": "Necromancy",
-      "heal": {
-        "amount": "1d6",
-        "castingStat": true,
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
-      }
+      "school": "Necromancy"
     },
     {
       "name": "Heat Metal",
@@ -829,15 +815,7 @@
     },
     {
       "name": "Mass Cure Wounds",
-      "description": "A wave of healing energy washes out from a point of your choice within range. Choose up to six creatures in a 30-foot-radius sphere centered on that point. Each target regains hit points equal to 3d10 + your spellcasting ability modifier. This spell has no effect on undead or constructs.",
-      "higherLevel": "When you cast this spell using a spell slot of 6th level or higher, the healing increases by 1d10 for each slot level above 5th.",
-      "school": "Necromancy",
-      "heal": {
-        "amount": "3d10",
-        "castingStat": true,
-        "higherLevelDice": "1",
-        "higherLevelDie": "d10"
-      }
+      "school": "Necromancy"
     },
     {
       "name": "Mass Heal",
@@ -845,13 +823,7 @@
     },
     {
       "name": "Mass Healing Word",
-      "school": "Necromancy",
-      "heal": {
-        "amount": "1d6",
-        "castingStat": true,
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
-      }
+      "school": "Necromancy"
     },
     {
       "name": "Meld into Stone",
@@ -921,7 +893,9 @@
       "description": "You conjure a phantom watchdog in an unoccupied space that you can see within range, where it remains for the duration, until you dismiss it as an action, or until you move more than 100 feet away from it.\nThe hound is invisible to all creatures except you and can't be harmed. When a Small or larger creature comes within 30 feet of it without first speaking the password that you specify when you cast this spell, the hound starts barking loudly. The hound sees invisible creatures and can see into the Ethereal Plane. It ignores illusions.\nAt the start of each of your turns, the hound attempts to bite one creature within 5 feet of it that is hostile to you. The hound's attack bonus is equal to your spellcasting ability modifier + your proficiency bonus. On a hit, it deals 6d8 piercing damage.",
       "attack": {
         "damage": "6d8",
-        "damageType": "piercing"
+        "damageType": "piercing",
+        "higherLevelDice": "1",
+        "higherLevelDie": "d8"
       }
     },
     {
@@ -1136,8 +1110,8 @@
       "damage": {
         "damage": "7d6",
         "damageType": "psychic",
-        "higherLevelDice": "2",
-        "higherLevelDie": "d4"
+        "higherLevelDice": "1",
+        "higherLevelDie": "d6"
       }
     },
     {
@@ -1197,7 +1171,7 @@
       "description": "The touch of your shadow-wreathed hand can siphon life force from others to heal your wounds. Make a melee spell attack against a creature within your reach. On a hit, the target takes 5d6 necrotic damage, and you regain hit points equal to half the amount of necrotic damage dealt. Until the spell ends, you can make the attack again on each of your turns as an action.",
       "attack": {
         "type": "melee",
-        "damage": "5d6",
+        "damage": "4d6",
         "damageType": "necrotic",
         "higherLevelDice": "1",
         "higherLevelDie": "d6"
@@ -1314,9 +1288,9 @@
     {
       "name": "Wrathful Smite",
       "damage": {
-        "damage": "2d6",
+        "damage": "2d4",
         "damageType": "psychic",
-        "higherLevelDice": "2",
+        "higherLevelDice": "1",
         "higherLevelDie": "d4"
       }
     }
