@@ -1,4 +1,5 @@
 {
+  "version": "0.2.1",
   "monsters": [
     {
       "name": "Baba Lysaga's Creeping Hut",
@@ -968,6 +969,5 @@
       "senses": "darkvision 60 ft.",
       "languages": "Common, Draconic"
     }
-  ],
-  "version": "0.2"
+  ]
 }
