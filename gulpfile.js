@@ -87,7 +87,7 @@ const replaceOldSkillAndSave = (text) => {
   }
   return text;
 };
-const replaceSkills = (monster) => {
+const replaceSkillsAndSaves = (monster) => {
   if (monster.skills) {
     const skills = monster.skills.split(', ');
     const newSkills = [];
@@ -142,9 +142,18 @@ const replaceSkills = (monster) => {
     monster.regionalEffects = newRegionalEffects;
   }
 };
+const lowerCon = (monster) => {
+  const originalCon = parseInt(monster.constitution, 10);
+  const potentialNewCon = Math.floor(originalCon * .95);
+  if (originalCon - potentialNewCon >= 2) {
+    monster.constitution = potentialNewCon;
+  }
+};
+
 const monsterHouserules = (json) => {
   json.monsters.forEach((monster) => {
-    replaceSkills(monster);
+    replaceSkillsAndSaves(monster);
+    lowerCon(monster);
   });
 };
 
