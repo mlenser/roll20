@@ -245,6 +245,18 @@
       "duration": "1 minute"
     },
     {
+      "name": "Conjure Barrage",
+      "higherLevel": "When you cast this spell using a spell slot of 4th level or higher, the base damage increases by 1d6 for each slot level above 3rd.",
+      "save": {
+        "ability": "Dexterity",
+        "damage": "3d8",
+        "damageType": "same as that of the weapon or ammunition used as a component",
+        "higherLevelDice": "1",
+        "higherLevelDie": "d6",
+        "saveSuccess": "half damage"
+      }
+    },
+    {
       "name": "Continual Flame",
       "ritual": true
     },
@@ -396,6 +408,18 @@
       ]
     },
     {
+      "name": "Evard's Black Tentacles",
+      "higherLevel": "When you cast this spell using a spell slot of 5th level or higher, the base damage increases by 1d6 for each slot level above 4th.",
+      "save": {
+        "ability": "Dexterity",
+        "damage": "3d6",
+        "damageType": "bludgeoning",
+        "higherLevelDice": "1",
+        "higherLevelDie": "d6",
+        "saveFailure": "restrained for the spell's duration"
+      }
+    },
+    {
       "name": "Faerie Fire",
       "description": "Each object in a 20-foot cube within range is outlined in blue, green, or violet light (your choice). Any creature in the area when the spell is cast is also outlined in light if it fails a Constitution saving throw. For the duration, objects and affected creatures shed dim light in a 10-foot radius.\nAny attack roll against an affected creature or object has advantage if the attacker can see it, and the affected creature or object can't benefit from being invisible.",
       "save": {
@@ -527,6 +551,17 @@
       "remove": true
     },
     {
+      "name": "Hunger of Hadar",
+      "higherLevel": "When you cast this spell using a spell slot of 4th level or higher, the base damage increases by 1d6 for each slot level above 3rd.",
+      "save": {
+        "ability": "Dexterity",
+        "damage": "2d6",
+        "damageType": "acid",
+        "higherLevelDice": "1",
+        "higherLevelDie": "d6"
+      }
+    },
+    {
       "name": "Hydraulic Push",
       "description": "You summon a blast of water that soaks one creature or square. Make a ranged spell attack against a creature, if it hits the creature takes 1d8 bludgeoning damage and is pushed back 10 feet. This spells also extinguishes any normal fire on a creature or object, or in a 5-foot square. Magical fire is unaffected.",
       "higherLevel": "This spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).",
@@ -644,10 +679,13 @@
     {
       "name": "Immolation",
       "description": "Flames wreathe one creature you can see within range. The target must make a Dexterity saving throw. It takes 10d6 fire damage on a failed save, or half as much damage on a successful one. On a failed save, the target also burns for the spell's duration. The burning target sheds bright light in a 30-foot radius and dim light for an additional 30 feet. At the end of each of its turns, the target repeats the saving throw. It takes 11d6 fire damage on a failed save, and the spell ends on a successful one. These magical flames can't be extinguished through nonmagical means.\nIf damage from this spell reduces a target to 0 hit points, the target is turned to ash.",
+      "higherLevel": "When you cast this spell using a spell slot of 6th level or higher, the base damage increases by 1d6 for each slot level above 5th.",
       "save": {
         "ability": "Dexterity",
         "damage": "10d6",
         "damageType": "fire",
+        "higherLevelDice": "1",
+        "higherLevelDie": "d6",
         "saveFailure": "the target also burns for the spell's duration. The burning target sheds bright light in a 30 ft radius and dim light for an additional 30 ft. At the end of each of its turns, the target repeats the saving throw. It takes 10d6 fire damage on a failed save, and the spell ends on a successful one. These magical flames can't be extinguished through nonmagical means.",
         "saveSuccess": "half damage"
       }
@@ -772,11 +810,14 @@
     {
       "name": "Maelstrom",
       "description": "A mass of 5-foot-deep water appears and swirls in a 30-foot radius centered on a point you can see within range. The point must be on ground or in a body of water. Until the spell ends, that area is difficult terrain, and any creature that starts its turn there must succeed on a Strength saving throw or take 8d6 bludgeoning damage and be pulled 10 feet toward the center.",
+      "higherLevel": "When you cast this spell using a spell slot of 6th level or higher, the base damage increases by 1d6 for each slot level above 5th.",
       "school": "Evocation",
       "save": {
         "ability": "Strength",
         "damage": "8d6",
         "damageType": "bludgeoning",
+        "higherLevelDice": "1",
+        "higherLevelDie": "d6",
         "saveFailure": "be pulled 10 feet toward the center"
       }
     },
@@ -824,6 +865,19 @@
     {
       "name": "Mass Healing Word",
       "school": "Necromancy"
+    },
+    {
+      "name": "Maximilian's Earthen Grasp",
+      "higherLevel": "When you cast this spell using a spell slot of 3rd level or higher, the base damage increases by 1d6 for each slot level above 2nd.",
+      "save": {
+        "ability": "Strength",
+        "damage": "2d6",
+        "damageType": "bludgeoning",
+        "higherLevelDice": "1",
+        "higherLevelDie": "d6",
+        "saveFailure": "restrained for the spell's duration",
+        "saveSuccess": "half damage"
+      }
     },
     {
       "name": "Meld into Stone",
@@ -1272,6 +1326,18 @@
         "Sorcerer",
         "Wizard"
       ]
+    },
+    {
+      "name": "Wind Wall",
+      "higherLevel": "When you cast this spell using a spell slot of 4th level or higher, the base damage increases by 1d6 for each slot level above 3rd.",
+      "save": {
+        "ability": "Strength",
+        "damage": "3d8",
+        "damageType": "bludgeoning",
+        "higherLevelDice": "1",
+        "higherLevelDie": "d8",
+        "saveSuccess": "half damage"
+      }
     },
     {
       "name": "Witch Bolt",

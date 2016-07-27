@@ -4,8 +4,9 @@
   "devDependencies": {
     "glob": "latest",
     "gulp": "latest",
-    "gulp-inject": "latest",
     "gulp-eol": "latest",
+    "gulp-inject": "latest",
+    "gulp-json-editor": "^2.2.1",
     "gulp-jsoncombine": "latest",
     "gulp-rename": "latest",
     "gulp-uglify": "latest"
