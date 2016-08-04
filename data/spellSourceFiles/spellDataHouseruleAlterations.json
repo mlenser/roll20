@@ -134,7 +134,6 @@
     {
       "name": "Blight",
       "description": "Necromantic energy washes over a creature of your choice that you can see within range, draining moisture and vitality from it. The target must make a Constitution saving throw. The target takes 10d8 necrotic damage on a failed save, or half as much damage on a successful one. The spell has no effect on undead or constructs.\nIf you target a plant creature or a magical plant, it makes the saving throw with disadvantage, and the spell deals maximum damage to it.\nIf you target a nonmagical plant that isn't a creature, such as a tree or shrub, it doesn't make a saving throw; it simply withers and dies.",
-      "level": 3,
       "save": {
         "ability": "Constitution",
         "damage": "10d8",
@@ -1209,6 +1208,19 @@
         "damageType": "thunder",
         "higherLevelDice": "2",
         "higherLevelDie": "d4"
+      }
+    },
+    {
+      "name": "Tidal Wave",
+      "higherLevel": "When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d8 for each slot level above 3rd.",
+      "save": {
+        "ability": "Dexterity",
+        "damage": "4d8",
+        "damageType": "bludgeoning",
+        "higherLevelDice": "1",
+        "higherLevelDie": "d8",
+        "saveFailure": "knocked prone",
+        "saveSuccess": "half damage and not knocked prone"
       }
     },
     {
