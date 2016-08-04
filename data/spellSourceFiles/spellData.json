@@ -8928,8 +8928,7 @@
         "material": true,
         "materialMaterial": "A piece of ice or a small white rock chip"
       },
-      "duration": "up to 1 hour",
-      "concentration": true,
+      "duration": "Instantaneous",
       "castingTime": "1 action",
       "level": 2,
       "school": "Evocation",
