@@ -229,14 +229,8 @@
     },
     {
       "name": "Cloud of Daggers",
-      "description": "You fill the air with spinning daggers in a 5-foot-radius, centered on a point you choose within range. A creature takes 5d4 slashing damage when it enters the spell's area for the first time on a turn or starts its turn there.",
-      "aoe": "5 ft radius centered on a point within range",
-      "damage": {
-        "damage": "5d4",
-        "damageType": "slashing",
-        "higherLevelDice": "2",
-        "higherLevelDie": "d4"
-      }
+      "description": "You fill the air with spinning daggers in a 5-foot-radius, centered on a point you choose within range. A creature takes 4d4 slashing damage when it enters the spell's area for the first time on a turn or starts its turn there.",
+      "aoe": "5 ft radius centered on a point within range"
     },
     {
       "name": "Color Spray",
@@ -336,6 +330,11 @@
         "ability": "Constitution",
         "saveFailure": "each target suffers an effect based on its current hit points:\n&#8226; 50 hit points or fewer: deafened for 1 minute\n&#8226; 40 hit points or fewer: deafened and blinded for 10 minutes\n&#8226; 30 hit points or fewer: blinded, deafened, and stunned for 1 hour\n&#8226; 20 hit points or fewer: killed instantly.\nRegardless of its current hit points, a celestial, an elemental, a fey, or a fiend that fails its save is forced back to its plane of origin (if it isn't there already) and can't return to your current plane for 24 hours by any means short of a wish spell."
       }
+    },
+    {
+      "name": "Dust Devil",
+      "description": "Choose an unoccupied 5-foot cube of air that you can see within range. An elemental force that resembles a dust devil appears in the cube and lasts for the spell's duration.\nAny creature that enters the spell's area for the first time on a turn or starts its turn within 5 ft of the dust devil must make a Strength saving throw. On a failed save, the creature takes 1d8 bludgeoning damage and is pushed 10 feet away. On a successful save, the creature takes half as much damage and isn't pushed.\nAs a bonus action, you can move the dust devil up to 30 feet in any direction. If the dust devil moves over sand, dust, loose dirt, or small gravel, it sucks up the material and forms a 10-foot-radius cloud of debris around itself that lasts until the start of your next turn. The cloud heavily obscures its area.",
+      "target": "any creature that enters the spell's area for the first time on a turn or starts its turn within 5 ft of the dust devil"
     },
     {
       "name": "Earth Tremor",
@@ -884,12 +883,12 @@
     },
     {
       "name": "Melf's Acid Arrow",
-      "description": "A shimmering green arrow streaks toward a target within range and bursts in a spray of acid. Make a ranged spell attack against the target. On a hit, the target takes 6d4 acid damage immediately and 6d4 acid damage at the end of its next turn. On a miss, the arrow splashes the target with acid for half as much of the initial damage and no damage at the end of its next turn.",
+      "description": "A shimmering green arrow streaks toward a target within range and bursts in a spray of acid. Make a ranged spell attack against the target. On a hit, the target takes 5d4 acid damage immediately and 5d4 acid damage at the end of its next turn. On a miss, the arrow splashes the target with acid for half as much of the initial damage and no damage at the end of its next turn.",
       "attack": {
         "type": "ranged",
-        "damage": "6d4",
+        "damage": "5d4",
         "damageType": "acid",
-        "secondaryDamage": "6d4",
+        "secondaryDamage": "5d4",
         "secondaryDamageType": "acid",
         "higherLevelDice": "1",
         "higherLevelDie": "d4",
