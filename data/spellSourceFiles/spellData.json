@@ -13,7 +13,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A bit of sponge"
+        "materialMaterial": "a bit of sponge"
       },
       "duration": "Instantaneous",
       "castingTime": "1 action",
@@ -95,7 +95,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A red dragon's scale"
+        "materialMaterial": "a red dragon's scale"
       },
       "duration": "Instantaneous",
       "castingTime": "1 action",
@@ -126,7 +126,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A tiny strip of white cloth"
+        "materialMaterial": "a tiny strip of white cloth"
       },
       "duration": "8 hours",
       "castingTime": "1 action",
@@ -148,7 +148,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A tiny bell and a piece of fine silver wire"
+        "materialMaterial": "a tiny bell and a piece of fine silver wire"
       },
       "ritual": true,
       "duration": "8 hours",
@@ -192,7 +192,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A morsel of food"
+        "materialMaterial": "a morsel of food"
       },
       "duration": "24 hours",
       "castingTime": "1 action",
@@ -224,7 +224,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A morsel of food"
+        "materialMaterial": "a morsel of food"
       },
       "ritual": true,
       "duration": "24 hours",
@@ -269,7 +269,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A drop of blood, a piece of flesh, and a pinch of bone dust"
+        "materialMaterial": "a drop of blood, a piece of flesh, and a pinch of bone dust"
       },
       "duration": "Instantaneous",
       "castingTime": "1 minute",
@@ -334,7 +334,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A pinch of powdered iron or iron filings"
+        "materialMaterial": "a pinch of powdered iron or iron filings"
       },
       "duration": "up to 1 hour",
       "concentration": true,
@@ -357,7 +357,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Either a lump of alum soaked in vinegar for the antipathy effect or a drop of honey for the sympathy effect"
+        "materialMaterial": "either a lump of alum soaked in vinegar for the antipathy effect or a drop of honey for the sympathy effect"
       },
       "duration": "10 days",
       "castingTime": "1 hour",
@@ -381,7 +381,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A bit of bat fur"
+        "materialMaterial": "a bit of bat fur"
       },
       "duration": "up to 1 hour",
       "concentration": true,
@@ -428,7 +428,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Gold dust worth at least 25gp, which the spell consumes",
+        "materialMaterial": "gold dust worth at least 25gp, which the spell consumes",
         "materialCost": 25
       },
       "duration": "Until dispelled",
@@ -450,7 +450,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A cup of water"
+        "materialMaterial": "a cup of water"
       },
       "duration": "1 hour",
       "castingTime": "1 action",
@@ -500,7 +500,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "For each creature you affect with this spell, you must provide one jacinth worth at least 1,000gp and one ornately carved bar of silver worth at least 100gp, all of which the spell consumes",
+        "materialMaterial": "for each creature you affect with this spell, you must provide one jacinth worth at least 1,000gp and one ornately carved bar of silver worth at least 100gp, all of which the spell consumes",
         "materialCost": 100
       },
       "duration": "Special",
@@ -523,7 +523,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Specially marked sticks, bones, or similar tokens worth at least 25gp",
+        "materialMaterial": "specially marked sticks, bones, or similar tokens worth at least 25gp",
         "materialCost": 25
       },
       "ritual": true,
@@ -609,7 +609,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "An agate worth at least 1,000 gp, which the spell consumes",
+        "materialMaterial": "an agate worth at least 1,000 gp, which the spell consumes",
         "materialCost": 1000
       },
       "duration": "Instantaneous",
@@ -633,7 +633,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A drop of blood"
+        "materialMaterial": "a drop of blood"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -687,7 +687,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "An item distasteful to the target"
+        "materialMaterial": "an item distasteful to the target"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -720,7 +720,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A handful of oak bark"
+        "materialMaterial": "a handful of oak bark"
       },
       "duration": "up to 1 hour",
       "concentration": true,
@@ -777,7 +777,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A bit of fur wrapped in a cloth"
+        "materialMaterial": "a bit of fur wrapped in a cloth"
       },
       "duration": "up to 10 minutes",
       "concentration": true,
@@ -850,7 +850,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "An eggshell and a snakeskin glove"
+        "materialMaterial": "an eggshell and a snakeskin glove"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -920,7 +920,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A sprinkling of holy water"
+        "materialMaterial": "a sprinkling of holy water"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -1294,7 +1294,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A bit of fur; a piece of amber, glass, or a crystal rod; and three silver pins"
+        "materialMaterial": "a bit of fur; a piece of amber, glass, or a crystal rod; and three silver pins"
       },
       "duration": "Instantaneous",
       "castingTime": "1 action",
@@ -1382,7 +1382,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A diamond worth at least 50gp",
+        "materialMaterial": "a diamond worth at least 50gp",
         "materialCost": 50
       },
       "duration": "Instantaneous",
@@ -1414,7 +1414,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "The powder of a crushed black pearl worth at least 500 gp",
+        "materialMaterial": "the powder of a crushed black pearl worth at least 500 gp",
         "materialCost": 500
       },
       "duration": "Instantaneous",
@@ -1466,7 +1466,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A focus worth at least 100gp, either a jeweled horn for hearing or a glass eye for seeing",
+        "materialMaterial": "a focus worth at least 100gp, either a jeweled horn for hearing or a glass eye for seeing",
         "materialCost": 100
       },
       "duration": "up to 10 minutes",
@@ -1495,7 +1495,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A diamond worth at least 1,000 gp and at least 1 cubic inch of flesh of the creature that is to be cloned, which the spell consumes, and a vessel worth at least 2,000 gp that has a sealable lid and is large enough to hold a Medium creature, such as a huge urn, coffin, mud-filled cyst in the ground, or crystal container filled with salt water",
+        "materialMaterial": "a diamond worth at least 1,000 gp and at least 1 cubic inch of flesh of the creature that is to be cloned, which the spell consumes, and a vessel worth at least 2,000 gp that has a sealable lid and is large enough to hold a Medium creature, such as a huge urn, coffin, mud-filled cyst in the ground, or crystal container filled with salt water",
         "materialCost": 3000
       },
       "duration": "Instantaneous",
@@ -1519,7 +1519,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A sliver of glass"
+        "materialMaterial": "a sliver of glass"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -1587,7 +1587,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A pinch of powder or sand that is colored red, yellow, and blue"
+        "materialMaterial": "a pinch of powder or sand that is colored red, yellow, and blue"
       },
       "duration": "1 round",
       "castingTime": "1 action",
@@ -1638,7 +1638,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Incense and a vial of holy or unholy water"
+        "materialMaterial": "incense and a vial of holy or unholy water"
       },
       "ritual": true,
       "duration": "1 minute",
@@ -1714,7 +1714,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A pinch of soot and salt"
+        "materialMaterial": "a pinch of soot and salt"
       },
       "ritual": true,
       "duration": "1 hour",
@@ -1765,7 +1765,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A small crystal or glass cone"
+        "materialMaterial": "a small crystal or glass cone"
       },
       "duration": "Instantaneous",
       "castingTime": "1 action",
@@ -1801,7 +1801,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Three walnut shells"
+        "materialMaterial": "three walnut shells"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -1857,7 +1857,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "One piece of ammunition or a thrown weapon"
+        "materialMaterial": "one piece of ammunition or a thrown weapon"
       },
       "duration": "Instantaneous",
       "castingTime": "1 action",
@@ -1906,7 +1906,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Burning incense for air, soft clay for earth, sulfur and phosphorus for fire, or water and sand for water"
+        "materialMaterial": "burning incense for air, soft clay for earth, sulfur and phosphorus for fire, or water and sand for water"
       },
       "duration": "up to 1 hour",
       "concentration": true,
@@ -1977,7 +1977,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "One piece of ammunition or one thrown weapon"
+        "materialMaterial": "one piece of ammunition or one thrown weapon"
       },
       "duration": "Instantaneous",
       "castingTime": "1 action",
@@ -2005,7 +2005,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "One holly berry per creature summoned"
+        "materialMaterial": "one holly berry per creature summoned"
       },
       "duration": "up to 1 hour",
       "concentration": true,
@@ -2072,7 +2072,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A statuette of yourself carved from ivory and decorated with gems worth at least 1,500 gp",
+        "materialMaterial": "a statuette of yourself carved from ivory and decorated with gems worth at least 1,500 gp",
         "materialCost": 1500
       },
       "duration": "10 days",
@@ -2093,7 +2093,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Ruby dust worth 50 gp, which the spell consumes",
+        "materialMaterial": "ruby dust worth 50 gp, which the spell consumes",
         "materialCost": 50
       },
       "duration": "Until dispelled",
@@ -2136,7 +2136,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A drop of water and a pinch of dust"
+        "materialMaterial": "a drop of water and a pinch of dust"
       },
       "duration": "up to 10 minutes",
       "concentration": true,
@@ -2160,7 +2160,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Burning incense and bits of earth and wood mixed in water"
+        "materialMaterial": "burning incense and bits of earth and wood mixed in water"
       },
       "duration": "up to 8 hours",
       "concentration": true,
@@ -2213,7 +2213,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Four or more arrows or bolts"
+        "materialMaterial": "four or more arrows or bolts"
       },
       "duration": "8 hours",
       "castingTime": "1 action",
@@ -2313,7 +2313,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A drop of water if creating water, or a few grains of sand if destroying it"
+        "materialMaterial": "a drop of water if creating water, or a few grains of sand if destroying it"
       },
       "duration": "Instantaneous",
       "castingTime": "1 action",
@@ -2336,7 +2336,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "One clay pot filled with grave dirt, one clay pot filled with brackish water, and one 150 gp black onyx stone for each corpse",
+        "materialMaterial": "one clay pot filled with grave dirt, one clay pot filled with brackish water, and one 150 gp black onyx stone for each corpse",
         "materialCost": 150
       },
       "duration": "Instantaneous",
@@ -2360,7 +2360,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A tiny piece of matter of the same type of the item you plan to create"
+        "materialMaterial": "a tiny piece of matter of the same type of the item you plan to create"
       },
       "duration": "Special",
       "castingTime": "1 minute",
@@ -2465,7 +2465,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A bit of phosphorus or wychwood, or a glowworm"
+        "materialMaterial": "a bit of phosphorus or wychwood, or a glowworm"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -2488,7 +2488,7 @@
       "components": {
         "verbal": true,
         "material": true,
-        "materialMaterial": "Bat fur and a drop of pitch or piece of coal"
+        "materialMaterial": "bat fur and a drop of pitch or piece of coal"
       },
       "duration": "up to 10 minutes",
       "concentration": true,
@@ -2516,7 +2516,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Either a pinch of dried carrot or an agate"
+        "materialMaterial": "either a pinch of dried carrot or an agate"
       },
       "duration": "8 hours",
       "castingTime": "1 action",
@@ -2594,7 +2594,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A tiny ball of bat guano and sulfur"
+        "materialMaterial": "a tiny ball of bat guano and sulfur"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -2720,7 +2720,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A yew leaf"
+        "materialMaterial": "a yew leaf"
       },
       "ritual": true,
       "duration": "up to 10 minutes",
@@ -2746,7 +2746,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A copper coin"
+        "materialMaterial": "a copper coin"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -2832,7 +2832,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A lodestone and a pinch of dust"
+        "materialMaterial": "a lodestone and a pinch of dust"
       },
       "duration": "Instantaneous",
       "castingTime": "1 action",
@@ -2862,7 +2862,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Holy water or powdered silver and iron"
+        "materialMaterial": "holy water or powdered silver and iron"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -2948,7 +2948,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Incense and a sacrificial offering appropriate to your religion, together worth at least 25 gp, which the spell consumes",
+        "materialMaterial": "incense and a sacrificial offering appropriate to your religion, together worth at least 25 gp, which the spell consumes",
         "materialCost": 25
       },
       "ritual": true,
@@ -3117,7 +3117,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A sapphire worth 1,000 gp",
+        "materialMaterial": "a sapphire worth 1,000 gp",
         "materialCost": 1000
       },
       "ritual": true,
@@ -3140,7 +3140,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A handful of sand, a dab of ink, and a writing quill plucked from a sleeping bird"
+        "materialMaterial": "a handful of sand, a dab of ink, and a writing quill plucked from a sleeping bird"
       },
       "duration": "8 hours",
       "castingTime": "1 minute",
@@ -3187,7 +3187,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A pinch of dust"
+        "materialMaterial": "a pinch of dust"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -3278,7 +3278,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A pinch of dirt, a piece of rock, and a lump of clay"
+        "materialMaterial": "a pinch of dirt, a piece of rock, and a lump of clay"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -3376,7 +3376,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Fur or a feather from a beast"
+        "materialMaterial": "fur or a feather from a beast"
       },
       "duration": "up to 1 hour",
       "concentration": true,
@@ -3401,7 +3401,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A pinch iron powder"
+        "materialMaterial": "a pinch iron powder"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -3506,7 +3506,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A piece of obsidian"
+        "materialMaterial": "a piece of obsidian"
       },
       "duration": "Instantaneous",
       "castingTime": "1 action",
@@ -3561,7 +3561,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A piece of tentacle of an octopus or a giant squid"
+        "materialMaterial": "a piece of tentacle of an octopus or a giant squid"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -3692,7 +3692,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A small amount of alcohol or distilled spirits"
+        "materialMaterial": "a small amount of alcohol or distilled spirits"
       },
       "duration": "1 hour",
       "castingTime": "1 action",
@@ -3715,7 +3715,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A white feather or the heart of a hen"
+        "materialMaterial": "a white feather or the heart of a hen"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -3743,7 +3743,7 @@
       "components": {
         "verbal": true,
         "material": true,
-        "materialMaterial": "A small feather or a piece of down"
+        "materialMaterial": "a small feather or a piece of down"
       },
       "duration": "1 minute",
       "castingTime": "1 reaction",
@@ -3766,7 +3766,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A handful of clay, crystal, glass, or mineral spheres"
+        "materialMaterial": "a handful of clay, crystal, glass, or mineral spheres"
       },
       "duration": "Instantaneous",
       "castingTime": "1 action",
@@ -3798,7 +3798,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A pinch of graveyard dirt"
+        "materialMaterial": "a pinch of graveyard dirt"
       },
       "ritual": true,
       "duration": "1 hour",
@@ -3862,7 +3862,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A set of divinatory tools—such as bones, ivory sticks, cards, teeth, or carved runes—worth 100gp and an object from the location you wish to find",
+        "materialMaterial": "a set of divinatory tools—such as bones, ivory sticks, cards, teeth, or carved runes—worth 100gp and an object from the location you wish to find",
         "materialCost": 100
       },
       "duration": "up to 24 hours",
@@ -3938,7 +3938,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A tiny ball of bat guano and sulfur"
+        "materialMaterial": "a tiny ball of bat guano and sulfur"
       },
       "duration": "Instantaneous",
       "castingTime": "1 action",
@@ -4001,7 +4001,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A little phosphorus or a firefly"
+        "materialMaterial": "a little phosphorus or a firefly"
       },
       "duration": "10 minutes",
       "castingTime": "1 action",
@@ -4077,7 +4077,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Leaf of sumac"
+        "materialMaterial": "leaf of sumac"
       },
       "duration": "up to 10 minutes",
       "concentration": true,
@@ -4108,7 +4108,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Pinch of sulfur"
+        "materialMaterial": "pinch of sulfur"
       },
       "duration": "Instantaneous",
       "castingTime": "1 action",
@@ -4153,7 +4153,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A bit of tallow, a pinch of brimstone, and a dusting of powdered iron"
+        "materialMaterial": "a bit of tallow, a pinch of brimstone, and a dusting of powdered iron"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -4188,7 +4188,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A pinch of lime, water, and earth"
+        "materialMaterial": "a pinch of lime, water, and earth"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -4217,7 +4217,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A wing feather from any bird"
+        "materialMaterial": "a wing feather from any bird"
       },
       "duration": "up to 10 minutes",
       "concentration": true,
@@ -4269,7 +4269,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A sprinkling of holy water, rare incense, and powdered ruby worth at least 1,000 gp",
+        "materialMaterial": "a sprinkling of holy water, rare incense, and powdered ruby worth at least 1,000 gp",
         "materialCost": 1000
       },
       "ritual": true,
@@ -4293,7 +4293,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Ruby dust worth 1,500 gp",
+        "materialMaterial": "ruby dust worth 1,500 gp",
         "materialCost": 1500
       },
       "duration": "1 hour",
@@ -4321,7 +4321,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A hummingbird feather"
+        "materialMaterial": "a hummingbird feather"
       },
       "duration": "8 hours",
       "castingTime": "1 minute",
@@ -4345,7 +4345,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A leather strap, bound around the arm or a similar appendage"
+        "materialMaterial": "a leather strap, bound around the arm or a similar appendage"
       },
       "duration": "1 hour",
       "castingTime": "1 action",
@@ -4381,7 +4381,7 @@
       "components": {
         "somatic": true,
         "material": true,
-        "materialMaterial": "A small amount of makeup applied to the face as this spell is cast"
+        "materialMaterial": "a small amount of makeup applied to the face as this spell is cast"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -4434,7 +4434,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A bit of gauze and a wisp of smoke"
+        "materialMaterial": "a bit of gauze and a wisp of smoke"
       },
       "duration": "up to 1 hour",
       "concentration": true,
@@ -4462,7 +4462,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A diamond worth at least 5,000gp",
+        "materialMaterial": "a diamond worth at least 5,000gp",
         "materialCost": 5000
       },
       "duration": "up to 1 minute",
@@ -4515,7 +4515,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A pinch of salt and one copper piece placed on each of the corpse's eyes, which must remain there for the duration"
+        "materialMaterial": "a pinch of salt and one copper piece placed on each of the corpse's eyes, which must remain there for the duration"
       },
       "ritual": true,
       "duration": "10 days",
@@ -4577,7 +4577,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A glass or crystal bead that shatters when the spell ends"
+        "materialMaterial": "a glass or crystal bead that shatters when the spell ends"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -4601,7 +4601,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Incense and powdered diamond worth at least 200 gp, the spell consumes",
+        "materialMaterial": "incense and powdered diamond worth at least 200 gp, the spell consumes",
         "materialCost": 200
       },
       "duration": "Until dispelled or triggered",
@@ -4624,7 +4624,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A sprig of mistletoe"
+        "materialMaterial": "a sprig of mistletoe"
       },
       "duration": "Instantaneous",
       "castingTime": "1 action",
@@ -4677,7 +4677,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A bit of pork rind or butter"
+        "materialMaterial": "a bit of pork rind or butter"
       },
       "duration": "1 minute",
       "castingTime": "1 action",
@@ -4731,7 +4731,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Diamond dust worth at least 100gp, which the spell consumes",
+        "materialMaterial": "diamond dust worth at least 100gp, which the spell consumes",
         "materialCost": 100
       },
       "duration": "Instantaneous",
@@ -4818,7 +4818,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Burning incense, a small measure of brimstone and oil, a knotted string, a small amount of umber hulk blood, and a small silver rod worth at least 10 gp",
+        "materialMaterial": "burning incense, a small measure of brimstone and oil, a knotted string, a small amount of umber hulk blood, and a small silver rod worth at least 10 gp",
         "materialCost": 10
       },
       "duration": "24 hours",
@@ -4915,7 +4915,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A legume seed"
+        "materialMaterial": "a legume seed"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -4975,7 +4975,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Herbs, oils, and incense worth at least 1,000 gp, which the spell consumes",
+        "materialMaterial": "herbs, oils, and incense worth at least 1,000 gp, which the spell consumes",
         "materialCost": 1000
       },
       "duration": "Until dispelled",
@@ -5001,7 +5001,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A stone, a twig, and a bit of green plant.\nYou make natural terrain in a 150-foot cube in range look, sound, and smell like some other sort of natural terrain. Thus, open fields or a road can be made to resemble a swamp, hill, crevasse, or some other difficult or impassable terrain. A pond can be made to seem like a grassy meadow, a precipice like a gentle slope, or a rock-strewn gully like a wide and smooth road. Manufactured structures, equipment, and creatures within the area aren't changed in appearance"
+        "materialMaterial": "a stone, a twig, and a bit of green plant.\nYou make natural terrain in a 150-foot cube in range look, sound, and smell like some other sort of natural terrain. Thus, open fields or a road can be made to resemble a swamp, hill, crevasse, or some other difficult or impassable terrain. A pond can be made to seem like a grassy meadow, a precipice like a gentle slope, or a rock-strewn gully like a wide and smooth road. Manufactured structures, equipment, and creatures within the area aren't changed in appearance"
       },
       "duration": "24 hours",
       "castingTime": "10 minutes",
@@ -5053,7 +5053,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A shaving of licorice root"
+        "materialMaterial": "a shaving of licorice root"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -5137,7 +5137,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A piece of iron and a flame"
+        "materialMaterial": "a piece of iron and a flame"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -5198,7 +5198,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A gem-encrusted bowl worth at least 1,000 gp, which the spell consumes",
+        "materialMaterial": "a gem-encrusted bowl worth at least 1,000 gp, which the spell consumes",
         "materialCost": 1000
       },
       "duration": "Instantaneous",
@@ -5243,7 +5243,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "The petrified eye of a newt"
+        "materialMaterial": "the petrified eye of a newt"
       },
       "duration": "up to 1 hour",
       "concentration": true,
@@ -5266,7 +5266,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A small piece of iron"
+        "materialMaterial": "a small piece of iron"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -5304,7 +5304,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A small, straight piece of iron"
+        "materialMaterial": "a small, straight piece of iron"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -5343,7 +5343,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A tiny reliquary worth at least 1,000 gp containing a sacred relic, such as a scrap of cloth from a saint's robe or a piece of parchment from a religious text",
+        "materialMaterial": "a tiny reliquary worth at least 1,000 gp containing a sacred relic, such as a scrap of cloth from a saint's robe or a piece of parchment from a religious text",
         "materialCost": 1000
       },
       "duration": "up to 1 minute",
@@ -5370,7 +5370,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A pickled octopus tentacle"
+        "materialMaterial": "a pickled octopus tentacle"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -5421,7 +5421,7 @@
       "components": {
         "somatic": true,
         "material": true,
-        "materialMaterial": "A glowing stick of incense or a crystal vial filled with phosphorescent material"
+        "materialMaterial": "a glowing stick of incense or a crystal vial filled with phosphorescent material"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -5450,7 +5450,7 @@
       "components": {
         "somatic": true,
         "material": true,
-        "materialMaterial": "A drop of water or piece of ice"
+        "materialMaterial": "a drop of water or piece of ice"
       },
       "duration": "Instantaneous",
       "castingTime": "1 action",
@@ -5487,7 +5487,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A pinch of dust and a few drops of water"
+        "materialMaterial": "a pinch of dust and a few drops of water"
       },
       "duration": "Instantaneous",
       "castingTime": "1 action",
@@ -5531,7 +5531,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A pearl worth at least 100 gp and an owl feather",
+        "materialMaterial": "a pearl worth at least 100 gp and an owl feather",
         "materialCost": 100
       },
       "ritual": true,
@@ -5557,7 +5557,7 @@
       "components": {
         "somatic": true,
         "material": true,
-        "materialMaterial": "A lead-based ink worth at least 10gp, which this spell consumes",
+        "materialMaterial": "a lead-based ink worth at least 10gp, which this spell consumes",
         "materialCost": 10
       },
       "ritual": true,
@@ -5609,7 +5609,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A vellum depiction or a carved statuette in the likeness of the target, and a special component that varies according to the version of the spell you choose, worth at least 500gp per Hit Die of the target",
+        "materialMaterial": "a vellum depiction or a carved statuette in the likeness of the target, and a special component that varies according to the version of the spell you choose, worth at least 500gp per Hit Die of the target",
         "materialCost": 500
       },
       "duration": "Until dispelled",
@@ -5694,7 +5694,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A few grains of sugar, some kernels of grain, and a smear of fat"
+        "materialMaterial": "a few grains of sugar, some kernels of grain, and a smear of fat"
       },
       "duration": "up to 10 minutes",
       "concentration": true,
@@ -5824,7 +5824,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "An eyelash encased in gum arabic"
+        "materialMaterial": "an eyelash encased in gum arabic"
       },
       "duration": "up to 1 hour",
       "concentration": true,
@@ -5853,7 +5853,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A grasshopper's hind leg"
+        "materialMaterial": "a grasshopper's hind leg"
       },
       "duration": "1 minute",
       "castingTime": "1 action",
@@ -5896,7 +5896,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Incense worth at least 250 gp, which the spell consumes, and four ivory strips worth 50 gp each",
+        "materialMaterial": "incense worth at least 250 gp, which the spell consumes, and four ivory strips worth 50 gp each",
         "materialCost": 25
       },
       "duration": "Instantaneous",
@@ -5922,7 +5922,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "An exquisite chest, 3 feet by 2 feet by 2 feet, constructed from rare materials worth at least 5,000 gp, and a Tiny replica made from the same materials worth at least 50 gp",
+        "materialMaterial": "an exquisite chest, 3 feet by 2 feet by 2 feet, constructed from rare materials worth at least 5,000 gp, and a Tiny replica made from the same materials worth at least 50 gp",
         "materialCost": 50
       },
       "duration": "Instantaneous",
@@ -5944,7 +5944,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A small crystal bead"
+        "materialMaterial": "a small crystal bead"
       },
       "ritual": true,
       "duration": "8 hours",
@@ -5996,7 +5996,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Either a small leather loop or a piece of golden wire bent into a cup shape with a long shank on one end"
+        "materialMaterial": "either a small leather loop or a piece of golden wire bent into a cup shape with a long shank on one end"
       },
       "duration": "up to 10 minutes",
       "concentration": true,
@@ -6021,7 +6021,7 @@
       "components": {
         "verbal": true,
         "material": true,
-        "materialMaterial": "A firefly or phosphorescent moss"
+        "materialMaterial": "a firefly or phosphorescent moss"
       },
       "duration": "1 hour",
       "castingTime": "1 action",
@@ -6084,7 +6084,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A bit of fur and a rod of amber, crystal, or glass"
+        "materialMaterial": "a bit of fur and a rod of amber, crystal, or glass"
       },
       "duration": "Instantaneous",
       "castingTime": "1 action",
@@ -6145,7 +6145,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A bit of fur from a bloodhound"
+        "materialMaterial": "a bit of fur from a bloodhound"
       },
       "ritual": true,
       "duration": "Instantaneous",
@@ -6168,7 +6168,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A bit of fur from a bloodhound"
+        "materialMaterial": "a bit of fur from a bloodhound"
       },
       "duration": "up to 1 hour",
       "concentration": true,
@@ -6197,7 +6197,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A forked twig"
+        "materialMaterial": "a forked twig"
       },
       "duration": "up to 10 minutes",
       "concentration": true,
@@ -6225,7 +6225,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A pinch of dirt"
+        "materialMaterial": "a pinch of dirt"
       },
       "duration": "1 hour",
       "castingTime": "1 action",
@@ -6250,7 +6250,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Paper or leaf in the shape of a funnel"
+        "materialMaterial": "paper or leaf in the shape of a funnel"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -6278,7 +6278,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A piece of cured leather"
+        "materialMaterial": "a piece of cured leather"
       },
       "duration": "8 hours",
       "castingTime": "1 action",
@@ -6322,7 +6322,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Holy water or powdered silver and iron worth at least 100 gp, which the spell consumes",
+        "materialMaterial": "holy water or powdered silver and iron worth at least 100 gp, which the spell consumes",
         "materialCost": 100
       },
       "duration": "1 hour",
@@ -6346,7 +6346,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A gem, crystal, reliquary, or some other ornamental container worth at least 500 gp",
+        "materialMaterial": "a gem, crystal, reliquary, or some other ornamental container worth at least 500 gp",
         "materialCost": 500
       },
       "duration": "Until dispelled",
@@ -6399,7 +6399,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A honeycomb and jade dust of at least 10 inches, the spell consumes"
+        "materialMaterial": "a honeycomb and jade dust of at least 10 inches, the spell consumes"
       },
       "ritual": true,
       "duration": "Until dispelled",
@@ -6469,7 +6469,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A bit of fleece"
+        "materialMaterial": "a bit of fleece"
       },
       "duration": "up to 10 minutes",
       "concentration": true,
@@ -6570,7 +6570,7 @@
       "components": {
         "verbal": true,
         "material": true,
-        "materialMaterial": "A snake's tongue and either a bit of honeycomb or a drop of sweet oil"
+        "materialMaterial": "a snake's tongue and either a bit of honeycomb or a drop of sweet oil"
       },
       "duration": "24 hours",
       "castingTime": "1 action",
@@ -6599,7 +6599,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A miniature hand sculpted from clay"
+        "materialMaterial": "a miniature hand sculpted from clay"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -6674,7 +6674,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Powdered rhubarb leaf and an adder's stomach"
+        "materialMaterial": "powdered rhubarb leaf and an adder's stomach"
       },
       "duration": "Instantaneous",
       "castingTime": "1 action",
@@ -6711,7 +6711,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Niter, sulfur, and pine tar formed into a bead"
+        "materialMaterial": "niter, sulfur, and pine tar formed into a bead"
       },
       "duration": "up to 10 minutes",
       "concentration": true,
@@ -6740,7 +6740,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Two lodestones"
+        "materialMaterial": "two lodestones"
       },
       "duration": "Instantaneous",
       "castingTime": "1 minute",
@@ -6765,7 +6765,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A short piece of copper wire"
+        "materialMaterial": "a short piece of copper wire"
       },
       "duration": "1 round",
       "castingTime": "1 action",
@@ -6836,7 +6836,7 @@
       "components": {
         "somatic": true,
         "material": true,
-        "materialMaterial": "A bit of fleece"
+        "materialMaterial": "a bit of fleece"
       },
       "duration": "1 minute",
       "castingTime": "1 action",
@@ -7009,7 +7009,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Several seeds of any moonseed plant and a piece of opalescent feldspar"
+        "materialMaterial": "several seeds of any moonseed plant and a piece of opalescent feldspar"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -7043,7 +7043,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A miniature platinum sword with a grip and pommel of copper and zinc, worth 250gp",
+        "materialMaterial": "a miniature platinum sword with a grip and pommel of copper and zinc, worth 250gp",
         "materialCost": 250
       },
       "duration": "8 hours",
@@ -7069,7 +7069,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A miniature portal carved from ivory, a small piece of polished marble, and a tiny silver spoon, each item worth at least 5 gp",
+        "materialMaterial": "a miniature portal carved from ivory, a small piece of polished marble, and a tiny silver spoon, each item worth at least 5 gp",
         "materialCost": 15
       },
       "duration": "24 hours",
@@ -7093,7 +7093,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A thin sheet of lead, a piece of opaque glass, a wad of cotton or cloth, and powdered chrysolite"
+        "materialMaterial": "a thin sheet of lead, a piece of opaque glass, a wad of cotton or cloth, and powdered chrysolite"
       },
       "duration": "24 hours",
       "castingTime": "10 minutes",
@@ -7114,7 +7114,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A miniature platinum sword with a grip and pommel of copper and zinc, worth 250 gp",
+        "materialMaterial": "a miniature platinum sword with a grip and pommel of copper and zinc, worth 250 gp",
         "materialCost": 250
       },
       "duration": "up to 1 minute",
@@ -7144,7 +7144,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "An iron blade and a small bag containing a mixture of soils—clay, loam, and sand"
+        "materialMaterial": "an iron blade and a small bag containing a mixture of soils—clay, loam, and sand"
       },
       "duration": "up to 2 hours",
       "concentration": true,
@@ -7168,7 +7168,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A pinch of diamond dust worth 25 gp sprinkled over the target, which the spell consumes",
+        "materialMaterial": "a pinch of diamond dust worth 25 gp sprinkled over the target, which the spell consumes",
         "materialCost": 25
       },
       "duration": "8 hours",
@@ -7196,7 +7196,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A small square of silk"
+        "materialMaterial": "a small square of silk"
       },
       "duration": "24 hours",
       "castingTime": "1 action",
@@ -7219,7 +7219,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A small crystal sphere"
+        "materialMaterial": "a small crystal sphere"
       },
       "duration": "Instantaneous",
       "castingTime": "1 action",
@@ -7248,7 +7248,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A hemispherical piece of clear crystal and a matching hemispherical piece of gum arabic"
+        "materialMaterial": "a hemispherical piece of clear crystal and a matching hemispherical piece of gum arabic"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -7294,7 +7294,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Ashes from a burned leaf of mistletoe and a sprig of spruce"
+        "materialMaterial": "ashes from a burned leaf of mistletoe and a sprig of spruce"
       },
       "duration": "up to 1 hour",
       "concentration": true,
@@ -7325,7 +7325,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A pinch of sesame seeds"
+        "materialMaterial": "a pinch of sesame seeds"
       },
       "duration": "1 hour",
       "castingTime": "1 action",
@@ -7350,7 +7350,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A bit of fleece"
+        "materialMaterial": "a bit of fleece"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -7446,7 +7446,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A jewel worth at least 1,000 gp, which the spell consumes",
+        "materialMaterial": "a jewel worth at least 1,000 gp, which the spell consumes",
         "materialCost": 1000
       },
       "duration": "24 hours",
@@ -7471,7 +7471,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A forked, metal rod worth at least 250 gp, attuned to a particular plane of existence",
+        "materialMaterial": "a forked, metal rod worth at least 250 gp, attuned to a particular plane of existence",
         "materialCost": 250
       },
       "duration": "Instantaneous",
@@ -7560,7 +7560,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A caterpillar cocoon"
+        "materialMaterial": "a caterpillar cocoon"
       },
       "duration": "up to 1 hour",
       "concentration": true,
@@ -7796,7 +7796,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A bit of fleece and jade dust worth at least 25 gp",
+        "materialMaterial": "a bit of fleece and jade dust worth at least 25 gp",
         "materialCost": 25
       },
       "duration": "Until dispelled",
@@ -7818,7 +7818,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A small replica of you made from materials worth at least 5 gp",
+        "materialMaterial": "a small replica of you made from materials worth at least 5 gp",
         "materialCost": 5
       },
       "duration": "up to 24 hours",
@@ -7874,7 +7874,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Holy water or powdered silver and iron, which the spell consumes"
+        "materialMaterial": "holy water or powdered silver and iron, which the spell consumes"
       },
       "duration": "up to 10 minutes",
       "concentration": true,
@@ -7972,7 +7972,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A diamond worth at least 500gp, which the spell consumes",
+        "materialMaterial": "a diamond worth at least 500gp, which the spell consumes",
         "materialCost": 500
       },
       "duration": "Instantaneous",
@@ -7999,7 +7999,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Pieces of eggshell from two different kinds of creatures"
+        "materialMaterial": "pieces of eggshell from two different kinds of creatures"
       },
       "ritual": true,
       "duration": "1 hour",
@@ -8106,7 +8106,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A prayer wheel and holy water"
+        "materialMaterial": "a prayer wheel and holy water"
       },
       "duration": "1 hour",
       "castingTime": "1 minute",
@@ -8133,7 +8133,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Rare oils and unguents worth at least 1,000 gp, which the spell consumes",
+        "materialMaterial": "rare oils and unguents worth at least 1,000 gp, which the spell consumes",
         "materialCost": 1000
       },
       "duration": "Instantaneous",
@@ -8177,7 +8177,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A miniature cloak"
+        "materialMaterial": "a miniature cloak"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -8200,7 +8200,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A diamond worth at least 1,000gp, which the spell consumes",
+        "materialMaterial": "a diamond worth at least 1,000gp, which the spell consumes",
         "materialCost": 1000
       },
       "duration": "Instantaneous",
@@ -8224,7 +8224,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A lodestone and iron filings"
+        "materialMaterial": "a lodestone and iron filings"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -8252,7 +8252,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Diamonds worth 300gp, which the spell consumes",
+        "materialMaterial": "diamonds worth 300gp, which the spell consumes",
         "materialCost": 300
       },
       "duration": "Instantaneous",
@@ -8277,7 +8277,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Powdered corn extract and a twisted loop of parchment"
+        "materialMaterial": "powdered corn extract and a twisted loop of parchment"
       },
       "duration": "1 hour",
       "castingTime": "1 action",
@@ -8323,7 +8323,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A small silver mirror"
+        "materialMaterial": "a small silver mirror"
       },
       "duration": "1 minute",
       "castingTime": "1 bonus action",
@@ -8386,7 +8386,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A focus worth at least 1,000 gp, such as a crystal ball, a silver mirror, or a font filled with holy water",
+        "materialMaterial": "a focus worth at least 1,000 gp, such as a crystal ball, a silver mirror, or a font filled with holy water",
         "materialCost": 1000
       },
       "duration": "up to 10 minutes",
@@ -8458,7 +8458,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A dash of talc and a small amount of silver powder"
+        "materialMaterial": "a dash of talc and a small amount of silver powder"
       },
       "duration": "1 hour",
       "castingTime": "1 action",
@@ -8510,7 +8510,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A short piece of fine copper wire"
+        "materialMaterial": "a short piece of fine copper wire"
       },
       "duration": "1 round",
       "castingTime": "1 action",
@@ -8537,7 +8537,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A powder composed of diamond, emerald, ruby, and sapphire dust worth at least 5,000 gp, which the spell consumes",
+        "materialMaterial": "a powder composed of diamond, emerald, ruby, and sapphire dust worth at least 5,000 gp, which the spell consumes",
         "materialCost": 5000
       },
       "duration": "Until dispelled",
@@ -8578,7 +8578,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A jade circlet worth at least 1,500 gp, which you must place on your head before you cast the spell",
+        "materialMaterial": "a jade circlet worth at least 1,500 gp, which you must place on your head before you cast the spell",
         "materialCost": 1500
       },
       "duration": "up to 1 hour",
@@ -8604,7 +8604,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A chip of mica"
+        "materialMaterial": "a chip of mica"
       },
       "duration": "Instantaneous",
       "castingTime": "1 action",
@@ -8659,7 +8659,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A small parchment with a bit of holy text written on it"
+        "materialMaterial": "a small parchment with a bit of holy text written on it"
       },
       "duration": "up to 10 minutes",
       "concentration": true,
@@ -8685,7 +8685,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Mistletoe, a shamrock leaf, and a club or quarterstaff"
+        "materialMaterial": "mistletoe, a shamrock leaf, and a club or quarterstaff"
       },
       "duration": "1 minute",
       "castingTime": "1 bonus action",
@@ -8759,7 +8759,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A bit of fleece"
+        "materialMaterial": "a bit of fleece"
       },
       "duration": "up to 10 minutes",
       "concentration": true,
@@ -8783,7 +8783,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Snow or ice in quantities sufficient to made a life-size copy of the duplicated creature; some hair, fingernail clippings, or other piece of that creature's body placed inside the snow or ice; and powdered ruby worth 1,500 gp, sprinkled over the duplicate and consumed by the spell",
+        "materialMaterial": "snow or ice in quantities sufficient to made a life-size copy of the duplicated creature; some hair, fingernail clippings, or other piece of that creature's body placed inside the snow or ice; and powdered ruby worth 1,500 gp, sprinkled over the duplicate and consumed by the spell",
         "materialCost": 1500
       },
       "duration": "Until dispelled",
@@ -8829,7 +8829,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A pinch of fine sand, rose petals, or a cricket"
+        "materialMaterial": "a pinch of fine sand, rose petals, or a cricket"
       },
       "duration": "1 minute",
       "castingTime": "1 action",
@@ -8857,7 +8857,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A pinch of dust and a few drops of water"
+        "materialMaterial": "a pinch of dust and a few drops of water"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -8893,7 +8893,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A drop of molasses"
+        "materialMaterial": "a drop of molasses"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -8926,7 +8926,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A piece of ice or a small white rock chip"
+        "materialMaterial": "a piece of ice or a small white rock chip"
       },
       "duration": "Instantaneous",
       "castingTime": "1 action",
@@ -9003,7 +9003,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Burning incense"
+        "materialMaterial": "burning incense"
       },
       "duration": "10 minutes",
       "castingTime": "1 action",
@@ -9049,7 +9049,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A drop of bitumen and a spider"
+        "materialMaterial": "a drop of bitumen and a spider"
       },
       "duration": "up to 1 hour",
       "concentration": true,
@@ -9079,7 +9079,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Seven sharp spines or seven twigs cut peak"
+        "materialMaterial": "seven sharp spines or seven twigs cut peak"
       },
       "duration": "up to 10 minutes",
       "concentration": true,
@@ -9112,7 +9112,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A holy symbol"
+        "materialMaterial": "a holy symbol"
       },
       "duration": "up to 10 minutes",
       "concentration": true,
@@ -9204,7 +9204,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A rotten egg or several skunk cabbage leaves"
+        "materialMaterial": "a rotten egg or several skunk cabbage leaves"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -9243,7 +9243,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Soft clay, to be crudely worked into the desired shape for the stone object"
+        "materialMaterial": "soft clay, to be crudely worked into the desired shape for the stone object"
       },
       "duration": "Instantaneous",
       "castingTime": "1 action",
@@ -9270,7 +9270,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Diamond dust worth 100 gp, which the spell consumes",
+        "materialMaterial": "diamond dust worth 100 gp, which the spell consumes",
         "materialCost": 100
       },
       "duration": "up to 1 hour",
@@ -9363,7 +9363,7 @@
       "components": {
         "verbal": true,
         "material": true,
-        "materialMaterial": "A snake's tongue and either a bit of honeycomb or a drop of sweet oil"
+        "materialMaterial": "a snake's tongue and either a bit of honeycomb or a drop of sweet oil"
       },
       "duration": "up to 8 hours",
       "concentration": true,
@@ -9397,7 +9397,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A magnifying glass"
+        "materialMaterial": "a magnifying glass"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -9429,7 +9429,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Fire and a piece of sunstone"
+        "materialMaterial": "fire and a piece of sunstone"
       },
       "duration": "Instantaneous",
       "castingTime": "1 action",
@@ -9458,7 +9458,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A quiver containing at least one piece of ammunition"
+        "materialMaterial": "a quiver containing at least one piece of ammunition"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -9506,7 +9506,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Mercury, phosphorus, and powdered diamond and opal with a total value of at least 1,000 gp, which the spell consumes",
+        "materialMaterial": "mercury, phosphorus, and powdered diamond and opal with a total value of at least 1,000 gp, which the spell consumes",
         "materialCost": 1000
       },
       "duration": "Until dispelled",
@@ -9530,7 +9530,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Tiny tarts and a feather that is waved in the air"
+        "materialMaterial": "tiny tarts and a feather that is waved in the air"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -9586,7 +9586,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A pair of linked silver rings"
+        "materialMaterial": "a pair of linked silver rings"
       },
       "duration": "24 hours",
       "castingTime": "1 action",
@@ -9625,7 +9625,7 @@
       "components": {
         "verbal": true,
         "material": true,
-        "materialMaterial": "Rare chalks and inks infused with precious gems with 50 gp, which the spell consumes",
+        "materialMaterial": "rare chalks and inks infused with precious gems with 50 gp, which the spell consumes",
         "materialCost": 50
       },
       "duration": "1 round",
@@ -9650,7 +9650,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A drop of mercury"
+        "materialMaterial": "a drop of mercury"
       },
       "ritual": true,
       "duration": "1 hour",
@@ -9690,7 +9690,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "The stem of a plant with thorns"
+        "materialMaterial": "the stem of a plant with thorns"
       },
       "duration": "Instantaneous",
       "castingTime": "1 action",
@@ -9809,7 +9809,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A drop of water"
+        "materialMaterial": "a drop of water"
       },
       "duration": "Instantaneous",
       "castingTime": "1 action",
@@ -9855,7 +9855,7 @@
       "components": {
         "verbal": true,
         "material": true,
-        "materialMaterial": "A small clay model of a ziggurat"
+        "materialMaterial": "a small clay model of a ziggurat"
       },
       "duration": "1 hour",
       "castingTime": "1 action",
@@ -9881,7 +9881,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Clay and water"
+        "materialMaterial": "clay and water"
       },
       "duration": "Instantaneous",
       "castingTime": "1 action",
@@ -9956,7 +9956,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A drop of mercury, a dollop of gum arabic, and a wisp of smoke"
+        "materialMaterial": "a drop of mercury, a dollop of gum arabic, and a wisp of smoke"
       },
       "duration": "up to 1 hour",
       "concentration": true,
@@ -9984,7 +9984,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A sprinkle of holy water and diamonds worth at least 25,000gp, which the spell consumes",
+        "materialMaterial": "a sprinkle of holy water and diamonds worth at least 25,000gp, which the spell consumes",
         "materialCost": 25000
       },
       "duration": "Instantaneous",
@@ -10007,7 +10007,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "An ointment for the eyes that costs 25gp; is made from mushroom powder, saffron, and fat; and is consumed by the spell",
+        "materialMaterial": "an ointment for the eyes that costs 25gp; is made from mushroom powder, saffron, and fat; and is consumed by the spell",
         "materialCost": 25
       },
       "duration": "1 hour",
@@ -10082,7 +10082,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A piece of string and a bit of wood"
+        "materialMaterial": "a piece of string and a bit of wood"
       },
       "ritual": true,
       "duration": "1 hour",
@@ -10162,7 +10162,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A drop of a giant slug bile"
+        "materialMaterial": "a drop of a giant slug bile"
       },
       "duration": "Instantaneous",
       "castingTime": "1 action",
@@ -10195,7 +10195,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A small piece of phosphorus"
+        "materialMaterial": "a small piece of phosphorus"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -10235,7 +10235,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A pinch of powder made by crushing a clear gemstone"
+        "materialMaterial": "a pinch of powder made by crushing a clear gemstone"
       },
       "duration": "up to 10 minutes",
       "concentration": true,
@@ -10259,7 +10259,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A small piece of quartz"
+        "materialMaterial": "a small piece of quartz"
       },
       "duration": "up to 10 minutes",
       "concentration": true,
@@ -10289,7 +10289,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A handful of sand"
+        "materialMaterial": "a handful of sand"
       },
       "duration": "up to 10 minutes",
       "concentration": true,
@@ -10312,7 +10312,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A small block of granite"
+        "materialMaterial": "a small block of granite"
       },
       "duration": "up to 10 minutes",
       "concentration": true,
@@ -10346,7 +10346,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A handful of thorns"
+        "materialMaterial": "a handful of thorns"
       },
       "duration": "up to 10 minutes",
       "concentration": true,
@@ -10376,7 +10376,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A drop of water"
+        "materialMaterial": "a drop of water"
       },
       "duration": "up to 10 minutes",
       "concentration": true,
@@ -10400,7 +10400,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A pair of platinum rings worth at least 50gp each, which you and the target must wear for the duration",
+        "materialMaterial": "a pair of platinum rings worth at least 50gp each, which you and the target must wear for the duration",
         "materialCost": 50
       },
       "duration": "1 hour",
@@ -10443,7 +10443,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A short piece of reed or straw"
+        "materialMaterial": "a short piece of reed or straw"
       },
       "ritual": true,
       "duration": "24 hours",
@@ -10500,7 +10500,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A droplet of water"
+        "materialMaterial": "a droplet of water"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -10530,7 +10530,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A bit of spiderweb"
+        "materialMaterial": "a bit of spiderweb"
       },
       "duration": "up to 1 hour",
       "concentration": true,
@@ -10585,7 +10585,7 @@
       "components": {
         "verbal": true,
         "material": true,
-        "materialMaterial": "A piece of straw"
+        "materialMaterial": "a piece of straw"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -10614,7 +10614,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "Fire and holy water"
+        "materialMaterial": "fire and holy water"
       },
       "duration": "8 hours",
       "castingTime": "1 minute",
@@ -10636,7 +10636,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A tiny fan and a feather of exotic origin"
+        "materialMaterial": "a tiny fan and a feather of exotic origin"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -10688,7 +10688,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A twig from a tree that has been struck by lightning"
+        "materialMaterial": "a twig from a tree that has been struck by lightning"
       },
       "duration": "up to 1 minute",
       "concentration": true,

@@ -553,7 +553,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A piece of vine"
+        "materialMaterial": "a piece of vine"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -712,9 +712,9 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A small stalagmite shaped crystal"
+        "materialMaterial": "a small stalagmite shaped crystal"
       },
-      "duration": "instantaneous",
+      "duration": "Instantaneous",
       "castingTime": "1 action",
       "level": 3,
       "school": "Evocation",
@@ -902,7 +902,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A pinch of dirt and a grasshopper's hind leg"
+        "materialMaterial": "a pinch of dirt and a grasshopper's hind leg"
       },
       "duration": "1 hour"
     },
@@ -1024,7 +1024,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A bit of gauze and a wisp of smoke"
+        "materialMaterial": "a bit of gauze and a wisp of smoke"
       },
       "duration": "up to 1 minute",
       "concentration": true,
@@ -1394,7 +1394,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A small piece of quartz"
+        "materialMaterial": "a small piece of quartz"
       },
       "duration": "up to 10 minutes",
       "concentration": true,
@@ -1446,7 +1446,7 @@
         "verbal": true,
         "somatic": true,
         "material": true,
-        "materialMaterial": "A square of red cloth"
+        "materialMaterial": "a square of red cloth"
       },
       "duration": "up to 1 minute",
       "concentration": true,
