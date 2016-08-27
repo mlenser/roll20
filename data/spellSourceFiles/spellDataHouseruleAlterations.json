@@ -256,13 +256,15 @@
     },
     {
       "name": "Conjure Barrage",
+      "description": "You throw a nonmagical weapon or fire a piece of nonmagical ammunition into the air to create a cone of identical weapons that shoot forward and then disappear. Each creature in a 40-foot cone must succeed on a Dexterity saving throw. A creature takes 5d8 damage on a failed save, or half as much damage on a successful one. The damage type is the same as that of the weapon or ammunition used as a component.",
       "higherLevel": "When you cast this spell using a spell slot of 4th level or higher, the base damage increases by 1d6 for each slot level above 3rd.",
+      "aoe": "40 ft cone",
       "save": {
         "ability": "Dexterity",
-        "damage": "3d8",
+        "damage": "4d8",
         "damageType": "same as that of the weapon or ammunition used as a component",
         "higherLevelDice": "1",
-        "higherLevelDie": "d6",
+        "higherLevelDie": "d8",
         "saveSuccess": "half damage"
       }
     },
@@ -610,8 +612,9 @@
     {
       "name": "Heat Metal",
       "description": "Choose a manufactured metal object, such as a metal weapon or a suit of heavy or medium metal armor, that you can see within range. You cause the object to glow red-hot. Any creature in physical contact with the object takes 2d6 fire damage when you cast the spell. Until the spell ends, you can use a bonus action on each of your subsequent turns to cause this damage again.\nIf a creature is holding or wearing the object and takes the damage from it, the creature must succeed on a Constitution saving throw or drop the object if it can. If it doesn't drop the object, it has disadvantage on attack rolls and ability checks until the start of your next turn.",
-      "damage": {
-        "damage": "2d6",
+      "save": {
+        "ability": "Wisdom",
+        "damage": "2d8",
         "damageType": "fire",
         "higherLevelDice": "1",
         "higherLevelDie": "d6"
@@ -1262,6 +1265,10 @@
         "ability": "Strength",
         "saveFailure": "affected by this spell"
       }
+    },
+    {
+      "name": "Snilloc's Snowball Swarm",
+      "description": "A flurry of magic snowballs erupts from a point you choose within range. Each creature in a 5-foot-radius sphere centered on that point must make a Dexterity saving throw. A creature takes 3d6 cold damage and its speed is reduced by 10 feet until the start of your next turn on a failed save, or half as much damage and no reduction of speed on a successful one."
     },
     {
       "name": "Speak with Dead",
