@@ -766,7 +766,7 @@
     },
     {
       "name": "Illusion of Calm",
-      "description": "You create an illusory double that takes the same space as you. That double makes it look like you are standing still, even when you are not. While under the effects of this spell, your movement doesn't provoke opportunity attacks.\nWhen a creature hits you with an attack of any type, it can make an Intelligence saving throw. On a successful saving throw, it successfully disbelieves and the spell's effect ends for that creature.",
+      "description": "You create an illusory double that takes the same space as you. That double makes it look like you are standing still, even when you are not. While under the effects of this spell, your movement doesn't provoke opportunity attacks.\nWhen a creature hits you with an attack, it can make an Intelligence saving throw. On a successful saving throw, it successfully disbelieves and the spell's effect ends for that creature.",
       "emote": "creates an illusory double",
       "range": "Self",
       "components": {
@@ -1465,36 +1465,6 @@
     {
       "name": "Water Walk",
       "ritual": false
-    },
-    {
-      "name": "Whip of Ants",
-      "description": "You summon hundreds of army ants which cling together in the form of a whip that hovers within range. It lasts for the duration.\nWhen the whip appears, you make a melee spell attack against a target of your choice within 5 feet of the whip. On a hit, the target takes 4d8 poison damage and is poisoned until the start of your next turn. Until the spell ends, you can use a bonus action on each of your turns to move the whip up to 20 feet to a spot you can see and repeat this attack against the same target or a different one.",
-      "emote": "summons hundreds of army ants which cling together in the form of a whip that hovers within range",
-      "source": "houserules",
-      "range": "60 ft",
-      "target": "a creature within 5 ft of the whip",
-      "components": {
-        "verbal": true,
-        "somatic": true,
-        "material": true,
-        "materialMaterial": "a square of red cloth"
-      },
-      "duration": "up to 1 minute",
-      "concentration": true,
-      "castingTime": "bonus action",
-      "level": 6,
-      "school": "Conjuration",
-      "attack": {
-        "type": "ranged",
-        "damage": "4d8",
-        "damageType": "poison"
-      },
-      "classes": [
-        "Bard",
-        "Druid",
-        "Sorcerer",
-        "Wizard"
-      ]
     },
     {
       "name": "Whirlwind",
