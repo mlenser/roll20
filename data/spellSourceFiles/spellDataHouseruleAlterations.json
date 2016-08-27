@@ -541,9 +541,40 @@
       "castingTime": "1 minute"
     },
     {
+      "name": "Grasping Shadows",
+      "description": "You conjure shadows that fill a 20-foot square on the ground that you can see within range. For the duration, these shadows turn the ground in the area into difficult terrain.\nWhen a creature enters the affected area for the first time on a turn or starts its turn there, the creature must succeed on a Dexterity saving throw or take 3d6 bludgeoning damage and be restrained by the shadows until the spell ends. A creature that starts its turn in the area and is already restrained by the shadows takes 4d6 bludgeoning damage.\nA creature restrained by the shadows can use its action to make a Strength or Dexterity check (its choice) against your spell save DC. On a success, it frees itself.",
+      "emote": "conjures vines that sprout from the ground",
+      "source": "phb 238 / phb 246",
+      "range": "90 ft",
+      "target": "a creature that enters the affected area for the first time on a turn or starts its turn there",
+      "aoe": "20 ft square on ground that you can see within range",
+      "components": {
+        "verbal": true,
+        "somatic": true,
+        "material": true,
+        "materialMaterial": "a piece of vine"
+      },
+      "duration": "up to 1 minute",
+      "concentration": true,
+      "castingTime": "1 action",
+      "level": 4,
+      "school": "Conjuration",
+      "save": {
+        "ability": "Dexterity",
+        "damage": "3d6",
+        "damageType": "bludgeoning",
+        "saveFailure": "restrained for the spell's duration"
+      },
+      "classes": [
+        "Sorcerer",
+        "Warlock",
+        "Wizard"
+      ]
+    },
+    {
       "name": "Grasping Vine",
       "newName": "Grasping Vines",
-      "description": "Squirming vines fill a 20-foot square on ground that you can see within range. For the duration, these vines turn the ground in the area into difficult terrain. When a creature enters the affected area for the first time on a turn or starts its turn there, the creature must succeed on a Dexterity saving throw or take 3d6 bludgeoning damage and be restrained by the vines until the spell ends. A creature that starts its turn in the area and is already restrained by the vines takes 3d6 bludgeoning damage. A creature restrained by the vines can use its action to make a Strength or Dexterity check (its choice) against your spell save DC. On a success, it frees itself.",
+      "description": "You conjure vines that fill a 20-foot square on the ground that you can see within range. For the duration, these vines turn the ground in the area into difficult terrain.\nWhen a creature enters the affected area for the first time on a turn or starts its turn there, the creature must succeed on a Dexterity saving throw or take 3d6 bludgeoning damage and be restrained by the vines until the spell ends. A creature that starts its turn in the area and is already restrained by the vines takes 4d6 bludgeoning damage.\nA creature restrained by the vines can use its action to make a Strength or Dexterity check (its choice) against your spell save DC. On a success, it frees itself.",
       "emote": "conjures vines that sprout from the ground",
       "source": "phb 238 / phb 246",
       "range": "90 ft",
