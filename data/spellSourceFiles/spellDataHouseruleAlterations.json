@@ -1383,7 +1383,7 @@
     },
     {
       "name": "Wall of Ice, lesser",
-      "description": "You create a wall of ice on a solid surface within range. You can form it into a hemispherical dome or a sphere with a radius of up to 5 feet, or you can shape a flat surface made up of ten 5-foot-square panels. Each panel must be contiguous with another panel. In any form, the wall is 1 foot thick and lasts for the duration.\nIf the wall cuts through a creature's space when it appears, the creature within its area is pushed to one side of the wall and must make a Dexterity saving throw. On a failed save, the creature takes 4d6 cold damage, or half as much damage on a successful save.\nThe wall is an object that can be damaged and thus breached. It has AC 5 and 15 hit points per 5-foot section, and it is vulnerable to fire damage. Reducing a 5-foot section of wall to 0 hit points destroys it and leaves behind a sheet of frigid air in the space the wall occupied. A creature moving through the sheet of frigid air for the first time on a turn must make a Constitution saving throw. That creature takes 2d6 cold damage on a failed save, or half as much damage on a successful one.",
+      "description": "You create a wall of ice on a solid surface within range. You can form it into a hemispherical dome or a sphere with a radius of up to 5 feet, or you can shape a flat surface made up of ten 5-foot-square panels. Each panel must be contiguous with another panel. In any form, the wall is 1 foot thick and lasts for the duration.\nIf the wall cuts through a creature's space when it appears, the creature within its area is pushed to one side of the wall and must make a Dexterity saving throw. On a failed save, the creature takes 5d6 cold damage, or half as much damage on a successful save.\nThe wall is an object that can be damaged and thus breached. It has AC 5 and 15 hit points per 5-foot section, and it is vulnerable to fire damage. Reducing a 5-foot section of wall to 0 hit points destroys it and leaves behind a sheet of frigid air in the space the wall occupied. A creature moving through the sheet of frigid air for the first time on a turn must make a Constitution saving throw. That creature takes 2d6 cold damage on a failed save, or half as much damage on a successful one.",
       "higherLevel": "When you cast this spell using a spell slot of 4th level or higher, the damage the wall deals when it appears increases by 1d6 for each slot above 3rd, and the damage from passing through the sheet of frigid air increases by 1d6, for every 2 spell slots slot level above 3rd.",
       "emote": "creates a wall of ice",
       "source": "phb 285",
@@ -1403,7 +1403,7 @@
       "school": "Evocation",
       "save": {
         "ability": "Dexterity",
-        "damage": "4d6",
+        "damage": "5d6",
         "damageType": "cold",
         "saveSuccess": "half damage",
         "higherLevelDice": "1",
