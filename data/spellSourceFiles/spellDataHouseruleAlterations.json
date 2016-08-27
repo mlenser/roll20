@@ -2,6 +2,17 @@
   "version": "0.2.1",
   "spells": [
     {
+      "name": "Abi-Dalzim's Horrid Wilting",
+      "description": "You draw the moisture from every creature in a 30-foot cube centered on a point you choose within range. Each creature in that area must make a Constitution saving throw. Constructs and undead aren't affected, and plants and water elementals make this saving throw with disadvantage. A creature takes 12d8 necrotic damage on a failed save, or half as much damage on a successful one.",
+      "higherLevel": "When you cast this spell using a spell slot of 9th level, the damage increases by 1d8.",
+      "save": {
+        "ability": "Constitution",
+        "damage": "12d8",
+        "damageType": "necrotic",
+        "saveSuccess": "half damage"
+      }
+    },
+    {
       "name": "Acid Fog",
       "description": "You create a 20-foot-radius sphere of acidic, green fog centered on a point you choose within range. The fog spreads around corners. It lasts for the duration or until strong wind disperses the fog, ending the spell. Its area is heavily obscured.\nWhen a creature enters the spell's area for the first time on a turn or starts its turn there, that creature must make a Constitution saving throw. The creature takes 5d8 acid damage on a failed save, or half as much damage on a successful one. Creatures are affected even if they hold their breath or don't need to breathe.\nThe fog moves 10 feet away from you at the start of each of your turns, rolling along the surface of the ground. The vapors, being heavier than air, sink to the lowest level of the land, even pouring down openings.",
       "higherLevel": "When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d8 for each slot level above 5th.",
@@ -136,10 +147,10 @@
       "description": "Necromantic energy washes over a creature of your choice that you can see within range, draining moisture and vitality from it. The target must make a Constitution saving throw. The target takes 10d8 necrotic damage on a failed save, or half as much damage on a successful one. The spell has no effect on undead or constructs.\nIf you target a plant creature or a magical plant, it makes the saving throw with disadvantage, and the spell deals maximum damage to it.\nIf you target a nonmagical plant that isn't a creature, such as a tree or shrub, it doesn't make a saving throw; it simply withers and dies.",
       "save": {
         "ability": "Constitution",
-        "damage": "10d8",
+        "damage": "11d8",
         "damageType": "necrotic",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
+        "higherLevelDice": "2",
         "higherLevelDie": "d8"
       }
     },
@@ -149,7 +160,13 @@
     },
     {
       "name": "Bones of the Earth",
-      "level": 5
+      "description": "You cause up to six pillars of stone to burst from places on the ground that you can see within range. Each pillar is a cylinder that has a diameter of 5 feet and a height of up to 30 feet. The ground where a pillar appears must be wide enough for its diameter, and you can target ground under a creature if that creature is Medium or smaller. Each pillar has AC 5 and 30 hit points. When reduced to 0 hit points, a pillar crumbles into rubble, which creates an area of difficult terrain with a 10-foot radius. The rubble lasts until cleared.\nIf a pillar is created under a creature, that creature must succeed on a Dexterity saving throw or be lifted by the pillar. A creature can choose to fail the save.\nIf a pillar is prevented from reaching its full height because of a ceiling or other obstacle, a creature on the pillar takes 10d6 bludgeoning damage and is restrained, pinched between the pillar and the obstacle. The restrained creature can use an action to make a Strength or Dexterity check (the creature's choice) against the spell's saving throw DC. On a success, the creature is no longer restrained and must either move off the pillar or fall off it.",
+      "save": {
+        "ability": "Dexterity",
+        "damage": "10d6",
+        "damageType": "bludgeoning",
+        "saveFailure": "and restrained. The restrained creature can use an action to make a Strength or Dexterity check (the creature's choice) against the spell's saving throw DC. On a success, the creature is no longer restrained and must either move off the pillar or fall off it."
+      }
     },
     {
       "name": "Blinding Smite",
@@ -167,8 +184,21 @@
       "damage": {
         "damage": "4d6",
         "damageType": "radiant",
-        "higherLevelDice": "2",
-        "higherLevelDie": "d4"
+        "higherLevelDice": "1",
+        "higherLevelDie": "d6"
+      }
+    },
+    {
+      "name": "Call Lightning",
+      "description": "A storm cloud appears in the shape of a cylinder that is 10 feet tall with a 60-foot radius, centered on a point you can see 100 feet directly above you. The spell fails if you can't see a point in the air where the storm cloud could appear (for example, if you are in a room that can't accommodate the cloud).\nWhen you cast the spell, choose a point you can see within range. A bolt of lightning flashes down from the cloud to that point. Each creature within 5 feet of that point must make a Dexterity saving throw. A creature takes 4d6 lightning damage on a failed save, or half as much damage on a successful one. On each of your turns until the spell ends, you can use your action to call down lightning in this way again, targeting the same point or a different one.\nIf you are outdoors in stormy conditions when you cast this spell, the spell gives you control over the existing storm instead of creating a new one. Under such conditions, the spell's damage increases by 1d10.",
+      "higherLevel": "When you cast this spell using a spell slot of 4th or higher level, the damage increases by 1d6 for each slot level above 3rd.",
+      "save": {
+        "ability": "Dexterity",
+        "damage": "4d6",
+        "damageType": "lightning",
+        "saveSuccess": "half damage",
+        "higherLevelDice": "1",
+        "higherLevelDie": "d6"
       }
     },
     {
@@ -250,6 +280,16 @@
       }
     },
     {
+      "name": "Conjure Volley",
+      "description": "You fire a piece of nonmagical ammunition from a ranged weapon or throw a nonmagical weapon into the air and choose a point within range. Hundreds of duplicates of the ammunition or weapon fall in a volley from above and then disappear. Each creature in a 40-foot-radius. 20-foot-high cylinder centered on that point must make a Dexterity saving throw. A creature takes 6d8 damage on a failed save, or half as much damage on a successful one. The damage type is the same as that of the ammunition or weapon.",
+      "save": {
+        "ability": "Dexterity",
+        "damage": "6d8",
+        "damageType": "same as that of the weapon or ammunition used as a component",
+        "saveSuccess": "half damage"
+      }
+    },
+    {
       "name": "Continual Flame",
       "ritual": true
     },
@@ -318,6 +358,21 @@
     {
       "name": "Death Ward",
       "school": "Necromancy"
+    },
+    {
+      "name": "Destructive Wave",
+      "higherLevel": "When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d6 for each slot level above 1st.",
+      "save": {
+        "ability": "Constitution",
+        "damage": "5d6",
+        "damageType": "thunder",
+        "secondaryDamage": "5d6",
+        "secondaryDamageType": "radiant or necrotic damage (your choice)",
+        "saveFailure": "be knocked prone",
+        "saveSuccess": "half damage and not knocked prone",
+        "higherLevelDice": "1",
+        "higherLevelDie": "d6"
+      }
     },
     {
       "name": "Disguise Self",
@@ -407,10 +462,11 @@
     },
     {
       "name": "Evard's Black Tentacles",
+      "description": "Squirming, ebony tentacles fill a 20-foot square on ground that you can see within range. For the duration, these tentacles turn the ground in the area into difficult terrain. When a creature enters the affected area for the first time on a turn or starts its turn there, the creature must succeed on a Dexterity saving throw or take 4d6 bludgeoning damage and be restrained by the tentacles until the spell ends. A creature that starts its turn in the area and is already restrained by the tentacles takes 3d6 bludgeoning damage. A creature restrained by the tentacles can use its action to make a Strength or Dexterity check (its choice) against your spell save DC. On a success, it frees itself.",
       "higherLevel": "When you cast this spell using a spell slot of 5th level or higher, the base damage increases by 1d6 for each slot level above 4th.",
       "save": {
         "ability": "Dexterity",
-        "damage": "3d6",
+        "damage": "4d6",
         "damageType": "bludgeoning",
         "higherLevelDice": "1",
         "higherLevelDie": "d6",
@@ -431,12 +487,16 @@
     },
     {
       "name": "Finger of Death",
-      "description": "You send negative energy coursing through a creature that you can see within range, causing it searing pain. The target must make a Constitution saving throw. It takes 22d8 necrotic damage on a failed save, or half as much damage on a successful one.\nA humanoid killed by this spell rises at the start of your next turn as a zombie that is permanently under your command, following your verbal orders to the best of its ability.",
+      "description": "You send negative energy coursing through a creature that you can see within range, causing it searing pain. The target must make a Constitution saving throw. It takes 12d8 + 30 necrotic damage on a failed save, or half as much damage on a successful one.\nA humanoid killed by this spell rises at the start of your next turn as a zombie that is permanently under your command, following your verbal orders to the best of its ability.",
+      "higherLevel": "When you cast this spell using a spell slot of 8th level or higher, the damage increases by 1d8 for each slot level above 7th.",
       "save": {
         "ability": "Constitution",
-        "damage": "22d8",
+        "damage": "12d8",
+        "damageBonus": "30",
         "damageType": "necrotic",
-        "saveSuccess": "half damage"
+        "saveSuccess": "half damage",
+        "higherLevelDice": "1",
+        "higherLevelDie": "d8"
       }
     },
     {
@@ -460,6 +520,20 @@
       "name": "Flame Arrows",
       "description": "You touch a quiver containing arrows or bolts. When a target is hit by a ranged weapon attack using a piece of ammunition drawn from the quiver, the target takes an extra 1d6 fire damage. The spell's magic ends on the piece of ammunition when it hits or misses. When the quiver runs out of ammunition is takes an action to fill it from another quiver.",
       "higherLevel": "When you cast this spell using a spell slot of 4th or 5th level, you can maintain your concentration on the spell for up to 8 hours. When you use a spell slot of 6th level or higher, you can maintain your concentration on the spell for up to 24 hours."
+    },
+    {
+      "name": "Flame Strike",
+      "description": "A vertical column of divine fire roars down from the heavens in a location you specify. Each creature in a 10-foot-radius, 40-foot-high cylinder centered on a point within range must make a Dexterity saving throw. A creature takes 6d6 fire damage and 6d6 radiant damage on a failed save, or half as much damage on a successful one.",
+      "save": {
+        "ability": "Dexterity",
+        "damage": "7d6",
+        "damageType": "fire",
+        "secondaryDamage": "6d6",
+        "secondaryDamageType": "radiant",
+        "saveSuccess": "half damage",
+        "higherLevelDice": "1",
+        "higherLevelDie": "d6"
+      }
     },
     {
       "name": "Frostbite",
@@ -512,14 +586,30 @@
       ]
     },
     {
+      "name": "Guardian of Faith",
+      "description": "A Large spectral guardian appears and hovers for the duration in an unoccupied space of your choice that you can see within range. The guardian occupies that space and is indistinct except for a gleaming sword and shield emblazoned with the symbol of your deity.\nAny creature hostile to you that moves to a space within 10 feet of the guardian for the first time on a turn must succeed on a Dexterity saving throw. The creature takes 20 radiant damage on a failed save, or half as much damage on a successful one. The guardian vanishes when it has dealt a total of 60 damage.",
+      "higherLevel": "When you cast this spell using a spell slot of 5th level or higher, the base damage increases by 1d8 for each slot level above 4th.",
+      "save": {
+        "ability": "Dexterity",
+        "damage": "20",
+        "damageType": "radiant",
+        "saveSuccess": "half damage",
+        "higherLevelDice": "1",
+        "higherLevelDie": "d8"
+      }
+    },
+    {
       "name": "Harm",
       "description": "You unleash a virulent disease on a creature that you can see within range. The target must make a Constitution saving throw. On a failed save, it takes 14d8 necrotic damage, or half as much damage on a successful save. The damage can't reduce the target's hit points below 1. If the target fails the saving throw, its hit point maximum is reduced for 1 hour by an amount equal to the necrotic damage it took. Any effect that removes a disease allows a creature's hit point maximum to return to normal before that time passes.",
+      "higherLevel": "When you cast this spell using a spell slot of 6th level or higher, the base damage increases by 1d8 for each slot level above 5th.",
       "level": 5,
       "save": {
         "ability": "Constitution",
-        "damage": "18d8",
+        "damage": "14d8",
         "damageType": "necrotic",
-        "saveSuccess": "half damage"
+        "saveSuccess": "half damage",
+        "higherLevelDice": "1",
+        "higherLevelDie": "d8"
       }
     },
     {
@@ -622,7 +712,7 @@
     {
       "name": "Ice Spears",
       "description": "Upon casting this spell, three giant spears of ice lance up out of the ground. Each stalagmite-like icicle affects a 5-foot square and tapers to a height of 10 feet. Each creature that occupies a square from which a spear extends must make a Dexterity saving throw or take 3d6 piercing damage and 3d6 cold damage and be knocked prone. A creature that succeeds on its saving throw takes half damage and isn't knocked prone.\nIce spears created by this spell persist. They melt as normal depending on the surrounding environment. They can provide cover. An ice spear has 12 AC and 30 hit points.",
-      "higherLevel": "When you cast this spell using a spell slot of 4th level or higher, the number of spears increases by 1 for each slot level above 2nd",
+      "higherLevel": "When you cast this spell using a spell slot of 4th level or higher, the number of spears increases by 1 for every two slot levels above 3rd",
       "emote": "evokes giant spears of ice that lance up out of the ground.",
       "source": "houserules",
       "range": "60 ft",
@@ -676,11 +766,11 @@
     },
     {
       "name": "Immolation",
-      "description": "Flames wreathe one creature you can see within range. The target must make a Dexterity saving throw. It takes 10d6 fire damage on a failed save, or half as much damage on a successful one. On a failed save, the target also burns for the spell's duration. The burning target sheds bright light in a 30-foot radius and dim light for an additional 30 feet. At the end of each of its turns, the target repeats the saving throw. It takes 11d6 fire damage on a failed save, and the spell ends on a successful one. These magical flames can't be extinguished through nonmagical means.\nIf damage from this spell reduces a target to 0 hit points, the target is turned to ash.",
+      "description": "Flames wreathe one creature you can see within range. The target must make a Dexterity saving throw. It takes 9d6 fire damage on a failed save, or half as much damage on a successful one. On a failed save, the target also burns for the spell's duration. The burning target sheds bright light in a 30-foot radius and dim light for an additional 30 feet. At the end of each of its turns, the target repeats the saving throw. It takes 11d6 fire damage on a failed save, and the spell ends on a successful one. These magical flames can't be extinguished through nonmagical means.\nIf damage from this spell reduces a target to 0 hit points, the target is turned to ash.",
       "higherLevel": "When you cast this spell using a spell slot of 6th level or higher, the base damage increases by 1d6 for each slot level above 5th.",
       "save": {
         "ability": "Dexterity",
-        "damage": "10d6",
+        "damage": "9d6",
         "damageType": "fire",
         "higherLevelDice": "1",
         "higherLevelDie": "d6",
@@ -693,16 +783,37 @@
       "description": "You create a magical restraint to hold a creature that you can see within range. The target must succeed on the appropriate saving throw or be bound by the spell; if it succeeds, it is immune to this spell if you cast it again. While affected by this spell, the creature doesn't need to breathe, eat, or drink, and it doesn't age. Divination spells can't locate or perceive the target.\nWhen you cast the spell, you choose one of the following forms of imprisonment.\nBurial. The target succeed on a Strength saving throw or be entombed far beneath the earth in a sphere of magical force that is just large enough to contain the target. Nothing can pass through the sphere, nor can any creature teleport or use planar travel to get into or out of it.\nThe special component for this version of the spell is a small mithral orb.\nChaining. The target succeed on a Strength saving throw or heavy chains, firmly rooted in the ground, hold the target in place. The target is restrained until the spell ends, and it can't move or be moved by any means until then.\nThe special component for this version of the spell is a fine chain of precious metal.\nHedged Prison. The target succeed on a Charisma saving throw or be transported into a tiny demiplane that is warded against teleportation and planar travel. The demiplane can be a labyrinth, a cage, a tower, or any similar confined structure or area of your choice.\nThe special component for this version of the spell is a miniature representation of the prison made from jade.\nMinimus Containment. The target succeed on an Constitution saving throw or shrink to a height of 1 inch and is imprisoned inside a gemstone or similar object. Light can pass through the gemstone normally (allowing the target to see out and other creatures to see in), but nothing else can pass through, even by means of teleportation or planar travel. The gemstone can't be cut or broken while the spell remains in effect.\nThe special component for this version of the spell is a large, transparent gemstone, such as a corundum, diamond, or ruby.\nSlumber. The target succeed on a Wisdom  saving throw or fall asleep and can't be awoken.\nThe special component for this version of the spell consists of rare soporific herbs.\nEnding the Spell. During the casting of the spell, in any of its versions, you can specify a condition that will cause the spell to end and release the target. The condition can be as specific or as elaborate as you choose, but the DM must agree that the condition is reasonable and has a likelihood of coming to pass. The conditions can be based on a creature's name, identity, or deity but otherwise must be based on observable actions or qualities and not based on intangibles such as level, class, or hit points.\nA dispel magic spell can end the spell only if it is cast as a 9th-level spell, targeting either the prison or the special component used to create it.\nYou can use a particular special component to create only one prison at a time. If you cast the spell again using the same component, the target of the first casting is immediately freed from its binding."
     },
     {
+      "name": "Incendiary Cloud",
+      "description": "A swirling cloud of smoke shot through with white-hot embers appears in a 20-foot-radius sphere centered on a point within range. The cloud spreads around corners and is heavily obscured. It lasts for the duration or until a wind of moderate or greater speed (at least 10 miles per hour) disperses it.\nWhen the cloud appears, each creature in it must make a Dexterity saving throw. A creature takes 12d8 fire damage on a failed save, or half as much damage on a successful one. A creature must also make this saving throw when it enters the spell's area for the first time on a turn or ends its turn there.\nThe cloud moves 10 feet directly away from you in a direction that you choose at the start of each of your turns.",
+      "higherLevel": "When you cast this spell using a spell slot of 9th level, the damage increases by 1d8.",
+      "save": {
+        "ability": "Dexterity",
+        "damage": "12d8",
+        "damageType": "fire",
+        "saveSuccess": "half damage",
+        "higherLevelDice": "1",
+        "higherLevelDie": "d8"
+      }
+    },
+    {
       "name": "Investiture of Flame",
-      "description": "Flames race across your body, shedding bright light in a 30-foot radius and dim light for an additional 30 feet for the spell's duration. The flames don't harm you. Until the spell ends, you gain the following benefits:\n- You are immune to fire damage and have resistance to cold damage.\n- Any creature that moves within 5 feet of you for the first time on a turn or ends its turn there takes 1d10 fire damage.\n- You can use your action to create a line of fire 30 feet long and 5 feet wide extending from you in a direction you choose. Each creature in the line must make a Dexterity saving throw. A creature takes 4d8 fire damage on a failed save, or half as much damage on a successful one."
+      "description": "Flames race across your body, shedding bright light in a 30-foot radius and dim light for an additional 30 feet for the spell's duration. The flames don't harm you. Until the spell ends, you gain the following benefits:\n- You are immune to fire damage and have resistance to cold damage.\n- Any creature that moves within 5 feet of you for the first time on a turn or ends its turn there takes 1d10 fire damage.\n- You can use your action to create a line of fire 30 feet long and 5 feet wide extending from you in a direction you choose. Each creature in the line must make a Dexterity saving throw. A creature takes 6d6 fire damage on a failed save, or half as much damage on a successful one.",
+      "higherLevel": "When you cast this spell using a spell slot of 7th level or higher, the line of fire damage increases by 1d6 for each slot level above 6th."
     },
     {
       "name": "Investiture of Ice",
-      "description": "Until the spell ends, ice rimes your body, and you gain the following benefits:\n- You are immune to cold damage and have resistance to fire damage.\n- You can move across difficult terrain created by ice or snow without spending extra movement.\n- The ground in a 10-foot radius around you is icy and is difficult terrain for creatures other than you. The radius moves with you.\n- You can use your action to create a 30-foot cone of freezing wind extending from your outstretched hand in a direction you choose. Each creature in the cone must make a Constitution saving throw. A creature takes 5d6 cold damage on a failed save, or half as much damage on a successful one. A creature that fails its save against this effect has its speed halved until the start of your next turn."
+      "description": "Until the spell ends, ice rimes your body, and you gain the following benefits:\n- You are immune to cold damage and have resistance to fire damage.\n- You can move across difficult terrain created by ice or snow without spending extra movement.\n- The ground in a 10-foot radius around you is icy and is difficult terrain for creatures other than you. The radius moves with you.\n- You can use your action to create a 30-foot cone of freezing wind extending from your outstretched hand in a direction you choose. Each creature in the cone must make a Constitution saving throw. A creature takes 5d6 cold damage on a failed save, or half as much damage on a successful one. A creature that fails its save against this effect has its speed halved until the start of your next turn.",
+      "higherLevel": "When you cast this spell using a spell slot of 7th level or higher, the cone of cold damage increases by 1d6 for each slot level above 6th."
+    },
+    {
+      "name": "Investiture of Stone",
+      "description": "Until the spell ends, bits of rock spread across your body, and you gain the following benefits:\n- You have resistance to bludgeoning, piercing, and slashing damage from nonmagical weapons.\n- You can use your action to create a small earthquake on the ground in a 15-foot radius centered on you. Other creatures on that ground must make a Dexterity saving throw. A creature takes 5d6 bludgeoning damage and is knocked prone on a failed save, or half as much damage and not knocked prone on a sucessful one.\n- You can move across difficult terrain made of earth or stone without spending extra movement. You can move through solid earth or stone as if it was air and without destabilizing it, but you can't end your movement there. If you do so, you are ejected to the nearest unoccupied space, this spell ends, and you are stunned until the end of your next turn.",
+      "higherLevel": "When you cast this spell using a spell slot of 7th level or higher, the wind damage increases by 1d8 for each slot level above 6th."
     },
     {
       "name": "Investiture of Wind",
-      "description": "Until the spell ends, wind whirls around you, and you gain the following benefits:\n- Ranged weapon attacks made against you have disadvantage on the attack roll.\n- You gain a flying speed of 60 feet. If you are still flying when the spell ends, you fall, unless you can somehow prevent it.\n- You can use your action to create a 15-foot cube of swirling wind centered on a point you can see within 60 feet of you. Each creature in that area must make a Strength saving throw. A creature takes 2d10 bludgeoning damage on a failed save, or half as much damage on a successful one. If a Large or smaller creature fails the save, that creature is also pushed up to 10 feet away from the center of the cube."
+      "description": "Until the spell ends, wind whirls around you, and you gain the following benefits:\n- Ranged weapon attacks made against you have disadvantage on the attack roll.\n- You gain a flying speed of 60 feet. If you are still flying when the spell ends, you fall, unless you can somehow prevent it.\n- You can use your action to create a 10-foot radius of swirling wind centered on a point you can see within 60 feet of you. Each creature in that area must make a Strength saving throw. A creature takes 4d8 bludgeoning damage on a failed save, or half as much damage on a successful one. If a Large or smaller creature fails the save, that creature is also pushed up to 10 feet away from the center of the radius.",
+      "higherLevel": "When you cast this spell using a spell slot of 7th level or higher, the wind damage increases by 1d8 for each slot level above 6th."
     },
     {
       "name": "Jump",
@@ -941,6 +1052,19 @@
       ]
     },
     {
+      "name": "Moonbeam",
+      "description": "A silvery beam of pale light shines down in a 5-foot-radius, 40-foot-high cylinder centered on a point within range. Until the spell ends, dim light fills the cylinder.\nWhen a creature enters the spell's area for the first time on a turn or starts its turn there, it is engulfed in ghostly flames that cause searing pain, and it must make a Constitution saving throw. It takes 2d8 radiant damage on a failed save, or half as much damage on a successful one.\nA shapechanger makes its saving throw with disadvantage. If it fails, it also instantly reverts to its original form and can't assume a different form until it leaves the spell's light.\nOn each of your turns after you cast this spell, you can use an action to move the beam 60 feet in any direction.",
+      "higherLevel": "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for each slot level above 2nd.",
+      "save": {
+        "ability": "Constitution",
+        "damage": "2d8",
+        "damageType": "radiant",
+        "saveSuccess": "half damage",
+        "higherLevelDice": "1",
+        "higherLevelDie": "d8"
+      }
+    },
+    {
       "name": "Mordenkainen's Faithful Hound",
       "description": "You conjure a phantom watchdog in an unoccupied space that you can see within range, where it remains for the duration, until you dismiss it as an action, or until you move more than 100 feet away from it.\nThe hound is invisible to all creatures except you and can't be harmed. When a Small or larger creature comes within 30 feet of it without first speaking the password that you specify when you cast this spell, the hound starts barking loudly. The hound sees invisible creatures and can see into the Ethereal Plane. It ignores illusions.\nAt the start of each of your turns, the hound attempts to bite one creature within 5 feet of it that is hostile to you. The hound's attack bonus is equal to your spellcasting ability modifier + your proficiency bonus. On a hit, it deals 6d8 piercing damage.",
       "attack": {
@@ -958,8 +1082,7 @@
         "type": "melee",
         "damage": "4d10",
         "damageType": "force"
-      },
-      "castingTime": "bonus action"
+      }
     },
     {
       "name": "Nondetection",
@@ -972,10 +1095,11 @@
     },
     {
       "name": "Phantasmal Killer",
-      "description": "You tap into the nightmares of a creature you can see within range and create an illusory manifestation of its deepest fears, visible only to that creature. The target must make a Wisdom saving throw. On a failed save, the target becomes frightened for the duration. At the end of each of the target's turns before the spell ends, the target must succeed on a Intelligence saving throw or take 4d10 psychic damage. On a successful save, the spell ends.",
+      "description": "You tap into the nightmares of a creature you can see within range and create an illusory manifestation of its deepest fears, visible only to that creature. The target must make a Wisdom saving throw. On a failed save, the target becomes frightened for the duration. At the end of each of the target's turns before the spell ends, the target must succeed on a Intelligence saving throw or take 5d10 psychic damage. On a successful save, the spell ends.",
+      "higherLevel": "When you cast this spell using a spell slot of 5th level or higher, the damage increases by 1d10 for each slot level above 4th.",
       "save": {
         "ability": "Wisdom",
-        "saveFailure": "becomes frightened for the duration. At the end of each of the target's turns before the spell ends, the target must succeed on an Intelligence saving throw or take 4d10 psychic damage. On a successful save, the spell ends."
+        "saveFailure": "becomes frightened for the duration. At the end of each of the target's turns before the spell ends, the target must succeed on an Intelligence saving throw or take 510 psychic damage. On a successful save, the spell ends."
       }
     },
     {
@@ -1038,7 +1162,16 @@
     {
       "name": "Prismatic Spray",
       "description": "Eight multicolored rays of light flash from your hand. Each ray is a different color and has a different power and purpose. Each creature in a 60-foot cone must make a Dexterity saving throw. For each target, roll a d8 to determine which color ray affects it.\n1. Red. The target takes 10d6 fire damage on a failed save, or half as much damage on a successful one.\n2. Orange. The target takes 10d6 acid damage on a failed save, or half as much damage on a successful one.\n3. Yellow. The target takes 10d6 lightning damage on a failed save, or half as much damage on a successful one.\n4. Green. The target takes 10d6 poison damage on a failed save, or half as much damage on a successful one.\n5. Blue. The target takes 10d6 cold damage on a failed save, or half as much damage on a successful one.\n6. Indigo. On a failed save, the target is restrained. It must then make a Constitution saving throw at the end of each of its turns. If it successfully saves three times, the spell ends. If it fails its save three times, it permanently turns to stone and is subjected to the petrified condition. The successes and failures don't need to be consecutive; keep track of both until the target collects three of a kind.\n7. Violet. On a failed save, the target is blinded. It must then make a Charisma saving throw at the start of your next turn. A successful save ends the blindness. If it fails that save, the creature is transported to another plane of existence of the DM's choosing and is no longer blinded. (Typically, a creature that is on a plane that isn't its home plane is banished home, while other creatures are usually cast into the Astral or Ethereal planes.)\n8. Special. The target is struck by two rays. Roll twice more, rerolling any 8.",
-      "level": 6
+      "higherLevel": "When you cast this spell using a spell slot of 7th level or higher, the damage increases by 1d6 for each slot level above 6th.",
+      "level": 6,
+      "save": {
+        "ability": "Dexterity",
+        "damage": "10d6",
+        "damageType": "fire, acid, lightning, poison, or cold",
+        "saveSuccess": "half damage",
+        "higherLevelDice": "1",
+        "higherLevelDie": "d6"
+      }
     },
     {
       "name": "Prismatic Wall",
@@ -1107,12 +1240,12 @@
       "name": "Searing Smite",
       "description": "The next time you hit a creature with a melee weapon attack during the spell's duration, your weapon flares with white-hot intensity, and the attack deals an extra 2d6 fire damage to the target and causes the target to ignite in flames. At the start of each of its turns until the spell ends, the target must make a Constitution saving throw. On a failed save, it takes 1d6 fire damage. On a successful save, the spell ends. If the target or a creature within 5 feet of it uses an action to put out the flames, or if some other effect douses the flames (such as the target being submerged in water), the spell ends.",
       "damage": {
-        "damage": "2d4",
+        "damage": "2d6",
         "damageType": "fire",
         "secondaryDamage": "1d6",
         "secondaryDamageType": "fire",
-        "higherLevelDice": "2",
-        "higherLevelDie": "d4",
+        "higherLevelDice": "1",
+        "higherLevelDie": "d6",
         "higherLevelSecondaryDice": "0.49",
         "higherLevelSecondaryDie": "d6"
       }
@@ -1160,7 +1293,7 @@
       "name": "Staggering Smite",
       "description": "The next time you hit a creature with a melee weapon attack during this spell's duration, your weapon pierces both body and mind, and the attack deals an extra 7d6 psychic damage to the target. The target must make a Wisdom saving throw. On a failed save, it has disadvantage on attack rolls and ability checks, and can't take reactions, until the end of its next turn.",
       "damage": {
-        "damage": "7d6",
+        "damage": "8d6",
         "damageType": "psychic",
         "higherLevelDice": "1",
         "higherLevelDie": "d6"
@@ -1205,8 +1338,8 @@
       "damage": {
         "damage": "2d6",
         "damageType": "thunder",
-        "higherLevelDice": "2",
-        "higherLevelDie": "d4"
+        "higherLevelDice": "1",
+        "higherLevelDie": "d6"
       }
     },
     {
@@ -1339,11 +1472,24 @@
       ]
     },
     {
+      "name": "Whirlwind",
+      "higherLevel": "When you cast this spell using a spell slot of 8th level or higher, the base damage increases by 1d6 for each slot level above 7th.",
+      "save": {
+        "ability": "Dexterity",
+        "damage": "10d6",
+        "damageType": "bludgeoning",
+        "saveSuccess": "half damage",
+        "higherLevelDice": "1",
+        "higherLevelDie": "d6"
+      }
+    },
+    {
       "name": "Wind Wall",
+      "description": "A wall of strong wind rises from the ground at a point you choose within range. You can make the wall up to 50 feet long, 15 feet high, and 1 foot thick. You can shape the wall in any way you choose so long as it makes one continuous path along the ground. The wall lasts for the duration.\nWhen the wall appears, each creature within its area must make a Strength saving throw. A creature takes 4d8 bludgeoning damage on a failed save, or half as much damage on a successful one.\nThe strong wind keeps fog, smoke, and other gases at bay. Small or smaller flying creatures or objects can't pass through the wall. Loose, lightweight materials brought into the wall fly upward. Arrows, bolts, and other ordinary projectiles launched at targets behind the wall are deflected upward and automatically miss. (Boulders hurled by giants or siege engines, and similar projectiles, are unaffected.) Creatures in gaseous form can't pass through it.",
       "higherLevel": "When you cast this spell using a spell slot of 4th level or higher, the base damage increases by 1d6 for each slot level above 3rd.",
       "save": {
         "ability": "Strength",
-        "damage": "3d8",
+        "damage": "4d8",
         "damageType": "bludgeoning",
         "higherLevelDice": "1",
         "higherLevelDie": "d8",
