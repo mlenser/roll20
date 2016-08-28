@@ -250,6 +250,18 @@
       "aoe": "5 ft radius centered on a point within range"
     },
     {
+      "name": "Cloudkill",
+      "description": "You create a 20-foot-radius sphere of poisonous, yellow-green fog centered on a point you choose within range. The fog spreads around corners. It lasts for the duration or until strong wind disperses the fog, ending the spell. Its area is heavily obscured.\nWhen a creature enters the spell's area for the first time on a turn or starts its turn there, that creature must make a Constitution saving throw. The creature takes 6d8 poison damage on a failed save, or half as much damage on a successful one. Creatures are affected even if they hold their breath or don't need to breathe.\nThe fog moves 10 feet away from you at the start of each of your turns, rolling along the surface of the ground. The vapors, being heavier than air, sink to the lowest level of the land, even pouring down openings.",
+      "save": {
+        "ability": "Constitution",
+        "damage": "6d8",
+        "damageType": "poison",
+        "saveSuccess": "half damage",
+        "higherLevelDice": "1",
+        "higherLevelDie": "d8"
+      }
+    },
+    {
       "name": "Color Spray",
       "description": "A dazzling array of flashing, colored light springs from your hand. Roll 6d10; the total is how many hit points of creatures this spell can effect. Creatures in a 15-foot cone originating from you are affected in ascending order of their current hit points (ignoring unconscious creatures and creatures that can't see).\nStarting with the creature that has the lowest current hit points, each creature affected by this spell is blinded until the spell ends. Subtract each creature's hit points from the total before moving on to the creature with the next lowest hit points. A creature's hit points must be equal to or less than the remaining total for that creature to be affected. At the end of each affected creature's turns, the creature can make an Intelligence saving throw. If it succeeds, this effect ends for that target.",
       "duration": "1 minute"
@@ -814,6 +826,18 @@
         "saveSuccess": "half damage",
         "higherLevelDice": "1",
         "higherLevelDie": "d8"
+      }
+    },
+    {
+      "name": "Insect Plague",
+      "description": "Swarming, biting locusts fill a 20-foot-radius sphere centered on a point you choose within range. The sphere spreads around corners. The sphere remains for the duration, and its area is lightly obscured. The sphere's area is difficult terrain.\nWhen the area appears, each creature in it must make a Constitution saving throw. A creature takes 5d10 piercing damage on a failed save, or half as much damage on a successful one. A creature must also make this saving throw when it enters the spell's area for the first time on a turn or ends its turn there.",
+      "save": {
+        "ability": "Constitution",
+        "damage": "5d10",
+        "damageType": "piercing",
+        "saveSuccess": "half damage",
+        "higherLevelDice": "1",
+        "higherLevelDie": "d10"
       }
     },
     {
