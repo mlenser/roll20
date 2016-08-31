@@ -8451,7 +8451,7 @@
     {
       "name": "See Invisibility",
       "description": "For the duration, you see invisible creatures and objects as if they were visible, and you can see into the Ethereal Plane. Ethereal creatures and objects appear ghostly and translucent.",
-      "emote": "'s eyes glow, allowing {{GENDER_PRONOUN_HIM_HER}} t osee invisible things.",
+      "emote": "'s eyes glow, allowing {{GENDER_PRONOUN_HIM_HER}} to see invisible things.",
       "source": "phb 274",
       "range": "Self",
       "components": {
