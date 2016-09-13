@@ -1054,15 +1054,16 @@
     {
       "name": "Melf's Acid Arrow",
       "description": "A shimmering green arrow streaks toward a target within range and bursts in a spray of acid. Make a ranged spell attack against the target. On a hit, the target takes 5d4 acid damage immediately and 5d4 acid damage at the end of its next turn. On a miss, the arrow splashes the target with acid for half as much of the initial damage and no damage at the end of its next turn.",
+      "higherLevel": "When you cast this spell using a spell slot of 3rd level or higher, the damage (both initial and later) increases by 2d4 for each slot level above 2nd.",
       "attack": {
         "type": "ranged",
         "damage": "5d4",
         "damageType": "acid",
         "secondaryDamage": "5d4",
         "secondaryDamageType": "acid",
-        "higherLevelDice": "1",
+        "higherLevelDice": "2",
         "higherLevelDie": "d4",
-        "higherLevelSecondaryDice": "1",
+        "higherLevelSecondaryDice": "2",
         "higherLevelSecondaryDie": "d4"
       },
       "classes": [
