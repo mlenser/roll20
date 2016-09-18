@@ -20102,6 +20102,31 @@
           "text": "The yuan-ti has advantage on saving throws against spells and other magical effects."
         }
       ],
+      "actions": [
+        {
+          "name": "Multiattack",
+          "text": "The Yuan-ti makes two ranged attacks or three melee attacks, but can use its bite and constrict attacks only once each.",
+          "recharge": "Abomination Form Only"
+        },
+        {
+          "name": "Bite",
+          "text": "Melee Weapon Attack: +7 to hit, reach 5 ft., one creature. Hit: 7 (1d6 + 4) piercing damage plus 10 (3d6) poison damage."
+        },
+        {
+          "name": "Constict",
+          "text": "Melee Weapon Attack: +7 to hit, reach 10 ft., one target. Hit: 11 (2d6 + 4) bludgeoning damage, and the target is grappled (escape DC 14). Until this grapple ends, the target is restrained, and the yuan-ti can't constrict another target."
+        },
+        {
+          "name": "Scimitar",
+          "text": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) slashing damage.",
+          "recharge": "Abomination Form Only"
+        },
+        {
+          "name": "Longbow",
+          "text": "Ranged Weapon Attack: +6 to hit, range 150/600 ft., one target. Hit: 12 (2d8 + 3) piercing damage plus 10 (3d6) poison damage.",
+          "recharge": "Abomination Form Only"
+        }
+      ],
       "spells": "animal friendship, suggestion, fear"
     },
     {
