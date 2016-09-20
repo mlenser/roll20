@@ -966,7 +966,7 @@
     {
       "name": "Longstrider",
       "newName": "Striding and Springing",
-      "description": "You touch a creature. The target's speed increases by 10 feet until the spell ends. In addition, the target can jump three times their normal distance, though they can't jump farther than your remaining movement would allow.",
+      "description": "You touch a creature. The target's speed increases by 10 feet until the spell ends. In addition, the target can jump three times their normal distance, though they can't jump farther than their remaining movement would allow.",
       "components": {
         "verbal": true,
         "somatic": true,
