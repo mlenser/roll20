@@ -3,11 +3,11 @@
   "spells": [
     {
       "name": "Abi-Dalzim's Horrid Wilting",
-      "description": "You draw the moisture from every creature in a 30-foot cube centered on a point you choose within range. Each creature in that area must make a Constitution saving throw. Constructs and undead aren't affected, and plants and water elementals make this saving throw with disadvantage. A creature takes 14d8 necrotic damage on a failed save, or half as much damage on a successful one.",
+      "description": "You draw the moisture from every creature in a 30-foot cube centered on a point you choose within range. Each creature in that area must make a Constitution saving throw. Constructs and undead aren't affected, and plants and water elementals make this saving throw with disadvantage. A creature takes 15d8 necrotic damage on a failed save, or half as much damage on a successful one.",
       "higherLevel": "When you cast this spell using a spell slot of 9th level, the damage increases by 1d8.",
       "save": {
         "ability": "Constitution",
-        "damage": "14d8",
+        "damage": "15d8",
         "damageType": "necrotic",
         "saveSuccess": "half damage"
       }
@@ -407,12 +407,14 @@
     },
     {
       "name": "Earth Tremor",
-      "description": "You cause a tremor in the ground in a 10-foot radius. Each creature other than you in that area must make a Dexterity saving throw. On a failed save, a creature takes 2d6 bludgeoning damage and is knocked prone. If the ground in that area is loose earth or stone, it becomes difficult terrain until cleared.",
+      "description": "You cause a tremor in the ground in a 10-foot radius. Each creature other than you in that area must make a Dexterity saving throw. On a failed save, a creature takes 2d6 bludgeoning damage and is knocked prone. On a successful save, the creature takes half as much damage and isn't knocked prone. If the ground in that area is loose earth or stone, it becomes difficult terrain until cleared.",
+      "range": "Self (30-foot cone)",
       "save": {
         "ability": "Dexterity",
         "damage": "2d6",
         "damageType": "bludgeoning",
         "saveFailure": "knocked prone",
+        "saveSuccess": "half damage and not prone",
         "higherLevelDice": "1",
         "higherLevelDie": "d6"
       }
@@ -1136,11 +1138,11 @@
     },
     {
       "name": "Mordenkainen's Sword",
-      "description": "You create a sword-shaped plane of force that hovers within range. It lasts for the duration.\nWhen the sword appears, you make a melee spell attack against a target of your choice within 5 feet of the sword. On a hit, the target takes 4d10 force damage. Until the spell ends, you can use a bonus action on each of your turns to move the sword up to 20 feet to a spot you can see and repeat this attack against the same target or a different one.",
+      "description": "You create a sword-shaped plane of force that hovers within range. It lasts for the duration.\nWhen the sword appears, you make a melee spell attack against a target of your choice within 5 feet of the sword. On a hit, the target takes 5d10 force damage. Until the spell ends, you can use a bonus action on each of your turns to move the sword up to 20 feet to a spot you can see and repeat this attack against the same target or a different one.",
       "level": 6,
       "attack": {
         "type": "melee",
-        "damage": "4d10",
+        "damage": "5d10",
         "damageType": "force"
       }
     },
