@@ -129,9 +129,9 @@
     },
     {
       "name": "Banishing Smite",
-      "description": "The next time you hit a creature with a weapon attack before this spell ends, your weapon crackles with force, and the attack deals an extra 8d6 force damage to the target. Additionally, if this attack reduces the target to 50 hit points or fewer, you banish it. If the target is native to a different plane of existence than the one you're on, the target disappears, returning to its home plane. If the target is native to the plane you're on, the creature vanishes into a harmless demiplane. While there, the target is incapacitated. It remains there until the spell ends, at which point the target reappears in the space it left or in the nearest unoccupied space if that space is occupied.",
+      "description": "The next time you hit a creature with a weapon attack before this spell ends, your weapon crackles with force, and the attack deals an extra 5d6 force damage to the target. Additionally, if this attack reduces the target to 50 hit points or fewer, you banish it. If the target is native to a different plane of existence than the one you're on, the target disappears, returning to its home plane. If the target is native to the plane you're on, the creature vanishes into a harmless demiplane. While there, the target is incapacitated. It remains there until the spell ends, at which point the target reappears in the space it left or in the nearest unoccupied space if that space is occupied.",
       "damage": {
-        "damage": "8d6",
+        "damage": "5d6",
         "damageType": "force",
         "higherLevelDice": "1",
         "higherLevelDie": "d6"
@@ -160,10 +160,10 @@
     },
     {
       "name": "Bones of the Earth",
-      "description": "You cause up to six pillars of stone to burst from places on the ground that you can see within range. Each pillar is a cylinder that has a diameter of 5 feet and a height of up to 30 feet. The ground where a pillar appears must be wide enough for its diameter, and you can target ground under a creature if that creature is Medium or smaller. Each pillar has AC 5 and 30 hit points. When reduced to 0 hit points, a pillar crumbles into rubble, which creates an area of difficult terrain with a 10-foot radius. The rubble lasts until cleared.\nIf a pillar is created under a creature, that creature must succeed on a Dexterity saving throw or be lifted by the pillar. A creature can choose to fail the save.\nIf a pillar is prevented from reaching its full height because of a ceiling or other obstacle, a creature on the pillar takes 10d6 bludgeoning damage and is restrained, pinched between the pillar and the obstacle. The restrained creature can use an action to make a Strength or Dexterity check (the creature's choice) against the spell's saving throw DC. On a success, the creature is no longer restrained and must either move off the pillar or fall off it.",
+      "description": "You cause up to six pillars of stone to burst from places on the ground that you can see within range. Each pillar is a cylinder that has a diameter of 5 feet and a height of up to 30 feet. The ground where a pillar appears must be wide enough for its diameter, and you can target ground under a creature if that creature is Medium or smaller. Each pillar has AC 5 and 30 hit points. When reduced to 0 hit points, a pillar crumbles into rubble, which creates an area of difficult terrain with a 10-foot radius. The rubble lasts until cleared.\nIf a pillar is created under a creature, that creature must succeed on a Dexterity saving throw or be lifted by the pillar. A creature can choose to fail the save.\nIf a pillar is prevented from reaching its full height because of a ceiling or other obstacle, a creature on the pillar takes 8d6 bludgeoning damage and is restrained, pinched between the pillar and the obstacle. The restrained creature can use an action to make a Strength or Dexterity check (the creature's choice) against the spell's saving throw DC. On a success, the creature is no longer restrained and must either move off the pillar or fall off it.",
       "save": {
         "ability": "Dexterity",
-        "damage": "10d6",
+        "damage": "8d6",
         "damageType": "bludgeoning",
         "saveFailure": "and restrained. The restrained creature can use an action to make a Strength or Dexterity check (the creature's choice) against the spell's saving throw DC. On a success, the creature is no longer restrained and must either move off the pillar or fall off it."
       }
@@ -367,7 +367,15 @@
     },
     {
       "name": "Cure Wounds",
-      "school": "Necromancy"
+      "description": "A creature you touch regains a number of hit points equal to 2d6 + your spellcasting ability modifier. This spell has no effect on undead or constructs.",
+      "higherLevel": "When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 1d6 for each slot level above 1st.",
+      "school": "Necromancy",
+      "heal": {
+        "amount": "1d8",
+        "castingStat": true,
+        "higherLevelDice": "1",
+        "higherLevelDie": "d8"
+      }
     },
     {
       "name": "Death Ward",
@@ -402,8 +410,18 @@
     },
     {
       "name": "Dust Devil",
-      "description": "Choose an unoccupied 5-foot cube of air that you can see within range. An elemental force that resembles a dust devil appears in the cube and lasts for the spell's duration.\nAny creature that enters the spell's area for the first time on a turn or starts its turn within 5 ft of the dust devil must make a Strength saving throw. On a failed save, the creature takes 1d8 bludgeoning damage and is pushed 10 feet away. On a successful save, the creature takes half as much damage and isn't pushed.\nAs a bonus action, you can move the dust devil up to 30 feet in any direction. If the dust devil moves over sand, dust, loose dirt, or small gravel, it sucks up the material and forms a 10-foot-radius cloud of debris around itself that lasts until the start of your next turn. The cloud heavily obscures its area.",
-      "target": "any creature that enters the spell's area for the first time on a turn or starts its turn within 5 ft of the dust devil"
+      "description": "Choose an unoccupied 5-foot cube of air that you can see within range. An elemental force that resembles a dust devil appears in the cube and lasts for the spell's duration.\nAny creature that enters the spell's area for the first time on a turn or starts its turn within 5 ft of the dust devil must make a Strength saving throw. On a failed save, the creature takes 2d6 bludgeoning damage and is pushed 10 feet away. On a successful save, the creature takes half as much damage and isn't pushed.\nAs a bonus action, you can move the dust devil up to 30 feet in any direction. If the dust devil moves over sand, dust, loose dirt, or small gravel, it sucks up the material and forms a 10-foot-radius cloud of debris around itself that lasts until the start of your next turn. The cloud heavily obscures its area.",
+      "higherLevel": "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d6 for each slot level above 2nd.",
+      "target": "any creature that enters the spell's area for the first time on a turn or starts its turn within 5 ft of the dust devil",
+      "save": {
+        "ability": "Strength",
+        "damage": "2d6",
+        "damageType": "bludgeoning",
+        "saveFailure": "pushed 10 feet away",
+        "saveSuccess": "half damage and not pushed",
+        "higherLevelDice": "1",
+        "higherLevelDie": "d6"
+      }
     },
     {
       "name": "Earth Tremor",
@@ -482,7 +500,7 @@
       "higherLevel": "When you cast this spell using a spell slot of 5th level or higher, the base damage increases by 1d6 for each slot level above 4th.",
       "save": {
         "ability": "Dexterity",
-        "damage": "5d6",
+        "damage": "4d6",
         "damageType": "bludgeoning",
         "higherLevelDice": "1",
         "higherLevelDie": "d6",
@@ -646,6 +664,18 @@
       }
     },
     {
+      "name": "Guiding Bolt",
+      "description": "A flash of light streaks toward a creature of your choice within range. Make a ranged spell attack against the target. On a hit, the target takes 3d8 radiant damage, and the next attack roll made against this target before the end of your next turn has advantage, thanks to the mystical dim light glittering on the target until then.",
+      "higherLevel": "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st.",
+      "attack": {
+        "type": "ranged",
+        "damage": "3d8",
+        "damageType": "radiant",
+        "higherLevelDice": "1",
+        "higherLevelDie": "d8"
+      }
+    },
+    {
       "name": "Harm",
       "description": "You unleash a virulent disease on a creature that you can see within range. The target must make a Constitution saving throw. On a failed save, it takes 14d8 necrotic damage, or half as much damage on a successful save. The damage can't reduce the target's hit points below 1. If the target fails the saving throw, its hit point maximum is reduced for 1 hour by an amount equal to the necrotic damage it took. Any effect that removes a disease allows a creature's hit point maximum to return to normal before that time passes.",
       "higherLevel": "When you cast this spell using a spell slot of 6th level or higher, the base damage increases by 1d8 for each slot level above 5th.",
@@ -660,12 +690,32 @@
       }
     },
     {
+      "name": "Hail of Thorns",
+      "description": "The next time you hit a creature with a ranged weapon attack before this spell ends, this spell creates a rain of thorns that sprouts from your ranged weapon or ammunition. In addition to the normal effects of the attack, the target of the attack and each creature within 5 feet of it must make a Dexterity saving throw. A creature takes 2d8 piercing damage on a failed save, or half as much damage on a successful one.",
+      "higherLevel": "If you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st (to a maximum of 6d8).",
+      "save": {
+        "ability": "Dexterity",
+        "damage": "2d8",
+        "damageType": "piercing",
+        "saveSuccess": "half damage",
+        "higherLevelDice": "1",
+        "higherLevelDie": "d8"
+      }
+    },
+    {
       "name": "Heal",
       "school": "Necromancy"
     },
     {
       "name": "Healing Word",
-      "school": "Necromancy"
+      "description": "A creature of your choice that you can see within range regains hit points equal to 2d4 + your spellcasting ability modifier. This spell has no effect on undead or constructs.",
+      "school": "Necromancy",
+      "heal": {
+        "amount": "2d4",
+        "castingStat": true,
+        "higherLevelDice": "1",
+        "higherLevelDie": "d4"
+      }
     },
     {
       "name": "Heat Metal",
@@ -727,7 +777,7 @@
     },
     {
       "name": "Ice Slick",
-      "description": "You create a blast of intense cold, coating all solid surfaces in the area with a thin layer of ice from a point of your choice within range. Each creature in a 10-foot-radius sphere centered on that point must make a Dexterity saving throw. A creature takes takes 3d6 cold damage and falls prone on a failed save, or half as much on a successful one.\nA creature that enters the area or ends its turn there must also succeed on a Dexterity saving throw or fall prone.\nA 5-foot square of ice has 3 hit points. The ice is an instantaneous effect, but persists as non-magical ice. Under temperate conditions, the ice lasts 1 minute. In tropical environments, it might last only half as long. In cold environments where ice and snow persist without melting, it could last indefinitely.",
+      "description": "You create a blast of intense cold, coating all solid surfaces in the area with a thin layer of ice from a point of your choice within range. Each creature in a 10-foot-radius sphere centered on that point must make a Dexterity saving throw. A creature takes takes 3d8 cold damage and falls prone on a failed save, or half as much on a successful one.\nA creature that enters the area or ends its turn there must also succeed on a Dexterity saving throw or fall prone.\nA 5-foot square of ice has 3 hit points. The ice is an instantaneous effect, but persists as non-magical ice. Under temperate conditions, the ice lasts 1 minute. In tropical environments, it might last only half as long. In cold environments where ice and snow persist without melting, it could last indefinitely.",
       "higherLevel": "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for each slot level above 2nd",
       "emote": "evokes a blast of intense cold, coating all solid surfaces in the area with a thin layer of ice",
       "source": "houserules",
@@ -744,12 +794,12 @@
       "school": "Evocation",
       "save": {
         "ability": "Dexterity",
-        "damage": "3d6",
+        "damage": "3d8",
         "damageType": "cold",
         "saveSuccess": "half damage",
         "saveFailure": "fall prone",
         "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDie": "d8"
       },
       "classes": [
         "Druid",
@@ -1356,9 +1406,21 @@
     {
       "name": "Staggering Smite",
       "description": "The next time you hit a creature with a melee weapon attack during this spell's duration, your weapon pierces both body and mind, and the attack deals an extra 7d6 psychic damage to the target. The target must make a Wisdom saving throw. On a failed save, it has disadvantage on attack rolls and ability checks, and can't take reactions, until the end of its next turn.",
+      "level": 3,
       "damage": {
-        "damage": "8d6",
+        "damage": "7d6",
         "damageType": "psychic",
+        "higherLevelDice": "1",
+        "higherLevelDie": "d6"
+      }
+    },
+    {
+      "name": "Storm Sphere",
+      "description": "A 20-foot-radius sphere of whirling air springs into existence centered on a point you choose within range. The sphere remains for the spell's duration. Each creature in the sphere when it appears or that ends its turn there must succeed on a Strength saving throw or take 4d6 bludgeoning damage. The sphere's space is difficult terrain.\nUntil the spell ends, you can use a bonus action on each of your turns to cause a bolt of lightning to leap from the center of the sphere toward one creature you choose within 60 feet of the center. Make a ranged spell attack. You have advantage on the attack roll if the target is in the sphere. On a hit, the target takes 4d6 lightning damage.\nCreatures within 30 feet of the sphere have disadvantage on Wisdom (Perception) checks made to listen.",
+      "save": {
+        "ability": "Strength",
+        "damage": "4d6",
+        "damageType": "bludgeoning",
         "higherLevelDice": "1",
         "higherLevelDie": "d6"
       }
