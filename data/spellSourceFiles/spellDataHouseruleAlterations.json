@@ -931,10 +931,6 @@
       "remove": true
     },
     {
-      "name": "Leomund's Tiny Hut",
-      "ritual": false
-    },
-    {
       "name": "Levitate",
       "description": "One creature or object of your choice that you can see within range rises vertically, up to 20 feet, and remains suspended there for the duration. The spell can levitate a target that weighs up to 500 pounds. An unwilling creature that succeeds on a Strength saving throw is unaffected.\nThe target can move only by pushing or pulling against a fixed object or surface within reach (such as a wall or a ceiling), which allows it to move as if it were climbing. You can change the target's altitude by up to 20 feet in either direction on your turn. If you are the target, you can move up or down as part of your move. Otherwise, you can use your action to move the target, which must remain within the spell's range.\nWhen the spell ends, the target floats gently to the ground if it is still aloft.",
       "save": {
@@ -1040,10 +1036,6 @@
         "higherLevelDie": "d6",
         "saveFailure": "be pulled 10 feet toward the center"
       }
-    },
-    {
-      "name": "Magic Mouth",
-      "level": 1
     },
     {
       "name": "Make Whole",
@@ -1198,8 +1190,7 @@
     },
     {
       "name": "Nondetection",
-      "higherLevel": "When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd.",
-      "level": 2
+      "higherLevel": "When you cast this spell using a spell slot of 4th level or higher, you can target one additional creature for each slot level above 3rd."
     },
     {
       "name": "Pass without Trace",
@@ -1273,12 +1264,12 @@
     },
     {
       "name": "Prismatic Spray",
-      "description": "Eight multicolored rays of light flash from your hand. Each ray is a different color and has a different power and purpose. Each creature in a 60-foot cone must make a Dexterity saving throw. For each target, roll a d8 to determine which color ray affects it.\n1. Red. The target takes 10d6 fire damage on a failed save, or half as much damage on a successful one.\n2. Orange. The target takes 10d6 acid damage on a failed save, or half as much damage on a successful one.\n3. Yellow. The target takes 10d6 lightning damage on a failed save, or half as much damage on a successful one.\n4. Green. The target takes 10d6 poison damage on a failed save, or half as much damage on a successful one.\n5. Blue. The target takes 10d6 cold damage on a failed save, or half as much damage on a successful one.\n6. Indigo. On a failed save, the target is restrained. It must then make a Constitution saving throw at the end of each of its turns. If it successfully saves three times, the spell ends. If it fails its save three times, it permanently turns to stone and is subjected to the petrified condition. The successes and failures don't need to be consecutive; keep track of both until the target collects three of a kind.\n7. Violet. On a failed save, the target is blinded. It must then make a Charisma saving throw at the start of your next turn. A successful save ends the blindness. If it fails that save, the creature is transported to another plane of existence of the DM's choosing and is no longer blinded. (Typically, a creature that is on a plane that isn't its home plane is banished home, while other creatures are usually cast into the Astral or Ethereal planes.)\n8. Special. The target is struck by two rays. Roll twice more, rerolling any 8.",
+      "description": "Eight multicolored rays of light flash from your hand. Each ray is a different color and has a different power and purpose. Each creature in a 60-foot cone must make a Dexterity saving throw. For each target, roll a d8 to determine which color ray affects it.\n1. Red. The target takes 12d6 fire damage on a failed save, or half as much damage on a successful one.\n2. Orange. The target takes 12d6 acid damage on a failed save, or half as much damage on a successful one.\n3. Yellow. The target takes 12d6 lightning damage on a failed save, or half as much damage on a successful one.\n4. Green. The target takes 12d6 poison damage on a failed save, or half as much damage on a successful one.\n5. Blue. The target takes 12d6 cold damage on a failed save, or half as much damage on a successful one.\n6. Indigo. On a failed save, the target is restrained. It must then make a Constitution saving throw at the end of each of its turns. If it successfully saves three times, the spell ends. If it fails its save three times, it permanently turns to stone and is subjected to the petrified condition. The successes and failures don't need to be consecutive; keep track of both until the target collects three of a kind.\n7. Violet. On a failed save, the target is blinded. It must then make a Charisma saving throw at the start of your next turn. A successful save ends the blindness. If it fails that save, the creature is transported to another plane of existence of the DM's choosing and is no longer blinded. (Typically, a creature that is on a plane that isn't its home plane is banished home, while other creatures are usually cast into the Astral or Ethereal planes.)\n8. Special. The target is struck by two rays. Roll twice more, rerolling any 8.",
       "higherLevel": "When you cast this spell using a spell slot of 7th level or higher, the damage increases by 1d6 for each slot level above 6th.",
       "level": 6,
       "save": {
         "ability": "Dexterity",
-        "damage": "10d6",
+        "damage": "12d6",
         "damageType": "fire, acid, lightning, poison, or cold",
         "saveSuccess": "half damage",
         "higherLevelDice": "1",
@@ -1488,8 +1479,7 @@
     },
     {
       "name": "True Strike",
-      "castingTime": "1 bonus action",
-      "level": 1
+      "castingTime": "1 bonus action"
     },
     {
       "name": "Vampiric Touch",
