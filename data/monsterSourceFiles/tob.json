@@ -624,7 +624,7 @@
       ]
     },
     {
-      "name": "ANGEL, CHAINED",
+      "name": "Chained Angel",
       "size": "Medium",
       "type": "celestial",
       "alignment": "neutral evil",
@@ -1126,11 +1126,82 @@
       ]
     },
     {
-      "name": "BABA YAGA'S HORSEMEN, BASE",
+      "name": "Bright Day",
       "size": "Medium",
       "type": "fey",
       "alignment": "lawful neutral",
-      "AC": "20 (plate and shield\n)",
+      "AC": "20 (plate and shield)",
+      "HP": "171 (18d8 + 90)",
+      "speed": "30 ft",
+      "strength": 22,
+      "dexterity": 11,
+      "constitution": 21,
+      "intelligence": 16,
+      "wisdom": 18,
+      "charisma": 18,
+      "savingThrows": "Dex +4, Wis +8",
+      "skills": "Arcana +7, Athletics +10, History +7, Perception +8",
+      "damageResistances": "bludgeoning, piercing, and slashing damage from nonmagical weapons, cold, fire",
+      "damageImmunities": "lightning, poison",
+      "conditionImmunities": "exhaustion, paralyzed, poisoned",
+      "senses": "Darkvision 60ft",
+      "languages": "Celestial, Common, Infernal; telepathy 100 ft",
+      "challenge": "11",
+      "traits": [
+        {
+          "name": "Innate Spellcasting",
+          "text": "The horseman is a 12th-level spellcaster. Its spellcasting ability is Charisma (save DC 16, +8 to hit with spell attacks). It can innately cast the following spells, requiring no material components:\nAt will: sacred flame\n1/day each: dimension door, fire shield, haste, slow\n2/day: daylight\n3/day each: ethereal jaunt, phantom steed (appears as a horse colored appropriately to the horseman), plane shift (self and steed only)"
+        },
+        {
+          "name": "Magic Resistance",
+          "text": "The horseman has advantage on saving throws against spells and other magical effects."
+        },
+        {
+          "name": "Peerless Rider",
+          "text": "Any attacks directed at the horseman's mount targets the horseman instead. Its mount gains the benefit of the rider's damage and condition immunities, and if the horseman passes a saving throw against an area effect, the mount takes no damage."
+        },
+        {
+          "name": "Quick Draw",
+          "text": "The horseman can switch between wielding its lance and longsword as a bonus action."
+        }
+      ],
+      "actions": [
+        {
+          "name": "Multiattack",
+          "text": "The horseman makes three attacks with its lance or longsword. It can use Temporal Strike with one of these attacks when it is available."
+        },
+        {
+          "name": "Lance",
+          "text": "Melee Weapon Attack: +10 to hit, reach 10 ft (disadvantage within 5 ft), one target. Hit: 12 (1d12 + 6) piercing damage."
+        },
+        {
+          "name": "Longsword",
+          "text": "Melee Weapon Attack: +10 to hit, reach 5 ft, one target. Hit: 10 (1d8 + 6) slashing damage."
+        },
+        {
+          "name": "Temporal Strike",
+          "recharge": "recharge 5-6",
+          "text": "When the horseman strikes a target with a melee attack, in addition to taking normal damage, the target must succeed on a DC 17 Constitution saving throw or instantly age 3d10 years. A creature that ages this way has disadvantage on attack rolls, ability checks, and saving throws based on Strength, Dexterity, and Constitution until the aging is reversed. A creature that ages beyond its lifespan dies immediately. The aging reverses automatically after 24 hours, or it can be reversed magically by greater restoration or comparable magic. A creature that succeeds on the save is immune to the temporal strike effect for 24 hours."
+        }
+      ],
+      "spells": [
+        "sacred flame",
+        "dimension door",
+        "fire shield",
+        "haste",
+        "slow",
+        "daylight",
+        "ethereal jaunt",
+        "phantom steed",
+        "plane shift"
+      ]
+    },
+    {
+      "name": "Red Sun",
+      "size": "Medium",
+      "type": "fey",
+      "alignment": "lawful neutral",
+      "AC": "20 (plate and shield)",
       "HP": "171 (18d8 + 90)",
       "speed": "30 ft",
       "strength": 22,
@@ -1142,14 +1213,14 @@
       "savingThrows": "Dex +4, Wis +8",
       "skills": "Arcana +7, Athletics +10, History +7, Perception +8",
       "damageResistances": "bludgeoning, piercing, and slashing damage from nonmagical weapons",
-      "damageImmunities": "lightning, poison",
-      "conditionImmunities": "exhaustion, paralyzed, poisoned",
+      "damageImmunities": "lightning, poison, fire",
+      "conditionImmunities": "exhaustion, paralyzed, poisoned, blinded, charmed, frightened",
       "languages": "Celestial, Common, Infernal; telepathy 100 ft",
       "challenge": "11",
       "traits": [
         {
           "name": "Innate Spellcasting",
-          "text": "The horseman is a 12th-level spellcaster. Its spellcasting ability is Charisma (save DC 16, +8 to hit with spell attacks). It can innately cast the following spells, requiring no material components:\n1/day each: dimension door, fire shield, haste, slow\n3/day each: ethereal jaunt, phantom steed (appears as a horse colored appropriately to the horseman), plane shift (self and steed only)"
+          "text": "The horseman is a 12th-level spellcaster. Its spellcasting ability is Charisma (save DC 16, +8 to hit with spell attacks). It can innately cast the following spells, requiring no material components:\n1/day each: dimension door, fire shield, haste, slow\n2/day each: continual flame, scorching ray\n3/day each: ethereal jaunt, phantom steed (appears as a horse colored appropriately to the horseman), plane shift (self and steed only)"
         },
         {
           "name": "Magic Resistance",
@@ -1188,6 +1259,79 @@
         "fire shield",
         "haste",
         "slow",
+        "continual flame",
+        "scorching ray",
+        "ethereal jaunt",
+        "phantom steed",
+        "plane shift"
+      ]
+    },
+    {
+      "name": "Black Night",
+      "size": "Medium",
+      "type": "fey",
+      "alignment": "lawful neutral",
+      "AC": "20 (plate and shield)",
+      "HP": "171 (18d8 + 90)",
+      "speed": "30 ft",
+      "strength": 22,
+      "dexterity": 11,
+      "constitution": 21,
+      "intelligence": 16,
+      "wisdom": 18,
+      "charisma": 18,
+      "savingThrows": "Dex +4, Wis +8",
+      "skills": "Arcana +7, Athletics +10, History +7, Perception +8",
+      "damageResistances": "bludgeoning, piercing, and slashing damage from nonmagical weapons",
+      "damageImmunities": "lightning, poison, cold",
+      "conditionImmunities": "exhaustion, paralyzed, poisoned",
+      "senses": "Sees perfectly in normal and magical darkness",
+      "languages": "Celestial, Common, Infernal; telepathy 100 ft",
+      "challenge": "11",
+      "traits": [
+        {
+          "name": "Innate Spellcasting",
+          "text": "The horseman is a 12th-level spellcaster. Its spellcasting ability is Charisma (save DC 16, +8 to hit with spell attacks). It can innately cast the following spells, requiring no material components:\nAt will: ray of frost\n1/day each: dimension door, fire shield, haste, slow\n2/day: darkness\n3/day each: ethereal jaunt, phantom steed (appears as a horse colored appropriately to the horseman), plane shift (self and steed only)"
+        },
+        {
+          "name": "Magic Resistance",
+          "text": "The horseman has advantage on saving throws against spells and other magical effects."
+        },
+        {
+          "name": "Peerless Rider",
+          "text": "Any attacks directed at the horseman's mount targets the horseman instead. Its mount gains the benefit of the rider's damage and condition immunities, and if the horseman passes a saving throw against an area effect, the mount takes no damage."
+        },
+        {
+          "name": "Quick Draw",
+          "text": "The horseman can switch between wielding its lance and longsword as a bonus action."
+        }
+      ],
+      "actions": [
+        {
+          "name": "Multiattack",
+          "text": "The horseman makes three attacks with its lance or longsword. It can use Temporal Strike with one of these attacks when it is available."
+        },
+        {
+          "name": "Lance",
+          "text": "Melee Weapon Attack: +10 to hit, reach 10 ft (disadvantage within 5 ft), one target. Hit: 12 (1d12 + 6) piercing damage."
+        },
+        {
+          "name": "Longsword",
+          "text": "Melee Weapon Attack: +10 to hit, reach 5 ft, one target. Hit: 10 (1d8 + 6) slashing damage."
+        },
+        {
+          "name": "Temporal Strike",
+          "recharge": "recharge 5-6",
+          "text": "When the horseman strikes a target with a melee attack, in addition to taking normal damage, the target must succeed on a DC 17 Constitution saving throw or instantly age 3d10 years. A creature that ages this way has disadvantage on attack rolls, ability checks, and saving throws based on Strength, Dexterity, and Constitution until the aging is reversed. A creature that ages beyond its lifespan dies immediately. The aging reverses automatically after 24 hours, or it can be reversed magically by greater restoration or comparable magic. A creature that succeeds on the save is immune to the temporal strike effect for 24 hours."
+        }
+      ],
+      "spells": [
+        "ray of frost",
+        "dimension door",
+        "fire shield",
+        "haste",
+        "slow",
+        "darkness",
         "ethereal jaunt",
         "phantom steed",
         "plane shift"
@@ -4629,7 +4773,7 @@
       ]
     },
     {
-      "name": "IA'AFFRAT",
+      "name": "Ia'affrat",
       "size": "Large",
       "type": "swarm of Tiny elementals",
       "alignment": "lawful evil",
@@ -4803,7 +4947,7 @@
       ]
     },
     {
-      "name": "TOTIVILLUS, SCRIBE OF HELL",
+      "name": "Totivillus",
       "size": "Medium",
       "type": "fiend (devil)",
       "alignment": "lawful evil",
@@ -5239,7 +5383,7 @@
       ]
     },
     {
-      "name": "KORALK (HARVESTER DEVIL)",
+      "name": "Koralk (Harvester Devil)",
       "size": "Large",
       "type": "outsider",
       "alignment": "lawful evil",
@@ -7296,7 +7440,7 @@
       ]
     },
     {
-      "name": "WIND DRAGON, ANCIENT",
+      "name": "Ancient Wind Dragon",
       "size": "Gargantuan",
       "type": "dragon",
       "alignment": "chaotic neutral",
@@ -7399,7 +7543,7 @@
       ]
     },
     {
-      "name": "WIND DRAGON, ADULT",
+      "name": "Adult Wind Dragon",
       "size": "Huge",
       "type": "dragon",
       "alignment": "chaotic neutral",
@@ -7495,7 +7639,7 @@
       ]
     },
     {
-      "name": "WIND DRAGON, YOUNG",
+      "name": "Young Wind Dragon",
       "size": "Large",
       "type": "dragon",
       "alignment": "chaotic neutral",
@@ -7553,7 +7697,7 @@
       ]
     },
     {
-      "name": "WIND DRAGON, WYRMLING",
+      "name": "Wyrmling Wind Dragon",
       "size": "Medium",
       "type": "dragon",
       "alignment": "chaotic neutral",
@@ -8588,7 +8732,7 @@
       ]
     },
     {
-      "name": "EATER OF DUST (YAKAT-SHI)",
+      "name": "Eater Of Dust (Yakat-shi)",
       "size": "Medium",
       "type": "aberration",
       "alignment": "neutral evil",
@@ -10919,7 +11063,7 @@
       ]
     },
     {
-      "name": "GBAHALI (POSTOSUCHUS)",
+      "name": "Gbahali (Postosuchus)",
       "size": "Huge",
       "type": "beast",
       "alignment": "unaligned",
@@ -11013,7 +11157,7 @@
       ]
     },
     {
-      "name": "AL-AESHMA GENIE",
+      "name": "Al-aeshma Genie",
       "size": "Large",
       "type": "elemental",
       "alignment": "chaotic evil",
@@ -11234,7 +11378,7 @@
       ]
     },
     {
-      "name": "GHOUL, DARAKHUL",
+      "name": "Darakhul Ghoul",
       "size": "Medium",
       "type": "undead",
       "alignment": "neutral evil",
@@ -11408,7 +11552,7 @@
       ]
     },
     {
-      "name": "GHOUL, IMPERIAL",
+      "name": "Imperial Ghoul",
       "size": "Medium",
       "type": "undead",
       "alignment": "lawful evil",
@@ -11452,7 +11596,7 @@
       ]
     },
     {
-      "name": "GHOUL, IRON",
+      "name": "Iron Ghoul",
       "size": "Medium",
       "type": "undead",
       "alignment": "lawful evil",
@@ -11950,7 +12094,7 @@
       ]
     },
     {
-      "name": "GOAT-MAN",
+      "name": "Goat-man",
       "size": "Medium",
       "type": "monstrosity",
       "alignment": "chaotic evil",
@@ -13440,7 +13584,7 @@
       ]
     },
     {
-      "name": "IMY-UT USHABTI",
+      "name": "Imy-ut Ushabti",
       "size": "Medium",
       "type": "monstrosity",
       "alignment": "neutral",
@@ -17806,7 +17950,7 @@
       ]
     },
     {
-      "name": "STYGIAN FAT-TAILED SCORPION",
+      "name": "Stygian Fat-tailed Scorpion",
       "size": "Tiny",
       "type": "beast",
       "alignment": "unaligned",
@@ -19002,7 +19146,7 @@
       ]
     },
     {
-      "name": "J'BA FOFI SPIDER",
+      "name": "J'ba Fofi Spider",
       "size": "Large",
       "type": "beast",
       "alignment": "unaligned",
@@ -19048,7 +19192,7 @@
       ]
     },
     {
-      "name": "RED-BANDED LINE SPIDER",
+      "name": "Red-banded Line Spider",
       "size": "Tiny",
       "type": "beast",
       "alignment": "unaligned",
@@ -20027,7 +20171,7 @@
       ]
     },
     {
-      "name": "TOSCULI HIVE-QUEEN",
+      "name": "Tosculi Hive-queen",
       "size": "Large",
       "type": "monstrosity",
       "alignment": "lawful evil",
@@ -20528,7 +20672,7 @@
       ]
     },
     {
-      "name": "UROCHAR (STRANGLING WATCHER)",
+      "name": "Urochar (Strangling Watcher)",
       "size": "Huge",
       "type": "aberration",
       "alignment": "chaotic evil",
@@ -22369,7 +22513,7 @@
       ]
     },
     {
-      "name": "OGRE CHIEFTAIN, CORRUPTED",
+      "name": "Corrupted Ogre Chieftain",
       "size": "Large",
       "type": "giant",
       "alignment": "chaotic evil",
