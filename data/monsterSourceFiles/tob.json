@@ -335,7 +335,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The algorith's innate spellcasting ability is Charisma (spell save DC 16). It can innately cast the following spells, requiring no material components:\nAt will each: aid, blur, detect magic, dimension door\n5/day: dispel magic\n1/day each: commune (5 questions), wall of force"
+          "text": "The algorith's innate spellcasting ability is Charisma (spell save DC 16). It can innately cast the following spells, requiring no material components:\nAt will: aid, blur, detect magic, dimension door\n5/day: dispel magic\n1/day: commune (5 questions), wall of force"
         }
       ],
       "actions": [
@@ -358,15 +358,7 @@
           "text": "The algorith can summon forth a tiny rune of law and throw it as a weapon. Any creature within 30 feet of the square where the reality bomb lands takes 21 (6d6) force damage and is stunned until the start of the algorith's next turn. A target that makes a successful DC 16 Dexterity saving throw takes half damage and isn't stunned."
         }
       ],
-      "spells": [
-        "aid",
-        "blur",
-        "detect magic",
-        "dimension door",
-        "dispel magic",
-        "commune",
-        "wall of force"
-      ]
+      "spells": "aid, blur, detect magic, dimension door, dispel magic, commune, wall of force"
     },
     {
       "name": "Alseid",
@@ -449,20 +441,7 @@
           "text": "Ranged Weapon Attack: +5 to hit, range 80/320 ft, one target. Hit: 6 (1d6+3) piercing damage."
         }
       ],
-      "spells": [
-        "druidcraft",
-        "guidance",
-        "produce flame",
-        "shillelagh",
-        "animal friendship",
-        "cure wounds",
-        "faerie fire",
-        "animal messenger",
-        "heat metal",
-        "lesser restoration",
-        "call lightning",
-        "dispel magic"
-      ]
+      "spells": "druidcraft, guidance, produce flame, shillelagh, animal friendship, cure wounds, faerie fire, animal messenger, heat metal, lesser restoration, call lightning, dispel magic"
     },
     {
       "name": "Amphiptere",
@@ -534,7 +513,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The andrenjinyi's spellcasting ability is Charisma (spell save DC 19, +11 to hit with spell attacks). It can innately cast the following spells, requiring only verbal components:\nAt will each: create water, speak with animals, stoneshape\n3/day each: control weather, dispel magic, reincarnate\n1/day each: blight, commune with nature, contagion, flesh to stone, plant growth"
+          "text": "The andrenjinyi's spellcasting ability is Charisma (spell save DC 19, +11 to hit with spell attacks). It can innately cast the following spells, requiring only verbal components:\nAt will: create water, speak with animals, stoneshape\n3/day each: control weather, dispel magic, reincarnate\n1/day each: blight, commune with nature, contagion, flesh to stone, plant growth"
         },
         {
           "name": "Magic Resistance",
@@ -571,19 +550,7 @@
           "text": "When a creature is swallowed by an andrenjinyi, it must make a successful DC 19 Wisdom saving throw each round at the end of its turn or be affected by true polymorph into a new form chosen by the andrenjinyi. The effect is permanent until dispelled or ended with a wish or comparable magic."
         }
       ],
-      "spells": [
-        "create water",
-        "speak with animals",
-        "stoneshape",
-        "control weather",
-        "dispel magic",
-        "reincarnate",
-        "blight",
-        "commune with nature",
-        "contagion",
-        "flesh to stone",
-        "plant growth"
-      ]
+      "spells": "create water, speak with animals, stoneshape, control weather, dispel magic, reincarnate, blight, commune with nature, contagion, flesh to stone, plant growth"
     },
     {
       "name": "Angatra",
@@ -709,7 +676,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The angel's innate spellcasting ability is Wisdom (spell save DC 14, +6 to hit with spell attacks). It can innately cast the following spells, requiring no material components:\nAt will each: guidance, light, purify food and drink, spare the dying\n3/day each: cure wounds, scorching ray (5 rays)\n1/day each: bless, daylight, detect evil and good, enhance ability, hallow, protection from evil and good"
+          "text": "The angel's innate spellcasting ability is Wisdom (spell save DC 14, +6 to hit with spell attacks). It can innately cast the following spells, requiring no material components:\nAt will: guidance, light, purify food and drink, spare the dying\n3/day: cure wounds, scorching ray (5 rays)\n1/day: bless, daylight, detect evil and good, enhance ability, hallow, protection from evil and good"
         },
         {
           "name": "Magic Resistance",
@@ -756,20 +723,7 @@
           "text": "Melee Weapon Attack: +8 to hit, reach 5 ft, one target. Hit: 12 (2d6 + 5) slashing damage."
         }
       ],
-      "spells": [
-        "guidance",
-        "light",
-        "purify food and drink",
-        "spare the dying",
-        "cure wounds",
-        "scorching ray",
-        "bless",
-        "daylight",
-        "detect evil and good",
-        "enhance ability",
-        "hallow",
-        "protection from evil and good"
-      ]
+      "spells": "guidance, light, purify food and drink, spare the dying, cure wounds, scorching ray, bless, daylight, detect evil and good, enhance ability, hallow, protection from evil and good"
     },
     {
       "name": "Angler Worm",
@@ -1022,7 +976,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The aridni's innate spellcasting ability is Charisma (spell save DC 14). It can innately cast the following spells:\nAt will each: dancing lights, detect magic, invisibility\n3/day each: charm person, faerie fire, mage armor\n1/day: spike growth"
+          "text": "The aridni's innate spellcasting ability is Charisma (spell save DC 14). It can innately cast the following spells:\nAt will: dancing lights, detect magic, invisibility\n3/day: charm person, faerie fire, mage armor\n1/day: spike growth"
         }
       ],
       "actions": [
@@ -1039,15 +993,7 @@
           "text": "An aridni can add a magical effect in addition to the normal damage done by its arrows. If so, the aridni chooses from the following effects:\nConfusion: The target must succeed on a DC 14 Wisdom saving throw or become confused (as the spell) for 2d4-1 rounds.\nFear: The target must succeed on a DC 14 Wisdom saving throw or become frightened for 2d4 rounds.\nHideous Laughter: The target must succeed on a DC 14 Wisdom saving throw or become incapacitated for 2d4 rounds. While incapacitated, the target is prone and laughing uncontrollably.\nSleep: The target must succeed on a DC 14 Wisdom saving throw or fall asleep for 2d4 minutes."
         }
       ],
-      "spells": [
-        "dancing lights",
-        "detect magic",
-        "invisibility",
-        "charm person",
-        "faerie fire",
-        "mage armor",
-        "spike growth"
-      ]
+      "spells": "dancing lights, detect magic, invisibility, charm person, faerie fire, mage armor, spike growth"
     },
     {
       "name": "Asanbosam",
@@ -1184,17 +1130,7 @@
           "text": "When the horseman strikes a target with a melee attack, in addition to taking normal damage, the target must succeed on a DC 17 Constitution saving throw or instantly age 3d10 years. A creature that ages this way has disadvantage on attack rolls, ability checks, and saving throws based on Strength, Dexterity, and Constitution until the aging is reversed. A creature that ages beyond its lifespan dies immediately. The aging reverses automatically after 24 hours, or it can be reversed magically by greater restoration or comparable magic. A creature that succeeds on the save is immune to the temporal strike effect for 24 hours."
         }
       ],
-      "spells": [
-        "sacred flame",
-        "dimension door",
-        "fire shield",
-        "haste",
-        "slow",
-        "daylight",
-        "ethereal jaunt",
-        "phantom steed",
-        "plane shift"
-      ]
+      "spells": "sacred flame, dimension door, fire shield, haste, slow, daylight, ethereal jaunt, phantom steed, plane shift"
     },
     {
       "name": "Red Sun",
@@ -1254,17 +1190,7 @@
           "text": "When the horseman strikes a target with a melee attack, in addition to taking normal damage, the target must succeed on a DC 17 Constitution saving throw or instantly age 3d10 years. A creature that ages this way has disadvantage on attack rolls, ability checks, and saving throws based on Strength, Dexterity, and Constitution until the aging is reversed. A creature that ages beyond its lifespan dies immediately. The aging reverses automatically after 24 hours, or it can be reversed magically by greater restoration or comparable magic. A creature that succeeds on the save is immune to the temporal strike effect for 24 hours."
         }
       ],
-      "spells": [
-        "dimension door",
-        "fire shield",
-        "haste",
-        "slow",
-        "continual flame",
-        "scorching ray",
-        "ethereal jaunt",
-        "phantom steed",
-        "plane shift"
-      ]
+      "spells": "dimension door, fire shield, haste, slow, continual flame, scorching ray, ethereal jaunt, phantom steed, plane shift"
     },
     {
       "name": "Black Night",
@@ -1325,17 +1251,7 @@
           "text": "When the horseman strikes a target with a melee attack, in addition to taking normal damage, the target must succeed on a DC 17 Constitution saving throw or instantly age 3d10 years. A creature that ages this way has disadvantage on attack rolls, ability checks, and saving throws based on Strength, Dexterity, and Constitution until the aging is reversed. A creature that ages beyond its lifespan dies immediately. The aging reverses automatically after 24 hours, or it can be reversed magically by greater restoration or comparable magic. A creature that succeeds on the save is immune to the temporal strike effect for 24 hours."
         }
       ],
-      "spells": [
-        "ray of frost",
-        "dimension door",
-        "fire shield",
-        "haste",
-        "slow",
-        "darkness",
-        "ethereal jaunt",
-        "phantom steed",
-        "plane shift"
-      ]
+      "spells": "ray of frost, dimension door, fire shield, haste, slow, darkness, ethereal jaunt, phantom steed, plane shift"
     },
     {
       "name": "Bagiennik",
@@ -1426,12 +1342,7 @@
           "text": "The temple cat purrs loudly, targeting a humanoid it can see within 30 feet that can hear the temple cat. The target must succeed on a DC 14 Wisdom saving throw or be charmed. While charmed by the temple cat, the target must move toward the cat at normal speed and try to pet it or pick it up. A charmed target repeats the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful, the creature is immune to the temple cat's Fascinating Lure for the next 24 hours. The temple cat has advantage on attack rolls against any creature petting or holding it."
         }
       ],
-      "spells": [
-        "guidance",
-        "charm person",
-        "cure wounds",
-        "enhance ability"
-      ]
+      "spells": "guidance, charm person, cure wounds, enhance ability"
     },
     {
       "name": "Bearfolk",
@@ -1569,10 +1480,7 @@
           "text": "Ranged Weapon Attack: +5 to hit, range 80/320 ft, one target. Hit: 5 (1d4 + 3) piercing damage plus 2 (1d4) cold damage, and the target must make a successful DC 13 Constitution saving throw or gain 2 levels of exhaustion from the arrow's icy chill. If the save succeeds, the target also becomes immune to further exhaustion from beli arrows for 24 hours (but any levels of exhaustion already gained remain in effect). A character who gains a sixth level of exhaustion doesn't die automatically but drops to 0 hit points and must make death saving throws as normal. The exhaustion lasts until the target recovers fully from the cold damage."
         }
       ],
-      "spells": [
-        "invisibility",
-        "chill touch"
-      ]
+      "spells": "invisibility, chill touch"
     },
     {
       "name": "Bereginyas",
@@ -1673,7 +1581,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The boloti's innate spellcasting ability is Intelligence (spell save DC 11). It can innately cast the following spells, requiring no material components:\nAt will each: detect magic, water walk\n3/day each: control water, create or destroy water, fog cloud, invisibility, see invisibility, water breathing\n1/day: wall of ice"
+          "text": "The boloti's innate spellcasting ability is Intelligence (spell save DC 11). It can innately cast the following spells, requiring no material components:\nAt will: detect magic, water walk\n3/day: control water, create or destroy water, fog cloud, invisibility, see invisibility, water breathing\n1/day: wall of ice"
         },
         {
           "name": "Water Mastery",
@@ -1691,17 +1599,7 @@
           "text": "A boloti can transform into a vortex of swirling, churning water for up to 4 minutes. This ability can be used only while the boloti is underwater, and the boloti can't leave the water while in vortex form. While in vortex form, the boloti can enter another creature's space and stop there in vortex form. In this liquid form, the boloti still takes normal damage from weapons and magic. A creature in the same space as the boloti at the start of the creature's turn takes 9 (2d8) bludgeoning damage unless it makes a successful DC 15 Dexterity saving throw. If the creature is Medium or smaller, a failed saving throw also means it is grappled (escape DC 11). Until this grapple ends, the target is restrained and unable to breathe unless it can breathe water. If the saving throw succeeds, the target is pushed 5 feet so it is out of the boloti's space."
         }
       ],
-      "spells": [
-        "detect magic",
-        "water walk",
-        "control water",
-        "create or destroy water",
-        "fog cloud",
-        "invisibility",
-        "see invisibility",
-        "water breathing",
-        "wall of ice"
-      ]
+      "spells": "detect magic, water walk, control water, create or destroy water, fog cloud, invisibility, see invisibility, water breathing, wall of ice"
     },
     {
       "name": "Bone Collective",
@@ -1762,10 +1660,7 @@
           "text": "Bone collectives create a reddish liquid, which they smear on their fangs. The freakish red mouths on the tiny skeletons are disturbing, and the toxin is deadly. A bitten creature must succeed on a DC15 Constitution saving throw or become poisoned and take 1d6 Charisma damage. A poisoned creature repeats the saving throw every four hours, taking another 1d6 Charisma damage for each failure, until it has made two consecutive successful saves or survived for 24 hours. If the creature survives, the effect ends and the creature can heal normally. Lost Charisma can be regained with a lesser restoration spell or comparable magic."
         }
       ],
-      "spells": [
-        "chill touch",
-        "animate dead"
-      ]
+      "spells": "chill touch, animate dead"
     },
     {
       "name": "Bone Crab",
@@ -1905,7 +1800,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "Boreas's innate spellcasting ability is Charisma (spell save DC 19). He can innately cast the following spells, requiring no material components:\nAt will each: create water, detect magic, guidance, invisibility, polymorph, speak with animals, true seeing, wind wall\n3/day each: call lightning, control weather, cure wounds, dispel magic, ice storm, lesser restoration\n1/day each: chain lightning, earthquake, finger of death, heal, shapechange, wall of ice, word of recall"
+          "text": "Boreas's innate spellcasting ability is Charisma (spell save DC 19). He can innately cast the following spells, requiring no material components:\nAt will: create water, detect magic, guidance, invisibility, polymorph, speak with animals, true seeing, wind wall\n3/day each: call lightning, control weather, cure wounds, dispel magic, ice storm, lesser restoration\n1/day each: chain lightning, earthquake, finger of death, heal, shapechange, wall of ice, word of recall"
         },
         {
           "name": "Regeneration",
@@ -1948,29 +1843,7 @@
           "text": "Boreas erupts into an icy whirlwind. Mundane and magical light sources alike within 20 feet are automatically extinguished. Each creature within 20 feet of the avatar must succeed on a DC 21 Dexterity saving throw or take 14 (4d6) cold damage. The avatar can then fly up to half its flying speed."
         }
       ],
-      "spells": [
-        "create water",
-        "detect magic",
-        "guidance",
-        "invisibility",
-        "polymorph",
-        "speak with animals",
-        "true seeing",
-        "wind wall",
-        "call lightning",
-        "control weather",
-        "cure wounds",
-        "dispel magic",
-        "ice storm",
-        "lesser restoration",
-        "chain lightning",
-        "earthquake",
-        "finger of death",
-        "heal",
-        "shapechange",
-        "wall of ice",
-        "word of recall"
-      ]
+      "spells": "create water, detect magic, guidance, invisibility, polymorph, speak with animals, true seeing, wind wall, call lightning, control weather, cure wounds, dispel magic, ice storm, lesser restoration, chain lightning, earthquake, finger of death, heal, shapechange, wall of ice, word of recall"
     },
     {
       "name": "Bouda",
@@ -2006,7 +1879,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The bouda's innate spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). It can cast the following spells, requiring no material components:\nAt will: thaumaturgy\n3/day each: darkness, expeditious retreat\n1/day: contagion"
+          "text": "The bouda's innate spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). It can cast the following spells, requiring no material components:\nAt will: thaumaturgy\n3/day: darkness, expeditious retreat\n1/day: contagion"
         }
       ],
       "actions": [
@@ -2027,12 +1900,7 @@
           "text": "The bouda consumes the organs of a corpse in a space it occupies. It gains temporary hit points equal to the dead creature's HD that last 1 hour. Organs consumed by this ability are gone, and the creature can't be restored to life through spells and magical effects that require a mostly intact corpse."
         }
       ],
-      "spells": [
-        "thaumaturgy",
-        "darkness",
-        "expeditious retreat",
-        "contagion"
-      ]
+      "spells": "thaumaturgy, darkness, expeditious retreat, contagion"
     },
     {
       "name": "Broodiken",
@@ -2108,7 +1976,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The bucca's innate spellcasting ability is Charisma (spell save DC 13). It can innately cast the following spells, requiring no material components:\nAt will: invisibility\n3/day each: darkness, ensnaring strike, locate object"
+          "text": "The bucca's innate spellcasting ability is Charisma (spell save DC 13). It can innately cast the following spells, requiring no material components:\nAt will: invisibility\n3/day: darkness, ensnaring strike, locate object"
         }
       ],
       "actions": [
@@ -2117,12 +1985,7 @@
           "text": "Melee Weapon Damage: +5 to hit, reach 5 ft, one target. Hit: 5 (1d4 + 3) piercing damage, and the target must succeed on a DC 13 Constitution saving throw against poison or take 1d2 Strength damage. The target must repeat the saving throw at the end of each of its turns, and it loses another 1d2 Strength for each failed saving throw. The effect ends when one of the saving throws succeeds or automatically after 4 rounds. All lost Strength returns after a long rest."
         }
       ],
-      "spells": [
-        "invisibility",
-        "darkness",
-        "ensnaring strike",
-        "locate object"
-      ]
+      "spells": "invisibility, darkness, ensnaring strike, locate object"
     },
     {
       "name": "Bukavac",
@@ -2206,7 +2069,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The buraq's innate spellcasting ability is Charisma (spell save DC 17). The buraq can innately cast the following spells, requiring no components:\nAt will each: comprehend languages, detect evil and good, holy aura, pass without trace\n3/day each: haste, longstrider\n1/day each: plane shift, wind walk"
+          "text": "The buraq's innate spellcasting ability is Charisma (spell save DC 17). The buraq can innately cast the following spells, requiring no components:\nAt will: comprehend languages, detect evil and good, holy aura, pass without trace\n3/day each: haste, longstrider\n1/day each: plane shift, wind walk"
         },
         {
           "name": "Magic Resistance",
@@ -2232,16 +2095,7 @@
           "text": "The buraq magically teleports itself and its rider, along with any equipment it is wearing or carrying, to a location the buraq is familiar with, up to 1 mile away."
         }
       ],
-      "spells": [
-        "comprehend languages",
-        "detect evil and good",
-        "holy aura",
-        "pass without trace",
-        "haste",
-        "longstrider",
-        "plane shift",
-        "wind walk"
-      ]
+      "spells": "comprehend languages, detect evil and good, holy aura, pass without trace, haste, longstrider, plane shift, wind walk"
     },
     {
       "name": "Burrowling",
@@ -2356,7 +2210,7 @@
       "traits": [
         {
           "name": "Innate Spellcasting",
-          "text": "The cambium's innate spellcasting ability is Charisma (spell save DC 17, +9 to hit with spell attacks). The cambium can innately cast the following spells, requiring no material components:\nAt will each: alter self, detect thoughts, hold person, plane shift, spare the dying\n3/day each: cure wounds (4d8 + 3), ray of sickness (4d8), protection from poison, heal\n1/day: finger of death"
+          "text": "The cambium's innate spellcasting ability is Charisma (spell save DC 17, +9 to hit with spell attacks). The cambium can innately cast the following spells, requiring no material components:\nAt will: alter self, detect thoughts, hold person, plane shift, spare the dying\n3/day: cure wounds (4d8 + 3), ray of sickness (4d8), protection from poison, heal\n1/day: finger of death"
         }
       ],
       "actions": [
@@ -2379,18 +2233,7 @@
           "text": "When the target of the cambium's needle fingers fails its Constitution saving throw, apply one of the following effects:Sanguine Flux: The target cannot be healed—naturally or magically—until after their next long rest.\nCholeric Flux: The target becomes confused (as the spell) for 3d6 rounds. The target can repeat the saving throw at the end of each of its turns to shrug off the flux before the duration ends.\nMelancholic Flux: The target is incapacitated for 1d4 rounds and slowed (as the spell) for 3d6 rounds. The target can repeat the saving throw at the end of each of its turns to shrug off the flux before the duration ends. Phlegmatic Flux: A successful DC 18 Constitution saving throw negates this effect. A failed saving throw means the target gains one level of exhaustion which lasts for 3d6 rounds."
         }
       ],
-      "spells": [
-        "alter self",
-        "detect thoughts",
-        "hold person",
-        "plane shift",
-        "spare the dying",
-        "cure wounds",
-        "ray of sickness",
-        "protection from poison",
-        "heal",
-        "finger of death"
-      ]
+      "spells": "alter self, detect thoughts, hold person, plane shift, spare the dying, cure wounds, ray of sickness, protection from poison, heal, finger of death"
     },
     {
       "name": "Carrion Beetle",
@@ -2519,23 +2362,7 @@
           "text": "Melee Weapon Attack: +9 to hit, reach 10 ft, one target. Hit: 15 (2d8 + 6) slashing damage."
         }
       ],
-      "spells": [
-        "acid splash",
-        "mage hand",
-        "minor illusion",
-        "true strike",
-        "burning hands",
-        "detect magic",
-        "expeditious retreat",
-        "ray of sickness",
-        "hold person",
-        "invisibility",
-        "scorching ray",
-        "animate dead",
-        "haste",
-        "lightning bolt",
-        "phantasmal killer"
-      ]
+      "spells": "acid splash, mage hand, minor illusion, true strike, burning hands, detect magic, expeditious retreat, ray of sickness, hold person, invisibility, scorching ray, animate dead, haste, lightning bolt, phantasmal killer"
     },
     {
       "name": "Chernomoi",
@@ -2559,7 +2386,7 @@
       "traits": [
         {
           "name": "Innate Spellcasting",
-          "text": "The chernomoi's innate spellcasting ability is Charisma (spell save DC 13). It can innately cast the following spells, requiring no material components:\nAt will each: detect magic, invisibility, mage hand, mending, message, prestidigitation\n1/day each: detect poison and disease, dimension door"
+          "text": "The chernomoi's innate spellcasting ability is Charisma (spell save DC 13). It can innately cast the following spells, requiring no material components:\nAt will: detect magic, invisibility, mage hand, mending, message, prestidigitation\n1/day: detect poison and disease, dimension door"
         }
       ],
       "actions": [
@@ -2573,16 +2400,7 @@
           "text": "The chernomoi emits a loud shriek. All creatures within 60 feet who can hear take 10 (3d6) thunder damage, or half damage with a successful DC 13 Constitution saving throw."
         }
       ],
-      "spells": [
-        "detect magic",
-        "invisibility",
-        "mage hand",
-        "mending",
-        "message",
-        "prestidigitation",
-        "detect poison and disease",
-        "dimension door"
-      ]
+      "spells": "detect magic, invisibility, mage hand, mending, message, prestidigitation, detect poison and disease, dimension door"
     },
     {
       "name": "Child Of The Briar",
@@ -2717,10 +2535,7 @@
           "text": "Melee Weapon Attack: +4 to hit, range 5 ft, one target. Hit:7 (1d4 + 2) piercing damage."
         }
       ],
-      "spells": [
-        "speak with animals",
-        "silence"
-      ]
+      "spells": "speak with animals, silence"
     },
     {
       "name": "Clockwork Abomination",
@@ -3249,14 +3064,7 @@
           "text": "When the dau would be hit by an attack or affected by a spell, the dau replaces itself with an illusory duplicate and teleports to any unoccupied space within 30 feet in sight. The dau isn't affected and the illusory duplicate is destroyed."
         }
       ],
-      "spells": [
-        "detect thoughts",
-        "invisibility",
-        "mirror image",
-        "mirage arcana",
-        "programmed illusion",
-        "project image"
-      ]
+      "spells": "detect thoughts, invisibility, mirror image, mirage arcana, programmed illusion, project image"
     },
     {
       "name": "Death Butterfly Swarm",
@@ -3466,7 +3274,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The deep one priest's innate spellcasting ability is Charisma (spell save DC 12, +4 to hit with spell attacks). It can innately cast the following spells, requiring no material components:\nAt will each: sacred flame, shocking grasp\n3/day each: inflict wounds, sanctuary, sleep\n1/day each: ice storm, shatter"
+          "text": "The deep one priest's innate spellcasting ability is Charisma (spell save DC 12, +4 to hit with spell attacks). It can innately cast the following spells, requiring no material components:\nAt will: sacred flame, shocking grasp\n3/day each: inflict wounds, sanctuary, sleep\n1/day each: ice storm, shatter"
         },
         {
           "name": "Lightless Depths",
@@ -3487,15 +3295,7 @@
           "text": "Melee Weapon Attack: +6 to hit, reach 5 ft, one target. Hit: 11 (2d6 + 4) slashing damage."
         }
       ],
-      "spells": [
-        "sacred flame",
-        "shocking grasp",
-        "inflict wounds",
-        "sanctuary",
-        "sleep",
-        "ice storm",
-        "shatter"
-      ]
+      "spells": "sacred flame, shocking grasp, inflict wounds, sanctuary, sleep, ice storm, shatter"
     },
     {
       "name": "Deep One Archimandrite",
@@ -3529,7 +3329,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The deep one archimandrite's innate spellcasting ability is Charisma (spell save DC 15, +7 to hit with spell attacks). It can innately cast the following spells, requiring no material components:\nAt will each: bless, revivify, sacred flame, shocking grasp, suggestion\n3/day each: charm person, lightning bolt, sanctuary, shatter\n1/day each: chain lightning, cone of cold, ice storm"
+          "text": "The deep one archimandrite's innate spellcasting ability is Charisma (spell save DC 15, +7 to hit with spell attacks). It can innately cast the following spells, requiring no material components:\nAt will: bless, revivify, sacred flame, shocking grasp, suggestion\n3/day each: charm person, lightning bolt, sanctuary, shatter\n1/day each: chain lightning, cone of cold, ice storm"
         },
         {
           "name": "Legendary Resistance",
@@ -3559,20 +3359,7 @@
           "text": "Melee Weapon Attack: +8 to hit, reach 10 ft, one target. Hit: 14 (2d8 + 5) piercing damage plus 13 (2d12) necrotic damage."
         }
       ],
-      "spells": [
-        "bless",
-        "revivify",
-        "sacred flame",
-        "shocking grasp",
-        "suggestion",
-        "charm person",
-        "lightning bolt",
-        "sanctuary",
-        "shatter",
-        "chain lightning",
-        "cone of cold",
-        "ice storm"
-      ]
+      "spells": "bless, revivify, sacred flame, shocking grasp, suggestion, charm person, lightning bolt, sanctuary, shatter, chain lightning, cone of cold, ice storm"
     },
     {
       "name": "Apau Perape",
@@ -3625,10 +3412,7 @@
           "text": "Melee Weapon Attack: +8 to hit, reach 5 ft, one target. Hit: 14 (2d8 + 5) slashing damage.\nSummon Demon (1/Day): The apau perape chooses what to summon and attempts a magical summoning. The apau perape has a 50 percent chance of summoning one apau perape or one giant ape."
         }
       ],
-      "spells": [
-        "fear",
-        "wall of fire"
-      ]
+      "spells": "fear, wall of fire"
     },
     {
       "name": "Berstuc",
@@ -3710,7 +3494,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The demon's spellcasting ability is Charisma (spell save DC 17). The demon can innately cast the following spells, requiring no material components:\nAt will each: detect evil and good, detect magic, suggestion\n3/day: glibness\n1/day: dominate person"
+          "text": "The demon's spellcasting ability is Charisma (spell save DC 17). The demon can innately cast the following spells, requiring no material components:\nAt will: detect evil and good, detect magic, suggestion\n3/day: glibness\n1/day: dominate person"
         },
         {
           "name": "Magic Resistance",
@@ -3735,13 +3519,7 @@
           "text": "Melee or Ranged Weapon Attack: +7 to hit, reach 5 ft or range 20/60 ft, one target. Hit: 7 (1d6 + 4) piercing damage, or 8 (1d8 + 4) piercing damage if used with two hands to make a melee attack.\nSummon Demon (1/Day): The kishi demon has a 35 percent chance of summoning one kishi demon."
         }
       ],
-      "spells": [
-        "detect evil and good",
-        "detect magic",
-        "suggestion",
-        "glibness",
-        "dominate person"
-      ]
+      "spells": "detect evil and good, detect magic, suggestion, glibness, dominate person"
     },
     {
       "name": "Malakbel",
@@ -3851,9 +3629,7 @@
           "text": "The psoglav emits a beam from its single eye. One target within 60 feet of the psoglav is hit automatically by the ray. The target is knocked 20 feet back and must succeed on a DC 15 Dexterity saving throw or be knocked prone. The target's shadow stays in the space the target was originally in, and acts as an undead shadow under the command of the psoglav demon. If the creature hit with the shadow stealing ray flees the encounter, it is without a natural shadow for 1d12 days before the undead shadow fades and the creature's natural shadow returns. The undead shadow steals the body of its creature of origin if that creature is killed during the encounter; in that case, the creature's alignment shifts to evil and it falls under the command of the psoglav. The original creature regains its natural shadow immediately if the undead shadow is slain. A creature can only have its shadow stolen by the shadow stealing ray once per day, even if hit by the rays of two different psoglav demons, but it can be knocked back by it every time it is hit."
         }
       ],
-      "spells": [
-        "greater invisibility"
-      ]
+      "spells": "greater invisibility"
     },
     {
       "name": "Rubezahl",
@@ -3888,7 +3664,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The rubezahl's innate spellcasting ability is Charisma (spell save DC 16, +8 to hit with spell attacks). It can innately cast the following spells, requiring no material components:\nAt will each: disguise self (humanoid forms only), fog cloud\n3/day each: call lightning, gust of wind, lightning bolt\n1/day: control weather"
+          "text": "The rubezahl's innate spellcasting ability is Charisma (spell save DC 16, +8 to hit with spell attacks). It can innately cast the following spells, requiring no material components:\nAt will: disguise self (humanoid forms only), fog cloud\n3/day each: call lightning, gust of wind, lightning bolt\n1/day: control weather"
         },
         {
           "name": "Sneak Attack",
@@ -3915,14 +3691,7 @@
           "text": "The rubezahl calls a sizzling bolt of lightning out of the sky, or from the air if underground or indoors, to strike a point the rubezahl can see within 150 feet. All creatures within 20 feet of the target point take 44 (8d8) lightning damage, or half damage with a successful DC 16 Dexterity saving throw. A creature that fails its saving throw is stunned until the start of the rubezahl's next turn."
         }
       ],
-      "spells": [
-        "disguise self",
-        "fog cloud",
-        "call lightning",
-        "gust of wind",
-        "lightning bolt",
-        "control weather"
-      ]
+      "spells": "disguise self, fog cloud, call lightning, gust of wind, lightning bolt, control weather"
     },
     {
       "name": "Akyishigal",
@@ -3949,7 +3718,7 @@
       "traits": [
         {
           "name": "Innate Spellcasting",
-          "text": "Akyishigal's innate spellcasting ability is Charisma (spell save DC 19, +11 to hit with spell attacks). It can innately cast the following spells, requiring no material components:\nAt will each: detect evil and good, magic circle, teleport\n3/day each: dispel magic, insect plague (6th level), shapechange (vermin only)\n1/day: contagion (always filth fever)"
+          "text": "Akyishigal's innate spellcasting ability is Charisma (spell save DC 19, +11 to hit with spell attacks). It can innately cast the following spells, requiring no material components:\nAt will: detect evil and good, magic circle, teleport\n3/day: dispel magic, insect plague (6th level), shapechange (vermin only)\n1/day: contagion (always filth fever)"
         },
         {
           "name": "Magic Resistance",
@@ -3992,15 +3761,7 @@
           "text": "Akyishigal casts insect plague from its innate spellcasting ability."
         }
       ],
-      "spells": [
-        "detect evil and good",
-        "magic circle",
-        "teleport",
-        "dispel magic",
-        "insect plague",
-        "shapechange",
-        "contagion"
-      ]
+      "spells": "detect evil and good, magic circle, teleport, dispel magic, insect plague, shapechange, contagion"
     },
     {
       "name": "Spawn Of Akyishigal",
@@ -4142,12 +3903,7 @@
         "Within 1 mile of the lair, Alquam can cast his senses into any area of dim light or darkness as if using clairvoyance."
       ],
       "regionalEffectsFade": "If Alquam dies, conditions in the area surrounding the lair return to normal over the course of 1d10 days.",
-      "spells": [
-        "fear",
-        "invisibility",
-        "teleport",
-        "circle of death"
-      ]
+      "spells": "fear, invisibility, teleport, circle of death"
     },
     {
       "name": "Camazotz",
@@ -4195,7 +3951,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "Camazotz' innate spellcasting ability is Charisma (spell save DC 22, +14 to hit with spell attacks). He can innately cast the following spells, requiring no material components:\nAt will each: darkness, detect evil and good, dispel magic, plane shift, shapechange, telekinesis, teleport\n3/day each: banishment, haste, symbol\n1/day: earthquake"
+          "text": "Camazotz' innate spellcasting ability is Charisma (spell save DC 22, +14 to hit with spell attacks). He can innately cast the following spells, requiring no material components:\nAt will: darkness, detect evil and good, dispel magic, plane shift, shapechange, telekinesis, teleport\n3/day: banishment, haste, symbol\n1/day: earthquake"
         },
         {
           "name": "Magic Resistance",
@@ -4243,19 +3999,7 @@
           "text": "Camazotz beats his wings, extinguishing mundane and magical light sources alike. Each creature within 10 feet must succeed on a DC 21 Dexterity saving throw or take 14 (4d6) fire damage. Camazotz can then fly up to half his flying speed."
         }
       ],
-      "spells": [
-        "darkness",
-        "detect evil and good",
-        "dispel magic",
-        "plane shift",
-        "shapechange",
-        "telekinesis",
-        "teleport",
-        "banishment",
-        "haste",
-        "symbol",
-        "earthquake"
-      ]
+      "spells": "darkness, detect evil and good, dispel magic, plane shift, shapechange, telekinesis, teleport, banishment, haste, symbol, earthquake"
     },
     {
       "name": "Skin Bat",
@@ -4331,7 +4075,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "Mechuiti's spellcasting ability is Charisma (spell save DC 22, +14 to hit with spell attacks). Mechuiti can innately cast the following spells, requiring no material components:\nAt will each: dispel magic, fireball, hold monster, wall of fire\n3/day each: fire storm, power word stun\n1/day each: meteor swarm, power word kill"
+          "text": "Mechuiti's spellcasting ability is Charisma (spell save DC 22, +14 to hit with spell attacks). Mechuiti can innately cast the following spells, requiring no material components:\nAt will: dispel magic, fireball, hold monster, wall of fire\n3/day each: fire storm, power word stun\n1/day each: meteor swarm, power word kill"
         },
         {
           "name": "Speak with Apes",
@@ -4394,16 +4138,7 @@
         "Water within 1 mile of the lair carries Mechuiti's Ichor disease. Any creature that drinks the water must make a successful DC 15 Constitution saving throw against disease or be infected. An infected creature is poisoned until the disease is cured. Every 24 hours that elapse, the target must repeat the saving throw. On a failure, its hit point maximum is reduced by 5 (2d4). The disease is cured on a success. The target dies if the disease reduces its hit point maximum to 0. This reduction to the target's hit point maximum lasts until the disease is cured."
       ],
       "regionalEffectsFade": "When Mechuiti dies, all these regional effects fade immediately.",
-      "spells": [
-        "dispel magic",
-        "fireball",
-        "hold monster",
-        "wall of fire",
-        "fire storm",
-        "power word stun",
-        "meteor swarm",
-        "power word kill"
-      ]
+      "spells": "dispel magic, fireball, hold monster, wall of fire, fire storm, power word stun, meteor swarm, power word kill"
     },
     {
       "name": "Qorgeth",
@@ -4497,13 +4232,7 @@
         "Dead bodies within 1 mile of the lair decay quickly. Any corpse is reduced to bones in 24 hours. Magic that prevents decay staves off this decomposition normally. Anointing the body with holy water prevents decomposition for one day but no longer."
       ],
       "regionalEffectsFade": "If Qorgeth dies, conditions in the area surrounding the lair return to normal over the course of 1d10 days.",
-      "spells": [
-        "dispel magic",
-        "fear",
-        "insect plague",
-        "earthquake",
-        "teleport"
-      ]
+      "spells": "dispel magic, fear, insect plague, earthquake, teleport"
     },
     {
       "name": "Derro Fetal Savant",
@@ -4611,16 +4340,7 @@
           "text": "Melee Weapon Attack: +7 to hit, reach 5 ft, one target. Hit: 7 (1d6 + 4) slashing damage plus 9 (2d8) necrotic damage."
         }
       ],
-      "spells": [
-        "hellish rebuke",
-        "inflict wounds",
-        "shield of faith",
-        "wrathful smite",
-        "aid",
-        "crown of madness",
-        "darkness",
-        "magic weapon"
-      ]
+      "spells": "hellish rebuke, inflict wounds, shield of faith, wrathful smite, aid, crown of madness, darkness, magic weapon"
     },
     {
       "name": "Arbeyach",
@@ -4710,14 +4430,7 @@
           "text": "Arbeyach casts a spell."
         }
       ],
-      "spells": [
-        "poison spray",
-        "fog cloud",
-        "stinking cloud",
-        "cloudkill",
-        "contagion",
-        "insect plague"
-      ]
+      "spells": "poison spray, fog cloud, stinking cloud, cloudkill, contagion, insect plague"
     },
     {
       "name": "Spawn Of Arbeyach",
@@ -4768,9 +4481,7 @@
           "text": "Melee Weapon Attack: +7 to hit, reach 5 ft, one target. Hit: 7 (1d6 + 4) piercing damage plus 9 (2d8) poison damage. If the target is a creature, it must succeed on a DC 13 Constitution saving throw or be poisoned for 1 minute. A poisoned creature repeats the saving throw at the end of each of its turns, ending the effect on itself on a success."
         }
       ],
-      "spells": [
-        "conjure animals"
-      ]
+      "spells": "conjure animals"
     },
     {
       "name": "Ia'affrat",
@@ -4805,7 +4516,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "Ia'Affrat's spellcasting ability is Charisma (spell save DC 19, +11 to hit with spell attacks). Ia'Affrat can innately cast the following spells, requiring no material components:\nAt will each: fire bolt, poison spray\n3/day each: burning hands, invisibility, ray of enfeeblement, ray of sickness\n1/day each: bestow curse, contagion, harm, insect plague, fireball"
+          "text": "Ia'Affrat's spellcasting ability is Charisma (spell save DC 19, +11 to hit with spell attacks). Ia'Affrat can innately cast the following spells, requiring no material components:\nAt will: fire bolt, poison spray\n3/day each: burning hands, invisibility, ray of enfeeblement, ray of sickness\n1/day each: bestow curse, contagion, harm, insect plague, fireball"
         },
         {
           "name": "Inhabit",
@@ -4831,19 +4542,7 @@
           "text": "Each creature in Ia'Affrat's space must make a DC 18 Strength saving throw. Each creature that fails takes 28 (8d6) bludgeoning damage plus 14 (4d6) fire damage plus 14 (4d6) poison damage and is flung up 20 feet away from Ia'Affrat in a random direction and knocked prone. If the saving throw is successful, the target takes half the bludgeoning damage and isn't flung away or knocked prone. If a thrown target strikes an object, such as a wall or floor, the target takes 3 (1d6) bludgeoning damage for every 10 feet it traveled. If the target collides with another creature, that creature must succeed on a DC 18 Dexterity saving throw or take the same damage and be knocked prone."
         }
       ],
-      "spells": [
-        "fire bolt",
-        "poison spray",
-        "burning hands",
-        "invisibility",
-        "ray of enfeeblement",
-        "ray of sickness",
-        "bestow curse",
-        "contagion",
-        "harm",
-        "insect plague",
-        "fireball"
-      ]
+      "spells": "fire bolt, poison spray, burning hands, invisibility, ray of enfeeblement, ray of sickness, bestow curse, contagion, harm, insect plague, fireball"
     },
     {
       "name": "Mammon",
@@ -4870,7 +4569,7 @@
       "traits": [
         {
           "name": "Innate Spellcasting",
-          "text": "Mammon's innate spellcasting ability is Charisma (spell save DC 24, +16 to hit with spell attacks). He can innately cast the following spells, requiring no material components:\nAt will each: charm person, detect magic, dispel magic, fabricate (Mammon can create valuable objects), heat metal, magic aura\n3/day each: animate objects, counterspell, creation, instant summons, legend lore, teleport\n1/day each: imprisonment, inside gems), sunburst"
+          "text": "Mammon's innate spellcasting ability is Charisma (spell save DC 24, +16 to hit with spell attacks). He can innately cast the following spells, requiring no material components:\nAt will: charm person, detect magic, dispel magic, fabricate (Mammon can create valuable objects), heat metal, magic aura\n3/day each: animate objects, counterspell, creation, instant summons, legend lore, teleport\n1/day each: imprisonment (minimus containment only - inside gems), sunburst"
         },
         {
           "name": "Legendary Resistance",
@@ -4928,23 +4627,7 @@
         "Any naturally occurring treasure in Mammon's home plane reverts to worthless junk if removed from the plane. Similarly, any mundane item left behind transforms into something fantastically valuable, as long as it remains on the plane."
       ],
       "regionalEffectsFade": "If Mammon dies, conditions in the area surrounding the lair return to normal over the course of 1d10 days.",
-      "spells": [
-        "charm person",
-        "detect magic",
-        "dispel magic",
-        "fabricate",
-        "heat metal",
-        "magic aura",
-        "animate objects",
-        "counterspell",
-        "creation",
-        "instant summons",
-        "legend lore",
-        "teleport",
-        "imprisonment",
-        "inside gems)",
-        "sunburst"
-      ]
+      "spells": "charm person, detect magic, dispel magic, fabricate, heat metal, magic aura, animate objects, counterspell, creation, instant summons, legend lore, teleport, imprisonment, sunburst"
     },
     {
       "name": "Totivillus",
@@ -4979,7 +4662,7 @@
         },
         {
           "name": "Spellcasting",
-          "text": "Totivillus is a 20th-level spellcaster who uses Intelligence as his spellcasting ability (spell save DC 23, +15 to hit with spell attacks). He requires no material components to cast his spells. Totivillus has the following wizard spells prepared:\nCantrips (at will): chill touch, light, minor illusion, poison spray, prestidigitation\n1st level (4 slots): comprehend languages, disguise self, illusory script, magic missile, unseen servant\n2nd level (3 slots): blindnessldeafness, hold person, mirror image, misty step\n3rd level (3 slots): counterspell, dispel magic, haste, protection from energy\n4th level (3 slots): banishment, dimension door, greater invisibility, polymorph\n5th level (3 slots): dominate person, geas, modify memory, passwall\n6th level (2 slots): eyebite, guards and wards, mass suggestion\n7th level (2 slots): forcecage, plane shift\n8th level (1 slot): feeblemind\n9th level (1 slot): time stop"
+          "text": "Totivillus is a 20th-level spellcaster who uses Intelligence as his spellcasting ability (spell save DC 23, +15 to hit with spell attacks). He requires no material components to cast his spells. Totivillus has the following wizard spells prepared:\nCantrips (at will): chill touch, light, minor illusion, poison spray, prestidigitation\n1st level (4 slots): comprehend languages, disguise self, illusory script, magic missile, unseen servant\n2nd level (3 slots): blindness/deafness, hold person, mirror image, misty step\n3rd level (3 slots): counterspell, dispel magic, haste, protection from energy\n4th level (3 slots): banishment, dimension door, greater invisibility, polymorph\n5th level (3 slots): dominate person, geas, modify memory, passwall\n6th level (2 slots): eyebite, guards and wards, mass suggestion\n7th level (2 slots): forcecage, plane shift\n8th level (1 slot): feeblemind\n9th level (1 slot): time stop"
         },
         {
           "name": "Magic Resistance",
@@ -5029,41 +4712,7 @@
           "text": "Totivillus casts a spell from its list of prepared spells, using a spell slot as normal."
         }
       ],
-      "spells": [
-        "chill touch",
-        "light",
-        "minor illusion",
-        "poison spray",
-        "prestidigitation",
-        "comprehend languages",
-        "disguise self",
-        "illusory script",
-        "magic missile",
-        "unseen servant",
-        "blindnessldeafness",
-        "hold person",
-        "mirror image",
-        "misty step",
-        "counterspell",
-        "dispel magic",
-        "haste",
-        "protection from energy",
-        "banishment",
-        "dimension door",
-        "greater invisibility",
-        "polymorph",
-        "dominate person",
-        "geas",
-        "modify memory",
-        "passwall",
-        "eyebite",
-        "guards and wards",
-        "mass suggestion",
-        "forcecage",
-        "plane shift",
-        "feeblemind",
-        "time stop"
-      ]
+      "spells": "chill touch, light, minor illusion, poison spray, prestidigitation, comprehend languages, disguise self, illusory script, magic missile, unseen servant, blindness/deafness, hold person, mirror image, misty step, counterspell, dispel magic, haste, protection from energy, banishment, dimension door, greater invisibility, polymorph, dominate person, geas, modify memory, passwall, eyebite, guards and wards, mass suggestion, forcecage, plane shift, feeblemind, time stop"
     },
     {
       "name": "Automata Devil",
@@ -5098,7 +4747,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The automata devils' spellcasting ability is Charisma (spell save DC 16). It can innately cast the following spells, requiring no material components:\nAt will each: charm person, suggestion, teleport\n1/day each: banishing smite, cloudkill"
+          "text": "The automata devils' spellcasting ability is Charisma (spell save DC 16). It can innately cast the following spells, requiring no material components:\nAt will: charm person, suggestion, teleport\n1/day: banishing smite, cloudkill"
         }
       ],
       "actions": [
@@ -5127,13 +4776,7 @@
           "text": "Automata devils radiate fear in a 10-foot radius. A creature that starts its turn in the affected area must make a successful DC 16 Wisdom saving throw or become frightened. A creature that makes the save successfully cannot be affected by the same automata devil's fear aura again."
         }
       ],
-      "spells": [
-        "charm person",
-        "suggestion",
-        "teleport",
-        "banishing smite",
-        "cloudkill"
-      ]
+      "spells": "charm person, suggestion, teleport, banishing smite, cloudkill"
     },
     {
       "name": "Chort Devil",
@@ -5168,7 +4811,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The chort devil's spellcasting ability is Charisma (spell save DC 17, +9 to hit with spell attacks). The chort devil can innately cast the following spells, requiring no material components:\nAt will each: blur, magic circle, teleportation\n3/day: scorching ray (5 rays)\n1/day each: dispel magic, dominate person, flame strike, haste"
+          "text": "The chort devil's spellcasting ability is Charisma (spell save DC 17, +9 to hit with spell attacks). The chort devil can innately cast the following spells, requiring no material components:\nAt will: blur, magic circle, teleportation\n3/day: scorching ray (5 rays)\n1/day: dispel magic, dominate person, flame strike, haste"
         }
       ],
       "actions": [
@@ -5189,16 +4832,7 @@
           "text": "Any weapons wielded by a chort devil do 10 (3d6) fire damage in addition to their normal weapon damage."
         }
       ],
-      "spells": [
-        "blur",
-        "magic circle",
-        "teleportation",
-        "scorching ray",
-        "dispel magic",
-        "dominate person",
-        "flame strike",
-        "haste"
-      ]
+      "spells": "blur, magic circle, teleportation, scorching ray, dispel magic, dominate person, flame strike, haste"
     },
     {
       "name": "Crystalline Devil",
@@ -5260,10 +4894,7 @@
           "text": "The crystalline devil magically sprays shards of crystal in a 15-foot cone. Each target in that area takes 17 (7d4) piercing damage, or half damage with a successful DC 15 Dexterity saving throw.\nSummon Devil (1/Day): The crystalline devil has a 25 percent chance of summoning one crystalline devil."
         }
       ],
-      "spells": [
-        "command",
-        "suggestion"
-      ]
+      "spells": "command, suggestion"
     },
     {
       "name": "Gilded Devil",
@@ -5306,7 +4937,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The gilded devil's spellcasting ability is Wisdom (spell save DC 15, +7 to hit with spell attacks). The gilded devil can innately cast the following spells, requiring no material components:\nAt will each: detect thoughts, major image, suggestion\n3/day each: dominate person, polymorph, scorching ray (4 rays), scrying\n1/day: teleport (self plus 50 lb. of objects only)"
+          "text": "The gilded devil's spellcasting ability is Wisdom (spell save DC 15, +7 to hit with spell attacks). The gilded devil can innately cast the following spells, requiring no material components:\nAt will: detect thoughts, major image, suggestion\n3/day: dominate person, polymorph, scorching ray (4 rays), scrying\n1/day: teleport (self plus 50 lb. of objects only)"
         }
       ],
       "actions": [
@@ -5325,16 +4956,7 @@
           "text": "As a bonus action, a gilded devil can turn rings, necklaces, and other jewelry momentarily against their wearer. The devil can affect any visible item of jewelry on up to two items of value within 60 feet, twisting them into cruel barbs and spikes. Each target must succeed on a DC 15 Wisdom saving throw to halve the damage from this effect. If the saving throw fails, the victim takes 13 (3d8) piercing damage and an additional effect based on the item slot targeted. Slot Save Effect Arms Str Melee damage halved until short restHand Str Drop any held itemEyes Dex Permanently blindedHead Dex Disadvantage on Int checks until long restFeet Dex Speed halved for 24 hoursNeck Con Stunned, unable to breathe for 1 roundOther—No additional effect"
         }
       ],
-      "spells": [
-        "detect thoughts",
-        "major image",
-        "suggestion",
-        "dominate person",
-        "polymorph",
-        "scorching ray",
-        "scrying",
-        "teleport"
-      ]
+      "spells": "detect thoughts, major image, suggestion, dominate person, polymorph, scorching ray, scrying, teleport"
     },
     {
       "name": "Ink Devil",
@@ -5369,18 +4991,10 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The ink devil's spellcasting ability is Charisma (spell save DC 14). The ink devil can cast the following spells, requiring no material components:\nAt will each: detect magic, illusory script, invisibility, teleportation (self plus 50 lb. of objects only)\n1/day each: glyph of warding, planar ally, or 1 ink devil 25%)"
+          "text": "The ink devil's spellcasting ability is Charisma (spell save DC 14). The ink devil can cast the following spells, requiring no material components:\nAt will: detect magic, illusory script, invisibility, teleportation (self plus 50 lb. of objects only)\n1/day each: glyph of warding, planar ally (1d4 + 1 lemures 40% or 1 ink devil 25%)"
         }
       ],
-      "spells": [
-        "detect magic",
-        "illusory script",
-        "invisibility",
-        "teleportation",
-        "glyph of warding",
-        "planar ally",
-        "or 1 ink devil 25%)"
-      ]
+      "spells": "detect magic, illusory script, invisibility, teleportation, glyph of warding, planar ally"
     },
     {
       "name": "Koralk (Harvester Devil)",
@@ -5465,7 +5079,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The devil's innate spellcasting ability is Charisma (spell save DC 15). It can innately cast the following spells, requiring no material components:\nAt will each: fly, major image, planar binding\n3/day: greater invisibility\n1/day: wall of ice"
+          "text": "The devil's innate spellcasting ability is Charisma (spell save DC 15). It can innately cast the following spells, requiring no material components:\nAt will: fly, major image, planar binding\n3/day: greater invisibility\n1/day: wall of ice"
         },
         {
           "name": "Light Incorporeality",
@@ -5507,13 +5121,7 @@
           "text": "The devil can attempt a magical summoning. The devil has a 40 percent chance of summoning either 2 chain devils or 1 lunar devil."
         }
       ],
-      "spells": [
-        "fly",
-        "major image",
-        "planar binding",
-        "greater invisibility",
-        "wall of ice"
-      ]
+      "spells": "fly, major image, planar binding, greater invisibility, wall of ice"
     },
     {
       "name": "Orobas Devil",
@@ -5557,8 +5165,10 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The orobas' spellcasting ability is Charisma (spell save DC 18, +10 to hit with spell attacks). It can innately cast the following spells, requiring no material components:\nAt will each: augury, protection from evil and good, teleport (self plus 50 lb. of objects only\n)\n5/day each: bestow curse, fireball, scorching ray\n3/day each: antimagic field, chain lightning, contact other plane, dimension door, wall of fire\n1/day each: eyebite, find the path, foresight\nAcions"
-        },
+          "text": "The orobas' spellcasting ability is Charisma (spell save DC 18, +10 to hit with spell attacks). It can innately cast the following spells, requiring no material components:\nAt will: augury, protection from evil and good, teleport (self plus 50 lb. of objects only\n)\n5/day: bestow curse, fireball, scorching ray\n3/day: antimagic field, chain lightning, contact other plane, dimension door, wall of fire\n1/day: eyebite, find the path, foresight"
+        }
+      ],
+      "actions": [
         {
           "name": "Multiattack",
           "text": "The orobas makes four attacks: one with its bite, one with its claw, one with its flail, and one with its stomp."
@@ -5580,22 +5190,7 @@
           "text": "Melee Weapon Attack: +13 to hit, reach 5 ft, one target. Hit: 15 (2d6 + 8) bludgeoning damage."
         }
       ],
-      "spells": [
-        "augury",
-        "protection from evil and good",
-        "teleport",
-        "bestow curse",
-        "fireball",
-        "scorching ray",
-        "antimagic field",
-        "chain lightning",
-        "contact other plane",
-        "dimension door",
-        "wall of fire",
-        "eyebite",
-        "find the path",
-        "foresight\nAcions"
-      ]
+      "spells": "augury, protection from evil and good, teleport, bestow curse, fireball, scorching ray, antimagic field, chain lightning, contact other plane, dimension door, wall of fire, eyebite, find the path, foresight"
     },
     {
       "name": "Salt Devil",
@@ -5643,11 +5238,7 @@
           "text": "Melee Weapon Attack: +7 to hit, reach 5 ft, one target. Hit: 7 (1d6 + 4) slashing damage. If the target is neither undead nor a construct, it also takes 5 (1d10) necrotic damage, or half damage with a successful DC 15 Constitution saving throw. Plants, oozes, and creatures with the Amphibious, Water Breathing, or Water Form traits have disadvantage on this saving throw. If the saving throw fails by 5 or more, the target also gains one level of exhaustion.\nSummon Devil (1/Day): The salt devil has a 40% chance of summoning one salt devil."
         }
       ],
-      "spells": [
-        "darkness",
-        "harm",
-        "teleport"
-      ]
+      "spells": "darkness, harm, teleport"
     },
     {
       "name": "Mbielu",
@@ -6032,7 +5623,7 @@
       "traits": [
         {
           "name": "Innate Spellcasting",
-          "text": "The domovoi's innate spellcasting ability is Charisma (spell save DC 15). He can innately cast the following spells, requiring no material components:\nAt will each: alter self, invisibility\n3/day each: darkness, dimension door, haste"
+          "text": "The domovoi's innate spellcasting ability is Charisma (spell save DC 15). He can innately cast the following spells, requiring no material components:\nAt will: alter self, invisibility\n3/day: darkness, dimension door, haste"
         }
       ],
       "actions": [
@@ -6045,13 +5636,7 @@
           "text": "Melee Weapon Attack: +6 to hit, reach 10 ft, one target. Hit: 13 (2d8 + 4) bludgeoning damage."
         }
       ],
-      "spells": [
-        "alter self",
-        "invisibility",
-        "darkness",
-        "dimension door",
-        "haste"
-      ]
+      "spells": "alter self, invisibility, darkness, dimension door, haste"
     },
     {
       "name": "Doppelrat",
@@ -6117,7 +5702,7 @@
       "traits": [
         {
           "name": "Innate Spellcasting",
-          "text": "The dorreq's innate spellcasting ability is Intelligence (spell save DC 10). It can innately cast the following spells, requiring no material components:\n3/day each: blink, dimension door, haste, shatter"
+          "text": "The dorreq's innate spellcasting ability is Intelligence (spell save DC 10). It can innately cast the following spells, requiring no material components:\n3/day: blink, dimension door, haste, shatter"
         },
         {
           "name": "Wasteland Stride",
@@ -6142,12 +5727,7 @@
           "text": "Any creature that starts its turn within 10 feet of a dorreq must make a successful DC 14 Dexterity saving throw each round or be restrained by the dorreq's tentacles until the start of its next turn. On its turn, the dorreq can ignore or freely release a creature in the affected area."
         }
       ],
-      "spells": [
-        "blink",
-        "dimension door",
-        "haste",
-        "shatter"
-      ]
+      "spells": "blink, dimension door, haste, shatter"
     },
     {
       "name": "Adult Cave Dragon",
@@ -6189,7 +5769,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The dragon's innate spellcasting ability is Charisma (spell save DC 18). It can innately cast the following spells, requiring no material components:\nAt will each: detect magic, speak with dead\n3/day each: blur, counterspell, darkness, web\n1/day each: dispel magic, hold person"
+          "text": "The dragon's innate spellcasting ability is Charisma (spell save DC 18). It can innately cast the following spells, requiring no material components:\nAt will: detect magic, speak with dead\n3/day each: blur, counterspell, darkness, web\n1/day each: dispel magic, hold person"
         }
       ],
       "actions": [
@@ -6239,16 +5819,7 @@
           "text": "The dragon makes two bite attacks."
         }
       ],
-      "spells": [
-        "detect magic",
-        "speak with dead",
-        "blur",
-        "counterspell",
-        "darkness",
-        "web",
-        "dispel magic",
-        "hold person"
-      ]
+      "spells": "detect magic, speak with dead, blur, counterspell, darkness, web, dispel magic, hold person"
     },
     {
       "name": "Young Cave Dragon",
@@ -6614,7 +6185,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The dragon's innate spellcasting ability is Intelligence (spell save DC 21). It can innately cast the following spells, requiring no material components:\nAt will: tongues\n5/day each: counterspell, dispel magic, enhance ability"
+          "text": "The dragon's innate spellcasting ability is Intelligence (spell save DC 21). It can innately cast the following spells, requiring no material components:\nAt will: tongues\n5/day: counterspell, dispel magic, enhance ability"
         },
         {
           "name": "Mithral Shards",
@@ -6666,35 +6237,7 @@
           "text": "The dragon beats its wings. Each creature within 10 feet of the dragon must succeed on a DC 23 Dexterity saving throw or take 18 (2d8 + 9) bludgeoning damage and be knocked prone. The dragon can then fly up to half its flying speed."
         }
       ],
-      "spells": [
-        "tongues",
-        "counterspell",
-        "dispel magic",
-        "enhance ability",
-        "acid splash",
-        "light",
-        "mage hand",
-        "minor illusion",
-        "prestidigitation",
-        "charm person",
-        "expeditious retreat",
-        "magic missile",
-        "unseen servant",
-        "blur",
-        "hold person",
-        "see invisibility",
-        "haste",
-        "lightning bolt",
-        "protection from energy",
-        "dimension door",
-        "stoneskin",
-        "wall of fire",
-        "polymorph",
-        "teleportation circle",
-        "guards and wards",
-        "forcecage",
-        "antimagic field"
-      ]
+      "spells": "tongues, counterspell, dispel magic, enhance ability, acid splash, light, mage hand, minor illusion, prestidigitation, charm person, expeditious retreat, magic missile, unseen servant, blur, hold person, see invisibility, haste, lightning bolt, protection from energy, dimension door, stoneskin, wall of fire, polymorph, teleportation circle, guards and wards, forcecage, antimagic field"
     },
     {
       "name": "Adult Mithral Dragon",
@@ -6725,7 +6268,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The dragon's innate spellcasting ability is Intelligence (spell save DC 18, +10 to hit with spell attacks). It can innately cast the following spells, requiring no material components:\nAt will: tongues\n5/day each: dispel magic, enhance ability"
+          "text": "The dragon's innate spellcasting ability is Intelligence (spell save DC 18, +10 to hit with spell attacks). It can innately cast the following spells, requiring no material components:\nAt will: tongues\n5/day: dispel magic, enhance ability"
         },
         {
           "name": "Spellcasting",
@@ -6775,25 +6318,7 @@
           "text": "The dragon beats its wings. Each creature within 10 feet of the dragon must succeed on a DC 21 Dexterity saving throw or take 15 (2d6 + 8) bludgeoning damage and be knocked prone. The dragon can then fly up to half its flying speed."
         }
       ],
-      "spells": [
-        "tongues",
-        "dispel magic",
-        "enhance ability",
-        "acid splash",
-        "light",
-        "mage hand",
-        "prestidigitation",
-        "charm person",
-        "expeditious retreat",
-        "magic missile",
-        "unseen servant",
-        "blur",
-        "hold person",
-        "see invisibility",
-        "haste",
-        "lightning bolt",
-        "protection from energy"
-      ]
+      "spells": "tongues, dispel magic, enhance ability, acid splash, light, mage hand, prestidigitation, charm person, expeditious retreat, magic missile, unseen servant, blur, hold person, see invisibility, haste, lightning bolt, protection from energy"
     },
     {
       "name": "Young Mithral Dragon",
@@ -6841,10 +6366,7 @@
           "text": "A mithral dragon can spit a 50-foot-long, 5-foot-wide line of metallic shards. Targets in its path take 21 (6d6) magical slashing damage and lose another 5 hit points from bleeding at the start of their turns for 6 rounds; slashing damage is halved by a successful DC 12 Dexterity saving throw, but bleeding damage is not affected. Only magical healing stops the bleeding before 6 rounds. The shards dissolve into wisps of smoke 1 round after the breath weapon's use."
         }
       ],
-      "spells": [
-        "tongues",
-        "enhance ability"
-      ]
+      "spells": "tongues, enhance ability"
     },
     {
       "name": "Ancient Sea Dragon",
@@ -7536,11 +7058,7 @@
         "Fragments of ice and stone are torn from the lair's wall by a blast of wind and flung along a 15-foot cone. Creatures in the cone take 18 (4d8) bludgeoning damage, or half damage with a successful DC 15 Dexterity saving throw.",
         "A torrent of wind blasts outward from the dragon in a 60-foot radius, either racing just above the floor or near the ceiling. If near the floor, it affects all creatures standing in the radius; if near the ceiling, it affects all creatures flying in the radius. Affected creatures must make a successful DC 15 Strength saving throw or be knocked prone and stunned until the end of their next turn."
       ],
-      "spells": [
-        "feather fall",
-        "lightning bolt",
-        "ice storm"
-      ]
+      "spells": "feather fall, lightning bolt, ice storm"
     },
     {
       "name": "Adult Wind Dragon",
@@ -7633,10 +7151,7 @@
           "text": "The dragon beats its wings. Each creature within 10 feet of the dragon must succeed on a DC 21 Dexterity saving throw or take 14 (2d6 + 7) bludgeoning damage and be knocked prone. The dragon can then fly up to half its flying speed."
         }
       ],
-      "spells": [
-        "feather fall",
-        "lightning bolt"
-      ]
+      "spells": "feather fall, lightning bolt"
     },
     {
       "name": "Young Wind Dragon",
@@ -7692,9 +7207,7 @@
           "text": "The dragon exhales a blast of wind in a 30-foot cone. Each creature in that cone takes 11 (2d10) bludgeoning damage and is pushed 25 feet away from the dragon and knocked prone; a successful DC 16 Strength saving throw halves the damage and prevents being pushed and knocked prone. Unprotected flames in the cone are extinguished, and sheltered flames (such as those in lanterns) have a 75 percent chance of being extinguished."
         }
       ],
-      "spells": [
-        "feather fall"
-      ]
+      "spells": "feather fall"
     },
     {
       "name": "Wyrmling Wind Dragon",
@@ -7852,7 +7365,7 @@
       "traits": [
         {
           "name": "Innate Spellcasting",
-          "text": "The drake's innate casting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). It can innately cast the following spells, requiring no material components:\nAt will each: friends, vicious mockery\n5/day each: calm emotions, dissonant whispers, ray of sickness, hideous laughter\n3/day each: confusion, invisibility"
+          "text": "The drake's innate casting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). It can innately cast the following spells, requiring no material components:\nAt will: friends, vicious mockery\n5/day: calm emotions, dissonant whispers, ray of sickness, hideous laughter\n3/day: confusion, invisibility"
         },
         {
           "name": "Forgetful Spellcasting",
@@ -7878,16 +7391,7 @@
           "text": "An alehouse drake can make a touch attack that grants its target +3 to Dexterity-based skill checks and melee attacks but also induces confusion as per the spell. This effect lasts for 1d4 rounds. A successful DC 13 Charisma saving throw negates this effect."
         }
       ],
-      "spells": [
-        "friends",
-        "vicious mockery",
-        "calm emotions",
-        "dissonant whispers",
-        "ray of sickness",
-        "hideous laughter",
-        "confusion",
-        "invisibility"
-      ]
+      "spells": "friends, vicious mockery, calm emotions, dissonant whispers, ray of sickness, hideous laughter, confusion, invisibility"
     },
     {
       "name": "Ash Drake",
@@ -8275,7 +7779,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The drake's innate spellcasting ability is Wisdom (spell save DC 20). It can innately cast the following spells, requiring no material components:\nAt will each: faerie fire, moonbeam\n3/day: plane shift\n1/day each: gate, planar binding"
+          "text": "The drake's innate spellcasting ability is Wisdom (spell save DC 20). It can innately cast the following spells, requiring no material components:\nAt will: faerie fire, moonbeam\n3/day: plane shift\n1/day each: gate, planar binding"
         }
       ],
       "actions": [
@@ -8322,13 +7826,7 @@
           "text": "The drake casts faerie fire or moonbeam."
         }
       ],
-      "spells": [
-        "faerie fire",
-        "moonbeam",
-        "plane shift",
-        "gate",
-        "planar binding"
-      ]
+      "spells": "faerie fire, moonbeam, plane shift, gate, planar binding"
     },
     {
       "name": "Drakon",
@@ -8435,10 +7933,7 @@
           "text": "Every creature within 20 feet of the dream eater must make a DC 16 Charisma saving throw. Those that fail enter waking dreams and are confused (as the spell) for 6 rounds. On turns when the creature can act normally (rolls 9 or 10 for the confusion effect), it can repeat the saving throw at the end of its turn, and the effect ends early on a successful save."
         }
       ],
-      "spells": [
-        "command",
-        "suggestion"
-      ]
+      "spells": "command, suggestion"
     },
     {
       "name": "Drowned Maiden",
@@ -8468,7 +7963,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The drowned maiden's innate spellcasting ability is Charisma (spell save DC 15). She can innately cast the following spells, requiring no material components:\nAt will each: disguise self, silence"
+          "text": "The drowned maiden's innate spellcasting ability is Charisma (spell save DC 15). She can innately cast the following spells, requiring no material components:\nAt will: disguise self, silence"
         }
       ],
       "actions": [
@@ -8493,10 +7988,7 @@
           "text": "The drowned maiden pulls a grappled creature of Large size or smaller up to 15 feet straight toward herself."
         }
       ],
-      "spells": [
-        "disguise self",
-        "silence"
-      ]
+      "spells": "disguise self, silence"
     },
     {
       "name": "Duskthorn Dryad",
@@ -8520,7 +8012,7 @@
       "traits": [
         {
           "name": "Innate Spellcasting",
-          "text": "The dryad's innate spellcasting ability is Charisma (spell save DC 17). She can innately cast the following spells, requiring no material components:\nAt will each: dancing lights, druidcraft\n3/day each: charm person, entangle, invisibility, magic missile\n1/day each: barkskin, counterspell, dispel magic, fog cloud, shillelagh, suggestion, wall of thorns"
+          "text": "The dryad's innate spellcasting ability is Charisma (spell save DC 17). She can innately cast the following spells, requiring no material components:\nAt will: dancing lights, druidcraft\n3/day each: charm person, entangle, invisibility, magic missile\n1/day each: barkskin, counterspell, dispel magic, fog cloud, shillelagh, suggestion, wall of thorns"
         },
         {
           "name": "Magic Resistance",
@@ -8549,21 +8041,7 @@
           "text": "Ranged Weapon Attack: +7 to hit, range 150/600 ft, one target. Hit: 9 (1d8 + 5) piercing damage."
         }
       ],
-      "spells": [
-        "dancing lights",
-        "druidcraft",
-        "charm person",
-        "entangle",
-        "invisibility",
-        "magic missile",
-        "barkskin",
-        "counterspell",
-        "dispel magic",
-        "fog cloud",
-        "shillelagh",
-        "suggestion",
-        "wall of thorns"
-      ]
+      "spells": "dancing lights, druidcraft, charm person, entangle, invisibility, magic missile, barkskin, counterspell, dispel magic, fog cloud, shillelagh, suggestion, wall of thorns"
     },
     {
       "name": "Dullahan",
@@ -8598,10 +8076,10 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The dullahan's innate spellcasting ability is Charisma (spell save DC 15, +7 to hit with spell attacks). The dullahan can innately cast the following spells, requiring no material or somatic components:\nAt will each: bane, chill touch, hex, knock\n3/day each: false life, see invisibility\n1/day: blightRelentless"
+          "text": "The dullahan's innate spellcasting ability is Charisma (spell save DC 15, +7 to hit with spell attacks). The dullahan can innately cast the following spells, requiring no material or somatic components:\nAt will: bane, chill touch, hex, knock\n3/day each: false life, see invisibility\n1/day: blight"
         },
         {
-          "name": "Advance",
+          "name": "Relentless Advance",
           "text": "The dullahan is unaffected by difficult terrain, and can ride over water and other liquid surfaces."
         }
       ],
@@ -8625,15 +8103,7 @@
           "text": "When the dullahan is hit by a melee attack it can move its severed head in front of the attacker's face. The attacker is affected by the dullahan's Baleful Glare immediately. If the creature is averting its eyes this turn, it must still make the save, but does so with advantage."
         }
       ],
-      "spells": [
-        "bane",
-        "chill touch",
-        "hex",
-        "knock",
-        "false life",
-        "see invisibility",
-        "blightRelentless"
-      ]
+      "spells": "bane, chill touch, hex, knock, false life, see invisibility, blight"
     },
     {
       "name": "Dune Mimic",
@@ -8781,14 +8251,7 @@
           "text": "Melee Weapon Attack: +9 to hit, one target. Hit: 19 (4d6 + 5) piercing damage, and the target must make a successful DC 17 Constitution saving throw or gain one level of exhaustion."
         }
       ],
-      "spells": [
-        "freedom of movement",
-        "inflict wounds",
-        "true strike",
-        "cure wounds",
-        "magic weapon",
-        "misty step"
-      ]
+      "spells": "freedom of movement, inflict wounds, true strike, cure wounds, magic weapon, misty step"
     },
     {
       "name": "Edimmu",
@@ -8908,7 +8371,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The einherjar's innate spellcasting ability is Wisdom (spell save DC 13). It can innately cast the following spells, requiring no material components:\nAt will each: bless, spare the dying\n1/day each: death ward, spirit guardians"
+          "text": "The einherjar's innate spellcasting ability is Wisdom (spell save DC 13). It can innately cast the following spells, requiring no material components:\nAt will: bless, spare the dying\n1/day: death ward, spirit guardians"
         }
       ],
       "actions": [
@@ -8925,12 +8388,7 @@
           "text": "Melee or Ranged Weapon Attack: +7 to hit, reach 5 ft or range 20/60 ft, one target. Hit: 7 (1d6 + 4) slashing damage."
         }
       ],
-      "spells": [
-        "bless",
-        "spare the dying",
-        "death ward",
-        "spirit guardians"
-      ]
+      "spells": "bless, spare the dying, death ward, spirit guardians"
     },
     {
       "name": "Eleinomae",
@@ -8974,13 +8432,7 @@
           "text": "Ranged Weapon Attack: +7 to hit, range 5/l5 ft, one Large or smaller creature. Hit: The target has disadvantage on Wisdom saving throws for 1 minute, and is restrained. A creature can free itself or another creature within reach from restraint by using an action to make a successful DC 15 Strength check or by doing 5 slashing damage to the net (AC 10)."
         }
       ],
-      "spells": [
-        "dancing lights",
-        "charm person",
-        "suggestion",
-        "hallucinatory terrain",
-        "major image"
-      ]
+      "spells": "dancing lights, charm person, suggestion, hallucinatory terrain, major image"
     },
     {
       "name": "Elemental Locus",
@@ -9199,22 +8651,7 @@
           "text": "The enchantress can utter a special command or warning to a creature she can see within 30 feet of her. The creature must not be hostile to the enchantress and it must be able to hear (the command is inaudible to all but the target creature). For 1 minute, the creature adds a d4 to its attack rolls and saving throws. A creature can benefit from only one enchantress's Leadership at a time. This effect ends if the enchantress is incapacitated."
         }
       ],
-      "spells": [
-        "bane",
-        "charm person",
-        "faerie fire",
-        "enthrall",
-        "hold person",
-        "conjure fey",
-        "fear",
-        "hypnotic pattern",
-        "confusion",
-        "greater invisibility",
-        "phantasmal killer",
-        "animate objects",
-        "dominate person",
-        "hold monster"
-      ]
+      "spells": "bane, charm person, faerie fire, enthrall, hold person, conjure fey, fear, hypnotic pattern, confusion, greater invisibility, phantasmal killer, animate objects, dominate person, hold monster"
     },
     {
       "name": "Shadow Fey Forest Hunter",
@@ -9597,7 +9034,7 @@
       "traits": [
         {
           "name": "Innate Spellcasting",
-          "text": "The far darrig's innate spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). It can innately cast the following spells, requiring no material components:\nAt will each: calm emotions, charm animal (as charm person but affects beasts only), cure wounds, detect poison and disease, water breathing, water walk\n3/day each: barkskin, conjure woodland beings, hold animal (as hold person but affects beasts only), jump, longstrider\n1/day each: commune with nature, freedom of movement, nondetection, tree stride"
+          "text": "The far darrig's innate spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). It can innately cast the following spells, requiring no material components:\nAt will: calm emotions, charm animal (as charm person but affects beasts only), cure wounds, detect poison and disease, water breathing, water walk\n3/day: barkskin, conjure woodland beings, hold animal (as hold person but affects beasts only), jump, longstrider\n1/day: commune with nature, freedom of movement, nondetection, tree stride"
         }
       ],
       "actions": [
@@ -9614,23 +9051,7 @@
           "text": "A far darrig can magically extend or shrink its antler glaive as a bonus action to give it either a 10-foot or 5-foot reach."
         }
       ],
-      "spells": [
-        "calm emotions",
-        "charm animal",
-        "cure wounds",
-        "detect poison and disease",
-        "water breathing",
-        "water walk",
-        "barkskin",
-        "conjure woodland beings",
-        "hold animal",
-        "jump",
-        "longstrider",
-        "commune with nature",
-        "freedom of movement",
-        "nondetection",
-        "tree stride"
-      ]
+      "spells": "calm emotions, charm animal, cure wounds, detect poison and disease, water breathing, water walk, barkskin, conjure woodland beings, hold animal, jump, longstrider, commune with nature, freedom of movement, nondetection, tree stride"
     },
     {
       "name": "Fate Eater",
@@ -9668,10 +9089,7 @@
           "text": "Melee Weapon Attack: +7 to hit, reach 5 ft, one target. Hit:26 (5d8 + 4) slashing damage plus 11 (2d10) necrotic damage.\nSpectral Bite (Su) When a fate eater scores a critical hit against a target, it damages not only the creature but also the threads of its fate, changing the character's past or future. The target must roll 1d6 on the chart below for each critical hit that isn't negated by a successful DC 15 Charisma saving throw:\n1:Seeing the Alternates Suffers the effects of the confusion spell for 1d4 rounds\n2:Untied from the Loom Character's speed is randomized for four rounds. Roll 3d20 at the start of each of the character's turns to determine his or her speed in feet that turn\n3:Shifting Memories Permanently loses 2 from a random skill and gains 2 in a random untrained skill\n4:Not So Fast Loses the use of one class ability, chosen at random\n5:Lost Potential Loses 1 point from one randomly chosen ability score\n6:Took the Lesser Path The character's current hit point total becomes his or her hit point maximum\nEffects 3-6 are permanent until the character makes a successful Charisma saving throw. The saving throw is repeated after every long rest, but the DC increases by 1 after every long rest, as the character becomes more entrenched in this new destiny. Otherwise, these new fates can be undone by nothing short of a wish spell or comparable magic."
         }
       ],
-      "spells": [
-        "blink",
-        "hallucinatory terrain"
-      ]
+      "spells": "blink, hallucinatory terrain"
     },
     {
       "name": "Fear Smith",
@@ -9705,7 +9123,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The fear smith's innate spellcasting ability is Charisma (spell save DC 16). The fear smith can innately cast the following spells, requiring no verbal or material components:\nAt will each: detect thoughts, fear\n2/day each: charm person, command, confusion"
+          "text": "The fear smith's innate spellcasting ability is Charisma (spell save DC 16). The fear smith can innately cast the following spells, requiring no verbal or material components:\nAt will: detect thoughts, fear\n2/day each: charm person, command, confusion"
         },
         {
           "name": "Magic Resistance",
@@ -9726,13 +9144,7 @@
           "text": "The fear smith terrifies a creature within 30 feet with a look. The target must succeed on a DC 16 Wisdom saving throw or be stunned for 1 round and take 13 (3d8) psychic damage and heal the fear smith by an equal amount."
         }
       ],
-      "spells": [
-        "detect thoughts",
-        "fear",
-        "charm person",
-        "command",
-        "confusion"
-      ]
+      "spells": "detect thoughts, fear, charm person, command, confusion"
     },
     {
       "name": "Fellforged",
@@ -9837,14 +9249,7 @@
           "text": "Ranged Weapon Attack: +6 to hit, range 60/200 ft, one creature. Hit: 25 (4d10 + 3) force damage."
         }
       ],
-      "spells": [
-        "hex",
-        "counterspell",
-        "fear",
-        "gaseous form",
-        "hold monster",
-        "true seeing"
-      ]
+      "spells": "hex, counterspell, fear, gaseous form, hold monster, true seeing"
     },
     {
       "name": "Bear King",
@@ -10030,11 +9435,7 @@
         "Areas of natural terrain within 3 miles of the lair subtly rearrange themselves to create game trails through even the densest wilderness."
       ],
       "regionalEffectsFade": "When the Lord of the Hunt breaks camp or dies, the area around the previous campsite returns to normal immediately.",
-      "spells": [
-        "commune with nature",
-        "conjure volley",
-        "conjure fey"
-      ]
+      "spells": "commune with nature, conjure volley, conjure fey"
     },
     {
       "name": "Moonlit King",
@@ -10065,7 +9466,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The Moonlit King's innate spellcasting ability score is Charisma (save DC 19, +11 to hit with spell attacks). The Moonlit King can innately cast the following spells, requiring no material components:\nAt will each: continual flame, detect evil and good, invisibility (self only), moonbeam, zone of truth\n3/day each: blight, dispel evil and good, dispel magic\n1/day each: demiplane, heal"
+          "text": "The Moonlit King's innate spellcasting ability score is Charisma (save DC 19, +11 to hit with spell attacks). The Moonlit King can innately cast the following spells, requiring no material components:\nAt will: continual flame, detect evil and good, invisibility (self only), moonbeam, zone of truth\n3/day each: blight, dispel evil and good, dispel magic\n1/day each: demiplane, heal"
         },
         {
           "name": "Legendary Resistance",
@@ -10134,18 +9535,7 @@
         "Weather conditions don't inhibit moonlight shining within 10 miles of the lair; clouds part, rain seems to channel moonbeams, snow takes on a luminous silver glow."
       ],
       "regionalEffectsFade": "If the Moonlit King dies, conditions in the area surrounding the lair return to normal over the course of 1d10 days.",
-      "spells": [
-        "continual flame",
-        "detect evil and good",
-        "invisibility",
-        "moonbeam",
-        "zone of truth",
-        "blight",
-        "dispel evil and good",
-        "dispel magic",
-        "demiplane",
-        "heal"
-      ]
+      "spells": "continual flame, detect evil and good, invisibility, moonbeam, zone of truth, blight, dispel evil and good, dispel magic, demiplane, heal"
     },
     {
       "name": "Queen Of Night And Magic",
@@ -10252,30 +9642,7 @@
         "The Queen of Night and Magic can cast her senses to any area containing darkness, dim light, or shadows within 6 miles of her lair, similar to a clairvoyance spell."
       ],
       "regionalEffectsFade": "If the Queen of Night and Magic dies, conditions in the area surrounding the lair gradually return to normal over the course of 2d10 days.",
-      "spells": [
-        "blade ward",
-        "chill touch",
-        "dancing lights",
-        "mage hand",
-        "prestidigitation",
-        "ray of frost",
-        "mage armor",
-        "magic missile",
-        "shield",
-        "darkness",
-        "mirror image",
-        "blink",
-        "fear",
-        "confusion",
-        "greater invisibility",
-        "cone of cold",
-        "teleportation circle",
-        "circle of death",
-        "plane shift",
-        "prismatic spray",
-        "dominate monster",
-        "meteor swarm"
-      ]
+      "spells": "blade ward, chill touch, dancing lights, mage hand, prestidigitation, ray of frost, mage armor, magic missile, shield, darkness, mirror image, blink, fear, confusion, greater invisibility, cone of cold, teleportation circle, circle of death, plane shift, prismatic spray, dominate monster, meteor swarm"
     },
     {
       "name": "Queen Of Witches",
@@ -10306,7 +9673,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "Nicnevin's spellcasting attribute is Charisma (save DC 19, +12 to hit with spell attacks). She can innately cast the following spells, requiring no material components:\nAt will each: faerie fire, hex, misty step, silent image, tongues\n1/day each: power word kill, sleep (9th level), true polymorph\n2/day each: bestow curse, feeblemind, mass suggestion, flesh to stone\n3/day each: chain lightning, counterspell, dispel magic, hypnotic pattern, teleportation circle"
+          "text": "Nicnevin's spellcasting attribute is Charisma (save DC 19, +12 to hit with spell attacks). She can innately cast the following spells, requiring no material components:\nAt will: faerie fire, hex, misty step, silent image, tongues\n1/day each: power word kill, sleep (9th level), true polymorph\n2/day each: bestow curse, feeblemind, mass suggestion, flesh to stone\n3/day each: chain lightning, counterspell, dispel magic, hypnotic pattern, teleportation circle"
         },
         {
           "name": "Magic Resistance",
@@ -10363,25 +9730,7 @@
         "Silvery fog is common within 10 miles of the lair, and strange whispers are heard within the mist."
       ],
       "regionalEffectsFade": "If Nicnevin dies, conditions in the area surrounding the lair return to normal over the course of 1d10 days.",
-      "spells": [
-        "faerie fire",
-        "hex",
-        "misty step",
-        "silent image",
-        "tongues",
-        "power word kill",
-        "sleep",
-        "true polymorph",
-        "bestow curse",
-        "feeblemind",
-        "mass suggestion",
-        "flesh to stone",
-        "chain lightning",
-        "counterspell",
-        "dispel magic",
-        "hypnotic pattern",
-        "teleportation circle"
-      ]
+      "spells": "faerie fire, hex, misty step, silent image, tongues, power word kill, sleep, true polymorph, bestow curse, feeblemind, mass suggestion, flesh to stone, chain lightning, counterspell, dispel magic, hypnotic pattern, teleportation circle"
     },
     {
       "name": "River King",
@@ -10412,7 +9761,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The River King's innate spellcasting ability score is Charisma (save DC 16, +8 to hit with spell attacks). The River King can innately cast the following spells, requiring no material components:\nAt will each: create or destroy water, shocking grasp, water breathing\n3/day each: freedom of movement, control water\n1/day: chain lightning"
+          "text": "The River King's innate spellcasting ability score is Charisma (save DC 16, +8 to hit with spell attacks). The River King can innately cast the following spells, requiring no material components:\nAt will: create or destroy water, shocking grasp, water breathing\n3/day each: freedom of movement, control water\n1/day each: chain lightning"
         },
         {
           "name": "Legendary Resistance",
@@ -10427,7 +9776,7 @@
       "actions": [
         {
           "name": "Multiattack",
-          "text": "The River King makes three attacks with his longsword and10r flood blast, in any combination."
+          "text": "The River King makes three attacks with his longsword and/or flood blast, in any combination."
         },
         {
           "name": "Longsword",
@@ -10476,14 +9825,7 @@
         "Rain and thunderstorms are common within 6 miles of the lair, and often build to torrential downpours that create heavy obscurement and cause waterways to overflow their banks."
       ],
       "regionalEffectsFade": "If the River King dies, conditions in the area surrounding the lair return to normal over the course of 1d10 days.",
-      "spells": [
-        "create or destroy water",
-        "shocking grasp",
-        "water breathing",
-        "freedom of movement",
-        "control water",
-        "chain lightning"
-      ]
+      "spells": "create or destroy water, shocking grasp, water breathing, freedom of movement, control water, chain lightning"
     },
     {
       "name": "Snow Queen",
@@ -10510,7 +9852,7 @@
       "traits": [
         {
           "name": "Innate Spellcasting",
-          "text": "The Snow Queen's innate spellcasting ability score is Charisma (save DC 17, +9 to hit with spell attacks). The Snow Queen can innately cast the following spells, requiring no material components:\nAt will each: fog cloud, magic missile, ray of frost\n3/day each: chill metal, but does cold damage), freezing sphere\n1/day: cone of cold"
+          "text": "The Snow Queen's innate spellcasting ability score is Charisma (save DC 17, +9 to hit with spell attacks). The Snow Queen can innately cast the following spells, requiring no material components:\nAt will: fog cloud, magic missile, ray of frost\n3/day each: chill metal (as heat metal but does cold damage), freezing sphere\n1/day: cone of cold"
         },
         {
           "name": "Legendary Resistance",
@@ -10577,15 +9919,7 @@
         "Light snowfall or swirling powder blown by the wind lightly obscures the area within 5 miles of the lair."
       ],
       "regionalEffectsFade": "If the Snow Queen dies, conditions in the area surrounding the lair return to normal over the course of 1d10 days",
-      "spells": [
-        "fog cloud",
-        "magic missile",
-        "ray of frost",
-        "chill metal",
-        "but does cold damage)",
-        "freezing sphere",
-        "cone of cold"
-      ]
+      "spells": "fog cloud, magic missile, ray of frost, chill metal, freezing sphere, cone of cold"
     },
     {
       "name": "Feyward Tree",
@@ -10671,7 +10005,7 @@
       "traits": [
         {
           "name": "Innate Spellcasting",
-          "text": "The firebird's innate spellcasting ability is Charisma (spell save DC 15). It can innately cast the following spells, requiring no material components:\nAt will each: guidance, purify food and drink, speak with animals\n3/day each: charm person, cure wounds (2d8 + 5), daylight, faerie fire, heat metal, hypnotic pattern, tongues\n1/day each: geas, heal, reincarnate"
+          "text": "The firebird's innate spellcasting ability is Charisma (spell save DC 15). It can innately cast the following spells, requiring no material components:\nAt will: guidance, purify food and drink, speak with animals\n3/day: charm person, cure wounds (2d8 + 5), daylight, faerie fire, heat metal, hypnotic pattern, tongues\n1/day: geas, heal, reincarnate"
         },
         {
           "name": "Light of the World",
@@ -10701,21 +10035,7 @@
           "text": "The firebird can fire a burning ray of light from its tail feathers in a line 5 feet wide and up to 50 feet long. Targets in the line must succeed on a DC 15 Dexterity saving throw or take 24 (7d6) fire damage and become blinded for 1d4 rounds. A successful saving throw negates the blindness and reduces the damage by half."
         }
       ],
-      "spells": [
-        "guidance",
-        "purify food and drink",
-        "speak with animals",
-        "charm person",
-        "cure wounds",
-        "daylight",
-        "faerie fire",
-        "heat metal",
-        "hypnotic pattern",
-        "tongues",
-        "geas",
-        "heal",
-        "reincarnate"
-      ]
+      "spells": "guidance, purify food and drink, speak with animals, charm person, cure wounds, daylight, faerie fire, heat metal, hypnotic pattern, tongues, geas, heal, reincarnate"
     },
     {
       "name": "Firegeist",
@@ -10854,7 +10174,7 @@
       "traits": [
         {
           "name": "Innate Spellcasting",
-          "text": "The folk of Leng's innate spellcasting ability is Charisma (spell save DC 16). It can innately cast the following spells, requiring no material components:\nAt will each: comprehend languages, minor illusion\n3/day each: disguise self, suggestion\n1/day each: dream, etherealness"
+          "text": "The folk of Leng's innate spellcasting ability is Charisma (spell save DC 16). It can innately cast the following spells, requiring no material components:\nAt will: comprehend languages, minor illusion\n3/day each: disguise self, suggestion\n1/day each: dream, etherealness"
         },
         {
           "name": "Regeneration",
@@ -10884,14 +10204,7 @@
           "text": "Ranged Weapon Attack: +4 to hit, range 20/50 ft, one target. Hit: 3 (1d6) piercing damage plus 19 (3d12) poison damage, and the target is restrained. A successful DC 14 Constitution saving throw halves the poison damage."
         }
       ],
-      "spells": [
-        "comprehend languages",
-        "minor illusion",
-        "disguise self",
-        "suggestion",
-        "dream",
-        "etherealness"
-      ]
+      "spells": "comprehend languages, minor illusion, disguise self, suggestion, dream, etherealness"
     },
     {
       "name": "Forest Marauder",
@@ -11194,7 +10507,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The al-Aeshma's innate spellcasting ability is Charisma (spell save DC 17). It can innately cast the following spells, requiring no material components:\nAt will each: detect evil and good, detect magic, thunderwave\n3/day each: destroy food and water, but makes food and drink unpalatable), tongues, wind walk\n1/day each: creation, gaseous form, insect plague, invisibility, major image"
+          "text": "The al-Aeshma's innate spellcasting ability is Charisma (spell save DC 17). It can innately cast the following spells, requiring no material components:\nAt will: detect evil and good, detect magic, thunderwave\n3/day each: destroy food and water (as create food and water but makes food and drink unpalatable), tongues, wind walk\n1/day each: creation, gaseous form, insect plague, invisibility, major image"
         },
         {
           "name": "Regeneration",
@@ -11215,20 +10528,7 @@
           "text": "A 5-foot-radius, 30-foot-tall cylinder of sand magically forms on a point the al-Aeshma can see within 120 feet of it. The dust devil lasts as long as the al-Aeshma maintains concentration (as if a spell). Any creature but the al-Aeshma that enters the dust devil must succeed on a DC 18 Strength saving throw or be restrained by it; any number of creatures may be restrained this way. At the start of a restrained creature's turn, it takes 7 (2d6) slashing damage plus 7 (2d6) necrotic damage. The al-Aeshma can move the dust devil up to 60 feet as an action; restrained creatures move with it. The dust devil ends if the al-Aeshma loses sight of it. A creature can use its action to free a creature restrained by the dust devil, including itself, by making a DC 18 Strength check. If the check succeeds, it moves to the nearest space outside the dust devil."
         }
       ],
-      "spells": [
-        "detect evil and good",
-        "detect magic",
-        "thunderwave",
-        "destroy food and water",
-        "but makes food and drink unpalatable)",
-        "tongues",
-        "wind walk",
-        "creation",
-        "gaseous form",
-        "insect plague",
-        "invisibility",
-        "major image"
-      ]
+      "spells": "detect evil and good, detect magic, thunderwave, destroy food and water, tongues, wind walk, creation, gaseous form, insect plague, invisibility, major image"
     },
     {
       "name": "Gerridae",
@@ -11349,7 +10649,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The bonepowder ghoul's innate spellcasting ability is Charisma (spell save DC 18, +10 to hit with spell attacks). It can innately cast the following spells, requiring no material components:\nAt will each: chill touch, darkness, dispel magic, ray of enfeeblement\n3/day each: blindnessldeafness, circle of death (7th level; 10d6)\n1/day: finger of death"
+          "text": "The bonepowder ghoul's innate spellcasting ability is Charisma (spell save DC 18, +10 to hit with spell attacks). It can innately cast the following spells, requiring no material components:\nAt will: chill touch, darkness, dispel magic, ray of enfeeblement\n3/day: blindness/deafness, circle of death (7th level; 10d6)\n1/day: finger of death"
         }
       ],
       "actions": [
@@ -11367,15 +10667,7 @@
           "text": "A bonepowder ghoul can generate a whirlwind of bones and teeth. All creatures within a 20-foot cube take 66 (12d10) slashing damage and are drained of 1d6 Strength; a successful DC 17 Dexterity saving throw reduces damage to half and negates the Strength loss. The whirlwind dissipates after one round."
         }
       ],
-      "spells": [
-        "chill touch",
-        "darkness",
-        "dispel magic",
-        "ray of enfeeblement",
-        "blindnessldeafness",
-        "circle of death",
-        "finger of death"
-      ]
+      "spells": "chill touch, darkness, dispel magic, ray of enfeeblement, blindness/deafness, circle of death, finger of death"
     },
     {
       "name": "Darakhul Ghoul",
@@ -11527,29 +10819,7 @@
         "Phantom lights appear within 10 miles of the lair, more frequently the closer they are to the lair. The lights shed dim light out to 10 feet. Undead within such a light gain 1d6 temporary hit points at the start of their turn; the light can't raise an undead's hit points above 150 percent of its normal hit point maximum."
       ],
       "regionalEffectsFade": "If the emperor dies, conditions in the area surrounding the lair return to normal over the course of 1d10 days.",
-      "spells": [
-        "blade ward",
-        "chill touch",
-        "message",
-        "prestidigitation",
-        "shocking grasp",
-        "true strike",
-        "magic missile",
-        "shield",
-        "mirror image",
-        "phantasmal force",
-        "fear",
-        "fireball",
-        "blight",
-        "dimension door",
-        "cloudkill",
-        "hold monster",
-        "circle of death",
-        "finger of death",
-        "teleport",
-        "power word stun",
-        "power word kill"
-      ]
+      "spells": "blade ward, chill touch, message, prestidigitation, shocking grasp, true strike, magic missile, shield, mirror image, phantasmal force, fear, fireball, blight, dimension door, cloudkill, hold monster, circle of death, finger of death, teleport, power word stun, power word kill"
     },
     {
       "name": "Imperial Ghoul",
@@ -11751,7 +11021,7 @@
       "traits": [
         {
           "name": "Innate Spellcasting",
-          "text": "Hraesvelgr's innate spellcasting ability is Charisma (spell save DC 19). He can innately cast the following spells, requiring no material or somatic components:\nAt will each: feather fall, light\n3/day: control weather"
+          "text": "Hraesvelgr's innate spellcasting ability is Charisma (spell save DC 19). He can innately cast the following spells, requiring no material or somatic components:\nAt will: feather fall, light\n3/day: control weather"
         },
         {
           "name": "Keen Sight",
@@ -11821,11 +11091,7 @@
         "The wind within 10 miles of the lair bears a pungent carrion stench."
       ],
       "regionalEffectsFade": "If Hraesvelgr dies, conditions in the area surrounding the lair return to normal over the course of 1d10 days.",
-      "spells": [
-        "feather fall",
-        "light",
-        "control weather"
-      ]
+      "spells": "feather fall, light, control weather"
     },
     {
       "name": "Jotun Giant",
@@ -11854,7 +11120,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The Jotun giant's innate spellcasting ability is Wisdom (spell save DC 19). It can innately cast the following spells, requiring no material components:\nAt will each: earthquake, shapechange, speak with animals\n3/day each: bestow curse, gust of wind\n1/day: divination"
+          "text": "The Jotun giant's innate spellcasting ability is Wisdom (spell save DC 19). It can innately cast the following spells, requiring no material components:\nAt will: earthquake, shapechange, speak with animals\n3/day: bestow curse, gust of wind\n1/day: divination"
         },
         {
           "name": "Magic Resistance",
@@ -11906,14 +11172,7 @@
           "text": "If a rock or similar object is hurled at the giant, the giant can, with a successful DC 10 Dexterity saving throw, catch the missile and take no bludgeoning damage from it."
         }
       ],
-      "spells": [
-        "earthquake",
-        "shapechange",
-        "speak with animals",
-        "bestow curse",
-        "gust of wind",
-        "divination"
-      ]
+      "spells": "earthquake, shapechange, speak with animals, bestow curse, gust of wind, divination"
     },
     {
       "name": "Thursir Giant",
@@ -12226,7 +11485,7 @@
         },
         {
           "name": "Shoot into the Sun",
-          "recharge": "1 minutelday",
+          "recharge": "1 minute/day",
           "text": "When roused for combat, the golem opens many of its eyes, emitting blinding light. All ranged attacks, including ranged spells that require a spell attack roll, are made with disadvantage against the golem. The effect persists as long as the eye golem desires, up to a total of 1 minute (10 rounds) per day."
         }
       ]
@@ -12519,7 +11778,7 @@
       "traits": [
         {
           "name": "Innate Spellcasting",
-          "text": "The gremlin's innate spellcasting ability is Charisma (spell save DC 11). It can innately cast the following spells, requiring no material components:\nAt will: prestidigitation\n3/day: hex"
+          "text": "The gremlin's innate spellcasting ability is Charisma (spell save DC 11). It can innately cast the following spells, requiring no material components:\nAt Will: prestidigitation\n3/day: hex"
         },
         {
           "name": "Magic Resistance",
@@ -12544,10 +11803,7 @@
           "text": "A rum gremlin radiates an aura of drunkenness to a radius of 20 feet. Every creature that starts its turn in the aura must make a successful DC 12 Constitution saving throw against poison or be poisoned for one hour. Creatures that have drunk any alcohol during the previous hour have disadvantage on the saving throw. While affected by this poison, a creature falls prone if it tries to move more than half its speed during a turn."
         }
       ],
-      "spells": [
-        "prestidigitation",
-        "hex"
-      ]
+      "spells": "prestidigitation, hex"
     },
     {
       "name": "Grim Jester",
@@ -12574,7 +11830,7 @@
       "traits": [
         {
           "name": "Innate Spellcasting",
-          "text": "The jester's spellcasting ability is Charisma (spell save DC 17, +9 to hit with spell attacks). It can innately cast the following spells requiring no components:\nAt will each: disguise self, grease, inflict wounds, magic mouth, misty step\n3/day each: contagion, mirror image\n1/day each: delayed blast fireball, finger of death, mislead, seeming"
+          "text": "The jester's spellcasting ability is Charisma (spell save DC 17, +9 to hit with spell attacks). It can innately cast the following spells requiring no components:\nAt will: disguise self, grease, inflict wounds, magic mouth, misty step\n3/day each: contagion, mirror image\n1/day each: delayed blast fireball, finger of death, mislead, seeming"
         },
         {
           "name": "Last Laugh",
@@ -12608,19 +11864,7 @@
           "text": "The jester forces one Medium or Small humanoid within 60 feet to make a DC 17 Charisma saving throw. If the saving throw fails, the jester and the target exchange locations via teleportation and an illusion causes them to swap appearance: the jester looks and sounds like the target, and the target looks and sounds like the jester. The illusion lasts for 1 hour unless it is dismissed earlier by the jester as a bonus action, or dispelled (DC 17)."
         }
       ],
-      "spells": [
-        "disguise self",
-        "grease",
-        "inflict wounds",
-        "magic mouth",
-        "misty step",
-        "contagion",
-        "mirror image",
-        "delayed blast fireball",
-        "finger of death",
-        "mislead",
-        "seeming"
-      ]
+      "spells": "disguise self, grease, inflict wounds, magic mouth, misty step, contagion, mirror image, delayed blast fireball, finger of death, mislead, seeming"
     },
     {
       "name": "Gug",
@@ -12714,7 +11958,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The hag's innate spellcasting ability is Charisma (spell save DC 15). She can innately cast the following spells, requiring no material components:\nAt will each: disguise self, knock, minor illusion, misty step, pass without trace, protection from evil and good, tongues, water breathing\n3/day each: bestow curse, invisibility, mirror image\n1/day each: cloudkill, modify memory"
+          "text": "The hag's innate spellcasting ability is Charisma (spell save DC 15). She can innately cast the following spells, requiring no material components:\nAt will: disguise self, knock, minor illusion, misty step, pass without trace, protection from evil and good, tongues, water breathing\n3/day each: bestow curse, invisibility, mirror image\n1/day each: cloudkill, modify memory"
         }
       ],
       "actions": [
@@ -12755,21 +11999,7 @@
           "text": "The blood hag peels the face off one grappled foe. The target must make a DC 17 Dexterity saving throw. If the saving throw fails, the face is torn off; the target takes 38 (8d6 + 10) slashing damage and is stunned until the start of the hag's next turn. If the save succeeds, the target takes half damage and isn't stunned. Heal, regeneration, or comparable magic restores the stolen features; other curative magic forms a mass of scar tissue. The peeled-off face is a tiny, animated object (per the spell—20 HP, AC 18, no attack, Str 4, Dex 18) under the hag's control. It retains the former owner's memories and personality. Blood hags keep such faces as trophies, but they can also wear someone's face to gain advantage on Charisma (Deception) checks made to imitate the face's former owner."
         }
       ],
-      "spells": [
-        "disguise self",
-        "knock",
-        "minor illusion",
-        "misty step",
-        "pass without trace",
-        "protection from evil and good",
-        "tongues",
-        "water breathing",
-        "bestow curse",
-        "invisibility",
-        "mirror image",
-        "cloudkill",
-        "modify memory"
-      ]
+      "spells": "disguise self, knock, minor illusion, misty step, pass without trace, protection from evil and good, tongues, water breathing, bestow curse, invisibility, mirror image, cloudkill, modify memory"
     },
     {
       "name": "Mirror Hag",
@@ -12793,7 +12023,7 @@
       "traits": [
         {
           "name": "Innate Spellcasting",
-          "text": "The hag's innate spellcasting ability is Charisma (spell save DC 15, +7 to hit with spell attacks). She can innately cast the following spells, requiring no material components:\nAt will each: disguise self, inflict wounds (4d10), message, ray of enfeeblement\n1/day each: detect thoughts, dispel magic, lightning bolt, locate creature, shillelagh, stinking cloud, teleport"
+          "text": "The hag's innate spellcasting ability is Charisma (spell save DC 15, +7 to hit with spell attacks). She can innately cast the following spells, requiring no material components:\nAt will: disguise self, inflict wounds (4d10), message, ray of enfeeblement\n1/day each: detect thoughts, dispel magic, lightning bolt, locate creature, shillelagh, stinking cloud, teleport"
         },
         {
           "name": "Magic Resistance",
@@ -12822,19 +12052,7 @@
           "text": "The mirror hag curses a living creature within 60 feet, giving it beastly or hideous features. The target of the reconfiguring curse must succeed on a DC 15 Constitution saving throw or take 1d6 Charisma damage. A successful save renders the target immune to further uses of that hag's curse for 24 hours."
         }
       ],
-      "spells": [
-        "disguise self",
-        "inflict wounds",
-        "message",
-        "ray of enfeeblement",
-        "detect thoughts",
-        "dispel magic",
-        "lightning bolt",
-        "locate creature",
-        "shillelagh",
-        "stinking cloud",
-        "teleport"
-      ]
+      "spells": "disguise self, inflict wounds, message, ray of enfeeblement, detect thoughts, dispel magic, lightning bolt, locate creature, shillelagh, stinking cloud, teleport"
     },
     {
       "name": "Red Hag",
@@ -12884,25 +12102,7 @@
           "text": "The red hag radiates an aura in a 30-foot radius, lasting for 3 rounds, that draws all fluids out through a creature's mouth, nose, eyes, ears, and pores. Every creature of the hag's choosing that starts its turn in the affected area takes 18 (4d6 + 4) necrotic damage, or half damage with a successful DC 15 Constitution saving throw."
         }
       ],
-      "spells": [
-        "animal friendship",
-        "poison spray",
-        "thorn whip",
-        "cure wounds",
-        "entangle",
-        "speak with animals",
-        "barkskin",
-        "flame blade",
-        "lesser restoration",
-        "call lightning",
-        "conjure animals",
-        "dispel magic",
-        "meld into stone",
-        "control water",
-        "dominate beast",
-        "freedom of movement",
-        "hallucinatory terrain"
-      ]
+      "spells": "animal friendship, poison spray, thorn whip, cure wounds, entangle, speak with animals, barkskin, flame blade, lesser restoration, call lightning, conjure animals, dispel magic, meld into stone, control water, dominate beast, freedom of movement, hallucinatory terrain"
     },
     {
       "name": "Sand Hag",
@@ -12955,11 +12155,7 @@
           "text": "The hag polymorphs into a Small or Medium female humanoid, or back into her true form. Her statistics are the same in each form. Any equipment she is wearing or carrying isn't transformed. She reverts to her true form if she dies."
         }
       ],
-      "spells": [
-        "invisibility",
-        "hallucinatory terrain",
-        "major image"
-      ]
+      "spells": "invisibility, hallucinatory terrain, major image"
     },
     {
       "name": "Owl Harpy",
@@ -13012,9 +12208,7 @@
           "text": "The owl harpy sings a magical melody. Every humanoid and giant within 300 feet of the harpy that can hear the song must succeed on a DC 15 Wisdom saving throw or be charmed until the song ends. The harpy must use a bonus action on its subsequent turns to continue singing. It can stop singing at any time. The song ends if the harpy becomes incapacitated. While charmed by the harpy, a target is incapacitated and ignores the songs of other harpies. A charmed target that is more than 5 feet away from the harpy must move at its highest rate (including dashing, if necessary) along the most direct route to get within 5 feet of the harpy. The charmed creature doesn't maneuver to avoid opportunity attacks, but it can repeat the saving throw every time it takes damage from anything other than the harpy. It also repeats the saving throw before entering damaging terrain (lava or a pit, for example), if the most direct route includes a dangerous space. A creature also repeats the saving throw at the end of each of its turns. A successful saving throw ends the effect on that creature and makes the creature immune to this harpy's song for 24 hours."
         }
       ],
-      "spells": [
-        "darkness"
-      ]
+      "spells": "darkness"
     },
     {
       "name": "Haugbui",
@@ -13045,7 +12239,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The haugbui's innate spellcasting ability is Wisdom (spell save DC 18). It can innately cast the following spells, requiring no material components:\nAt will each: dancing lights, druidcraft, mending, spare the dying\n7/day each: bane, create or destroy water, fog cloud, purify food and drink\n5/day each: blindnessldeafness, gust of wind, locate object, moonbeam, shatter\n3/day each: bestow curse, dispel magic, plant growth, remove curse, telekinesis\n1/day each: blight, contagion, dream\n1/week:geas, hallow"
+          "text": "The haugbui's innate spellcasting ability is Wisdom (spell save DC 18). It can innately cast the following spells, requiring no material components:\nAt will: dancing lights, druidcraft, mending, spare the dying\n7/day: bane, create or destroy water, fog cloud, purify food and drink\n5/day: blindness/deafness, gust of wind, locate object, moonbeam, shatter\n3/day: bestow curse, dispel magic, plant growth, remove curse, telekinesis\n1/day: blight, contagion, dream\n1/week: geas, hallow"
         },
         {
           "name": "Legendary Resistance",
@@ -13076,30 +12270,7 @@
           "text": "Ranged Magical Attack: +10 to hit, range 40 ft, one target. Hit: 32 (6d8 + 5) psychic damage."
         }
       ],
-      "spells": [
-        "dancing lights",
-        "druidcraft",
-        "mending",
-        "spare the dying",
-        "bane",
-        "create or destroy water",
-        "fog cloud",
-        "purify food and drink",
-        "blindnessldeafness",
-        "gust of wind",
-        "locate object",
-        "moonbeam",
-        "shatter",
-        "bestow curse",
-        "dispel magic",
-        "plant growth",
-        "remove curse",
-        "telekinesis",
-        "blight",
-        "contagion",
-        "dream\n1/week:geas",
-        "hallow"
-      ]
+      "spells": "dancing lights, druidcraft, mending, spare the dying, bane, create or destroy water, fog cloud, purify food and drink, blindness/deafness, gust of wind, locate object, moonbeam, shatter, bestow curse, dispel magic, plant growth, remove curse, telekinesis, blight, contagion, dream, geas, hallow"
     },
     {
       "name": "Herald Of Blood",
@@ -13315,9 +12486,7 @@
           "text": "The hound exhales a 15-foot cone of frost. Those in the area of effect take 44 (8d10) cold damage, or half damage with a successful DC 13 Dexterity saving throw."
         }
       ],
-      "spells": [
-        "dimension door"
-      ]
+      "spells": "dimension door"
     },
     {
       "name": "Hulking Whelp\nSmall/",
@@ -13405,7 +12574,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The hundun's innate spellcasting ability is Wisdom (spell save DC 17). It can cast the following spells, requiring no material components:\nAt will each: create or destroy water, dancing lights, mending, prestidigitation\n3/day each: compulsion, dimension door, black tentacles, irresistible dance\n1/day each: awaken, creation, heroes' feast, magnificent mansion, plant growth, reincarnate, stone shape"
+          "text": "The hundun's innate spellcasting ability is Wisdom (spell save DC 17). It can cast the following spells, requiring no material components:\nAt will: create or destroy water, dancing lights, mending, prestidigitation\n3/day: compulsion, dimension door, black tentacles, irresistible dance\n1/day: awaken, creation, heroes' feast, magnificent mansion, plant growth, reincarnate, stone shape"
         },
         {
           "name": "Magic Weapons",
@@ -13422,23 +12591,7 @@
           "text": "Melee Weapon Attack: +9 to hit, reach 10 ft, one target. Hit: 15 (3d6 + 5) bludgeoning damage."
         }
       ],
-      "spells": [
-        "create or destroy water",
-        "dancing lights",
-        "mending",
-        "prestidigitation",
-        "compulsion",
-        "dimension door",
-        "black tentacles",
-        "irresistible dance",
-        "awaken",
-        "creation",
-        "heroes' feast",
-        "magnificent mansion",
-        "plant growth",
-        "reincarnate",
-        "stone shape"
-      ]
+      "spells": "create or destroy water, dancing lights, mending, prestidigitation, compulsion, dimension door, black tentacles, irresistible dance, awaken, creation, heroes' feast, magnificent mansion, plant growth, reincarnate, stone shape"
     },
     {
       "name": "Ice Maiden",
@@ -13485,7 +12638,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The ice maiden's innate spellcasting ability is Charisma (spell save DC 17). She can innately cast the following spells:\nAt will each: chill touch, detect magic, light, mage hand, prestidigitation, resistance\n5/day each: endure elements (cold only), fear, fog cloud, misty step\n3/day each: alter self, protection from energy, sleet storm\n1/day: ice storm"
+          "text": "The ice maiden's innate spellcasting ability is Charisma (spell save DC 17). She can innately cast the following spells:\nAt will: chill touch, detect magic, light, mage hand, prestidigitation, resistance\n5/day: endure elements (cold only), fear, fog cloud, misty step\n3/day: alter self, protection from energy, sleet storm\n1/day: ice storm"
         }
       ],
       "actions": [
@@ -13514,22 +12667,7 @@
           "text": "In a snowy environment, the ice maiden attempts to blind all creatures within 30 feet of herself. Those who fail a DC 17 Charisma saving throw are blinded for 1 hour. Targets that are immune to cold damage are also immune to this effect."
         }
       ],
-      "spells": [
-        "chill touch",
-        "detect magic",
-        "light",
-        "mage hand",
-        "prestidigitation",
-        "resistance",
-        "endure elements",
-        "fear",
-        "fog cloud",
-        "misty step",
-        "alter self",
-        "protection from energy",
-        "sleet storm",
-        "ice storm"
-      ]
+      "spells": "chill touch, detect magic, light, mage hand, prestidigitation, resistance, endure elements, fear, fog cloud, misty step, alter self, protection from energy, sleet storm, ice storm"
     },
     {
       "name": "Idolic Deity",
@@ -13638,7 +12776,7 @@
       "charisma": 8,
       "savingThrows": "Str +14, Con +12, Wis +8",
       "skills": "Athletics +14, Perception +8",
-      "damageImmunities": "ability damageldrain",
+      "damageImmunities": "ability damage/drain",
       "senses": "darkvision 90 ft",
       "languages": "understands Aquan and Elvish, but cannot speak",
       "challenge": "14",
@@ -13682,14 +12820,7 @@
           "text": "When the isonade's bite attack hits a target grappled from a previous bite attack, the target is also swallowed. The grapple ends, but the target is blinded and restrained, it has total cover against attacks and other effects outside the isonade, and it takes 36 (8d8) acid damage at the start of each of the isonade's turns. An isonade can have two Large, four Medium, or six Small creatures swallowed at a time. If the isonade takes 40 damage or more from a swallowed creature in a single turn, it must succeed on a DC 20 Constitution saving throw or regurgitate all swallowed creatures, which fall prone within 10 feet of the isonade. If the isonade dies, a swallowed creature is no longer restrained by it and can escape by using 20 feet of movement, exiting prone."
         }
       ],
-      "spells": [
-        "animal messenger",
-        "control water",
-        "earthquake",
-        "control weather",
-        "storm of vengeance",
-        "tsunami"
-      ]
+      "spells": "animal messenger, control water, earthquake, control weather, storm of vengeance, tsunami"
     },
     {
       "name": "Jaculus",
@@ -13797,7 +12928,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The kikimora's innate spellcasting ability is Charisma (spell save DC 15). She can innately cast the following spells, requiring no material components:\nAt will each: invisibility (self only), mage hand, mending, minor illusion, prestidigitation\n3/day each: animal friendship, blinding smite, sleep\n1/day each: insect plague, major image"
+          "text": "The kikimora's innate spellcasting ability is Charisma (spell save DC 15). She can innately cast the following spells, requiring no material components:\nAt will: invisibility (self only), mage hand, mending, minor illusion, prestidigitation\n3/day: animal friendship, blinding smite, sleep\n1/ day: insect plague, major image"
         }
       ],
       "actions": [
@@ -13814,18 +12945,7 @@
           "text": "When a kikimora chooses a house to inhabit, she scrawls a symbol on a wall, baseboard, cupboard, or semi-permanent object (like a stove) to be her tiny domain. This ability creates a hidden extra-dimensional dwelling. After creating a hidey-hole, a kikimora can teleport herself and up to 50 lb of objects to the designated location instead of making a normal move. This extradimensional space can only be entered by the kikimora or by a creature using a plane shiftspell or ability. The location can be determined by casting detect magic in the area of the sigil, but it takes a successful DC 15 Intelligence (Arcana) check to plane shift into the space. Inside the hidey-hole, a kikimora can see what is going on outside the space through a special sensor. This sensor functions like a window, and it can be blocked by mundane objects placed in front of the sigil. If she leaves an item in her space, it remains there even if she removes the sigil and places it in another location. If someone else removes the sigil, all contents are emptied into the Ethereal Plane (including any beings within her hidey-hole at the time). In this case, the kikimora can attempt a DC 15 Charisma saving throw to instead eject herself (but none of her possessions) into a space adjacent to the sigil."
         }
       ],
-      "spells": [
-        "invisibility",
-        "mage hand",
-        "mending",
-        "minor illusion",
-        "prestidigitation",
-        "animal friendship",
-        "blinding smite",
-        "sleep",
-        "insect plague",
-        "major image"
-      ]
+      "spells": "invisibility, mage hand, mending, minor illusion, prestidigitation, animal friendship, blinding smite, sleep, insect plague, major image"
     },
     {
       "name": "Kobold Alchemist",
@@ -14145,17 +13265,7 @@
         "Koschei is aware of any spell cast within 5 miles of his lair. He knows the source of the magic (innate, the caster's class, or a magic item) and knows the direction to the caster."
       ],
       "regionalEffectsFade": "If Koschei dies, conditions in the area surrounding his lair return to normal over the course of 1d10 days.",
-      "spells": [
-        "invisibility",
-        "magic missile",
-        "shield",
-        "animate objects",
-        "cone of cold",
-        "hypnotic pattern",
-        "disintegrate",
-        "meteor swarm",
-        "true polymorph"
-      ]
+      "spells": "invisibility, magic missile, shield, animate objects, cone of cold, hypnotic pattern, disintegrate, meteor swarm, true polymorph"
     },
     {
       "name": "Kot Bayun",
@@ -14182,7 +13292,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The kot bayun's innate spellcasting ability is Charisma (spell save DC 13). It can innately cast the following spells, requiring no material components:\n3/day each: fog cloud, invisibility (self only)\n1/day: blink"
+          "text": "The kot bayun's innate spellcasting ability is Charisma (spell save DC 13). It can innately cast the following spells, requiring no material components:\n3/day: fog cloud, invisibility (self only)\n1/day: blink"
         }
       ],
       "actions": [
@@ -14203,11 +13313,7 @@
           "text": "The kot bayun puts creatures to sleep with its haunting melody. While a kot bayun sings, it can target one hearing creature within a 100-foot radius. This target must succeed on a DC 13 Charisma saving throw or fall asleep. The target repeats the saving throw at the end of each of its turns, ending the effect on itself on a success. Each round the kot bayun maintains its song, it can select a new target. A creature that successfully saves is immune to the effect of that kot bayun's song for 24 hours. The slumbering song even affects elves, but they have advantage on the Charisma saving throw."
         }
       ],
-      "spells": [
-        "fog cloud",
-        "invisibility",
-        "blink"
-      ]
+      "spells": "fog cloud, invisibility, blink"
     },
     {
       "name": "Krake Spawn",
@@ -14240,7 +13346,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The krake spawn's innate spellcasting ability is Charisma (spell save DC 16). It can innately cast the following spells, requiring no material components:\nAt will each: protection from energy, ray of frost\n1/day each: ice storm, wall of ice"
+          "text": "The krake spawn's innate spellcasting ability is Charisma (spell save DC 16). It can innately cast the following spells, requiring no material components:\nAt will: protection from energy, ray of frost\n1/day: ice storm, wall of ice"
         }
       ],
       "actions": [
@@ -14271,12 +13377,7 @@
           "text": "The krake spawn sprays half-digested food from its maw over a 15-foot cone. This acidic slurry causes 3 (1d6) acid damage and targets must make a successful DC 18 Constitution saving throw or be incapacitated until the end of their next turn."
         }
       ],
-      "spells": [
-        "protection from energy",
-        "ray of frost",
-        "ice storm",
-        "wall of ice"
-      ]
+      "spells": "protection from energy, ray of frost, ice storm, wall of ice"
     },
     {
       "name": "Lantern Dragonette",
@@ -14319,11 +13420,7 @@
           "text": "Melee Weapon Attack: +3 to hit, reach 5 ft, one target. Hit:3 (1d4 + 1) piercing damage."
         }
       ],
-      "spells": [
-        "burning hands",
-        "color spray",
-        "scorching ray"
-      ]
+      "spells": "burning hands, color spray, scorching ray"
     },
     {
       "name": "Lemurfolk",
@@ -14398,18 +13495,7 @@
           "text": "The greyfur is a 5th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 13, +5 to hit with spell attacks). The greyfur has the following wizard spells prepared:\nCantrips (at will): light, mage hand, minor illusion, poison spray, resistance\n1st level (4 slots): mage armor, sleep\n2nd level (3 slots): detect thoughts, misty step\n3rd level (2 slots): lightning bolt"
         }
       ],
-      "spells": [
-        "light",
-        "mage hand",
-        "minor illusion",
-        "poison spray",
-        "resistance",
-        "mage armor",
-        "sleep",
-        "detect thoughts",
-        "misty step",
-        "lightning bolt"
-      ]
+      "spells": "light, mage hand, minor illusion, poison spray, resistance, mage armor, sleep, detect thoughts, misty step, lightning bolt"
     },
     {
       "name": "Leshy",
@@ -14432,7 +13518,7 @@
       "traits": [
         {
           "name": "Innate Spellcasting",
-          "text": "The leshy's innate spellcasting ability is Charisma (spell save DC 13). It can innately cast the following spells, requiring no material components:\nAt will each: animal friendship, pass without trace, speak with animals\n1/day each: entangle, plant growth, shillelagh, speak with plants, hideous laughter"
+          "text": "The leshy's innate spellcasting ability is Charisma (spell save DC 13). It can innately cast the following spells, requiring no material components:\nAt Will: animal friendship, pass without trace, speak with animals\n1/day each: entangle, plant growth, shillelagh, speak with plants, hideous laughter"
         },
         {
           "name": "Camouflage",
@@ -14457,16 +13543,7 @@
           "text": "Melee Weapon Attack: +5 to hit, reach 5 ft, one target. Hit: 6 (1d6 + 3) bludgeoning damage."
         }
       ],
-      "spells": [
-        "animal friendship",
-        "pass without trace",
-        "speak with animals",
-        "entangle",
-        "plant growth",
-        "shillelagh",
-        "speak with plants",
-        "hideous laughter"
-      ]
+      "spells": "animal friendship, pass without trace, speak with animals, entangle, plant growth, shillelagh, speak with plants, hideous laughter"
     },
     {
       "name": "Library Automaton",
@@ -14599,13 +13676,7 @@
           "text": "As a bonus action, the likho directs its gaze at any single creature it can see and afflicts it with a temporary bout of bad luck. The targeted creature has disadvantage on attack rolls, saving throws, and skill checks until the end of its next turn."
         }
       ],
-      "spells": [
-        "message",
-        "crown of madness",
-        "mirror image",
-        "ray of enfeeblement",
-        "bestow curse"
-      ]
+      "spells": "message, crown of madness, mirror image, ray of enfeeblement, bestow curse"
     },
     {
       "name": "Lindwurm",
@@ -14698,7 +13769,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The liosalfar's innate spellcasting ability is Intelligence (spell save DC 15, +7 to hit with spell attacks). It can innately cast the following spells, requiring no material components:\nAt will each: augury, color spray, dancing lights, detect magic, flare, light, silent image, spare the dying\n2/day each: alter self, blur, divination, hypnotic pattern, prismatic spray, scorching ray\n1/day each: hallucinatory terrain, plane shift, sunbeam"
+          "text": "The liosalfar's innate spellcasting ability is Intelligence (spell save DC 15, +7 to hit with spell attacks). It can innately cast the following spells, requiring no material components:\nAt Will: augury, color spray, dancing lights, detect magic, flare, light, silent image, spare the dying\n2/day each: alter self, blur, divination, hypnotic pattern, prismatic spray, scorching ray\n1/day each: hallucinatory terrain, plane shift, sunbeam"
         },
         {
           "name": "Lightform",
@@ -14719,25 +13790,7 @@
           "text": "Melee Weapon Attack: +10 to hit, reach 5 ft, one target. Hit: 26 (4d12) radiant damage, and the target must succeed on a DC 15 Wisdom saving throw or become stunned for 1 round."
         }
       ],
-      "spells": [
-        "augury",
-        "color spray",
-        "dancing lights",
-        "detect magic",
-        "flare",
-        "light",
-        "silent image",
-        "spare the dying",
-        "alter self",
-        "blur",
-        "divination",
-        "hypnotic pattern",
-        "prismatic spray",
-        "scorching ray",
-        "hallucinatory terrain",
-        "plane shift",
-        "sunbeam"
-      ]
+      "spells": "augury, color spray, dancing lights, detect magic, flare, light, silent image, spare the dying, alter self, blur, divination, hypnotic pattern, prismatic spray, scorching ray, hallucinatory terrain, plane shift, sunbeam"
     },
     {
       "name": "Living Wick",
@@ -14835,26 +13888,7 @@
           "text": "The lorelei mentally disrupts a creature within 30 feet with a look. The target must succeed on a DC 17 Wisdom saving throw or be stunned for 2 rounds. Anyone who successfully saves against this effect cannot be affected by it from the same lorelei for 24 hours."
         }
       ],
-      "spells": [
-        "detect magic",
-        "guidance",
-        "light",
-        "mending",
-        "poison spray",
-        "prestidigitation",
-        "comprehend languages",
-        "fog cloud",
-        "mage armor",
-        "ray of sickness",
-        "hold person",
-        "misty step",
-        "suggestion",
-        "hypnotic pattern",
-        "gaseous form",
-        "water walk",
-        "dominate beast",
-        "ice storm"
-      ]
+      "spells": "detect magic, guidance, light, mending, poison spray, prestidigitation, comprehend languages, fog cloud, mage armor, ray of sickness, hold person, misty step, suggestion, hypnotic pattern, gaseous form, water walk, dominate beast, ice storm"
     },
     {
       "name": "Loxoda",
@@ -14978,7 +14012,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The mallqui's innate spellcasting ability is Wisdom (spell save DC 15, +7 to hit with spell attacks). It can cast the following spells, requiring no material components:\nAt will each: druidcraft, produce flame\n4/day each: create or destroy water, entangle\n2/day: locate animals or plants\n1/day each: dispel magic, plant growth, wind wall"
+          "text": "The mallqui's innate spellcasting ability is Wisdom (spell save DC 15, +7 to hit with spell attacks). It can cast the following spells, requiring no material components:\nAt will: druidcraft, produce flame\n4/day each: create or destroy water, entangle\n2/day: locate animals or plants\n1/day each: dispel magic, plant growth, wind wall"
         },
         {
           "name": "Water Sensitivity",
@@ -15003,16 +14037,7 @@
           "text": "Ranged Spell Attack: +7 to hit, range 30/90 ft, one target. Hit: 13 (3d6 + 3) necrotic damage."
         }
       ],
-      "spells": [
-        "druidcraft",
-        "produce flame",
-        "create or destroy water",
-        "entangle",
-        "locate animals or plants",
-        "dispel magic",
-        "plant growth",
-        "wind wall"
-      ]
+      "spells": "druidcraft, produce flame, create or destroy water, entangle, locate animals or plants, dispel magic, plant growth, wind wall"
     },
     {
       "name": "Mamura",
@@ -15092,7 +14117,7 @@
       "traits": [
         {
           "name": "Innate Spellcasting",
-          "text": "The wight's innate spellcasting ability is Charisma (spell save DC 17). It can innately cast the following spells, requiring no material components:\nAt will: alter self\n1/day each: counterspell, dispel magic, enlargelreduce, spider climb, tongues\n1/week:gate"
+          "text": "The wight's innate spellcasting ability is Charisma (spell save DC 17). It can innately cast the following spells, requiring no material components:\nAt will: alter self\n1/day each: counterspell, dispel magic, enlarge/reduce, spider climb, tongues\n1/week: gate"
         },
         {
           "name": "Single-minded Purpose",
@@ -15118,14 +14143,7 @@
           "text": "The mask wight emits an ear-piercing wail. All creatures within 30 feet of the wight take 65 (10d12) thunder damage and are permanently deafened; a successful DC 17 Charisma saving throw reduces damage to half and limits the deafness to 1d4 hours. Targets slain by this attack are erased from the memories of every creature in the planes, all written or pictorial references to the target fade away, and its body is obliterated—the only exception is those who personally witnessed the death. Restoring such a slain creature requires a wish or divine intervention; no mortal remembers the creature's life or death."
         }
       ],
-      "spells": [
-        "alter self",
-        "counterspell",
-        "dispel magic",
-        "enlargelreduce",
-        "spider climb",
-        "tongues\n1/week:gate"
-      ]
+      "spells": "alter self, counterspell, dispel magic, enlarge/reduce, spider climb, tongues, gate"
     },
     {
       "name": "Mavka",
@@ -15151,7 +14169,7 @@
       "traits": [
         {
           "name": "Innate Spellcasting",
-          "text": "The mavka's innate spellcasting ability is Charisma (spell save DC 16, +8 to hit with spell attacks). She can innately cast the following spells, requiring no material components:\nAt will each: create or destroy water, dancing lights, ray of frost, resistance, witch bolt\n3/day each: darkness, hold person, inflict wounds, invisibility, silence\n1/day each: animate dead, bestow curse, blindnessldeafness, contagion, dispel magic, vampiric touch"
+          "text": "The mavka's innate spellcasting ability is Charisma (spell save DC 16, +8 to hit with spell attacks). She can innately cast the following spells, requiring no material components:\nAt will: create or destroy water, dancing lights, ray of frost, resistance, witch bolt\n3/day each: darkness, hold person, inflict wounds, invisibility, silence\n1/day each: animate dead, bestow curse, blindness/deafness, contagion, dispel magic, vampiric touch"
         },
         {
           "name": "Nightmare Mount",
@@ -15172,24 +14190,7 @@
           "text": "Melee Weapon Attack: +9 to hit, reach 5 ft, one target. Hit: 23 (4d8 + 5) bludgeoning damage plus 11 (2d10) necrotic damage."
         }
       ],
-      "spells": [
-        "create or destroy water",
-        "dancing lights",
-        "ray of frost",
-        "resistance",
-        "witch bolt",
-        "darkness",
-        "hold person",
-        "inflict wounds",
-        "invisibility",
-        "silence",
-        "animate dead",
-        "bestow curse",
-        "blindnessldeafness",
-        "contagion",
-        "dispel magic",
-        "vampiric touch"
-      ]
+      "spells": "create or destroy water, dancing lights, ray of frost, resistance, witch bolt, darkness, hold person, inflict wounds, invisibility, silence, animate dead, bestow curse, blindness/deafness, contagion, dispel magic, vampiric touch"
     },
     {
       "name": "Millitaur",
@@ -15361,11 +14362,7 @@
           "text": "The mirager performs a sinuously swaying dance. Humanoids within 20 feet that view this dance must make a successful DC 16 Wisdom saving throw or be stunned for 1d4 rounds and charmed by the mirager for 1 minute. Humanoids of all races and genders have disadvantage on this saving throw, but constructs are immune. A creature that saves successfully is immune to this mirager's dance for the next 24 hours."
         }
       ],
-      "spells": [
-        "charm person",
-        "hallucinatory terrain",
-        "suggestion"
-      ]
+      "spells": "charm person, hallucinatory terrain, suggestion"
     },
     {
       "name": "Miremal",
@@ -15922,24 +14919,7 @@
           "text": "A creature caught in this sleeping gas must succeed on a DC 17 Constitution saving throw or fall unconscious for 6 rounds. A sleeping creature repeats the saving throw at the end of each of its turns; it wakes up if it makes the save successfully."
         }
       ],
-      "spells": [
-        "dancing lights",
-        "mage hand",
-        "mending",
-        "ray of frost",
-        "resistance",
-        "silent image",
-        "charm person",
-        "thunderwave",
-        "witch bolt",
-        "darkness",
-        "invisibility",
-        "locate object",
-        "dispel magic",
-        "hypnotic pattern",
-        "dimension door",
-        "dominate person"
-      ]
+      "spells": "dancing lights, mage hand, mending, ray of frost, resistance, silent image, charm person, thunderwave, witch bolt, darkness, invisibility, locate object, dispel magic, hypnotic pattern, dimension door, dominate person"
     },
     {
       "name": "Nichny",
@@ -15974,7 +14954,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The nichny's innate spellcasting ability is Charisma (spell save DC 15, +7 to hit with spell attacks). It can innately cast the following spells, requiring no material components:\nAt will each: detect magic, invisibility, magic missile, ray of frost\n3/day each: blink, dimension door, haste, polymorph (self only)\n1/day each: teleport, word of recall"
+          "text": "The nichny's innate spellcasting ability is Charisma (spell save DC 15, +7 to hit with spell attacks). It can innately cast the following spells, requiring no material components:\nAt Will: detect magic, invisibility, magic missile, ray of frost\n3/day: blink, dimension door, haste, polymorph (self only)\n1/day: teleport, word of recall"
         },
         {
           "name": "Luck Aura",
@@ -15999,18 +14979,7 @@
           "text": "Melee Weapon Attack: +7 to hit, reach 5 ft, one target. Hit: 17 (2d12 + 4) slashing damage."
         }
       ],
-      "spells": [
-        "detect magic",
-        "invisibility",
-        "magic missile",
-        "ray of frost",
-        "blink",
-        "dimension door",
-        "haste",
-        "polymorph",
-        "teleport",
-        "word of recall"
-      ]
+      "spells": "detect magic, invisibility, magic missile, ray of frost, blink, dimension door, haste, polymorph, teleport, word of recall"
     },
     {
       "name": "Nightgarm",
@@ -16047,7 +15016,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The nightgarm's innate spellcasting ability is Charisma (spell save DC 14). It can innately cast the following spells, requiring no material components:\n3/day each: darkness, dissonant whispers, hold person\n1/day each: conjure woodland beings (wolves only), dimension door, scrying (targets falsemen only)"
+          "text": "The nightgarm's innate spellcasting ability is Charisma (spell save DC 14). It can innately cast the following spells, requiring no material components:\n3/day: darkness, dissonant whispers, hold person\n1/day: conjure woodland beings (wolves only), dimension door, scrying (targets falsemen only)"
         }
       ],
       "actions": [
@@ -16056,14 +15025,7 @@
           "text": "Melee Weapon Attack: +8 to hit, reach 5 ft, one target. Hit: 27 (4d10 + 5) piercing damage, and a Medium or smaller target must succeed on a DC 15 Strength saving throw or be swallowed whole. A swallowed creature is blinded and restrained and has total cover against attacks and other effects outside the nightgarm. It takes 21 (6d6) acid damage at the start of each of the nightgarm's turns. A nightgarm can have only one creature swallowed at a time. If the nightgarm takes 25 damage or more on a single turn from the swallowed creature, the nightgarm must succeed on a DC 14 Constitution saving throw at the end of that turn or regurgitate the creature, which falls prone within 5 feet of the nightgarm. If the nightgarm dies, a swallowed creature is no longer restrained by it and can escape from the corpse by using 10 feet of movement, exiting prone."
         }
       ],
-      "spells": [
-        "darkness",
-        "dissonant whispers",
-        "hold person",
-        "conjure woodland beings",
-        "dimension door",
-        "scrying"
-      ]
+      "spells": "darkness, dissonant whispers, hold person, conjure woodland beings, dimension door, scrying"
     },
     {
       "name": "Nkosi",
@@ -16254,14 +15216,7 @@
           "text": "Melee Weapon Attack: +3 to hit, reach 5 ft, one target. Hit: 7 (1d6 + 4) bludgeoning damage or 8 (1d8 + 4) bludgeoning damage if used in two hands."
         }
       ],
-      "spells": [
-        "armor of agathys",
-        "charm person",
-        "hellish rebuke",
-        "hex",
-        "crown of madness",
-        "misty step"
-      ]
+      "spells": "armor of agathys, charm person, hellish rebuke, hex, crown of madness, misty step"
     },
     {
       "name": "Oculo Swarm",
@@ -16760,7 +15715,7 @@
       "traits": [
         {
           "name": "Innate Spellcasting",
-          "text": "The ratatosk's spellcasting attribute is Charisma (save DC 14). It can innately cast the following spells without requiring material or somatic components:\nAt will each: animal messenger, message, vicious mockery\n1/day each: commune, mirror image\n3/day each: sending, suggestion"
+          "text": "The ratatosk's spellcasting attribute is Charisma (save DC 14). It can innately cast the following spells without requiring material or somatic components:\nAt will: animal messenger, message, vicious mockery\n1/day each: commune, mirror image\n3/day each: sending, suggestion"
         },
         {
           "name": "Skitter",
@@ -16784,15 +15739,7 @@
           "text": "A creature that can hear the ratatosk must make a DC 14 Wisdom saving throw when it attacks the ratatosk. If the saving throw fails, the creature still attacks, but it must choose a different target creature. An ally must be chosen if no other enemies are within the attack's reach or range. If no other target is in the attack's range or reach, the attack is still made (and ammunition or a spell slot is expended, if appropriate) but it automatically misses and has no effect."
         }
       ],
-      "spells": [
-        "animal messenger",
-        "message",
-        "vicious mockery",
-        "commune",
-        "mirror image",
-        "sending",
-        "suggestion"
-      ]
+      "spells": "animal messenger, message, vicious mockery, commune, mirror image, sending, suggestion"
     },
     {
       "name": "Ratfolk",
@@ -16908,7 +15855,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The ravenala's innate spellcasting ability is Wisdom (spell save DC 14). It can innately cast the following spells, requiring no material components:\nAt will each: entangle, sleep\n1/day each: heal, wall of thorns"
+          "text": "The ravenala's innate spellcasting ability is Wisdom (spell save DC 14). It can innately cast the following spells, requiring no material components:\nAt will: entangle, sleep\n1/day each: heal, wall of thorns"
         },
         {
           "name": "Green Walk",
@@ -16933,12 +15880,7 @@
           "text": "The ravenala targets a creature within 5 feet of it. The target must succeed on a DC 13 Dexterity saving throw or be grappled and restrained by the ravenala. While restrained, the creature is engulfed inside the ravenala's trunk. The ravenala can grapple one creature at a time; grappling doesn't prevent it from using other attacks against different targets. The restrained creature must make a DC 14 Wisdom saving throw at the start of each of its turns. On a failure, the creature is compelled to sing a lament of all its various mistakes and misdeeds for as long as it remains restrained. Singing prevents uttering command words, casting spells with a verbal component, or any verbal communication. The restrained creature can still make melee attacks. When the ravenala moves, the restrained creature moves with it. A restrained creature can escape by using an action to make a DC 15 Strength check. On a success, the creature escapes and enters a space of its choice within 5 feet of the ravenala."
         }
       ],
-      "spells": [
-        "entangle",
-        "sleep",
-        "heal",
-        "wall of thorns"
-      ]
+      "spells": "entangle, sleep, heal, wall of thorns"
     },
     {
       "name": "Ravenfolk Scout",
@@ -17076,7 +16018,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The doom croaker's innate spellcasting ability is Wisdom (spell save DC 15). It can innately cast the following spells, requiring no material components:\nAt will: comprehend languages\n3/day each: counterspell, fear, phantom steed\n1/day each: blight, call lightning, clairvoyance, insect plague\n1/week: legend lore"
+          "text": "The doom croaker's innate spellcasting ability is Wisdom (spell save DC 15). It can innately cast the following spells, requiring no material components:\nAt will: comprehend languages\n3/day each: counterspell, fear, phantom steed\n1/day: blight, call lightning, clairvoyance, insect plague\n1/week: legend lore"
         }
       ],
       "actions": [
@@ -17089,16 +16031,7 @@
           "text": "Melee Weapon Attack: +3 to hit, reach 5 ft, one target. Hit: 4 (1d8) bludgeoning damage plus 4 (1d8) radiant damage."
         }
       ],
-      "spells": [
-        "comprehend languages",
-        "counterspell",
-        "fear",
-        "phantom steed",
-        "blight",
-        "call lightning",
-        "clairvoyance",
-        "insect plague\n1/week: legend lore"
-      ]
+      "spells": "comprehend languages, counterspell, fear, phantom steed, blight, call lightning, clairvoyance, insect plague, legend lore"
     },
     {
       "name": "Redcap",
@@ -17485,7 +16418,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The rusalka's innate casting ability is Charisma (spell save DC 15). She can innately cast the following spells, requiring no material components:\nAt will each: control water, suggestion, tongues, water walk (can be ended freely at will)\n1/day: dominate person"
+          "text": "The rusalka's innate casting ability is Charisma (spell save DC 15). She can innately cast the following spells, requiring no material components:\nAt will: control water, suggestion, tongues, water walk (can be ended freely at will)\n1/day: dominate person"
         },
         {
           "name": "Watery Camouflage",
@@ -17503,13 +16436,7 @@
           "text": "The rusalka's long hair tangles around a creature the rusalka has grappled. The creature takes 33 (6d10) necrotic damage, or half damage with a successful DC 15 Constitution saving throw. In addition, until it escapes the rusalka's grapple, it is restrained and has disadvantage on Strength checks to break free of the grapple."
         }
       ],
-      "spells": [
-        "control water",
-        "suggestion",
-        "tongues",
-        "water walk",
-        "dominate person"
-      ]
+      "spells": "control water, suggestion, tongues, water walk, dominate person"
     },
     {
       "name": "Sand Silhouette",
@@ -17597,7 +16524,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The sandman's innate spellcasting ability is Charisma (spell save DC 15). It can innately cast the following spells, requiring no material components:\nAt will each: darkness, minor illusion, plane shift (at night only), phantom steed, prestidigitation, sleep (11d8)\n3/day each: hypnotic pattern, major image\n1/day each: dream, phantasmal killer (5d10)"
+          "text": "The sandman's innate spellcasting ability is Charisma (spell save DC 15). It can innately cast the following spells, requiring no material components:\nAt will: darkness, minor illusion, plane shift (at night only), phantom steed, prestidigitation, sleep (11d8)\n3/day each: hypnotic pattern, major image\n1/day each: dream, phantasmal killer (5d10)"
         },
         {
           "name": "Stuff of Dreams",
@@ -17618,18 +16545,7 @@
           "text": "Melee Weapon Attack: +7 to hit, reach 5 ft, one target. Hit: 11 (2d6 + 4) slashing damage."
         }
       ],
-      "spells": [
-        "darkness",
-        "minor illusion",
-        "plane shift",
-        "phantom steed",
-        "prestidigitation",
-        "sleep",
-        "hypnotic pattern",
-        "major image",
-        "dream",
-        "phantasmal killer"
-      ]
+      "spells": "darkness, minor illusion, plane shift, phantom steed, prestidigitation, sleep, hypnotic pattern, major image, dream, phantasmal killer"
     },
     {
       "name": "Sandwyrm",
@@ -17714,7 +16630,7 @@
         },
         {
           "name": "Soul Sap",
-          "text": "The sap demon slides down the throat of a sleeping, helpless, or grappled living creature of Medium size or smaller. Once inside, the sap demon takes control of its host, as per the dominate monster spell (Wisdom DC 12 negates). While dominated, the host gains blindsight 90 feet. The host drips blood from its ears, nose, eyes, or from a wound that resembles the injury done to the sap demon's tree (1 damagelhour). Damage inflicted on the host has no effect on the sap demon. If the host dies or is reduced to 0 hit points, the sap demon must leave the body within one hour."
+          "text": "The sap demon slides down the throat of a sleeping, helpless, or grappled living creature of Medium size or smaller. Once inside, the sap demon takes control of its host, as per the dominate monster spell (Wisdom DC 12 negates). While dominated, the host gains blindsight 90 feet. The host drips blood from its ears, nose, eyes, or from a wound that resembles the injury done to the sap demon's tree (1 damage/hour). Damage inflicted on the host has no effect on the sap demon. If the host dies or is reduced to 0 hit points, the sap demon must leave the body within one hour."
         }
       ]
     },
@@ -17875,7 +16791,7 @@
       "traits": [
         {
           "name": "Innate Spellcasting",
-          "text": "The scheznyki's innate spellcasting ability is Charisma (spell save DC 14, +6 to hit with spell attacks). It can innately cast the following spells, requiring no material components:\nAt will each: dancing lights, darkness, detect evil and good, faerie fire, invisibility*, fly*, mage hand, ray of frost (*only when wearing a vanisher hat)\n5/day each: magic missile, ray of enfeeblement, silent image\n3/day each: locate object, 000 ft to locate a vanisher hat), hideous laughter, web\n1/day each: dispel magic, dominate person, hold person\n* The scheznyki casts these spells on itself before combat."
+          "text": "The scheznyki's innate spellcasting ability is Charisma (spell save DC 14, +6 to hit with spell attacks). It can innately cast the following spells, requiring no material components:\nAt will: dancing lights, darkness, detect evil and good, faerie fire, invisibility*, fly*, mage hand, ray of frost (*only when wearing a vanisher hat)\n5/day each: magic missile, ray of enfeeblement, silent image\n3/day each: locate object, 000 ft to locate a vanisher hat), hideous laughter, web\n1/day each: dispel magic, dominate person, hold person\n* The scheznyki casts these spells on itself before combat."
         },
         {
           "name": "Magic Resistance",
@@ -17896,26 +16812,7 @@
           "text": "Ranged Weapon Attack: +5 to hit, range 30/l20 ft, one target. Hit: 5 (1d6 + 2) piercing damage."
         }
       ],
-      "spells": [
-        "dancing lights",
-        "darkness",
-        "detect evil and good",
-        "faerie fire",
-        "invisibility",
-        "fly",
-        "mage hand",
-        "ray of frost",
-        "magic missile",
-        "ray of enfeeblement",
-        "silent image",
-        "locate object",
-        "000 ft to locate a vanisher hat)",
-        "hideous laughter",
-        "web",
-        "dispel magic",
-        "dominate person",
-        "hold person"
-      ]
+      "spells": "dancing lights, darkness, detect evil and good, faerie fire, invisibility, fly, mage hand, ray of frost, magic missile, ray of enfeeblement, silent image, locate object, 000 ft to locate a vanisher hat), hideous laughter, web, dispel magic, dominate person, hold person"
     },
     {
       "name": "Night Scorpion",
@@ -18005,7 +16902,7 @@
       "traits": [
         {
           "name": "Innate Spellcasting",
-          "text": "The selang's innate spellcasting ability is Charisma (spell save DC 14). It can innately cast the following spells, requiring no material components:\nAt will each: dancing lights, minor illusion\n3/day each: alter self, fear, sleep, suggestion"
+          "text": "The selang's innate spellcasting ability is Charisma (spell save DC 14). It can innately cast the following spells, requiring no material components:\nAt will: dancing lights, minor illusion\n3/day: alter self, fear, sleep, suggestion"
         }
       ],
       "actions": [
@@ -18030,14 +16927,7 @@
           "text": "A selang can confuse and injure its enemies by playing weird, ear-bending harmonies on alien pipes, made from the beaks, cartilage, and throat sacs of a dorreq. When the selang plays a tune on these pipes, all creatures within 60 feet must make a successful DC 14 Wisdom saving throw or be affected by contagion, confusion, irresistible dance, or hideous laughter, depending on what alien and otherworldly music the dark satyr chooses to play. A creature that saves successfully against this psychic effect is immune to the piping for 24 hours. The selang can use each of these spell-like effects once per day."
         }
       ],
-      "spells": [
-        "dancing lights",
-        "minor illusion",
-        "alter self",
-        "fear",
-        "sleep",
-        "suggestion"
-      ]
+      "spells": "dancing lights, minor illusion, alter self, fear, sleep, suggestion"
     },
     {
       "name": "Serpopard",
@@ -18158,7 +17048,7 @@
       "traits": [
         {
           "name": "Innate Spellcasting",
-          "text": "A shadhavar's innate spellcasting ability score is Charisma (spell save DC 13). It can cast the following spells, requiring no components:\nAt will: disguise self (as horse or unicorn only)\n2/day each: darkness, moves with the shadhavar)"
+          "text": "A shadhavar's innate spellcasting ability score is Charisma (spell save DC 13). It can cast the following spells, requiring no components:\nAt will: disguise self (as horse or unicorn only)\n2/day: darkness (centered on itself moves with the shadhavar)"
         },
         {
           "name": "Magic Weapons",
@@ -18188,11 +17078,7 @@
           "text": "Melee Weapon Attack: +4 to hit, reach 5 ft, one target. Hit: 12 (3d6 + 2) bludgeoning damage."
         }
       ],
-      "spells": [
-        "disguise self",
-        "darkness",
-        "moves with the shadhavar)"
-      ]
+      "spells": "disguise self, darkness"
     },
     {
       "name": "Shadow Beast",
@@ -18254,10 +17140,7 @@
           "text": "The shadow beast buffets opponents with a gale of animated shadows in a 15-foot cone. Any creatures in the area of effect must succeed on a DC 15 Strength saving throw or be pushed back 10 feet and knocked prone."
         }
       ],
-      "spells": [
-        "fear",
-        "telekinesis"
-      ]
+      "spells": "fear, telekinesis"
     },
     {
       "name": "Shellycoat",
@@ -18310,10 +17193,7 @@
           "text": "Melee Weapon Attack: +5 to hit, reach 15 ft, one target. Hit: 12 (2d8 + 3) slashing damage and the target is grappled (escape DC 13), restrained, and poisoned (DC 13 Strength saving throw negates, lasts while grappled and 1 round after). The shellycoat can shift the position of a grappled creature by up to 15 feet as a bonus action. While it has a creature grappled, the shellycoat can use its claws attack only against the grappled creature."
         }
       ],
-      "spells": [
-        "darkness",
-        "fog cloud\n1/day"
-      ]
+      "spells": "darkness, fog cloud\n1/day"
     },
     {
       "name": "Shoggoth",
@@ -18654,10 +17534,7 @@
           "text": "The slow storm exhales its electrical power in a 30-foot cone. Targets in the area of effect take 54 (12d8) lightning damage 1d4 Dexterity loss, and suffer bone wrack. A successful DC 18 Constitution saving throw halves the Dexterity loss and prevents the bone wrack."
         }
       ],
-      "spells": [
-        "lightning bolt",
-        "chain lightning"
-      ]
+      "spells": "lightning bolt, chain lightning"
     },
     {
       "name": "Swamp Adder",
@@ -18746,7 +17623,7 @@
         },
         {
           "name": "Spellcasting",
-          "text": "The son of Fenris is a 15th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 16, +8 to hit with spell attacks). It requires no material components to cast its spells. It has the following cleric spells prepared:\nCantrips (at will): guidance, light, sacred flame, spare the dying, thaumaturgy\n1st level (4 slots): bane, command, guiding bolt, sanctuary\n2nd level (3 slots): blindnessldeafness, hold person, silence\n3rd level (3 slots): animate dead, bestow curse, dispel magic\n4th level (3 slots): banishment, death ward, locate creature\n5th level (2 slots): contagion, scrying\n6th level (1 slot): harm\n7th level (1 slot): plane shift\n8th level (1 slot): earthquake"
+          "text": "The son of Fenris is a 15th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 16, +8 to hit with spell attacks). It requires no material components to cast its spells. It has the following cleric spells prepared:\nCantrips (at will): guidance, light, sacred flame, spare the dying, thaumaturgy\n1st level (4 slots): bane, command, guiding bolt, sanctuary\n2nd level (3 slots): blindness/deafness, hold person, silence\n3rd level (3 slots): animate dead, bestow curse, dispel magic\n4th level (3 slots): banishment, death ward, locate creature\n5th level (2 slots): contagion, scrying\n6th level (1 slot): harm\n7th level (1 slot): plane shift\n8th level (1 slot): earthquake"
         },
         {
           "name": "Trampling Charge",
@@ -18772,31 +17649,7 @@
           "text": "The son of Fenris exhales acid in a 60-foot line that is 10 feet wide. Each creature in the line takes 45 (10d8) acid damage, or half damage with a successful DC 18 Dexterity saving throw."
         }
       ],
-      "spells": [
-        "guidance",
-        "light",
-        "sacred flame",
-        "spare the dying",
-        "thaumaturgy",
-        "bane",
-        "command",
-        "guiding bolt",
-        "sanctuary",
-        "blindnessldeafness",
-        "hold person",
-        "silence",
-        "animate dead",
-        "bestow curse",
-        "dispel magic",
-        "banishment",
-        "death ward",
-        "locate creature",
-        "contagion",
-        "scrying",
-        "harm",
-        "plane shift",
-        "earthquake"
-      ]
+      "spells": "guidance, light, sacred flame, spare the dying, thaumaturgy, bane, command, guiding bolt, sanctuary, blindness/deafness, hold person, silence, animate dead, bestow curse, dispel magic, banishment, death ward, locate creature, contagion, scrying, harm, plane shift, earthquake"
     },
     {
       "name": "Soul Eater",
@@ -18878,11 +17731,7 @@
           "text": "Melee Weapon Attack: +6 to hit, reach 5 ft, one target. Hit: The target must succeed on a DC 14 Charisma saving throw or become dominated by the spark, as the dominate person spell. The spark instantly enters the target's space and merges into the target's physical form. While inhabiting a creature, a spark takes no damage from physical attacks. The target creature receives a +4 bonus to its Dexterity and Charisma scores while it's inhabited. The speech and actions of an inhabited creature are noticeably jerky and erratic to any creature with passive Perception 14 or higher. Each time the spark uses innate spellcasting, the host can attempt another DC 14 Charisma saving throw. A successful save expels the spark, which appears in an unoccupied space within 5 feet of the former host. The inhabiting spark slowly burns out its host's nervous system. The inhabited creature must make a successful DC 15 Constitution saving throw at the end of each 24 hour-period or take 2d6 lightning damage and have its maximum hit points reduced by the same amount. The creature dies if this damage reduces its hit point maximum to 0. The reduction lasts until the inhabited creature completes a long rest after the spark is expelled."
         }
       ],
-      "spells": [
-        "shocking grasp",
-        "lightning bolt",
-        "call lightning"
-      ]
+      "spells": "shocking grasp, lightning bolt, call lightning"
     },
     {
       "name": "Spectral Guardian",
@@ -18979,23 +17828,7 @@
           "text": "Melee Weapon Attack: +7 to hit, reach 5 ft, one target. Hit: 13 (2d8 + 4) necrotic damage. If the target is a creature, it must succeed on a DC 14 Wisdom saving throw or be frightened and have its speed reduced to 0; both effects last until the end of its next turn."
         }
       ],
-      "spells": [
-        "acid splash",
-        "chill touch",
-        "dancing lights",
-        "minor illusion",
-        "ray of frost",
-        "mage armor",
-        "ray of sickness",
-        "darkness",
-        "scorching ray",
-        "fear",
-        "slow",
-        "stinking cloud",
-        "blight",
-        "ice storm",
-        "cone of cold"
-      ]
+      "spells": "acid splash, chill touch, dancing lights, minor illusion, ray of frost, mage armor, ray of sickness, darkness, scorching ray, fear, slow, stinking cloud, blight, ice storm, cone of cold"
     },
     {
       "name": "Gypsosphinx",
@@ -19032,7 +17865,7 @@
         },
         {
           "name": "Spellcasting",
-          "text": "The sphinx is a 9th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 17, +9 to hit with spell attacks). It requires no material components to cast its spells. The sphinx has the following wizard spells prepared:\nCantrips (undefined): at will): mage hand, mending, minor illusion, poison spray\n1st level (4 slots): comprehend languages, detect magic, identify\n2nd level (3 slots): blur, darkness, locate object\n3rd level (3 slots): dispel magic, glyph of warding, major image\n4th level (3 slots): blight, greater invisibility\n5th level (1 slot): cloudkill"
+          "text": "The sphinx is a 9th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 17, +9 to hit with spell attacks). It requires no material components to cast its spells. The sphinx has the following wizard spells prepared:\nCantrips (at will): mage hand, mending, minor illusion, poison spray\n1st level (4 slots): comprehend languages, detect magic, identify\n2nd level (3 slots): blur, darkness, locate object\n3rd level (3 slots): dispel magic, glyph of warding, major image\n4th level (3 slots): blight, greater invisibility\n5th level (1 slot): cloudkill"
         }
       ],
       "actions": [
@@ -19070,24 +17903,7 @@
           "text": "The sphinx casts a spell from its list of prepared spells, using a spell slot as normal."
         }
       ],
-      "spells": [
-        "at will): mage hand",
-        "mending",
-        "minor illusion",
-        "poison spray",
-        "comprehend languages",
-        "detect magic",
-        "identify",
-        "blur",
-        "darkness",
-        "locate object",
-        "dispel magic",
-        "glyph of warding",
-        "major image",
-        "blight",
-        "greater invisibility",
-        "cloudkill"
-      ]
+      "spells": "mage hand, mending, minor illusion, poison spray, comprehend languages, detect magic, identify, blur, darkness, locate object, dispel magic, glyph of warding, major image, blight, greater invisibility, cloudkill"
     },
     {
       "name": "Ghostwalk Spider",
@@ -19309,24 +18125,14 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The spider of Leng's innate spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks). It can innately cast the following spells, requiring no material components:\nAt will each: comprehend languages, detect magic, shocking grasp\n3/day each: shield, silence\n1/day each: arcane eye, confusion, hypnotic pattern, stoneskin"
+          "text": "The spider of Leng's innate spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks). It can innately cast the following spells, requiring no material components:\nAt will: comprehend languages, detect magic, shocking grasp\n3/day each: shield, silence\n1/day each: arcane eye, confusion, hypnotic pattern, stoneskin"
         },
         {
           "name": "Poisonous Blood",
           "text": "An attacker who hits a spider of Leng with a melee attack from within 5 feet must make a successful DC 15 Dexterity saving throw or take 7 (2d6) poison damage and be poisoned until the start of its next turn.\nShocking Riposte: When a spider of Leng casts shield, it can also make a shocking grasp attack for 9 (2d8) lightning damage against one enemy within 5 feet as part of the same reaction."
         }
       ],
-      "spells": [
-        "comprehend languages",
-        "detect magic",
-        "shocking grasp",
-        "shield",
-        "silence",
-        "arcane eye",
-        "confusion",
-        "hypnotic pattern",
-        "stoneskin"
-      ]
+      "spells": "comprehend languages, detect magic, shocking grasp, shield, silence, arcane eye, confusion, hypnotic pattern, stoneskin"
     },
     {
       "name": "Spider Thief",
@@ -19405,7 +18211,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The spire walker's innate spellcasting ability is Charisma (spell save DC 12, +4 to hit with spell attacks). The spire walker can innately cast the following spells, requiring no material components:\nAt will each: produce spark, but it does lightning damage)\n3/day each: dancing lights, feather fall, invisibility\n1/day each: faerie fire, thunderwave"
+          "text": "The spire walker's innate spellcasting ability is Charisma (spell save DC 12, +4 to hit with spell attacks). The spire walker can innately cast the following spells, requiring no material components:\nAt will: produce spark (as the cantrip produce flame but it does lightning damage)\n3/day each: dancing lights, feather fall, invisibility\n1/day each: faerie fire, thunderwave"
         },
         {
           "name": "Steeple Step",
@@ -19418,15 +18224,7 @@
           "text": "Ranged Weapon Attack: +6 to hit, range 20/60 ft, one target. Hit: 1 piercing damage plus 9 (2d8) lightning damage. If the attack misses, the target still takes 4 (1d8) lightning damage. Whether the attack hits or misses its intended target, every other creature within 10 feet of the target takes 9 (2d8) lightning damage, or half damage with a successful DC 14 Dexterity saving throw."
         }
       ],
-      "spells": [
-        "produce spark",
-        "but it does lightning damage)",
-        "dancing lights",
-        "feather fall",
-        "invisibility",
-        "faerie fire",
-        "thunderwave"
-      ]
+      "spells": "produce spark, dancing lights, feather fall, invisibility, faerie fire, thunderwave"
     },
     {
       "name": "Star Spawn Of Cthulhu",
@@ -19530,9 +18328,7 @@
           "text": "Melee Weapon Attack: +5 to hit, reach 5 ft, one target. Hit: 1 slashing damage."
         }
       ],
-      "spells": [
-        "comprehend languages"
-      ]
+      "spells": "comprehend languages"
     },
     {
       "name": "Stuhac",
@@ -20029,10 +18825,7 @@
           "text": "The ancient titan opens a momentary rupture in the eldritch source that fuels its words of power. This rupture appears at a spot designated by the titan within 100 feet. Any creature within 60 feet of the spot must make a DC 17 Constitution saving throw. On a failure, the creature takes 28 (8d6) force damage, falls prone, and is pulled 1d6 x 10 feet toward the eldritch singularity, taking an additional 3 (1d6) bludgeoning damage per 10 feet they were dragged. If the saving throw succeeds, the target takes half as much force damage and isn't knocked prone or pulled. The spot where the rupture occurs becomes the center of a 60-foot-radius antimagic field until the end of the ancient titan's next turn. The titan's spells are not affected by this antimagic field."
         }
       ],
-      "spells": [
-        "power word stun",
-        "power word kill"
-      ]
+      "spells": "power word stun, power word kill"
     },
     {
       "name": "Degenerate Titan",
@@ -20742,15 +19535,7 @@
           "text": "Using a tentacle, the urochar moves up to 20 feet to an unoccupied space adjacent to a wall, ceiling, floor, or other solid surface. This move doesn't trigger reactions. The urochar must have at least one tentacle free (not grappling a creature) to use this action. Grappled creatures move with the urochar."
         }
       ],
-      "spells": [
-        "feather fall",
-        "blur",
-        "meld into stone",
-        "phantasmal killer",
-        "black tentacles",
-        "eyebite",
-        "greater invisibility"
-      ]
+      "spells": "feather fall, blur, meld into stone, phantasmal killer, black tentacles, eyebite, greater invisibility"
     },
     {
       "name": "Ushabti",
@@ -20847,7 +19632,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The valkyrie's innate spellcasting ability is Wisdom (spell save DC 16, +8 to hit with spell attacks). She can innately cast the following spells, requiring no material components:\nAt will each: bane, bless, invisibility, sacred flame, spare the dying, speak with animals, thaumaturgy\n5/day each: gentle repose, healing word, warding bond\n3/day each: beacon of hope, mass healing word, revivifyllday each:commune, death ward, freedom of movement, geas"
+          "text": "The valkyrie's innate spellcasting ability is Wisdom (spell save DC 16, +8 to hit with spell attacks). She can innately cast the following spells, requiring no material components:\nAt will: bane, bless, invisibility, sacred flame, spare the dying, speak with animals, thaumaturgy\n5/day each: gentle repose, healing word, warding bond\n3/day each: beacon of hope, mass healing word, revivify\n1/day each: commune, death ward, freedom of movement, geas"
         }
       ],
       "actions": [
@@ -20876,24 +19661,7 @@
           "text": "A valkyrie can take the soul of a newly dead body and bind it into a weapon or shield. Only one soul can be bound to any object. Individuals whose souls are bound can't be raised by any means short of a wishor comparable magic. A valkyrie can likewise release any soul that has been bound by another valkyrie, or transfer a bound soul from one object to another. Once bound, the soul grants the item a +1 bonus for every 4 character levels of the soul, and this replaces any other magic on the item. At the DM's discretion, part of this bonus can become an appropriate special quality (a fire giant's soul might create a flaming weapon, for example)."
         }
       ],
-      "spells": [
-        "bane",
-        "bless",
-        "invisibility",
-        "sacred flame",
-        "spare the dying",
-        "speak with animals",
-        "thaumaturgy",
-        "gentle repose",
-        "healing word",
-        "warding bond",
-        "beacon of hope",
-        "mass healing word",
-        "revivifyllday each:commune",
-        "death ward",
-        "freedom of movement",
-        "geas"
-      ]
+      "spells": "bane, bless, invisibility, sacred flame, spare the dying, speak with animals, thaumaturgy, gentle repose, healing word, warding bond, beacon of hope, mass healing word, revivify, commune, death ward, freedom of movement, geas"
     },
     {
       "name": "Umbral Vampire",
@@ -20924,7 +19692,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The umbral vampire's innate spellcasting ability is Charisma (spell save DC 15). The umbral vampire can innately cast the following spells, requiring no material components:\nAt will each: mirror image, plane shift (plane of shadows only)\n1/day each: bane (when in dim light or darkness only), black tentacles"
+          "text": "The umbral vampire's innate spellcasting ability is Charisma (spell save DC 15). The umbral vampire can innately cast the following spells, requiring no material components:\nAt will: mirror image, plane shift (plane of shadows only)\n1/day each: bane (when in dim light or darkness only), black tentacles"
         },
         {
           "name": "Shadow Blend",
@@ -20941,12 +19709,7 @@
           "text": "Melee Weapon Attack: +7 to hit, reach 5 ft, one target. Hit: 18 (4d6 + 4) cold damage and the target's Strength score is reduced by 1d6. The target dies if this reduces its Strength to 0. Otherwise, the reduction lasts until the target finishes a short or long rest. If a non-evil humanoid dies from this attack, a shadow rises from the corpse 1d4 hours later."
         }
       ],
-      "spells": [
-        "mirror image",
-        "plane shift",
-        "bane",
-        "black tentacles"
-      ]
+      "spells": "mirror image, plane shift, bane, black tentacles"
     },
     {
       "name": "Vapor Lynx",
@@ -20995,9 +19758,7 @@
           "text": "The vapor lynx exhales a 40-foot radius poison fog, which heavily obscures a spherical area around the lynx. Any breathing creature that ends its turn in the fog must make a DC 14 Constitution saving throw or become poisoned for 1d4 + 1 rounds."
         }
       ],
-      "spells": [
-        "gaseous form"
-      ]
+      "spells": "gaseous form"
     },
     {
       "name": "Vesiculosa",
@@ -21092,7 +19853,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The vila's innate spellcasting ability is Charisma (spell save DC 14). She can innately cast the following spells, requiring no material components:\n3/day: sleepllweek:control weather"
+          "text": "The vila's innate spellcasting ability is Charisma (spell save DC 14). She can innately cast the following spells, requiring no material components:\n3/day: sleep\n1/week: control weather"
         }
       ],
       "actions": [
@@ -21114,9 +19875,7 @@
           "text": "When the vila sings, all those within 60 feet of her and who can hear her must make a successful DC 14 Charisma saving throw or be stunned for 1d4 rounds. Those who succeed on the saving throw are immune to that vila's singing for 24 hours.\nForest Song (1/Day): The vila magically calls 2d6 wolves or 2 wampus cats. The called creatures arrive in 1d4 rounds, acting as allies of the vila and obeying its spoken commands. The beasts remain for 1 hour, until the vila dies, or until the vila dismisses them as a bonus action."
         }
       ],
-      "spells": [
-        "sleepllweek:control weather"
-      ]
+      "spells": "sleep, control weather"
     },
     {
       "name": "Vile Barber",
@@ -21318,7 +20077,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The voidling's innate spellcasting ability is Wisdom (spell save DC 15, spell attack bonus +7). It can innately cast the following spells, requiring no material components:\nAt will each: darkness, detect magic, fear\n3/day each: eldritch blast (3 beams), black tentacles\n1/day each: phantasmal force, reverse gravity"
+          "text": "The voidling's innate spellcasting ability is Wisdom (spell save DC 15, spell attack bonus +7). It can innately cast the following spells, requiring no material components:\nAt will: darkness, detect magic, fear\n3/day each: eldritch blast (3 beams), black tentacles\n1/day each: phantasmal force, reverse gravity"
         },
         {
           "name": "Natural Invisibility",
@@ -21340,15 +20099,7 @@
           "text": "The voidling releases a burst of necrotic energy in a 20-foot radius sphere centered on itself. Those in the area take 35 (10d6) necrotic damage, or half damage with a successful DC 17 Constitution saving throw."
         }
       ],
-      "spells": [
-        "darkness",
-        "detect magic",
-        "fear",
-        "eldritch blast",
-        "black tentacles",
-        "phantasmal force",
-        "reverse gravity"
-      ]
+      "spells": "darkness, detect magic, fear, eldritch blast, black tentacles, phantasmal force, reverse gravity"
     },
     {
       "name": "Wampus Cat",
@@ -21375,7 +20126,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The wampus cat's innate spellcasting ability is Charisma (spell save DC 13). She can innately cast the following spells, requiring no material components:\nAt will each: disguise self (appearance of a female human), mage hand\n2/day: hex"
+          "text": "The wampus cat's innate spellcasting ability is Charisma (spell save DC 13). She can innately cast the following spells, requiring no material components:\nAt will: disguise self (appearance of a female human), mage hand\n2/day: hex"
         },
         {
           "name": "Magic Resistance",
@@ -21393,11 +20144,7 @@
           "text": "Intelligent creatures within 60 feet of the cat who are able to hear its voice must make a DC 13 Charisma saving throw. Those who fail find the sound of the wampus cat's voice pleasant and alluring, so that the cat has advantage on Charisma checks against them for 1 minute. The affected characters cannot attack the wampus cat during this time unless they are wounded in that time."
         }
       ],
-      "spells": [
-        "disguise self",
-        "mage hand",
-        "hex"
-      ]
+      "spells": "disguise self, mage hand, hex"
     },
     {
       "name": "Water Leaper",
@@ -21624,7 +20371,7 @@
       "traits": [
         {
           "name": "Innate Spellcasting",
-          "text": "The wormhearted suffragan's innate spellcasting ability is Wisdom (spell save DC 14, +6 to hit with spell attacks). It can cast the following spells, requiring no material components:\nAt will each: command, detect evil and good\n4/day: inflict wounds\n2/day each: blindness-deafness, hold person\n1/day each: animate dead, speak with dead"
+          "text": "The wormhearted suffragan's innate spellcasting ability is Wisdom (spell save DC 14, +6 to hit with spell attacks). It can cast the following spells, requiring no material components:\nAt will: command, detect evil and good\n4/day: inflict wounds\n2/day each: blindness-deafness, hold person\n1/day each: animate dead, speak with dead"
         }
       ],
       "actions": [
@@ -21637,15 +20384,7 @@
           "text": "Melee Weapon Attack: +5 to hit, reach 5 ft, one target. Hit: 7 (2d6) bludgeoning damage plus 10 (3d6) necrotic damage. If the target is a creature, it must succeed on a DC 14 Constitution saving throw or be afflicted with a helminth infestation (parasitic worms). An afflicted creature can't regain hit points and its hit point maximum decreases by 10 (3d6) for every 24 hours that elapse. If the affliction reduces the target's hit point maximum to 0, the victim dies. The affliction lasts until removed by any magic that cures disease."
         }
       ],
-      "spells": [
-        "command",
-        "detect evil and good",
-        "inflict wounds",
-        "blindness-deafness",
-        "hold person",
-        "animate dead",
-        "speak with dead"
-      ]
+      "spells": "command, detect evil and good, inflict wounds, blindness-deafness, hold person, animate dead, speak with dead"
     },
     {
       "name": "Xanka",
@@ -22203,7 +20942,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The devilbound gnomish prince's innate spellcasting ability is Charisma (spell save DC 18, +10 to hit with spell attacks). He can innately cast the following spells, requiring no material components:\nAt will each: detect magic, false life, mage armorllrest each: create undead, forcecage, power word stun"
+          "text": "The devilbound gnomish prince's innate spellcasting ability is Charisma (spell save DC 18, +10 to hit with spell attacks). He can innately cast the following spells, requiring no material components:\nAt will: detect magic, false life, mage armor\n1/rest each: create undead, forcecage, power word stun"
         },
         {
           "name": "Magic Resistance",
@@ -22220,33 +20959,7 @@
           "text": "Melee or Ranged Weapon Attack: +6 to hit, reach 5 ft or range 20/60 ft, one target. Hit: 4 (1d4 + 2) piercing damage."
         }
       ],
-      "spells": [
-        "detect magic",
-        "false life",
-        "mage armorllrest each: create undead",
-        "forcecage",
-        "power word stun",
-        "chill touch",
-        "eldritch blast",
-        "minor illusion",
-        "prestidigitation",
-        "banishment",
-        "command",
-        "contact other plane",
-        "counterspell",
-        "dimension door",
-        "fireball",
-        "fly",
-        "flame strike",
-        "hallow",
-        "hex",
-        "hold monster",
-        "invisibility",
-        "scorching ray",
-        "scrying",
-        "wall of fire",
-        "witch bolt"
-      ]
+      "spells": "detect magic, false life, mage armor, create undead, forcecage, power word stun, chill touch, eldritch blast, minor illusion, prestidigitation, banishment, command, contact other plane, counterspell, dimension door, fireball, fly, flame strike, hallow, hex, hold monster, invisibility, scorching ray, scrying, wall of fire, witch bolt"
     },
     {
       "name": "Dwarven Ringmage",
@@ -22296,24 +21009,7 @@
           "text": "Melee Weapon Attack: +3 to hit, reach 5 ft, one target. Hit: 3 (1d6) bludgeoning damage."
         }
       ],
-      "spells": [
-        "fire bolt",
-        "mage hand",
-        "shocking grasp",
-        "true strike",
-        "expeditious retreat",
-        "magic missile",
-        "shield",
-        "thunderwave",
-        "misty step",
-        "web",
-        "counterspell",
-        "fireball",
-        "fly",
-        "greater invisibility",
-        "ice storm",
-        "cone of cold"
-      ]
+      "spells": "fire bolt, mage hand, shocking grasp, true strike, expeditious retreat, magic missile, shield, thunderwave, misty step, web, counterspell, fireball, fly, greater invisibility, ice storm, cone of cold"
     },
     {
       "name": "Emerald Order Cult Leader",
@@ -22342,7 +21038,7 @@
         },
         {
           "name": "Innate Spellcasting",
-          "text": "The Emerald Order cult leader's innate spellcasting ability is Wisdom (spell save DC 16). He can innately cast the following spells, requiring no material components:\n2/day each: detect thoughts, dimension door, haste, slowllday each:suggestion, teleport"
+          "text": "The Emerald Order cult leader's innate spellcasting ability is Wisdom (spell save DC 16). He can innately cast the following spells, requiring no material components:\n2/day each: detect thoughts, dimension door, haste, slow\n1/day each: suggestion, teleport"
         },
         {
           "name": "Spellcasting",
@@ -22365,31 +21061,7 @@
           "text": "As a reaction when struck by a melee attack, the emerald order cult leader can expend a spell slot to do 10 (3d6) necrotic damage to the attacker. If the emerald order cult leader expends a spell slot of 2nd level or higher, the damage increases by 1d6 for each level above 1st."
         }
       ],
-      "spells": [
-        "detect thoughts",
-        "dimension door",
-        "haste",
-        "slowllday each:suggestion",
-        "teleport",
-        "guidance",
-        "light",
-        "sacred flame",
-        "spare the dying",
-        "thaumaturgy",
-        "cure wounds",
-        "identify",
-        "guiding bolt",
-        "lesser restoration",
-        "silence",
-        "spiritual weapon",
-        "dispel magic",
-        "mass healing word",
-        "spirit guardians",
-        "banishment",
-        "death ward",
-        "guardian of faith",
-        "flame strike"
-      ]
+      "spells": "detect thoughts, dimension door, haste, slow, suggestion, teleport, guidance, light, sacred flame, spare the dying, thaumaturgy, cure wounds, identify, guiding bolt, lesser restoration, silence, spiritual weapon, dispel magic, mass healing word, spirit guardians, banishment, death ward, guardian of faith, flame strike"
     },
     {
       "name": "Elvish Veteran Archer",
@@ -22750,13 +21422,7 @@
           "text": "The vampire warlock uses call the blood."
         }
       ],
-      "spells": [
-        "arms of hadar",
-        "disguise self",
-        "dissonant whispers",
-        "detect thoughts",
-        "hold monster"
-      ]
+      "spells": "arms of hadar, disguise self, dissonant whispers, detect thoughts, hold monster"
     },
     {
       "name": "Wolf Reaver Dwarf",
