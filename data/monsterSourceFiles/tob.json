@@ -701,15 +701,15 @@
           "text": "The angel makes two longsword attacks or two longbow attacks; in eagle form, it instead makes two talon attacks and one beak attack."
         },
         {
-          "name": "+1 Longsword",
+          "name": "Longsword +1",
           "text": "Melee Weapon Attack: +9 to hit, reach 5 ft., one target. Hit: 10 (1d8 + 6) slashing damage."
         },
         {
-          "name": "+1 Longsword 2hd",
+          "name": "Longsword 2hd +1",
           "text": "Melee Weapon Attack: +9 to hit, reach 5 ft., one target. Hit: 11 (1d10+ 6) slashing damage if used with two hands."
         },
         {
-          "name": "+1 Longbow",
+          "name": "Longbow +1",
           "text": "Ranged Weapon Attack: +8 to hit, range 150/600 ft., one target. Hit: 9 (1d8 + 5) piercing damage."
         },
         {
@@ -6015,7 +6015,7 @@
       "savingThrows": "Dex +7, Con +11, Wis +7, Cha +10",
       "skills": "Deception +10, Insight +7, Perception +12, Persuasion +10, Stealth +7",
       "damageImmunities": "fire",
-      "senses": "blindsight 60 ft. darkvision 120 ft.",
+      "senses": "blindsight 60 ft., darkvision 120 ft.",
       "languages": "Common, Draconic, Giant, Ignan, Infernal, Orc",
       "challenge": "16",
       "traits": [
@@ -6094,7 +6094,7 @@
       "savingThrows": "Dex +6, Con +8, Wis +5, Cha +8",
       "skills": "Deception +8, Insight +5, Perception +9, Persuasion +8, Stealth +6",
       "damageImmunities": "fire",
-      "senses": "blindsight 30 ft. darkvision 120 ft.",
+      "senses": "blindsight 30 ft., darkvision 120 ft.",
       "languages": "Common, Draconic, Ignan, Giant, Infernal, Orc",
       "challenge": "9",
       "traits": [
@@ -6140,7 +6140,7 @@
       "savingThrows": "Dex +4, Con +4, Wis +3, Cha +5",
       "skills": "Deception +5, Insight +3, Perception +5, Persuasion +5, Stealth +4",
       "damageImmunities": "fire",
-      "senses": "blindsight 30 ft. darkvision 120 ft.",
+      "senses": "blindsight 30 ft., darkvision 120 ft.",
       "languages": "Common, Draconic, Ignan",
       "challenge": "3",
       "actions": [
@@ -6474,7 +6474,7 @@
       "savingThrows": "Dex +5, Con +11, Wis +7, Cha +9",
       "skills": "Perception +12, Stealth +5",
       "damageImmunities": "cold",
-      "senses": "blindsight 60 ft. darkvision 120 ft.",
+      "senses": "blindsight 60 ft., darkvision 120 ft.",
       "languages": "Common, Draconic",
       "challenge": "16",
       "traits": [
@@ -6553,7 +6553,7 @@
       "savingThrows": "Dex +4, Con +8, Wis +5, Cha +7",
       "skills": "Perception +9, Stealth +4",
       "damageImmunities": "cold",
-      "senses": "blindsight 30 ft. darkvision 120 ft.",
+      "senses": "blindsight 30 ft., darkvision 120 ft.",
       "languages": "Common, Draconic",
       "challenge": "9",
       "traits": [
@@ -6603,7 +6603,7 @@
       "savingThrows": "Dex +2, Con +4, Wis +2, Cha +4",
       "skills": "Perception +4, Stealth +2",
       "damageImmunities": "cold",
-      "senses": "blindsight 10 ft. darkvision 60 ft.",
+      "senses": "blindsight 10 ft., darkvision 60 ft.",
       "languages": "Common, Draconic, Primordial",
       "challenge": "2",
       "actions": [
@@ -6636,7 +6636,7 @@
       "skills": "Arcana +18, History +18, Perception +16, Persuasion +13,\nStealth +7",
       "damageImmunities": "cold",
       "conditionImmunities": "charmed, frightened",
-      "senses": "blindsight 60 ft. darkvision 120 ft.",
+      "senses": "blindsight 60 ft., darkvision 120 ft.",
       "languages": "Celestial, Common, Draconic, Infernal, Primordial,\nVoid Speech",
       "challenge": "24",
       "traits": [
@@ -6754,7 +6754,7 @@
       "skills": "Arcana +13, History +13, Perception +11, Persuasion +10, Stealth +5",
       "damageImmunities": "cold",
       "conditionImmunities": "charmed, frightened",
-      "senses": "blindsight 60 ft. darkvision 120 ft.",
+      "senses": "blindsight 60 ft., darkvision 120 ft.",
       "languages": "Common, Draconic, Void Speech",
       "challenge": "14",
       "traits": [
@@ -6921,7 +6921,7 @@
       "savingThrows": "Dex +4, Con +5, Wis +1, Cha +5",
       "skills": "Perception +3, Stealth +2",
       "damageImmunities": "cold",
-      "senses": "blindsight 30 ft. darkvision 120 ft.",
+      "senses": "blindsight 30 ft., darkvision 120 ft.",
       "languages": "Common, Draconic, Void Speech",
       "challenge": "2",
       "traits": [
@@ -7993,7 +7993,7 @@
       "name": "Duskthorn Dryad",
       "size": "Medium",
       "type": "fey",
-      "alignment": "chaotic",
+      "alignment": "any chaotic alignment",
       "AC": "17 (natural armor)",
       "HP": "77 (14d8 + 14)",
       "speed": "30 ft.",
@@ -8166,7 +8166,7 @@
       "alignment": "unaligned",
       "AC": "15 (natural)",
       "HP": "40 (9d6 + 9)",
-      "speed": "10 ft., fly, 60 ft.",
+      "speed": "10 ft., fly 60 ft.",
       "strength": 10,
       "dexterity": 16,
       "constitution": 12,
@@ -12163,7 +12163,7 @@
       "alignment": "neutral evil",
       "AC": "14",
       "HP": "112 (15d8 + 45)",
-      "speed": "20 ft., fly 80 ft. (hover).",
+      "speed": "20 ft., fly 80 ft. (hover)",
       "strength": 12,
       "dexterity": 17,
       "constitution": 16,
@@ -12795,7 +12795,7 @@
       "alignment": "chaotic neutral",
       "AC": "18 (natural armor)",
       "HP": "222 (12d20 + 96)",
-      "speed": "swim 100 ft.",
+      "speed": "0 ft., swim 100 ft.",
       "strength": 30,
       "dexterity": 14,
       "constitution": 26,
@@ -13767,7 +13767,7 @@
       "alignment": "neutral",
       "AC": "17",
       "HP": "110 (20d10)",
-      "speed": "fly 60 ft. (hover)",
+      "speed": "0 ft., fly 60 ft. (hover)",
       "strength": 10,
       "dexterity": 25,
       "constitution": 10,
@@ -15382,7 +15382,7 @@
       "alignment": "chaotic neutral",
       "AC": "15",
       "HP": "39 (6d8 + 12)",
-      "speed": "fly 50 ft. (hover)",
+      "speed": "0 ft., fly 50 ft. (hover)",
       "strength": 1,
       "dexterity": 20,
       "constitution": 15,
@@ -17407,7 +17407,7 @@
       "damageVulnerabilities": "bludgeoning",
       "damageImmunities": "cold, necrotic, poison",
       "conditionImmunities": "exhaustion, poisoned",
-      "senses": "darkvision 60 ft., blindsense 30 ft.",
+      "senses": "darkvision 60 ft., blindsight 30 ft.",
       "languages": "understands the languages of its creator but can't speak",
       "challenge": "1",
       "actions": [
@@ -18704,7 +18704,7 @@
       "name": "Temple Dog",
       "size": "Medium",
       "type": "celestial",
-      "alignment": "good",
+      "alignment": "any good alignment",
       "AC": "15 (natural armor)",
       "HP": "97 (15d8 + 30)",
       "speed": "30 ft.",
@@ -19890,11 +19890,11 @@
           "text": "A vila makes two shortsword attacks or two shortbow attacks."
         },
         {
-          "name": "+1 Shortsword",
+          "name": "Shortsword +1",
           "text": "Melee Weapon Attack: +9 to hit, reach 5 ft., one target. Hit: 9 (1d6 + 6) piercing damage."
         },
         {
-          "name": "+1 Shortbow",
+          "name": "Shortbow +1",
           "text": "Ranged Weapon Attack: +9 to hit, range 80/320 ft., one target. Hit: 9 (1d6 + 6) piercing damage."
         },
         {
@@ -19922,7 +19922,7 @@
       "skills": "Athletics +3, Stealth +6",
       "damageResistances": "bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered or made of cold iron",
       "conditionImmunities": "frightened",
-      "senses": "60 ft.",
+      "senses": "darkvision 60 ft.",
       "languages": "Common, Goblin, Sylvan",
       "challenge": "2",
       "traits": [
@@ -20337,7 +20337,7 @@
       "alignment": "neutral",
       "AC": "14",
       "HP": "10 (4d4)",
-      "speed": "fly 50 ft.",
+      "speed": "0 ft., fly 50 ft.",
       "strength": 1,
       "dexterity": 18,
       "constitution": 10,
@@ -20937,7 +20937,7 @@
       "name": "Devilbound Gnomish Prince",
       "size": "Small",
       "type": "humanoid (gnome) any",
-      "alignment": "evil",
+      "alignment": "any evil alignment",
       "AC": "12 (15 with mage armor)",
       "HP": "104 (19d6 + 38)",
       "speed": "25 ft.",
@@ -21362,7 +21362,7 @@
       "savingThrows": "Dex +9, Wis +7, Cha +9",
       "skills": "Perception +7, Stealth +9",
       "damageResistances": "necrotic; bludgeoning, piercing, and slashing from nonmagical weapons",
-      "senses": "darkvision 120 ft., pass ive Perception 17",
+      "senses": "darkvision 120 ft.",
       "languages": "the languages it knew in life",
       "challenge": "13",
       "traits": [
