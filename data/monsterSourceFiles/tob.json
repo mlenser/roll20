@@ -15818,7 +15818,7 @@
       "intelligence": 14,
       "wisdom": 10,
       "charisma": 10,
-      "skills": "Acrobatics +5, Perception +2, Stealth +7",
+      "skills": "Acrobatics +5, Animal Handling +2, Arcana +4, Athletics +0, Deception +2, Perception +2, Stealth +7",
       "senses": "darkvision 60 ft.",
       "languages": "Common, Thieves Cant",
       "challenge": "1",
@@ -21252,57 +21252,6 @@
         {
           "name": "Javelin",
           "text": "Melee or Ranged Weapon Attack: +8 to hit, reach 5 ft. or range 30/120 ft., one target. Hit: 12 (2d6 + 5) piercing damage."
-        }
-      ]
-    },
-    {
-      "name": "Ratfolk Rogue",
-      "size": "Small",
-      "type": "humanoid (ratfolk)",
-      "alignment": "neutral",
-      "AC": "15 (studded leather)",
-      "HP": "18 (4d6 + 4)",
-      "speed": "25 ft.",
-      "strength": 7,
-      "dexterity": 16,
-      "constitution": 12,
-      "intelligence": 14,
-      "wisdom": 10,
-      "charisma": 10,
-      "skills": "Acrobatics +5, Animal Handling +2, Arcana +4, Athletics +0, Deception +2, Perception +2, Stealth +7",
-      "languages": "Common, Thieves Cant",
-      "challenge": "1",
-      "traits": [
-        {
-          "name": "Cunning Action",
-          "text": "A ratfolk rogue can use a bonus action to Dash, Disengage, or Hide."
-        },
-        {
-          "name": "Nimbleness",
-          "text": "A ratfolk rogue can move through the space of a hostile creature size Medium or larger."
-        },
-        {
-          "name": "Pack Tactics",
-          "text": "A ratfolk rogue has advantage on attacks if at least one of the ratfolk's allies is within 5 feet of the target and the ally isn't incapacitated."
-        },
-        {
-          "name": "Sneak Attack",
-          "recharge": "1/Turn",
-          "text": "A ratfolk rogue deals an extra 3 (1d6) damage when he hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of one of the ratfolk rogue's allies that isn't incapacitated and the ratfolk rogue doesn't have disadvantage on the attack roll."
-        }
-      ],
-      "actions": [
-        {
-          "name": "Dagger",
-          "text": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 5 (1d4 + 3) piercing damage."
-        },
-        {
-          "name": "Light Crossbow",
-          "text": "Ranged Weapon Attack: +5 to hit, range 80/320 ft., one target. Hit: 6 (1d8 + 3) piercing damage."
-        },
-        {
-          "name": "Rat Dagger Flurry",
-          "text": "Ranged Weapon Attack: +5 to hit, range 20/60 ft., three targets. Hit: 7 (1d4 + 3) piercing damage."
         }
       ]
     },
