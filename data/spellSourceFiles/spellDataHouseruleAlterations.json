@@ -1,5 +1,7 @@
 {
   "version": "0.2.1",
+  "dependencies": ["spellData"],
+  "patch": true,
   "spells": [
     {
       "name": "Abi-Dalzim's Horrid Wilting",
