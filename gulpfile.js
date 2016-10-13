@@ -37,42 +37,12 @@ if (typeof Array.prototype.reIndexOf === 'undefined') {
   };
 }
 
-const entitySorter = (a, b) => {
-  if (a.name < b.name) {
-    return -1;
-  } else if (a.name > b.name) {
-    return 1;
-  }
-  return 0;
-};
 
-const compileSources = (sources, arrayProp, patch) => {
-  const entities = {};
-  entities[arrayProp] = [];
-  Object.keys(sources).forEach((sourceName) => {
-    const source = sources[sourceName];
-    if (!source.version) {
-      throw new Error('JSON file: ' + source + ' has no version number');
-    }
-    if (!entities.version) {
-      entities.version = source.version;
-    }
-    else if (entities.version !== source.version) {
-      throw new Error('JSON file: ' + source + ' has version number ' + source.version + ' that is incompatible with other files');
-    }
-
-    entities[arrayProp] = entities[arrayProp].concat(source[arrayProp]);
-    entities.patch = patch;
-  });
-
-  entities[arrayProp].sort(entitySorter);
-  return entities;
-};
-
-const makeJSOutput = (entityLists) => {
+const makeJSOutput = (sources) => {
   let output = "on('ready', function() {\n";
-  entityLists.forEach((entityList) => {
-    output += '  ShapedScripts.addEntities(' + JSON.stringify(entityList) + ');\n';
+  Object.keys(sources).forEach((sourceName) => {
+    sources[sourceName].name = sourceName;
+    output += '  ShapedScripts.addEntities(' + JSON.stringify(sources[sourceName]) + ');\n';
   });
   output += '});\n';
   return output;
@@ -160,7 +130,7 @@ const monsterHouserules = (json) => {
 gulp.task('compileSpells', () => {
   gulp.src('./data/spellSourceFiles/spellData.json')
     .pipe(jsoncombine('5e-spells.js', (sources) => {
-      return new Buffer(makeJSOutput([compileSources(sources, 'spells')]));
+      return new Buffer(makeJSOutput(sources));
     }))
     .pipe(eol())
     .pipe(gulp.dest('./data'));
@@ -169,7 +139,7 @@ gulp.task('compileSpells', () => {
 gulp.task('compileHouseruledSpells', () => {
   gulp.src('./data/spellSourceFiles/*.json')
     .pipe(jsoncombine('5e-spells-houserules.js', (sources) => {
-      const output = makeJSOutput([compileSources({ spellData: sources.spellData }, 'spells'), compileSources({ spellDataHouseruleAlterations: sources.spellDataHouseruleAlterations }, 'spells', true)]);
+      const output = makeJSOutput(sources);
 
       return new Buffer(output);
     }))
@@ -180,7 +150,7 @@ gulp.task('compileHouseruledSpells', () => {
 gulp.task('compileMonsters', () => {
   gulp.src('./data/monsterSourceFiles/*.json')
     .pipe(jsoncombine('5e-monsters.js', (sources) => {
-      return new Buffer(makeJSOutput([compileSources(sources, 'monsters')]));
+      return new Buffer(makeJSOutput(sources));
     }))
     .pipe(eol())
     .pipe(gulp.dest('./data'));
@@ -193,7 +163,7 @@ gulp.task('compileHouseruledMonsters', () => {
       return json;
     }))
     .pipe(jsoncombine('5e-monsters-houserules.js', (sources) => {
-      return new Buffer(makeJSOutput([compileSources(sources, 'monsters')]));
+      return new Buffer(makeJSOutput(sources));
     }))
     .pipe(eol())
     .pipe(gulp.dest('./data'));
