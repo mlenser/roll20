@@ -218,7 +218,7 @@
     },
     {
       "name": "Chill Touch",
-      "description": "You create a ghostly, skeletal hand in the space of a creature within range. Make a ranged spell attack against the creature to assail it with the chill of the grave. On a hit, the target takes 1d10 necrotic damage, and it can't regain hit points until the start of your next turn. Until then, the hand clings to the target.\nIf you hit an undead target, it also has disadvantage on attack rolls against you until the end of your next turn.",
+      "description": "You create a ghostly, skeletal hand in the space of a creature within range. Make a ranged spell attack against the creature to assail it with the chill of the grave. On a hit, the target takes 1d10 necrotic damage, and it can't regain hit points until the start of your next turn. Until then, the hand clings to the target.",
       "higherLevel": "This spell's damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10).",
       "range": "90 ft",
       "attack": {
@@ -589,9 +589,8 @@
       "description": "You cause numbing frost to form on one creature that you can see within range. The target must make a Constitution saving throw. The target takes 1d6 cold damage and it has disadvantage on the next weapon attack roll it makes before the end of its next turn on a failed save, or half as much damage on a successful one.",
       "save": {
         "ability": "Constitution",
-        "damage": "((@{level} + 1) / 6 + 0.5)d6",
+        "damage": "((@{level} + 1) / 6 + 0.5)d8",
         "damageType": "cold",
-        "saveSuccess": "half damage",
         "saveFailure": "it has disadvantage on the next weapon attack roll it makes before the end of its next turn"
       }
     },
@@ -1514,7 +1513,7 @@
       "save": {
         "condition": "if the target can hear you (though it need not understand you)",
         "ability": "Wisdom",
-        "damage": "((@{level} + 1) / 6 + 0.5)d10",
+        "damage": "((@{level} + 1) / 6 + 0.5)d8",
         "damageType": "psychic",
         "saveFailure": "disadvantage on the next attack roll it makes before the end of its next turn"
       }
