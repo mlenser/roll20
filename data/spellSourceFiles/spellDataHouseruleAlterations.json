@@ -172,9 +172,9 @@
     },
     {
       "name": "Blinding Smite",
-      "description": "The next time you hit a creature with a melee weapon attack during this spell's duration, your weapon flares with bright light, and the attack deals an extra 5d8 radiant damage to the target. Additionally, the target must succeed on a Constitution saving throw or be blinded until the spell ends.\nA creature blinded by this spell makes another Constitution saving throw at the end of each of its turns. On a successful save, it is no longer blinded.",
+      "description": "The next time you hit a creature with a melee weapon attack during this spell's duration, your weapon flares with bright light, and the attack deals an extra 4d6 radiant damage to the target. Additionally, the target must succeed on a Constitution saving throw or be blinded until the spell ends.\nA creature blinded by this spell makes another Constitution saving throw at the end of each of its turns. On a successful save, it is no longer blinded.",
       "damage": {
-        "damage": "5d6",
+        "damage": "4d6",
         "damageType": "radiant",
         "higherLevelDice": "1",
         "higherLevelDie": "d6"
@@ -182,9 +182,9 @@
     },
     {
       "name": "Branding Smite",
-      "description": "The next time you hit a creature with a weapon attack before this spell ends, the weapon gleams with astral radiance as you strike. The attack deals an extra 4d6 radiant damage to the target, which becomes visible if it's invisible, and the target sheds dim light in a 5-foot radius and can't become invisible until the spell ends.",
+      "description": "The next time you hit a creature with a weapon attack before this spell ends, the weapon gleams with astral radiance as you strike. The attack deals an extra 3d6 radiant damage to the target, which becomes visible if it's invisible, and the target sheds dim light in a 5-foot radius and can't become invisible until the spell ends.",
       "damage": {
-        "damage": "4d6",
+        "damage": "3d6",
         "damageType": "radiant",
         "higherLevelDice": "1",
         "higherLevelDie": "d6"
@@ -425,17 +425,17 @@
     },
     {
       "name": "Dust Devil",
-      "description": "Choose an unoccupied 5-foot cube of air that you can see within range. An elemental force that resembles a dust devil appears in the cube and lasts for the spell's duration.\nAny creature that enters the spell's area for the first time on a turn or starts its turn within 5 ft of the dust devil must make a Strength saving throw. On a failed save, the creature takes 2d6 bludgeoning damage and is pushed 10 feet away. On a successful save, the creature takes half as much damage and isn't pushed.\nAs a bonus action, you can move the dust devil up to 30 feet in any direction. If the dust devil moves over sand, dust, loose dirt, or small gravel, it sucks up the material and forms a 10-foot-radius cloud of debris around itself that lasts until the start of your next turn. The cloud heavily obscures its area.",
-      "higherLevel": "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d6 for each slot level above 2nd.",
+      "description": "Choose an unoccupied 5-foot cube of air that you can see within range. An elemental force that resembles a dust devil appears in the cube and lasts for the spell's duration.\nAny creature that enters the spell's area for the first time on a turn or starts its turn within 5 ft of the dust devil must make a Strength saving throw. On a failed save, the creature takes 2d4 bludgeoning damage and is pushed 10 feet away. On a successful save, the creature takes half as much damage and isn't pushed.\nAs a bonus action, you can move the dust devil up to 30 feet in any direction. If the dust devil moves over sand, dust, loose dirt, or small gravel, it sucks up the material and forms a 10-foot-radius cloud of debris around itself that lasts until the start of your next turn. The cloud heavily obscures its area.",
+      "higherLevel": "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d4 for each slot level above 2nd.",
       "target": "any creature that enters the spell's area for the first time on a turn or starts its turn within 5 ft of the dust devil",
       "save": {
         "ability": "Strength",
-        "damage": "2d6",
+        "damage": "2d4",
         "damageType": "bludgeoning",
         "saveFailure": "pushed 10 feet away",
         "saveSuccess": "half damage and not pushed",
         "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDie": "d4"
       }
     },
     {
@@ -1410,10 +1410,10 @@
     },
     {
       "name": "Staggering Smite",
-      "description": "The next time you hit a creature with a melee weapon attack during this spell's duration, your weapon pierces both body and mind, and the attack deals an extra 7d6 psychic damage to the target. The target must make a Wisdom saving throw. On a failed save, it has disadvantage on attack rolls and ability checks, and can't take reactions, until the end of its next turn.",
+      "description": "The next time you hit a creature with a melee weapon attack during this spell's duration, your weapon pierces both body and mind, and the attack deals an extra 4d6 psychic damage to the target. The target must make a Wisdom saving throw. On a failed save, it has disadvantage on attack rolls and ability checks, and can't take reactions, until the end of its next turn.",
       "level": 3,
       "damage": {
-        "damage": "7d6",
+        "damage": "4d6",
         "damageType": "psychic",
         "higherLevelDice": "1",
         "higherLevelDie": "d6"
