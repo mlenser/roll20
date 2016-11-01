@@ -60,7 +60,7 @@
       "description": "An acidic spray erupts from your hands. Each creature in a 60-foot cone must make a Constitution saving throw. A creature takes 8d8 acid damage on a failed save, or half as much damage on a successful one.\nA creature killed by this spell is affected by rigor mortis.",
       "higherLevel": "When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d8 for each slot level above 5th.",
       "emote": "'s hands erupt with an acidic spray",
-      "source": "phb 224",
+      "source": "houserules",
       "range": "Self",
       "target": "each creature in the aoe",
       "aoe": "60 ft cone",
@@ -189,6 +189,36 @@
         "higherLevelDice": "1",
         "higherLevelDie": "d6"
       }
+    },
+    {
+      "name": "Burst With Light",
+      "description": "A creature you can see within range becomes filled with intense magical light as the light bursts from its wounds and orifices. The creature radiates bright light in a 30-foot radius and dim light for an additional 30 feet.\nFor the duration at the start of its turn the creature must make a Constitution saving throw. It takes 5d8 radiant damage on a failed save, or half as much damage on a successful one. An undead creature has disadvantage on this saving throw. On a successful save, the spell ends.\nAny creature within 5 feet of the creature when it takes this damage must also succeed on a Consitution saving throw or take the damage specified above and be blinded for until the end of their next turn.",
+      "higherLevel": "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for each slot level above 2nd.",
+      "emote": "causes a creature to be filled with intense magical light as the light bursts from its wounds and orifices",
+      "source": "houserules",
+      "range": "60 ft",
+      "target": "a creature within range",
+      "components": {
+        "verbal": true,
+        "somatic": true
+      },
+      "duration": "up to 1 minute",
+      "concentration": true,
+      "castingTime": "1 action",
+      "level": 1,
+      "school": "Evocation",
+      "save": {
+        "ability": "Constitution",
+        "damage": "5d8",
+        "damageType": "radiant",
+        "saveSuccess": "half damage",
+        "higherLevelDice": "1",
+        "higherLevelDie": "d8"
+      },
+      "classes": [
+        "Cleric",
+        "Paladin"
+      ]
     },
     {
       "name": "Call Lightning",
@@ -399,6 +429,34 @@
       }
     },
     {
+      "name": "Detect Poison and Disease",
+      "description": "For the duration, you can sense the presence and location of poisons, poisonous creatures, diseases, and radiation within 30 feet of you. You also identify the kind of poison, poisonous creature, disease, or level of radiation in each case.\nYou see radioactive auras as a glowing green shimmer in the air that emanates from radioactive objects; the brighter and more intense the green, the more powerful the radioactivity.\nThe spell can penetrate most barriers, but it is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt—although radiation can seep into such barriers, causing them to become radioactive (and thus visible to the spell) in time."
+    },
+    {
+      "name": "Discharge",
+      "description": "You dissipate the charges from one technological object, temporarily depowers one electrically powered technological object that does not use charges, or severely hinders a creature with the robot subtype.\nIf the spell targets an object with charges, the object loses all of its remaining charges. If the object is powered by electrical means other than charges, its functions are suppressed for 1d4 rounds.\nIf the spell targets a creature not of the robot subtype, the target must make a Constitution saving throw or one charged or electrically powered item on their person is affected, as described above.\nIf the target is a robot, the robot must succeed on a Consitution savine throw or it suffers disadvantage on ability checks and attack rolls for 1 minute and cannot use any energy-based attacks for 1d4 rounds. An affected robot can make a new Constitution saving throw at the end of each of its turns. On a success, the effect of the spell ends.",
+      "higherLevel": "When you cast this spell using a spell slot of 5th level or higher, you can target one additional object for each slot level above 3rd.",
+      "emote": "dissipate the charges from one technical object",
+      "source": "houserules",
+      "range": "120 feet",
+      "target": "one technological object or robot",
+      "components": {
+        "verbal": true,
+        "somatic": true
+      },
+      "duration": "Instantaneous",
+      "castingTime": "1 action",
+      "level": 3,
+      "school": "Evocation",
+      "classes": [
+        "Bard",
+        "Cleric",
+        "Sorcerer",
+        "Warlock",
+        "Wizard"
+      ]
+    },
+    {
       "name": "Disguise Self",
       "higherLevel": "When you cast this spell using a spell slot of 2nd level or higher, you can target one additional humanoid for each slot above 1st."
     },
@@ -422,6 +480,38 @@
         "ability": "Constitution",
         "saveFailure": "each target suffers an effect based on its current hit points:\n&#8226; 50 hit points or fewer: deafened for 1 minute\n&#8226; 40 hit points or fewer: deafened and blinded for 10 minutes\n&#8226; 30 hit points or fewer: blinded, deafened, and stunned for 1 hour\n&#8226; 20 hit points or fewer: killed instantly.\nRegardless of its current hit points, a celestial, an elemental, a fey, or a fiend that fails its save is forced back to its plane of origin (if it isn't there already) and can't return to your current plane for 24 hours by any means short of a wish spell."
       }
+    },
+    {
+      "name": "Dragon's Breath",
+      "description": "You breathe out a blast of energy. Each creature in the area of the exhalation must make a saving throw, the type of which is determined by the color of dragon scale. A creature takes 9d6 damage on a failed save, or half as much damage on a successful one.\nDragon Scale  Breath Weapon  Damage Type\nBlack or Copper  5 by 60 ft. line (Dex. save)  Acid\nBlue or Bronze  5 by 60 ft. line (Dex. save)  Lightning\nBrass  5 by 60 ft. line (Dex. save) Fire\nRed or Gold  45 ft. cone (Dex. save)  Fire\nGreen  45 ft. cone (Con. save)  Poison\nWhite or Silver  45 ft. cone (Con. save)  Cold",
+      "higherLevel": "When you cast this spell using a spell slot of 5th level or higher, the damage increases by 1d6 for each spell slot above 4th.",
+      "emote": "breathes out a blast of energy",
+      "source": "houserules",
+      "range": "Self (45-foot cone or 5 by 60-foot line)",
+      "target": "each creature in the aoe",
+      "aoe": "45-foot cone or 5 by 60-foot line",
+      "components": {
+        "verbal": true,
+        "somatic": true,
+        "material": true,
+        "materialMaterial": "a dragon scale worth at least 50 gp"
+      },
+      "duration": "Instantaneous",
+      "castingTime": "1 action",
+      "level": 4,
+      "school": "Evocation",
+      "save": {
+        "ability": "Constitution",
+        "damage": "9d6",
+        "damageType": "acid, lightning, fire, poison, or cold",
+        "saveSuccess": "half damage",
+        "higherLevelDice": "1",
+        "higherLevelDie": "d6"
+      },
+      "classes": [
+        "Sorcerer",
+        "Wizard"
+      ]
     },
     {
       "name": "Dust Devil",
@@ -453,11 +543,40 @@
       }
     },
     {
+      "name": "Electric Arc",
+      "description": "You create a bolt of lightning that arcs toward a target of your choice that you can see within range. A bolt then leap from that target to another target, which must be within 10 feet of the first target. A target can be a creature or an object.\nA target must make a Dexterity saving throw. The target takes 2d8 lightning damage on a failed save, or half as much damage on a successful one.",
+      "higherLevel": "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st.",
+      "emote": "creates a bolt of lightning that arcs toward a target.",
+      "source": "houserules",
+      "range": "90 ft",
+      "target": "a target within range and a creature within 10 ft of it. A target can be a creature or an object.",
+      "components": {
+        "verbal": true,
+        "somatic": true
+      },
+      "duration": "Instantaneous",
+      "castingTime": "1 action",
+      "level": 1,
+      "school": "Evocation",
+      "save": {
+        "ability": "Dexterity",
+        "damage": "2d8",
+        "damageType": "lightning",
+        "saveSuccess": "half damage",
+        "higherLevelDice": "1",
+        "higherLevelDie": "d8"
+      },
+      "classes": [
+        "Sorcerer",
+        "Wizard"
+      ]
+    },
+    {
       "name": "Eroding Mist",
       "description": "As you hold your hands with thumbs touching and fingers spread, a green mist shoots forth from your outstretched fingertips. Each creature in a 15-foot cone must make a Dexterity saving throw. A creature takes 3d6 acid damage on a failed save, or half as much damage on a successful one.\nThe acid can eat through objects in the area that aren't being worn or carried.",
       "higherLevel": "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st.",
       "emote": "holds {{GENDER_PRONOUN_HIS_HER}} hands with thumbs touching and fingers spread as a thin sheet of flames shoots forth from {{GENDER_PRONOUN_HIS_HER}} fingertips",
-      "source": "phb 220",
+      "source": "houserules",
       "range": "Self",
       "target": "Every creature in the aoe",
       "aoe": "15 ft cone",
@@ -1131,6 +1250,29 @@
       ]
     },
     {
+      "name": "Memory of Function",
+      "description": "You restore a broken item, or damaged robot or construct, to a functional state, as if it were new and intact. Any pieces missing from the item or construct remain missing. Significant missing pieces may prevent proper functioning. If the item uses charges, the item becomes fully charged.\nA timeworn item becomes fully charged, but doesn’t lose the timeworn condition (this spell is one of the few ways a timeworn item can be recharged). For 1 hour after this spell is cast on a timeworn item, that item does not suffer any chance of glitching. Other consumables such as ammunition are not restored.\nWhen this spell is cast upon a damaged robot or construct, all hit point damage dealt to that creature is healed. When this spell is cast upon a destroyed robot or construct, it is restored to full functionality and full hit points, provided no significant portion of the destroyed construct (such as an entire limb) is missing. Robots and constructs brought back in this fashion regain their memories up to the moment of their destruction and have no particular inclination to serve the caster.",
+      "emote": "restores a broken item, or damaged robot or construct, to a functional state",
+      "source": "houserules",
+      "range": "Touch",
+      "target": "a broken item, or damaged robot or construct",
+      "components": {
+        "verbal": true,
+        "somatic": true,
+        "material": true,
+        "materialMaterial": "powdered skymetal worth at least 1,000 gp, which the spell consumes"
+      },
+      "duration": "Instantaneous",
+      "castingTime": "1 action",
+      "level": 7,
+      "school": "Transmutation",
+      "classes": [
+        "Cleric",
+        "Sorcerer",
+        "Wizard"
+      ]
+    },
+    {
       "name": "Meteor Swarm",
       "description": "Blazing orbs of fire plummet to the ground at four different points you can see within range. Each creature in a 40-foot-radius sphere centered on each point you choose must make a Dexterity saving throw. The sphere spreads around corners. A creature takes 15d6 fire damage and 15d6 bludgeoning damage on a failed save, or half as much damage on a successful one. A creature in the area of more than one fiery burst is affected only once.\nThe spell damages objects in the area and ignites flammable objects that aren't being worn or carried.",
       "save": {
@@ -1308,10 +1450,7 @@
     {
       "name": "Ray of Enfeeblement",
       "description": "A black beam of enervating energy springs from your finger toward a creature within range. Make a ranged spell attack against the target. On a hit, the target has disadvantage on ability checks, attack rolls, and saving throws that use Strength and deals only half damage with weapon attacks that use Strength until the spell ends.\nAt the end of each of the target's turns, it can make a Constitution saving throw against the spell. On a success, the spell ends.",
-      "classes": [
-        "Warlock",
-        "Wizard"
-      ]
+      "level": 1
     },
     {
       "name": "Ray of Frost",
@@ -1446,6 +1585,40 @@
       }
     },
     {
+      "name": "Thunderbolt",
+      "description": "You can command a stroke of lightning to strike down at a point within range. Each creature in a 10-foot-radius sphere centered on that point must make a Dexterity saving throw. A creature is deafened for 1 round and takes 6d6 lightning and 6d6 thunder damage on a failed save, or half as much damage on a successful one.",
+      "higherLevel": "When you cast this spell using a spell slot of 5th level or higher, the lightning and the thunder damage increases by 1d6 for each slot level above 4th.",
+      "emote": "calls down a stroke of lightning.",
+      "source": "houserules",
+      "range": "120 ft",
+      "target": "Each creature in a 10-foot-radius sphere",
+      "components": {
+        "verbal": true,
+        "somatic": true
+      },
+      "duration": "Instantaneous",
+      "castingTime": "1 action",
+      "level": 4,
+      "school": "Evocation",
+      "save": {
+        "ability": "Dexterity",
+        "damage": "6d6",
+        "damageType": "lightning",
+        "secondaryDamage": "6d6",
+        "secondaryDamageType": "thunder",
+        "saveSuccess": "half damage",
+        "higherLevelDice": "1",
+        "higherLevelDie": "d6",
+        "secondHigherLevelDice": "1",
+        "secondHigherLevelDie": "d6"
+      },
+      "classes": [
+        "Druid",
+        "Sorcerer",
+        "Wizard"
+      ]
+    },
+    {
       "name": "Thunderclap",
       "description": "You create a burst of thunderous sound, which can be heard 100 feet away. Each creature other than you within 5 feet of you must make a Constitution saving throw. On a failed save, the creature takes 1d10 thunder damage.",
       "higherLevel": "The spell's damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10).",
@@ -1554,7 +1727,7 @@
     },
     {
       "name": "Witch Bolt",
-      "description": "A beam of crackling, blue energy lances out toward a creature within range, forming a sustained arc of lightning between you and the target. Make a ranged spell attack against that creature. On a hit, the target takes 1d12 lightning damage and is grappled, and on each of your turns for the duration, you can use your action to deal 1d12 lightning damage to the target automatically. If you do so the target must make a Strength saving throw or be grappled. The spell ends if you use your action to do anything else. The spell also ends if the target is ever outside the spell's range or if it has total cover from you at the end of your turn."
+      "remove": true
     },
     {
       "name": "Web",
