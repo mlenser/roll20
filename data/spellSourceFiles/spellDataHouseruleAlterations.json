@@ -429,6 +429,10 @@
       }
     },
     {
+      "name": "Detect Magic",
+      "description": "For the duration, you sense the presence of magic within 30 feet of you. If you sense magic in this way, you can use your action to see a faint aura around any visible creature or object in the area that bears magic, and you learn its school of magic, if any.\nThe spell can penetrate most barriers, but it is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt.\nIf you touch a magical item and focus on it, you have advantage on ability checks to identify it.\nIf you instead touch a creature and focus on it for 1 minute, you learn what spells, if any, are currently affecting it."
+    },
+    {
       "name": "Detect Poison and Disease",
       "description": "For the duration, you can sense the presence and location of poisons, poisonous creatures, diseases, and radiation within 30 feet of you. You also identify the kind of poison, poisonous creature, disease, or level of radiation in each case.\nYou see radioactive auras as a glowing green shimmer in the air that emanates from radioactive objects; the brighter and more intense the green, the more powerful the radioactivity.\nThe spell can penetrate most barriers, but it is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt—although radiation can seep into such barriers, causing them to become radioactive (and thus visible to the spell) in time."
     },
@@ -974,6 +978,10 @@
         "Sorcerer",
         "Wizard"
       ]
+    },
+    {
+      "name": "Identify",
+      "remove": true
     },
     {
       "name": "Illusion of Calm",
