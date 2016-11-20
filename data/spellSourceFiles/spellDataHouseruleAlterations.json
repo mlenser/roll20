@@ -1209,7 +1209,14 @@
     },
     {
       "name": "Mass Healing Word",
-      "school": "Necromancy"
+      "description": "As you call out words of restoration, up to six creatures of your choice that you can see within range regain hit points equal to 2d4 + your spellcasting ability modifier. This spell has no effect on undead or constructs.",
+      "school": "Necromancy",
+      "heal": {
+        "amount": "2d4",
+        "castingStat": true,
+        "higherLevelDice": "1",
+        "higherLevelDie": "d4"
+      }
     },
     {
       "name": "Maximilian's Earthen Grasp",
