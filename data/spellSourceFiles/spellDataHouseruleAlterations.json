@@ -403,10 +403,10 @@
       "higherLevel": "When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 1d6 for each slot level above 1st.",
       "school": "Necromancy",
       "heal": {
-        "amount": "1d8",
+        "amount": "2d6",
         "castingStat": true,
         "higherLevelDice": "1",
-        "higherLevelDie": "d8"
+        "higherLevelDie": "d6"
       }
     },
     {
