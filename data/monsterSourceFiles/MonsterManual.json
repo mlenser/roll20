@@ -8840,8 +8840,9 @@
       "challenge": "8",
       "traits": [
         {
-          "name": "Innate Spellcasting (Psionics)",
-          "text": "The githyanki's innate spellcasting ability is Intelligence (spell save DC 13, +5 to hit with spell attacks). It can innately cast the following spells, requiring no components:\nAt will: mage hand (the hand is invisible)\n3/day each: jump, misty step, nondetection (self only), tongues\n1/day each: plane shift, telekinesis"
+          "name": "Innate Spellcasting",
+          "text": "The githyanki's innate spellcasting ability is Intelligence (spell save DC 13, +5 to hit with spell attacks). It can innately cast the following spells, requiring no components:\nAt will: mage hand (the hand is invisible)\n3/day each: jump, misty step, nondetection (self only), tongues\n1/day each: plane shift, telekinesis",
+          "recharge": "Psionics"
         }
       ],
       "actions": [
@@ -8875,8 +8876,9 @@
       "challenge": "3",
       "traits": [
         {
-          "name": "Innate Spellcasting (Psionics)",
-          "text": "The githyanki's innate spellcasting ability is Intelligence. It can innately cast the following spells, requiring no components:\nAt will: mage hand (the hand is invisible)\n3/day each: jump, misty step, nondetection (self only)"
+          "name": "Innate Spellcasting",
+          "text": "The githyanki's innate spellcasting ability is Intelligence. It can innately cast the following spells, requiring no components:\nAt will: mage hand (the hand is invisible)\n3/day each: jump, misty step, nondetection (self only)",
+          "recharge": "Psionics"
         }
       ],
       "actions": [
@@ -8911,8 +8913,9 @@
       "challenge": "2",
       "traits": [
         {
-          "name": "Innate Spellcasting (Psionics)",
-          "text": "The githzerai's innate spellcasting ability is Wisdom. It can innately cast the following spells, requiring no components:\nAt will: mage hand (the hand is invisible)\n3/day each: feather fall, jump, see invisibility, shield"
+          "name": "Innate Spellcasting",
+          "text": "The githzerai's innate spellcasting ability is Wisdom. It can innately cast the following spells, requiring no components:\nAt will: mage hand (the hand is invisible)\n3/day each: feather fall, jump, see invisibility, shield",
+          "recharge": "Psionics"
         },
         {
           "name": "Psychic Defense",
@@ -8951,8 +8954,9 @@
       "challenge": "6",
       "traits": [
         {
-          "name": "Innate Spellcasting (Psionics)",
-          "text": "The githzerai's innate spellcasting ability is Wisdom. It can innately cast the following spells, requiring no components:\nAt will: mage hand (the hand is invisible)\n3/day each: feather fall, jump, see invisibility, shield"
+          "name": "Innate Spellcasting",
+          "text": "The githzerai's innate spellcasting ability is Wisdom. It can innately cast the following spells, requiring no components:\nAt will: mage hand (the hand is invisible)\n3/day each: feather fall, jump, see invisibility, shield",
+          "recharge": "Psionics"
         },
         {
           "name": "Psychic Defense",
@@ -12707,8 +12711,9 @@
           "text": "The mind flayer has advantage on saving throws against spells and other magical effects."
         },
         {
-          "name": "Innate Spellcasting (Psionics)",
-          "text": "The mind flayer's innate spellcasting ability is Intelligence (spell save DC 15). It can innately cast the following spells, requiring no components:\nAt will: detect thoughts, levitate\n1/day each: dominate monster, plane shift (self only)"
+          "name": "Innate Spellcasting",
+          "text": "The mind flayer's innate spellcasting ability is Intelligence (spell save DC 15). It can innately cast the following spells, requiring no components:\nAt will: detect thoughts, levitate\n1/day each: dominate monster, plane shift (self only)",
+          "recharge": "Psionics"
         }
       ],
       "actions": [
@@ -12753,8 +12758,9 @@
           "text": "The mind flayer has advantage on saving throws against spells and other magical effects."
         },
         {
-          "name": "Innate Spellcasting (Psionics)",
-          "text": "The mind flayer's innate spellcasting ability is Intelligence (spell save DC 15). It can innately cast the following spells, requiring no components:\nAt will: detect thoughts, levitate\n1/day each: dominate monster, plane shift (self only)"
+          "name": "Innate Spellcasting",
+          "text": "The mind flayer's innate spellcasting ability is Intelligence (spell save DC 15). It can innately cast the following spells, requiring no components:\nAt will: detect thoughts, levitate\n1/day each: dominate monster, plane shift (self only)",
+          "recharge": "Psionics"
         },
         {
           "name": "Spellcasting",
@@ -14860,8 +14866,9 @@
           "text": "While it has 10 hit points or fewer, the quaggoth has advantage on attack rolls. In addition, it deals an extra 7 (2d6) damage to any target it hits with a melee attack."
         },
         {
-          "name": "Innate Spellcasting (Psionics)",
-          "text": "The quaggoth's innate spellcasting ability is Wisdom (spell save DC 11 ). The quaggoth can innately cast the following spells, requiring no components:\nAt will: feather fall, mage hand (the hand is invisible)\n1/day each: cure wounds, enlarge/reduce, heat metal, mirror image"
+          "name": "Innate Spellcasting",
+          "text": "The quaggoth's innate spellcasting ability is Wisdom (spell save DC 11 ). The quaggoth can innately cast the following spells, requiring no components:\nAt will: feather fall, mage hand (the hand is invisible)\n1/day each: cure wounds, enlarge/reduce, heat metal, mirror image",
+          "recharge": "Psionics"
         }
       ],
       "actions": [
@@ -17404,8 +17411,9 @@
           "text": "The thri-kreen's long jump is up to 30 feet and its high jump is up to 15 feet, with or without a running start."
         },
         {
-          "name": "Variant: Innate Spellcasting (Psionics)",
-          "text": "The thri-kreen's innate spellcasting ability is Wisdom. The thri-kreen can innately cast the following spells, requiring no components:\nAt will: mage hand (the hand is invisible)\n2/day each: blur, magic weapon\n1/day: invisibility (self only)"
+          "name": "Variant: Innate Spellcasting",
+          "text": "The thri-kreen's innate spellcasting ability is Wisdom. The thri-kreen can innately cast the following spells, requiring no components:\nAt will: mage hand (the hand is invisible)\n2/day each: blur, magic weapon\n1/day: invisibility (self only)",
+          "recharge": "Psionics"
         }
       ],
       "actions": [
@@ -17459,8 +17467,9 @@
           "text": "The thri-kreen's long jump is up to 30 feet and its high jump is up to 15 feet, with or without a running start."
         },
         {
-          "name": "Innate Spellcasting (Psionics)",
-          "text": "The thri-kreen's innate spellcasting ability is Wisdom. The thri-kreen can innately cast the following spells, requiring no components:\nAt will: mage hand (the hand is invisible)\n2/day each: blur, magic weapon\n1/day: invisibility (self only)"
+          "name": "Innate Spellcasting",
+          "text": "The thri-kreen's innate spellcasting ability is Wisdom. The thri-kreen can innately cast the following spells, requiring no components:\nAt will: mage hand (the hand is invisible)\n2/day each: blur, magic weapon\n1/day: invisibility (self only)",
+          "recharge": "Psionics"
         }
       ],
       "actions": [
