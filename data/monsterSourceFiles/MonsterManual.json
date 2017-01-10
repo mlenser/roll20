@@ -1284,11 +1284,6 @@
           "name": "Legendary Resistance",
           "text": "If the dragon fails a saving throw, it can choose to succeed instead.",
           "recharge": "3/Day"
-        },
-        {
-          "name": "Legendary Resistance",
-          "text": "If the dragon fails a saving throw, it can choose to succeed instead.",
-          "recharge": "3/Day"
         }
       ],
       "actions": [
