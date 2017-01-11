@@ -5846,11 +5846,11 @@
       },
       "save": {
         "ability": "Dexterity",
-        "damage": "2d8",
-        "damageType": "lightning",
+        "secondaryDamage": "2d8",
+        "secondaryDamageType": "lightning",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d8"
+        "higherLevelSecondaryDice": "1",
+        "higherLevelSecondaryDie": "d8"
       },
       "classes": [
         "Ranger"
