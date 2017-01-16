@@ -1187,7 +1187,7 @@
       "alignment": "neutral",
       "AC": "15",
       "HP": "90 (12d10+24)",
-      "speed": "0ft., fly 90 ft. (hover)",
+      "speed": "0 ft., fly 90 ft. (hover)",
       "strength": 14,
       "dexterity": 20,
       "constitution": 14,
@@ -1297,11 +1297,11 @@
         },
         {
           "name": "Claw",
-          "text": "Melee Weapon Attack: +15 to hit, reach 10 ft., on'e target. Hit: 15 (2d6 + 8) slashing damage."
+          "text": "Melee Weapon Attack: +15 to hit, reach 10 ft., one target. Hit: 15 (2d6 + 8) slashing damage."
         },
         {
           "name": "Tail",
-          "text": "Melee Weapon Attack: +15 to hit, reach 20 ft ., one target. Hit: 17 (2d8 + 8) bludgeoning damage."
+          "text": "Melee Weapon Attack: +15 to hit, reach 20 ft., one target. Hit: 17 (2d8 + 8) bludgeoning damage."
         },
         {
           "name": "Frightful Presence",
@@ -2905,7 +2905,7 @@
         },
         {
           "name": "Claw",
-          "text": "Melee Weapon Attack: +6 to hit, reach 5 ft ., one target. Hit: 6 (1d6 + 3) piercing damage."
+          "text": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) piercing damage."
         },
         {
           "name": "Tail",
@@ -4078,7 +4078,7 @@
         },
         {
           "name": "Spear",
-          "text": "Melee or Ranged Weapon Attack: +7 to hit, reach 5 ft. or range 20/60 ft ., one target. Hit: 7 (1d6 + 4) piercing damage, or 8 (1d8 + 4) piercing damage if used with two hands to make a melee attack, plus 3 (1d6) fire damage."
+          "text": "Melee or Ranged Weapon Attack: +7 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 7 (1d6 + 4) piercing damage, or 8 (1d8 + 4) piercing damage if used with two hands to make a melee attack, plus 3 (1d6) fire damage."
         },
         {
           "name": "Fire Ray",
@@ -7579,7 +7579,7 @@
       "actions": [
         {
           "name": "Slam",
-          "text": "Melee Weapon Attack: +8 to hit, reach 5 ft ., one target. Hit: 12 (2d6 + 5) bludgeoning damage."
+          "text": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 12 (2d6 + 5) bludgeoning damage."
         },
         {
           "name": "Animate Boulders",
@@ -8534,7 +8534,7 @@
       "alignment": "unaligned",
       "AC": "13 (natural armor)",
       "HP": "126 (11d12+55)",
-      "speed": "0ft., swim 50 ft.",
+      "speed": "0 ft., swim 50 ft.",
       "strength": 23,
       "dexterity": 11,
       "constitution": 21,
@@ -10705,7 +10705,7 @@
       "alignment": "unaligned",
       "AC": "12 (natural armor)",
       "HP": "45 (6d10+12)",
-      "speed": "0ft., swim 40 ft.",
+      "speed": "0 ft., swim 40 ft.",
       "strength": 18,
       "dexterity": 13,
       "constitution": 15,
@@ -11014,7 +11014,7 @@
       "actions": [
         {
           "name": "Sting",
-          "text": "Melee Weapon Attack: +5 to hit, reach 5 ft ., one target. Hit: 5 (1d4 + 3) piercing damage, and the target must make on a DC 11 Constitution saving throw, taking 10 (3d6) poison damage on a failed save, or half as much damage on a successful one.",
+          "text": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 5 (1d4 + 3) piercing damage, and the target must make on a DC 11 Constitution saving throw, taking 10 (3d6) poison damage on a failed save, or half as much damage on a successful one.",
           "recharge": "Bite in Beast Form"
         },
         {
@@ -11294,7 +11294,7 @@
       "alignment": "unaligned",
       "AC": "12 (natural armor)",
       "HP": "90 (12d12+12)",
-      "speed": "0ft., swim 60 ft.",
+      "speed": "0 ft., swim 60 ft.",
       "strength": 19,
       "dexterity": 10,
       "constitution": 13,
@@ -12159,7 +12159,7 @@
       "actions": [
         {
           "name": "Claws",
-          "text": "Melee Weapon Attack: +3 to hit, reach 5 ft ., one creature. Hit: 3 (1d4 + 1) slashing damage plus 2 (1d4) fire damage."
+          "text": "Melee Weapon Attack: +3 to hit, reach 5 ft., one creature. Hit: 3 (1d4 + 1) slashing damage plus 2 (1d4) fire damage."
         },
         {
           "name": "Fire Breath",
@@ -14322,11 +14322,11 @@
         },
         {
           "name": "Mace",
-          "text": "Melee Weapon Attack: +14 to hit, reach 10ft., one target. Hit: 15 (2d6 + 8) bludgeoning damage plus 21 (6d6) fire damage."
+          "text": "Melee Weapon Attack: +14 to hit, reach 10 ft., one target. Hit: 15 (2d6 + 8) bludgeoning damage plus 21 (6d6) fire damage."
         },
         {
           "name": "Tail",
-          "text": "Melee Weapon Attack: +14 to hit, reach 10ft., one target. Hit: 24 (3d10 + 8) bludgeoning damage."
+          "text": "Melee Weapon Attack: +14 to hit, reach 10 ft., one target. Hit: 24 (3d10 + 8) bludgeoning damage."
         }
       ]
     },
@@ -14916,7 +14916,7 @@
       "actions": [
         {
           "name": "Claw",
-          "text": "Melee Weapon Attack: +4 to hit, reach 5 ft ., one target. Hit: 5 (1d4 + 3) piercing damage, and the target must succeed on a DC 10 Constitution saving throw or take 5 (2d4) poison damage and become poisoned for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+          "text": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d4 + 3) piercing damage, and the target must succeed on a DC 10 Constitution saving throw or take 5 (2d4) poison damage and become poisoned for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
           "recharge": "Bite in Beast Form"
         },
         {
@@ -14937,7 +14937,7 @@
       "alignment": "unaligned",
       "AC": "13",
       "HP": "1 (1d4-1)",
-      "speed": "0ft., swim 40 ft.",
+      "speed": "0 ft., swim 40 ft.",
       "strength": 2,
       "dexterity": 16,
       "constitution": 9,
@@ -15150,7 +15150,7 @@
       "alignment": "unaligned",
       "AC": "12 (natural armor)",
       "HP": "22 (4d8+4)",
-      "speed": "0ft., swim 40 ft.",
+      "speed": "0 ft., swim 40 ft.",
       "strength": 14,
       "dexterity": 13,
       "constitution": 13,
@@ -15925,7 +15925,7 @@
       "alignment": "unaligned",
       "AC": "11",
       "HP": "1 (1d4-1)",
-      "speed": "0ft., swim 20 ft.",
+      "speed": "0 ft., swim 20 ft.",
       "strength": 1,
       "dexterity": 12,
       "constitution": 8,
@@ -18026,11 +18026,11 @@
         },
         {
           "name": "Hooves",
-          "text": "Melee Weapon Attack: +7 to hit, reach 5 ft ., one target. Hit: 11 (2d6 + 4) bludgeoning damage."
+          "text": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) bludgeoning damage."
         },
         {
           "name": "Horn",
-          "text": "Melee Weapon Attack: +7 to hit, reach 5 ft ., one target. Hit: 8 (1d8 + 4) piercing damage."
+          "text": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 8 (1d8 + 4) piercing damage."
         },
         {
           "name": "Healing Touch",
