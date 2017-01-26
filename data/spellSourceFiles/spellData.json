@@ -191,8 +191,7 @@
       "level": 1,
       "school": "Enchantment",
       "save": {
-        "ability": "Wisdom",
-        "saveFailure": "the beast is charmed by you for the spell's duration. If you or one of your companions harms the target, the spells ends."
+        "ability": "Wisdom"
       },
       "classes": [
         "Bard",
@@ -463,7 +462,6 @@
         "ability": "Strength",
         "damage": "2d6",
         "damageType": "necrotic",
-        "saveFailure": "target can't take reactions until its next turn",
         "saveSuccess": "half damage, but suffers no other effect",
         "higherLevelDice": "1",
         "higherLevelDie": "d6"
@@ -615,8 +613,7 @@
       "level": 1,
       "school": "Enchantment",
       "save": {
-        "ability": "Charisma",
-        "saveFailure": "Whenever a target makes an attack roll or a saving throw before the spell ends, the target must roll a d4 and subtract the number rolled from the attack roll or saving throw."
+        "ability": "Charisma"
       },
       "classes": [
         "Bard",
@@ -668,8 +665,7 @@
       "level": 4,
       "school": "Abjuration",
       "save": {
-        "ability": "Charisma",
-        "saveFailure": "The target is banished.\nIf the target is native to the plane of existence you're on, you banish the target to a harmless demiplane. While there, the target is incapacitated. The target remains there until the spell ends, at which point the target reappears in the space it left or in the nearest unoccupied space if that space is occupied.\nIf the target is native to a different plane of existence than the one you're on, the target is banished with a faint popping noise, returning to its home plane. If the spell ends before 1 minute has passed, the target reappears in the space it left or in the nearest unoccupied space if that space is occupied. Otherwise, the target doesn't return."
+        "ability": "Charisma"
       },
       "classes": [
         "Cleric",
@@ -796,8 +792,7 @@
       "level": 3,
       "school": "Necromancy",
       "save": {
-        "ability": "Wisdom",
-        "saveFailure": "or become cursed. When you cast this spell, choose the nature of the curse from the following options:\n- Choose one ability score. While cursed, the target has disadvantage on ability checks and saving throws made with that ability score.\n- While cursed, the target has disadvantage on attack rolls against you.\n- While cursed, the target must make a Wisdom saving throw at the start of each of its turns. If it fails, it wastes its action that turn doing nothing.\n- While the target is cursed, your attacks and spells deal an extra 1d8 necrotic damage to the target.\nA remove curse spell ends this effect. At the DM's option, you may choose an alternative curse effect, but it should be no more powerful than those described above. The DM has final say on such a curse's effect."
+        "ability": "Wisdom"
       },
       "classes": [
         "Bard",
@@ -951,8 +946,7 @@
         "damageType": "radiant"
       },
       "save": {
-        "ability": "Constitution",
-        "saveFailure": "or be blinded. A creature blinded by this spell makes another Constitution saving throw at the end of each of its rounds. On a successful save, it is no longer blinded."
+        "ability": "Constitution"
       },
       "classes": [
         "Paladin"
@@ -973,8 +967,7 @@
       "level": 2,
       "school": "Necromancy",
       "save": {
-        "ability": "Constitution",
-        "saveFailure": "or be either blinded or deafened (your choice) for the duration. At the end of each of its turns, the target can make a Constitution saving throw. On a success, the spell ends."
+        "ability": "Constitution"
       },
       "classes": [
         "Bard",
@@ -1055,8 +1048,7 @@
       "save": {
         "ability": "Dexterity",
         "damage": "6d6",
-        "damageType": "bludgeoning",
-        "saveFailure": "and restrained. The restrained creature can use an action to make a Strength or Dexterity check (the creature's choice) against the spell's saving throw DC. On a success, the creature is no longer restrained and must either move off the pillar or fall off it."
+        "damageType": "bludgeoning"
       },
       "classes": [
         "Druid"
@@ -1196,7 +1188,7 @@
       "level": 2,
       "school": "Enchantment",
       "save": {
-        "saveFailure": "choose one of the following two effects. You can suppress any effect causing a target to be charmed or frightened. When this spell ends, any suppressed effect resumes, provided that its duration has not expired in the meantime.\nAlternatively, you can make a target indifferent about creatures of your choice that it is hostile toward. This indifference ends if the target is attacked or harmed by a spell or if it witnesses any of its friends being harmed. When the spell ends, the creature becomes hostile again, unless the DM rules otherwise."
+        "ability": "Charisma"
       },
       "classes": [
         "Bard",
@@ -1225,7 +1217,6 @@
         "ability": "Dexterity",
         "damage": "3d8",
         "damageType": "bludgeoning",
-        "saveFailure": "the object strikes the target and stops moving",
         "higherLevelDice": "1",
         "higherLevelDie": "d8"
       },
@@ -1278,8 +1269,7 @@
       "level": 1,
       "school": "Enchantment",
       "save": {
-        "ability": "Wisdom",
-        "saveFailure": "charmed by you until the spell ends or until you or your companions do anything harmful to it. The charmed creature regards you as a friendly acquaintance. When the spell ends, the creature knows it was charmed by you."
+        "ability": "Wisdom"
       },
       "classes": [
         "Bard",
@@ -1550,8 +1540,7 @@
       "level": 1,
       "school": "Enchantment",
       "save": {
-        "ability": "Wisdom",
-        "saveFailure": "or follow the command on its next turn"
+        "ability": "Wisdom"
       },
       "classes": [
         "Cleric",
@@ -1633,8 +1622,7 @@
       "level": 1,
       "school": "Enchantment",
       "save": {
-        "ability": "Wisdom",
-        "saveFailure": "disadvantage on attack rolls against any other creature other than you."
+        "ability": "Wisdom"
       },
       "classes": [
         "Paladin"
@@ -1680,8 +1668,7 @@
       "level": 4,
       "school": "Enchantment",
       "save": {
-        "ability": "Wisdom",
-        "saveFailure": "affected by this spell"
+        "ability": "Wisdom"
       },
       "classes": [
         "Bard"
@@ -1740,8 +1727,7 @@
       "level": 4,
       "school": "Enchantment",
       "save": {
-        "ability": "Wisdom",
-        "saveFailure": "affected by this spell"
+        "ability": "Wisdom"
       },
       "classes": [
         "Bard",
@@ -2298,8 +2284,7 @@
       "level": 2,
       "school": "Enchantment",
       "save": {
-        "ability": "Wisdom",
-        "saveFailure": "become charmed by you for the duration. While the target is charmed in this way, a twisted crown of jagged iron appears on its head, and a madness glows in its eyes.\nThe charmed target must use its action before moving on each of its turns to make a melee attack against a creature other than itself that you mentally choose.\nThe target can act normally on its turn if you choose no creature or if none are within its reach.\nOn your subsequent turns, you must use your action to maintain control over the target, or the spell ends. Also, the target can make a Wisdom saving throw at the end of each of its turns. On a success, the spell ends."
+        "ability": "Wisdom"
       },
       "classes": [
         "Bard",
@@ -2552,7 +2537,6 @@
         "damageType": "thunder",
         "secondaryDamage": "5d6",
         "secondaryDamageType": "radiant or necrotic damage (your choice)",
-        "saveFailure": "be knocked prone",
         "saveSuccess": "half damage and not knocked prone"
       },
       "classes": [
@@ -2653,7 +2637,6 @@
       "school": "Divination",
       "save": {
         "ability": "Wisdom",
-        "saveFailure": "you gain insight into its reasoning (if any), its emotional state, and something that looms large in its mind (such as something it worries over, loves, or hates)",
         "saveSuccess": "the spell ends"
       },
       "classes": [
@@ -2819,7 +2802,6 @@
         "ability": "Wisdom",
         "damage": "3d6",
         "damageType": "psychic",
-        "saveFailure": "must immediately use its reaction, if available, to move as far as its speed allows away from you. The creature doesn't move into obviously dangerous ground, such as a fire or a pit.",
         "saveSuccess": "half damage and doesn't have to move away",
         "higherLevelDice": "1",
         "higherLevelDie": "d6"
@@ -2896,8 +2878,7 @@
       "level": 7,
       "school": "Evocation",
       "save": {
-        "ability": "Charisma",
-        "saveFailure": "each target suffers an effect based on its current hit points:\n&#8226; 50 hit points or fewer: deafened for 1 minute\n&#8226; 40 hit points or fewer: deafened and blinded for 10 minutes\n&#8226; 30 hit points or fewer: blinded, deafened, and stunned for 1 hour\n&#8226; 20 hit points or fewer: killed instantly.\nRegardless of its current hit points, a celestial, an elemental, a fey, or a fiend that fails its save is forced back to its plane of origin (if it isn't there already) and can't return to your current plane for 24 hours by any means short of a wish spell."
+        "ability": "Charisma"
       },
       "classes": [
         "Cleric"
@@ -2920,8 +2901,7 @@
       "level": 4,
       "school": "Enchantment",
       "save": {
-        "ability": "Wisdom",
-        "saveFailure": "become charmed by you for the duration"
+        "ability": "Wisdom"
       },
       "classes": [
         "Druid",
@@ -2952,9 +2932,7 @@
       "level": 8,
       "school": "Enchantment",
       "save": {
-        "condition": "If you or creatures that are friendly to you are fighting it, it has advantage on the saving throw",
-        "ability": "Wisdom",
-        "saveFailure": "be charmed by you for the duration.\nWhile the creature is charmed, you have a telepathic link with it as long as the two of you are on the same plane of existence. You can use this telepathic link to issue commands to the creature while you are conscious (no action required), which it does its best to obey. You can specify a simple and general course of action, such as \"Attack that creature,\" \"Run over there,\" or \"Fetch that object.\" If the creature completes the order and doesn't receive further direction from you, it defends and preserves itself to the best of its ability.\nYou can use your action to take total and precise control of the target. Until the end of your next turn, the creature takes only the actions you choose, and doesn't do anything that you don't allow it to do. During this time, you can also cause the creature to use a reaction, but this requires you to use your own reaction as well.\nEach time the target takes damage, it makes a new Wisdom saving throw against the spell. If the saving throw succeeds, the spell ends."
+        "ability": "Wisdom"
       },
       "classes": [
         "Bard",
@@ -2980,8 +2958,7 @@
       "level": 5,
       "school": "Enchantment",
       "save": {
-        "ability": "Wisdom",
-        "saveFailure": "become charmed by you for the duration.\nWhile the target is charmed, you have a telepathic link with it as long as the two of you are on the same plane of existence. You can use this telepathic link to issue commands to the creature while you are conscious (no action required), which it does its best to obey. You can specify a simple and general course of action, such as \"Attack that creature,\" \"Run over there,\" or \"Fetch that object.\" If the creature completes the order and doesn't receive further direction from you, it defends and preserves itself to the best of its ability.\nYou can use your action to take total and precise control of the target. Until the end of your next turn, the creature takes only the actions you choose, and doesn't do anything that you don't allow it to do. During this time, you can also cause the creature to use a reaction, but this requires you to use your own reaction as well. Each time the target takes damage, it makes a new Wisdom saving throw against the spell. If the saving throw succeeds, the spell ends."
+        "ability": "Wisdom"
       },
       "classes": [
         "Bard",
@@ -3084,7 +3061,6 @@
         "ability": "Strength",
         "damage": "1d8",
         "damageType": "bludgeoning",
-        "saveFailure": "pushed 10 feet away",
         "saveSuccess": "half damage and not pushed",
         "higherLevelDice": "1",
         "higherLevelDie": "d8"
@@ -3114,7 +3090,6 @@
         "ability": "Dexterity",
         "damage": "1d6",
         "damageType": "bludgeoning",
-        "saveFailure": "knocked prone",
         "higherLevelDice": "1",
         "higherLevelDie": "d6"
       },
@@ -3140,8 +3115,7 @@
       "level": 2,
       "school": "Transmutation",
       "save": {
-        "ability": "Strength",
-        "saveFailure": "its flying speed (if any) is reduced to 0 feet for the spell's duration. An airborne creature affected by this spell descends at 60 feet per round until it reaches the ground or the spell ends."
+        "ability": "Strength"
       },
       "classes": [
         "Druid",
@@ -3214,8 +3188,7 @@
       "level": 4,
       "school": "Transmutation",
       "save": {
-        "ability": "Constitution",
-        "saveFailure": "The first time each turn the affected target takes damage of the chosen type, the target takes an extra 2d6 ([[2d6]]) damage of that type. Moreover, the target loses any resistance to that damage type until the spell ends."
+        "ability": "Constitution"
       },
       "classes": [
         "Druid",
@@ -3310,8 +3283,7 @@
       "level": 1,
       "school": "Conjuration",
       "save": {
-        "ability": "Strength",
-        "saveFailure": "be restrained by the magical vines until the spell ends"
+        "ability": "Strength"
       },
       "classes": [
         "Paladin",
@@ -3337,8 +3309,7 @@
       "level": 1,
       "school": "Conjuration",
       "save": {
-        "ability": "Strength",
-        "saveFailure": "be restrained until the spell ends"
+        "ability": "Strength"
       },
       "classes": [
         "Druid"
@@ -3359,8 +3330,7 @@
       "level": 2,
       "school": "Enchantment",
       "save": {
-        "ability": "Wisdom",
-        "saveFailure": "the target has disadvantage on Wisdom (Perception) checks made to perceive any creature other than you until the spell ends or until the target can no longer hear you"
+        "ability": "Wisdom"
       },
       "classes": [
         "Bard",
@@ -3441,8 +3411,7 @@
       "save": {
         "ability": "Dexterity",
         "damage": "3d6",
-        "damageType": "bludgeoning",
-        "saveFailure": "restrained for the spell's duration"
+        "damageType": "bludgeoning"
       },
       "classes": [
         "Warlock",
@@ -3489,8 +3458,7 @@
       "level": 6,
       "school": "Necromancy",
       "save": {
-        "ability": "Wisdom",
-        "saveFailure": "be affected by one of the effects"
+        "ability": "Wisdom"
       },
       "classes": [
         "Bard",
@@ -3532,8 +3500,7 @@
       "level": 1,
       "school": "Evocation",
       "save": {
-        "ability": "Dexterity",
-        "saveFailure": "Target creature creature is outlined in light."
+        "ability": "Dexterity"
       },
       "classes": [
         "Bard",
@@ -3588,8 +3555,7 @@
       "level": 3,
       "school": "Illusion",
       "save": {
-        "ability": "Wisdom",
-        "saveFailure": "drop whatever it is holding and become frightened for the duration.\nWhile frightened by this spell, a creature must take the Dash action and move away from you by the safest available route on each of its turns, unless there is nowhere to move. If the creature ends its turn in a location where it doesn't have line of sight to you, the creature can make a Wisdom saving throw. On a successful save, the spell ends for that creature."
+        "ability": "Wisdom"
       },
       "classes": [
         "Bard",
@@ -3640,8 +3606,7 @@
         "damageType": "psychic"
       },
       "save": {
-        "ability": "Intelligence",
-        "saveFailure": "the creature's Intelligence and Charisma scores become 1. The creature can't cast spells, activate magic items, understand language, or communicate in any intelligible way. The creature can, however, identify its friends, follow them, and even protect them.\nAt the end of every 30 days, the creature can repeat its saving throw against this spell. If it succeeds on its saving throw, the spell ends.\nThe spell can also be ended by greater restoration, heal, or wish."
+        "ability": "Intelligence"
       },
       "classes": [
         "Bard",
@@ -4046,9 +4011,7 @@
       "level": 6,
       "school": "Transmutation",
       "save": {
-        "condition": "if the target's body is made of flesh",
-        "ability": "Constitution",
-        "saveFailure": "it is restrained as its flesh begins to harden"
+        "ability": "Constitution"
       },
       "classes": [
         "Warlock",
@@ -4147,7 +4110,6 @@
       "school": "Evocation",
       "save": {
         "ability": "Charisma",
-        "saveFailure": "the creature can't exit the cage and wastes the use of the spell or effect",
         "saveSuccess": "the creature can use that magic to exit the cage"
       },
       "classes": [
@@ -4257,8 +4219,7 @@
       "save": {
         "ability": "Constitution",
         "damage": "((@{level} + 1) / 6 + 0.5)d6",
-        "damageType": "cold",
-        "saveFailure": "it has disadvantage on the next weapon attack roll it makes before the end of its next turn"
+        "damageType": "cold"
       },
       "classes": [
         "Druid",
@@ -4333,9 +4294,7 @@
       "level": 5,
       "school": "Enchantment",
       "save": {
-        "condition": "If the creature can understand you",
-        "ability": "Wisdom",
-        "saveFailure": "become charmed by you for the duration. While the creature is charmed by you, it takes 5d10 psychic damage each time it acts in a manner directly counter to your instructions, but no more than once each day. A creature that can't understand you is unaffected by the spell.\nYou can issue any command you choose, short of an activity that would result in certain death. Should you issue a suicidal command, the spell ends.\nYou can end the spell early by using an action to dismiss it. A remove curse, greater restoration, or wish spell also ends it."
+        "ability": "Wisdom"
       },
       "classes": [
         "Bard",
@@ -4488,8 +4447,7 @@
       "level": 4,
       "school": "Conjuration",
       "save": {
-        "ability": "Dexterity",
-        "saveFailure": "be pulled 20 feet directly toward the vine"
+        "ability": "Dexterity"
       },
       "classes": [
         "Cleric",
@@ -4718,8 +4676,7 @@
       "level": 0,
       "school": "Transmutation",
       "save": {
-        "ability": "Strength",
-        "saveFailure": "pushed 5 feet away from you"
+        "ability": "Strength"
       },
       "classes": [
         "Druid",
@@ -4745,8 +4702,7 @@
       "level": 2,
       "school": "Evocation",
       "save": {
-        "ability": "Strength",
-        "saveFailure": "pushed 15 feet away from you in a direction following the line"
+        "ability": "Strength"
       },
       "classes": [
         "Cleric",
@@ -4965,8 +4921,7 @@
         "higherLevelDie": "d8"
       },
       "save": {
-        "ability": "Constitution",
-        "saveFailure": "or drop the object if it can. If it doesn't drop the object, it has disadvantage on attack rolls and ability checks until the start of your next turn."
+        "ability": "Constitution"
       },
       "classes": [
         "Bard",
@@ -5083,8 +5038,7 @@
       "level": 5,
       "school": "Enchantment",
       "save": {
-        "ability": "Wisdom",
-        "saveFailure": "be paralyzed for the duration. At the end of each of its turns, the target can make another Wisdom saving throw. On a success, the spell ends on the target."
+        "ability": "Wisdom"
       },
       "classes": [
         "Bard",
@@ -5120,8 +5074,7 @@
       "level": 2,
       "school": "Enchantment",
       "save": {
-        "ability": "Wisdom",
-        "saveFailure": "or be paralyzed for the duration. At the end of each of its turns, the target can make another Wisdom saving throw. On a success, the spell ends on the target."
+        "ability": "Wisdom"
       },
       "classes": [
         "Bard",
@@ -5158,8 +5111,7 @@
       "level": 8,
       "school": "Abjuration",
       "save": {
-        "ability": "Constitution",
-        "saveFailure": "be blinded until the spell ends"
+        "ability": "Constitution"
       },
       "classes": [
         "Cleric"
@@ -5231,8 +5183,7 @@
       "level": 3,
       "school": "Illusion",
       "save": {
-        "ability": "Wisdom",
-        "saveFailure": "the creature becomes charmed for the duration. While charmed by this spell, the creature is incapacitated and has a speed of 0.\nThe spell ends for an affected creature if it takes any damage or if someone else uses an action to shake the creature out of its stupor."
+        "ability": "Wisdom"
       },
       "classes": [
         "Bard",
@@ -5387,7 +5338,6 @@
         "ability": "Dexterity",
         "damage": "7d6",
         "damageType": "fire",
-        "saveFailure": "the target also burns for the spell's duration. The burning target sheds bright light in a 30-foot radius and dim light for an additional 30 feet. At the end of each of its turns, the target repeats the saving throw. It takes 3d6 fire damage on a failed save, and the spell ends on a successful one. These magical flames can't be extinguished through nonmagical means.",
         "saveSuccess": "half damage"
       },
       "classes": [
@@ -5414,7 +5364,6 @@
       "school": "Abjuration",
       "save": {
         "ability": "Wisdom",
-        "saveFailure": "be bound by the spell. While affected by this spell, the creature doesn't need to breathe, eat, or drink, and it doesn't age. Divination spells can't locate or perceive the target",
         "saveSuccess": "it is immune to this spell if you cast it again"
       },
       "classes": [
@@ -5907,9 +5856,7 @@
       "save": {
         "ability": "Strength",
         "damage": "((@{level} + 1) / 6 + 0.5)d8",
-        "damageType": "lightning",
-        "condition": "if it is within 5 feet of you after being pulled",
-        "saveFailure": "pulled up to 10 feet in a straight line toward you"
+        "damageType": "lightning"
       },
       "classes": [
         "Sorcerer",
@@ -6039,8 +5986,7 @@
       "save": {
         "ability": "Strength",
         "damage": "6d6",
-        "damageType": "bludgeoning",
-        "saveFailure": "be pulled 10 feet toward the center"
+        "damageType": "bludgeoning"
       },
       "classes": [
         "Druid"
@@ -6132,7 +6078,6 @@
       "school": "Necromancy",
       "save": {
         "ability": "Charisma",
-        "saveFailure": "your soul moves into the target's body, and the target's soul becomes trapped in the container",
         "saveSuccess": "the target resists your efforts to possess it, and you can't attempt to possess it again for 24 hours"
       },
       "classes": [
@@ -6344,8 +6289,7 @@
       "level": 6,
       "school": "Enchantment",
       "save": {
-        "ability": "Wisdom",
-        "saveFailure": "it pursues the course of action you described to the best of its ability"
+        "ability": "Wisdom"
       },
       "classes": [
         "Bard",
@@ -6375,7 +6319,6 @@
         "ability": "Strength",
         "damage": "2d6",
         "damageType": "bludgeoning",
-        "saveFailure": "restrained for the spell's duration",
         "saveSuccess": "half damage"
       },
       "classes": [
@@ -6716,9 +6659,7 @@
       "level": 5,
       "school": "Enchantment",
       "save": {
-        "condition": "if you are fighting the creature, it has advantage on the saving throw",
-        "ability": "Wisdom",
-        "saveFailure": "the target becomes charmed by you for the duration. The charmed target is incapacitated and unaware of its surroundings, though it can still hear you. If it takes any damage or is targeted by another spell, this spell ends, and none of the target's memories are modified.\nWhile this charm lasts, you can affect the target's memory of an event that it experienced within the last 24 hours and that lasted no more than 10 minutes. You can permanently eliminate all memory of the event, allow the target to recall the event with perfect clarity and exacting detail, change its memory of the details of the event, or create a memory of some other event.\nYou must speak to the target to describe how its memories are affected, and it must be able to understand your language for the modified memories to take root. Its mind fills in any gaps in the details of your description. If the spell ends before you have finished describing the modified memories, the creature's memory isn't altered. Otherwise, the modified memories take hold when the spell ends.\nA modified memory doesn't necessarily affect how a creature behaves, particularly if the memory contradicts the creature's natural inclinations, alignment, or beliefs. An illogical modified memory, such as implanting a memory of how much the creature enjoyed dousing itself in acid, is dismissed, perhaps as a bad dream. The DM might deem a modified memory too nonsensical to affect a creature in a significant manner.\nA remove curse or greater restoration spell cast on the target restores the creature's true memory."
+        "ability": "Wisdom"
       },
       "classes": [
         "Bard",
@@ -6996,8 +6937,7 @@
       "level": 4,
       "school": "Evocation",
       "save": {
-        "ability": "Dexterity",
-        "saveFailure": "the creature is enclosed for the duration."
+        "ability": "Dexterity"
       },
       "classes": [
         "Wizard"
@@ -7093,8 +7033,7 @@
       "level": 2,
       "school": "Illusion",
       "save": {
-        "ability": "Intelligence",
-        "saveFailure": "you create a phantasmal object, creature, or other visible phenomenon of your choice that is no larger than a 10-foot cube and that is perceivable only to the target for the duration. This spell has no effect on undead or constructs.\nThe phantasm includes sound, temperature, and other stimuli, also evident only to the creature.\nThe target can use its action to examine the phantasm with an Intelligence (Investigation) check against your spell save DC. If the check succeeds, the target realizes that the phantasm is an illusion, and the spell ends."
+        "ability": "Intelligence"
       },
       "classes": [
         "Bard",
@@ -7124,8 +7063,7 @@
       "level": 4,
       "school": "Illusion",
       "save": {
-        "ability": "Wisdom",
-        "saveFailure": "becomes frightened for the duration. At the end of each of the target's turns before the spell ends, the target must succeed on a Wisdom saving throw or take 4d10 psychic damage. On a successful save, the spell ends."
+        "ability": "Wisdom"
       },
       "classes": [
         "Wizard"
@@ -7296,8 +7234,7 @@
       "level": 4,
       "school": "Transmutation",
       "save": {
-        "ability": "Wisdom",
-        "saveFailure": "affected by this spell"
+        "ability": "Wisdom"
       },
       "classes": [
         "Bard",
@@ -7665,8 +7602,7 @@
       "level": 2,
       "school": "Transmutation",
       "save": {
-        "ability": "Constitution",
-        "saveFailure": "become blinded until the end of your next turn"
+        "ability": "Constitution"
       },
       "classes": [
         "Bard",
@@ -7796,8 +7732,7 @@
         "higherLevelDie": "d8"
       },
       "save": {
-        "ability": "Constitution",
-        "saveFailure": "be poisoned until the end of your next turn."
+        "ability": "Constitution"
       },
       "classes": [
         "Sorcerer",
@@ -8029,8 +7964,7 @@
       "level": 1,
       "school": "Abjuration",
       "save": {
-        "ability": "Wisdom",
-        "saveFailure": "target has to choose a new target or lose the attack or spell"
+        "ability": "Wisdom"
       },
       "classes": [
         "Cleric",
@@ -8093,7 +8027,6 @@
       "school": "Divination",
       "save": {
         "ability": "Wisdom",
-        "saveFailure": "the spell creates an invisible sensor within 10 feet of the target. You can see and hear through the sensor as if you were there. The sensor moves with the target, remaining within 10 feet of it for the duration. A creature that can see invisible objects sees the sensor as a luminous orb about the size of your fist",
         "saveSuccess": "the target isn't affected, and you can't use this spell against it again for 24 hours"
       },
       "classes": [
@@ -8138,8 +8071,7 @@
         "higherLevelDie": "d6"
       },
       "save": {
-        "ability": "Constitution",
-        "saveFailure": "take more fire damage."
+        "ability": "Constitution"
       },
       "classes": [
         "Paladin"
@@ -8182,8 +8114,7 @@
       "level": 5,
       "school": "Illusion",
       "save": {
-        "ability": "Charisma",
-        "saveFailure": "affected by this spell"
+        "ability": "Charisma"
       },
       "classes": [
         "Bard",
@@ -8546,8 +8477,7 @@
       "level": 3,
       "school": "Conjuration",
       "save": {
-        "ability": "Dexterity",
-        "saveFailure": "fall prone"
+        "ability": "Dexterity"
       },
       "classes": [
         "Cleric",
@@ -8580,8 +8510,7 @@
       "level": 3,
       "school": "Transmutation",
       "save": {
-        "ability": "Wisdom",
-        "saveFailure": "affected by this spell"
+        "ability": "Wisdom"
       },
       "classes": [
         "Druid",
@@ -8855,8 +8784,7 @@
         "damageType": "psychic"
       },
       "save": {
-        "ability": "Wisdom",
-        "saveFailure": "it has disadvantage on attack rolls and ability checks, and can't take reactions, until the end of its next turn."
+        "ability": "Wisdom"
       },
       "classes": [
         "Paladin"
@@ -8880,9 +8808,7 @@
       "level": 3,
       "school": "Conjuration",
       "save": {
-        "condition": "against poison",
         "ability": "Constitution",
-        "saveFailure": "the creature spends its action that turn retching and reeling",
         "saveSuccess": "half damage and not blinded"
       },
       "classes": [
@@ -8980,8 +8906,7 @@
       "save": {
         "ability": "Constitution",
         "damage": "2d6",
-        "damageType": "thunder",
-        "saveFailure": "deafened for 5 minute."
+        "damageType": "thunder"
       },
       "classes": [
         "Druid"
@@ -9032,8 +8957,7 @@
       "level": 2,
       "school": "Enchantment",
       "save": {
-        "ability": "Wisdom",
-        "saveFailure": "it pursues the course of action you described to the best of its ability"
+        "ability": "Wisdom"
       },
       "classes": [
         "Bard",
@@ -9067,7 +8991,6 @@
         "ability": "Constitution",
         "damage": "6d8",
         "damageType": "radiant",
-        "saveFailure": "blinded until your next turn",
         "saveSuccess": "half damage and not blinded"
       },
       "classes": [
@@ -9096,7 +9019,6 @@
         "ability": "Constitution",
         "damage": "12d6",
         "damageType": "radiant",
-        "saveFailure": "blinded for 1 minute. A creature blinded by this spell makes another Constitution saving throw at the end of each of its turns. On a successful save, it is no longer blinded.",
         "saveSuccess": "half damage and not blinded"
       },
       "classes": [
@@ -9192,8 +9114,7 @@
       "level": 1,
       "school": "Enchantment",
       "save": {
-        "ability": "Wisdom",
-        "saveFailure": "or fall prone, becoming incapacitated and unable to stand up for the duration"
+        "ability": "Wisdom"
       },
       "classes": [
         "Bard",
@@ -9372,9 +9293,7 @@
         "damageType": "thunder"
       },
       "save": {
-        "condition": "if the target is a creature",
-        "ability": "Strength",
-        "saveFailure": "pushed 10 feet away from you and knocked prone."
+        "ability": "Strength"
       },
       "classes": [
         "Paladin"
@@ -9426,7 +9345,6 @@
         "ability": "Constitution",
         "damage": "2d8",
         "damageType": "thunder",
-        "saveFailure": "pushed 10 feet away from you",
         "saveSuccess": "half damage and not pushed",
         "higherLevelDice": "1",
         "higherLevelDie": "d8"
@@ -9462,7 +9380,6 @@
         "ability": "Dexterity",
         "damage": "4d8",
         "damageType": "bludgeoning",
-        "saveFailure": "knocked prone",
         "saveSuccess": "half damage and not knocked prone"
       },
       "classes": [
@@ -9602,8 +9519,7 @@
       "level": 9,
       "school": "Transmutation",
       "save": {
-        "ability": "Wisdom",
-        "saveFailure": "affected by this spell"
+        "ability": "Wisdom"
       },
       "classes": [
         "Bard",
@@ -9770,11 +9686,9 @@
       "level": 0,
       "school": "Enchantment",
       "save": {
-        "condition": "if the target can hear you (though it need not understand you)",
         "ability": "Wisdom",
         "damage": "((@{level} + 1) / 6 + 0.5)d4",
-        "damageType": "psychic",
-        "saveFailure": "disadvantage on the next attack roll it makes before the end of its next turn"
+        "damageType": "psychic"
       },
       "classes": [
         "Bard"
@@ -9802,7 +9716,6 @@
         "damage": "10d4",
         "damageType": "acid",
         "saveSuccess": "half damage and no additional damage",
-        "saveFailure": "and 5d4 acid damage at the end of its next turn",
         "higherLevelDice": "2",
         "higherLevelDie": "d4"
       },
@@ -10121,8 +10034,7 @@
       "school": "Conjuration",
       "save": {
         "ability": "Strength",
-        "saveSuccess": "the creature is ejected from that space to the nearest unoccupied space outside it. A Huge or larger creature succeeds on the saving throw automatically.",
-        "saveFailure": "a creature is restrained by the sphere and is engulfed by the water. At the end of each of its turns, a restrained target can repeat the saving throw.\nThe sphere can restrain a maximum of four Medium or smaller creatures or one Large creature. If the sphere restrains a creature in excess of these numbers, a random creature that was already restrained by the sphere falls out of it and lands prone in a space within 5 feet of it."
+        "saveSuccess": "the creature is ejected from that space to the nearest unoccupied space outside it. A Huge or larger creature succeeds on the saving throw automatically."
       },
       "classes": [
         "Druid",
@@ -10148,8 +10060,7 @@
       "level": 2,
       "school": "Conjuration",
       "save": {
-        "ability": "Dexterity",
-        "saveFailure": "the creature is restrained as long as it remains in the webs or until it breaks free.\nA creature restrained by the webs can use its action to make a Strength check against your spell save DC. If it succeeds, it is no longer restrained.\nThe webs are flammable. Any 5-foot cube of webs exposed to fire burns away in 1 round, dealing 2d4 fire damage to any creature that starts its turn in the fire."
+        "ability": "Dexterity"
       },
       "classes": [
         "Druid",
@@ -10176,8 +10087,7 @@
       "level": 9,
       "school": "Illusion",
       "save": {
-        "ability": "Wisdom",
-        "saveFailure": "become frightened for the duration. The illusion calls on the creature's deepest fears, manifesting its worst nightmares as an implacable threat. At the end of each of the frightened creature's turns, it must succeed on a Wisdom saving throw or take 4d10 psychic damage. On a successful save, the spell ends for that creature."
+        "ability": "Wisdom"
       },
       "classes": [
         "Wizard"
@@ -10347,9 +10257,7 @@
         "damageType": "psychic"
       },
       "save": {
-        "condition": "if the target is a creature",
-        "ability": "Wisdom",
-        "saveFailure": "or be frightened until the spell ends. As an action, the creature can make a Wisdom check against your spell save DC to steel its resolve and end this spell"
+        "ability": "Wisdom"
       },
       "classes": [
         "Paladin"
@@ -10370,8 +10278,7 @@
       "level": 2,
       "school": "Enchantment",
       "save": {
-        "ability": "Charisma",
-        "saveFailure": "a creature can't speak a deliberate lie while in the radius"
+        "ability": "Charisma"
       },
       "classes": [
         "Bard",

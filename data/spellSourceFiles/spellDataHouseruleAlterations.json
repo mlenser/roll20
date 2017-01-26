@@ -166,8 +166,7 @@
       "save": {
         "ability": "Dexterity",
         "damage": "8d6",
-        "damageType": "bludgeoning",
-        "saveFailure": "and restrained. The restrained creature can use an action to make a Strength or Dexterity check (the creature's choice) against the spell's saving throw DC. On a success, the creature is no longer restrained and must either move off the pillar or fall off it."
+        "damageType": "bludgeoning"
       }
     },
     {
@@ -241,7 +240,6 @@
         "ability": "Dexterity",
         "damage": "3d10",
         "damageType": "bludgeoning",
-        "saveFailure": "the object strikes the target and stops moving",
         "higherLevelDice": "1",
         "higherLevelDie": "d10"
       }
@@ -393,8 +391,7 @@
       "name": "Crown of Madness",
       "description": "One creature of your choice that you can see within range must succeed on a Wisdom saving throw or become charmed by you for the duration. While the target is charmed in this way, a twisted crown of jagged iron appears on its head, and a madness glows in its eyes.\nThe charmed target must use its action to make melee attacks against a creature other than itself that you mentally choose. The charmed target can move up to half its speed before making the attacks.\nThe target can act normally on its turn if you choose no creature or if none are within its reach.\nOn your subsequent turns, you must use your action to maintain control over the target, or the spell ends. Also, the target can make a Wisdom saving throw at the end of each of its turns. On a success, the spell ends.",
       "save": {
-        "ability": "Wisdom",
-        "saveFailure": "become charmed by you for the duration. While the target is charmed in this way, a twisted crown of jagged iron appears on its head, and a madness glows in its eyes.\nThe charmed target must use its action to make melee attacks against a creature other than itself that you mentally choose. The charmed target can move up to half its speed before making the attacks.\nThe target can act normally on its turn if you choose no creature or if none are within its reach.\nOn your subsequent turns, you must use your action to maintain control over the target, or the spell ends. Also, the target can make a Wisdom saving throw at the end of each of its turns. On a success, the spell ends."
+        "ability": "Wisdom"
       }
     },
     {
@@ -422,7 +419,6 @@
         "damageType": "thunder",
         "secondaryDamage": "5d6",
         "secondaryDamageType": "radiant or necrotic damage (your choice)",
-        "saveFailure": "be knocked prone",
         "saveSuccess": "half damage and not knocked prone",
         "higherLevelDice": "1",
         "higherLevelDie": "d6"
@@ -481,8 +477,7 @@
       "name": "Divine Word",
       "description": "You utter a divine word, imbued with the power that shaped the world at the dawn of creation. Choose any number of creatures you can see within range. Each creature that can hear you must make a Constitution saving throw. On a failed save, a creature suffers an effect based on its current hit points:\n&#8226; 50 hit points or fewer: deafened for 1 minute\n&#8226; 40 hit points or fewer: deafened and blinded for 10 minutes\n&#8226; 30 hit points or fewer: blinded, deafened, and stunned for 1 hour\n&#8226; 20 hit points or fewer: killed instantly.\nRegardless of its current hit points, a celestial, an elemental, a fey, or a fiend that fails its save is forced back to its plane of origin (if it isn't there already) and can't return to your current plane for 24 hours by any means short of a wish spell.",
       "save": {
-        "ability": "Constitution",
-        "saveFailure": "each target suffers an effect based on its current hit points:\n&#8226; 50 hit points or fewer: deafened for 1 minute\n&#8226; 40 hit points or fewer: deafened and blinded for 10 minutes\n&#8226; 30 hit points or fewer: blinded, deafened, and stunned for 1 hour\n&#8226; 20 hit points or fewer: killed instantly.\nRegardless of its current hit points, a celestial, an elemental, a fey, or a fiend that fails its save is forced back to its plane of origin (if it isn't there already) and can't return to your current plane for 24 hours by any means short of a wish spell."
+        "ability": "Constitution"
       }
     },
     {
@@ -526,7 +521,6 @@
         "ability": "Strength",
         "damage": "2d4",
         "damageType": "bludgeoning",
-        "saveFailure": "pushed 10 feet away",
         "saveSuccess": "half damage and not pushed",
         "higherLevelDice": "1",
         "higherLevelDie": "d4"
@@ -540,7 +534,6 @@
         "ability": "Dexterity",
         "damage": "2d6",
         "damageType": "bludgeoning",
-        "saveFailure": "knocked prone",
         "saveSuccess": "half damage and not prone",
         "higherLevelDice": "1",
         "higherLevelDie": "d6"
@@ -623,8 +616,7 @@
       "level": 3,
       "school": "Transmutation",
       "save": {
-        "ability": "Constitution",
-        "saveFailure": "blinded until the end of it's next turn"
+        "ability": "Constitution"
       },
       "classes": [
         "Sorcerer",
@@ -641,16 +633,14 @@
         "damage": "4d6",
         "damageType": "bludgeoning",
         "higherLevelDice": "1",
-        "higherLevelDie": "d6",
-        "saveFailure": "restrained for the spell's duration"
+        "higherLevelDie": "d6"
       }
     },
     {
       "name": "Faerie Fire",
       "description": "Each object in a 20-foot cube within range is outlined in blue, green, or violet light (your choice). Any creature in the area when the spell is cast is also outlined in light if it fails a Constitution saving throw. For the duration, objects and affected creatures shed dim light in a 10-foot radius.\nAny attack roll against an affected creature or object has advantage if the attacker can see it, and the affected creature or object can't benefit from being invisible.",
       "save": {
-        "ability": "Constitution",
-        "saveFailure": "Target creature creature is outlined in light."
+        "ability": "Constitution"
       }
     },
     {
@@ -713,8 +703,7 @@
       "save": {
         "ability": "Constitution",
         "damage": "((@{level} + 1) / 6 + 0.5)d8",
-        "damageType": "cold",
-        "saveFailure": "it has disadvantage on the next weapon attack roll it makes before the end of its next turn"
+        "damageType": "cold"
       }
     },
     {
@@ -744,8 +733,7 @@
       "save": {
         "ability": "Dexterity",
         "damage": "3d6",
-        "damageType": "bludgeoning",
-        "saveFailure": "restrained for the spell's duration"
+        "damageType": "bludgeoning"
       },
       "classes": [
         "Sorcerer",
@@ -776,8 +764,7 @@
       "save": {
         "ability": "Dexterity",
         "damage": "3d6",
-        "damageType": "bludgeoning",
-        "saveFailure": "restrained for the spell's duration"
+        "damageType": "bludgeoning"
       },
       "classes": [
         "Druid",
@@ -934,7 +921,6 @@
         "damage": "3d8",
         "damageType": "cold",
         "saveSuccess": "half damage",
-        "saveFailure": "fall prone",
         "higherLevelDice": "1",
         "higherLevelDie": "d8"
       },
@@ -970,8 +956,7 @@
         "damageType": "piercing",
         "secondaryDamage": "3d6",
         "secondaryDamageType": "cold",
-        "saveSuccess": "half damage",
-        "saveFailure": "fall prone"
+        "saveSuccess": "half damage"
       },
       "classes": [
         "Druid",
@@ -1014,7 +999,6 @@
         "damageType": "fire",
         "higherLevelDice": "1",
         "higherLevelDie": "d6",
-        "saveFailure": "the target also burns for the spell's duration. The burning target sheds bright light in a 30 ft radius and dim light for an additional 30 ft. At the end of each of its turns, the target repeats the saving throw. It takes 10d6 fire damage on a failed save, and the spell ends on a successful one. These magical flames can't be extinguished through nonmagical means.",
         "saveSuccess": "half damage"
       }
     },
@@ -1139,9 +1123,7 @@
       "save": {
         "ability": "Strength",
         "damage": "((@{level} + 1) / 6 + 0.5)d12",
-        "damageType": "lightning",
-        "condition": "if it is within 5 feet of you after being pulled",
-        "saveFailure": "pulled up to 10 feet in a straight line toward you"
+        "damageType": "lightning"
       }
     },
     {
@@ -1174,8 +1156,7 @@
         "damage": "8d6",
         "damageType": "bludgeoning",
         "higherLevelDice": "1",
-        "higherLevelDie": "d6",
-        "saveFailure": "be pulled 10 feet toward the center"
+        "higherLevelDie": "d6"
       }
     },
     {
@@ -1235,7 +1216,6 @@
         "damageType": "bludgeoning",
         "higherLevelDice": "1",
         "higherLevelDie": "d6",
-        "saveFailure": "restrained for the spell's duration",
         "saveSuccess": "half damage"
       }
     },
@@ -1317,9 +1297,7 @@
       "level": 3,
       "school": "Transmutation",
       "save": {
-        "condition": "against poison",
-        "ability": "Constitution",
-        "saveFailure": "the creature spends its action that turn retching and reeling. Creatures that don't need to breathe or are immune to poison automatically succeed on this saving throw"
+        "ability": "Constitution"
       },
       "classes": [
         "Sorcerer",
@@ -1401,8 +1379,7 @@
       "level": 0,
       "school": "Necromancy",
       "save": {
-        "ability": "Constitution",
-        "saveFailure": "or be poisoned until the end of your next turn"
+        "ability": "Constitution"
       },
       "classes": [
         "Druid",
@@ -1532,8 +1509,7 @@
     {
       "name": "Slow",
       "save": {
-        "ability": "Strength",
-        "saveFailure": "affected by this spell"
+        "ability": "Constitution"
       }
     },
     {
@@ -1662,7 +1638,6 @@
         "damageType": "bludgeoning",
         "higherLevelDice": "1",
         "higherLevelDie": "d6",
-        "saveFailure": "knocked prone",
         "saveSuccess": "half damage and not knocked prone"
       }
     },
@@ -1690,11 +1665,9 @@
       "description": "You unleash a string of insults laced with subtle enchantments at a creature you can see within range. If the target can hear you (though it need not understand you), it must succeed on a Wisdom saving throw or take 1d10 psychic damage and have disadvantage on the next attack roll it makes before the end of its next turn.",
       "higherLevel": "This spell's damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10).",
       "save": {
-        "condition": "if the target can hear you (though it need not understand you)",
         "ability": "Wisdom",
         "damage": "((@{level} + 1) / 6 + 0.5)d8",
-        "damageType": "psychic",
-        "saveFailure": "disadvantage on the next attack roll it makes before the end of its next turn"
+        "damageType": "psychic"
       }
     },
     {
@@ -1702,8 +1675,7 @@
       "description": "You conjure up a wall of swirling sand on the ground at a point you can see within range. You can make the wall up to 30 feet long, 10 feet high, and 10 feet thick, and it vanishes when the spell ends. It blocks line of sight but not movement. A creature must spend 3 feet of movement for every 1 foot it moves through the wall. Each creature within the wall when it appears, or that starts its turn in the wall, or that enters it during its turn must make a Constitution saving throw. On a failed save, the creature is blinded for 1 minute. At the end of each of its turns, a blinded target can repeat the saving throw.",
       "target": "Each creature within the wall when it appears, or that starts its turn in the wall, or that enters it during its turn",
       "save": {
-        "ability": "Constitution",
-        "saveFailure": "blinded for 1 minute. At the end of each of its turns, a blinded target can repeat the saving throw."
+        "ability": "Constitution"
       }
     },
     {
@@ -1748,8 +1720,7 @@
       "name": "Web",
       "description": "You conjure a mass of thick, sticky webbing at a point of your choice within range. The webs fill a 20-foot cube from that point for the duration. The webs are difficult terrain and lightly obscure their area.\nIf the webs aren't anchored between two solid masses (such as walls or trees) or layered across a floor, wall, or ceiling, the conjured web collapses on itself, and the spell ends at the start of your next turn. Webs layered over a flat surface have a depth of 5 feet.\nEach creature that starts its turn in the webs or that enters them during its turn must make a Strength saving throw. On a failed save, the creature is restrained as long as it remains in the webs or until it breaks free.\nA creature restrained by the webs can use its action to make a Strength check against your spell save DC. If it succeeds, it is no longer restrained.\nThe webs are flammable. Any 5-foot cube of webs exposed to fire burns away in 1 round, dealing 2d4 fire damage to any creature that starts its turn in the fire.",
       "save": {
-        "ability": "Strength",
-        "saveFailure": "the creature is restrained as long as it remains in the webs or until it breaks free.\nA creature restrained by the webs can use its action to make a Strength check against your spell save DC. If it succeeds, it is no longer restrained.\nThe webs are flammable. Any 5 ft cube of webs exposed to fire burns away in 1 round, dealing 2d4 fire damage to any creature that starts its turn in the fire."
+        "ability": "Strength"
       }
     },
     {
