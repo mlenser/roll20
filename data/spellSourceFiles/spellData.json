@@ -2331,7 +2331,7 @@
       "level": 1,
       "school": "Evocation",
       "heal": {
-        "amount": "1d8",
+        "heal": "1d8",
         "castingStat": true,
         "higherLevelDice": "1",
         "higherLevelDie": "d8"
@@ -4862,7 +4862,7 @@
       "level": 6,
       "school": "Evocation",
       "heal": {
-        "amount": "70",
+        "bonus": "70",
         "higherLevelAmount": "10"
       },
       "classes": [
@@ -4885,7 +4885,7 @@
       "level": 1,
       "school": "Evocation",
       "heal": {
-        "amount": "1d4",
+        "heal": "1d4",
         "castingStat": true,
         "higherLevelDice": "1",
         "higherLevelDie": "d4"
@@ -6216,7 +6216,7 @@
       "level": 5,
       "school": "Evocation",
       "heal": {
-        "amount": "3d8",
+        "heal": "3d8",
         "castingStat": true,
         "higherLevelDice": "1",
         "higherLevelDie": "d8"
@@ -6263,7 +6263,7 @@
       "level": 3,
       "school": "Evocation",
       "heal": {
-        "amount": "1d4",
+        "heal": "1d4",
         "castingStat": true,
         "higherLevelDice": "1",
         "higherLevelDie": "d4"
@@ -7320,7 +7320,7 @@
       "level": 2,
       "school": "Evocation",
       "heal": {
-        "amount": "2d8",
+        "heal": "2d8",
         "castingStat": true,
         "higherLevelDice": "1",
         "higherLevelDie": "d8"
@@ -7756,7 +7756,7 @@
       "level": 7,
       "school": "Transmutation",
       "heal": {
-        "amount": "4d8",
+        "heal": "4d8",
         "bonus": "15"
       },
       "classes": [
