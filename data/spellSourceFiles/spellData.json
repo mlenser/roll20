@@ -45,8 +45,7 @@
       "damage": {
         "damage": "1d6",
         "damageType": "triggering type",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDice": 1
       },
       "classes": [
         "Druid",
@@ -101,8 +100,7 @@
         "damage": "3d8",
         "damageType": "fire",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d8"
+        "higherLevelDice": 1
       },
       "classes": [
         "Sorcerer",
@@ -463,8 +461,7 @@
         "damage": "2d6",
         "damageType": "necrotic",
         "saveSuccess": "half damage, but suffers no other effect",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDice": 1
       },
       "classes": [
         "Warlock"
@@ -914,8 +911,7 @@
         "damage": "8d8",
         "damageType": "necrotic",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d8"
+        "higherLevelDice": 1
       },
       "classes": [
         "Druid",
@@ -1094,8 +1090,7 @@
       "damage": {
         "damage": "2d6",
         "damageType": "radiant",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDice": 1
       },
       "classes": [
         "Paladin"
@@ -1121,8 +1116,7 @@
         "damage": "3d6",
         "damageType": "fire",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDice": 1
       },
       "classes": [
         "Cleric",
@@ -1158,8 +1152,7 @@
         "damage": "3d10",
         "damageType": "lightning",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d10"
+        "higherLevelDice": 1
       },
       "classes": [
         "Cleric",
@@ -1217,8 +1210,7 @@
         "ability": "Dexterity",
         "damage": "3d8",
         "damageType": "bludgeoning",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d8"
+        "higherLevelDice": 1
       },
       "classes": [
         "Sorcerer",
@@ -1331,8 +1323,7 @@
         "type": "ranged",
         "damage": "3d8",
         "damageType": "acid, cold, fire, lightning, poison, or thunder",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d8"
+        "higherLevelDice": 1
       },
       "classes": [
         "Sorcerer",
@@ -1362,8 +1353,7 @@
         "damage": "8d6",
         "damageType": "necrotic",
         "saveSuccess": "half damage",
-        "higherLevelDice": "2",
-        "higherLevelDie": "d6"
+        "higherLevelDice": 2
       },
       "classes": [
         "Sorcerer",
@@ -1460,8 +1450,7 @@
       "damage": {
         "damage": "4d4",
         "damageType": "slashing",
-        "higherLevelDice": "2",
-        "higherLevelDie": "d4"
+        "higherLevelDice": 2
       },
       "classes": [
         "Bard",
@@ -1491,8 +1480,7 @@
         "damage": "5d8",
         "damageType": "poison",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d8"
+        "higherLevelDice": 1
       },
       "classes": [
         "Druid",
@@ -1696,8 +1684,7 @@
         "damage": "8d8",
         "damageType": "cold",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d8"
+        "higherLevelDice": 1
       },
       "classes": [
         "Druid",
@@ -2333,8 +2320,7 @@
       "heal": {
         "heal": "1d8",
         "castingStat": true,
-        "higherLevelDice": "1",
-        "higherLevelDie": "d8"
+        "higherLevelDice": 1
       },
       "classes": [
         "Bard",
@@ -2492,8 +2478,7 @@
         "damage": "12d6",
         "damageType": "fire",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDice": 1
       },
       "classes": [
         "Sorcerer",
@@ -2723,8 +2708,7 @@
         "damageBonus": "40",
         "damageType": "force",
         "saveSuccess": "half damage",
-        "higherLevelDice": "3",
-        "higherLevelDie": "d6"
+        "higherLevelDice": 3
       },
       "classes": [
         "Sorcerer",
@@ -2803,8 +2787,7 @@
         "damage": "3d6",
         "damageType": "psychic",
         "saveSuccess": "half damage and doesn't have to move away",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDice": 1
       },
       "classes": [
         "Bard",
@@ -3062,8 +3045,7 @@
         "damage": "1d8",
         "damageType": "bludgeoning",
         "saveSuccess": "half damage and not pushed",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d8"
+        "higherLevelDice": 1
       },
       "classes": [
         "Druid",
@@ -3090,8 +3072,7 @@
         "ability": "Dexterity",
         "damage": "1d6",
         "damageType": "bludgeoning",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDice": 1
       },
       "classes": [
         "Bard",
@@ -3359,8 +3340,7 @@
         "damage": "3d12",
         "damageType": "bludgeoning",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d12"
+        "higherLevelDice": 1
       },
       "classes": [
         "Druid",
@@ -3772,8 +3752,7 @@
         "damage": "8d6",
         "damageType": "fire",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDice": 1
       },
       "classes": [
         "Cleric",
@@ -3908,8 +3887,7 @@
         "type": "melee",
         "damage": "3d6",
         "damageType": "fire",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDice": 1
       },
       "classes": [
         "Druid"
@@ -3939,8 +3917,7 @@
         "secondaryDamage": "4d6",
         "secondaryDamageType": "radiant",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDice": 1
       },
       "classes": [
         "Cleric",
@@ -3981,8 +3958,7 @@
         "damage": "2d6",
         "damageType": "fire",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDice": 1
       },
       "classes": [
         "Cleric",
@@ -4654,8 +4630,7 @@
         "type": "ranged",
         "damage": "4d6",
         "damageType": "radiant",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDice": 1
       },
       "classes": [
         "Cleric"
@@ -4734,8 +4709,7 @@
         "damage": "1d10",
         "damageType": "piercing",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d10"
+        "higherLevelDice": 1
       },
       "classes": [
         "Ranger"
@@ -4863,7 +4837,7 @@
       "school": "Evocation",
       "heal": {
         "bonus": 70,
-        "higherLevelAmount": "10"
+        "higherLevelAmount": 10
       },
       "classes": [
         "Cleric",
@@ -4887,8 +4861,7 @@
       "heal": {
         "heal": "1d4",
         "castingStat": true,
-        "higherLevelDice": "1",
-        "higherLevelDie": "d4"
+        "higherLevelDice": 1
       },
       "classes": [
         "Bard",
@@ -4917,8 +4890,7 @@
       "damage": {
         "damage": "2d8",
         "damageType": "fire",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d8"
+        "higherLevelDice": 1
       },
       "save": {
         "ability": "Constitution"
@@ -4948,8 +4920,7 @@
         "damage": "2d10",
         "damageType": "fire",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d10"
+        "higherLevelDice": 1
       },
       "classes": [
         "Warlock"
@@ -5217,8 +5188,7 @@
         "ability": "Dexterity",
         "damage": "2d6",
         "damageType": "cold",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDice": 1
       },
       "classes": [
         "Druid",
@@ -5250,8 +5220,7 @@
         "secondaryDamage": "4d6",
         "secondaryDamageType": "cold",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d8"
+        "higherLevelDice": 1
       },
       "classes": [
         "Cleric",
@@ -5416,8 +5385,7 @@
         "type": "melee",
         "damage": "3d10",
         "damageType": "necrotic",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d10"
+        "higherLevelDice": 1
       },
       "classes": [
         "Cleric"
@@ -5446,8 +5414,7 @@
         "damage": "4d10",
         "damageType": "piercing",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d10"
+        "higherLevelDice": 1
       },
       "classes": [
         "Cleric",
@@ -5790,16 +5757,14 @@
       "damage": {
         "damage": "4d8",
         "damageType": "lightning",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d8"
+        "higherLevelDice": 1
       },
       "save": {
         "ability": "Dexterity",
         "secondaryDamage": "2d8",
         "secondaryDamageType": "lightning",
         "saveSuccess": "half damage",
-        "higherLevelSecondaryDice": "1",
-        "higherLevelSecondaryDie": "d8"
+        "higherLevelSecondaryDice": 1
       },
       "classes": [
         "Ranger"
@@ -5827,8 +5792,7 @@
         "damage": "8d6",
         "damageType": "lightning",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDice": 1
       },
       "classes": [
         "Druid",
@@ -6218,8 +6182,7 @@
       "heal": {
         "heal": "3d8",
         "castingStat": true,
-        "higherLevelDice": "1",
-        "higherLevelDie": "d8"
+        "higherLevelDice": 1
       },
       "classes": [
         "Bard",
@@ -6265,8 +6228,7 @@
       "heal": {
         "heal": "1d4",
         "castingStat": true,
-        "higherLevelDice": "1",
-        "higherLevelDie": "d4"
+        "higherLevelDice": 1
       },
       "classes": [
         "Cleric"
@@ -6391,10 +6353,8 @@
         "damageType": "acid",
         "secondaryDamage": "2d4",
         "secondaryDamageType": "acid",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d4",
-        "higherLevelSecondaryDice": "1",
-        "higherLevelSecondaryDie": "d4"
+        "higherLevelDice": 1,
+        "higherLevelSecondaryDice": 1
       },
       "classes": [
         "Druid",
@@ -6712,8 +6672,7 @@
         "damage": "2d10",
         "damageType": "radiant",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d10"
+        "higherLevelDice": 1
       },
       "classes": [
         "Druid",
@@ -6912,8 +6871,7 @@
         "damage": "10d6",
         "damageType": "cold",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDice": 1
       },
       "classes": [
         "Wizard"
@@ -7322,8 +7280,7 @@
       "heal": {
         "heal": "2d8",
         "castingStat": true,
-        "higherLevelDice": "1",
-        "higherLevelDie": "d8"
+        "higherLevelDice": 1
       },
       "classes": [
         "Cleric"
@@ -7728,8 +7685,7 @@
         "type": "ranged",
         "damage": "2d8",
         "damageType": "poison",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d8"
+        "higherLevelDice": 1
       },
       "save": {
         "ability": "Constitution"
@@ -8067,8 +8023,7 @@
       "damage": {
         "damage": "1d6",
         "damageType": "fire",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDice": 1
       },
       "save": {
         "ability": "Constitution"
@@ -8237,8 +8192,7 @@
         "damage": "3d8",
         "damageType": "thunder",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d8"
+        "higherLevelDice": 1
       },
       "classes": [
         "Bard",
@@ -8543,8 +8497,7 @@
         "damage": "3d6",
         "damageType": "cold",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDice": 1
       },
       "classes": [
         "Sorcerer",
@@ -8724,8 +8677,7 @@
         "damage": "3d8",
         "damageType": "radiant or necrotic",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d8"
+        "higherLevelDice": 1
       },
       "classes": [
         "Cleric"
@@ -8754,8 +8706,7 @@
         "damage": "1d8",
         "castingStat": true,
         "damageType": "force",
-        "higherLevelDice": "0.49",
-        "higherLevelDie": "d8"
+        "higherLevelDice": 0.49
       },
       "classes": [
         "Cleric"
@@ -8932,8 +8883,7 @@
         "ability": "Strength",
         "damage": "2d6",
         "damageType": "bludgeoning",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDice": 1
       },
       "classes": [
         "Sorcerer",
@@ -9346,8 +9296,7 @@
         "damage": "2d8",
         "damageType": "thunder",
         "saveSuccess": "half damage and not pushed",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d8"
+        "higherLevelDice": 1
       },
       "classes": [
         "Bard",
@@ -9663,8 +9612,7 @@
         "type": "melee",
         "damage": "3d6",
         "damageType": "necrotic",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDice": 1
       },
       "classes": [
         "Warlock",
@@ -9716,8 +9664,7 @@
         "damage": "10d4",
         "damageType": "acid",
         "saveSuccess": "half damage and no additional damage",
-        "higherLevelDice": "2",
-        "higherLevelDie": "d4"
+        "higherLevelDice": 2
       },
       "classes": [
         "Sorcerer",
@@ -9747,8 +9694,7 @@
         "damage": "5d8",
         "damageType": "fire",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d8"
+        "higherLevelDice": 1
       },
       "classes": [
         "Cleric",
@@ -9808,8 +9754,7 @@
         "damage": "10d6",
         "damageType": "cold",
         "saveSuccess": "half damage",
-        "higherLevelDice": "2",
-        "higherLevelDie": "d6"
+        "higherLevelDice": 2
       },
       "classes": [
         "Wizard"
@@ -9890,8 +9835,7 @@
         "damage": "7d8",
         "damageType": "piercing",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d8"
+        "higherLevelDice": 1
       },
       "classes": [
         "Druid"
@@ -10212,8 +10156,7 @@
         "type": "ranged",
         "damage": "1d12",
         "damageType": "lightning",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d12"
+        "higherLevelDice": 1
       },
       "classes": [
         "Sorcerer",
