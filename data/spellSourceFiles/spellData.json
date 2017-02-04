@@ -4862,7 +4862,7 @@
       "level": 6,
       "school": "Evocation",
       "heal": {
-        "bonus": "70",
+        "bonus": 70,
         "higherLevelAmount": "10"
       },
       "classes": [
@@ -7757,7 +7757,7 @@
       "school": "Transmutation",
       "heal": {
         "heal": "4d8",
-        "bonus": "15"
+        "bonus": 15
       },
       "classes": [
         "Bard",
