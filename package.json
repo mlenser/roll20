@@ -2,13 +2,13 @@
   "name": "roll20",
   "version": "0.0.1",
   "devDependencies": {
-    "glob": "latest",
+    "glob": "^7.1.1",
     "gulp": "latest",
-    "gulp-eol": "latest",
-    "gulp-inject": "latest",
+    "gulp-eol": "^0.1.2",
+    "gulp-inject": "^4.2.0",
     "gulp-json-editor": "^2.2.1",
     "gulp-jsoncombine": "latest",
     "gulp-rename": "latest",
-    "gulp-uglify": "latest"
+    "gulp-uglify": "^2.0.1"
   }
 }
