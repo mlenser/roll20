@@ -1,0 +1,98 @@
+{
+  "version": "1.0.0",
+  "dependencies": [
+    "spellData"
+  ],
+  "patch": true,
+  "spells": [
+    {
+      "name": "Chameleon",
+      "description": "Your skin and equipment take on the color and texture of nearby objects, including floors and walls, masking you from detection. For the duration, you have advantage on Dexterity (Stealth) checks.",
+      "castingTime": "1 action",
+      "range": "Self",
+      "components": {
+        "olfactory": true,
+      },
+      "duration": "up to 1 minute",
+      "concentration": true,
+      "level": 1,
+      "school": "Transmutation",
+      "classes": [
+        "Cryptic",
+        "Soulknife"
+      ]
+    },
+    {
+      "name": "Distract",
+      "description": "You cause your subject's mind to wander, distracting it. It has disadvantage on its next Wisdom (Perception) or Wisdom (Insight) check before the spell ends.",
+      "castingTime": "1 action",
+      "range": "30 feet",
+      "components": {
+        "mental": true
+      },
+      "duration": "up to 1 minute",
+      "concentration": true,
+      "level": 0,
+      "school": "Enchantment",
+      "classes": [
+        "Cryptic",
+        "Psion",
+        "Soulknife"
+      ]
+    },
+    {
+      "name": "Hidden Pocket",
+      "description": "You cause one object or weapon you are holding to dissolve into your body. This process is harmless to you and the object. Until the object reappears, it is inaccessible, as are any of its properties. You can have only one object at a time affected in this way. You can object the weapon to your hand as a bonus action. It reappears in your space if you are unconscious or dead.",
+      "castingTime": "1 action",
+      "range": "Touch",
+      "components": {
+        "mental": true
+      },
+      "duration": "Until dispelled",
+      "level": 0,
+      "school": "Transmutation",
+      "classes": [
+        "Cryptic",
+        "Soulknife"
+      ]
+    },
+    {
+      "name": "Mental Barrier",
+      "description": "An invisible barrier of magical force appears and protects you. Until the start of your next turn, you have a +3 bonus to AC, including against the triggering attack.",
+      "higherLevel": "For every additional spell point you spend, the bonus to AC increases by 1, to a maximum total of +5 bonus to AC.",
+      "castingTime": "1 reaction",
+      "range": "Self",
+      "components": {
+        "auditory": true
+      },
+      "duration": "1 round",
+      "level": 1,
+      "school": "Abjuration",
+      "classes": [
+        "Cryptic",
+        "Psion",
+        "Soulknife"
+      ]
+    },
+    {
+      "name": "Precognition",
+      "description": "You predict the near future, aiding yourself in combat. Whenever you make an attack roll, ability check, or a saving throw before the spell ends, you can roll a d4 and add the number rolled to the attack roll, ability check, or saving throw.\nAdditionally, whenever you are attacked before the spell ends, you can roll a d4 and add the number rolled to your armor class.",
+      "higherLevel": "If you spend 3 additional spell point, you roll a d6.\nIf you spend 5 additional spell point, you roll a d8.",
+      "castingTime": "1 action",
+      "range": "Self",
+      "components": {
+        "visual": true,
+        "material": true
+      },
+      "duration": "up to 1 minute",
+      "concentration": true,
+      "level": 1,
+      "school": "Divination",
+      "classes": [
+        "Cryptic",
+        "Psion",
+        "Soulknife"
+      ]
+    }
+  ]
+}
