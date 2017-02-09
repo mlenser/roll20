@@ -37,8 +37,7 @@
         "damage": "7d8",
         "damageType": "acid",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d8"
+        "higherLevelDice": "1"
       },
       "classes": [
         "Sorcerer",
@@ -79,8 +78,7 @@
         "damage": "8d8",
         "damageType": "acid",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d8"
+        "higherLevelDice": "1"
       },
       "classes": [
         "Sorcerer",
@@ -112,8 +110,7 @@
         "damage": "2d6",
         "damageType": "lightning",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDice": "1"
       },
       "classes": [
         "Druid",
@@ -135,8 +132,7 @@
       "damage": {
         "damage": "5d6",
         "damageType": "force",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDice": "1"
       }
     },
     {
@@ -152,8 +148,7 @@
         "damage": "12d8",
         "damageType": "necrotic",
         "saveSuccess": "half damage",
-        "higherLevelDice": "2",
-        "higherLevelDie": "d8"
+        "higherLevelDice": "2"
       }
     },
     {
@@ -175,8 +170,7 @@
       "damage": {
         "damage": "4d6",
         "damageType": "radiant",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDice": "1"
       }
     },
     {
@@ -185,8 +179,7 @@
       "damage": {
         "damage": "3d6",
         "damageType": "radiant",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDice": "1"
       }
     },
     {
@@ -211,8 +204,7 @@
         "damage": "5d8",
         "damageType": "radiant",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d8"
+        "higherLevelDice": "1"
       },
       "classes": [
         "Cleric",
@@ -228,8 +220,7 @@
         "damage": "3d8",
         "damageType": "lightning",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d8"
+        "higherLevelDice": "1"
       }
     },
     {
@@ -240,8 +231,7 @@
         "ability": "Dexterity",
         "damage": "3d10",
         "damageType": "bludgeoning",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d10"
+        "higherLevelDice": "1"
       }
     },
     {
@@ -278,8 +268,7 @@
       "damage": {
         "damage": "5d4",
         "damageType": "acid",
-        "higherLevelDice": "2",
-        "higherLevelDie": "d4"
+        "higherLevelDice": "2"
       },
       "classes": [
         "Sorcerer",
@@ -300,8 +289,7 @@
         "damage": "6d8",
         "damageType": "poison",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d8"
+        "higherLevelDice": "1"
       }
     },
     {
@@ -319,7 +307,6 @@
         "damage": "5d8",
         "damageType": "same as that of the weapon or ammunition used as a component",
         "higherLevelDice": "1",
-        "higherLevelDie": "d8",
         "saveSuccess": "half damage"
       }
     },
@@ -402,8 +389,7 @@
       "heal": {
         "amount": "2d6",
         "castingStat": true,
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDice": "1"
       }
     },
     {
@@ -420,8 +406,7 @@
         "secondaryDamage": "5d6",
         "secondaryDamageType": "radiant or necrotic damage (your choice)",
         "saveSuccess": "half damage and not knocked prone",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDice": "1"
       }
     },
     {
@@ -469,8 +454,7 @@
         "damageBonus": "40",
         "damageType": "force",
         "saveSuccess": "half damage",
-        "higherLevelDice": "3",
-        "higherLevelDie": "d6"
+        "higherLevelDice": "3"
       }
     },
     {
@@ -504,8 +488,7 @@
         "damage": "9d6",
         "damageType": "acid, lightning, fire, poison, or cold",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDice": "1"
       },
       "classes": [
         "Sorcerer",
@@ -522,8 +505,7 @@
         "damage": "2d4",
         "damageType": "bludgeoning",
         "saveSuccess": "half damage and not pushed",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d4"
+        "higherLevelDice": "1"
       }
     },
     {
@@ -535,8 +517,7 @@
         "damage": "2d6",
         "damageType": "bludgeoning",
         "saveSuccess": "half damage and not prone",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDice": "1"
       }
     },
     {
@@ -560,8 +541,7 @@
         "damage": "2d8",
         "damageType": "lightning",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d8"
+        "higherLevelDice": "1"
       },
       "classes": [
         "Sorcerer",
@@ -590,8 +570,7 @@
         "damage": "3d6",
         "damageType": "acid",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDice": "1"
       },
       "classes": [
         "Sorcerer",
@@ -632,8 +611,7 @@
         "ability": "Dexterity",
         "damage": "4d6",
         "damageType": "bludgeoning",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDice": "1"
       }
     },
     {
@@ -657,8 +635,7 @@
         "damageBonus": "30",
         "damageType": "necrotic",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d8"
+        "higherLevelDice": "1"
       }
     },
     {
@@ -674,8 +651,7 @@
         "damage": "6d6",
         "damageType": "fire",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDice": "1"
       }
     },
     {
@@ -693,8 +669,7 @@
         "secondaryDamage": "6d6",
         "secondaryDamageType": "radiant",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDice": "1"
       }
     },
     {
@@ -783,8 +758,7 @@
         "damage": "20",
         "damageType": "radiant",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d8"
+        "higherLevelDice": "1"
       }
     },
     {
@@ -795,8 +769,7 @@
         "type": "ranged",
         "damage": "3d8",
         "damageType": "radiant",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d8"
+        "higherLevelDice": "1"
       }
     },
     {
@@ -809,8 +782,7 @@
         "damage": "14d8",
         "damageType": "necrotic",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d8"
+        "higherLevelDice": "1"
       }
     },
     {
@@ -822,8 +794,7 @@
         "damage": "2d8",
         "damageType": "piercing",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d8"
+        "higherLevelDice": "1"
       }
     },
     {
@@ -837,8 +808,7 @@
       "heal": {
         "amount": "2d4",
         "castingStat": true,
-        "higherLevelDice": "1",
-        "higherLevelDie": "d4"
+        "higherLevelDice": "1"
       }
     },
     {
@@ -848,8 +818,7 @@
         "ability": "Wisdom",
         "damage": "2d8",
         "damageType": "fire",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDice": "1"
       }
     },
     {
@@ -868,8 +837,7 @@
         "ability": "Dexterity",
         "damage": "4d6",
         "damageType": "acid",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDice": "1"
       }
     },
     {
@@ -921,8 +889,7 @@
         "damage": "3d8",
         "damageType": "cold",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d8"
+        "higherLevelDice": "1"
       },
       "classes": [
         "Druid",
@@ -998,7 +965,6 @@
         "damage": "9d6",
         "damageType": "fire",
         "higherLevelDice": "1",
-        "higherLevelDie": "d6",
         "saveSuccess": "half damage"
       }
     },
@@ -1015,8 +981,7 @@
         "damage": "12d8",
         "damageType": "fire",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d8"
+        "higherLevelDice": "1"
       }
     },
     {
@@ -1027,8 +992,7 @@
         "damage": "5d10",
         "damageType": "piercing",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d10"
+        "higherLevelDice": "1"
       }
     },
     {
@@ -1084,8 +1048,7 @@
         "damage": "8d8",
         "damageType": "lightning",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d8"
+        "higherLevelDice": "1"
       },
       "classes": [
         "Sorcerer",
@@ -1100,8 +1063,7 @@
         "damage": "3d8",
         "damageType": "lightning",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d8"
+        "higherLevelDice": "1"
       }
     },
     {
@@ -1112,8 +1074,7 @@
         "damage": "6d6",
         "damageType": "lightning",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDice": "1"
       }
     },
     {
@@ -1155,8 +1116,7 @@
         "ability": "Strength",
         "damage": "8d6",
         "damageType": "bludgeoning",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDice": "1"
       }
     },
     {
@@ -1179,8 +1139,7 @@
       "school": "Transmutation",
       "heal": {
         "amount": "2d6",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDice": "1"
       },
       "classes": [
         "Cleric",
@@ -1203,8 +1162,7 @@
       "heal": {
         "amount": "2d4",
         "castingStat": true,
-        "higherLevelDice": "1",
-        "higherLevelDie": "d4"
+        "higherLevelDice": "1"
       }
     },
     {
@@ -1215,7 +1173,6 @@
         "damage": "2d6",
         "damageType": "bludgeoning",
         "higherLevelDice": "1",
-        "higherLevelDie": "d6",
         "saveSuccess": "half damage"
       }
     },
@@ -1234,7 +1191,6 @@
         "secondaryDamage": "5d4",
         "secondaryDamageType": "acid",
         "higherLevelDice": "2",
-        "higherLevelDie": "d4",
         "higherLevelSecondaryDice": "2",
         "higherLevelSecondaryDie": "d4"
       },
@@ -1313,8 +1269,7 @@
         "damage": "2d8",
         "damageType": "radiant",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d8"
+        "higherLevelDice": "1"
       }
     },
     {
@@ -1323,8 +1278,7 @@
       "attack": {
         "damage": "6d8",
         "damageType": "piercing",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d8"
+        "higherLevelDice": "1"
       }
     },
     {
@@ -1411,8 +1365,7 @@
         "damage": "12d6",
         "damageType": "fire, acid, lightning, poison, or cold",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDice": "1"
       }
     },
     {
@@ -1455,8 +1408,7 @@
         "type": "ranged",
         "damage": "3d8",
         "damageType": "poison",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d8"
+        "higherLevelDice": "1"
       }
     },
     {
@@ -1482,7 +1434,6 @@
         "secondaryDamage": "1d6",
         "secondaryDamageType": "fire",
         "higherLevelDice": "1",
-        "higherLevelDie": "d6",
         "higherLevelSecondaryDice": "0.49",
         "higherLevelSecondaryDie": "d6"
       }
@@ -1536,8 +1487,7 @@
       "damage": {
         "damage": "4d6",
         "damageType": "psychic",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDice": "1"
       }
     },
     {
@@ -1547,8 +1497,7 @@
         "ability": "Strength",
         "damage": "4d6",
         "damageType": "bludgeoning",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDice": "1"
       }
     },
     {
@@ -1599,9 +1548,7 @@
         "secondaryDamageType": "thunder",
         "saveSuccess": "half damage",
         "higherLevelDice": "1",
-        "higherLevelDie": "d6",
-        "secondHigherLevelDice": "1",
-        "secondHigherLevelDie": "d6"
+        "secondHigherLevelDice": "1"
       },
       "classes": [
         "Druid",
@@ -1624,8 +1571,7 @@
       "damage": {
         "damage": "2d6",
         "damageType": "thunder",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDice": "1"
       }
     },
     {
@@ -1637,7 +1583,6 @@
         "damage": "4d6",
         "damageType": "bludgeoning",
         "higherLevelDice": "1",
-        "higherLevelDie": "d6",
         "saveSuccess": "half damage and not knocked prone"
       }
     },
@@ -1656,8 +1601,7 @@
         "type": "melee",
         "damage": "4d6",
         "damageType": "necrotic",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDice": "1"
       }
     },
     {
@@ -1687,7 +1631,6 @@
         "damage": "4d8",
         "damageType": "bludgeoning",
         "higherLevelDice": "1",
-        "higherLevelDie": "d8",
         "saveSuccess": "half damage"
       }
     },
@@ -1708,8 +1651,7 @@
         "damage": "10d6",
         "damageType": "bludgeoning",
         "saveSuccess": "half damage",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d6"
+        "higherLevelDice": "1"
       }
     },
     {
@@ -1728,8 +1670,7 @@
       "damage": {
         "damage": "2d4",
         "damageType": "psychic",
-        "higherLevelDice": "1",
-        "higherLevelDie": "d4"
+        "higherLevelDice": "1"
       }
     }
   ]
