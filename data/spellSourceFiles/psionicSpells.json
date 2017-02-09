@@ -11,7 +11,7 @@
       "castingTime": "1 action",
       "range": "Self",
       "components": {
-        "olfactory": true,
+        "olfactory": true
       },
       "duration": "up to 1 minute",
       "concentration": true,
