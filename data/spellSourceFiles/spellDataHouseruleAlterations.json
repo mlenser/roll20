@@ -387,7 +387,7 @@
       "higherLevel": "When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 1d6 for each slot level above 1st.",
       "school": "Necromancy",
       "heal": {
-        "amount": "2d6",
+        "heal": "2d6",
         "castingStat": true,
         "higherLevelDice": "1"
       }
@@ -806,7 +806,7 @@
       "description": "A creature of your choice that you can see within range regains hit points equal to 2d4 + your spellcasting ability modifier. This spell has no effect on undead or constructs.",
       "school": "Necromancy",
       "heal": {
-        "amount": "2d4",
+        "heal": "2d4",
         "castingStat": true,
         "higherLevelDice": "1"
       }
@@ -1138,7 +1138,7 @@
       "level": 2,
       "school": "Transmutation",
       "heal": {
-        "amount": "2d6",
+        "heal": "2d6",
         "higherLevelDice": "1"
       },
       "classes": [
@@ -1160,7 +1160,7 @@
       "description": "As you call out words of restoration, up to six creatures of your choice that you can see within range regain hit points equal to 2d4 + your spellcasting ability modifier. This spell has no effect on undead or constructs.",
       "school": "Necromancy",
       "heal": {
-        "amount": "2d4",
+        "heal": "2d4",
         "castingStat": true,
         "higherLevelDice": "1"
       }
