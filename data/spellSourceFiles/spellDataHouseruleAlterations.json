@@ -661,12 +661,12 @@
     },
     {
       "name": "Flame Strike",
-      "description": "A vertical column of divine fire roars down from the heavens in a location you specify. Each creature in a 10-foot-radius, 40-foot-high cylinder centered on a point within range must make a Dexterity saving throw. A creature takes 6d6 fire damage and 6d6 radiant damage on a failed save, or half as much damage on a successful one.",
+      "description": "A vertical column of divine fire roars down from the heavens in a location you specify. Each creature in a 20-foot-radius, 40-foot-high cylinder centered on a point within range must make a Dexterity saving throw. A creature takes 5d6 fire damage and 5d6 radiant damage on a failed save, or half as much damage on a successful one.",
       "save": {
         "ability": "Dexterity",
-        "damage": "7d6",
+        "damage": "5d6",
         "damageType": "fire",
-        "secondaryDamage": "6d6",
+        "secondaryDamage": "5d6",
         "secondaryDamageType": "radiant",
         "saveSuccess": "half damage",
         "higherLevelDice": "1"
