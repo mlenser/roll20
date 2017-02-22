@@ -1945,7 +1945,7 @@
       "level": 5,
       "school": "Necromancy",
       "attack": {
-        "type": "ranged"
+        "type": "melee"
       },
       "save": {
         "ability": "Constitution"
