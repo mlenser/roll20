@@ -5129,6 +5129,9 @@
       "castingTime": "1 bonus action",
       "level": 1,
       "school": "Divination",
+      "damage": {
+        "damage": "1d6"
+      },
       "classes": [
         "Paladin",
         "Ranger"
