@@ -3330,6 +3330,7 @@
       "intelligence": 2,
       "wisdom": 12,
       "charisma": 7,
+      "skills": "Perception +3",
       "challenge": "1/2",
       "traits": [
         {
