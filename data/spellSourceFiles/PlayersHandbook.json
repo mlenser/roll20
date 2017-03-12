@@ -1,16 +1,228 @@
 {
   "version": "2.0.0",
   "classes": {
-    "Druid": [
-      "Druidcraft",
-      "Guidance",
-      "Mending",
-      "Poison Spray",
-      "Produce Flame",
-      "Resistance",
-      "Shillelagh",
-      "Thorn Whip"
-    ]
+    "Cleric": {
+      "archetypes": {
+        "Knowledge": [
+          "Command",
+          "Identify",
+          "Augury",
+          "Suggestion",
+          "Nondetection",
+          "Speak with Dead",
+          "Arcane Eye",
+          "Confusion",
+          "Legend Lore",
+          "Scrying"
+        ],
+        "Life": [
+          "Bless",
+          "Cure Wounds",
+          "Lesser Restoration",
+          "Spiritual Weapon",
+          "Beacon of Hope",
+          "Revivify",
+          "Death Ward",
+          "Guardian of Faith",
+          "Mass Cure Wounds",
+          "Raise Dead"
+        ],
+        "Light": [
+          "Burning Hands",
+          "Faerie Fire",
+          "Flaming Sphere",
+          "Scorching Ray",
+          "Daylight",
+          "Fireball",
+          "Guardian of Faith",
+          "Wall of Fire",
+          "Flame Strike",
+          "Scrying"
+        ],
+        "Nature": [
+          "Animal Friendship",
+          "Speak with Animals",
+          "Barkskin",
+          "Spike Growth",
+          "Plant Growth",
+          "Wind Wall",
+          "Dominate Beast",
+          "Grasping Vine",
+          "Insect Plague",
+          "Tree Stride"
+        ],
+        "Tempest": [
+          "Fog Cloud",
+          "Thunderwave",
+          "Gust of Wind",
+          "Shatter",
+          "Call Lightning",
+          "Sleet Storm",
+          "Control Water",
+          "Ice Storm",
+          "Destructive Wave",
+          "Insect Plague"
+        ],
+        "Trickery": [
+          "Charm Person",
+          "Disguise Self",
+          "Mirror Image",
+          "Pass without Trace",
+          "Blink",
+          "Dispel Magic",
+          "Dimension Door",
+          "Polymorph",
+          "Dominate Person",
+          "Modify Memory"
+        ],
+        "War": [
+          "Divine Favor",
+          "Shield of Faith",
+          "Magic Weapon",
+          "Spiritual Weapon",
+          "Crusader's Mantle",
+          "Spirit Guardians",
+          "Freedom of Movement",
+          "Stoneskin",
+          "Flame Strike",
+          "Hold Monster"
+        ]
+      },
+      "spells": [
+        "Guidance",
+        "Light",
+        "Mending",
+        "Resistance",
+        "Sacred FLame",
+        "Spare the Dying",
+        "Thaumaturgy",
+        "Bane",
+        "Bless",
+        "Command",
+        "Create or Destroy Water",
+        "Cure Wounds",
+        "Detect Evil and Good",
+        "Detect Magic",
+        "Detect Poison and Disease",
+        "Guiding Bolt",
+        "Healing Word",
+        "Inflict Wounds",
+        "Protection from Evil and Good",
+        "Purify Food and Drink",
+        "Sanctuary",
+        "Shield of Faith"
+      ]
+    },
+    "Druid": {
+      "archetypes": {
+        "Arctic": [
+          "Hold Person",
+          "Spike Growth",
+          "Sleet Storm",
+          "Slow",
+          "Freedom of Movement",
+          "Ice Storm",
+          "Commune with Nature",
+          "Cone of Cold"
+        ],
+        "Coast": [
+          "Mirror Image",
+          "Misty Step",
+          "Water Breathing",
+          "Water Walk",
+          "Control Water",
+          "Freedom of Movement",
+          "Conjure Elemental",
+          "Scrying"
+        ],
+        "Desert": [
+          "Blur",
+          "Silence",
+          "Create Food and Water",
+          "Protection from Energy",
+          "Blight",
+          "Hallucinatory Terrain",
+          "Insect Plague",
+          "Wall of Stone"
+        ],
+        "Forest": [
+          "Barkskin",
+          "Spider Climb",
+          "Call Lightning",
+          "Plant Growth",
+          "Divination",
+          "Freedom of Movement",
+          "Commune with Nature",
+          "Tree Stride"
+        ],
+        "Grassland": [
+          "Invisibility",
+          "Pass without Trace",
+          "Daylight",
+          "Haste",
+          "Divination",
+          "Freedom of Movement",
+          "Dream",
+          "Insect Plague"
+        ],
+        "Mountain": [
+          "Spider Climb",
+          "Spike Growth",
+          "Lightning Bolt",
+          "Meld into Stone",
+          "Stone Shape",
+          "Stoneskin",
+          "Passwall",
+          "Wall of Stone"
+        ],
+        "Swamp": [
+          "Darkness",
+          "Melf's Acid Arrow",
+          "Water Walk",
+          "Stinking Cloud",
+          "Freedom of Movement",
+          "Locate Creature",
+          "Insect Plague",
+          "Scrying"
+        ],
+        "Underdark": [
+          "Spider Climb",
+          "Web",
+          "Gaseous Form",
+          "Stinking Cloud",
+          "Greater Invisibility",
+          "Stone Shape",
+          "Cloudkill",
+          "Insect Plague"
+        ]
+      },
+      "spells": [
+        "Druidcraft",
+        "Guidance",
+        "Mending",
+        "Poison Spray",
+        "Produce Flame",
+        "Resistance",
+        "Shillelagh",
+        "Thorn Whip",
+        "Animal Friendship",
+        "Charm Person",
+        "Create or Destroy Water",
+        "Cure Wounds",
+        "Detect Magic",
+        "Detect Poison and Disease",
+        "Entangle",
+        "Faerie Fire",
+        "Fog Cloud",
+        "Goodberry",
+        "Healing Word",
+        "Jump",
+        "Longstrider",
+        "Purify Food and Drink",
+        "Speak with Animals",
+        "Thunderwave"
+      ]
+    }
   },
   "spells": [
     {
