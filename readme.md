@@ -1,1 +1,1 @@
-This project is now maintained by @symposion at https://github.com/symposion/roll20-api-scripts/tree/master/5eShapedCompanion
+This project is now maintained at https://github.com/symposion/roll20-api-scripts/tree/master/5eShapedCompanion
