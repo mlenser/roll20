@@ -1,1 +1,1 @@
-If there is any confusion **DO NOT PM ME ON ROLL20**. Please email me: mlenser@gmail.com and include a link to your roll20 profile.
+Please do not ask for copyright material on the forums or via PM.
