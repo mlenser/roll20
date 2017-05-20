@@ -1,1 +1,1 @@
-Please do not ask for copyright material on the forums or via PM.
+Please do not ask for copyright material on the forums or via Roll20 PM.
