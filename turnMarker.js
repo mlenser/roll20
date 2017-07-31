@@ -9,8 +9,8 @@
 var TurnMarker = TurnMarker || (function () {
   "use strict";
 
-  var version = '1.3.8',
-    lastUpdate = 1490871535,
+  var version = '1.3.9',
+    lastUpdate = 1500408657,
     schemaVersion = 1.17,
     active = false,
     threadSync = 1,
@@ -101,9 +101,9 @@ var TurnMarker = TurnMarker || (function () {
         'The following arguments may be supplied in order to change the configuration.  All changes are persisted between script restarts.' +
         '<ul>' +
         '<div style="float:right;width:40px;border:1px solid black;background-color:#ffc;text-align:center;"><span style="color: blue; font-weight:bold; padding: 0px 4px;">' + rounds + '</span></div>' +
-        '<li style="border-top: 1px solid #ccc;border-bottom: 1px solid #ccc;"><b><span style="font-family: serif;">reset [#]</span></b> -- Sets the round counter back to 0 or the supplied #.</li> ' +
+        '<li style="border-top: 1px solid #ccc;border-bottom: 1px solid #ccc;"><b><span style="font-family: serif;">reset &lbrack;#&rbrack;</span></b> -- Sets the round counter back to 0 or the supplied #.</li> ' +
         '<div style="float:right;width:40px;border:1px solid black;background-color:#ffc;text-align:center;"><span style="color: blue; font-weight:bold; padding: 0px 4px;">' + autoPullOptions[state.TurnMarker.autoPull] + '</span></div>' +
-        '<li style="border-top: 1px solid #ccc;border-bottom: 1px solid #ccc;"><b><span style="font-family: serif;">autopull <mode></span></b> -- Sets auto pulling to the token whose turn it is.  Modes: ' + _.keys(autoPullOptions) + '</li> ' +
+        '<li style="border-top: 1px solid #ccc;border-bottom: 1px solid #ccc;"><b><span style="font-family: serif;">autopull &lt;mode&gt;</span></b> -- Sets auto pulling to the token whose turn it is.  Modes: ' + _.keys(autoPullOptions) + '</li> ' +
         '<div style="float:right;width:40px;border:1px solid black;background-color:#ffc;text-align:center;">' + ( state.TurnMarker.announceRounds ? '<span style="color: red; font-weight:bold; padding: 0px 4px;">ON</span>' : '<span style="color: #999999; font-weight:bold; padding: 0px 4px;">OFF</span>' ) + '</div>' +
         '<li style="border-bottom: 1px solid #ccc;"><b><span style="font-family: serif;">toggle-announce</span></b> -- When on, each round will be announced to chat.</li>' +
         '<div style="float:right;width:40px;border:1px solid black;background-color:#ffc;text-align:center;">' + ( state.TurnMarker.announceTurnChange ? '<span style="color: red; font-weight:bold; padding: 0px 4px;">ON</span>' : '<span style="color: #999999; font-weight:bold; padding: 0px 4px;">OFF</span>' ) + '</div>' +
@@ -145,7 +145,7 @@ var TurnMarker = TurnMarker || (function () {
 
       switch (command) {
         case "!tm":
-        case "!turnmarker":
+        case "!turnmarker": {
           if (!playerIsGM(msg.playerid)) {
             return;
           }
@@ -233,6 +233,7 @@ var TurnMarker = TurnMarker || (function () {
               break;
 
           }
+        }
           break;
 
         case "!eot":
@@ -308,6 +309,7 @@ var TurnMarker = TurnMarker || (function () {
 
           marker = getMarker();
           marker.set({
+            "layer": obj.get("layer"),
             "top": obj.get("top"),
             "left": obj.get("left")
           });
@@ -443,6 +445,14 @@ var TurnMarker = TurnMarker || (function () {
       }
     },
 
+    handleDestroyGraphic = function (obj) {
+      if (TurnOrder.HasTurn(obj.id)) {
+        let prev = JSON.parse(JSON.stringify(Campaign()));
+        TurnOrder.RemoveTurn(obj.id);
+        handleTurnOrderChange(Campaign(), prev);
+      }
+    },
+
     handleTurnOrderChange = function (obj, prev) {
       var prevOrder = JSON.parse(prev.turnorder);
       var objOrder = JSON.parse(obj.get('turnorder'));
@@ -470,7 +480,7 @@ var TurnMarker = TurnMarker || (function () {
       if (markerTurn.pr !== -1) {
         markerTurn.pr = -1;
         turnorder = _.union([markerTurn], _.reject(turnorder, function (i) {
-          return marker.id === i.id;
+          return marker.id === i.id || (getObj('graphic', i.id) || {get: _.noop}).get('imgsrc') === state.TurnMarker.tokenURL;
         }));
         Campaign().set('turnorder', JSON.stringify(turnorder));
       }
@@ -658,6 +668,7 @@ var TurnMarker = TurnMarker || (function () {
       on("change:campaign:initiativepage", dispatchInitiativePage);
       on("change:campaign:turnorder", handleTurnOrderChange);
       on("change:graphic", checkForTokenMove);
+      on("destroy:graphic", handleDestroyGraphic);
       on("chat:message", handleInput);
 
       dispatchInitiativePage();
@@ -725,6 +736,9 @@ var TurnOrder = TurnOrder || (function () {
       var turnorder = this.Get();
       turnorder.push(entry);
       this.Set(turnorder);
+    },
+    RemoveTurn: function (id) {
+      this.Set(_.reject(this.Get(), (o) => o.id === id));
     }
   };
 }());
