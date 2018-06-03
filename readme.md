@@ -1,3 +1,3 @@
-This project is now maintained at https://github.com/symposion/roll20-api-scripts/tree/master/5eShapedCompanion
+This project is now maintained at https://github.com/mlenser/roll20-api-scripts/tree/master/5eShapedScript
 
-Please do not ask for copyright material on the forums or via Roll20 PM.
+Please do not ask for copyright material.
